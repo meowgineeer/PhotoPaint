@@ -12,13 +12,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Mouse Input Handler (mouse, pen, etc) class
+'PhotoPaint Mouse Input Handler (mouse, pen, etc) class
 'Copyright 2014-2025 by Tanner Helland
 'Created: 27/May/14 (though many individual parts existed earlier than this!)
 'Last updated: 29/October/19
 'Last update: manually raise corresponding _MouseDown() event in _DoubleClick() handler
 '
-'As part of implementing paint tools in PhotoDemon, a comprehensive input solution was required.  (Prior to that point,
+'As part of implementing paint tools in PhotoPaint, a comprehensive input solution was required.  (Prior to that point,
 ' a combination of intrinsic VB mouse events and a few extra subclassing bits (e.g. mousewheel) covered PD pretty well,
 ' but drawing tools and more advanced UI features require more detailed input handling, like GetMouseMovePointsEx +
 ' spline interpolation for buttery smooth mouse input, or improved support for touch and/or pen input.)
@@ -49,7 +49,7 @@ Attribute VB_Exposed = False
 ' http://www.vbaccelerator.com/home/VB/Tips/Responding_to_AppCommands/article.asp
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -1008,7 +1008,7 @@ Private Function HandleDblClick(ByVal uiMsg As Long, ByVal wParam As Long, ByVal
     'To ensure that fast repeat clicks are handled correctly, we manually raise a corresponding
     ' _MouseDown event.  (Note that Windows *will* raise a corresponding WM_*BUTTONUP msg, however.)
     
-    'Thank you to wqweto and https://github.com/tannerhelland/PhotoDemon/pull/283 for first catching this.
+    'Thank you to wqweto and https://github.com/tannerhelland/PhotoPaint/pull/283 for first catching this.
     RaiseEvent MouseDownCustom(m_retMouseButton, m_retShiftConstants, m_MouseX, m_MouseY, m_msgTimestamp)
     RaiseEvent DoubleClickCustom(m_retMouseButton, m_retShiftConstants, m_MouseX, m_MouseY)
     

@@ -12,11 +12,11 @@ Attribute VB_Name = "Plugin_Heif"
 ' decoder and encoder... HEIF and AVIF are new image file formats employing HEVC (H.265)
 ' or AV1 image coding, respectively, for the best compression ratios currently possible."
 '
-'libheif is LGPL-licensed and actively maintained.  PhotoDemon does not use its potential
+'libheif is LGPL-licensed and actively maintained.  PhotoPaint does not use its potential
 ' AVIF support due to x86 compatibility issues (AVIF support is 64-bit focused and x86 builds
 ' are not currently feasible for me to self-maintain, so I only compile with HEIF enabled).
 '
-'Note that all features in this module rely on the libheif binaries that ship with PhotoDemon.
+'Note that all features in this module rely on the libheif binaries that ship with PhotoPaint.
 ' These features will not work if libheif cannot be located.  Per standard LGPL terms, you can
 ' supply your own libheif copies in place of PD's default ones, but libheif and all supporting
 ' libraries obviously need to be built as x86 libraries for this to work (not x64).
@@ -36,7 +36,7 @@ Attribute VB_Name = "Plugin_Heif"
 ' considerations for these that I haven't fully considered (yet).  Exposing these remains TBD.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

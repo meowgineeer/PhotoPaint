@@ -13,7 +13,7 @@ Attribute VB_Name = "Plugin_resvg"
 ' The core idea is to make a fast, small, portable SVG library with an aim to support the whole SVG spec."
 '
 'Yevhenii Reizner is the author of resvg.  resvg is MPL-licensed and actively maintained.
-' The copy of resvg.dll that ships with PhotoDemon is custom-built against the i686-pc-windows-msvc
+' The copy of resvg.dll that ships with PhotoPaint is custom-built against the i686-pc-windows-msvc
 ' rust target (for XP support).  It *must* be hand-edited to export stdcall funcs.  (Normally I just use
 ' cdecl via DispCallFunc, but resvg returns some custom types that don't work with DispCallFunc -
 ' so manually building against stdcall is necessary.)  Note that some function decs must also be
@@ -23,7 +23,7 @@ Attribute VB_Name = "Plugin_resvg"
 ' https://github.com/RazrFalcon/resvg/blob/master/LICENSE.txt
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

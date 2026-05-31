@@ -105,7 +105,7 @@ Attribute VB_Exposed = False
 'Last updated: 16/October/17
 'Last update: migrate the actual function code elsewhere; it's helpful in other filter scenarios
 '
-'PhotoDemon's "Metal" filter is the rough equivalent of "Chrome" in Photoshop.  Our implementation is relatively
+'PhotoPaint's "Metal" filter is the rough equivalent of "Chrome" in Photoshop.  Our implementation is relatively
 ' straightforward; a normalized graymap is created for the image, then remapped according to a sinusoidal-like
 ' lookup table (created using the pdFilterLUT class).
 '

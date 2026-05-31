@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon ICC (International Color Consortium) Profile Manager
+'PhotoPaint ICC (International Color Consortium) Profile Manager
 'Copyright 2013-2025 by Tanner Helland
 'Created: 05/November/13
 'Last updated: 21/November/16
@@ -32,7 +32,7 @@ Attribute VB_Exposed = False
 ' pdDIB class is copied, the attached ICC profile (if any) should also be copied.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

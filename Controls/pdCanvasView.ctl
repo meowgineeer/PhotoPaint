@@ -29,7 +29,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon "CanvasView" User Control (e.g. the primary component of pdCanvas)
+'PhotoPaint "CanvasView" User Control (e.g. the primary component of pdCanvas)
 'Copyright 2002-2025 by Tanner Helland
 'Created: 29/November/02
 'Last updated: 10/September/20

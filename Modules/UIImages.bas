@@ -1,13 +1,13 @@
 Attribute VB_Name = "UIImages"
 '***************************************************************************
-'PhotoDemon Central UI image cache
+'PhotoPaint Central UI image cache
 'Copyright 2018-2025 by Tanner Helland
 'Created: 13/July/18
 'Last updated: 01/June/21
 'Last update: rewrite against pdSpriteSheet, to reuse all the great optimization work I did there
 '             as part of animation support (e.g. built-in compression support).
 '
-'PhotoDemon uses a *lot* of UI images.  The amount of GDI objects required for these surfaces is
+'PhotoPaint uses a *lot* of UI images.  The amount of GDI objects required for these surfaces is
 ' substantial, and we can greatly reduce requirements by using something akin to "sprite sheets",
 ' e.g. shared image storage for images with similar dimensions.
 '
@@ -23,7 +23,7 @@ Attribute VB_Name = "UIImages"
 ' for shared caching.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

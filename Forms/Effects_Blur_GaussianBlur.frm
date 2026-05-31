@@ -118,7 +118,7 @@ Attribute VB_Exposed = False
 '
 'Not much to say here.  Gaussian blur is a standard function in an image editor!
 '
-'Like most programs, PhotoDemon does not attempt to calculate the gaussian precisely.
+'Like most programs, PhotoPaint does not attempt to calculate the gaussian precisely.
 ' (I previously provided a function for this, but even a separable implementation is
 ' incredibly slow on large images.)  Instead, it uses several different approximation
 ' methods with varying performance/quality trade-offs.  Currently available methods include...

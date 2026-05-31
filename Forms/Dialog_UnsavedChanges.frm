@@ -185,13 +185,13 @@ Public Sub ShowDialog(ByVal srcImageID As Long, ByVal numOfUnsavedImages As Long
         
     'If the image has been saved before, update the tooltip text on the "Save" button accordingly
     If (LenB(PDImages.GetImageByID(m_imageBeingClosed).ImgStorage.GetEntry_String("CurrentLocationOnDisk", vbNullString)) <> 0) Then
-        cmdAnswer(0).AssignTooltip "NOTE: if you click 'Save', PhotoDemon will save this image using its current file name." & vbCrLf & vbCrLf & "If you want to save it with a different file name, please select 'Cancel', then use the File -> Save As menu item."
+        cmdAnswer(0).AssignTooltip "NOTE: if you click 'Save', PhotoPaint will save this image using its current file name." & vbCrLf & vbCrLf & "If you want to save it with a different file name, please select 'Cancel', then use the File -> Save As menu item."
     Else
         cmdAnswer(0).AssignTooltip "Because this image has not been saved before, you will be prompted to provide a file name for it."
     End If
     
     cmdAnswer(1).AssignTooltip "If you do not save this image, any changes you have made will be permanently lost."
-    cmdAnswer(2).AssignTooltip "Canceling will return you to the main PhotoDemon window."
+    cmdAnswer(2).AssignTooltip "Canceling will return you to the main PhotoPaint window."
     
     'Provide a default answer of "cancel" (in the event that the user clicks the "x" button in the top-right)
     m_userAnswer = vbCancel

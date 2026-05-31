@@ -12,14 +12,14 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Comic Book Archive (CBZ) Container and Parser
+'PhotoPaint Comic Book Archive (CBZ) Container and Parser
 'Copyright 2021-2025 by Tanner Helland
 'Created: 18/June/21
 'Last updated: 23/June/21
 'Last update: wrap up initial build
 '
 'Comic book archives are simple .zip files containing a set of comic book pages in ascending order.
-' (Note that non-zip variants also exist, like .CBR which use "RAR" format - PhotoDemon only supports
+' (Note that non-zip variants also exist, like .CBR which use "RAR" format - PhotoPaint only supports
 ' CBZ files at present.)
 '
 'The format is loosely defined at Wikipedia:
@@ -32,7 +32,7 @@ Attribute VB_Exposed = False
 ' https://github.com/wqweto/ZipArchive
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

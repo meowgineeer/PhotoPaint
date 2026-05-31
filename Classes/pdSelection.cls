@@ -12,13 +12,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Selection class
+'PhotoPaint Selection class
 'Copyright 2012-2025 by Tanner Helland
 'Created: 25/September/12
 'Last updated: 24/July/23
 'Last update: enforce integer coordinates on incoming mouse events
 '
-'This class handles all selections in PhotoDemon.  Rectangular, elliptical, polygon, lasso,
+'This class handles all selections in PhotoPaint.  Rectangular, elliptical, polygon, lasso,
 ' and "magic wand" selections are currently implemented.  (A selection brush is on my TODO list.)
 '
 'In early 2022, full support for composite selections was added, including support for various
@@ -26,7 +26,7 @@ Attribute VB_Exposed = False
 ' including an updated rendering engine, although some atrocious architectural decisions remain
 ' because I don't have enough time to properly rework this class from scratch.  Maybe someday!
 '
-'All selections in PhotoDemon are treated as a subset of pixels within a bounding rectangle.
+'All selections in PhotoPaint are treated as a subset of pixels within a bounding rectangle.
 ' Each selection calculates this bounding rectangle differently; simple shapes like rectangles
 ' and ellipses can calculate it using their (x1, y1) and (x2, y2) coordinates, while more complex
 ' shapes (lasso, polygon, wand) may need to search their point collection and manually construct a
@@ -57,7 +57,7 @@ Attribute VB_Exposed = False
 ' its own active selection, and switching between images also switches between their selection(s).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -1394,7 +1394,7 @@ Friend Sub SetAdditionalCoordinates(ByVal x As Double, ByVal y As Double)
             Case ss_Polygon
             
                 'Ignore events if they happen too close together.
-                ' (This is part of a fix for https://github.com/tannerhelland/PhotoDemon/issues/284)
+                ' (This is part of a fix for https://github.com/tannerhelland/PhotoPaint/issues/284)
                 If ((VBHacks.GetHighResTimeInMSEx() - m_LastTime) < 500) Then Exit Sub
             
                 'Based on the transform mode, set the initial points accordingly
@@ -3549,7 +3549,7 @@ Private Sub RenderSelectionAsOutline(ByRef dstDIB As pdDIB, ByRef srcImage As pd
         
         If (m_CurrentOutline Is Nothing) Then Set m_CurrentOutline = New pd2DPath Else m_CurrentOutline.ResetPath
         
-        'Because PhotoDemon uses pixel-based masks for selections (to allow for "partial" selecting),
+        'Because PhotoPaint uses pixel-based masks for selections (to allow for "partial" selecting),
         ' we don't always have a vector-based path that defines the current selection.  So instead,
         ' we directly construct a path from the current selection mask *AS IT APPEARS IN THE VIEWPORT*.
         ' This "shortcut" provides a large performance boost, especially on large images, and it yields

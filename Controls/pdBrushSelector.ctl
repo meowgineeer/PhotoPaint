@@ -30,7 +30,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Brush Selector custom control
+'PhotoPaint Brush Selector custom control
 'Copyright 2015-2025 by Tanner Helland
 'Created: 30/June/15
 'Last updated: 03/December/20

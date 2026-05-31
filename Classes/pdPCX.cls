@@ -19,7 +19,7 @@ Attribute VB_Exposed = False
 'Last update: tweak importer to fix recovery of 4-bpp, 4-plane data, but as I only have one test image
 '             with these settings I'm *still* not sure this handling is correct.
 '
-'The PCX file format is nearly as old as I am!  PhotoDemon originally handled PCX files via the 3rd-party
+'The PCX file format is nearly as old as I am!  PhotoPaint originally handled PCX files via the 3rd-party
 ' FreeImage library, but FreeImage doesn't support some valid PCX files and has unreliable behavior on
 ' others (including modern exported ones from popular software like GIMP).
 '
@@ -47,7 +47,7 @@ Attribute VB_Exposed = False
 ' https://stackoverflow.com/questions/48172059/is-is-possible-to-determine-from-the-header-of-a-1-bit-pcx-if-the-palette-shoul
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

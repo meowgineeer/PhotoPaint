@@ -318,7 +318,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Color-Picker Tool Panel
+'PhotoPaint Color-Picker Tool Panel
 'Copyright 2013-2025 by Tanner Helland
 'Created: 02/Oct/13
 'Last updated: 07/November/21

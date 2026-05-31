@@ -12,21 +12,21 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon "pdPackageChunky" v2.0 Interface (e.g. chunk-based archive handler)
+'PhotoPaint "pdPackageChunky" v2.0 Interface (e.g. chunk-based archive handler)
 'Copyright 2014-2025 by Tanner Helland
 'Created: 03/June/19
 'Last updated: 11/March/20
 'Last update: require callers to manually validate buffer length when requesting blind write-to-ptr behavior
-'Dependencies: - pdPackaging module from photodemon.org (defines public enums and structs)
-'              - pdStream class from photodemon.org (used to easily read/write memory and file buffers)
-'              - pdFSO class from photodemon.org (Unicode-aware file operations)
-'              - pdStringStack class from photodemon.org (optimized handling of large string collections)
-'              - VBHacks module from photodemon.org (optimized workarounds for lacking VB functionality)
+'Dependencies: - pdPackaging module from photopaint.org (defines public enums and structs)
+'              - pdStream class from photopaint.org (used to easily read/write memory and file buffers)
+'              - pdFSO class from photopaint.org (Unicode-aware file operations)
+'              - pdStringStack class from photopaint.org (optimized handling of large string collections)
+'              - VBHacks module from photopaint.org (optimized workarounds for lacking VB functionality)
 '              - If you want compression support, relevant 3rd-party compression libraries (e.g. zstd)
 '                 are obviously required
 '
 'This class provides an interface for creating and reading chunk-based pdPackage files.  pdPackage is
-' the file format originally developed for PhotoDemon (www.photodemon.org), and as the program
+' the file format originally developed for PhotoPaint (www.photopaint.org), and as the program
 ' developed increasingly complicated features, the need for a more flexible file format came with it.
 '
 'Enter this new chunk-based pdPackage system.  This class reads and writes files that use a simple
@@ -82,8 +82,8 @@ Attribute VB_Exposed = False
 '   - "zstd" (zstandard)
 '   - "defl" (deflate)
 '   - "zlib" (zlib)
-'   PhotoDemon uses some other compression formats internally (e.g. "lz4 " for the lz4 compression
-'   library, which PhotoDemon uses for real-time compression of large binary data), but such
+'   PhotoPaint uses some other compression formats internally (e.g. "lz4 " for the lz4 compression
+'   library, which PhotoPaint uses for real-time compression of large binary data), but such
 '   compression formats will never be used in externally accessible files.
 ' - 4 byte signed integer defining the *uncompressed* size of this chunk's data.  This value must be
 '   greater than 0.
@@ -124,7 +124,7 @@ Attribute VB_Exposed = False
 'No other formal limitations are placed upon this format.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -215,7 +215,7 @@ Friend Function AddChunk(ByRef srcChunk As PDPackage_ChunkData) As Boolean
         
 End Function
 
-'PhotoDemon often likes to write data "dictionary-style", e.g. a name/value pair.  The name is some short string
+'PhotoPaint often likes to write data "dictionary-style", e.g. a name/value pair.  The name is some short string
 ' and the value is an arbitrary chunk of binary data.  To simplify the process of adding such nodes to a package,
 ' you can use this helper function.  It automatically assumes that the name string should *not* be compressed
 ' (due to its expected short length), while the compression status of the value chunk is controllable by param.
@@ -260,7 +260,7 @@ Friend Function AddChunk_WholeFromPtr(ByVal chunkID As String, ByVal ptrToData A
     
 End Function
 
-'PhotoDemon often needs to store multi-part data pieces - e.g. an image layer's XML header, followed by
+'PhotoPaint often needs to store multi-part data pieces - e.g. an image layer's XML header, followed by
 ' one or more binary blobs with actual layer pixel data.  This convenience-only function accepts a list of
 ' chunk descriptors, and it will automatically create (n) valid chunks in the package, in the order the
 ' descriptors are supplied.  The source array MUST have an LBound of 0; its UBound doesn't matter,

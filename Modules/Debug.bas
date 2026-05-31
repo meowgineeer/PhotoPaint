@@ -1,13 +1,13 @@
 Attribute VB_Name = "PDDebug"
 '***************************************************************************
-'PhotoDemon Custom Debug Logger
+'PhotoPaint Custom Debug Logger
 'Copyright 2014-2025 by Tanner Helland
 'Created: 17/July/14
 'Last updated: 08/March/18
 'Last update: rework initialization to allow us to arbitrarily start/suspend the debugger during a given session
 'Dependencies: OS module (for retrieving system-level debug data)
 '
-'As PhotoDemon has grown more complex, debugging has become correspondingly difficult.  Debugging on my local PC is fine
+'As PhotoPaint has grown more complex, debugging has become correspondingly difficult.  Debugging on my local PC is fine
 ' thanks to the IDE, but a lot of behaviors are different in the compiled .exe, and user PCs are another problem entirely.
 '
 'To that end, a more comprehensive debugging solution was required.  Enter this class.
@@ -21,7 +21,7 @@ Attribute VB_Name = "PDDebug"
 ' of the class as generic as possible in case this is helpful to others.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -79,7 +79,7 @@ Private m_debuggerID As Long
 'Full path to the log file for this debug session.  This is created by the StartDebugger function, and it relies on
 ' the /Debug path specified by the pdPreferences class.
 '
-'(Generally this is the /Data/Debug folder of wherever PhotoDemon.exe is located.)
+'(Generally this is the /Data/Debug folder of wherever PhotoPaint.exe is located.)
 Private m_logPath As String
 
 'Number of unique events logged this session.
@@ -390,7 +390,7 @@ Public Function StartDebugger(Optional ByVal writeLogDataToFile As Boolean = Fal
             If writeHeaderToo Then
                 
                 debugHeader.AppendLine "**********************************************" & vbCrLf
-                debugHeader.AppendLine "-- PHOTODEMON DEBUG LOG #" & CStr(m_debuggerID + 1) & " --" & vbCrLf
+                debugHeader.AppendLine "-- PHOTOPAINT DEBUG LOG #" & CStr(m_debuggerID + 1) & " --" & vbCrLf
                 If (Not initIsNormal) Then debugHeader.AppendLine "WARNING: debugger was not initiated by default; session data may be incomplete"
                 
                 debugHeader.AppendLine "Date: " & Date$
@@ -405,12 +405,12 @@ Public Function StartDebugger(Optional ByVal writeLogDataToFile As Boolean = Fal
                 debugHeader.AppendLine "Processor cores (logical): " & OS.LogicalCoreCount
                 debugHeader.AppendLine "Processor features: " & OS.ProcessorFeatures
                 debugHeader.AppendLine "System RAM: " & OS.RAM_SystemTotal
-                debugHeader.AppendLine "Max memory available to PhotoDemon: " & OS.RAM_Available
+                debugHeader.AppendLine "Max memory available to PhotoPaint: " & OS.RAM_Available
                 debugHeader.AppendLine "Memory load at startup: " & OS.RAM_CurrentLoad & vbCrLf
                 
                 debugHeader.AppendLine "-- PROGRAM INFORMATION -- " & vbCrLf
                 
-                debugHeader.AppendLine "Version: " & GetPhotoDemonNameAndVersion
+                debugHeader.AppendLine "Version: " & GetPhotoPaintNameAndVersion
                 debugHeader.AppendLine "Translation active: " & CStr(g_Language.TranslationActive())
                 debugHeader.AppendLine "Language in use: " & CStr(g_Language.GetCurrentLanguage())
                 debugHeader.AppendLine "GDI+ available: " & CStr(Drawing2D.IsRenderingEngineActive(P2_GDIPlusBackend)) & vbCrLf

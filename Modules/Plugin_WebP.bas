@@ -11,20 +11,20 @@ Attribute VB_Name = "Plugin_WebP"
 '"WebP codec: library to encode and decode images in WebP format. This package contains the library
 ' that can be used in other programs to add WebP support..."
 '
-'LibWebP is BSD-licensed and actively maintained by Google.  Fortunately for PhotoDemon, the developers
+'LibWebP is BSD-licensed and actively maintained by Google.  Fortunately for PhotoPaint, the developers
 ' also provide a robust C interface and legacy compilation options, enabling support all the way back
 ' to Windows XP (hypothetically - testing XP is still TODO).
 '
-'PhotoDemon historically used FreeImage to manage WebP files, but using libwebp directly allows for
+'PhotoPaint historically used FreeImage to manage WebP files, but using libwebp directly allows for
 ' better performance and feature support, including animated WebP support (which do not work via FreeImage).
 '
-'Note that all features in this module rely on the libwebp binaries that ship with PhotoDemon.
+'Note that all features in this module rely on the libwebp binaries that ship with PhotoPaint.
 ' These features will not work if libwebp cannot be located.  Look in the pdWebP class for details
 ' on various APIs; they are all declared there.  (This module just provides basic library initialization
 ' and termination.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -1,6 +1,6 @@
 Attribute VB_Name = "PDMain"
 '***************************************************************************
-'PhotoDemon Startup Module
+'PhotoPaint Startup Module
 'Copyright 2014-2025 by Tanner Helland
 'Created: 03/March/14
 'Last updated: 16/September/20
@@ -14,7 +14,7 @@ Attribute VB_Name = "PDMain"
 ' project by LaVolpe.  You can see his original work here: http://www.vbforums.com/showthread.php?t=606736
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -32,10 +32,10 @@ Private Type InitCommonControlsExStruct
     lngICC As Long
 End Type
 
-'As of September 2015, reordering the list of files in PhotoDemon.VBP caused unpredictable
+'As of September 2015, reordering the list of files in PhotoPaint.VBP caused unpredictable
 ' crashes when PD closes. (After the final line of PD code is run, no less.)  I spent two days
 ' bisecting commits and can conclusively nail the problem down to
-' https://github.com/tannerhelland/PhotoDemon/commit/293de1ba4f2d5bc3102304d0263af624e93b6093
+' https://github.com/tannerhelland/PhotoPaint/commit/293de1ba4f2d5bc3102304d0263af624e93b6093
 '
 'I eventually solved the problem by manually unloading all global class instances in a specific order,
 ' rather than leaving it to VB, but during testing, I still sometimes find it helpful to suppress
@@ -59,7 +59,7 @@ Private m_IsProgramRunning As Boolean
 ' attempting to write data to file.
 Private m_ProgramStartupSuccessful As Boolean
 
-'PhotoDemon starts here.  Main() is necessary as a start point (vs a form) to make sure theming is implemented
+'PhotoPaint starts here.  Main() is necessary as a start point (vs a form) to make sure theming is implemented
 ' correctly.  Note that this code is irrelevant within the IDE.
 Public Sub Main()
     
@@ -69,7 +69,7 @@ Public Sub Main()
     ' But just in case, continue loading even if the common control module load fails.
     On Error GoTo DamnThisPCisOld
     
-    'The following block of code prevents XP crashes when VB usercontrols are present in a project (as they are in PhotoDemon)
+    'The following block of code prevents XP crashes when VB usercontrols are present in a project (as they are in PhotoPaint)
     
     'Make sure shell32 is loaded
     Dim strShellName As String
@@ -102,7 +102,7 @@ DamnThisPCisOld:
     ' where m_IsProgramRunning is declared.
     m_IsProgramRunning = True
     
-    'In the past, PhotoDemon would manually enable DEP in an attempt to satisfy various virus scanners.
+    'In the past, PhotoPaint would manually enable DEP in an attempt to satisfy various virus scanners.
     ' (I never tested this empirically to see if it made a difference.)
     '
     'In 2023 I was notified that DEP breaks many legacy 3rd-party Photoshop plugins.  Ideally, I would write a
@@ -151,12 +151,12 @@ Public Function ContinueLoadingProgram(Optional ByRef suspendAdditionalMessages 
     ' also opt-out of debug tracking, or they can manually enable it in stable builds.)
     PDDebug.InitializeDebugger
     
-    'During development, I find it helpful to profile PhotoDemon's startup process (so I can watch for obvious regressions).
+    'During development, I find it helpful to profile PhotoPaint's startup process (so I can watch for obvious regressions).
     ' PD utilizes several different profiler-types; the LT type is "long-term" profiling, where data is written to a persistent
     ' log file and tracked over time.
     Dim perfCheck As pdProfilerLT
     Set perfCheck = New pdProfilerLT
-    perfCheck.StartProfiling "PhotoDemon Startup", True
+    perfCheck.StartProfiling "PhotoPaint Startup", True
     
     
     '*************************************************************************************************************************************
@@ -244,7 +244,7 @@ Public Function ContinueLoadingProgram(Optional ByRef suspendAdditionalMessages 
     ' Mutex module.)
     If (Not Mutex.IsThisOnlyInstance) Then
         
-        PDDebug.LogAction "This PhotoDemon instance is not unique!  Querying user preferences for session behavior..."
+        PDDebug.LogAction "This PhotoPaint instance is not unique!  Querying user preferences for session behavior..."
         
         'Check user preference for single-session behavior
         If UserPrefs.GetPref_Boolean("Loading", "Single Instance", False) Then
@@ -306,7 +306,7 @@ Public Function ContinueLoadingProgram(Optional ByRef suspendAdditionalMessages 
     End If
     
     'While here, check another start-up related user perference.  Forced system reboots are
-    ' an ever-more-annoying issue on modern versions of Window.  PhotoDemon can automatically
+    ' an ever-more-annoying issue on modern versions of Window.  PhotoPaint can automatically
     ' recover sessions interrupted by reboots.
     If UserPrefs.GetPref_Boolean("Loading", "RestoreAfterReboot", False) Then OS.SetRestartRestoreBehavior True
     
@@ -350,22 +350,22 @@ Public Function ContinueLoadingProgram(Optional ByRef suspendAdditionalMessages 
         'Translations will not be available yet, so use non-localized strings.
         Dim tmpMsg As pdString, tmpTitle As String
         Set tmpMsg = New pdString
-        tmpMsg.AppendLine "This PhotoDemon copy is broken (essential libraries missing)."
+        tmpMsg.AppendLine "This PhotoPaint copy is broken (essential libraries missing)."
         tmpMsg.AppendLineBreak
         
-        tmpMsg.AppendLine "This usually means your PhotoDemon download was interrupted, or the program was unzipped incorrectly."
+        tmpMsg.AppendLine "This usually means your PhotoPaint download was interrupted, or the program was unzipped incorrectly."
         tmpMsg.AppendLineBreak
         
-        tmpMsg.AppendLine "To fix this copy of PhotoDemon, please try the following steps:"
+        tmpMsg.AppendLine "To fix this copy of PhotoPaint, please try the following steps:"
         tmpMsg.AppendLineBreak
         
-        tmpMsg.AppendLine "1) Download a fresh copy from photodemon.org/download"
-        tmpMsg.AppendLine "2) Extract the zip file's contents to a folder on your PC.  Make sure both PhotoDemon.exe and its /App subfolder are extracted."
-        tmpMsg.AppendLine "3) Double-click the new PhotoDemon.exe file."
-        tmpMsg.AppendLine "4) Because the program is freshly downloaded, Windows SmartScreen may raise a confirmation window.  You will need to give PhotoDemon permission to run on your PC."
+        tmpMsg.AppendLine "1) Download a fresh copy from photopaint.org/download"
+        tmpMsg.AppendLine "2) Extract the zip file's contents to a folder on your PC.  Make sure both PhotoPaint.exe and its /App subfolder are extracted."
+        tmpMsg.AppendLine "3) Double-click the new PhotoPaint.exe file."
+        tmpMsg.AppendLine "4) Because the program is freshly downloaded, Windows SmartScreen may raise a confirmation window.  You will need to give PhotoPaint permission to run on your PC."
         tmpMsg.AppendLine "5) Enjoy the program!"
         tmpMsg.AppendLineBreak
-        tmpMsg.Append "(This copy of PhotoDemon will now exit.)"
+        tmpMsg.Append "(This copy of PhotoPaint will now exit.)"
         tmpTitle = "Critical error"
         MsgBox tmpMsg.ToString(), vbCritical Or vbOKOnly Or vbApplicationModal, tmpTitle
         
@@ -448,7 +448,7 @@ Public Function ContinueLoadingProgram(Optional ByRef suspendAdditionalMessages 
     SelectionUI.InitializeSelectionRendering
     
     '*************************************************************************************************************************************
-    ' PhotoDemon works well with multiple monitors.  Check for such a situation now.
+    ' PhotoPaint works well with multiple monitors.  Check for such a situation now.
     '*************************************************************************************************************************************
     
     perfCheck.MarkEvent "Detect displays"
@@ -494,7 +494,7 @@ Public Function ContinueLoadingProgram(Optional ByRef suspendAdditionalMessages 
     If UserPrefs.GetPref_Boolean("Loading", "splash-screen", True) Then FormSplash.Show vbModeless
     
     '*************************************************************************************************************************************
-    ' If this is not a production build, initialize PhotoDemon's central debugger
+    ' If this is not a production build, initialize PhotoPaint's central debugger
     '*************************************************************************************************************************************
     
     'We wait until after the translation and plugin engines are initialized; this allows us to report their information in the debug log
@@ -552,7 +552,7 @@ Public Function ContinueLoadingProgram(Optional ByRef suspendAdditionalMessages 
     
     
     '*************************************************************************************************************************************
-    ' Based on available plugins, determine which image formats PhotoDemon can handle
+    ' Based on available plugins, determine which image formats PhotoPaint can handle
     '*************************************************************************************************************************************
     
     perfCheck.MarkEvent "Load import and export libraries"
@@ -639,13 +639,13 @@ Public Function ContinueLoadingProgram(Optional ByRef suspendAdditionalMessages 
     Actions.BuildActionDatabase
     
     '*************************************************************************************************************************************
-    ' PhotoDemon's complex interface requires a lot of things to be generated at run-time.
+    ' PhotoPaint's complex interface requires a lot of things to be generated at run-time.
     '*************************************************************************************************************************************
     
     perfCheck.MarkEvent "Initialize UI"
     LogStartupEvent "Initializing user interface..."
     
-    'Use the API to give PhotoDemon's main form a 32-bit icon (VB is too old to support 32bpp icons)
+    'Use the API to give PhotoPaint's main form a 32-bit icon (VB is too old to support 32bpp icons)
     IconsAndCursors.SetThunderMainIcon
     
     'Initialize all system cursors we rely on (hand, busy, resizing, etc)
@@ -653,9 +653,9 @@ Public Function ContinueLoadingProgram(Optional ByRef suspendAdditionalMessages 
     
     'Set up the program's title bar.  Odd-numbered releases are development releases.  Even-numbered releases are formal builds.
     If (Not g_WindowManager Is Nothing) Then
-        g_WindowManager.SetWindowCaptionW FormMain.hWnd, Updates.GetPhotoDemonNameAndVersion()
+        g_WindowManager.SetWindowCaptionW FormMain.hWnd, Updates.GetPhotoPaintNameAndVersion()
     Else
-        FormMain.Caption = Updates.GetPhotoDemonNameAndVersion()
+        FormMain.Caption = Updates.GetPhotoPaintNameAndVersion()
     End If
     
     'Prepare a checkerboard pattern, which will be used behind any transparent objects.  Caching this is much more efficient.
@@ -734,7 +734,7 @@ Public Function ContinueLoadingProgram(Optional ByRef suspendAdditionalMessages 
     perfCheck.StopProfiling
     If UserPrefs.GenerateDebugLogs Then perfCheck.GenerateProfileReport True
     
-    'If this is the first time the user has run PhotoDemon, resize the window a bit to make the default position nice.
+    'If this is the first time the user has run PhotoPaint, resize the window a bit to make the default position nice.
     ' (If this is *not* the first time, the window manager will automatically restore the window's last-known position and state.)
     If g_IsFirstRun Then g_WindowManager.SetFirstRunMainWindowPosition
     

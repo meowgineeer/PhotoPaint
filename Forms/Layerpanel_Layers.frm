@@ -183,7 +183,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Layer Tool Panel
+'PhotoPaint Layer Tool Panel
 'Copyright 2014-2025 by Tanner Helland
 'Created: 25/March/14
 'Last updated: 25/September/15

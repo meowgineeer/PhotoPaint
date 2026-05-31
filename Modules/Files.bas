@@ -6,7 +6,7 @@ Attribute VB_Name = "Files"
 'Last updated: 18/March/22
 'Last update: add additional pdFSO function wrapper(s)
 '
-'The pdFSO class normally provides Unicode file/folder interactions for PhotoDemon.
+'The pdFSO class normally provides Unicode file/folder interactions for PhotoPaint.
 '
 'But sometimes you just want to do something trivial - like see if a file exists - and instantiating
 ' a full class for this is unnecessarily verbose in VB.  Thus the purpose of this module: to provide
@@ -16,13 +16,13 @@ Attribute VB_Name = "Files"
 ' particular file-related function, use this module.  (All calls end up at a pdFSO instance eventually.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
 Option Explicit
 
-'Because our file patching code affects critical PhotoDemon files, we need to make sure we return
+'Because our file patching code affects critical PhotoPaint files, we need to make sure we return
 ' detailed success/failure information.
 Public Enum PD_FILE_PATCH_RESULT
     FPR_SUCCESS = 0
@@ -265,7 +265,7 @@ Public Function RequestTempFile() As String
 
 End Function
 
-'Execute another program (in PhotoDemon's case, a plugin), then wait for it to finish running.
+'Execute another program (in PhotoPaint's case, a plugin), then wait for it to finish running.
 Public Function ShellAndWait(ByVal executablePath As String, Optional ByVal commandLineArguments As String = vbNullString, Optional ByVal showAppWindow As Boolean = False) As Boolean
     
     Dim startInfo As WIN32_STARTUP_INFO, procInfo As WIN32_PROCESS_INFORMATION

@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Unicode Text Box control
+'PhotoPaint Unicode Text Box control
 'Copyright 2014-2025 by Tanner Helland
 'Created: 03/November/14
 'Last updated: 10/May/19
@@ -35,7 +35,7 @@ Attribute VB_Exposed = False
 '    fonts between all pdEditBoxW instances (to reduce GDI object count).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

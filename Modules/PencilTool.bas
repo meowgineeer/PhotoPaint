@@ -11,7 +11,7 @@ Attribute VB_Name = "Tools_Pencil"
 ' to code against compared to PD's paintbrush tools (which use a custom brush engine).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -35,7 +35,7 @@ Private m_BrushAntialiasing As PD_2D_Antialiasing
 'Note that some brush attributes only exist for certain brush sources.
 Private m_BrushColor As Long
 
-'In 2025, a new option was added for strictly snapping the brush to pixel centers (see https://github.com/tannerhelland/PhotoDemon/discussions/635).
+'In 2025, a new option was added for strictly snapping the brush to pixel centers (see https://github.com/tannerhelland/PhotoPaint/discussions/635).
 ' When this option is toggled OFF, paint tools behave like Photoshop or Paint.NET.  Turning it ON makes it more acceptable
 ' for e.g. pixel art, with strict precision (particularly with 1px brush sizes).
 Private m_StrictPixelCentering As Boolean

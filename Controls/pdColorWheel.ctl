@@ -28,7 +28,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon "Color Wheel" color selector
+'PhotoPaint "Color Wheel" color selector
 'Copyright 2015-2025 by Tanner Helland
 'Created: 19/October/15
 'Last updated: 29/April/24

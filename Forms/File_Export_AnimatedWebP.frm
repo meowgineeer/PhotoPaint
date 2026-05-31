@@ -175,7 +175,7 @@ Attribute VB_Exposed = False
 'Last updated: 28/October/21
 'Last update: prep dialog for compatibility with batch processor
 '
-'In v9.0, PhotoDemon gained the ability to export animated WebP files.  This dialog exposes relevant
+'In v9.0, PhotoPaint gained the ability to export animated WebP files.  This dialog exposes relevant
 ' export parameters to the user.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.

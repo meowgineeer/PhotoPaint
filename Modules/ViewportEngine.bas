@@ -23,7 +23,7 @@ Attribute VB_Name = "Viewport"
 ' early pipeline stages will harm viewport performance.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -459,7 +459,7 @@ End Sub
 ' specifically, after:
     '1) an image is first loaded
     '2) a viewport's zoom value changes
-    '3) the main PhotoDemon application window is resized
+    '3) the main PhotoPaint application window is resized
     '4) edits are applied that modify image size (resize, rotate, etc.)
 
 'This function is very fast, but it always invokes a full rendering pipeline flush when it finishes.

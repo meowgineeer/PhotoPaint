@@ -344,7 +344,7 @@ Private Sub cmdBar_OKClick()
             End If
             
             'We're now going to loop into the batch process exporter, because it works great for one-off file exports
-            If okToExport Then Saving.PhotoDemon_BatchSaveImage tmpImage, newFilename, exportFormat, m_ExportSettingsFormat, m_ExportSettingsMetadata
+            If okToExport Then Saving.PhotoPaint_BatchSaveImage tmpImage, newFilename, exportFormat, m_ExportSettingsFormat, m_ExportSettingsMetadata
             
             'Free the temporary image
             Set tmpImage = Nothing

@@ -98,7 +98,7 @@ Attribute VB_Exposed = False
 'More details on bilateral filtering can be found at:
 ' http://www.cs.duke.edu/~tomasi/papers/tomasi/tomasiIccv98.pdf
 '
-'Because traditional 2D kernel convolution is extremely slow on images of any size, PhotoDemon used
+'Because traditional 2D kernel convolution is extremely slow on images of any size, PhotoPaint used
 ' a separable bilateral filter implementation for many years.  This provided a good approximation of
 ' a true bilateral, and it transformed the filter from an O(w*h*r^2) process to O(w*h*2r).
 '

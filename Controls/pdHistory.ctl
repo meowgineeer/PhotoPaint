@@ -28,7 +28,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Automatic History control
+'PhotoPaint Automatic History control
 'Copyright 2016-2025 by Tanner Helland
 'Created: 16/October/16
 'Last updated: 21/March/18

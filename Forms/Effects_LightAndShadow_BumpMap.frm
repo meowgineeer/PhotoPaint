@@ -205,7 +205,7 @@ Attribute VB_Exposed = False
 'Last updated: 19/April/22
 'Last update: wrap up initial build
 '
-'This tool was added in PhotoDemon v9.0.  It's only a rudimentary implementation of 2D bump-mapping,
+'This tool was added in PhotoPaint v9.0.  It's only a rudimentary implementation of 2D bump-mapping,
 ' but it's (hopefully) good enough to satisfy the user that asked if I could implement something akin
 ' to FastStone Image Viewer's "bump map" effect.
 '

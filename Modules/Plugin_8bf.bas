@@ -9,7 +9,7 @@ Attribute VB_Name = "Plugin_8bf"
 '8bf files are 3rd-party Adobe Photoshop plugins that implement one or more "filters".  These are
 ' basically DLL files with special interfaces for communicating with a parent Photoshop instance.
 '
-'We attempt to support these plugins in PhotoDemon, with PD standing in for Photoshop as the
+'We attempt to support these plugins in PhotoPaint, with PD standing in for Photoshop as the
 ' "host" of the plugins.
 '
 'This feature relies on the 3rd-party "pspihost" library by Sinisa Petric.  This library is
@@ -18,14 +18,14 @@ Attribute VB_Name = "Plugin_8bf"
 '
 'Thank you to Sinisa for their great work.
 '
-'Note that the pspihost library must be modified to work with a VB6 project like PhotoDemon.
+'Note that the pspihost library must be modified to work with a VB6 project like PhotoPaint.
 ' VB6 only understands stdcall calling convention, particularly with callbacks (which are used
 ' heavily by the 8bf format).  You cannot use a default pspihost release as-is and expect it to
 ' work.  (The pspihost copy that ships with PD has obviously been modified to work with PD;
 ' I mention this only for intrepid developers who attempt to compile it themselves.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

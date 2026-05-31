@@ -9,7 +9,7 @@ Attribute VB_Name = "SelectionFilters"
 'This module should only contain selection filters (e.g. "grow", "border", etc).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -216,7 +216,7 @@ Public Sub Selection_Sharpen(ByVal displayDialog As Boolean, Optional ByVal shar
         SetProgBarMax PDImages.GetActiveImage.MainSelection.GetCompositeMaskDIB.GetDIBHeight
         progBarCheck = ProgressBars.FindBestProgBarValue()
         
-        'ScaleFactor is used to apply the unsharp mask.  Maximum strength can be any value, but PhotoDemon locks it at 10
+        'ScaleFactor is used to apply the unsharp mask.  Maximum strength can be any value, but PhotoPaint locks it at 10
         ' for selections (which are predictably feathered, using exact gaussian techniques).
         Dim scaleFactor As Double, invScaleFactor As Double
         scaleFactor = sharpenRadius
@@ -587,7 +587,7 @@ Public Sub Selection_ContentAwareFill(ByVal displayDialog As Boolean, Optional B
         Set tmpDstCopy = New pdDIB
         
         'Retrieve the boundary rectangle of the "to-be-filled region".  (This comes directly from
-        ' PhotoDemon's selection engine - it's just the boundary of the current selection, in image
+        ' PhotoPaint's selection engine - it's just the boundary of the current selection, in image
         ' coordinate space.)
         Dim baseFillRect As RectF
         baseFillRect = PDImages.GetActiveImage.MainSelection.GetCompositeBoundaryRect

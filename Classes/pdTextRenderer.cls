@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Text Layer Renderer (using some hellish combination of GDI, GDI+, Uniscribe, and custom code)
+'PhotoPaint Text Layer Renderer (using some hellish combination of GDI, GDI+, Uniscribe, and custom code)
 'Copyright 2015-2025 by Tanner Helland
 'Created: 22/April/15
 'Last updated: 07/April/25
@@ -30,7 +30,7 @@ Attribute VB_Exposed = False
 '
 'Here's the basic setup for this class:
 '
-'PhotoDemon's basic text tool attempts to use built-in Windows renderers, with the following caveats...
+'PhotoPaint's basic text tool attempts to use built-in Windows renderers, with the following caveats...
 '
 ' - On TrueType fonts, GDI+ is used.  This saves us a lot of grief, and lets us make use of some nice,
 ' typographic-specific features (like variable antialiasing contrast).
@@ -42,7 +42,7 @@ Attribute VB_Exposed = False
 '
 'This unpleasant hybrid approach is part of the shit you deal with as a Windows developer.
 '
-'For the PHOTODEMON text rendering engine...
+'For the PHOTOPAINT text rendering engine...
 '
 ' - A comprehensive Uniscribe interface is used for text shaping, layout, and placement.  This allows me to use
 '   pretty much every possible OpenType font feature, which is amazing!
@@ -53,7 +53,7 @@ Attribute VB_Exposed = False
 ' - Rendering the final path(s) is done by GDI+.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -82,16 +82,16 @@ End Enum
 Private m_CurrentBackend As PD_FontBackend
 
 'This class provides two different text rendering engines: WAPI and MANUAL.  WAPI is used for basic text layers, and it is
-' thus limited by the innate feature support of GDI and GDI+ (BOOOORING).  The "PhotoDemon" backend is a homebrew text
+' thus limited by the innate feature support of GDI and GDI+ (BOOOORING).  The "PhotoPaint" backend is a homebrew text
 ' renderer that can do pretty much anything we want.  It's extremely powerful, but note that it still dips into WAPI for
 ' various features (e.g. Uniscribe is used for glyph layout, and then we apply our own features atop those results).
 Public Enum PD_TextEngine
     te_WAPI = 0
-    te_PhotoDemon = 1
+    te_PhotoPaint = 1
 End Enum
 
 #If False Then
-    Private Const te_WAPI = 0, te_PhotoDemon = 1
+    Private Const te_WAPI = 0, te_PhotoPaint = 1
 #End If
 
 Private m_RenderingEngine As PD_TextEngine
@@ -290,7 +290,7 @@ Private m_AlignLastLine As GP_StringAlignment
 Private m_TextAntialiasing As PD_TextAntialiasing
 Private m_TextContrast As Long
 
-'The per-glyph PHOTODEMON renderer supports a bunch of unique options, including tons of appearance-related ones
+'The per-glyph PHOTOPAINT renderer supports a bunch of unique options, including tons of appearance-related ones
 Private m_TextHinting As Boolean
 Private m_WordWrap As PD_TextWordwrap
 Private m_StretchToFit As PD_TextStretchToFit
@@ -506,7 +506,7 @@ End Function
 Private Function GetRendererStringFromEnum(ByVal srcValue As PD_TextEngine) As String
     If (srcValue = te_WAPI) Then
         GetRendererStringFromEnum = "wapi"
-    ElseIf (srcValue = te_PhotoDemon) Then
+    ElseIf (srcValue = te_PhotoPaint) Then
         GetRendererStringFromEnum = "pd"
     Else
         InternalError "GetRendererStringFromEnum", "bad value: " & srcValue
@@ -518,7 +518,7 @@ Private Function GetRendererEnumFromString(ByRef srcValue As String) As PD_TextE
     If (srcValue = "wapi") Then
         GetRendererEnumFromString = te_WAPI
     ElseIf (srcValue = "pd") Then
-        GetRendererEnumFromString = te_PhotoDemon
+        GetRendererEnumFromString = te_PhotoPaint
     Else
         InternalError "GetRendererEnumFromString", "bad value: " & srcValue
         GetRendererEnumFromString = te_WAPI
@@ -660,7 +660,7 @@ Friend Function GetAllFontSettingsAsXML() As String
     Set cSerialize = New pdSerialize
     
     'Add a basic header and version info
-    cSerialize.AddXMLString "<photodemon-text-object>"
+    cSerialize.AddXMLString "<photopaint-text-object>"
     cSerialize.AddParam "text-version", 1&, True, True
     
     'Next comes the huge list of possible text properties
@@ -707,7 +707,7 @@ Friend Function GetAllFontSettingsAsXML() As String
     End With
     
     'Close out the text object
-    cSerialize.AddXMLString "</photodemon-text-object>"
+    cSerialize.AddXMLString "</photopaint-text-object>"
     
     'Return the completed XML string
     GetAllFontSettingsAsXML = cSerialize.GetParamString()
@@ -727,7 +727,7 @@ Friend Function SetAllFontSettingsFromXML(ByRef srcXMLString As String) As Boole
     
     'If basic validation fails, revert to the legacy font serialization engine
     Dim useLegacyLoader As Boolean
-    useLegacyLoader = (Not cSerialize.DoesParamExist("photodemon-text-object"))
+    useLegacyLoader = (Not cSerialize.DoesParamExist("photopaint-text-object"))
     If (Not useLegacyLoader) Then useLegacyLoader = (cSerialize.GetLong("text-version", 0, True) < 1)
     
     If useLegacyLoader Then
@@ -848,7 +848,7 @@ Friend Function GetGenericTextProperty(ByVal desiredProperty As PD_TextProperty)
         
         Case ptp_HorizontalAlignment
             GetGenericTextProperty = m_HorizontalAlignment
-            If (m_RenderingEngine <> te_PhotoDemon) And (m_HorizontalAlignment >= StringAlignmentJustify) Then GetGenericTextProperty = StringAlignmentNear
+            If (m_RenderingEngine <> te_PhotoPaint) And (m_HorizontalAlignment >= StringAlignmentJustify) Then GetGenericTextProperty = StringAlignmentNear
         
         Case ptp_VerticalAlignment
             GetGenericTextProperty = m_VerticalAlignment
@@ -1578,7 +1578,7 @@ Friend Function RenderTextToDIB(ByRef dstDIB As pdDIB, ByVal x1 As Single, ByVal
     End If
     
     'PD currently supports two rendering modes: WAPI (which uses GDI or GDI+ to render the text, and is thus limited by the settings
-    ' those two engines provide), or an internal PHOTODEMON engine, which manually extracts font glyphs and renders them ourselves.
+    ' those two engines provide), or an internal PHOTOPAINT engine, which manually extracts font glyphs and renders them ourselves.
     If (m_RenderingEngine = te_WAPI) Then
         
         'We should now know whether GDI or GDI+ is required for this combination of settings.
@@ -1607,7 +1607,7 @@ Friend Function RenderTextToDIB(ByRef dstDIB As pdDIB, ByVal x1 As Single, ByVal
             
         'Debug.Print "FYI - renderTextToDIB returned " & CStr(renderTextToDIB)
         
-    ElseIf (m_RenderingEngine = te_PhotoDemon) Then
+    ElseIf (m_RenderingEngine = te_PhotoPaint) Then
         
         Dim startTime As Currency
         If REPORT_TEXT_RENDER_TIMING Then VBHacks.GetHighResTime startTime
@@ -2349,7 +2349,7 @@ Private Function GetDrawTextAlignmentFlags() As Win32_DrawTextConstants
         Case StringAlignmentFar
             GetDrawTextAlignmentFlags = GetDrawTextAlignmentFlags Or DT_RIGHT
             
-        'PhotoDemon can render justified text, but Win32 cannot.
+        'PhotoPaint can render justified text, but Win32 cannot.
         Case Else
             GetDrawTextAlignmentFlags = GetDrawTextAlignmentFlags Or DT_LEFT
         

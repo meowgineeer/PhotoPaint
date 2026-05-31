@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon 32-bit-float-per-channel surface
+'PhotoPaint 32-bit-float-per-channel surface
 'Copyright 2023-2025 by Tanner Helland
 'Created: 08/January/23
 'Last updated: 10/January/23
@@ -23,7 +23,7 @@ Attribute VB_Exposed = False
 ' Just be aware of the nuances involved when converting such data back to 32-bit (or other) formats.
 '
 'All source code in this file is licensed under a modified BSD license. This means you may use the code in your own
-' projects IF you provide attribution. For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution. For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 

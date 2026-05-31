@@ -17,7 +17,7 @@ Attribute VB_Name = "Uniscribe"
 ' simply incorrect.  I *strongly* recommend referring to MSDN directly if you plan on working with Uniscribe.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -201,7 +201,7 @@ End Type
 '    iTabOrigin As Long
 'End Type
 
-'Glyph data used by PhotoDemon.  An array of this custom struct is filled when the caller requests a copy of pdUniscribe's internal data.
+'Glyph data used by PhotoPaint.  An array of this custom struct is filled when the caller requests a copy of pdUniscribe's internal data.
 ' A fair amount of work is required to pull data out of the various incredibly complicated Uniscribe structs, so don't request copies of
 ' this data more than is absolutely necessary.
 Public Type PDGlyphUniscribe

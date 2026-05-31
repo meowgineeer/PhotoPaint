@@ -1,11 +1,11 @@
 Attribute VB_Name = "Macros"
 '***************************************************************************
-'PhotoDemon Macro Interface
+'PhotoPaint Macro Interface
 'Copyright 2001-2025 by Tanner Helland
 'Created: 10/21/01
 'Last updated: 27/October/21
 'Last update: merge all validation into one place, and add an explicit check for "Original image state"
-'             process ID (see https://github.com/tannerhelland/PhotoDemon/issues/377)
+'             process ID (see https://github.com/tannerhelland/PhotoPaint/issues/377)
 '
 'This (relatively small) sub handles all macro-related operations.  Macros are simply a recorded list
 ' of program operations, which can be "played back" to automate complex image processing actions.
@@ -17,18 +17,18 @@ Attribute VB_Name = "Macros"
 'Either way, a list of specific actions will be exported to file, and that file can then be re-played
 ' against any image in the future.
 '
-'PhotoDemon's batch processing wizard has an integrated "play macro on image" tool, so that any combination
+'PhotoPaint's batch processing wizard has an integrated "play macro on image" tool, so that any combination
 ' of actions can be applied to any combination of images automatically.  This is a trademark feature of
 ' the program.
 '
-'As of 2014, the macro engine has been rewritten in significant ways.  Macros now rely on PhotoDemon's
+'As of 2014, the macro engine has been rewritten in significant ways.  Macros now rely on PhotoPaint's
 ' new string-based parameter design, and all macro settings are saved as XML files.  This makes them
 ' human-readable and human-editable, but it also means that old macro files are no longer supported.
 ' Users of old macro files are automatically warned of this change if they try to load an outdated
 ' macro file.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -147,7 +147,7 @@ End Sub
 Public Function DisplayMacroSaveDialog(Optional ByRef srcFilename As String = vbNullString) As Boolean
     
     Dim cdFilter As String
-    cdFilter = "PhotoDemon " & g_Language.TranslateMessage("Macro") & " (." & MACRO_EXT & ")|*." & MACRO_EXT
+    cdFilter = "PhotoPaint " & g_Language.TranslateMessage("Macro") & " (." & MACRO_EXT & ")|*." & MACRO_EXT
     
     Dim cdTitle As String
     cdTitle = g_Language.TranslateMessage("Save macro")
@@ -297,7 +297,7 @@ Public Sub PlayMacro()
     Set openDialog = New pdOpenSaveDialog
         
     Dim cdFilter As String
-    cdFilter = "PhotoDemon " & g_Language.TranslateMessage("Macro") & " (." & MACRO_EXT & ")|*." & MACRO_EXT & ";*.thm"
+    cdFilter = "PhotoPaint " & g_Language.TranslateMessage("Macro") & " (." & MACRO_EXT & ")|*." & MACRO_EXT & ";*.thm"
     cdFilter = cdFilter & "|" & g_Language.TranslateMessage("All files") & "|*.*"
     
     Dim cdTitle As String
@@ -335,7 +335,7 @@ Public Function PlayMacroFromFile(ByRef srcMacroPath As String) As Boolean
     'Load the XML file into memory
     xmlEngine.LoadXMLFile srcMacroPath
     
-    'Check for a few necessary tags, just to make sure this is actually a PhotoDemon macro file
+    'Check for a few necessary tags, just to make sure this is actually a PhotoPaint macro file
     If xmlEngine.IsPDDataType("Macro") And xmlEngine.ValidateLoadedXMLData("pdMacroVersion") Then
     
         'Next, check the macro's version number, and make sure it's still supported

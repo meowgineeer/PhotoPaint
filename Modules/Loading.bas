@@ -16,7 +16,7 @@ Attribute VB_Name = "Loading"
 ' the ImageImporter module, and potentially various third-party libraries.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -51,7 +51,7 @@ Private m_MultiImageLoadActive As Boolean
 '    suppressed.  (Note that the warnings can still be retrieved from debug logs, however.)  This value is passed ByRef
 '    so that is suspendWarnings is vbNO, the caller can handle vbCancel results (if desired) from raised message boxes.
 ' 5) [optional] handleUIDisabling
-'    By default, this function takes control of PhotoDemon's UI and disables anything interactable while the load process occurs.
+'    By default, this function takes control of PhotoPaint's UI and disables anything interactable while the load process occurs.
 '    Some specialized load functions (like batch processing) already assume specialized control, and will not want the load
 '    process to re-enable everything when the load completes.
 ' 6) [optional] overrideParameters
@@ -65,7 +65,7 @@ Public Function LoadFileAsNewImage(ByRef srcFile As String, Optional ByVal sugge
     
     '*** AND NOW, AN IMPORTANT MESSAGE ABOUT DOEVENTS ***
     
-    'Normally, PhotoDemon avoids calling DoEvents for all the obvious reasons.
+    'Normally, PhotoPaint avoids calling DoEvents for all the obvious reasons.
     ' This function is an exception to that rule.
     
     'While this function stays busy loading the image in question, the ExifTool plugin runs asynchronously,
@@ -173,7 +173,7 @@ Public Function LoadFileAsNewImage(ByRef srcFile As String, Optional ByVal sugge
     ' 3) pdDIB object: eventually this will be retitled as pdSurface, as it may not be a DIB, but at present, a single grid of pixels
     
     'Different parts of the load process interact with different levels of our target pdImage object.  If loading a PDI file
-    ' (PhotoDemon's native format), multiple layers and DIBs will be loaded and processed for a singular pdImage object.
+    ' (PhotoPaint's native format), multiple layers and DIBs will be loaded and processed for a singular pdImage object.
     
     'Anyway, in the future, I'd like to avoid referencing the pdImages collection directly, and instead use helper functions.
     ' To facilitate this switch, I've written this function to use generic "targetImage" and "targetDIB" objects.  (targetLayer isn't
@@ -270,7 +270,7 @@ Public Function LoadFileAsNewImage(ByRef srcFile As String, Optional ByVal sugge
         PDDebug.LogAction "Debug note: image load appeared to be successful.  Summary forthcoming."
         
         '*************************************************************************************************************************************
-        ' If the loaded image was in PDI format (PhotoDemon's internal format), skip a number of additional processing steps.
+        ' If the loaded image was in PDI format (PhotoPaint's internal format), skip a number of additional processing steps.
         '*************************************************************************************************************************************
         
         If (internalFormatID <> PDIF_PDI) Then
@@ -612,7 +612,7 @@ Public Function LoadFileAsNewImage(ByRef srcFile As String, Optional ByVal sugge
                     Set msgBadExtension = New pdString
                     msgBadExtension.AppendLine g_Language.TranslateMessage("This file has the extension ""%1"", but it is actually in ""%2"" format.", Files.FileGetExtension(srcFile), ImageFormats.GetExtensionFromPDIF(targetImage.GetOriginalFileFormat))
                     msgBadExtension.AppendLineBreak
-                    msgBadExtension.AppendLine g_Language.TranslateMessage("May PhotoDemon rename the file with a correct extension?")
+                    msgBadExtension.AppendLine g_Language.TranslateMessage("May PhotoPaint rename the file with a correct extension?")
                     msgBadExtension.AppendLineBreak
                     msgBadExtension.AppendLine g_Language.TranslateMessage("(If you choose ""Yes"", the file will be renamed to ""%1"")", renamedFilename)
                     
@@ -750,10 +750,10 @@ Public Function QuickLoadImageToDIB(ByVal imagePath As String, ByRef targetDIB A
     'Depending on the file's extension, load the image using the most appropriate image decoding routine
     Select Case fileExtension
     
-        'PhotoDemon's custom file format must be handled specially (as obviously, FreeImage and GDI+ won't handle it!)
+        'PhotoPaint's custom file format must be handled specially (as obviously, FreeImage and GDI+ won't handle it!)
         Case "PDI"
         
-            'PDI images require zstd, and are only loaded via a custom routine (obviously, since they are PhotoDemon's native format)
+            'PDI images require zstd, and are only loaded via a custom routine (obviously, since they are PhotoPaint's native format)
             loadSuccessful = LoadPDI_Normal(imagePath, targetDIB, tmpPDImage)
             
             'Retrieve a copy of the fully composited image
@@ -967,7 +967,7 @@ Public Function QuickLoadImageToDIB(ByVal imagePath As String, ByRef targetDIB A
         If displayMessagesToUser Then
             If (freeImageReturn <> PD_FAILURE_USER_CANCELED) Then
                 Message "Failed to load %1", imagePath
-                PDMsgBox "Unfortunately, PhotoDemon was unable to load the following image:" & vbCrLf & vbCrLf & "%1" & vbCrLf & vbCrLf & "Please use another program to save this image in a generic format (such as JPEG or PNG) before loading it.  Thanks!", vbExclamation Or vbOKOnly, "Image import failed", imagePath
+                PDMsgBox "Unfortunately, PhotoPaint was unable to load the following image:" & vbCrLf & vbCrLf & "%1" & vbCrLf & vbCrLf & "Please use another program to save this image in a generic format (such as JPEG or PNG) before loading it.  Thanks!", vbExclamation Or vbOKOnly, "Image import failed", imagePath
             Else
                 Message "Layer import canceled."
             End If
@@ -1017,7 +1017,7 @@ Private Function CheckForInternalFiles(ByRef srcFileExtension As String) As PD_I
         Case "TMPDIB", "PDTMPDIB"
             CheckForInternalFiles = PDIF_RAWBUFFER
             
-        'Straight TMP files are internal files (BMP, typically) used by PhotoDemon.
+        'Straight TMP files are internal files (BMP, typically) used by PhotoPaint.
         ' In some cases these come from 3rd-party libraries (e.g. EZTWAIN) so their format
         ' is not necessarily guaranteed in advance.
         Case "TMP"
@@ -1219,7 +1219,7 @@ Private Sub ShowFailedLoadMsgBox(ByRef srcFilesBroken As pdStringStack)
         
     Next i
     
-    PDMsgBox "Unfortunately, PhotoDemon was unable to load the following image(s):" & vbCrLf & vbCrLf & "%1" & vbCrLf & "Please verify that these image(s) exist, and that they use a supported image format (like JPEG or PNG).  Thanks!", vbExclamation Or vbOKOnly, "Some images were not loaded", listOfFiles.ToString()
+    PDMsgBox "Unfortunately, PhotoPaint was unable to load the following image(s):" & vbCrLf & vbCrLf & "%1" & vbCrLf & "Please verify that these image(s) exist, and that they use a supported image format (like JPEG or PNG).  Thanks!", vbExclamation Or vbOKOnly, "Some images were not loaded", listOfFiles.ToString()
     
 End Sub
 

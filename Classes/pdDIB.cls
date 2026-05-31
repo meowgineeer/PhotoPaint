@@ -12,14 +12,14 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon DIB Wrapper class (formerly known as "pdLayer")
+'PhotoPaint DIB Wrapper class (formerly known as "pdLayer")
 'Copyright 2012-2025 by Tanner Helland
 'Created: 29/August/12
 'Last updated: 24/March/25
 'Last update: if we fail to create a blank surface at the target size, this class will now send out a
 '             "cry for help"; this will trigger other surfaces in the app to suspend themselves to disk
 '
-'This class manages pixel data for almost everything inside PhotoDemon.  From image layers to UI
+'This class manages pixel data for almost everything inside PhotoPaint.  From image layers to UI
 ' elements, all are managed as pdDIB objects (a name that exists for historical reasons, but which
 ' may not always correspond to a literal Windows DIB object).
 '
@@ -37,7 +37,7 @@ Attribute VB_Exposed = False
 ' to worry about suspended data "not being there" - this class will silently manage all of that for you.
 '
 'All source code in this file is licensed under a modified BSD license. This means you may use the code in your own
-' projects IF you provide attribution. For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution. For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -782,7 +782,7 @@ Friend Function CreateBlank(ByVal imgWidth As Long, ByVal imgHeight As Long, Opt
         'Erase any existing DIB data
         Me.EraseDIB
         
-        'PhotoDemon only supports 24 and 32 BPP at present
+        'PhotoPaint only supports 24 and 32 BPP at present
         If (colorDepth <> 32) And (colorDepth <> 24) Then colorDepth = 32
             
         'Force the DIB to have a size of at least 1x1

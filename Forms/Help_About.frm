@@ -3,7 +3,7 @@ Begin VB.Form FormAbout
    Appearance      =   0  'Flat
    BackColor       =   &H80000005&
    BorderStyle     =   4  'Fixed ToolWindow
-   Caption         =   " About PhotoDemon"
+   Caption         =   " About PhotoPaint"
    ClientHeight    =   7980
    ClientLeft      =   45
    ClientTop       =   390
@@ -83,7 +83,7 @@ Begin VB.Form FormAbout
          Width           =   9300
          _ExtentX        =   16404
          _ExtentY        =   873
-         Caption         =   "PhotoDemon"
+         Caption         =   "PhotoPaint"
          FontBold        =   -1  'True
          FontSize        =   14
       End
@@ -120,7 +120,7 @@ Begin VB.Form FormAbout
          _ExtentX        =   16404
          _ExtentY        =   661
          Caption         =   ""
-         URL             =   "https://www.patreon.com/photodemon/overview"
+         URL             =   "https://www.patreon.com/photopaint/overview"
       End
       Begin PhotoPaint.pdHyperlink hypAbout 
          Height          =   375
@@ -132,7 +132,7 @@ Begin VB.Form FormAbout
          _ExtentX        =   16404
          _ExtentY        =   661
          Caption         =   "Download program source code"
-         URL             =   "https://github.com/tannerhelland/PhotoDemon"
+         URL             =   "https://github.com/tannerhelland/PhotoPaint"
       End
       Begin PhotoPaint.pdHyperlink hypAbout 
          Height          =   375
@@ -204,15 +204,15 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon About Dialog
+'PhotoPaint About Dialog
 'Copyright 2001-2025 by Tanner Helland
 'Created: 6/12/01
 'Last updated: 07/January/25
 'Last update: update contributor list
 '
-'PhotoDemon would not be possible without the help of many, many amazing people.  THANK YOU!
+'PhotoPaint would not be possible without the help of many, many amazing people.  THANK YOU!
 '
-'If you contributed to PhotoDemon's development in some way, but your name isn't listed here,
+'If you contributed to PhotoPaint's development in some way, but your name isn't listed here,
 ' please let me know!  I can always be reached via https://photopaint.org/about/contact/
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
@@ -259,8 +259,8 @@ Private Sub Form_Load()
     UpdateVisiblePanel
     
     'Fill any custom "About" panel text
-    lblAbout(0).Caption = g_Language.TranslateMessage("PhotoDemon is Copyright %1 2000-%2 by Tanner Helland and Contributors", ChrW$(169), Year(Now))
-    lblAbout(1).Caption = Updates.GetPhotoDemonNameAndVersion()
+    lblAbout(0).Caption = g_Language.TranslateMessage("PhotoPaint is Copyright %1 2000-%2 by Tanner Helland and Contributors", ChrW$(169), Year(Now))
+    lblAbout(1).Caption = Updates.GetPhotoPaintNameAndVersion()
     
     'Fill some specialty links
     Dim actualText As String
@@ -270,7 +270,7 @@ Private Sub Form_Load()
     If OS.IsWin7OrLater Then actualText = ChrW$(&H2665) & Space$(2) & actualText
     hypAbout(0).Caption = actualText
     
-    actualText = g_Language.TranslateMessage("Donate to PhotoDemon development")
+    actualText = g_Language.TranslateMessage("Donate to PhotoPaint development")
     If OS.IsWin7OrLater Then actualText = ChrW$(&H2665) & Space$(2) & actualText
     hypAbout(1).Caption = actualText
     
@@ -322,7 +322,7 @@ Private Sub Form_Load()
     End If
     
     actualText = g_Language.TranslateMessage("(You can become a patron, too!  Click here to learn more.)")
-    GeneratePatron actualText, "https://www.patreon.com/photodemon/overview"
+    GeneratePatron actualText, "https://www.patreon.com/photopaint/overview"
     
     'Fill the "Contributor" panel text
     ReDim m_contributorList(0 To 31) As PD_Contributor

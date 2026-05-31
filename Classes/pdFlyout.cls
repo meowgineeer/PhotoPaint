@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Flyout Panel controller
+'PhotoPaint Flyout Panel controller
 'Copyright 2021-2025 by Tanner Helland
 'Created: 01/November/21
 'Last updated: 05/December/21
@@ -40,7 +40,7 @@ Attribute VB_Exposed = False
 ' things like recursive redraws when swapping between panels.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

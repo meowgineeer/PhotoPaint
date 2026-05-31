@@ -19,13 +19,13 @@ Attribute VB_Exposed = False
 'Last update: add a streaming interface for writing animated WebP files on-the-fly (used by PD's screen recorder)
 '
 'libWebP is a BSD-licensed WebP image support library.  It is developed and actively maintained by Google.
-' Fortunately for PhotoDemon, it comes with a robust C interface and legacy compilation options, enabling
+' Fortunately for PhotoPaint, it comes with a robust C interface and legacy compilation options, enabling
 ' support all the way back to Windows XP.
 '
-'PhotoDemon historically used FreeImage to manage WebP files, but using libwebp directly allows for
+'PhotoPaint historically used FreeImage to manage WebP files, but using libwebp directly allows for
 ' significantly better performance and feature support, including import/export support for animated WebP.
 '
-'Note that all features in this module rely on the libwebp binaries that ship with PhotoDemon (all THREE
+'Note that all features in this module rely on the libwebp binaries that ship with PhotoPaint (all THREE
 ' of them).  This class will not work if libwebp or its mux/demux components are missing or broken.
 '
 'You can freely plug-in your own builds of libwebp and libwebpde/mux, but note that they must be built
@@ -41,7 +41,7 @@ Attribute VB_Exposed = False
 ' http://www.vbforums.com/showthread.php?781595-VB6-Call-Functions-By-Pointer-(Universall-DLL-Calls)&p=4795471&viewfull=1#post4795471
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -473,7 +473,7 @@ Private m_hDemuxer As Long
 'Animated files will fill this struct.  (Non-animated files WILL NOT.)
 Private m_AnimationInfo As PD_WebPAnimInfo
 
-'PhotoDemon provides a "streaming" interface for writing animated WebP files, where the total frame count
+'PhotoPaint provides a "streaming" interface for writing animated WebP files, where the total frame count
 ' (and contents of individual frames) do not need to be known up-front.  Instead, you "stream" frames to
 ' the encoder as they arrive.  This requires class-level tracking variables to correctly maintain state.
 Private m_StreamingEncoder As Long, m_StreamingSaveConfig As PD_WebPConfig

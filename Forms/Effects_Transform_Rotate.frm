@@ -158,7 +158,7 @@ Attribute VB_Exposed = False
 'Last updated: 28/July/17
 'Last update: performance improvements, migrate to XML params
 '
-'Dialog for handling rotation via PhotoDemon's distort filter engine.  This is kept separate from full-image rotation,
+'Dialog for handling rotation via PhotoPaint's distort filter engine.  This is kept separate from full-image rotation,
 ' because I needed a rotate that could be applied to selections.  Also, full-image rotation allows you to resize the
 ' canvas.  This does not.
 '

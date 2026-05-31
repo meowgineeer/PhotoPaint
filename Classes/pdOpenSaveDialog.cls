@@ -25,7 +25,7 @@ Attribute VB_Exposed = False
 '
 '...but besides being unwieldy and somewhat error-prone, Steve's implementation was ANSI-only.  Due to major
 ' differences in string handling (including multifile delimiters), it was non-trivial to overhaul his code,
-' so in 2015 I wrote a new common dialog interface, specific to PhotoDemon.
+' so in 2015 I wrote a new common dialog interface, specific to PhotoPaint.
 '
 'The eventual goal is to add parallel support for Vista's IFileOpen/SaveDialogs, which would allow me to
 ' (finally) customize the program's main dialogs, but as of today that remains TODO.  For now, PD simply
@@ -34,7 +34,7 @@ Attribute VB_Exposed = False
 '(Also: for convenience against existing code, parameter order is roughly identical to Steve's old implementation.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

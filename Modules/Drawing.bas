@@ -1,6 +1,6 @@
 Attribute VB_Name = "Drawing"
 '***************************************************************************
-'PhotoDemon Drawing Routines
+'PhotoPaint Drawing Routines
 'Copyright 2001-2025 by Tanner Helland
 'Created: 4/3/01
 'Last updated: 28/May/24
@@ -10,7 +10,7 @@ Attribute VB_Name = "Drawing"
 ' drawing the canvas background of image forms, and a gradient-rendering sub (used primarily on the histogram form).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

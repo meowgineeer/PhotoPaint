@@ -153,7 +153,7 @@ Private Const ALLOW_GDIPLUS_RESIZE As Boolean = True
 'Internal flag to report performance.  Very helpful while debugging; not helpful in production.
 Private Const REPORT_PREVIEW_PERF As Boolean = False
 
-'PhotoDemon's resampling options have expanded over the years.  Unfortunately, old versions of the app
+'PhotoPaint's resampling options have expanded over the years.  Unfortunately, old versions of the app
 ' stored resampling settings using 0-based integers.  I have since switched to a version-agnostic string system,
 ' but these old enums are kept around so PD can map old macros to modern resampling constants.
 Private Enum PD_ResampleOld_V1
@@ -370,7 +370,7 @@ Private Sub Form_Load()
     'Add some tooltips
     chkEstimate.AssignTooltip "Some image resampling filters support approximate calculations.  These improve performance at a minor penalty to quality."
     cboResample.AssignTooltip "Resampling affects the quality of a resized image.  For a good summary of resampling techniques, visit the Image Resampling article on Wikipedia."
-    cmbFit.AssignTooltip "When changing an image's aspect ratio, undesirable stretching may occur.  PhotoDemon can avoid this by using empty borders or cropping instead."
+    cmbFit.AssignTooltip "When changing an image's aspect ratio, undesirable stretching may occur.  PhotoPaint can avoid this by using empty borders or cropping instead."
     
     'Apply translations and visual themes
     ApplyThemeAndTranslations Me, True, True, picPreview.hWnd

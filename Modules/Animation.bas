@@ -6,14 +6,14 @@ Attribute VB_Name = "Animation"
 'Last updated: 15/November/23
 'Last update: clean up code that converts animation frame times to/from layer names
 '
-'PhotoDemon was never meant to edit animations, but repeat user requests for animated GIF handling
+'PhotoPaint was never meant to edit animations, but repeat user requests for animated GIF handling
 ' have led to a rudimentary set of import/export/playback features.  (Support has also been extended
 ' to a number of other animated formats, including APNG, WebP, JPEG XL, and possibly others.)
 '
 'This module collects a few useful tools for dealing with animated images.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

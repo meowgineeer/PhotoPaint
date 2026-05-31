@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Graphics Fill ("Brush" in GDI/GDI+ parlance) Class
+'PhotoPaint Graphics Fill ("Brush" in GDI/GDI+ parlance) Class
 'Copyright 2014-2025 by Tanner Helland
 'Created: 30/June/15 (but assembled from many bits written earlier)
 'Last updated: 13/April/22
@@ -35,7 +35,7 @@ Attribute VB_Exposed = False
 'Texture brushes are still TODO.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

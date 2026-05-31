@@ -221,7 +221,7 @@ Private Sub Form_Load()
     
     btsTargetFile.AddItem "overwrite", 0
     btsTargetFile.AddItem "append", 1
-    btsTargetFile.AssignTooltip "Adobe Swatch Exchange (ASE) files can store multiple palettes inside a single file.  If you select the ""append"" option, PhotoDemon will add this palette to your existing ASE file.  Any palettes already inside the file will not be modified."
+    btsTargetFile.AssignTooltip "Adobe Swatch Exchange (ASE) files can store multiple palettes inside a single file.  If you select the ""append"" option, PhotoPaint will add this palette to your existing ASE file.  Any palettes already inside the file will not be modified."
     btsTargetFile.ListIndex = 0
     
     cmdBar.SetPreviewStatus True
@@ -245,7 +245,7 @@ Public Sub ShowDialog(Optional ByRef srcImage As pdImage = Nothing, Optional ByV
     
     'Set the preview window's alpha handling status based on the output format; many palette formats
     ' do not support opacity, so we want to preview opacity conditionally.
-    palPreview.UseRGBA = (palFormat = pdpf_PhotoDemon) Or (palFormat = pdpf_PaintDotNet)
+    palPreview.UseRGBA = (palFormat = pdpf_PhotoPaint) Or (palFormat = pdpf_PaintDotNet)
     
     'Cache a copy of the fully composited image (if any)
     If (Not srcImage Is Nothing) Then

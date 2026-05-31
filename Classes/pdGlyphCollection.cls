@@ -12,20 +12,20 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Glyph Collection Interface
+'PhotoPaint Glyph Collection Interface
 'Copyright 2015-2025 by Tanner Helland
 'Created: 27/April/15
 'Last updated: 11/September/22
 'Last update: add support for justified paragraph alignment
 '
-'This class manages the creation and storage of individual text glyphs.  These glyphs are used by PhotoDemon's
+'This class manages the creation and storage of individual text glyphs.  These glyphs are used by PhotoPaint's
 ' advanced text tool to enable advanced text features.
 '
-'This class leans HEAVILY on pdUniscribe, PhotoDemon's comprehensive Uniscribe interface.  The relevant internal
+'This class leans HEAVILY on pdUniscribe, PhotoPaint's comprehensive Uniscribe interface.  The relevant internal
 ' instance is m_Uniscribe.  Vector paths created by this class are ultimately rendered by a pdTextRenderer instance.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -118,7 +118,7 @@ Private m_IdentityMatrix As MAT2
 Private m_tmpDIB As pdDIB
 
 'Uniscribe interface.  Uniscribe is used for initial script itemizing, shaping, layout and placement, but note that
-' we further modify the Uniscribe output to apply custom PhotoDemon features (like line-spacing, jitter, etc)
+' we further modify the Uniscribe output to apply custom PhotoPaint features (like line-spacing, jitter, etc)
 Private m_Uniscribe As pdUniscribe
 
 'Metrics for the current font.  These are crucial because font path coordinate are all relative to the font baseline,

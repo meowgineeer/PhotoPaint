@@ -4,10 +4,10 @@ Attribute VB_Name = "Evaluator"
 'Copyright 2018 by Olaf Schmidt, with additional improvements by Jason Peter Brown
 'Created: 25/June/18
 'Last updated: 25/June/18
-'Last update: initial integration into PD; see https://github.com/tannerhelland/PhotoDemon/issues/263 for details
+'Last update: initial integration into PD; see https://github.com/tannerhelland/PhotoPaint/issues/263 for details
 '
 'In June 2018, Jason Peter Brown (https://www.github.com/jpbro) suggested adding arbitrary expression
-' evaluation to PhotoDemon's various edit boxes.  He followed this up with a great deal of research and
+' evaluation to PhotoPaint's various edit boxes.  He followed this up with a great deal of research and
 ' ultimately the full-blown submission of a working evaluator, based on work originally shared by
 ' Olaf Schmidt.  Thank you to these two individuals for enabling arbitrary expression evaluation in
 ' PD's input forms!
@@ -16,7 +16,7 @@ Attribute VB_Name = "Evaluator"
 ' http://www.vbforums.com/showthread.php?860225-simple-math-string-parser&p=5271805&viewfull=1#post5271805
 '
 'While Jason's modified version can be found here (link good as of June '18):
-' https://github.com/tannerhelland/PhotoDemon/issues/263
+' https://github.com/tannerhelland/PhotoPaint/issues/263
 '
 'Jason's changes include:
 ' - Added Evaluate wrapper function to pre-evaluation processing to passed expressions
@@ -26,10 +26,10 @@ Attribute VB_Name = "Evaluator"
 ' - Added "CanEvaluate" method that returns true if passed expression can be evaluated
 '
 'The code have been further modified for integration into PD, but any additional changes by the
- 'PhotoDemon authors can be considered "public domain".
+ 'PhotoPaint authors can be considered "public domain".
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

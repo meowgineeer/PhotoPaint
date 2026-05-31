@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon KD-Tree for fast palette matching (child node)
+'PhotoPaint KD-Tree for fast palette matching (child node)
 'Copyright 2018-2025 by Tanner Helland
 'Created: 28/January/18
 'Last updated: 16/September/21
@@ -23,7 +23,7 @@ Attribute VB_Exposed = False
 ' not designed to be used as a standalone class; instead, it should be managed by a pdKDTree instance.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

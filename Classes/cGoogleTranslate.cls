@@ -11,10 +11,10 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
-'Note: this file has been modified for use within PhotoDemon.  It may require modifications to work with other projects.
+'Note: this file has been modified for use within PhotoPaint.  It may require modifications to work with other projects.
 '
 'This code was originally written by the talented Frank Donckers.  Many thanks to Frank for allowing me to use his
-' code in PhotoDemon.  (Frank also provided PhotoDemon's original German, French, and Vlaams translations.)
+' code in PhotoPaint.  (Frank also provided PhotoPaint's original German, French, and Vlaams translations.)
 
 '***************************************************************************
 'Google Translate Interface
@@ -130,11 +130,11 @@ Public Function GetGoogleTranslation(ByVal srcText As String, Optional ByRef cop
     
     If ieAvailable Then
         
-        'PhotoDemon uses %n to define custom parameters in text entries.  URLs also make use of the % identifier,
+        'PhotoPaint uses %n to define custom parameters in text entries.  URLs also make use of the % identifier,
         ' so replace our % with something else before attempting to translate.
         If (InStr(srcText, "%") <> 0) Then srcText = Replace$(srcText, "%", "&#37;", , , vbBinaryCompare)
         
-        'Some PhotoDemon phrases contain line breaks.  We can't pass these in a URL, so replace them with a custom ID.
+        'Some PhotoPaint phrases contain line breaks.  We can't pass these in a URL, so replace them with a custom ID.
         If (InStr(srcText, vbCrLf) <> 0) Then srcText = Replace$(srcText, vbCrLf, "VBCRLF")
         If (InStr(srcText, vbLf) <> 0) Then srcText = Replace$(srcText, vbLf, "VBCRLF")
         If (InStr(srcText, vbCr) <> 0) Then srcText = Replace$(srcText, vbCr, "VBCRLF")

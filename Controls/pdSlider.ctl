@@ -46,13 +46,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Slider+Spinner custom control
+'PhotoPaint Slider+Spinner custom control
 'Copyright 2013-2025 by Tanner Helland
 'Created: 19/April/13
 'Last updated: 09/December/21
 'Last update: new CaptionPadding property, so I can fix minor alignment annoyances on toolpanels
 '
-'Software like PhotoDemon requires a lot of UI elements.  Ideally, every setting should be adjustable
+'Software like PhotoPaint requires a lot of UI elements.  Ideally, every setting should be adjustable
 ' by at least two mechanisms: direct text entry, and some kind of slider or scroll bar, which provides
 ' quick input for both large and small adjustments.  This slider control provides this capability across
 ' almost every dialog in the project.
@@ -98,7 +98,7 @@ Public Event RenderTrackImage(ByRef dstDIB As pdDIB, ByVal leftBoundary As Singl
 Private m_textBoxInitiated As Boolean
 
 'Added in 2021 to allow for minor tweaks in caption vs scrollbar padding; this helps me perfectly
-' align some tricky run-time elements in PhotoDemon's toolpanels.  (Can be negative.)
+' align some tricky run-time elements in PhotoPaint's toolpanels.  (Can be negative.)
 Private m_captionPadding As Long
 
 'User control support class.  Historically, many classes (and associated subclassers) were required by each user control,

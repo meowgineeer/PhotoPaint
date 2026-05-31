@@ -12,16 +12,16 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon "pdPackage" v2.0 Interface (e.g. Zip-like archive handler)
+'PhotoPaint "pdPackage" v2.0 Interface (e.g. Zip-like archive handler)
 'Copyright 2014-2019 by Tanner Helland
 'Created: 05/April/14
 'Last updated: 23/September/17
 'Last update: revert to writing original, uncompressed data if compression doesn't reduce data size
-'Dependencies: - pdStream class from photodemon.org (used to easily read/write memory and file buffers)
-'              - pdFSO class from photodemon.org (Unicode-friendly file operations)
-'              - pdStringStack class from photodemon.org (optimized handling of large string collections)
-'              - VBHacks module from photodemon.org (optimized workarounds for lacking VB functionality)
-'              - Compression module and any attached plugin modules (e.g. Plugin_zstd, Plugin_lz4) from photodemon.org
+'Dependencies: - pdStream class from photopaint.org (used to easily read/write memory and file buffers)
+'              - pdFSO class from photopaint.org (Unicode-friendly file operations)
+'              - pdStringStack class from photopaint.org (optimized handling of large string collections)
+'              - VBHacks module from photopaint.org (optimized workarounds for lacking VB functionality)
+'              - Compression module and any attached plugin modules (e.g. Plugin_zstd, Plugin_lz4) from photopaint.org
 '                 (if you want compression support)
 '
 'This class provides an interface for creating and reading "pdPackage" files.  pdPackages are zip-like archive files
@@ -30,7 +30,7 @@ Attribute VB_Exposed = False
 'pdPackager v2.0 is not backwards compatible with pdPackage v1.0.  It is an entirely separate format, with many
 ' improvements over v1.0.
 '
-'Though I have created pdPackages specifically for use with PhotoDemon, this class should be easily usable by others
+'Though I have created pdPackages specifically for use with PhotoPaint, this class should be easily usable by others
 ' with only minor modifications.  Note that compression support requires an explicit path to libdeflate,
 ' zstandard (zstd), or lz4/lz4-hc, with the expected filename of "libdeflate.dll", "libzstd.dll", or "liblz4.dll",
 ' respectively.  pdPackage can also be used without compression, though its benefits are greatly reduced.
@@ -62,7 +62,7 @@ Attribute VB_Exposed = False
 '
 ' 1) At present, pdPackage files are not easily editable.  Once created, there is no interface for adding new nodes,
 '     erasing existing nodes, or modifying any of the pdPackage settings (compression, etc).  There's nothing in the format
-'     design that prevents these actions, but I haven't written edit functions because I have no reason to do so in PhotoDemon.
+'     design that prevents these actions, but I haven't written edit functions because I have no reason to do so in PhotoPaint.
 ' 2) As noted above, external libraries are required for compression.  pdPackages are designed in a way that makes it easy
 '     to use any compression functions (or other modification functions, e.g. encryption) of your choosing, or to ignore
 '     compression entirely if you don't require it.  That said, if you want to use the class without a compression library,
@@ -76,7 +76,7 @@ Attribute VB_Exposed = False
 '     original file until all interactions are complete.
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-' projects IF you provide attribution.  For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution.  For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -87,7 +87,7 @@ Option Explicit
 ' - The current expected value is 70.  Versions 66 and previous require the original pdPackage v1.0 class.  This class
 '   *does not load pdPackage versions prior to v70*, by design.
 ' - The constants between 67 and 69, inclusive, have no meaning and are considered invalid.
-' - The lowest supported value for this constant is 70, representative of PhotoDemon 7.0, when the PDI format was
+' - The lowest supported value for this constant is 70, representative of PhotoPaint 7.0, when the PDI format was
 '   overhauled to support a bunch of new features (like zstd compression).
 Private Const THIS_PDPACKAGE_VERSION As Long = 70
 
@@ -624,11 +624,11 @@ End Function
 'When subfolder recursion is in use, each file automatically has a relative path automatically generated for it.  By default, this path is
 ' constructed relative to the srcFolder parameter.  If this behavior is not desirable, an alternate base folder can be specified via the
 ' useCustomRelativeFolderBase string.  This is preferable if you are adding multiple folders via this call, but you want all added files
-' extracted relative to some parent folder.  For example, when updating PD, I manually add the "PhotoDemon\App" subfolder to the update package.
-' By default, all added files will be constructed relative to the \App subfolder, so "C:\PhotoDemon\App\Languages\Deutsch.xml" becomes
+' extracted relative to some parent folder.  For example, when updating PD, I manually add the "PhotoPaint\App" subfolder to the update package.
+' By default, all added files will be constructed relative to the \App subfolder, so "C:\PhotoPaint\App\Languages\Deutsch.xml" becomes
 ' "\Languages\Deutsch.xml".  At extraction time, this file would be erroneously extracted to "C:\New PD Folder\Languages\Deutsch.xml", because
 ' the \App folder was the original relative base.  To override this behavior, I manually specify a different base folder at creation time,
-' e.g. "C:\PhotoDemon\".  This causes all added files to receive the relative path "App\Languages\Deutsch.xml", making extraction much simpler.
+' e.g. "C:\PhotoPaint\".  This causes all added files to receive the relative path "App\Languages\Deutsch.xml", making extraction much simpler.
 '
 'If you do not want relative paths used whatsoever, set the optional preserveFolders parameter to FALSE.  If you do this, note that you cannot
 ' change your mind at extraction time, as relative paths will not physically exist inside the package.
@@ -1972,7 +1972,7 @@ End Function
 ' For common cases, this is simply not possible, as the caller does not have enough knowledge necessary to prep such a buffer.  Instead, it relies
 ' on pdPackager to construct the destination buffer for it, using the size values stored inside the pdPackage instance.
 '
-'PhotoDemon is unique in this regard, as it can correctly calculate the size of raster layer pixel buffers (because it knows the associated
+'PhotoPaint is unique in this regard, as it can correctly calculate the size of raster layer pixel buffers (because it knows the associated
 ' width, height, stride and color depth of the buffer).  Because PD has to create a matching DIB in advance, a destination buffer of perfect size
 ' is already implicitly allocated, so there is no need for a temporary VB array to shuttle the data around.
 '
@@ -2253,7 +2253,7 @@ Private Sub Class_Terminate()
 End Sub
 
 'If something unexpected occurs, and the user needs to know about it (e.g. it's not just debugging data), pdPackage will raise a message
-' using this function.  PhotoDemon uses a central "Message" function to handle messages like this, but you can change it to Debug.Print instead.
+' using this function.  PhotoPaint uses a central "Message" function to handle messages like this, but you can change it to Debug.Print instead.
 Private Sub InternalErrorMsg(ByVal msgString As String, ParamArray ExtraText() As Variant)
         
     If (UBound(ExtraText) >= LBound(ExtraText)) Then

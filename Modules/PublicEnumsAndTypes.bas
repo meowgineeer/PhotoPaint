@@ -104,7 +104,7 @@ End Enum
     Private Const PDSR_Highlight = 0, PDSR_Lightbox = 1, PDSR_Ants = 2, PDSR_Outline = 3
 #End If
 
-'PhotoDemon's language files provide a small amount of metadata to help the program know how to use them.  This type
+'PhotoPaint's language files provide a small amount of metadata to help the program know how to use them.  This type
 ' was previously declared inside the pdTranslate class, but with the addition of a Language Editor, I have moved it
 ' here, so the entire project can access the type.
 Public Type PDLanguageFile
@@ -135,7 +135,7 @@ End Enum
     Private Const pdLeftButton = 1, pdRightButton = 2, pdMiddleButton = 4, pdXButtonOne = 8, pdXButtonTwo = 16
 #End If
 
-'Supported save events.  To try and handle workflow issues gracefully, PhotoDemon will track image save state for a few
+'Supported save events.  To try and handle workflow issues gracefully, PhotoPaint will track image save state for a few
 ' different save events.  See the pdImage function setSaveState for details.
 Public Enum PD_SAVE_EVENT
     pdSE_AnySave = 0        'Any type of save event; used to set the enabled state of the main toolbar's Save button
@@ -171,7 +171,7 @@ End Enum
     Private Const pdo_Horizontal = 0, pdo_Vertical = 1, pdo_Both = 2
 #End If
 
-'Some PhotoDemon actions can operate on the whole image, or on just a specific layer (e.g. resize).  When initiating
+'Some PhotoPaint actions can operate on the whole image, or on just a specific layer (e.g. resize).  When initiating
 ' one of these dual-action operations, the constants below can be used to specify the mode.
 Public Enum PD_ActionTarget
     pdat_Image = 0
@@ -262,14 +262,14 @@ Public Enum PD_EdgeDetector
     pded_Contour = 0
     pded_Hilite = 1
     pded_Laplacian = 2
-    pded_PhotoDemon = 3
+    pded_PhotoPaint = 3
     pded_Prewitt = 4
     pded_Roberts = 5
     pded_Sobel = 6
 End Enum
 
 #If False Then
-    Private Const pded_Contour = 0, pded_Hilite = 1, pded_Laplacian = 2, pded_PhotoDemon = 3, pded_Prewitt = 4, pded_Roberts = 5, pded_Sobel = 6
+    Private Const pded_Contour = 0, pded_Hilite = 1, pded_Laplacian = 2, pded_PhotoPaint = 3, pded_Prewitt = 4, pded_Roberts = 5, pded_Sobel = 6
 #End If
 
 Public Enum PD_EdgeDirection
@@ -282,7 +282,7 @@ End Enum
     Private Const pded_All = 0, pded_Horizontal = 1, pded_Vertical = 2
 #End If
 
-'PhotoDemon performance settings are generally provided in three groups: Max Quality, Balanced, and Max Performance
+'PhotoPaint performance settings are generally provided in three groups: Max Quality, Balanced, and Max Performance
 Public Enum PD_PerformanceSetting
     PD_PERF_BESTQUALITY = 0
     PD_PERF_BALANCED = 1
@@ -293,7 +293,7 @@ End Enum
     Private Const PD_PERF_BESTQUALITY = 0, PD_PERF_BALANCED = 1, PD_PERF_FASTEST = 2
 #End If
 
-'PhotoDemon supports multiple image encoders and decoders.  Many of these are internal homebrew parsers,
+'PhotoPaint supports multiple image encoders and decoders.  Many of these are internal homebrew parsers,
 ' but sometimes we lean on 3rd-party libraries as relevant.  (Anything that ends in "_Parser" is homebrew.)
 Public Enum PD_ImageDecoder
     id_Failure = -1
@@ -383,7 +383,7 @@ End Enum
     Private Const PD_BOOL_UNKNOWN = -1, PD_BOOL_FALSE = 0, PD_BOOL_TRUE = 1, PD_BOOL_AUTO = 2
 #End If
 
-'Tone-mapping is required for high bit-depth images.  PhotoDemon supports a variety of tone-map operations.
+'Tone-mapping is required for high bit-depth images.  PhotoPaint supports a variety of tone-map operations.
 Public Enum PD_TONE_MAP
     PDTM_LINEAR = 0
     PDTM_FILMIC = 1
@@ -578,12 +578,12 @@ Public Enum PD_IMAGE_FORMAT
     PDIF_WEBP = 35  'FreeImage is *not* used to load/save WebP; we use libwebp
     PDIF_JXR = 36
    
-    'PhotoDemon's internal PDI format identifier(s).
+    'PhotoPaint's internal PDI format identifier(s).
     PDIF_PDI = 100
     PDIF_RAWBUFFER = 101
     PDIF_TMPFILE = 102
     
-    'Other image formats supported by PhotoDemon (these are unsupported by FreeImage and do not map to their FIF constants)
+    'Other image formats supported by PhotoPaint (these are unsupported by FreeImage and do not map to their FIF constants)
     PDIF_WMF = 110
     PDIF_EMF = 111
     PDIF_PNM = 112      'Catch-all for various portable pixmap filetypes
@@ -602,7 +602,7 @@ Public Enum PD_IMAGE_FORMAT
     PDIF_PDF = 125      'PDF was added in 10.0 nightly builds
     
     'AFTER ADDING A NEW FORMAT, ALWAYS UPDATE THE MAX ID VALUE.
-    ' PhotoDemon uses this value to iterate known file formats against known extensions,
+    ' PhotoPaint uses this value to iterate known file formats against known extensions,
     ' and identify mismatched values.
     PDIF_MAX_ID = 125
     

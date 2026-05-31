@@ -6,7 +6,7 @@ Attribute VB_Name = "Resampling"
 'Last updated: 19/January/23
 'Last update: new floating-point variations that operate on the new pdSurfaceF class (for HDR resampling)
 '
-'For many years, PhotoDemon relied on external libraries (GDI+, FreeImage) for its resampling algorithms.
+'For many years, PhotoPaint relied on external libraries (GDI+, FreeImage) for its resampling algorithms.
 ' As of v9.0, however, PD now ships with two native resampling engines (one floating-point-based, one integer-based).
 ' These native resampling engines support many more resampling filters, and their quality is excellent while
 ' maintaining impressive performance (especially for VB6!).
@@ -20,7 +20,7 @@ Attribute VB_Name = "Resampling"
 ' critical bug-fixes are addressed in PD's version of the code; details are in the comments.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

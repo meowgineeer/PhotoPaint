@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Graphics Path Wrapper
+'PhotoPaint Graphics Path Wrapper
 'Copyright 2014-2025 by Tanner Helland
 'Created: 17/October/14 (though assembled from various parts written much earlier)
 'Last updated: 06/May/22
@@ -27,7 +27,7 @@ Attribute VB_Exposed = False
 ' If you need to start over, use the ResetPath() function.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -903,7 +903,7 @@ Friend Function GetPathPoints(ByRef dstPoints() As PointFloat, ByRef dstNumPoint
     'We now have everything we need from the temporary path.  Free it.
     Set tmpPath = Nothing
     
-    'We now need to convert the original point list to a PhotoDemon-specific one.
+    'We now need to convert the original point list to a PhotoPaint-specific one.
     ' (This function is designed for internal use and it only ever wants line positions.  To simplify
     ' traversal, we don't want to hand off a huge list of GDI+ specific entries - instead, we want a
     ' simple array of point coordinates, and a second simple array of markers that tell us the indices

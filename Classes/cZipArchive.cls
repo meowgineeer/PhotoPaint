@@ -16,14 +16,14 @@ Attribute VB_Exposed = False
 'Thank you to Vlad for his many contributions to the VB6 community,
 ' including this all-in-one zip archive manager.
 '
-'This file has been modified for use within PhotoDemon.  You can download an original,
+'This file has been modified for use within PhotoPaint.  You can download an original,
 ' unmodified copy from the following link (good as of January 2023):
 ' https://github.com/wqweto/ZipArchive
 '
 'This class is MIT-licensed and Copyright 2017-2025 by wqweto@gmail.com.
 ' Full license details available at https://github.com/wqweto/ZipArchive/blob/master/LICENSE
 '
-'Original code follows, with any PhotoDemon-specific changes clearly noted at the end of the file.
+'Original code follows, with any PhotoPaint-specific changes clearly noted at the end of the file.
 
 '=========================================================================
 '
@@ -2902,7 +2902,7 @@ End Sub
 #End If ' ImplCrypto
 
 '=========================================================================
-' CHANGES FOR PHOTODEMON USE ONLY
+' CHANGES FOR PHOTOPAINT USE ONLY
 '=========================================================================
 
 'For use in PD by the OpenRaster importer (which has already validated srcFilename); do *NOT* use elsewhere.

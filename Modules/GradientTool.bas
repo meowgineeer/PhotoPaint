@@ -1,6 +1,6 @@
 Attribute VB_Name = "Tools_Gradient"
 '***************************************************************************
-'PhotoDemon On-Canvas Gradient Tool Manager
+'PhotoPaint On-Canvas Gradient Tool Manager
 'Copyright 2018-2025 by Tanner Helland
 'Created: 31/December/18
 'Last updated: 26/February/19
@@ -25,7 +25,7 @@ Attribute VB_Name = "Tools_Gradient"
 ' although that *would* require some changes inside the renderers themselves.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

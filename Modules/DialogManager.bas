@@ -6,7 +6,7 @@ Attribute VB_Name = "Dialogs"
 'Last updated: 01/March/24
 'Last update: small wrapper for PDF import settings
 '
-'Module for handling all custom dialog forms used by PhotoDemon.  There are quite a few already, and I expect
+'Module for handling all custom dialog forms used by PhotoPaint.  There are quite a few already, and I expect
 ' the number to grow as I phase out generic message boxes in favor of more descriptive (and usable) dialogs
 ' designed around a specific purpose.
 '
@@ -17,7 +17,7 @@ Attribute VB_Name = "Dialogs"
 ' the user's response.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Palette Child Container (see pdPalette for additional details)
+'PhotoPaint Palette Child Container (see pdPalette for additional details)
 'Copyright 2018-2025 by Tanner Helland
 'Created: 25/January/18
 'Last updated: 01/Feburary/18
@@ -29,7 +29,7 @@ Attribute VB_Exposed = False
 ' palettes can be managed by a single pdPalette instance).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

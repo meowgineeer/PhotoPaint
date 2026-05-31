@@ -189,7 +189,7 @@ Public Sub ApplyImitationHDR(ByVal effectParams As String, Optional ByVal toPrev
         Dim progBarCheck As Long
         progBarCheck = ProgressBars.FindBestProgBarValue()
         
-        'ScaleFactor is used to apply the unsharp mask.  Maximum strength can be any value, but PhotoDemon locks it at 10.
+        'ScaleFactor is used to apply the unsharp mask.  Maximum strength can be any value, but PhotoPaint locks it at 10.
         Dim scaleFactor As Double, invScaleFactor As Double
         scaleFactor = blendStrength + 1#
         invScaleFactor = 1# - scaleFactor

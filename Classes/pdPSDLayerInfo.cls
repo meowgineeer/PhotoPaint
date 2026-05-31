@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon PSD (PhotoShop Image) Layer Info Container and Parser
+'PhotoPaint PSD (PhotoShop Image) Layer Info Container and Parser
 'Copyright 2019-2025 by Tanner Helland
 'Created: 15/January/19
 'Last updated: 24/January/19
@@ -20,14 +20,14 @@ Attribute VB_Exposed = False
 '
 'This class contains layer-subdata pulled from a PSD file.  It is populated by two possible places: a parent
 ' pdPSD instance, or a parent pdPSDLayer instance.  It has no purpose outside of a PSD parsing context;
-' for layer handling inside PhotoDemon, refer to the pdLayer class.
+' for layer handling inside PhotoPaint, refer to the pdLayer class.
 '
 'All code in this class is my original work.  It is based off the "official" Adobe spec at this URL
 ' (link good as of January 2019):
 ' https://www.adobe.com/devnet-apps/photoshop/fileformatashtml/#50577409_72092
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

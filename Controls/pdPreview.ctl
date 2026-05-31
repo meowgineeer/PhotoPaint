@@ -27,7 +27,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Image Preview custom control
+'PhotoPaint Image Preview custom control
 'Copyright 2013-2025 by Tanner Helland
 'Created: 10/January/13
 'Last updated: 09/August/19

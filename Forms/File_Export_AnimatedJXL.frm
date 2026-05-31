@@ -183,7 +183,7 @@ Attribute VB_Exposed = False
 'Last updated: 13/October/23
 'Last update: spin off JXL-specific dialog (using WebP as the base)
 '
-'In v9.2, PhotoDemon gained the ability to export animated JPEG XL files.  This dialog exposes relevant
+'In v9.2, PhotoPaint gained the ability to export animated JPEG XL files.  This dialog exposes relevant
 ' export parameters to the user.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.

@@ -12,14 +12,14 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Internal Parameter Handler v2
+'PhotoPaint Internal Parameter Handler v2
 'Copyright 2013-2025 by Tanner Helland
 'Created: 25/March/13
 'Last updated: 28/February/20
 'Last update: make .AddParam() smarter - we know numeric datatypes are already XML-safe, so don't bother
 '             manually delimiting them.
 '
-'PhotoDemon has unique needs regarding parameter passing.  Because it allows the user to record all
+'PhotoPaint has unique needs regarding parameter passing.  Because it allows the user to record all
 ' actions as part of macros, it also requires a way to standardize parameter lists (regardless of
 ' count or type), and this standardization also needs to be easy to read/write from files.
 '
@@ -46,7 +46,7 @@ Attribute VB_Exposed = False
 ' 3) Parameter names do not support attribute tags.  Instead, use different parameter names.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -431,7 +431,7 @@ End Function
 
 'A custom CDbl function that accepts both commas and decimals as a separator; this
 ' is relevant when moving floating-point data, represented as strings, between locales.
-' (PhotoDemon no longer uses local-dependent string conversions, but ancient pre-Unicode-support
+' (PhotoPaint no longer uses local-dependent string conversions, but ancient pre-Unicode-support
 ' versions did, so this exists primarily for backward-compatibility.)
 Private Function CDblCustom(ByRef srcString As String) As Double
     If (InStr(1, srcString, ",") = 0) Then

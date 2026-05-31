@@ -194,7 +194,7 @@ Attribute VB_Exposed = False
 'The Droste effect is not just a cool effect (think M.C. Escher) - there's also an interesting story behind the name!
 ' See https://en.wikipedia.org/wiki/Droste_effect for details.
 '
-'PhotoDemon's version of this tool was inspired by a Paint.NET plugin originally by PJayTycy, with additional
+'PhotoPaint's version of this tool was inspired by a Paint.NET plugin originally by PJayTycy, with additional
 ' modifications by toe_head2001.  Unfortunately, neither author provided any sort of license with their work,
 ' so I'm not sure how best to credit them, but I at least welcome interested users to check out their PDN
 ' plugin here (link good as of August 2021):

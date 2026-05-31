@@ -12,14 +12,14 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon PSP (PaintShop Pro) Block Container
+'PhotoPaint PSP (PaintShop Pro) Block Container
 'Copyright 2020-2025 by Tanner Helland
 'Created: 31/December/20
 'Last updated: 05/January/21
 'Last update: add provisional support for HDR images (actual 48-bpp PSP files needed for testing!)
 '
 'This class describes a single "channel" inside a JASC/Corel Paint Shop Pro image file.
-' It has been custom-built for PhotoDemon, with a special emphasis on parsing performance.
+' It has been custom-built for PhotoPaint, with a special emphasis on parsing performance.
 '
 'Unless otherwise noted, all code in this class is my original work.  I've based my work off the
 ' "official" PSP spec at this URL (link good as of December 2020):
@@ -30,7 +30,7 @@ Attribute VB_Exposed = False
 ' http://www.telegraphics.com.au/svn/pspformat/trunk
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -253,7 +253,7 @@ Friend Function LoadChannel(ByRef srcStream As pdStream, ByRef srcWarnings As pd
             
         'NOTE: you may notice that JPEG compression is missing.  That's on purpose, because JPEG
         ' encoding is invalid for individual channels.  JPEG compression is only allowed for
-        ' composite thumbnails, and PhotoDemon's decoder has a separate function for handling those
+        ' composite thumbnails, and PhotoPaint's decoder has a separate function for handling those
         ' (inside the parent pdPSP class).  If we encounter JPEG compression inside a channel,
         ' it's a broken file.
         Case Else

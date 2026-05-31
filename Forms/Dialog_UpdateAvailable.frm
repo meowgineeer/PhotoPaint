@@ -35,7 +35,7 @@ Begin VB.Form FormUpdateNotify
       Width           =   4455
       _ExtentX        =   7858
       _ExtentY        =   1323
-      Caption         =   "Restart PhotoDemon"
+      Caption         =   "Restart PhotoPaint"
    End
    Begin PhotoPaint.pdCheckBox chkNotify 
       Height          =   330
@@ -142,7 +142,7 @@ Private Sub cmdUpdate_Click(Index As Integer)
             Updates.SetRestartAfterUpdate False
             
             'If the user wants to keep working, we don't have to do anything special.
-            ' (PhotoDemon will automatically apply the remaining patches at shut-down time.)
+            ' (PhotoPaint will automatically apply the remaining patches at shut-down time.)
             Unload Me
     
     End Select
@@ -182,7 +182,7 @@ Private Sub Form_Load()
     End If
     
     'Display the update message.  (pdLabel automatically handles translations, as necessary.)
-    lblUpdate.Caption = "A new version of PhotoDemon is available.  Restart the program to complete the update process."
+    lblUpdate.Caption = "A new version of PhotoPaint is available.  Restart the program to complete the update process."
     
     'Add a few tooltips
     cmdUpdate(0).AssignTooltip "Restart now to access to the latest version of the program.", "Apply update now"

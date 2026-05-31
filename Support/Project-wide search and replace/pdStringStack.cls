@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon "String Stack" Class
+'PhotoPaint "String Stack" Class
 'Copyright 2014-2016 by Tanner Helland
 'Created: 05/February/15
 'Last updated: 30/August/15
@@ -31,7 +31,7 @@ Attribute VB_Exposed = False
 '       http://www.vbforums.com/showthread.php?473677-VB6-Sorting-algorithms-%28sort-array-sorting-arrays%29&p=2933240#post2933240
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-' projects IF you provide attribution.  For more information, please visit http://photodemon.org/about/license/
+' projects IF you provide attribution.  For more information, please visit http://photopaint.org/about/license/
 '
 '***************************************************************************
 

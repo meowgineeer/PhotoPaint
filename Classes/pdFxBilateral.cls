@@ -30,7 +30,7 @@ Attribute VB_Exposed = False
 'More details on bilateral filtering can be found at:
 ' http://www.cs.duke.edu/~tomasi/papers/tomasi/tomasiIccv98.pdf
 '
-'Because traditional 2D kernel convolution is extremely slow on images of any size, PhotoDemon used
+'Because traditional 2D kernel convolution is extremely slow on images of any size, PhotoPaint used
 ' a separable bilateral filter implementation for many years.  This provided a good approximation of
 ' a true bilateral, and it transformed the filter from an O(w*h*r^2) process to O(w*h*2r).
 '
@@ -51,7 +51,7 @@ Attribute VB_Exposed = False
 'Ming's code is available under an MIT license.  Thank you to him/her/them for sharing their work!
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -684,7 +684,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Advanced Typography Tool Panel
+'PhotoPaint Advanced Typography Tool Panel
 'Copyright 2013-2025 by Tanner Helland
 'Created: 02/Oct/13
 'Last updated: 17/May/22

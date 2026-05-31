@@ -31,7 +31,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Asynchronous Download control
+'PhotoPaint Asynchronous Download control
 'Copyright 2014-2025 by Tanner Helland
 'Created: 24/January/15
 'Last updated: 26/January/15

@@ -88,7 +88,7 @@ Attribute VB_Exposed = False
 'Last updated: 03/August/17
 'Last update: expand function into full-featured dialog
 '
-'This is one of those really old features that has been in PhotoDemon ever since the beginning.  It has nothing
+'This is one of those really old features that has been in PhotoPaint ever since the beginning.  It has nothing
 ' to do with "Atmosphere" (although I could probably make something up about mixing light wavelengths,
 ' given how the underlying function works), but somehow it ended up with that name, and it's stuck ever since.
 '

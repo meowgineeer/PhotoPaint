@@ -7,22 +7,22 @@ Attribute VB_Name = "Plugin_jxl"
 'Last update: offer automatic updates if the installed copy of libjxl lags the latest officially supported version
 '
 'libjxl (available at https://github.com/libjxl/libjxl) is the official reference library implementation
-' for the modern JPEG-XL format.  Support for this format was added during the PhotoDemon 10.0 release cycle.
+' for the modern JPEG-XL format.  Support for this format was added during the PhotoPaint 10.0 release cycle.
 '
 'I initially tried to work directly with libjxl as a library, but ongoing stability issues and a very complex
 ' build process eventually led me to switch to interfacing with libjxl via separate apps (cjxl/djxl.exe).
-' This module is pointless without those exes, which need to be placed in the App/PhotoDemon/Plugins subdirectory.
+' This module is pointless without those exes, which need to be placed in the App/PhotoPaint/Plugins subdirectory.
 ' (PD will automatically download these for you if you attempt to interact with JPEG XL files.)
 '
-'Unfortunately for Windows XP users, libjxl currently requires Windows Vista or later.  PhotoDemon will
+'Unfortunately for Windows XP users, libjxl currently requires Windows Vista or later.  PhotoPaint will
 ' detect this automatically and gracefully hide JPEG XL support for XP users.
 '
-'PhotoDemon tries to support most JPEG XL features, but esoteric ones (like animation) remain a WIP.
+'PhotoPaint tries to support most JPEG XL features, but esoteric ones (like animation) remain a WIP.
 ' If you encounter any issues with JPEG XL images, please file an issue on GitHub and attach the image(s)
 ' in question so I can investigate further.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -806,7 +806,7 @@ Public Function CheckJXLVersionAndOfferUpdates(Optional ByVal targetIsImportLib 
     End If
     
     'Still here?  libavif exists in this install.  Let's pull its version and compare it to the expected version
-    ' (for this build of PhotoDemon).
+    ' (for this build of PhotoPaint).
     Dim curVersion As String
     curVersion = Plugin_jxl.GetLibJXLVersion()
     
@@ -855,11 +855,11 @@ Public Function PromptForLibraryDownload_JXL(Optional ByVal targetIsImportLib As
         'Ask the user for permission to (attempt) download
         Dim uiMsg As pdString
         Set uiMsg = New pdString
-        uiMsg.AppendLine g_Language.TranslateMessage("JPEG XL (JXL) is a modern replacement for the JPEG image format.  PhotoDemon does not natively support JPEG XL images, but it can download a free, open-source plugin that adds JPEG XL support.")
+        uiMsg.AppendLine g_Language.TranslateMessage("JPEG XL (JXL) is a modern replacement for the JPEG image format.  PhotoPaint does not natively support JPEG XL images, but it can download a free, open-source plugin that adds JPEG XL support.")
         uiMsg.AppendLineBreak
-        uiMsg.AppendLine g_Language.TranslateMessage("The libjxl library provides free, open-source JPEG XL compatibility.  A portable copy of libjxl will require ~%1 mb of disk space.  Once downloaded, PhotoDemon can use libjxl to load and save JPEG XL images (including animations).", 8)
+        uiMsg.AppendLine g_Language.TranslateMessage("The libjxl library provides free, open-source JPEG XL compatibility.  A portable copy of libjxl will require ~%1 mb of disk space.  Once downloaded, PhotoPaint can use libjxl to load and save JPEG XL images (including animations).", 8)
         uiMsg.AppendLineBreak
-        uiMsg.Append g_Language.TranslateMessage("Would you like PhotoDemon to download libjxl to your PhotoDemon plugin folder?")
+        uiMsg.Append g_Language.TranslateMessage("Would you like PhotoPaint to download libjxl to your PhotoPaint plugin folder?")
         
         Dim msgReturn As VbMsgBoxResult
         msgReturn = PDMsgBox(uiMsg.ToString, vbInformation Or vbYesNoCancel, "Download required")
@@ -868,7 +868,7 @@ Public Function PromptForLibraryDownload_JXL(Optional ByVal targetIsImportLib As
             'On a NO response, provide additional feedback.
             If (msgReturn = vbNo) Then
                 uiMsg.Reset
-                uiMsg.AppendLine g_Language.TranslateMessage("PhotoDemon will not download libjxl at this time.")
+                uiMsg.AppendLine g_Language.TranslateMessage("PhotoPaint will not download libjxl at this time.")
                 PDMsgBox uiMsg.ToString, vbInformation Or vbOKOnly, "Download canceled"
             End If
             
@@ -902,7 +902,7 @@ Private Function DownloadLatestLibjxl() As Boolean
     
     'Current libjxl build is 0.11.1, downloaded from https://github.com/libjxl/libjxl/releases/tag/v0.11.1
     Const EXPECTED_TOTAL_EXTRACT_SIZE As Long = 8592383
-    Const UPDATE_URL As String = "https://github.com/tannerhelland/PhotoDemon-Updates-v2/releases/download/libjxl-plugins-0.11.1/libjxl-0.11.1.pdz"
+    Const UPDATE_URL As String = "https://github.com/tannerhelland/PhotoPaint-Updates-v2/releases/download/libjxl-plugins-0.11.1/libjxl-0.11.1.pdz"
     DownloadLatestLibjxl = Updates.DownloadPluginUpdate(CCP_libjxl, UPDATE_URL, EXPECTED_NUM_FILES, EXPECTED_TOTAL_EXTRACT_SIZE)
     
 End Function
@@ -910,7 +910,7 @@ End Function
 'The following two functions are for logging errors (always active) and/or informational processing messages
 ' (only when JXL_DEBUG_VERBOSE = True).
 '
-' To use these functions outside PhotoDemon, substitute PDDebug.LogAction with your own logger.
+' To use these functions outside PhotoPaint, substitute PDDebug.LogAction with your own logger.
 Private Sub DebugMsg(ByRef msgText As String)
     PDDebug.LogAction msgText, PDM_External_Lib, True
 End Sub

@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon XML Interface (reading, writing, parsing, etc)
+'PhotoPaint XML Interface (reading, writing, parsing, etc)
 'Copyright 2013-2015 by Tanner Helland
 'Created: 30/July/13
 'Last updated: 18/August/14
@@ -21,30 +21,30 @@ Attribute VB_Exposed = False
 '
 'In 2013, PD became increasingly reliant on XML-format files.  The translation engine was the first to require XML
 ' interoperability (by design), followed a few months later by the metadata engine.  After the success of these
-' two projects, a decision was made to switch all custom PhotoDemon filetypes to XML format.  This should provide
+' two projects, a decision was made to switch all custom PhotoPaint filetypes to XML format.  This should provide
 ' excellent interoperability with 3rd-party projects, as well as provide a measure of future-proofing, since new
 ' features can be easily added without breaking old files (by simply adding new tags to file entries - tags that
 ' will simply be ignored by old copies of the software).
 '
 'Rather than write unique XML parsers for each custom filetype, this universal class was created.  It is meant to
 ' serve as a broad-purpose XML file interface, with strong support for reading, writing, parsing, and providing
-' in-place updates to PhotoDemon-specific XML data.
+' in-place updates to PhotoPaint-specific XML data.
 '
 'To that end, the primary focus of this class is supporting the (relatively barebones) XML features required for
-' various PhotoDemon filetypes.  IT IS NOT MEANT TO BE A FULL-FEATURED TO-SPEC XML PARSER, but it could certainly
+' various PhotoPaint filetypes.  IT IS NOT MEANT TO BE A FULL-FEATURED TO-SPEC XML PARSER, but it could certainly
 ' be extended to support additional XML features as needed.
 '
 'Many thanks to Frank Donckers, who helped prototype the original translation XML engine (which heavily influenced
 ' the design of this class).
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-' projects IF you provide attribution.  For more information, please visit http://photodemon.org/about/license/
+' projects IF you provide attribution.  For more information, please visit http://photopaint.org/about/license/
 '
 '***************************************************************************
 
 Option Explicit
 
-'All PhotoDemon-compatible files must have their data wrapped in the following top-level tag
+'All PhotoPaint-compatible files must have their data wrapped in the following top-level tag
 Private Const ROOT_TAG As String = "<pdData>"
 Private Const ROOT_TAG_CLOSE As String = "</pdData>"
 Private Const PD_DATA_ID As String = "<pdDataType>"
@@ -71,7 +71,7 @@ Public Sub prepareNewXML(ByVal pdDataType As String)
 
 End Sub
 
-'PhotoDemon-specific XML files are required to encode a data type (filter, macro, etc).  This function can be used to quickly
+'PhotoPaint-specific XML files are required to encode a data type (filter, macro, etc).  This function can be used to quickly
 ' retrieve that type, allowing the calling function to determine if a proper filetype has been loaded for their operation.
 Public Function isPDDataType(ByVal expectedType As String) As Boolean
     
@@ -455,13 +455,13 @@ End Function
 ' do this by scanning for any number of tags it expects to find in the XML file.  If all are found, return TRUE.
 Public Function validateLoadedXMLData(ParamArray expectedTags() As Variant) As Boolean
 
-    'Start by looking for the <pdData> tags that surround all PhotoDemon-specific XML files
+    'Start by looking for the <pdData> tags that surround all PhotoPaint-specific XML files
     If (InStr(1, m_xmlContents, ROOT_TAG, vbBinaryCompare) = 0) Or (InStrRev(m_xmlContents, ROOT_TAG_CLOSE, -1, vbBinaryCompare) = 0) Then
         validateLoadedXMLData = False
         Exit Function
     End If
     
-    'Next, make sure the file specifies some type of PhotoDemon data
+    'Next, make sure the file specifies some type of PhotoPaint data
     If InStr(1, m_xmlContents, PD_DATA_ID, vbBinaryCompare) = 0 Then
         validateLoadedXMLData = False
         Exit Function

@@ -131,7 +131,7 @@ Attribute VB_Exposed = False
 'Last updated: 31/March/22
 'Last update: new options, including first/last frame selection, details on animation slider, and more
 '
-'In v9.0, PhotoDemon started gaining effects involving animated images.  This necessitated a bunch
+'In v9.0, PhotoPaint started gaining effects involving animated images.  This necessitated a bunch
 ' of new preview and UI code, since previewing effects in real-time is such an intensive process,
 ' and PD's existing solution was only ever designed for static images.
 '

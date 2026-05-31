@@ -32,7 +32,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Generic Control Container
+'PhotoPaint Generic Control Container
 'Copyright 2016-2025 by Tanner Helland
 'Created: 13/June/16
 'Last updated: 18/February/17

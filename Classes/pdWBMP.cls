@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Wireless Application Protocol Bitmap (WBMP) Decoder
+'PhotoPaint Wireless Application Protocol Bitmap (WBMP) Decoder
 'Copyright 2024-2025 by Tanner Helland
 'Created: 19/March/24
 'Last updated: 19/March/24
@@ -21,7 +21,7 @@ Attribute VB_Exposed = False
 'The WBMP file format has been around since the late 90s.  You can find a copy of the latest spec revision
 ' here: https://www.wapforum.org/what/technical/SPEC-WAESpec-19990524.pdf
 '
-'PhotoDemon originally handed WBMP support off to the 3rd-party FreeImage library, but ongoing issues with
+'PhotoPaint originally handed WBMP support off to the 3rd-party FreeImage library, but ongoing issues with
 ' FreeImage reliability eventually prompted me to write my own WBMP decoder.  (This was done shortly after
 ' writing a similar decoder for the XBM format, which is another ancient monochrome-only image format;
 ' this decoder is based roughly on the code for that one.)
@@ -30,7 +30,7 @@ Attribute VB_Exposed = False
 ' is *not* planned at present, but this may be revisited (as always) if users complain.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

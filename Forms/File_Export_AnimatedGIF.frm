@@ -185,7 +185,7 @@ Attribute VB_Exposed = False
 'Last updated: 28/October/21
 'Last update: prep dialog for compatibility with batch processor
 '
-'In v8.0, PhotoDemon gained the ability to export animated GIF files.
+'In v8.0, PhotoPaint gained the ability to export animated GIF files.
 '
 'This dialog provides user access to common animated GIF features, and it also provides a live preview
 ' of the animation itself.  (Note, however, that for performance reasons, the preview window does

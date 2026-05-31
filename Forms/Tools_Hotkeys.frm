@@ -491,7 +491,7 @@ Private Sub cmdAll_Click(Index As Integer)
             cdIndex = 1
             
             'Suggest a file name.
-            dstFilename = g_Language.TranslateMessage("PhotoDemon Hotkeys")
+            dstFilename = g_Language.TranslateMessage("PhotoPaint Hotkeys")
             dstFilename = initialSaveFolder & dstFilename
             
             cdTitle = g_Language.TranslateMessage("Export hotkeys")
@@ -715,7 +715,7 @@ Private Sub cmdBar_ExtraValidations()
         Set txtWarning = New pdString
         txtWarning.AppendLine g_Language.TranslateMessage("One or more hotkeys is currently assigned to multiple actions.")
         txtWarning.AppendLineBreak
-        txtWarning.AppendLine g_Language.TranslateMessage("If you proceed, PhotoDemon will only keep the first occurrence of any duplicated hotkeys.")
+        txtWarning.AppendLine g_Language.TranslateMessage("If you proceed, PhotoPaint will only keep the first occurrence of any duplicated hotkeys.")
         txtWarning.AppendLineBreak
         txtWarning.AppendLine g_Language.TranslateMessage("Press OK to proceed.")
         txtWarning.AppendLine g_Language.TranslateMessage("Press cancel to keep editing hotkeys.")
@@ -1869,7 +1869,7 @@ Private Sub GenerateSummaryFile(ByRef dstFile As String)
     
     'Replace some placeholders with current user settings
     initHTML = Replace$(initHTML, "%1", g_Language.GetCurrentLanguage(False))
-    initHTML = Replace$(initHTML, "%2", g_Language.TranslateMessage("PhotoDemon Hotkeys"))
+    initHTML = Replace$(initHTML, "%2", g_Language.TranslateMessage("PhotoPaint Hotkeys"))
     
     'Append remaining style bits
     Strings.BytesFromBase64 utf8Bytes, HTML_BP_BASE64_2
@@ -1884,7 +1884,7 @@ Private Sub GenerateSummaryFile(ByRef dstFile As String)
     initHTML = vbNullString
     
     'Title
-    cExport.AppendLine "<h2>" & g_Language.TranslateMessage("PhotoDemon Hotkeys") & "</h2>"
+    cExport.AppendLine "<h2>" & g_Language.TranslateMessage("PhotoPaint Hotkeys") & "</h2>"
     
     'Append a minimalist header
     cExport.AppendLine "<table>"

@@ -6,7 +6,7 @@ Attribute VB_Name = "ImageFormats_GIF_LZW"
 'Last updated: 27/March/22
 'Last update: enable LZW heuristics for improved compression ratios
 '
-'In 2021, I spent some time optimizing PhotoDemon's animated GIF exporter.  Many optimizations
+'In 2021, I spent some time optimizing PhotoPaint's animated GIF exporter.  Many optimizations
 ' occur before actual GIF encoding (frame- and palette-related stuff), but for final GIF encoding
 ' I leaned on the 3rd-party FreeImage library.  Unfortunately, FreeImage's GIF support is mediocre
 ' (palettes are always written as 256-color tables, encoding is built atop strings (!!!) so perf
@@ -34,7 +34,7 @@ Attribute VB_Name = "ImageFormats_GIF_LZW"
 '
 'Armed with multiple references to compare and contrast, I set about mixing and matching the
 ' original C code with some ideas from Carles/Ron's VB6 versions to produce something appropriate
-' for PhotoDemon.  I think the final result is very good, with meaningfully improved performance,
+' for PhotoPaint.  I think the final result is very good, with meaningfully improved performance,
 ' a number of fixed edge-case bugs, reworking of various suboptimal-for-VB6 designs, and improved
 ' LZW encoding efficiency.  The final result is a very compact LZW encoder with efficiency and
 ' performance on par with giflib, and pretty much on-par with the original compress.c version.
@@ -175,7 +175,7 @@ Private m_curBlock(0 To 255) As Byte, m_blockSize As Long
 
 'PD-specific objects:
 
-'PhotoDemon wraps this array around a source unsigned char array (palettized pixel data)...
+'PhotoPaint wraps this array around a source unsigned char array (palettized pixel data)...
 Private m_srcData() As Byte
 
 '...and directly dumps encoded output to a pdStream object (which is a memory-mapped interface

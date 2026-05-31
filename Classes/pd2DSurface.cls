@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon 2D Rendering Surface class
+'PhotoPaint 2D Rendering Surface class
 'Copyright 2012-2025 by Tanner Helland
 'Created: 01/September/12
 'Last updated: 02/December/20
@@ -32,7 +32,7 @@ Attribute VB_Exposed = False
 ' for easy GDI interop purposes.
 '
 'All source code in this file is licensed under a modified BSD license. This means you may use the code in your own
-' projects IF you provide attribution. For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution. For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 

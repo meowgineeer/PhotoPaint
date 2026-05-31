@@ -150,7 +150,7 @@ Attribute VB_Exposed = False
 'Last updated: 06/April/22
 'Last update: add localized tooltips to the playback scrubber
 '
-'In v8.0, PhotoDemon gained full support for animated GIF and PNG files.  (Later versions have added
+'In v8.0, PhotoPaint gained full support for animated GIF and PNG files.  (Later versions have added
 ' support for even more animated formats.)  This dialog exposes relevant animation settings to the user,
 ' including convertnig multilayer non-animated images into animated ones (or vice-versa).
 '

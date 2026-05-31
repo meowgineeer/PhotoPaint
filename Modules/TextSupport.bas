@@ -6,12 +6,12 @@ Attribute VB_Name = "TextSupport"
 'Last updated: 08/March/24
 'Last update: new page range parser (added as part of PDF import)
 '
-'PhotoDemon interacts with a *lot* of text input.  This module contains various bits of text support code,
+'PhotoPaint interacts with a *lot* of text input.  This module contains various bits of text support code,
 ' typically based around tasks like "validate a user's text input" or "convert arbitrary text input
 ' into a usable numeric value".
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

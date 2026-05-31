@@ -122,7 +122,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Right-side ("Layers") Toolbar
+'PhotoPaint Right-side ("Layers") Toolbar
 'Copyright 2014-2025 by Tanner Helland
 'Created: 25/March/14
 'Last updated: 08/October/21

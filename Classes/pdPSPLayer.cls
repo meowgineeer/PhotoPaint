@@ -12,14 +12,14 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon PSP (PaintShop Pro) Block Container
+'PhotoPaint PSP (PaintShop Pro) Block Container
 'Copyright 2020-2025 by Tanner Helland
 'Created: 31/December/20
 'Last updated: 04/January/21
 'Last update: continue work on initial build
 '
 'This class describes a single "layer" inside a JASC/Corel Paint Shop Pro image file.
-' It has been custom-built for PhotoDemon, with a special emphasis on parsing performance.
+' It has been custom-built for PhotoPaint, with a special emphasis on parsing performance.
 '
 'Unless otherwise noted, all code in this class is my original work.  I've based my work off the
 ' "official" PSP spec at this URL (link good as of December 2020):
@@ -30,7 +30,7 @@ Attribute VB_Exposed = False
 ' http://www.telegraphics.com.au/svn/pspformat/trunk
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -68,7 +68,7 @@ Private Type PSP_LayerHeader
     
     'Remember - expansion fields may be added in the future!
     
-    'Any following fields are internal PhotoDemon ones; they are not part of actual PSP Files.
+    'Any following fields are internal PhotoPaint ones; they are not part of actual PSP Files.
     ' (These fields may also be filled using data from embedded sub-blocks in the file)
     pspl_LayerOK As Boolean
     pspl_LayerHasPixels As Boolean
@@ -87,7 +87,7 @@ Private m_LayerSubBlock As pdPSPBlock
 
 'Group-type layers behave a differently from their analog in other formats (e.g. PSD).  Group start
 ' markers contain a count of how many "child" layers are in that group, *not* counting "grandchildren"
-' (e.g. nested groups).  PhotoDemon will attempt to use this to restore groups in the final image
+' (e.g. nested groups).  PhotoPaint will attempt to use this to restore groups in the final image
 ' as best it can.
 Private m_NumLayersInGroup As Long, m_GroupLinked As Boolean
 

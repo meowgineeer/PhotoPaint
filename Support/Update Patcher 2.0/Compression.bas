@@ -1,6 +1,6 @@
 Attribute VB_Name = "Compression"
 '***************************************************************************
-'Unified Compression Interface for PhotoDemon
+'Unified Compression Interface for PhotoPaint
 'Copyright 2016-2019 by Tanner Helland
 'Created: 02/December/16
 'Last updated: 13/February/19
@@ -8,7 +8,7 @@ Attribute VB_Name = "Compression"
 'Dependencies: - standalone plugin modules for whatever compression engines you want to use.  This module
 '              simply wraps those dedicated wrappers in a more convenient format.
 '
-'As of v7.0, PhotoDemon performs a *lot* of custom compression work.  There are a lot of different needs in
+'As of v7.0, PhotoPaint performs a *lot* of custom compression work.  There are a lot of different needs in
 ' image processing - for example, when the user saves a large, multi-layer image, it's okay to take plenty of time
 ' and squeeze every last bit of compression you can out of the finished file (which is potentially enormous).
 ' But when saving Undo/Redo data for rapid operations like paint strokes, you want to dump data out to file as
@@ -36,7 +36,7 @@ Attribute VB_Name = "Compression"
 ' lz4/lz4-hc: BSD 2-clause license (https://github.com/lz4/lz4/blob/dev/LICENSE)
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-' projects IF you provide attribution.  For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution.  For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 

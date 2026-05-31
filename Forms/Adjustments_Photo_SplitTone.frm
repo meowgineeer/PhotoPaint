@@ -117,7 +117,7 @@ Attribute VB_Exposed = False
 ' ... and for a good example of the effects that can be achieved with split toning, see this article:
 ' http://www.digitalcameraworld.com/2013/02/09/split-toning-in-photoshop-how-to-get-creative-with-your-black-and-white-conversions/
 '
-'PhotoDemon's version of this tool has gone through a lot of iterations.  The current incarnation tries to adhere to
+'PhotoPaint's version of this tool has gone through a lot of iterations.  The current incarnation tries to adhere to
 ' the traditional split-toning model, where the image is faded through gray at its specified midtone.  This limits
 ' the bulk of the coloring to the ends of the luminance spectrum, which reduces muddiness and draws the eye to the
 ' areas of greatest contrast in the image.  I think it's quite an excellent tool, and its results should be comparable

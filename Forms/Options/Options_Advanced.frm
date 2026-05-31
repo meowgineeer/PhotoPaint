@@ -215,7 +215,7 @@ Private Sub txtTempPath_Change()
     'Ensure the specified temp path exists.  If it doesn't (or if access is denied), let the user know that we will silently
     ' fall back to the system temp folder.
     If (Not Files.PathExists(Trim$(txtTempPath.Text), True)) Then
-        lblTempPathWarning.Caption = g_Language.TranslateMessage("WARNING: this folder is invalid (access prohibited).  Please provide a valid folder.  If a new folder is not provided, PhotoDemon will use the system temp folder.")
+        lblTempPathWarning.Caption = g_Language.TranslateMessage("WARNING: this folder is invalid (access prohibited).  Please provide a valid folder.  If a new folder is not provided, PhotoPaint will use the system temp folder.")
         lblTempPathWarning.Visible = True
     Else
         lblTempPathWarning.Caption = g_Language.TranslateMessage("This new temporary folder location will not take effect until you restart the program.")
@@ -234,11 +234,11 @@ Private Sub Form_Load()
     btsDebug.AddItem "yes", 2
     btsDebug.AssignTooltip "In developer builds, debug data is automatically logged to the program's \Data\Debug folder.  If you encounter bugs in a stable release, please manually activate this setting.  This will help developers resolve your problem."
     
-    lblMemoryUsageCurrent.Caption = g_Language.TranslateMessage("current PhotoDemon memory usage:") & " " & Format$(OS.AppMemoryUsageInMB(), "#,#") & " M"
-    lblMemoryUsageMax.Caption = g_Language.TranslateMessage("max PhotoDemon memory usage this session:") & " " & Format$(OS.AppMemoryUsageInMB(True), "#,#") & " M"
+    lblMemoryUsageCurrent.Caption = g_Language.TranslateMessage("current PhotoPaint memory usage:") & " " & Format$(OS.AppMemoryUsageInMB(), "#,#") & " M"
+    lblMemoryUsageMax.Caption = g_Language.TranslateMessage("max PhotoPaint memory usage this session:") & " " & Format$(OS.AppMemoryUsageInMB(True), "#,#") & " M"
     
     cmdTmpPath.AssignTooltip "Click to select a new temporary folder."
-    cmdReset.AssignTooltip "This button resets all PhotoDemon settings.  If the program is behaving unexpectedly, this may resolve the problem."
+    cmdReset.AssignTooltip "This button resets all PhotoPaint settings.  If the program is behaving unexpectedly, this may resolve the problem."
     
 End Sub
 

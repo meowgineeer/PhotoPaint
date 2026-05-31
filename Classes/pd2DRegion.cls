@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Region Class
+'PhotoPaint Region Class
 'Copyright 2016-2025 by Tanner Helland
 'Created: 18/June/16 (but assembled from many bits written earlier)
 'Last updated: 19/June/16
@@ -28,7 +28,7 @@ Attribute VB_Exposed = False
 ' but because GDI+ provides a nice baseline feature set, that's where I started.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -50,7 +50,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon "Mini" Command Bar control
+'PhotoPaint "Mini" Command Bar control
 'Copyright 2013-2025 by Tanner Helland
 'Created: 14/August/13
 'Last updated: 23/August/17

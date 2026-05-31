@@ -197,7 +197,7 @@ Attribute VB_Exposed = False
 'Last updated: 03/May/22
 'Last update: initial build
 '
-'Content-aware fill was added in PhotoDemon 9.0.  This simple dialog serves a simple purpose:
+'Content-aware fill was added in PhotoPaint 9.0.  This simple dialog serves a simple purpose:
 ' allowing the user to modify various content-aware settings.  When OK is pressed, those settings
 ' are forwarded to an instance of the pdInpaint class, which performs the actual content-aware fill.
 ' Please review that class for further details on the algorithm and how it works.

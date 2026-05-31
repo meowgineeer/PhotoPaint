@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon PNG Container and Parser
+'PhotoPaint PNG Container and Parser
 'Copyright 2018-2025 by Tanner Helland
 'Created: 12/April/18
 'Last updated: 28/August/25
@@ -25,7 +25,7 @@ Attribute VB_Exposed = False
 ' like implementing error-handling via setjmp/longjmp, would it?  Oh wait - it would?  @#$#$^@#$#^*^!!)
 '
 'After wasting dozens of hours fighting 3rd-party libraries, I gave up and wrote my own PNG import/export
-' library. PhotoDemon needs fairly intricate access to PNG internals - during both reading and writing -
+' library. PhotoPaint needs fairly intricate access to PNG internals - during both reading and writing -
 ' and given the format's current ubiquity for images < 24-bpp, it makes sense to handle PNGs manually.
 ' As an added bonus, PD can use libdeflate instead of zlib for de/compression tasks, allowing it to both
 ' create smaller PNG files, and have faster de/compression times than libpng offers.
@@ -35,7 +35,7 @@ Attribute VB_Exposed = False
 ' stable release.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -1079,7 +1079,7 @@ Friend Function ImportStage5_ConstructImage(ByRef srcFile As String, ByRef dstDI
             
         End If
         
-        'We now have everything we need to construct actual 32-bpp DIBs usable by PhotoDemon.
+        'We now have everything we need to construct actual 32-bpp DIBs usable by PhotoPaint.
         
         '(For animated PNGs, note that we assemble *all* frames now, even though PD won't request them
         ' during this step - instead we just cache them locally.)
@@ -1668,7 +1668,7 @@ Friend Function ImportStage6_PostProcessing(ByRef srcFile As String, ByRef dstDI
             rgbValues(7) = CDbl(chrmData(7)) / 100000#
             rgbValues(8) = 1#
             
-            'Per https://github.com/tannerhelland/PhotoDemon/issues/612, when chromaticity data is present
+            'Per https://github.com/tannerhelland/PhotoPaint/issues/612, when chromaticity data is present
             ' but gamma is *not*, assume 2.2 gamma.  (This resolves color issues from images originating
             ' from ezgif.com.)
             If (Not gammaOK) Then
@@ -2915,7 +2915,7 @@ End Function
 ' at will.  This function is perf-optimized for 24-bpp data.  32-bpp data will not work.  (TODO??)
 ' Note that the APNGs produced by this function may be larger than the standard SaveAPNG function.
 ' This function does not optimize as aggressively in order to keep performance high.  For the absolute
-' smallest file, use this function to produce the initial PNG, then re-load the file into PhotoDemon
+' smallest file, use this function to produce the initial PNG, then re-load the file into PhotoPaint
 ' and save it again.  That will produce the smallest possible file.
 Friend Function SaveAPNG_Streaming_Start(ByRef dstFile As String, ByVal pxWidth As Long, ByVal pxHeight As Long) As PD_PNGResult
     

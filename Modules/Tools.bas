@@ -1,6 +1,6 @@
 Attribute VB_Name = "Tools"
 '***************************************************************************
-'Helper functions for various PhotoDemon tools
+'Helper functions for various PhotoPaint tools
 'Copyright 2014-2025 by Tanner Helland
 'Created: 06/February/14
 'Last updated: 16/January/25
@@ -10,7 +10,7 @@ Attribute VB_Name = "Tools"
 ' functions that take mouse actions on the canvas and translate them into tool actions.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -59,7 +59,7 @@ Private m_CustomToolMarker As Long
 Private m_HighResMouseInputAllowed As Boolean
 
 'While using paint tools, the user can use the ALT key to temporarily swap to the color picker tool.
-' When the ALT key is released, PhotoDemon will automatically active their original tool.  Because
+' When the ALT key is released, PhotoPaint will automatically active their original tool.  Because
 ' this requires cross-tool communication, this module needs to store the relevant tracker.
 Private m_PaintToolAltState As Boolean
 
@@ -1069,8 +1069,8 @@ Public Sub SyncCurrentLayerToToolOptionsUI()
                     .SetTextLayerProperty ptp_OutlineAboveFill, toolpanel_TextAdvanced.chkFillFirst.Value
                 End With
                 
-                'Advanced text layers are rendered using a PhotoDemon-specific renderer.
-                PDImages.GetActiveImage.GetActiveLayer.SetTextLayerProperty ptp_RenderingEngine, te_PhotoDemon
+                'Advanced text layers are rendered using a PhotoPaint-specific renderer.
+                PDImages.GetActiveImage.GetActiveLayer.SetTextLayerProperty ptp_RenderingEngine, te_PhotoPaint
         
         End Select
         

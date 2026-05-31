@@ -80,7 +80,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Navigation custom control
+'PhotoPaint Navigation custom control
 'Copyright 2015-2025 by Tanner Helland
 'Created: 16/October/15
 'Last updated: 22/August/19

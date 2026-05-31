@@ -28,7 +28,7 @@ Attribute VB_Exposed = False
 ' http://cyberactivex.com/UnicodeTutorialVb.htm#Filenames_via_DragDrop_or_Paste
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -1010,7 +1010,7 @@ Private Function ClipboardPaste_TextSource(ByVal srcIsMeantAsLayer As Boolean, O
         Dim clipText As String
         If m_Clipboard.GetClipboardText(clipText) Then
             
-            'As reported by @manfromarce on GitHub (https://github.com/tannerhelland/PhotoDemon/discussions/421#discussioncomment-3476307)
+            'As reported by @manfromarce on GitHub (https://github.com/tannerhelland/PhotoPaint/discussions/421#discussioncomment-3476307)
             ' Windows Explorer provides a "Copy as path" context menu option that we should support - however, this option
             ' places double-quotes around the file path, which breaks our file path detector.
             

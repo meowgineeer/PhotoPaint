@@ -9,13 +9,13 @@ Attribute VB_Name = "Saving"
 'This module handles high-level image export duties.  Low-level export functions
 ' are generally located in the ImageExport module; see there for per-format details.
 '
-'The most important function here is PhotoDemon_SaveImage at the top of the module.
+'The most important function here is PhotoPaint_SaveImage at the top of the module.
 ' This function is responsible for a multitude of decision-making related to exporting
 ' an image, including tasks like raising format-specific save dialogs, determining what
 ' color-depth to use, and various post-save housekeeping (like MRU updates).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -49,7 +49,7 @@ End Function
 '      Save As and Export operations forcibly set this to TRUE, so that the user can specify new export settings.
 '   4) Optional: pass a non-unknown image format to treat this as an EXPORT vs a SAVE.
 '      (EXPORT does *not* update image save state, meaning states like "unsaved changes" remain as-is.)
-Public Function PhotoDemon_SaveImage(ByRef srcImage As pdImage, ByVal dstPath As String, Optional ByVal forceOptionsDialog As Boolean = False, Optional useThisExportFormat As PD_IMAGE_FORMAT = PDIF_UNKNOWN) As Boolean
+Public Function PhotoPaint_SaveImage(ByRef srcImage As pdImage, ByVal dstPath As String, Optional ByVal forceOptionsDialog As Boolean = False, Optional useThisExportFormat As PD_IMAGE_FORMAT = PDIF_UNKNOWN) As Boolean
     
     'There are a few different ways the save process can "fail":
     ' 1) a save dialog with extra options is required, and the user cancels it
@@ -107,7 +107,7 @@ Public Function PhotoDemon_SaveImage(ByRef srcImage As pdImage, ByVal dstPath As
                 ' (This ensures that the user sees at least *1* save settings dialog per session, per format.)
                 dictEntry = GetExportDictFlag("ExportParams", saveFormat, srcImage)
                 If (Not needToDisplayDialog) And (LenB(srcImage.ImgStorage.GetEntry_String(dictEntry, vbNullString)) = 0) Then
-                    PDDebug.LogAction "WARNING!  PhotoDemon_SaveImage found an image where HasSeenExportDialog = TRUE, but ExportParams = null.  Fix this!"
+                    PDDebug.LogAction "WARNING!  PhotoPaint_SaveImage found an image where HasSeenExportDialog = TRUE, but ExportParams = null.  Fix this!"
                     needToDisplayDialog = True
                 End If
                 
@@ -135,7 +135,7 @@ Public Function PhotoDemon_SaveImage(ByRef srcImage As pdImage, ByVal dstPath As
     Dim saveParameters As String, metadataParameters As String
     If needToDisplayDialog Then
         
-        'Normally, we auto-detect animated images and raise an animation dialog accordingly, but PhotoDemon's
+        'Normally, we auto-detect animated images and raise an animation dialog accordingly, but PhotoPaint's
         ' EXPORT menu requires the user to explicitly choose between animated and still states.  (The regular
         ' SAVE menu auto-detects the correct animation setting for you.)
         Dim useAnimationDialog As Boolean
@@ -153,7 +153,7 @@ Public Function PhotoDemon_SaveImage(ByRef srcImage As pdImage, ByVal dstPath As
         'If the user cancels the dialog, exit immediately
         Else
             Message "Save canceled."
-            PhotoDemon_SaveImage = False
+            PhotoPaint_SaveImage = False
             Exit Function
         End If
         
@@ -169,7 +169,7 @@ Public Function PhotoDemon_SaveImage(ByRef srcImage As pdImage, ByVal dstPath As
     If (Not Files.FileTestAccess_Write(dstPath)) Then
         Message "Warning - file locked: %1", dstPath
         PDMsgBox "Unfortunately, the file '%1' is currently locked by another program on this PC." & vbCrLf & vbCrLf & "Please close this file in any other running programs, then try again.", vbExclamation Or vbOKOnly, "File locked", dstPath
-        PhotoDemon_SaveImage = False
+        PhotoPaint_SaveImage = False
         Exit Function
     End If
     
@@ -260,15 +260,15 @@ Public Function PhotoDemon_SaveImage(ByRef srcImage As pdImage, ByVal dstPath As
             fiErrorList = Plugin_FreeImage.GetFreeImageErrors
             
             'Display the error message
-            PDMsgBox "An error occurred when attempting to save this image.  The FreeImage plugin reported the following error details: " & vbCrLf & vbCrLf & "%1" & vbCrLf & vbCrLf & "In the meantime, please try saving the image to an alternate format.  You can also let the PhotoDemon developers know about this via the Help > Submit Bug Report menu.", vbCritical Or vbOKOnly, "Error", fiErrorList
+            PDMsgBox "An error occurred when attempting to save this image.  The FreeImage plugin reported the following error details: " & vbCrLf & vbCrLf & "%1" & vbCrLf & vbCrLf & "In the meantime, please try saving the image to an alternate format.  You can also let the PhotoPaint developers know about this via the Help > Submit Bug Report menu.", vbCritical Or vbOKOnly, "Error", fiErrorList
             
         Else
-            PDMsgBox "An unspecified error occurred when attempting to save this image.  Please try saving the image to an alternate format." & vbCrLf & vbCrLf & "If the problem persists, please report it to the PhotoDemon developers via photodemon.org/contact", vbCritical Or vbOKOnly, "Error"
+            PDMsgBox "An unspecified error occurred when attempting to save this image.  Please try saving the image to an alternate format." & vbCrLf & vbCrLf & "If the problem persists, please report it to the PhotoPaint developers via photopaint.org/contact", vbCritical Or vbOKOnly, "Error"
         End If
         
     End If
     
-    PhotoDemon_SaveImage = saveSuccessful
+    PhotoPaint_SaveImage = saveSuccessful
     
 End Function
 
@@ -276,7 +276,7 @@ End Function
 ' It should *only* be used during Batch Process operations, where there is no possibility of user interaction.
 ' Note that the input parameters are different, as the batch processor requires the user to set most export
 ' settings in advance (since we can't raise export dialogs mid-batch).
-Public Function PhotoDemon_BatchSaveImage(ByRef srcImage As pdImage, ByVal dstPath As String, ByVal saveFormat As PD_IMAGE_FORMAT, Optional ByVal saveParameters As String = vbNullString, Optional ByVal metadataParameters As String = vbNullString) As Boolean
+Public Function PhotoPaint_BatchSaveImage(ByRef srcImage As pdImage, ByVal dstPath As String, ByVal saveFormat As PD_IMAGE_FORMAT, Optional ByVal saveParameters As String = vbNullString, Optional ByVal metadataParameters As String = vbNullString) As Boolean
     
     'The important thing to note about this function is that it *requires* the image to be immediately unloaded
     ' after the save operation finishes.  To improve performance, the source pdImage object is not updated against
@@ -328,7 +328,7 @@ Public Function PhotoDemon_BatchSaveImage(ByRef srcImage As pdImage, ByVal dstPa
         
     End If
     
-    PhotoDemon_BatchSaveImage = saveSuccessful
+    PhotoPaint_BatchSaveImage = saveSuccessful
     
 End Function
 
@@ -554,7 +554,7 @@ Private Function ExportToSpecificFormat(ByRef srcImage As pdImage, ByRef dstPath
     
 End Function
 
-'Save a PDI file ("PhotoDemon Image", e.g. our native format)
+'Save a PDI file ("PhotoPaint Image", e.g. our native format)
 ' FUTURE TODO:
 '  - It might be nice to store a copy of the fully composited image in the file, to simplify the work other software
 '    has to do.  That said, this inevitably increases both export time and file size - and at present, PD isn't used
@@ -892,7 +892,7 @@ Public Function QuickSaveDIBAsPNG(ByRef dstFilename As String, ByRef srcDIB As p
     
 End Function
 
-'PhotoDemon can currently export animated GIF, JPEG XL, PNG, and WebP images.  These fromats all have slight
+'PhotoPaint can currently export animated GIF, JPEG XL, PNG, and WebP images.  These fromats all have slight
 ' subtleties in how we prep frames prior to export, but you can call this universal function to handle all those
 ' details for you.  Note that you *must* pass a correct format ID as the first parameter, and a reference to the
 ' pdImage object you want saved.
@@ -1204,7 +1204,7 @@ Public Function Export_Animation(ByRef srcImage As pdImage) As Boolean
         Message "Save complete."
         
         Export_Animation = saveResult
-        If (Not Export_Animation) Then PDMsgBox "An unspecified error occurred when attempting to save this image.  Please try saving the image to an alternate format." & vbCrLf & vbCrLf & "If the problem persists, please report it to the PhotoDemon developers via photodemon.org/contact", vbCritical Or vbOKOnly, "Error"
+        If (Not Export_Animation) Then PDMsgBox "An unspecified error occurred when attempting to save this image.  Please try saving the image to an alternate format." & vbCrLf & vbCrLf & "If the problem persists, please report it to the PhotoPaint developers via photopaint.org/contact", vbCritical Or vbOKOnly, "Error"
         
     '/User cancelled the original save dialog.
     Else

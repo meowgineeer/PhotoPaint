@@ -26,10 +26,10 @@ Attribute VB_Exposed = False
 ' the XML file where the MRU would be saved, and points in time when the UI needs to be updated. See pdMRURecentFiles.cls
 ' for a sample implementation.
 '
-'Many thanks to Raj Chaudhuri for contributing this great feature to PhotoDemon.
+'Many thanks to Raj Chaudhuri for contributing this great feature to PhotoPaint.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon 3D LUT I/O class
+'PhotoPaint 3D LUT I/O class
 'Copyright 2020-2025 by Tanner Helland
 'Created: 23/October/20
 'Last updated: 01/June/22
@@ -35,7 +35,7 @@ Attribute VB_Exposed = False
 ' value is obtained by interpolating between adjacent samples."
 '
 '3D LUTs are an essential aspect of pro workflows, and I'm excited to finally bring support to
-' PhotoDemon.  This was a messy project since (obviously) no VB dev has ever tackled this before,
+' PhotoPaint.  This was a messy project since (obviously) no VB dev has ever tackled this before,
 ' and some technical aspects - like tetrahedral interpolation - are required by Adobe's spec,
 ' but they don't actually disclose *how* to do the damn thing.  Thank goodness NVidia has shared a
 ' Technicolor (yes, *that* Technicolor) presentation on their website that hints at the required math.
@@ -51,10 +51,10 @@ Attribute VB_Exposed = False
 '    https://download.autodesk.com/us/systemdocs/pdf/lustre_color_management_user_guide.pdf
 '
 'This class has been heavily optimized for speed, which means it has many dependencies on other
-' PhotoDemon classes.
+' PhotoPaint classes.
 '
 'All source code in this file is licensed under a modified BSD license. This means you may use the code in your own
-' projects IF you provide attribution. For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution. For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -1549,7 +1549,7 @@ Friend Function SaveLUTToFile_3dl(ByRef dstFile As String, Optional ByRef copyri
     '#Created by: Adobe Photoshop Export Color Lookup Plugin
     '#Copyright: (C) Copyright 1234 [various names here]
     '#Description: [put whatever you want here]
-    cTextFile.AppendLineLf "#Created by: " & Updates.GetPhotoDemonNameAndVersion()
+    cTextFile.AppendLineLf "#Created by: " & Updates.GetPhotoPaintNameAndVersion()
     If (LenB(copyrightText) <> 0) Then cTextFile.AppendLineLf "#Copyright: (c) " & Year(Now) & " " & copyrightText
     If (LenB(textDescription) <> 0) Then cTextFile.AppendLineLf "#Description: " & textDescription
     
@@ -1634,7 +1634,7 @@ Friend Function SaveLUTToFile_Cube(ByRef dstFile As String, Optional ByRef copyr
     ' on the first two lines of the file as comments, e.g. this from an actual cube file:
     '#Created by: Adobe Photoshop Export Color Lookup Plugin
     '#Copyright: (C) Copyright 1234 [various names here]
-    cTextFile.AppendLineLf "#Created by: " & Updates.GetPhotoDemonNameAndVersion()
+    cTextFile.AppendLineLf "#Created by: " & Updates.GetPhotoPaintNameAndVersion()
     If (LenB(copyrightText) <> 0) Then cTextFile.AppendLineLf "#Copyright: (c) " & Year(Now) & " " & copyrightText
     
     'LUT title is its own block, prefixed by a keyword (you'll see this pattern elsewhere in the file)

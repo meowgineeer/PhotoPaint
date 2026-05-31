@@ -785,9 +785,9 @@ Attribute VB_Exposed = False
 'Copyright 2007-2025 by Tanner Helland
 'Created: 3/Nov/07
 'Last updated: 09/December/22
-'Last update: add overrides for vector image import size (see https://github.com/tannerhelland/PhotoDemon/issues/456)
+'Last update: add overrides for vector image import size (see https://github.com/tannerhelland/PhotoPaint/issues/456)
 '
-'PhotoDemon's batch process wizard is one of its most unique features.  It integrates tightly with PD's
+'PhotoPaint's batch process wizard is one of its most unique features.  It integrates tightly with PD's
 ' macro recorder, which allows any combination of actions to be applied to any set of images.  Neat stuff!
 '
 'The current batch wizard is broken into four stages:
@@ -947,7 +947,7 @@ End Sub
 Private Sub cmdAddFiles_Click()
     
     Dim listOfFiles As pdStringStack
-    If FileMenu.PhotoDemon_OpenImageDialog(listOfFiles, Me.hWnd) Then
+    If FileMenu.PhotoPaint_OpenImageDialog(listOfFiles, Me.hWnd) Then
         
         lstFiles.SetAutomaticRedraws False
         
@@ -1117,7 +1117,7 @@ Private Sub cmdExportSettingsAnimated_Click()
     
 End Sub
 
-'Load a list of images (previously saved from within PhotoDemon) into the current batch list
+'Load a list of images (previously saved from within PhotoPaint) into the current batch list
 Private Sub cmdLoadList_Click()
     
     Dim sFile As String
@@ -1160,7 +1160,7 @@ Private Sub cmdLoadList_Click()
                 If (UBound(fileLines) > 0) Then
                     
                     'Validate the first line of the file
-                    If Strings.StringsEqual(fileLines(0), "<PHOTODEMON BATCH CONVERSION LIST>", True) Then
+                    If Strings.StringsEqual(fileLines(0), "<PHOTOPAINT BATCH CONVERSION LIST>", True) Then
                         
                         listOK = True
                         
@@ -1312,7 +1312,7 @@ Private Sub ChangeBatchPage(ByVal moveForward As Boolean)
             If (Not Files.PathExists(txtOutputPath)) Then
                 
                 If (Not Files.PathCreate(txtOutputPath)) Then
-                    PDMsgBox "PhotoDemon cannot access the requested output folder.  Please select a non-system, unrestricted folder for the batch process.", vbExclamation Or vbOKOnly, "Folder access unavailable"
+                    PDMsgBox "PhotoPaint cannot access the requested output folder.  Please select a non-system, unrestricted folder for the batch process.", vbExclamation Or vbOKOnly, "Folder access unavailable"
                     txtOutputPath.SelectAll
                     Exit Sub
                 End If
@@ -1358,11 +1358,11 @@ Private Sub UpdateWizardText()
         
             lblWizardTitle.Caption = g_Language.TranslateMessage("Step 1: select the photo editing action(s) to apply to each image")
             
-            sideText.AppendLine g_Language.TranslateMessage("Welcome to PhotoDemon's batch wizard.  This tool can be used to edit multiple images at once, in what is called a ""batch process"".")
+            sideText.AppendLine g_Language.TranslateMessage("Welcome to PhotoPaint's batch wizard.  This tool can be used to edit multiple images at once, in what is called a ""batch process"".")
             sideText.AppendLineBreak
             sideText.AppendLine g_Language.TranslateMessage("Start by selecting the photo editing action(s) you want to apply.  If multiple actions are selected, they will be applied in the order they appear on this page.")
             sideText.AppendLineBreak
-            sideText.AppendLine g_Language.TranslateMessage("Note: a ""macro"" is simply a list of photo editing actions.  It can include any adjustment, filter, or effect in the main program.  You can create a new macro by using the ""Tools -> Macros -> Record new macro"" menu in the main PhotoDemon window.")
+            sideText.AppendLine g_Language.TranslateMessage("Note: a ""macro"" is simply a list of photo editing actions.  It can include any adjustment, filter, or effect in the main program.  You can create a new macro by using the ""Tools -> Macros -> Record new macro"" menu in the main PhotoPaint window.")
             sideText.AppendLineBreak
             sideText.Append g_Language.TranslateMessage("In the next step, you will select the images you want to process.")
             
@@ -1384,9 +1384,9 @@ Private Sub UpdateWizardText()
         
             lblWizardTitle.Caption = g_Language.TranslateMessage("Step 3: choose a destination image format")
             
-            sideText.AppendLine g_Language.TranslateMessage("PhotoDemon needs to know which format to use when saving the images in your batch list.")
+            sideText.AppendLine g_Language.TranslateMessage("PhotoPaint needs to know which format to use when saving the images in your batch list.")
             sideText.AppendLineBreak
-            sideText.AppendLine g_Language.TranslateMessage("If ""keep images in their original format"" is selected, PhotoDemon will attempt to save each image in its original format.  If the original format is not supported, a standard format (JPEG or PNG, depending on color depth) will be used.")
+            sideText.AppendLine g_Language.TranslateMessage("If ""keep images in their original format"" is selected, PhotoPaint will attempt to save each image in its original format.  If the original format is not supported, a standard format (JPEG or PNG, depending on color depth) will be used.")
             sideText.AppendLineBreak
             sideText.AppendLine g_Language.TranslateMessage("If you choose to save images to a new format, please make sure the format you have selected is appropriate for all images in your list.  (For example, images with transparency should be saved to a format that supports transparency!)")
             sideText.AppendLineBreak
@@ -1397,7 +1397,7 @@ Private Sub UpdateWizardText()
         
             lblWizardTitle.Caption = g_Language.TranslateMessage("Step 4: provide a destination folder and any renaming options")
             
-            sideText.AppendLine g_Language.TranslateMessage("In this final step, PhotoDemon needs to know where to save the processed images, and what name to give the new files.")
+            sideText.AppendLine g_Language.TranslateMessage("In this final step, PhotoPaint needs to know where to save the processed images, and what name to give the new files.")
             sideText.AppendLineBreak
             sideText.AppendLine g_Language.TranslateMessage("For your convenience, a number of standard renaming options are also provided.  Note that all items under ""additional rename options"" are optional.")
             sideText.AppendLineBreak
@@ -1492,7 +1492,7 @@ Private Function SaveCurrentBatchList() As Boolean
         Dim outputText As pdString
         Set outputText = New pdString
         
-        outputText.AppendLine "<PHOTODEMON BATCH CONVERSION LIST>"
+        outputText.AppendLine "<PHOTOPAINT BATCH CONVERSION LIST>"
         outputText.AppendLine Trim$(Str$(lstFiles.ListCount))
         
         Dim i As Long
@@ -1580,7 +1580,7 @@ Private Sub cmdSelectMacro_Click()
     tempPathString = UserPrefs.GetPref_String("Paths", "Macro", vbNullString)
     
     Dim cdFilter As String
-    cdFilter = "PhotoDemon " & g_Language.TranslateMessage("Macro") & " (." & MACRO_EXT & ")|*." & MACRO_EXT & ";*.thm"
+    cdFilter = "PhotoPaint " & g_Language.TranslateMessage("Macro") & " (." & MACRO_EXT & ")|*." & MACRO_EXT & ";*.thm"
     cdFilter = cdFilter & "|" & g_Language.TranslateMessage("All files") & "|*.*"
     
     'Prepare a common dialog object
@@ -1697,7 +1697,7 @@ Private Sub Form_Load()
     
     'Display some text manually to make sure translations are handled correctly
     txtMacro.Text = g_Language.TranslateMessage("no macro selected")
-    lblExplanationFormat.Caption = g_Language.TranslateMessage("if PhotoDemon does not support an image's original format, a standard format will be used")
+    lblExplanationFormat.Caption = g_Language.TranslateMessage("if PhotoPaint does not support an image's original format, a standard format will be used")
     lblExplanationFormat.Caption = lblExplanationFormat.Caption & vbCrLf & " " & g_Language.TranslateMessage("( specifically, JPEG at 92% quality for photographs, and lossless PNG for non-photographs )")
     
     'Hide all inactive wizard panes
@@ -1960,7 +1960,7 @@ Private Sub PrepareForBatchConversion()
                 ' a final filename and a proper file extension.)
                 dstFilename = GetFinalFilename(srcFilename, outputPath, dstListFiles, curBatchFile)
                 
-                'Request a save from the PhotoDemon_SaveImage method, and pass it the parameter string created by the user
+                'Request a save from the PhotoPaint_SaveImage method, and pass it the parameter string created by the user
                 ' on the matching wizard panel.  Note that we need to silently swap-in animation parameters instead of
                 ' static ones, if the source image is animated.
                 Dim finalSaveParams As String
@@ -1969,7 +1969,7 @@ Private Sub PrepareForBatchConversion()
                 
                 ' TODO: metadata for animated images
                 ' TODO: track success/fail results and collate any failures into a list that we can report to the user
-                Saving.PhotoDemon_BatchSaveImage PDImages.GetActiveImage(), dstFilename, PDImages.GetActiveImage.GetCurrentFileFormat, finalSaveParams, m_ExportSettingsMetadata
+                Saving.PhotoPaint_BatchSaveImage PDImages.GetActiveImage(), dstFilename, PDImages.GetActiveImage.GetCurrentFileFormat, finalSaveParams, m_ExportSettingsMetadata
                 
                 'Unload the finished image
                 CanvasManager.FullPDImageUnload PDImages.GetActiveImageID()

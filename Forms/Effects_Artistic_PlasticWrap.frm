@@ -127,7 +127,7 @@ Attribute VB_Exposed = False
 ' an open-source software package reproduce the effect well.  (For example, try GIMP's analog of it, in the
 ' Filters > Light and Shadow menu.  It's just a Script-Fu wrapper, and it's terrible.  Ugh.)
 '
-'As usual, this means I had to design PhotoDemon's implementation from scratch, and also as usual, I think
+'As usual, this means I had to design PhotoPaint's implementation from scratch, and also as usual, I think
 ' the end result is pretty darn great!  To my knowledge, this the closest anyone's come to reproducing
 ' Photoshop's effect, and while there are still differences (some by design, to improve output on modern photo
 ' sizes), I think PD's technique is actually the preferable one - and any differences are small enough that you

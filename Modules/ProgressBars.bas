@@ -7,7 +7,7 @@ Attribute VB_Name = "ProgressBars"
 'Last update: Rewrite the progress bar code against an API progress bar on the main canvas object
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

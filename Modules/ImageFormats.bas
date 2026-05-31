@@ -1,6 +1,6 @@
 Attribute VB_Name = "ImageFormats"
 '***************************************************************************
-'PhotoDemon Image Format Manager
+'PhotoPaint Image Format Manager
 'Copyright 2012-2025 by Tanner Helland
 'Created: 18/November/12
 'Last updated: 05/May/25
@@ -8,7 +8,7 @@ Attribute VB_Name = "ImageFormats"
 '
 'This module determines run-time read/write support for various image formats.
 '
-'Based on available plugins, this class generates a list of file formats that PhotoDemon is capable
+'Based on available plugins, this class generates a list of file formats that PhotoPaint is capable
 ' of importing and exporting.  Import/export lists are separately maintained, and the presence of a
 ' format in the Import category does not guarantee a similar presence in the Export category.
 '
@@ -18,16 +18,16 @@ Attribute VB_Name = "ImageFormats"
 ' clear which engine or third-party library (if any) is used to load a given format - for that,
 ' consult the relevant debug log ([PD path]/Data/Debug) after loading an image file.
 '
-'Note also that as of 2020, many formats use native PhotoDemon-specific encoder/decoder classes.
+'Note also that as of 2020, many formats use native PhotoPaint-specific encoder/decoder classes.
 ' These formats are *always* available regardless of 3rd-party library status, but some formats
 ' may have add-on features that require third-party libraries - for example, PSD files are
-' typically RLE (PackBits) encoded, which PhotoDemon can decode natively, but HDR PSD images can
+' typically RLE (PackBits) encoded, which PhotoPaint can decode natively, but HDR PSD images can
 ' optionally use DEFLATE compression which requires PD to tap into a 3rd-party library (libdeflate).
 ' These complexities are all managed silently, but if you want to use image support code in another
 ' project, you'll need to dive deeper than just this module.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -283,8 +283,8 @@ Public Sub GenerateInputFormats()
     'In v10.0, support was added for PDFs (via pdfium)
     If Plugin_PDF.IsPDFiumAvailable() Then AddInputFormat "PDF - Portable Document Format", "*.pdf", PDIF_PDF
     
-    'PDI (PhotoDemon's native file format) is always available!
-    AddInputFormat "PDI - PhotoDemon Image", "*.pdi", PDIF_PDI
+    'PDI (PhotoPaint's native file format) is always available!
+    AddInputFormat "PDI - PhotoPaint Image", "*.pdi", PDIF_PDI
         
     If m_FreeImageEnabled Then
         AddInputFormat "PFM - Portable Floatmap", "*.pfm", PDIF_PFM
@@ -300,13 +300,13 @@ Public Sub GenerateInputFormats()
         AddInputFormat "PPM - Portable Pixmap", "*.ppm", PDIF_PPM
     End If
     
-    'In v8.0, PhotoDemon received a custom PSD parser
+    'In v8.0, PhotoPaint received a custom PSD parser
     AddInputFormat "PSD - Adobe Photoshop", "*.psd;*.psb", PDIF_PSD
     
-    'In v9.0, PhotoDemon received a custom PSP parser
+    'In v9.0, PhotoPaint received a custom PSP parser
     AddInputFormat "PSP - PaintShop Pro", "*.psp;*.pspimage;*.tub;*.psptube;*.pfr;*.pspframe;*.msk;*.pspmask;*.pspbrush", PDIF_PSP
     
-    'In v9.0, PhotoDemon received a custom QOI parser
+    'In v9.0, PhotoPaint received a custom QOI parser
     AddInputFormat "QOI - Quite OK Image", "*.qoi", PDIF_QOI
     
     If m_FreeImageEnabled Then
@@ -440,7 +440,7 @@ Public Sub GenerateOutputFormats()
     If m_FreeImageEnabled Then AddOutputFormat "JXR - JPEG XR (HD Photo)", "jxr", PDIF_JXR
     AddOutputFormat "ORA - OpenRaster", "ora", PDIF_ORA
     AddOutputFormat "PCX - Zsoft Paintbrush", "pcx", PDIF_PCX
-    AddOutputFormat "PDI - PhotoDemon Image", "pdi", PDIF_PDI
+    AddOutputFormat "PDI - PhotoPaint Image", "pdi", PDIF_PDI
     AddOutputFormat "PNG - Portable Network Graphic", "png", PDIF_PNG
     If m_FreeImageEnabled Then AddOutputFormat "PNM - Portable Anymap (Netpbm)", "pnm", PDIF_PNM
     AddOutputFormat "PSD - Adobe Photoshop", "psd", PDIF_PSD
@@ -494,7 +494,7 @@ Private Sub AddOutputFormat(ByVal formatDescription As String, ByVal extensionLi
     
 End Sub
 
-'Given a PDIF (PhotoDemon image format constant), return the default extension.
+'Given a PDIF (PhotoPaint image format constant), return the default extension.
 Public Function GetExtensionFromPDIF(ByVal srcPDIF As PD_IMAGE_FORMAT) As String
 
     Select Case srcPDIF
@@ -617,7 +617,7 @@ Public Function GetExtensionFromPDIF(ByVal srcPDIF As PD_IMAGE_FORMAT) As String
 
 End Function
 
-'Given a PDIF (PhotoDemon image format constant), return TRUE if the extension passed is safely associated
+'Given a PDIF (PhotoPaint image format constant), return TRUE if the extension passed is safely associated
 ' with that format.  (If it isn't, PD will auto-suggest a correct extension instead of using whatever extension
 ' the file originally had.)
 '
@@ -761,7 +761,7 @@ Public Function IsExtensionOkayForAnyPDIF(ByRef srcExtension As String) As PD_IM
     
 End Function
 
-'Given a file extension, return the corresponding best-guess PDIF (PhotoDemon image format constant).
+'Given a file extension, return the corresponding best-guess PDIF (PhotoPaint image format constant).
 '
 'By default, this function will *NOT* return PDIF_UNKNOWN for extensions without a corresponding format.
 ' Instead, it will return PDIF_PDI (PD's default image format).  This is by design so that images with unknown

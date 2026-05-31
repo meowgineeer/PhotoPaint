@@ -38,13 +38,13 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Tools Toolbox
+'PhotoPaint Tools Toolbox
 'Copyright 2013-2025 by Tanner Helland
 'Created: 03/October/13
 'Last updated: 31/October/16
 'Last update: minor code cleanup
 '
-'This form was initially integrated into the main MDI form.  In fall 2013, PhotoDemon left behind the MDI model,
+'This form was initially integrated into the main MDI form.  In fall 2013, PhotoPaint left behind the MDI model,
 ' and all toolbars were moved to their own forms.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.

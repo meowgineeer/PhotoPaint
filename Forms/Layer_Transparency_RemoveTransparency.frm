@@ -65,10 +65,10 @@ Attribute VB_Exposed = False
 'Last updated: 14/June/13
 'Last update: initial build
 '
-'PhotoDemon has long provided the ability to convert a 32bpp image to 24bpp, but the lack of an interface meant it would
+'PhotoPaint has long provided the ability to convert a 32bpp image to 24bpp, but the lack of an interface meant it would
 ' always composite against white.  Now the user can select any background color they want.
 '
-'Other than that, there really isn't much to this form.  It's possibly the smallest tool dialog in PhotoDemon code-wise!
+'Other than that, there really isn't much to this form.  It's possibly the smallest tool dialog in PhotoPaint code-wise!
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
 ' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/

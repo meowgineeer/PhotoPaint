@@ -1,5 +1,5 @@
 Attribute VB_Name = "g_Language"
-'Placeholder module to allow me to use PhotoDemon code in non-PhotoDemon projects
+'Placeholder module to allow me to use PhotoPaint code in non-PhotoPaint projects
 
 Option Explicit
 

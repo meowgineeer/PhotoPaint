@@ -94,7 +94,7 @@ Attribute VB_Exposed = False
 'Last updated: 26/July/17
 'Last update: performance improvements, migrate to XML params
 '
-'PhotoDemon has provided a pencil sketch tool for a long time, but despite going through many incarnations, it always
+'PhotoPaint has provided a pencil sketch tool for a long time, but despite going through many incarnations, it always
 ' used low-quality, "quick and dirty" approximations.
 '
 'In July '14, this changed, and the entire tool was rethought from the ground up.  A dialog is now provided, with options

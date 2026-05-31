@@ -6,12 +6,12 @@ Attribute VB_Name = "Drawing2D"
 'Last updated: 26/February/20
 'Last update: new helper functions for safer XML serialization of enums
 '
-'In 2015-2019, I slowly migrated PhotoDemon to its own UI toolkit.  The new toolkit performs a ton
+'In 2015-2019, I slowly migrated PhotoPaint to its own UI toolkit.  The new toolkit performs a ton
 ' of 2D rendering tasks, so it was finally time to migrate PD's hoary old GDI+ interface to a more
 ' modern solution.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

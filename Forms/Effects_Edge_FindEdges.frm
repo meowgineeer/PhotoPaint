@@ -308,8 +308,8 @@ Private Function GetNameOfEdgeDetector(ByVal edgeDetectionType As PD_EdgeDetecto
         Case pded_Laplacian
             GetNameOfEdgeDetector = g_Language.TranslateMessage("Laplacian edge detection")
         
-        Case pded_PhotoDemon
-            GetNameOfEdgeDetector = g_Language.TranslateMessage("PhotoDemon edge detection")
+        Case pded_PhotoPaint
+            GetNameOfEdgeDetector = g_Language.TranslateMessage("PhotoPaint edge detection")
             
         Case pded_Prewitt
             GetNameOfEdgeDetector = g_Language.TranslateMessage("Prewitt edge detection")
@@ -346,8 +346,8 @@ Private Function IsEdgeDetectionSinglePass(ByVal edgeDetectionType As PD_EdgeDet
         Case pded_Laplacian
             IsEdgeDetectionSinglePass = True
                 
-        'PhotoDemon edge detection (doesn't support directionality)
-        Case pded_PhotoDemon
+        'PhotoPaint edge detection (doesn't support directionality)
+        Case pded_PhotoPaint
             IsEdgeDetectionSinglePass = True
         
         'Prewitt edge detection is unidirectional
@@ -440,8 +440,8 @@ Private Function GetParamStringForEdgeDetector(ByVal edgeDetectionType As PD_Edg
             
             End If
         
-        'PhotoDemon edge detection (doesn't support directionality)
-        Case pded_PhotoDemon
+        'PhotoPaint edge detection (doesn't support directionality)
+        Case pded_PhotoPaint
         
             'Divisor/offset
             fWeight = 1#: fBias = 0#
@@ -523,7 +523,7 @@ Private Function GetParamStringForEdgeDetector(ByVal edgeDetectionType As PD_Edg
 End Function
 
 'This code is a modified version of an algorithm originally developed by Manuel Augusto Santos.  A link to his original
-' implementation is available from the "Help -> About PhotoDemon" menu option.
+' implementation is available from the "Help -> About PhotoPaint" menu option.
 Private Sub FilterSmoothContour(Optional ByVal blackBackground As Boolean = False, Optional ByVal toPreview As Boolean = False, Optional ByRef dstPic As pdFxPreviewCtl)
 
     If (Not toPreview) Then Message "Tracing image edges with virtual paintbrush..."
@@ -557,7 +557,7 @@ Private Sub Form_Load()
     lstEdgeOptions.AddItem "Artistic contour", 0
     lstEdgeOptions.AddItem "Hilite", 1
     lstEdgeOptions.AddItem "Laplacian", 2
-    lstEdgeOptions.AddItem "PhotoDemon", 3
+    lstEdgeOptions.AddItem "PhotoPaint", 3
     lstEdgeOptions.AddItem "Prewitt", 4
     lstEdgeOptions.AddItem "Roberts cross", 5
     lstEdgeOptions.AddItem "Sobel", 6
@@ -592,7 +592,7 @@ Private Sub LstEdgeOptions_Click()
         Case pded_Laplacian
             ChangeCheckboxActivation True
         
-        Case pded_PhotoDemon
+        Case pded_PhotoPaint
             ChangeCheckboxActivation False
         
         Case pded_Prewitt

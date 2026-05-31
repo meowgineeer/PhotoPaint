@@ -12,13 +12,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Font Renderer
+'PhotoPaint Font Renderer
 'Copyright 2013-2025 by Tanner Helland
 'Created: 31/May/13
 'Last updated: 25/August/17
 'Last update: improve font creation performance
 '
-'While VB6 actually provides pretty good font support, PhotoDemon has unique needs (as usual).  In particular,
+'While VB6 actually provides pretty good font support, PhotoPaint has unique needs (as usual).  In particular,
 ' we need detailed handling over font positioning, we often render to arbitrary DCs, and we need to manage
 ' fonts in specialized ways to maximize peformance while minimizing GDI resources.
 '
@@ -34,7 +34,7 @@ Attribute VB_Exposed = False
 '    one is fastest (or best for your needs), profile several.  GDI performance is not always predictable.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -621,7 +621,7 @@ End Function
 
 Private Sub Class_Initialize()
     
-    'When the class is initialized, set up a default PhotoDemon font.  Face is automatically set per
+    'When the class is initialized, set up a default PhotoPaint font.  Face is automatically set per
     ' the current OS, so external functions do not need to set this manually.
     With m_currentLogFont
     

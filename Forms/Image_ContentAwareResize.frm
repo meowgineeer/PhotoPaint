@@ -72,7 +72,7 @@ Attribute VB_Exposed = False
 'Last updated: 29/July/14
 'Last update: fixed some 32bpp issues, added serpentine scanning for ideal treatment of images on uniform backgrounds
 '
-'Content-aware scaling is a very exciting addition to PhotoDemon 6.2.  (As a comparison, PhotoShop didn't gain this
+'Content-aware scaling is a very exciting addition to PhotoPaint 6.2.  (As a comparison, PhotoShop didn't gain this
 ' feature until CS4, so it's pretty cutting-edge stuff!)
 '
 'Normal scaling algorithms work by shrinking or enlarging all image pixels equally.  Such algorithms make no distinction
@@ -87,7 +87,7 @@ Attribute VB_Exposed = False
 'For reference, the original 2007 paper that first proposed this technique - called "seam carving" is available here:
 ' http://www.win.tue.nl/~wstahw/edu/2IV05/seamcarving.pdf
 '
-'I have written PhotoDemon's implementation from scratch, using the original paper as my primary resource.  Unfortunately,
+'I have written PhotoPaint's implementation from scratch, using the original paper as my primary resource.  Unfortunately,
 ' my current implementation is quite slow (though still faster than many other implementations!) on account of all the
 ' seam finding operations that must be performed.  I am investigating ways to further improve the algorithm's performance,
 ' but I remain worried that this task may prove a bit much for VB6.  We'll see.

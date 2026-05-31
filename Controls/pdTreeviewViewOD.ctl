@@ -29,7 +29,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Owner-Drawn Treeview View control (e.g. the list part of a treeview, *not* including the scroll bar)
+'PhotoPaint Owner-Drawn Treeview View control (e.g. the list part of a treeview, *not* including the scroll bar)
 'Copyright 2024-2025 by Tanner Helland
 'Created: 05/September/24
 'Last updated: 23/September/24

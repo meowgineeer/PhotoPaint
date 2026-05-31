@@ -74,7 +74,7 @@ Attribute VB_Exposed = False
 ' which is what allows the tool to produce more "realistic" output compared to linear saturation
 ' adjustments.
 '
-'The algorithm PhotoDemon uses has undergone a number of revisions.  At present, it automates an
+'The algorithm PhotoPaint uses has undergone a number of revisions.  At present, it automates an
 ' S-curve adjustment to the underlying image's saturation (via the HSL space, specifically - not HSV).
 ' This provides reasonably good control, while limiting the amount of change applied at the high and
 ' low ends of the scale.

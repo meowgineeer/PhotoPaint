@@ -15,7 +15,7 @@ Attribute VB_Name = "Plugin_OpenJPEG"
 '
 'OpenJPEG is BSD-licensed and actively maintained.
 '
-'PhotoDemon originally used OpenJPEG via FreeImage, but FreeImage has since been abandoned so a new
+'PhotoPaint originally used OpenJPEG via FreeImage, but FreeImage has since been abandoned so a new
 ' solution was needed. In 2025, I wrote a direct-to-OpenJPEG interface from scratch, custom-built for PD.
 '
 'This interface was designed against v2.5.4 of OpenJPEG (released 20 Sep 2025).  It should work fine
@@ -27,7 +27,7 @@ Attribute VB_Name = "Plugin_OpenJPEG"
 '
 'I hope that means this interface is sufficiently robust for real-world usage!
 '
-'By my testing, PhotoDemon's current coverage of the JPEG-2000 spec is more extensive than any other
+'By my testing, PhotoPaint's current coverage of the JPEG-2000 spec is more extensive than any other
 ' open-source project, with identical behavior to OpenJPEG's reference implementations across a wide range
 ' of features and comptability settings.  PD is particularly adept at handling OpenJPEG images with
 ' unexpected precisions and/or combinations of esoteric features (like signed data-types).
@@ -53,7 +53,7 @@ Attribute VB_Name = "Plugin_OpenJPEG"
 ' transform of e.g. YUV to RGB that the user can access directly, but I have not added this capability (yet).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -73,7 +73,7 @@ Private Const JP2_FORCE_STRICT_DECODING As Boolean = False
 Private m_LibHandle As Long, m_LibAvailable As Boolean
 
 'JPEG-2000 files can actually contain one of several different stream formats.
-' PhotoDemon successfully reads J2K, JPT, and JP2 containers, but only writes JP2 ones.
+' PhotoPaint successfully reads J2K, JPT, and JP2 containers, but only writes JP2 ones.
 Public Enum OPJ_CODEC_FORMAT
     OPJ_CODEC_UNKNOWN = -1  '/**< place-holder */
     OPJ_CODEC_J2K = 0       '/**< JPEG-2000 codestream : read/write */
@@ -1567,7 +1567,7 @@ End Function
 
 'Perform a max-speed decode from an open pdStream (*MUST* be opened and set to the desired offset by the caller) to a pdDIB object.
 ' Does *not* perform extra validations, and does *not* color-manage the result.  sRGB is assumed.
-' (PhotoDemon uses this function internally to generate export quality previews; color-management has already occurred.)
+' (PhotoPaint uses this function internally to generate export quality previews; color-management has already occurred.)
 Public Function FastDecodeFromStreamToDIB(ByRef srcStream As pdStream, ByRef dstDIB As pdDIB) As Boolean
 
     Const FUNC_NAME As String = "FastDecodeFromStreamToDIB"

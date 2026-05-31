@@ -12,14 +12,14 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon PSD (PhotoShop Image) Container and Parser
+'PhotoPaint PSD (PhotoShop Image) Container and Parser
 'Copyright 2019-2025 by Tanner Helland
 'Created: 13/January/19
 'Last updated: 31/August/22
 'Last update: gracefully skip 0-length image resource blocks to fix crashes on Photopea-exported PSD files
 '
 'This class (and its associated pdPSD- child classes) handle Adobe PSD parsing duties.  It is custom-built
-' for PhotoDemon, with an emphasis on performance and proper color-management of all imported data.
+' for PhotoPaint, with an emphasis on performance and proper color-management of all imported data.
 '
 'To my knowledge, this is the only 3rd-party PSD parser that passes the full Apple color management
 ' test suite (https://developer.apple.com/library/archive/technotes/tn2115/_index.html).  This is a large
@@ -27,10 +27,10 @@ Attribute VB_Exposed = False
 '
 'Currently, all color modes (nine in the spec), and all color depths (1 through 32-bits-per-channel)
 ' are believed to be fully covered by the import engine.  The export engine, by design, only writes
-' 32-bpp RGBA images (as this is all PhotoDemon itself supports internally), but supporting other
+' 32-bpp RGBA images (as this is all PhotoPaint itself supports internally), but supporting other
 ' color modes or depths would require only minor modifications.
 '
-'As with all 3rd-party PSD engines, Photoshop has many features that don't have direct analogs in PhotoDemon.
+'As with all 3rd-party PSD engines, Photoshop has many features that don't have direct analogs in PhotoPaint.
 ' Such features are still extracted by this class, but they will not "appear" in the final loaded image.
 ' My ongoing goal is to expand support in this class as various PSD features are implemented in PD itself.
 '
@@ -44,7 +44,7 @@ Attribute VB_Exposed = False
 ' https://github.com/PsdPlugin/PsdPlugin
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -313,7 +313,7 @@ Friend Function LoadPSD(ByRef srcFile As String, ByRef dstImage As pdImage, ByRe
         'Anyway, we don't need this data in PD so we ignore it at present.  You could, however, parse it as the
         ' final stage in the load process, if desired - but note that there are caveats to the data in this segment.
         ' (For example, Photoshop may choose to write some single-layer images as zero-layer images, with the image
-        ' data actually stored in the composited image segment.  PhotoDemon supports this condition, so the current
+        ' data actually stored in the composited image segment.  PhotoPaint supports this condition, so the current
         ' stream point may not point where you think it does - consider yourself warned!)
         
         'If we made it this far successfully, we have enough data to construct a pdImage object!
@@ -335,7 +335,7 @@ Friend Function LoadPSD(ByRef srcFile As String, ByRef dstImage As pdImage, ByRe
     ' Regardless of this class's debug verbosity setting, warnings always get dumped out to the debug log.  This is
     ' especially useful when new versions of Photoshop release, as they often bring new parsing surprises/nightmares.
     If (Me.Warnings_GetCount() > 0) Then
-        PDDebug.LogAction "PhotoDemon's PSD parser generated one or more warnings.  Here is a full list:"
+        PDDebug.LogAction "PhotoPaint's PSD parser generated one or more warnings.  Here is a full list:"
         Me.Warnings_DumpToDebugger
     End If
 
@@ -712,7 +712,7 @@ Private Function ExportStep2_WriteImageResources(ByRef cStream As pdStream, ByRe
     ' write many image resource blocks, so this function is manageable for now.)  That's why you'll see a bunch
     ' of ugly naked stream writes here.
     
-    'PSD images from Photoshop typically contain dozens of image resource blocks.  PhotoDemon doesn't attempt to
+    'PSD images from Photoshop typically contain dozens of image resource blocks.  PhotoPaint doesn't attempt to
     ' mimic this behavior; instead, we only write blocks that contain information relevant to the current PD session.
     ' (Photoshop will fill in default values for any blocks we don't supply.)
     
@@ -735,7 +735,7 @@ Private Function ExportStep2_WriteImageResources(ByRef cStream As pdStream, ByRe
     cStream.WriteInt_BE 1
     cStream.WriteInt_BE 1
     
-    'Second, an ICC profile (0x040F).  At present, all images exported from PhotoDemon are hard-converted to sRGB.
+    'Second, an ICC profile (0x040F).  At present, all images exported from PhotoPaint are hard-converted to sRGB.
     ' PSD is the rare format where an embedded profile would actually (most likely?) be used by target software,
     ' instead of being completely ignored as usual... but some internal changes would have to be made to make
     ' that feasible.  Instead, we just generate a stock sRGB profile on-the-fly and embed it.
@@ -775,8 +775,8 @@ Private Function ExportStep2_WriteImageResources(ByRef cStream As pdStream, ByRe
     blockSize = blockSize + 4 + 4 'Size descriptors for two Unicode strings
     
     Dim writerName As String, readerName As String
-    writerName = "PhotoDemon"
-    readerName = writerName & " " & Updates.GetPhotoDemonVersion()
+    writerName = "PhotoPaint"
+    readerName = writerName & " " & Updates.GetPhotoPaintVersion()
     blockSize = blockSize + LenB(writerName) + 2 + LenB(readerName) + 2  'Add string sizes to calculation, including trailing nulls
     
     WriteImageResourceHeader cStream, &H421, blockSize
@@ -891,7 +891,7 @@ Private Function ExportStep1_WriteHeaderAndColorTable(ByRef cStream As pdStream,
     cStream.WriteInt_BE cm_RGB
     
     'While here, let's also write the color mode data segment.  In indexed images, this segment stores palette data.
-    ' It is unused by PhotoDemon exports so we only need to populate the first field - segment length, which is 0.
+    ' It is unused by PhotoPaint exports so we only need to populate the first field - segment length, which is 0.
     cStream.WriteLong_BE 0
     
     ExportStep1_WriteHeaderAndColorTable = psd_Success
@@ -1091,7 +1091,7 @@ Private Function Step5_AssemblePDImage(ByRef srcFile As String, ByRef dstImage A
                 numUsableLayers = numUsableLayers + 1
                 
             'All other color modes are handled normally, with a 1:1 correspondence between
-            ' PSD layers and PhotoDemon layers
+            ' PSD layers and PhotoPaint layers
             Else
             
                 'Prep a new layer object and initialize it with the image bits we've retrieved
@@ -1196,7 +1196,7 @@ Private Function Step5_AssemblePDImage(ByRef srcFile As String, ByRef dstImage A
                                 tmpLayer.GetLayerMask.SetOpacityOutsideMask CSng(m_Layers(i).GetMaskDefaultColor) / 2.55!
                                 
                                 'For now, we also need to flag the mask with a special "came from PSD layer group" marker,
-                                ' so that PhotoDemon knows how to handle the mask.
+                                ' so that PhotoPaint knows how to handle the mask.
                                 tmpLayer.GetLayerMask.SetMaskFlag_PSGroup
                                 
                             End If
@@ -1853,7 +1853,7 @@ Private Function Step3_GatherImageResources(ByRef srcFile As String, ByRef dstIm
                                 
                             End If
                             
-                        'PhotoDemon does "support" round-tripping of layer group data.  (It does this using
+                        'PhotoPaint does "support" round-tripping of layer group data.  (It does this using
                         ' dummy layers to represent group start/end markers.)  I have no idea what this
                         ' "Groups Enabled ID" setting does.  In the wild, this value is always zero for
                         ' each layer in the image.  PD writes out a similar set of zeroes when saving,

@@ -6,11 +6,11 @@ Attribute VB_Name = "Snap"
 'Last updated: 16/January/25
 'Last update: implement angle snapping for the move/size tool
 '
-'In 2024, snap-to-target support was added to various PhotoDemon tools.  Thank you to all the users
+'In 2024, snap-to-target support was added to various PhotoPaint tools.  Thank you to all the users
 ' who suggested this feature!
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

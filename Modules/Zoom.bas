@@ -1,15 +1,15 @@
 Attribute VB_Name = "Zoom"
 '***************************************************************************
-'PhotoDemon Zoom Handler - calculates and tracks zoom values for a given image
+'PhotoPaint Zoom Handler - calculates and tracks zoom values for a given image
 'Copyright 2001-2025 by Tanner Helland
 'Created: 4/15/01
 'Last updated: 11/September/25
-'Last update: add 150% zoom as a preset value (see https://github.com/tannerhelland/PhotoDemon/issues/666)
+'Last update: add 150% zoom as a preset value (see https://github.com/tannerhelland/PhotoPaint/issues/666)
 '
 'The main user of this class is the Viewport_Handler module.  Look there for relevant implementation details.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -12,13 +12,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Visual Theming class
+'PhotoPaint Visual Theming class
 'Copyright 2013-2025 by Tanner Helland
 'Created: 23/October/13
 'Last updated: 03/October/19
 'Last update: switch to new pdPackage format for theme backups
 '
-'As of release 7.0, PhotoDemon supports the notion of "visual themes".  These themes are XML files that modify
+'As of release 7.0, PhotoPaint supports the notion of "visual themes".  These themes are XML files that modify
 ' the program's appearance.
 '
 'To ensure that all UI elements are themed correctly, colors are never hard-coded.  Instead, they are retrieved
@@ -27,7 +27,7 @@ Attribute VB_Exposed = False
 'Note that this class *does* perform some subclassing, so I cannot guarantee that it's IDE-safe.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -157,7 +157,7 @@ Private m_SubclassedHWnds As pdDictionary
 ' module to do it, because it appends a language ID to this value.
 Private m_CurrentThemeID As String
 
-'Failsafe copies of all theme files are embedded inside PhotoDemon.exe's resource segment.  We drop back to these
+'Failsafe copies of all theme files are embedded inside PhotoPaint.exe's resource segment.  We drop back to these
 ' if something goes wrong with the normal theme files.
 Private m_ThemeBackup As pdPackageChunky
 
@@ -276,7 +276,7 @@ End Sub
 '  the root folder.  This sub will try to fix that.)
 Private Sub AttemptThemeRecovery()
 
-    'At present, there are ten key theme files PD expects to exist (in the /App/PhotoDemon/Themes folder).
+    'At present, there are ten key theme files PD expects to exist (in the /App/PhotoPaint/Themes folder).
     ' These files come in three types:
     ' 1) Core theme files that describe most of the colors used by the program
     ' 2) Theme "accent" files that describe a (much smaller) set of accent colors.  These can be plugged
@@ -831,7 +831,7 @@ End Function
 
 'DEVELOPER USE ONLY!
 ' Package all core theme files into a single pdPackage instance, then write it out to file.  This package can then
-' be stored inside the .exe as a dedicated resource, which is PD's ultimate failsafe if the /App/PhotoDemon/Themes
+' be stored inside the .exe as a dedicated resource, which is PD's ultimate failsafe if the /App/PhotoPaint/Themes
 ' folder goes missing.
 Friend Sub BuildThemePackage()
 

@@ -112,7 +112,7 @@ Attribute VB_Exposed = False
 'Last updated: 14/February/17
 'Last update: finally finish implementing this thing!
 '
-'At first-run, PhotoDemon now asks the user to confirm their choice of program language and UI theme.
+'At first-run, PhotoPaint now asks the user to confirm their choice of program language and UI theme.
 ' The dialog can be canceled (in which case default settings will be used), but my hope is that users
 ' will be able to configure everything the way they prefer, without needing to dive into PD's complicated
 ' menu system right off the bat.

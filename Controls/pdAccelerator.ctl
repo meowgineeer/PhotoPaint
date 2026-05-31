@@ -31,7 +31,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Accelerator ("Hotkey") handler
+'PhotoPaint Accelerator ("Hotkey") handler
 'Copyright 2013-2025 by Tanner Helland and contributors
 'Created: 06/November/15 (split off from a heavily modified vbaIHookControl by Steve McMahon)
 'Last updated: 06/October/21
@@ -42,7 +42,7 @@ Attribute VB_Exposed = False
 ' http://www.vbaccelerator.com/home/VB/Code/Libraries/Hooks/Accelerator_Control/article.asp
 '
 'In 2013, I rewrote the control to solve some glaring stability issues.  Over time, I rewrote it more
-' and more, tacking on PhotoDemon-specific features and attempting to fix problematic bugs,
+' and more, tacking on PhotoPaint-specific features and attempting to fix problematic bugs,
 ' until ultimately the control grew into a horrible mishmash of spaghetti code: some old, some new,
 ' some completely unused, and too much of it that remained stubbornly unreliable.
 '
@@ -55,7 +55,7 @@ Attribute VB_Exposed = False
 ' http://www.vbaccelerator.com/home/VB/Code/Libraries/Hooks/Accelerator_Control/
 '
 'Thank you also to Jason Brown (https://github.com/jpbro), who submitted many fixes and improvements to
-' this module over the years.  Hotkey behavior in PhotoDemon is greatly improved thanks to him.
+' this module over the years.  Hotkey behavior in PhotoPaint is greatly improved thanks to him.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
 ' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
@@ -72,10 +72,10 @@ Option Explicit
 ' is useful because if FormMain is disabled for some reason, hotkey handling gets properly postponed too.)
 Public Event HotkeyPressed(ByVal hotkeyID As Long)
 
-'PhotoDemon previously used on-demand virtual-key tracking for hotkeys, but this proved to be a bad
+'PhotoPaint previously used on-demand virtual-key tracking for hotkeys, but this proved to be a bad
 ' idea because system hotkeys that switch focus between apps (e.g. Alt+Tab) throw off our tracking
 ' state(s).  A better solution is to manually track key up/down state for Ctrl/Alt/Shift presses and
-' cache the results locally (see https://github.com/tannerhelland/PhotoDemon/issues/267 for details.)
+' cache the results locally (see https://github.com/tannerhelland/PhotoPaint/issues/267 for details.)
 Private m_CtrlDown As Boolean, m_AltDown As Boolean, m_ShiftDown As Boolean
 
 'If the control's hook proc is active and primed, this handle will be non-zero.
@@ -96,7 +96,7 @@ Private m_InHookNow As Boolean, m_InFireTimerNow As Boolean
 Private m_LastHotkeyIndex As Long, m_TimerAtAcceleratorPress As Currency
 
 'This control may be de/activated many times in a given session.  (If an edit box gets focus,
-' for example, PhotoDemon will disable hooking here so that shared hotkeys - like Ctrl+A - apply to
+' for example, PhotoPaint will disable hooking here so that shared hotkeys - like Ctrl+A - apply to
 ' the edit box instead of this control "stealing" them.)  To provide useful debug info, PD will note
 ' when the first attempt at hooking fails (during program startup) but *not* subsequent attempts.
 ' Buggy system-wide hotkey managers are the most common cause for failed hooking, and it's helpful to
@@ -110,7 +110,7 @@ Attribute m_ReleaseTimer.VB_VarHelpID = -1
 Private WithEvents m_FireTimer As pdTimer
 Attribute m_FireTimer.VB_VarHelpID = -1
 
-'Thanks to a patch by jpbro (https://github.com/tannerhelland/PhotoDemon/pull/248), PD no longer drops
+'Thanks to a patch by jpbro (https://github.com/tannerhelland/PhotoPaint/pull/248), PD no longer drops
 ' accelerators that are triggered in quick succession.  Instead, it queues them and fires them in turn.
 ' Two collections are used for this - one that fires off all still-need-to-be-processed events, and a
 ' backup queue that accumulates events in the background (while the current queue is being worked through).
@@ -145,7 +145,7 @@ Private Sub m_FireTimer_Timer()
     'If we're still inside the hookproc, we'll wait another 16 ms before testing the keypress.
     If (Not m_InHookNow) Then
         
-        'PhotoDemon maintains a list of conditions that disallow hotkeys from triggering.
+        'PhotoPaint maintains a list of conditions that disallow hotkeys from triggering.
         ' (For example, a modal dialog is active.)
         If (Not CanIRaiseAnAcceleratorEvent(True)) Then
             
@@ -252,7 +252,7 @@ Private Sub UserControl_Initialize()
         m_FireTimer.Interval = 17
         
         'Hooks are no longer installed at initialization.  You must explicitly request initialization
-        ' via the ActivateHook function.  (PhotoDemon does not do this until fairly deep into program startup.)
+        ' via the ActivateHook function.  (PhotoPaint does not do this until fairly deep into program startup.)
         
     End If
     
@@ -361,7 +361,7 @@ Private Function CanIAccumulateAnAccelerator() As Boolean
     CanIAccumulateAnAccelerator = (Not Interface.IsModalDialogActive())
 End Function
 
-'Want to globally disable hotkeys?  Call this function.  (And if you add a state to PhotoDemon where
+'Want to globally disable hotkeys?  Call this function.  (And if you add a state to PhotoPaint where
 ' hotkeys shouldn't be available, add a check for that state here.)
 Private Function CanIRaiseAnAcceleratorEvent(Optional ByVal ignoreActiveTimer As Boolean = False) As Boolean
    

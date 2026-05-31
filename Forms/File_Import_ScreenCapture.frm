@@ -96,7 +96,7 @@ Begin VB.Form FormScreenCapture
          Width           =   5115
          _ExtentX        =   9022
          _ExtentY        =   582
-         Caption         =   "minimize PhotoDemon prior to capture"
+         Caption         =   "minimize PhotoPaint prior to capture"
       End
    End
    Begin PhotoPaint.pdButtonStrip btsSource 

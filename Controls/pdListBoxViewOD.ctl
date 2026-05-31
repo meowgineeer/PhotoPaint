@@ -29,7 +29,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Owner-Drawn List Box View control (e.g. the list part of a list box, not including the scroll bar)
+'PhotoPaint Owner-Drawn List Box View control (e.g. the list part of a list box, not including the scroll bar)
 'Copyright 2016-2025 by Tanner Helland
 'Created: 26/March/16
 'Last updated: 04/January/17

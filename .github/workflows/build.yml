@@ -42,18 +42,38 @@ jobs:
           # Package as ZIP
           Compress-Archive -Path "$build_dir\*" -DestinationPath "PhotoPaint-portable.zip" -Force
           Write-Host "Created PhotoPaint-portable.zip successfully!"
+          
+          # Compile Inno Setup Installer if compiler is present
+          $iscc_path = $null
+          $iscc = Get-Command iscc -ErrorAction SilentlyContinue
+          if ($iscc) {
+              $iscc_path = $iscc.Source
+          } elseif (Test-Path "C:\Program Files (x86)\Inno Setup 6\ISCC.exe") {
+              $iscc_path = "C:\Program Files (x86)\Inno Setup 6\ISCC.exe"
+          }
+          
+          if ($iscc_path) {
+              Write-Host "Inno Setup Compiler found at: $iscc_path. Compiling installer..."
+              & $iscc_path installer.iss
+          } else {
+              Write-Host "Inno Setup Compiler not found. Skipping installer compilation."
+          }
 
-      - name: Upload Artifact
+      - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: PhotoPaint-portable
-          path: PhotoPaint-portable.zip
+          name: PhotoPaint-build
+          path: |
+            PhotoPaint-portable.zip
+            PhotoPaint-Setup.exe
 
       - name: Create GitHub Release
         if: startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch'
         uses: softprops/action-gh-release@v2
         with:
-          files: PhotoPaint-portable.zip
+          files: |
+            PhotoPaint-portable.zip
+            PhotoPaint-Setup.exe
           name: PhotoPaint ${{ github.ref_name }}
           draft: false
           prerelease: false

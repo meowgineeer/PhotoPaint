@@ -212,7 +212,7 @@ Public Sub UnsharpMask(ByVal effectParams As String, Optional ByVal toPreview As
             
         If (Not toPreview) Then Message "Applying unsharp mask (step %1 of %2)...", 2, 2
             
-        'ScaleFactor is used to apply the unsharp mask.  Maximum strength can be any value, but PhotoDemon locks it at 10.
+        'ScaleFactor is used to apply the unsharp mask.  Maximum strength can be any value, but PhotoPaint locks it at 10.
         Dim scaleFactor As Double, invScaleFactor As Double
         scaleFactor = umAmount + 1#
         invScaleFactor = 1# - scaleFactor

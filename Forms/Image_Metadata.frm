@@ -311,13 +311,13 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Image Metadata Browser
+'PhotoPaint Image Metadata Browser
 'Copyright 2013-2025 by Tanner Helland
 'Created: 27/May/13
 'Last updated: 23/January/21
 'Last update: fix display of some esoteric list-type values
 '
-'As of version 6.0, PhotoDemon now provides support for loading and saving image metadata.  What is metadata, you ask?
+'As of version 6.0, PhotoPaint now provides support for loading and saving image metadata.  What is metadata, you ask?
 ' See https://en.wikipedia.org/wiki/Metadata#Photographs for more details.
 '
 'This dialog interacts heavily with the pdMetadata class to present users with a relatively simple interface for
@@ -1418,7 +1418,7 @@ Private Sub TagLostFocus(Optional ByVal redrawListToMatch As Boolean = True)
         With m_AllTags(m_GroupIndex, m_TagIndex)
             
             'Tag removal is handled specially.  (Specifically, note that it is unrelated to the .UserModified trackers;
-            ' this is important because PhotoDemon itself may mark tags for removal, independent of the user.)
+            ' this is important because PhotoPaint itself may mark tags for removal, independent of the user.)
             If (.TagMarkedForRemoval) <> btnTagOptions(MDTB_Remove).Value Then
                 .TagMarkedForRemoval = btnTagOptions(MDTB_Remove).Value
                 tagStateChangedOther = True

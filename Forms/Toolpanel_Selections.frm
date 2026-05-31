@@ -984,7 +984,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Selection Tool Panel
+'PhotoPaint Selection Tool Panel
 'Copyright 2013-2025 by Tanner Helland
 'Created: 02/Oct/13
 'Last updated: 17/February/22

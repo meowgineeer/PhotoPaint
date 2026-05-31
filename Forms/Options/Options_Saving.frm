@@ -165,7 +165,7 @@ Option Explicit
 Private Sub Form_Load()
 
     'Saving prefs
-    chkConfirmUnsaved.AssignTooltip "By default, PhotoDemon will warn you when you attempt to close an image with unsaved changes."
+    chkConfirmUnsaved.AssignTooltip "By default, PhotoPaint will warn you when you attempt to close an image with unsaved changes."
     
     cboDefaultSaveFolder.Clear
     cboDefaultSaveFolder.AddItem "the current image's folder", 0
@@ -180,12 +180,12 @@ Private Sub Form_Load()
     cboSaveBehavior.Clear
     cboSaveBehavior.AddItem "overwrite the current file (standard behavior)", 0
     cboSaveBehavior.AddItem "save a new copy, e.g. ""filename (2).jpg"" (safe behavior)", 1
-    cboSaveBehavior.AssignTooltip "In most photo editors, the ""Save"" command saves the image over its original version, erasing that copy forever.  PhotoDemon provides a ""safer"" option, where each save results in a new copy of the file."
+    cboSaveBehavior.AssignTooltip "In most photo editors, the ""Save"" command saves the image over its original version, erasing that copy forever.  PhotoPaint provides a ""safer"" option, where each save results in a new copy of the file."
     
     cboSaveAsBehavior.Clear
     cboSaveAsBehavior.AddItem "suggest the current filename (standard behavior)", 0
     cboSaveAsBehavior.AddItem "suggest a new copy, e.g. ""filename (2).jpg"" (safe behavior)", 1
-    cboSaveAsBehavior.AssignTooltip "In most photo editors, the ""Save as"" command defaults to the current filename.  PhotoDemon also provides a ""safer"" option, where Save As will automatically increment filenames for you."
+    cboSaveAsBehavior.AssignTooltip "In most photo editors, the ""Save as"" command defaults to the current filename.  PhotoPaint also provides a ""safer"" option, where Save As will automatically increment filenames for you."
     
 End Sub
 

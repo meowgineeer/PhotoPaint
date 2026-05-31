@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Cryptography (and Hash) Helper Class
+'PhotoPaint Cryptography (and Hash) Helper Class
 'Copyright 2016-2025 by Tanner Helland
 'Created: 19/August/16
 'Last updated: 09/September/17
@@ -27,7 +27,7 @@ Attribute VB_Exposed = False
 ' to provide all required crypto values.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

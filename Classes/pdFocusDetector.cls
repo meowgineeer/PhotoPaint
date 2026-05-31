@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Window Focus Detection class
+'PhotoPaint Window Focus Detection class
 'Copyright 2014-2025 by Tanner Helland
 'Created: 07/May/15  (but built from many parts existing earlier)
 'Last updated: 07/May/15
@@ -23,7 +23,7 @@ Attribute VB_Exposed = False
 ' it with the hWnd you want tracked.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

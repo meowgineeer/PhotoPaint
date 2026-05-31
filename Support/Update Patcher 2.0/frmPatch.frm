@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form FormPatch 
    BackColor       =   &H80000005&
-   Caption         =   " PhotoDemon Update"
+   Caption         =   " PhotoPaint Update"
    ClientHeight    =   4695
    ClientLeft      =   120
    ClientTop       =   450
@@ -52,13 +52,13 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Program Update Patching App
+'PhotoPaint Program Update Patching App
 'Copyright 2015-2018 by Tanner Helland
 'Created: 01/Februrary/15
 'Last updated: 13/June/18
 'Last update: total overhaul against new patching strategy
 '
-'PhotoDemon's small update-patcher program.  This program is downloaded as part of an update file.  PD extracts it
+'PhotoPaint's small update-patcher program.  This program is downloaded as part of an update file.  PD extracts it
 ' and shells it prior to closing; this file then handles the rest of the patching process.
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
@@ -109,7 +109,7 @@ Private m_RestartWhenDone As Boolean
 'If the patch was successful, this will be set to TRUE
 Private m_PatchSuccessful As Boolean
 
-'PhotoDemon passes some values to us via command line:
+'PhotoPaint passes some values to us via command line:
 Private m_TrackStartPosition As Long, m_TrackEndPosition As Long  'Start and end position of the relevant update track in the update XML file
 
 'This program starts working as soon as it loads.  No user interaction is expected or handled.
@@ -128,15 +128,15 @@ Private Sub Form_Load()
     If ParseCommandLine() Then
         
         'Wait for PD to close; when it does, the timer will initiate the rest of the patch process.
-        txtOut.Text = "Waiting for PhotoDemon to terminate..."
+        txtOut.Text = "Waiting for PhotoPaint to terminate..."
         m_PDClosed = False
         tmrCheck.Enabled = True
         
     'If the command line is empty, the user somehow ran this independent of PD.  Terminate immediately.
     Else
     
-        TextOut "Something other than PhotoDemon launched this program.", False
-        TextOut "For security reasons, this update patcher will not run unless started by PhotoDemon itself.", False
+        TextOut "Something other than PhotoPaint launched this program.", False
+        TextOut "For security reasons, this update patcher will not run unless started by PhotoPaint itself.", False
         TextOut "(You may close this window now.)", False
         
     End If
@@ -208,7 +208,7 @@ Private Sub tmrCheck_Timer()
             
             rProcessFound = ProcessFirst(hSnapShot, uProcess)
             
-            'Iterate through all running processes, looking for PhotoDemon instances
+            'Iterate through all running processes, looking for PhotoPaint instances
             Do While (rProcessFound <> 0)
         
                 'Retrieve the EXE name of this process
@@ -252,19 +252,19 @@ Private Sub tmrCheck_Timer()
     End If
     
 PDDetectionError:
-    TextOut "Error occurred while waiting for PhotoDemon to close (#" & Err.Number & ": " & Err.Description & ").  Checking again..."
+    TextOut "Error occurred while waiting for PhotoPaint to close (#" & Err.Number & ": " & Err.Description & ").  Checking again..."
 
 End Sub
 
 'Start the patch process
 Private Function StartPatching() As Boolean
     
-    TextOut "PhotoDemon shutdown detected.  Starting patch process."
+    TextOut "PhotoPaint shutdown detected.  Starting patch process."
     
     'This update patcher will have been extracted to PD's root folder.
     m_PDPath = Files.PathAddBackslash(App.Path)
     m_PDUpdatePath = m_PDPath & "Data\Updates\"
-    m_PluginPath = m_PDPath & "App\PhotoDemon\Plugins\"
+    m_PluginPath = m_PDPath & "App\PhotoPaint\Plugins\"
     
     'This function will only return TRUE if all files were patched successfully.
     Dim allFilesSuccessful As Boolean
@@ -501,7 +501,7 @@ Private Sub FinishPatching()
     
     If m_RestartWhenDone Then
         
-        TextOut "Restarting PhotoDemon, as requested."
+        TextOut "Restarting PhotoPaint, as requested."
         
         Dim actionString As String, fileString As String, pathString As String, paramString As String
         actionString = "open"

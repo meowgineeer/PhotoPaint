@@ -1,6 +1,6 @@
 Attribute VB_Name = "Tools_Fill"
 '***************************************************************************
-'PhotoDemon Bucket Fill Manager
+'PhotoPaint Bucket Fill Manager
 'Copyright 2017-2025 by Tanner Helland
 'Created: 30/August/17
 'Last updated: 22/May/24
@@ -10,7 +10,7 @@ Attribute VB_Name = "Tools_Fill"
 ' form for more details on how the UI relays relevant fill data here.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

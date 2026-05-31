@@ -75,7 +75,7 @@ Attribute VB_Exposed = False
 ' It's arguably more useful than the Levels dialog, especially to a casual user, because it automatically
 ' calculates levels according to a reliable, often-accurate algorithm.  Rather than forcing the user through the
 ' Levels dialog (because really, how many people know that Auto Levels is actually White Balance in photography
-' parlance?), PhotoDemon provides a full implementation of custom white balance handling.
+' parlance?), PhotoPaint provides a full implementation of custom white balance handling.
 '
 'The value box on the form is the percentage of pixels ignored at the top and bottom of the histogram.
 ' 0.05 is the recommended default.  I've specified 5.0 as the maximum, but there's no reason it couldn't be set

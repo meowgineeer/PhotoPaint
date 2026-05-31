@@ -13,7 +13,7 @@ Attribute VB_Name = "Tools_Crop"
 ' via selection uses a separate function.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -68,7 +68,7 @@ Private m_AllowEnlarge As Boolean, m_MaxCropWidth As Long, m_MaxCropHeight As Lo
 'Highlighting the retained area (by "shielding", as Photoshop calls it, the cut areas) is user-modifiable.
 Private m_HighlightCrop As Boolean, m_HighlightColor As Long, m_HighlightOpacity As Single
 
-'PhotoDemon can retain pixels outside the crop area (e.g. non-destructive cropping).
+'PhotoPaint can retain pixels outside the crop area (e.g. non-destructive cropping).
 ' This setting is user-modifiable.
 Private m_DeleteCroppedPixels As Boolean
 

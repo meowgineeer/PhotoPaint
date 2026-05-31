@@ -30,13 +30,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Image Strip control (e.g. a scrollable line of image thumbnails)
+'PhotoPaint Image Strip control (e.g. a scrollable line of image thumbnails)
 'Copyright 2013-2025 by Tanner Helland
 'Created: 15/October/13
 'Last updated: 05/January/17
 'Last update: delay resource loading until absolutely required
 '
-'In a surprise to precisely no one, PhotoDemon has some unique needs when it comes to user controls - needs that
+'In a surprise to precisely no one, PhotoPaint has some unique needs when it comes to user controls - needs that
 ' the intrinsic VB controls can't handle.  These range from the obnoxious (lack of an "autosize" property for
 ' anything but labels) to the critical (no Unicode support).
 '

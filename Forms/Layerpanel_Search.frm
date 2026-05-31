@@ -46,13 +46,13 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Search Tool Panel
+'PhotoPaint Search Tool Panel
 'Copyright 2019-2025 by Tanner Helland
 'Created: 25/April/19
 'Last updated: 07/October/21
 'Last update: rework (slightly) search triggers to integrate with the new Actions module
 '
-'PhotoDemon has a lot of tools and menus.  It can be hard to find things.  This search tool can help.
+'PhotoPaint has a lot of tools and menus.  It can be hard to find things.  This search tool can help.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
 ' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/

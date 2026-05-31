@@ -6,14 +6,14 @@ Attribute VB_Name = "Autosaves"
 'Last updated: 18/October/21
 'Last update: use autosave engine to (silently) restore previous sessions after forced system reboot
 '
-'PhotoDemon's Autosave engine is closely tied to the pdUndo class, so some understanding of that class is necessary
+'PhotoPaint's Autosave engine is closely tied to the pdUndo class, so some understanding of that class is necessary
 ' to appreciate how this module operates.
 '
 'All Undo/Redo data is saved to the hard drive, in a temp folder of the user's choosing (the Windows temp folder
 ' by default).  The data is cleared whenever an image is unloaded, and an extra pass is made at program shutdown
 ' "just to be safe".
 '
-'In the event of an unclean shutdown, this module searches the temp folder for any PhotoDemon-specific data.  If
+'In the event of an unclean shutdown, this module searches the temp folder for any PhotoPaint-specific data.  If
 ' some is found, the user is given a choice to restore those files.  If the user declines, that data is wiped
 ' (to prevent future unclean shutdown checks from re-detecting it).
 '
@@ -21,7 +21,7 @@ Attribute VB_Name = "Autosaves"
 ' "clean shutdown" file.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -81,7 +81,7 @@ Public Function WasLastShutdownClean() As Boolean
         xmlEngine.PrepareNewXML "Safe shutdown"
         
         xmlEngine.WriteBlankLine
-        xmlEngine.WriteComment "This file is used to detect unsafe shutdowns from previous PhotoDemon sessions."
+        xmlEngine.WriteComment "This file is used to detect unsafe shutdowns from previous PhotoPaint sessions."
         xmlEngine.WriteBlankLine
         xmlEngine.WriteTag "SessionDate", Format$(Now, "Long Date")
         xmlEngine.WriteTag "SessionTime", Format$(Now, "h:mm AMPM")
@@ -111,7 +111,7 @@ End Sub
 'During program initialization, FormMain will call this sub to handle any startup behavior related to old AutoSave data.
 Public Sub InitializeAutosave()
 
-    'DO NOT CHECK FOR AUTOSAVE DATA if another PhotoDemon session is active.
+    'DO NOT CHECK FOR AUTOSAVE DATA if another PhotoPaint session is active.
     If Mutex.IsThisOnlyInstance() Then
         
         'See if the previous PD session crashed.
@@ -193,7 +193,7 @@ Public Sub InitializeAutosave()
         End If
         
     Else
-        PDDebug.LogAction "Multiple PhotoDemon sessions active; autosave check abandoned."
+        PDDebug.LogAction "Multiple PhotoPaint sessions active; autosave check abandoned."
     End If
     
 End Sub
@@ -202,7 +202,7 @@ End Sub
 ' It will return a value larger than 0 if Undo/Redo data was found.
 Public Function SaveableImagesPresent() As Long
 
-    'Search the temporary folder for any files matching PhotoDemon's Undo/Redo file pattern.  Because PD's Undo/Redo engine
+    'Search the temporary folder for any files matching PhotoPaint's Undo/Redo file pattern.  Because PD's Undo/Redo engine
     ' is awesome, it automatically saves very nice Undo XML files that contain key data for each pdImage opened by the program.
     ' In the event of an unsafe shutdown, these XML files help us easily reconstruct any "lost" images.
     m_numOfXMLFound = 0

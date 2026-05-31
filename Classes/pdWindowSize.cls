@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon DPI-Aware Window Resize class
+'PhotoPaint DPI-Aware Window Resize class
 'Copyright 2015-2025 by Tanner Helland
 'Created: 23/September/15 (but built from many parts existing earlier)
 'Last updated: 26/August/20
@@ -26,7 +26,7 @@ Attribute VB_Exposed = False
 ' It provides replacement move/size functions that rely on WAPI for correct behavior.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

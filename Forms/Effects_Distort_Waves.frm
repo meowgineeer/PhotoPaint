@@ -137,7 +137,7 @@ Attribute VB_Exposed = False
 ' (with interpolation) are available for a high-quality result.
 '
 'Four parameters are required - wavelength and amplitude for both the x and y directions.  Unlike other distortions
-' in PhotoDemon, this one doesn't require a radius.
+' in PhotoPaint, this one doesn't require a radius.
 '
 'Finally, the transformation used by this tool is a modified version of a transformation originally written by
 ' Jerry Huxtable of JH Labs.  Jerry's original code is licensed under an Apache 2.0 license.  You may download his

@@ -12,7 +12,7 @@ Attribute VB_Name = "Plugin_CharLS"
 ' and decompression. JPEG-LS is a low-complexity image compression standard that matches JPEG 2000
 ' compression ratios."
 '
-'CharLS is BSD-licensed and actively maintained.  Fortunately for PhotoDemon, they also provide
+'CharLS is BSD-licensed and actively maintained.  Fortunately for PhotoPaint, they also provide
 ' a robust C interface and officially supported VS solutions, with excellent x86 support.
 ' PD's CharLS dll is built using those solutions (with minor modifications for Windows XP support).
 '
@@ -20,7 +20,7 @@ Attribute VB_Name = "Plugin_CharLS"
 ' https://jpeg.org/jpegls/index.html
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

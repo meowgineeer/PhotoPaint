@@ -11,7 +11,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
-'Note: this file has been modified for use within PhotoDemon.
+'Note: this file has been modified for use within PhotoPaint.
 
 'This class is Copyright 2001 Phil Fresle, http://www.frez.co.uk/
 

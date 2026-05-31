@@ -39,7 +39,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Splash Screen
+'PhotoPaint Splash Screen
 'Copyright 2001-2025 by Tanner Helland
 'Created: 15/April/01
 'Last updated: 18/December/20
@@ -161,7 +161,7 @@ Public Sub PrepareRestOfSplash()
         Set titleDIB = Nothing
         Set titleShadowDIB = Nothing
         
-        'Next, we need to figure out where the top and bottom of the "PHOTODEMON" logo lie.
+        'Next, we need to figure out where the top and bottom of the "PHOTOPAINT" logo lie.
         ' These values may change depending on screen DPI.  (Their position is important,
         ' because other text - like PD's version number - gets laid out proportional to
         ' these values.)
@@ -197,7 +197,7 @@ Public Sub PrepareRestOfSplash()
         
         'Assemble the current version and description strings
         Dim versionString As String
-        versionString = Trim$(g_Language.TranslateMessage("version %1", Updates.GetPhotoDemonVersion()))
+        versionString = Trim$(g_Language.TranslateMessage("version %1", Updates.GetPhotoPaintVersion()))
         
         'Create a dummy 24-bpp DIB and paint the version to it.  (This is required for reliable
         ' antialiasing behavior; GDI can't render text to 32-bpp surfaces if antialiasing is active,

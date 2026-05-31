@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon File System Object Interface
+'PhotoPaint File System Object Interface
 'Copyright 2014-2018 by Tanner Helland
 'Created: 04/February/15
 'Last updated: 06/July/18
@@ -32,7 +32,7 @@ Attribute VB_Exposed = False
 ' - Dana Seaman's UnicodeTutorialVB (http://www.cyberactivex.com/UnicodeTutorialVb.htm)
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-' projects IF you provide attribution.  For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution.  For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -79,7 +79,7 @@ Private Const OPEN_EXISTING As Long = &H3
 Private Const PAGE_READWRITE As Long = 4
 Private Const REPLACEFILE_IGNORE_MERGE_ERRORS As Long = &H2
 
-'Because our file patching code affects critical PhotoDemon files, we need to make sure we return detailed success/failure information.
+'Because our file patching code affects critical PhotoPaint files, we need to make sure we return detailed success/failure information.
 Public Enum PD_FILE_PATCH_RESULT
     FPR_SUCCESS = 0
     FPR_FAIL_NOTHING_CHANGED = 1
@@ -256,7 +256,7 @@ StopAppendBinary:
     FileAppendBinaryData = False
 End Function
 
-'Append string data to an existing text file.  Because this function is PhotoDemon-specific, UTF-8 output is enforced.
+'Append string data to an existing text file.  Because this function is PhotoPaint-specific, UTF-8 output is enforced.
 '
 'Returns TRUE if successful, FALSE otherwise.
 ' (FALSE generally only occurs if write access to the destination folder is restricted.)
@@ -1026,7 +1026,7 @@ Friend Function FileReplace(ByVal oldFile As String, ByVal newFile As String, Op
             'IMPORTANT NOTE!  If the files you're patching are critical, I STRONGLY recommend forcibly creating a backup here.
             ' Otherwise, you risk a scenario where something goes wrong during the replace step, and the original file is gone forever.
             
-            'For example, in PhotoDemon I use the standard Data/Updates folder for backups when patching, like this:
+            'For example, in PhotoPaint I use the standard Data/Updates folder for backups when patching, like this:
             'backupFile = UserPrefs.GetUpdatePath & FileGetName(oldFile)
             
             'This ensures that we always have a way to undo the replace step if something goes wrong
@@ -1035,7 +1035,7 @@ Friend Function FileReplace(ByVal oldFile As String, ByVal newFile As String, Op
             backupFile = customBackupFile
         End If
         
-        'ReplaceFileW returns a non-zero value if successful, or zero if it fails.  Because this function is used to patch PhotoDemon.exe,
+        'ReplaceFileW returns a non-zero value if successful, or zero if it fails.  Because this function is used to patch PhotoPaint.exe,
         ' there is no margin for failure, so detailed handling of every possible outcome is required.
         rfReturn = ReplaceFileW(StrPtr(oldFile), StrPtr(newFile), StrPtr(backupFile), REPLACEFILE_IGNORE_MERGE_ERRORS, 0&, 0&)
         

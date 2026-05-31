@@ -1,6 +1,6 @@
 Attribute VB_Name = "ColorManagement"
 '***************************************************************************
-'PhotoDemon ICC Profile Support Module
+'PhotoPaint ICC Profile Support Module
 'Copyright 2013-2025 by Tanner Helland
 'Created: 05/November/13
 'Last updated: 24/April/18
@@ -22,7 +22,7 @@ Attribute VB_Name = "ColorManagement"
 ' the version, but I have since dropped all support for the Windows CMM as it's largely garbage.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

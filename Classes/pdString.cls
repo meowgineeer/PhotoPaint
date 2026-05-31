@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon String Builder class
+'PhotoPaint String Builder class
 'Copyright 2017-2025 by Tanner Helland
 'Created: 06/October/17
 'Last updated: 06/October/17
@@ -37,7 +37,7 @@ Attribute VB_Exposed = False
 ' ...but with the usual modifications to imitate things like function overloading.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '*************************************************************************
 

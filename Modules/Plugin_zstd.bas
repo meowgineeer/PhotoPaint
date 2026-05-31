@@ -17,7 +17,7 @@ Attribute VB_Name = "Plugin_zstd"
 ' https://github.com/facebook/zstd#benchmarks).  Ongoing development is very active and each new
 ' release brings improved performance and compression capabilities.
 '
-'Like any photo editor, PhotoDemon constantly writes a ton of huge files, especially involving
+'Like any photo editor, PhotoPaint constantly writes a ton of huge files, especially involving
 ' Undo/Redo data.  Finding that sweet spot between low resources and responsiveness is critical,
 ' and zstd helps a ton in that regard.
 '
@@ -26,7 +26,7 @@ Attribute VB_Name = "Plugin_zstd"
 ' http://www.vbforums.com/showthread.php?781595-VB6-Call-Functions-By-Pointer-(Universall-DLL-Calls)&p=4795471&viewfull=1#post4795471
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

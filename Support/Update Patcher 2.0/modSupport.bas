@@ -1,5 +1,5 @@
 Attribute VB_Name = "Support_Functions"
-'Note: this file has been modified for use within PhotoDemon.
+'Note: this file has been modified for use within PhotoPaint.
 
 'This code was originally written by Steve McMahon.  You may download the original from this link:
 ' http://www.vbaccelerator.com/home/VB/Tips/Setting_the_App_Icon_Correctly/article.asp

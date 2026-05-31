@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Unicode Helper Class
+'PhotoPaint Unicode Helper Class
 'Copyright 2014-2016 by Tanner Helland
 'Created: 04/February/15
 'Last updated: 23/February/15
@@ -26,7 +26,7 @@ Attribute VB_Exposed = False
 ' - Dana Seaman's UnicodeTutorialVB (http://www.cyberactivex.com/UnicodeTutorialVb.htm)
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-' projects IF you provide attribution.  For more information, please visit http://photodemon.org/about/license/
+' projects IF you provide attribution.  For more information, please visit http://photopaint.org/about/license/
 '
 '***************************************************************************
 

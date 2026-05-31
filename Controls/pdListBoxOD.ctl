@@ -47,7 +47,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Owner-Drawn List Box control
+'PhotoPaint Owner-Drawn List Box control
 'Copyright 2016-2025 by Tanner Helland
 'Created: 26/March/16
 'Last updated: 27/March/16

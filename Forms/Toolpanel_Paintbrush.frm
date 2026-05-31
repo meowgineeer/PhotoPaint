@@ -270,7 +270,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Paintbrush Tool Panel
+'PhotoPaint Paintbrush Tool Panel
 'Copyright 2016-2025 by Tanner Helland
 'Created: 31/Oct/16
 'Last updated: 01/December/21

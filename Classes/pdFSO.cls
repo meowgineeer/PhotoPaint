@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon File System Object Interface
+'PhotoPaint File System Object Interface
 'Copyright 2014-2025 by Tanner Helland
 'Created: 04/February/15
 'Last updated: 29/October/21
@@ -33,7 +33,7 @@ Attribute VB_Exposed = False
 ' - Dana Seaman's UnicodeTutorialVB (http://www.cyberactivex.com/UnicodeTutorialVb.htm)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -241,7 +241,7 @@ StopAppendBinary:
     FileAppendBinaryData = False
 End Function
 
-'Append string data to an existing text file.  Because this function is PhotoDemon-specific, UTF-8 output is enforced.
+'Append string data to an existing text file.  Because this function is PhotoPaint-specific, UTF-8 output is enforced.
 '
 'Returns TRUE if successful, FALSE otherwise.
 ' (FALSE generally only occurs if write access to the destination folder is restricted.)
@@ -1126,7 +1126,7 @@ Friend Function FileReplace(ByVal oldFile As String, ByVal newFile As String, Op
             ' a backup here.  Otherwise, you risk a scenario where something goes wrong during the replace step,
             ' and the original file is lost forever.
             
-            'For example, in PhotoDemon I use the standard Data/Updates folder for backups when patching, like this:
+            'For example, in PhotoPaint I use the standard Data/Updates folder for backups when patching, like this:
             'backupFile = UserPrefs.GetUpdatePath & FileGetName(oldFile)
             
             'This ensures that we always have a way to undo the replace step if something goes wrong
@@ -1136,7 +1136,7 @@ Friend Function FileReplace(ByVal oldFile As String, ByVal newFile As String, Op
         End If
         
         'ReplaceFileW returns a non-zero value if successful, or zero if it fails.  Because this function is used
-        ' to patch PhotoDemon.exe, there is no margin for failure, so detailed handling of every possible outcome
+        ' to patch PhotoPaint.exe, there is no margin for failure, so detailed handling of every possible outcome
         ' is necessary.
         rfReturn = ReplaceFileW(StrPtr(oldFile), StrPtr(newFile), StrPtr(backupFile), REPLACEFILE_IGNORE_MERGE_ERRORS, 0&, 0&)
         

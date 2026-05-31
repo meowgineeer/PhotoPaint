@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon MBM (Psion, Symbian) Image Importer (export not currently supported)
+'PhotoPaint MBM (Psion, Symbian) Image Importer (export not currently supported)
 'Copyright 2020-2025 by Tanner Helland
 'Created: 03/November/20
 'Last updated: 30/December/20
@@ -23,14 +23,14 @@ Attribute VB_Exposed = False
 ' color-depth, grayscale/color, and compression values, and PD is only guaranteed to load files
 ' produced by official SDKs.)
 '
-'For details on how this class came to be, see https://github.com/tannerhelland/PhotoDemon/issues/341
+'For details on how this class came to be, see https://github.com/tannerhelland/PhotoPaint/issues/341
 '
 'Currently this class only supports importing MBM images.  Export support could be added with
 ' minimal investment code-wise, but there are significant UI implications (especially localization)
 ' for a matching export dialog, so I do not currently have plans to add this.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

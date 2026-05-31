@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Flicker-Free Window Painter class
+'PhotoPaint Flicker-Free Window Painter class
 'Copyright 2014-2025 by Tanner Helland
 'Created: 20/October/14 (built from parts existing much earlier)
 'Last updated: 06/February/17
@@ -36,7 +36,7 @@ Attribute VB_Exposed = False
 ' handled automatically.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

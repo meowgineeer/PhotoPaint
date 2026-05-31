@@ -28,7 +28,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Gradient Selector custom control
+'PhotoPaint Gradient Selector custom control
 'Copyright 2015-2025 by Tanner Helland
 'Created: 23/July/15
 'Last updated: 04/December/20

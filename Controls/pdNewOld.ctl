@@ -28,7 +28,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon New/Old comparison control
+'PhotoPaint New/Old comparison control
 'Copyright 2016-2025 by Tanner Helland
 'Created: 14/October/16
 'Last updated: 14/October/16

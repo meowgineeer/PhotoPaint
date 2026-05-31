@@ -12,13 +12,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon OpenRaster Container and Parser
+'PhotoPaint OpenRaster Container and Parser
 'Copyright 2019-2025 by Tanner Helland
 'Created: 08/January/19
 'Last updated: 05/January/23
 'Last update: update to latest cZipArchive; minor changes to match
 '
-'OpenRaster is currently the "best" mechanism for sharing multi-layer images between PhotoDemon
+'OpenRaster is currently the "best" mechanism for sharing multi-layer images between PhotoPaint
 ' and other open-source photo editors (GIMP, Krita, MyPaint, etc).
 '
 'The OpenRaster format is described in detail at Wikipedia:
@@ -34,7 +34,7 @@ Attribute VB_Exposed = False
 ' https://github.com/wqweto/ZipArchive
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -60,7 +60,7 @@ End Type
 
 Private m_Header As OpenRasterHeader
 
-'In a valid ORA file, layers can potentially possess many "attributes".  PhotoDemon supports most but not
+'In a valid ORA file, layers can potentially possess many "attributes".  PhotoPaint supports most but not
 ' all possible properties (e.g. some blend-modes are not currently implemented).  This "PD-friendly" struct
 ' holds any attributes we currently support, with everything translated to its most-similar feature in PD.
 Private Type OpenRasterLayer
@@ -231,7 +231,7 @@ Friend Function LoadORA(ByRef srcFilename As String, ByRef dstImage As pdImage) 
                     ' We can now begin the messy business of traversing the rest of the stack.xml file
                     ' and extracting associated PNG data as we go.
                     
-                    'TODO: the spec allows for layer grouping ("stacks"), which PhotoDemon does not currently support.
+                    'TODO: the spec allows for layer grouping ("stacks"), which PhotoPaint does not currently support.
                     ' There's no easy workaround for this until we implement groups, and I have no ETA for this at present.
                     ' As such, I currently ignore stacks and simply iterate layer entries.  This will still generate
                     ' a correct image for the majority of "in the wild" ORA files.

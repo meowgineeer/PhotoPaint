@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Palette Container and Parser
+'PhotoPaint Palette Container and Parser
 'Copyright 2018-2025 by Tanner Helland
 'Created: 16/January/18
 'Last updated: 07/February/18
@@ -31,10 +31,10 @@ Attribute VB_Exposed = False
 ' may require multiple pdPaletteChild instances.  That said, memory usage is deliberately kept to a minimum,
 ' and pdPaletteChild provides a "remove duplicate colors" feature to improve performance even further.
 '
-'If you encounter other palette formats and you'd like PhotoDemon to support them, please let me know via GitHub.
+'If you encounter other palette formats and you'd like PhotoPaint to support them, please let me know via GitHub.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -213,7 +213,7 @@ Friend Function LoadPaletteFromFile(ByRef srcFile As String, Optional ByVal remo
         If (Not LoadPaletteFromFile) Then
             m_NumOfGroups = startIndex
             m_Palettes(m_NumOfGroups).Reset
-            LoadPaletteFromFile = LoadPalettePhotoDemon(srcFile, cStream, removeDuplicateColors, retainOriginalColorOrder)
+            LoadPaletteFromFile = LoadPalettePhotoPaint(srcFile, cStream, removeDuplicateColors, retainOriginalColorOrder)
             If LoadPaletteFromFile Then cStream.StopStream True
         End If
         
@@ -1342,15 +1342,15 @@ BadPaintShopProPalette:
 
 End Function
 
-'PhotoDemon palettes are simple text files.  Unlike other palette formats, they provide full support for:
+'PhotoPaint palettes are simple text files.  Unlike other palette formats, they provide full support for:
 ' - Unlimited color counts
 ' - RGBA values
 ' - Color names
 ' ...while still being human-readable text files.
 '
-'This format is roughly modeled after Paint.NET palette files; see the SavePalettePhotoDemon function
+'This format is roughly modeled after Paint.NET palette files; see the SavePalettePhotoPaint function
 ' for a complete description of the minor changes we've made.
-Private Function LoadPalettePhotoDemon(ByRef srcFile As String, ByRef srcStream As pdStream, Optional ByVal removeDuplicateColors As Boolean = False, Optional ByVal retainOriginalColorOrder As Boolean = True) As Boolean
+Private Function LoadPalettePhotoPaint(ByRef srcFile As String, ByRef srcStream As pdStream, Optional ByVal removeDuplicateColors As Boolean = False, Optional ByVal retainOriginalColorOrder As Boolean = True) As Boolean
 
     On Error GoTo BadPDPalette
     
@@ -1378,7 +1378,7 @@ Private Function LoadPalettePhotoDemon(ByRef srcFile As String, ByRef srcStream 
             fileLines.CreateFromMultilineString rawFileString
             
             'Validate the first line of the stack
-            If Strings.StringsEqual(Trim$(fileLines.GetString(0)), "# PhotoDemon palette", True) Then
+            If Strings.StringsEqual(Trim$(fileLines.GetString(0)), "# PhotoPaint palette", True) Then
                 
                 '(Normally we would pop lines like a stack, but the user may want to preserve the
                 ' original palette order - in which case we need to also process the text lines in
@@ -1445,10 +1445,10 @@ BadLineColor:
             End If
                 
             'If we haven't errored out, consider this a valid parse if we found any valid colors
-            LoadPalettePhotoDemon = (m_Palettes(m_NumOfGroups).GetNumOfColors() > 0)
+            LoadPalettePhotoPaint = (m_Palettes(m_NumOfGroups).GetNumOfColors() > 0)
             
             'If the load was successful, assign a fake palette name using the filename
-            If LoadPalettePhotoDemon Then
+            If LoadPalettePhotoPaint Then
             
                 m_Palettes(m_NumOfGroups).SetPaletteName Files.FileGetName(srcFile, True)
                 m_Palettes(m_NumOfGroups).SetPaletteFilename srcFile
@@ -1469,8 +1469,8 @@ BadLineColor:
             End If
             
         Else
-            InternalProblem "LoadPalettePhotoDemon failed to read the source stream as a UTF-8 buffer"
-            LoadPalettePhotoDemon = False
+            InternalProblem "LoadPalettePhotoPaint failed to read the source stream as a UTF-8 buffer"
+            LoadPalettePhotoPaint = False
         End If
         
     End If
@@ -1478,7 +1478,7 @@ BadLineColor:
     Exit Function
     
 BadPDPalette:
-    LoadPalettePhotoDemon = False
+    LoadPalettePhotoPaint = False
 
 End Function
 
@@ -1531,7 +1531,7 @@ End Function
 
 'Given a path to an .aco file (Adobe Photoshop Swatch extension), write the designated palette group to the file.
 ' - An existing .aco file with the same name, if one exists, will be overwritten.
-' - Swatch version can be specified.  By default (-1), PhotoDemon will choose the best format for you.  If the
+' - Swatch version can be specified.  By default (-1), PhotoPaint will choose the best format for you.  If the
 '    source palette does not contain color names, a v1 swatch will be written.  If the source palette *does* contain
 '    color names, PD will write a v2 version.  You can override this by specifying the version you want.
 Friend Function SavePaletteAdobeSwatch(ByRef dstFile As String, Optional ByVal swatchVersion As Long = -1, Optional ByVal useGroupIndex As Long = 0) As Boolean
@@ -1817,7 +1817,7 @@ Friend Function SavePaletteGIMP(ByRef dstFile As String, Optional ByVal useGroup
         If (LenB(m_Palettes(useGroupIndex).GetPaletteName()) <> 0) Then .AppendLine "Name: " & m_Palettes(useGroupIndex).GetPaletteName()
         .AppendLine "#"
         If addPDCredit Then
-            .AppendLine "# " & g_Language.TranslateMessage("palette exported by PhotoDemon %1", "(https://photodemon.org)")
+            .AppendLine "# " & g_Language.TranslateMessage("palette exported by PhotoPaint %1", "(https://photopaint.org)")
             .AppendLine "#"
         End If
     End With
@@ -1875,7 +1875,7 @@ Friend Function SavePalettePaintDotNet(ByRef dstFile As String, Optional ByVal u
     'Start by writing a few standard lines, kind of like a header
     With dstText
         .AppendLine "; paint.net palette file"
-        If addPDCredit Then .AppendLine ";  " & g_Language.TranslateMessage("palette exported by PhotoDemon %1", "(https://photodemon.org)")
+        If addPDCredit Then .AppendLine ";  " & g_Language.TranslateMessage("palette exported by PhotoPaint %1", "(https://photopaint.org)")
     End With
     
     'Next come all the colors.  Paint.NET does not support color names, so only RGB values will be written.
@@ -1982,13 +1982,13 @@ End Function
 ' palette features.
 '
 'Note that the palette files are ultimately UTF-8 encoded (no BOM) with Windows line endings (CRLF).
-Friend Function SavePalettePhotoDemon(ByRef dstFile As String, Optional ByVal useGroupIndex As Long = 0, Optional ByVal addPDCredit As Boolean = True, Optional ByVal forceAlphaTo255 As Boolean = False) As Boolean
+Friend Function SavePalettePhotoPaint(ByRef dstFile As String, Optional ByVal useGroupIndex As Long = 0, Optional ByVal addPDCredit As Boolean = True, Optional ByVal forceAlphaTo255 As Boolean = False) As Boolean
 
     On Error GoTo BadPDPalette
     
     If Files.FileExists(dstFile) Then Files.FileDelete dstFile
     
-    'PhotoDemon palettes are just text files, and pdString makes it easy to efficiently assemble an in-memory string
+    'PhotoPaint palettes are just text files, and pdString makes it easy to efficiently assemble an in-memory string
     Dim dstText As pdString
     Set dstText = New pdString
     
@@ -1997,11 +1997,11 @@ Friend Function SavePalettePhotoDemon(ByRef dstFile As String, Optional ByVal us
         
         'This opening line *IS CURRENTLY REQUIRED*; it makes it much easier for us to correctly identify
         ' a palette file, without relying on complicated heuristics
-        .AppendLine "# PhotoDemon palette"
+        .AppendLine "# PhotoPaint palette"
         
         'Any #-prefixed line following the first is considered a comment line.
         ' You can stick whatever you want in them and PD will ignore it
-        If addPDCredit Then .AppendLine "# palette exported by PhotoDemon " & Updates.GetPhotoDemonVersion() & ", https://photodemon.org"
+        If addPDCredit Then .AppendLine "# palette exported by PhotoPaint " & Updates.GetPhotoPaintVersion() & ", https://photopaint.org"
         
     End With
     
@@ -2042,12 +2042,12 @@ Friend Function SavePalettePhotoDemon(ByRef dstFile As String, Optional ByVal us
     'That's all there is to it!  Write the finished string out to file.
     Dim finalText As String
     finalText = dstText.ToString()
-    SavePalettePhotoDemon = Files.FileSaveAsText(finalText, dstFile, True, False)
+    SavePalettePhotoPaint = Files.FileSaveAsText(finalText, dstFile, True, False)
     
     Exit Function
     
 BadPDPalette:
-    SavePalettePhotoDemon = False
+    SavePalettePhotoPaint = False
 
 End Function
 

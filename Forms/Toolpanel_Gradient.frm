@@ -226,7 +226,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Gradient Tool Panel
+'PhotoPaint Gradient Tool Panel
 'Copyright 2018-2025 by Tanner Helland
 'Created: 31/December/18
 'Last updated: 02/December/21

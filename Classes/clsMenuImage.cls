@@ -14,12 +14,12 @@ Attribute VB_Exposed = False
 'This code was originally written by Leandro I. Ascierto.
 ' Many thanks to Leandro for providing a way to apply PNG images to program menus in VB6
 '
-'NOTE: this file has been heavily modified for use within PhotoDemon.  Modifications include bugfixes relating to use
+'NOTE: this file has been heavily modified for use within PhotoPaint.  Modifications include bugfixes relating to use
 ' under non-standard Windows themes (e.g. "Classic Theme" on Win 7 and earlier), a full conversion of the subclassing
 ' system to comctl32, and rewriting the class so that persistent DCs are not required for each menu image.
 ' (Instead, we generate them on-the-fly.)
 '
-'These changes rely on a number of internal PhotoDemon checks, variables, and objects, so I do not recommend using PD's
+'These changes rely on a number of internal PhotoPaint checks, variables, and objects, so I do not recommend using PD's
 ' version of the class in your own projects.  You may download the original version of this code from the following link
 ' (good as of June 2012): http://leandroascierto.com/blog/clsmenuimage/
 

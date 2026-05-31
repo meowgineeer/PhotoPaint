@@ -11,7 +11,7 @@ Attribute VB_Name = "Tools_Paint"
 ' This module then handles all the messy business of managing brush behavior, strokes, and dabs.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -39,7 +39,7 @@ Private m_BrushFlow As Single
 'Note that some brush attributes, like color, only exist for certain brush sources.
 Private m_BrushSourceColor As Long
 
-'In 2025, a new option was added for strictly snapping the brush to pixel centers (see https://github.com/tannerhelland/PhotoDemon/discussions/635).
+'In 2025, a new option was added for strictly snapping the brush to pixel centers (see https://github.com/tannerhelland/PhotoPaint/discussions/635).
 ' When this option is toggled OFF, paint tools behave like Photoshop or Paint.NET.  Turning it ON makes it more acceptable
 ' for e.g. pixel art, with strict precision (particularly with 1px brush sizes).
 Private m_StrictPixelCentering As Boolean
@@ -241,7 +241,7 @@ Private Sub CreateCurrentBrush(Optional ByVal alsoCreateBrushOutline As Boolean 
         'While working on image-based brushes, I find it useful to reference arbitrary images as the
         ' paint surface.  You too can do this by uncommenting the lines below.
         'Dim testImgPath As String
-        'testImgPath = "C:\PhotoDemon v4\PhotoDemon\no_sync\Images from testers\brush_test_500.png"
+        'testImgPath = "C:\PhotoPaint v4\PhotoPaint\no_sync\Images from testers\brush_test_500.png"
         '
         'If (m_SrcPenDIB Is Nothing) Then Set m_SrcPenDIB = New pdDIB
         'Loading.QuickLoadImageToDIB testImgPath, m_SrcPenDIB, False, False
@@ -925,7 +925,7 @@ End Sub
 
 'Render the current brush outline to the canvas, using the stored mouse coordinates as the brush's position.
 ' (As of August 2022, Caps Lock can be used to toggle between precision and outline modes; this mimics Photoshop.
-'  See https://github.com/tannerhelland/PhotoDemon/issues/425 for details.)
+'  See https://github.com/tannerhelland/PhotoPaint/issues/425 for details.)
 Public Sub RenderBrushOutline(ByRef targetCanvas As pdCanvas)
     
     'If a brush outline doesn't exist, create one now

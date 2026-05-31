@@ -29,13 +29,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Unicode Label control
+'PhotoPaint Unicode Label control
 'Copyright 2014-2025 by Tanner Helland
 'Created: 28/October/14
 'Last updated: 01/April/24
 'Last update: raise custom drag/drop events (that the owner can respond to as they wish)
 '
-'In a surprise to precisely no one, PhotoDemon has some unique needs when it comes to user controls - needs that
+'In a surprise to precisely no one, PhotoPaint has some unique needs when it comes to user controls - needs that
 ' the intrinsic VB controls can't handle.  These range from the obnoxious (lack of an "autosize" property for
 ' anything but labels) to the critical (no Unicode support).
 '

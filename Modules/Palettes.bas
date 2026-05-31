@@ -1,6 +1,6 @@
 Attribute VB_Name = "Palettes"
 '***************************************************************************
-'PhotoDemon's Central Palette Interface
+'PhotoPaint's Central Palette Interface
 'Copyright 2017-2025 by Tanner Helland
 'Created: 12/January/17
 'Last updated: 08/March/22
@@ -13,7 +13,7 @@ Attribute VB_Name = "Palettes"
 ' (and relatively little palette-matching) on its own.  This is primarily delegated to helper classes.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -28,11 +28,11 @@ Public Enum PD_PaletteFormat
     pdpf_GIMP = 3
     pdpf_PaintDotNet = 4
     pdpf_PSP = 5
-    pdpf_PhotoDemon = 6
+    pdpf_PhotoPaint = 6
 End Enum
 
 #If False Then
-    Private Const pdpf_AdobeColorSwatch = 0, pdpf_AdobeColorTable = 1, pdpf_AdobeSwatchExchange = 2, pdpf_GIMP = 3, pdpf_PaintDotNet = 4, pdpf_PSP = 5, pdpf_PhotoDemon = 6
+    Private Const pdpf_AdobeColorSwatch = 0, pdpf_AdobeColorTable = 1, pdpf_AdobeSwatchExchange = 2, pdpf_GIMP = 3, pdpf_PaintDotNet = 4, pdpf_PSP = 5, pdpf_PhotoPaint = 6
 #End If
 
 Public Enum PD_StockPalette
@@ -2956,7 +2956,7 @@ Public Function DisplayPaletteLoadDialog(ByRef srcFilename As String, ByRef dstF
     cdFilter.Append g_Language.TranslateMessage("GIMP Palette") & " (.gpl)|*.gpl|"
     cdFilter.Append g_Language.TranslateMessage("Paint.NET Palette") & " (.txt)|*.txt|"
     cdFilter.Append g_Language.TranslateMessage("PaintShop Pro Palette") & " (.pal, .psppalette)|*.pal;*.psppalette|"
-    cdFilter.Append g_Language.TranslateMessage("PhotoDemon Palette") & " (.pdpalette)|*.pdpalette|"
+    cdFilter.Append g_Language.TranslateMessage("PhotoPaint Palette") & " (.pdpalette)|*.pdpalette|"
     cdFilter.Append g_Language.TranslateMessage("All files") & "|*.*"
     
     Dim cdTitle As String
@@ -3029,11 +3029,11 @@ Public Function DisplayPaletteSaveDialog(ByRef srcImage As pdImage, ByRef dstFil
     cdFilterExtensions.Append ".txt"
     cdFilter.Append g_Language.TranslateMessage("PaintShop Pro Palette") & " (.pal)|*.pal|"
     cdFilterExtensions.Append ".pal|"
-    cdFilter.Append g_Language.TranslateMessage("PhotoDemon Palette") & " (.pdpalette)|*.pdpalette|"
+    cdFilter.Append g_Language.TranslateMessage("PhotoPaint Palette") & " (.pdpalette)|*.pdpalette|"
     cdFilterExtensions.Append ".pdpalette|"
     
     Dim cdIndex As PD_PaletteFormat
-    cdIndex = UserPrefs.GetPref_Long("Saving", "Palette Format", pdpf_PhotoDemon) + 1
+    cdIndex = UserPrefs.GetPref_Long("Saving", "Palette Format", pdpf_PhotoPaint) + 1
     
     '3) What palette name to suggest.  At present, we just reuse the current image's name.
     Dim palFileName As String
@@ -3170,7 +3170,7 @@ Public Function ExportCurrentImagePalette(ByRef srcImage As pdImage, Optional By
                     ElseIf (dstFormat = pdpf_PSP) Then
                         ExportCurrentImagePalette = cPalette.SavePalettePaintShopPro(dstFilename)
                     Else
-                        ExportCurrentImagePalette = cPalette.SavePalettePhotoDemon(dstFilename)
+                        ExportCurrentImagePalette = cPalette.SavePalettePhotoPaint(dstFilename)
                     End If
                     
                 End If

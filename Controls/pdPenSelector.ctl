@@ -29,7 +29,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Pen Selector custom control
+'PhotoPaint Pen Selector custom control
 'Copyright 2015-2025 by Tanner Helland
 'Created: 04/July/15
 'Last updated: 20/June/16

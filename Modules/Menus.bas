@@ -1,12 +1,12 @@
 Attribute VB_Name = "Menus"
 '***************************************************************************
-'PhotoDemon Menu Manager
+'PhotoPaint Menu Manager
 'Copyright 2017-2025 by Tanner Helland
 'Created: 11/January/17
 'Last updated: 08/January/25
 'Last update: move the Tools > Test menu to the Developer submenu
 '
-'PhotoDemon has an extensive menu system.  Managing all those menus is cumbersome.
+'PhotoPaint has an extensive menu system.  Managing all those menus is cumbersome.
 ' This module handles the worst parts of run-time maintenance.
 '
 'Because PD's menus provide an organized collection of program features, this module also handles
@@ -15,7 +15,7 @@ Attribute VB_Name = "Menus"
 ' program action.  The long-term goal is to use these links to handle run-time hotkey mapping.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -653,10 +653,10 @@ Public Sub InitializeMenus()
     AddMenuItem "Check for updates...", "help_checkupdates", 10, 4, , "help_update"
     AddMenuItem "Submit bug report or feedback...", "help_reportbug", 10, 5, , "help_reportbug"
     AddMenuItem "-", "-", 10, 6
-    AddMenuItem "PhotoDemon forum...", "help_website", 10, 7, , "help_forum"
-    AddMenuItem "PhotoDemon license and terms of use...", "help_forum", 10, 8, , "help_license"
-    AddMenuItem "PhotoDemon source code...", "help_sourcecode", 10, 9, , "help_github"
-    AddMenuItem "PhotoDemon website...", "help_website", 10, 10, , "help_website"
+    AddMenuItem "PhotoPaint forum...", "help_website", 10, 7, , "help_forum"
+    AddMenuItem "PhotoPaint license and terms of use...", "help_forum", 10, 8, , "help_license"
+    AddMenuItem "PhotoPaint source code...", "help_sourcecode", 10, 9, , "help_github"
+    AddMenuItem "PhotoPaint website...", "help_website", 10, 10, , "help_website"
     AddMenuItem "-", "-", 10, 11
     AddMenuItem "Third-party libraries...", "help_3rdpartylibs", 10, 12, , "tools_plugin"
     AddMenuItem "-", "-", 10, 13
@@ -722,7 +722,7 @@ Private Sub FinalizeMenuProperties()
                         If (m_Menus(i + 1).me_SubSubMenu <> MENU_NONE) Then .me_HasChildren = True
                     End If
                 
-                'Third-level menus are *always* clickable in PhotoDemon, so we don't need an additional Else.
+                'Third-level menus are *always* clickable in PhotoPaint, so we don't need an additional Else.
                 End If
             
             End With

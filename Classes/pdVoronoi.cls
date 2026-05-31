@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Voronoi class
+'PhotoPaint Voronoi class
 'Copyright 2014-2025 by Tanner Helland
 'Created: 14/July/14
 'Last updated: 07/December/20
@@ -26,7 +26,7 @@ Attribute VB_Exposed = False
 '
 'For a full Voronoi toolkit (including Delaunay triangulation), you'll need to look elsewhere,
 ' but if all you need is the bits relevant to generating Worley Noise, you're in for a treat,
-' because this class is mostly free of dependencies to other PhotoDemon code - so have at it!
+' because this class is mostly free of dependencies to other PhotoPaint code - so have at it!
 '
 'Voronoi diagrams work by taking a series of points, and for the relevant space around them,
 ' finding the nearest Voronoi point to each location.  When performed at a sufficiently detailed
@@ -66,7 +66,7 @@ Attribute VB_Exposed = False
 ' Link here: http://rrprogs.com/)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -284,7 +284,7 @@ End Function
 'Internal function for determining optimal Voronoi search radius.  If an F2 distance is involved, or the turbulence parameter
 ' is quite high, the search radius must be extended.  This function will automatically be called after the shading mode or
 ' turbulence parameter is changed.
-' (NOTE: in PhotoDemon, I limit the turbulence factor to 1/2 of the cell size, which saves us from having to extend the
+' (NOTE: in PhotoPaint, I limit the turbulence factor to 1/2 of the cell size, which saves us from having to extend the
 '        search radius due to turbulence.  Individuals needing greater turbulence will thus need to uncomment the
 '        "If m_Turbulence..." line below.)
 Private Sub DetermineVoronoiSearchRadius(Optional ByVal startingRadius As Long = 1)

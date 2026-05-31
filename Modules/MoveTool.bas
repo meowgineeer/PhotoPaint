@@ -1,6 +1,6 @@
 Attribute VB_Name = "Tools_Move"
 '***************************************************************************
-'PhotoDemon Move/Size Tool Manager
+'PhotoPaint Move/Size Tool Manager
 'Copyright 2014-2025 by Tanner Helland
 'Created: 24/May/14
 'Last updated: 06/May/24
@@ -13,7 +13,7 @@ Attribute VB_Name = "Tools_Move"
 'As of 2024, this module also handles move-related duties like snapping to various features.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -314,7 +314,7 @@ Public Sub NotifyMouseUp(ByVal Button As PDMouseButtonConstants, ByVal Shift As 
     'Pass a final transform request to the layer handler.  This will initiate Undo/Redo creation, among other things.
     ' (Note Aug 2024: this line previously only triggered after this check:
     ' If (numOfMouseMovements > 0) Then
-    ' This check breaks "move selected pixels" behavior as reported here: https://github.com/tannerhelland/PhotoDemon/issues/584
+    ' This check breaks "move selected pixels" behavior as reported here: https://github.com/tannerhelland/PhotoPaint/issues/584
     ' I have now removed the check, but am leaving this comment pending additional testing to see if any
     ' unexpected interactions occur.
     Tools.TransformCurrentLayer imgX, imgY, PDImages.GetActiveImage(), PDImages.GetActiveImage.GetActiveLayer, FormMain.MainCanvas(0), (Shift And vbShiftMask), True

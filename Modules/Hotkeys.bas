@@ -1,12 +1,12 @@
 Attribute VB_Name = "Hotkeys"
 '***************************************************************************
-'PhotoDemon Custom Hotkey handler
+'PhotoPaint Custom Hotkey handler
 'Copyright 2015-2025 by Tanner Helland and contributors
 'Created: 06/November/15 (formally split off from a heavily modified vbaIHookControl by Steve McMahon)
 'Last updated: 31/October/24
 'Last update: many changes to allow interop with FormHotkeys (for user-edited hotkeys)
 '
-'In 2024, PhotoDemon *finally* provides a way for users to specify custom hotkeys.
+'In 2024, PhotoPaint *finally* provides a way for users to specify custom hotkeys.
 ' This module is responsible for managing custom hotkey assignments, and it also manages default
 ' hotkey behavior (which is what 99.9% of users presumably use).
 '
@@ -14,7 +14,7 @@ Attribute VB_Name = "Hotkeys"
 ' details on hooking.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -35,7 +35,7 @@ Private m_Hotkeys() As PD_Hotkey
 Private m_NumOfHotkeys As Long
 Private Const INITIAL_HOTKEY_LIST_SIZE As Long = 16&
 
-'A list of PhotoDemon's *default* hotkeys.  The user can always default to these (or we can)
+'A list of PhotoPaint's *default* hotkeys.  The user can always default to these (or we can)
 ' if something goes catastrophically wrong during custom hotkey initialization.
 Private m_DefaultHotkeys() As PD_Hotkey
 Private m_NumOfDefaultHotkeys As Long
@@ -62,7 +62,7 @@ Private Declare Function MapVirtualKeyW Lib "user32" (ByVal uCode As Long, ByVal
 'Add a new hotkey to the collection.  While the hotKeyAction parameter is marked as OPTIONAL, that's purely to
 ' allow the preceding constant (shift modifiers, which are often null) to be optional.
 '
-'The final optional parameter should be TRUE if the added hotkey is a PhotoDemon default.  (Default hotkeys
+'The final optional parameter should be TRUE if the added hotkey is a PhotoPaint default.  (Default hotkeys
 ' are managed separately, so that we can restore them if the user's hotkey settings are invalid or missing.)
 '
 'RETURNS: the ID (index) of the added hotkey.
@@ -413,7 +413,7 @@ End Sub
 ' if they exist - are loaded from file.
 Public Function LoadAllHotkeys() As Boolean
 
-    'Initializing PhotoDemon's default hotkey collection.  We'll only use this if the user hasn't
+    'Initializing PhotoPaint's default hotkey collection.  We'll only use this if the user hasn't
     ' customized hotkeys previously, but the hotkey editor needs it (so it can restore defaults, as necessary).
     InitializeDefaultHotkeys
     

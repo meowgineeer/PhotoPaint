@@ -93,7 +93,7 @@ Attribute VB_Exposed = False
 'Last updated: 21/June/18
 'Last update: wrap up initial build
 '
-'In https://github.com/tannerhelland/PhotoDemon/issues/265, jpbro provided a great suggestion - that for many users,
+'In https://github.com/tannerhelland/PhotoPaint/issues/265, jpbro provided a great suggestion - that for many users,
 ' it would be easier to create macros retroactively, from some set of steps they have already completed.  His idea
 ' was to use the Undo History as a starting point for a "create macro from history" tool, and sure enough, that's
 ' exactly what this dialog does.
@@ -106,7 +106,7 @@ Attribute VB_Exposed = False
 ' Macro engine itself is still used for writing the macro files.  (We just pass it an "artificial" list of
 ' recorded actions, created from the selected history points.)
 '
-'For additional discussion and testing, please refer to https://github.com/tannerhelland/PhotoDemon/issues/265.
+'For additional discussion and testing, please refer to https://github.com/tannerhelland/PhotoPaint/issues/265.
 ' Thank you again to jpbro for his suggestion and subsequent testing.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.

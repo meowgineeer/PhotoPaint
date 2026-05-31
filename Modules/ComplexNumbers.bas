@@ -9,7 +9,7 @@ Attribute VB_Name = "ComplexNumbers"
 'Complex numbers are weird.  If you haven't had the (mis)fortune of studying these, Wikipedia has you covered:
 ' https://en.wikipedia.org/wiki/Complex_number
 '
-'I originally added most of these functions to PhotoDemon for a recursive gaussian approximation function by
+'I originally added most of these functions to PhotoPaint for a recursive gaussian approximation function by
 ' Pascal Getreuer in "A Survey of Gaussian Convolution Algorithms", http://www.ipol.im/pub/art/2013/87/
 ' Important copyright and license information regarding Pascal's work:
 ' - Original C version is copyright (c) 2012-2013, Pascal Getreuer <getreuer@cmla.ens-cachan.fr>
@@ -20,7 +20,7 @@ Attribute VB_Name = "ComplexNumbers"
 ' if modifying them, as they affect more places than you might think.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

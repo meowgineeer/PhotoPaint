@@ -1,8 +1,8 @@
 Attribute VB_Name = "Outside_FreeImageV3"
-'Note: this file has been heavily modified for use within PhotoDemon.
+'Note: this file has been heavily modified for use within PhotoPaint.
 '
 'Much of this module was adapted from the official FreeImage VB6 wrapper by Carsten Klein.
-' However, I have made endless changes to improve performance and reliability for PhotoDemon's specific use-case(s).
+' However, I have made endless changes to improve performance and reliability for PhotoPaint's specific use-case(s).
 ' I have also removed many wrapper functions that might be useful to you.
 '
 'Said another way: please avoid using this module in your own projects.  Instead, start from the original,

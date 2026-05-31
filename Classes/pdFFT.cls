@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon FFT Class
+'PhotoPaint FFT Class
 'Copyright 2014-2025 by Tanner Helland
 'Created: 27/February/15
 'Last updated: 30/March/18
@@ -42,7 +42,7 @@ Attribute VB_Exposed = False
 'For simplicity, this class requires incoming data to be padded to powers of 2.  Zero-pad data as necessary.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

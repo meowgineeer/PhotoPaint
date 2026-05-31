@@ -29,7 +29,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Viewport Ruler UI element
+'PhotoPaint Viewport Ruler UI element
 'Copyright 2018-2025 by Tanner Helland
 'Created: 03/April/18
 'Last updated: 05/April/18

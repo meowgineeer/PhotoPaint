@@ -132,7 +132,7 @@ Attribute VB_Exposed = False
 'Very, very simplified interface for printing the active image.  This dialog is primarily reserved for
 ' Windows XP systems because on Vista+ we can interface with the built-in Windows Print Wizard.
 '
-'This code is not a high point of PhotoDemon's design and I'm okay with that.  This pretty much exists just
+'This code is not a high point of PhotoPaint's design and I'm okay with that.  This pretty much exists just
 ' to cover a bare-minimum usage case.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
@@ -192,7 +192,7 @@ Private Sub cmdBar_OKClick()
     'Set all printer properties before attempting to print anything.  It's entirely possible
     ' that this step will error out, which usually means that the selected printer is unreachable -
     ' if we encounter errors like that, we'll abandon printing entirely.  (Solving such errors is
-    ' outside the purview of PhotoDemon!)
+    ' outside the purview of PhotoPaint!)
     Printer.Copies = sldCopies.Value
     Printer.PrintQuality = -(cbQuality.ListIndex + 1)
     Printer.Orientation = cbOrientation.ListIndex + 1
@@ -208,7 +208,7 @@ Private Sub cmdBar_OKClick()
     
 PrintingFailed:
     
-    PDMsgBox "%1 was unable to print the image.  Please make sure that the specified printer (%2) is powered-on and ready for printing.", vbExclamation Or vbOKOnly, "Error", "PhotoDemon", Printer.DeviceName
+    PDMsgBox "%1 was unable to print the image.  Please make sure that the specified printer (%2) is powered-on and ready for printing.", vbExclamation Or vbOKOnly, "Error", "PhotoPaint", Printer.DeviceName
     
     'Give the user a chance to try again
     cmdBar.DoNotUnloadForm
@@ -281,7 +281,7 @@ PrinterLoadError:
 End Sub
 
 'Once upon a time, this PrintPictureToFitPage function was derived from code originally written by Waty Thierry.
-' It no longer resembles that original version whatsoever (and now relies upon various PhotoDemon-specific functions),
+' It no longer resembles that original version whatsoever (and now relies upon various PhotoPaint-specific functions),
 ' but you can still find Waty's original, general-purpose version here:
 ' https://web.archive.org/web/20171112231338/http://www.freevbcode.com/ShowCode.asp?ID=194
 Private Function PrintPictureToFitPage(ByRef dstPrinter As Printer) As Boolean

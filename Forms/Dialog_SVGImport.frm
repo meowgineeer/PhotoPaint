@@ -66,7 +66,7 @@ Attribute VB_Exposed = False
 'Last updated: 09/December/22
 'Last update: expand the dialog to work with Windows metafiles too (EMF/WMF)
 '
-'PhotoDemon offers to losslessly resize vector images at load-time.  This dialog provides the UI
+'PhotoPaint offers to losslessly resize vector images at load-time.  This dialog provides the UI
 ' for this feature.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.

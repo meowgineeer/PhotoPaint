@@ -6,10 +6,10 @@ Attribute VB_Name = "Web"
 'Last updated: 12/July/17
 'Last update: reorganize the Files module to place web-related stuff here.
 '
-'PhotoDemon doesn't provide much Internet interop, but when it does, the required functions can be found here.
+'PhotoPaint doesn't provide much Internet interop, but when it does, the required functions can be found here.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -156,7 +156,7 @@ Public Function DownloadURLToTempFile(ByRef URL As String, Optional ByVal suppre
     hInternetSession = InternetOpenW(StrPtr("Chromium"), INTERNET_OPEN_TYPE_PRECONFIG, 0, 0, 0)
     
     If (hInternetSession = 0) Then
-        If (Not suppressErrorMsgs) Then PDMsgBox "PhotoDemon cannot reach the Internet.  Please double-check your connection and try again.", vbExclamation Or vbOKOnly, "Error"
+        If (Not suppressErrorMsgs) Then PDMsgBox "PhotoPaint cannot reach the Internet.  Please double-check your connection and try again.", vbExclamation Or vbOKOnly, "Error"
         DownloadURLToTempFile = vbNullString
         Screen.MousePointer = 0
         Exit Function
@@ -169,7 +169,7 @@ Public Function DownloadURLToTempFile(ByRef URL As String, Optional ByVal suppre
     hUrl = InternetOpenUrlW(hInternetSession, StrPtr(URL), 0, 0, INTERNET_FLAG_RELOAD, 0)
     
     If (hUrl = 0) Then
-        If (Not suppressErrorMsgs) Then PDMsgBox "PhotoDemon could not reach the target URL (%1).  If the problem persists, try downloading the file manually using your Internet browser.", vbExclamation Or vbOKOnly, "Error", URL
+        If (Not suppressErrorMsgs) Then PDMsgBox "PhotoPaint could not reach the target URL (%1).  If the problem persists, try downloading the file manually using your Internet browser.", vbExclamation Or vbOKOnly, "Error", URL
         If (hInternetSession <> 0) Then InternetCloseHandle hInternetSession
         DownloadURLToTempFile = vbNullString
         Screen.MousePointer = 0
@@ -224,7 +224,7 @@ Public Function DownloadURLToTempFile(ByRef URL As String, Optional ByVal suppre
             'If something goes horribly wrong, terminate the download
             If (Not chunkOK) Then
                 
-                If (Not suppressErrorMsgs) Then PDMsgBox "PhotoDemon lost Internet access. Please double-check your connection.", vbExclamation Or vbOKOnly, "Error"
+                If (Not suppressErrorMsgs) Then PDMsgBox "PhotoPaint lost Internet access. Please double-check your connection.", vbExclamation Or vbOKOnly, "Error"
                 
                 If Files.FileExists(tmpFile) Then
                     cFile.FileCloseHandle hFile
@@ -288,7 +288,7 @@ Public Function DownloadURLToTempFile(ByRef URL As String, Optional ByVal suppre
         
         Dim domainName As String
         domainName = Web.GetDomainName(URL)
-        If (Not suppressErrorMsgs) Then PDMsgBox "Unfortunately, %1 prevented PhotoDemon from directly downloading this file. (Direct downloads are sometimes mistaken as hotlinking by misconfigured servers.)" & vbCrLf & vbCrLf & "You will need to manually download this file using your Internet browser.", vbExclamation Or vbOKOnly, "Error", domainName
+        If (Not suppressErrorMsgs) Then PDMsgBox "Unfortunately, %1 prevented PhotoPaint from directly downloading this file. (Direct downloads are sometimes mistaken as hotlinking by misconfigured servers.)" & vbCrLf & vbCrLf & "You will need to manually download this file using your Internet browser.", vbExclamation Or vbOKOnly, "Error", domainName
         
         Files.FileDeleteIfExists tmpFile
         If (hUrl <> 0) Then InternetCloseHandle hUrl

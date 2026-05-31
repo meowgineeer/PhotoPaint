@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Comprehensive User Control Support class
+'PhotoPaint Comprehensive User Control Support class
 'Copyright 2015-2025 by Tanner Helland
 'Created: 25/October/15  (but built from many parts existing earlier)
 'Last updated: 24/November/20
@@ -26,7 +26,7 @@ Attribute VB_Exposed = False
 ' see fit.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

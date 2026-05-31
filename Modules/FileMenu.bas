@@ -11,17 +11,17 @@ Attribute VB_Name = "FileMenu"
 'Functions for controlling standard file menu options.  Currently only handles "open image" and "save image".
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
 Option Explicit
 
-'This subroutine loads an image - note that the interesting stuff actually happens in PhotoDemon_OpenImageDialog, below
+'This subroutine loads an image - note that the interesting stuff actually happens in PhotoPaint_OpenImageDialog, below
 Public Sub MenuOpen()
 
     Dim listOfFiles As pdStringStack
-    If PhotoDemon_OpenImageDialog(listOfFiles, GetModalOwner().hWnd) Then
+    If PhotoPaint_OpenImageDialog(listOfFiles, GetModalOwner().hWnd) Then
         
         If (listOfFiles.GetNumOfStrings > 1) Then
             Loading.LoadMultipleImageFiles listOfFiles
@@ -35,7 +35,7 @@ End Sub
 
 'Pass this function a string array, and it will fill it with a list of files selected by the user.
 ' The commondialog filters are automatically set according to image formats supported by the program.
-Public Function PhotoDemon_OpenImageDialog(ByRef dstStringStack As pdStringStack, ByVal ownerHwnd As Long) As Boolean
+Public Function PhotoPaint_OpenImageDialog(ByRef dstStringStack As pdStringStack, ByVal ownerHwnd As Long) As Boolean
     
     If (dstStringStack Is Nothing) Then Set dstStringStack = New pdStringStack
     
@@ -59,11 +59,11 @@ Public Function PhotoDemon_OpenImageDialog(ByRef dstStringStack As pdStringStack
         UserPrefs.SetPref_String "Paths", "Open Image", Files.FileGetPath(dstStringStack.GetString(0))
         UserPrefs.SetPref_Long "Core", "Last Open Filter", g_LastOpenFilter
         
-        PhotoDemon_OpenImageDialog = True
+        PhotoPaint_OpenImageDialog = True
         
     'If the user cancels the commondialog box, simply exit out.
     Else
-        PhotoDemon_OpenImageDialog = False
+        PhotoPaint_OpenImageDialog = False
     End If
     
     'Re-enable user input
@@ -73,7 +73,7 @@ End Function
 
 'Provide a common dialog that allows the user to retrieve a single image filename, which the calling function can
 ' then use as it pleases.
-Public Function PhotoDemon_OpenImageDialog_SingleFile(ByRef userImagePath As String, ByVal ownerHwnd As Long) As Boolean
+Public Function PhotoPaint_OpenImageDialog_SingleFile(ByRef userImagePath As String, ByVal ownerHwnd As Long) As Boolean
 
     'Disable user input until the dialog closes
     Interface.DisableUserInput
@@ -87,8 +87,8 @@ Public Function PhotoDemon_OpenImageDialog_SingleFile(ByRef userImagePath As Str
     tempPathString = UserPrefs.GetPref_String("Paths", "Open Image", vbNullString)
         
     'Launch a common dialog instance, but restrict multi-file selection.
-    PhotoDemon_OpenImageDialog_SingleFile = openDialog.GetOpenFileName(userImagePath, , True, False, ImageFormats.GetCommonDialogInputFormats, g_LastOpenFilter, tempPathString, g_Language.TranslateMessage("Select an image"), , ownerHwnd)
-    If PhotoDemon_OpenImageDialog_SingleFile Then
+    PhotoPaint_OpenImageDialog_SingleFile = openDialog.GetOpenFileName(userImagePath, , True, False, ImageFormats.GetCommonDialogInputFormats, g_LastOpenFilter, tempPathString, g_Language.TranslateMessage("Select an image"), , ownerHwnd)
+    If PhotoPaint_OpenImageDialog_SingleFile Then
         
         'Save the new directory as the default path for future usage
         tempPathString = Files.FileGetPath(userImagePath)
@@ -223,7 +223,7 @@ Public Function MenuExportImage(ByRef srcImage As pdImage) As Boolean
         UserPrefs.SetPref_Long "Saving", "export-image-format-idx", idxCmnDlgFilter
         
         'Our work here is done!  Transfer control to the core SaveImage routine, which handles the actual export process.
-        MenuExportImage = PhotoDemon_SaveImage(srcImage, dstFile, True, dstImageFormat)
+        MenuExportImage = PhotoPaint_SaveImage(srcImage, dstFile, True, dstImageFormat)
         
     Else
         MenuExportImage = False
@@ -245,7 +245,7 @@ Public Function MenuSave(ByRef srcImage As pdImage) As Boolean
         
         Dim dstFilename As String
         
-        'PhotoDemon supports two different save modes (controlled via the Tools > Options dialog):
+        'PhotoPaint supports two different save modes (controlled via the Tools > Options dialog):
         ' 1) Default mode.  When the user clicks "save", overwrite the copy on disk.
         ' 2) "Safe" mode.  When the user clicks "save", save a new copy of the image, auto-incremented with a trailing number.
         '    (e.g. old copies are never overwritten).
@@ -272,7 +272,7 @@ Public Function MenuSave(ByRef srcImage As pdImage) As Boolean
         'New to v7.0 is the way save option dialogs work.  PD's primary save function is now responsible for
         ' displaying save dialogs. (We can forcibly request a dialog, as we do in the "Save As" function,
         ' but in this function, we leave it up to the primary save function to determine if a dialog is necessary.)
-        MenuSave = PhotoDemon_SaveImage(srcImage, dstFilename, False)
+        MenuSave = PhotoPaint_SaveImage(srcImage, dstFilename, False)
         
     End If
 
@@ -450,7 +450,7 @@ Public Function MenuSaveAs(ByRef srcImage As pdImage) As Boolean
         UserPrefs.SetPref_Boolean "Saving", "Has Saved A File", True
         
         'Our work here is done!  Transfer control to the core SaveImage routine, which will handle the actual export process.
-        MenuSaveAs = PhotoDemon_SaveImage(srcImage, sFile, True)
+        MenuSaveAs = PhotoPaint_SaveImage(srcImage, sFile, True)
         
     Else
         MenuSaveAs = False
@@ -463,7 +463,7 @@ Private Function GetSuggestedSaveFormatAndExtension(ByRef srcImage As pdImage, B
     'First, see if the image has a file format already.  If it does, we need to suggest that preferentially.
     GetSuggestedSaveFormatAndExtension = srcImage.GetCurrentFileFormat
     
-    'One caveat here is if the image already has a format *but* PhotoDemon can't export that format.
+    'One caveat here is if the image already has a format *but* PhotoPaint can't export that format.
     ' If that happens, treat the image as if has never been saved at all (and use heuristics to suggest
     ' a most-appropriate format).
     If (ImageFormats.GetIndexOfOutputPDIF(GetSuggestedSaveFormatAndExtension) < 0) Then GetSuggestedSaveFormatAndExtension = PDIF_UNKNOWN
@@ -553,7 +553,7 @@ Public Function MenuSaveLosslessCopy(ByRef srcImage As pdImage) As Boolean
         g_RecentFiles.AddFileToList dstFilename, srcImage
     Else
         Message "Save canceled."
-        PDMsgBox "An unspecified error occurred when attempting to save this image.  Please try saving the image to an alternate format." & vbCrLf & vbCrLf & "If the problem persists, please report it to the PhotoDemon developers via photodemon.org/contact", vbCritical Or vbOKOnly, "Error"
+        PDMsgBox "An unspecified error occurred when attempting to save this image.  Please try saving the image to an alternate format." & vbCrLf & vbCrLf & "If the problem persists, please report it to the PhotoPaint developers via photopaint.org/contact", vbCritical Or vbOKOnly, "Error"
     End If
 
 End Function

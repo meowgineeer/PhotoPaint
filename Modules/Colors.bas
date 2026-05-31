@@ -11,13 +11,13 @@ Attribute VB_Name = "Colors"
 ' required by the program.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
 Option Explicit
 
-'PhotoDemon tries to support a variety of textual color representations.  Not all of these are implemented at present.
+'PhotoPaint tries to support a variety of textual color representations.  Not all of these are implemented at present.
 ' (TODO: get all formats working)
 Public Enum PD_ColorStringType
     ColorInvalid = -1
@@ -110,7 +110,7 @@ Private m_SVGColors As pdDictionary
 ' OUTPUTS: 1) TRUE if OK was pressed, FALSE for Cancel
 Public Function ShowColorDialog(ByRef colorReceive As Long, Optional ByVal initialColor As Long = vbWhite, Optional ByRef callingControl As pdColorSelector, Optional ByRef callerParent As Form = Nothing) As Boolean
     
-    'As of November 2014, PhotoDemon has its own color selector!
+    'As of November 2014, PhotoPaint has its own color selector!
     If Dialogs.ChoosePDColor(initialColor, colorReceive, callingControl, callerParent) = vbOK Then
         ShowColorDialog = True
     Else
@@ -388,7 +388,7 @@ Public Sub PreciseHSLtoRGB(ByVal h As Double, ByVal s As Double, ByVal l As Doub
     Else
         
         'As a failsafe, lock hue to [0, 1].
-        ' NOTE!  In PhotoDemon, these values are always round-tripped from the matching PreciseRGBtoHSL function,
+        ' NOTE!  In PhotoPaint, these values are always round-tripped from the matching PreciseRGBtoHSL function,
         ' which performs the failsafe check there.  As such, we don't need it here.
         'If (h < 0#) Then h = h + 1#
         'If (h > 1#) Then h = h - 1#

@@ -1,6 +1,6 @@
 Attribute VB_Name = "UserControls"
 '***************************************************************************
-'Helper functions for various PhotoDemon UCs
+'Helper functions for various PhotoPaint UCs
 'Copyright 2014-2025 by Tanner Helland
 'Created: 06/February/14
 'Last updated: 20/August/15
@@ -10,13 +10,13 @@ Attribute VB_Name = "UserControls"
 ' all controls, I've tried to collect reusable functions here.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
 Option Explicit
 
-'There are many different PhotoDemon UI controls.  New ones must be added to this enum.
+'There are many different PhotoPaint UI controls.  New ones must be added to this enum.
 Public Enum PD_ControlType
     pdct_Accelerator = 0
     pdct_BrushSelector = 1

@@ -47,7 +47,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Layer List control
+'PhotoPaint Layer List control
 'Copyright 2016-2025 by Tanner Helland
 'Created: 18/September/15
 'Last updated: 16/August/20

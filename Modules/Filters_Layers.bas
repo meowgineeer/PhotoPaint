@@ -6,7 +6,7 @@ Attribute VB_Name = "Filters_Layers"
 'Last updated: 15/November/19
 'Last update: rewrite separable bilateral filter for large perf improvements
 '
-'Some filters in PhotoDemon are capable of operating "on-demand" on any supplied DIBs.  In a perfect world, *all*
+'Some filters in PhotoPaint are capable of operating "on-demand" on any supplied DIBs.  In a perfect world, *all*
 ' filters would work this way - but alas I did not design the program very well up front.  Going forward I will be
 ' moving more filters to an "on-demand" model.
 '
@@ -16,7 +16,7 @@ Attribute VB_Name = "Filters_Layers"
 ' formula once, then reference it externally.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -183,7 +183,7 @@ Public Function CreateShadowDIB(ByRef srcDIB As pdDIB, ByRef dstDIB As pdDIB) As
 End Function
 
 'Given two DIBs, fill one with a median-filtered version of the other.
-' Per PhotoDemon convention, this function will return a non-zero value if successful, and 0 if canceled.
+' Per PhotoPaint convention, this function will return a non-zero value if successful, and 0 if canceled.
 Public Function CreateMedianDIB(ByVal mRadius As Long, ByVal mPercent As Double, ByVal kernelShape As PD_PixelRegionShape, ByRef srcDIB As pdDIB, ByRef dstDIB As pdDIB, Optional ByVal suppressMessages As Boolean = False, Optional ByVal modifyProgBarMax As Long = -1, Optional ByVal modifyProgBarOffset As Long = 0) As Long
     
     'Create a local array and point it at the pixel data of the current image
@@ -343,7 +343,7 @@ Public Function CreateMedianDIB(ByVal mRadius As Long, ByVal mPercent As Double,
 End Function
 
 'White balance a given DIB.
-' Per PhotoDemon convention, this function will return a non-zero value if successful, and 0 if canceled.
+' Per PhotoPaint convention, this function will return a non-zero value if successful, and 0 if canceled.
 Public Function WhiteBalanceDIB(ByVal percentIgnore As Double, ByRef srcDIB As pdDIB, Optional ByVal suppressMessages As Boolean = False, Optional ByVal modifyProgBarMax As Long = -1, Optional ByVal modifyProgBarOffset As Long = 0) As Long
     
     Dim x As Long, y As Long, finalX As Long, finalY As Long
@@ -539,7 +539,7 @@ Public Function WhiteBalanceDIB(ByVal percentIgnore As Double, ByRef srcDIB As p
 End Function
 
 'Given two DIBs, fill one with an artistically contoured (edge detect) version of the other.
-' Per PhotoDemon convention, this function will return a non-zero value if successful, and 0 if canceled.
+' Per PhotoPaint convention, this function will return a non-zero value if successful, and 0 if canceled.
 Public Function CreateContourDIB(ByVal blackBackground As Boolean, ByRef srcDIB As pdDIB, ByRef dstDIB As pdDIB, Optional ByVal suppressMessages As Boolean = False, Optional ByVal modifyProgBarMax As Long = -1, Optional ByVal modifyProgBarOffset As Long = 0) As Long
  
     'Create a local array and point it at the pixel data of the current image
@@ -730,7 +730,7 @@ Public Function CreateContourDIB(ByVal blackBackground As Boolean, ByRef srcDIB 
 End Function
 
 'Make shadows, midtone, and/or highlight adjustments to a given DIB.
-' Per PhotoDemon convention, this function will return a non-zero value if successful, and 0 if canceled.
+' Per PhotoPaint convention, this function will return a non-zero value if successful, and 0 if canceled.
 Public Function AdjustDIBShadowHighlight(ByVal shadowAmount As Double, ByVal midtoneAmount As Double, ByVal highlightAmount As Double, ByVal shadowWidth As Long, ByVal shadowRadius As Double, ByVal highlightWidth As Long, ByVal highlightRadius As Double, ByRef srcDIB As pdDIB, Optional ByVal suppressMessages As Boolean = False, Optional ByVal modifyProgBarMax As Long = -1, Optional ByVal modifyProgBarOffset As Long = 0) As Long
     
     'As of March 2015, this function has been entirely rewritten, using a system similar to PhotoShop's
@@ -1138,7 +1138,7 @@ End Function
 ' (because box blurs only operate on integer radii).  That said, the performance trade-offs are worth it for
 ' all but the most stringent blur needs.
 '
-'Per PhotoDemon convention, this function will return a non-zero value if successful, and 0 if canceled.
+'Per PhotoPaint convention, this function will return a non-zero value if successful, and 0 if canceled.
 Public Function CreateApproximateGaussianBlurDIB(ByVal equivalentGaussianRadius As Double, ByRef srcDIB As pdDIB, ByRef dstDIB As pdDIB, Optional ByVal numIterations As Long = 3, Optional ByVal suppressMessages As Boolean = False, Optional ByVal modifyProgBarMax As Long = -1, Optional ByVal modifyProgBarOffset As Long = 0) As Long
     
     'Validate inputs
@@ -1265,7 +1265,7 @@ Public Function CreateApproximateGaussianBlurDIB(ByVal equivalentGaussianRadius 
 End Function
 
 'Given two DIBs, fill one with a polar-coordinate conversion of the other.
-' Per PhotoDemon convention, this function will return a non-zero value if successful, and 0 if canceled.
+' Per PhotoPaint convention, this function will return a non-zero value if successful, and 0 if canceled.
 Public Function CreatePolarCoordDIB(ByVal conversionMethod As Long, ByVal polarRadius As Double, ByVal edgeHandling As Long, ByVal useBilinear As Boolean, ByRef srcDIB As pdDIB, ByRef dstDIB As pdDIB, Optional ByVal suppressMessages As Boolean = False, Optional ByVal modifyProgBarMax As Long = -1, Optional ByVal modifyProgBarOffset As Long = 0) As Long
 
     'Create a local array and point it at the pixel data of the current image
@@ -1486,7 +1486,7 @@ Public Function CreatePolarCoordDIB(ByVal conversionMethod As Long, ByVal polarR
 End Function
 
 'Given two DIBs, fill one with a polar-coordinate conversion of the other.
-' Per PhotoDemon convention, this function will return a non-zero value if successful, and 0 if canceled.
+' Per PhotoPaint convention, this function will return a non-zero value if successful, and 0 if canceled.
 ' NOTE: unlike the traditional polar conversion function above, this one swaps x and y values.  There is no canonical definition for
 '       how to polar convert an image, so we allow the user to choose whichever method they prefer.
 Public Function CreateXSwappedPolarCoordDIB(ByVal conversionMethod As Long, ByVal polarRadius As Double, ByVal edgeHandling As Long, ByVal useBilinear As Boolean, ByRef srcDIB As pdDIB, ByRef dstDIB As pdDIB, Optional ByVal suppressMessages As Boolean = False, Optional ByVal modifyProgBarMax As Long = -1, Optional ByVal modifyProgBarOffset As Long = 0) As Long
@@ -2315,7 +2315,7 @@ Public Function VerticalBlur_SubRegion(ByVal uRadius As Long, ByVal dRadius As L
 End Function
 
 'Given two DIBs, fill one with a rotated version of the other.
-' Per PhotoDemon convention, this function will return a non-zero value if successful, and 0 if canceled.
+' Per PhotoPaint convention, this function will return a non-zero value if successful, and 0 if canceled.
 Public Function CreateRotatedDIB(ByVal rotateAngle As Double, ByVal edgeHandling As Long, ByVal useBilinear As Boolean, ByRef srcDIB As pdDIB, ByRef dstDIB As pdDIB, Optional ByVal centerX As Double = 0.5, Optional ByVal centerY As Double = 0.5, Optional ByVal suppressMessages As Boolean = False, Optional ByVal modifyProgBarMax As Long = -1, Optional ByVal modifyProgBarOffset As Long = 0) As Long
 
     'Create a local array and point it at the pixel data of the current image
@@ -2417,7 +2417,7 @@ End Function
 'Please note that the extension value is for a SINGLE side.  The function will automatically double the horizontal and
 ' vertical measurements, so that matching image sides receive identical extensions.
 '
-'Per PhotoDemon convention, this function will return a non-zero value if successful, and 0 if canceled.
+'Per PhotoPaint convention, this function will return a non-zero value if successful, and 0 if canceled.
 Public Function PadDIBClampedPixels(ByVal hExtend As Long, ByVal vExtend As Long, ByRef srcDIB As pdDIB, ByRef dstDIB As pdDIB) As Long
 
     'Start by resizing the destination DIB
@@ -2471,7 +2471,7 @@ End Function
 'Note that as a convenience, this function also returns (via parameter) the destination x/y of the image.
 ' This makes it simple to retrieve the image after processing.
 '
-'Per PhotoDemon convention, this function will return a non-zero value if successful, and 0 if canceled.
+'Per PhotoPaint convention, this function will return a non-zero value if successful, and 0 if canceled.
 Public Function PadDIBClampedPixelsEx(ByVal newWidth As Long, ByVal newHeight As Long, ByRef srcDIB As pdDIB, ByRef dstDIB As pdDIB, ByRef dstX As Long, ByRef dstY As Long) As Long
 
     'Start by resizing the destination DIB

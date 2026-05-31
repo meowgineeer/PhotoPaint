@@ -39,13 +39,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Layer Listbox (inner portion only)
+'PhotoPaint Layer Listbox (inner portion only)
 'Copyright 2014-2025 by Tanner Helland
 'Created: 25/March/14
 'Last updated: 18/April/22
 'Last update: fix UI glitch when starting to move layer that is *not* the active layer
 '
-'In a surprise to precisely no one, PhotoDemon has many unique UI/UX needs - needs that the
+'In a surprise to precisely no one, PhotoPaint has many unique UI/UX needs - needs that the
 ' intrinsic VB controls can't handle.  These range from the obnoxious (lack of an "autosize"
 ' property for anything but labels) to the critical (no Unicode support).
 '
@@ -318,7 +318,7 @@ Private Sub txtLayerName_KeyPress(ByVal Shift As ShiftConstants, ByVal vKey As L
         'Set the active layer name, then hide the text box
         PDImages.GetActiveImage.GetActiveLayer.SetLayerName txtLayerName.Text
         
-        'Fun fact: as of v8.0, PhotoDemon can "hide" animation frame data right inside
+        'Fun fact: as of v8.0, PhotoPaint can "hide" animation frame data right inside
         ' a layer's name (e.g. Frame 1 (100 ms)).  This provides a convenient way for the
         ' user to tweak frame time settings in e.g. an animated GIF without popping into a
         ' separate screen.

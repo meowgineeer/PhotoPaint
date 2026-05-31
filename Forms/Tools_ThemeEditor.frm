@@ -406,7 +406,7 @@ End Sub
 'Export the current resource collection to an actual resource file.  This is a one-way conversion.
 Private Sub cmdExport_Click()
     
-    'At present, resources are saved to the App/PhotoDemon/Themes subfolder.  This resource file is
+    'At present, resources are saved to the App/PhotoPaint/Themes subfolder.  This resource file is
     ' ultimately compiled into the .exe, so this location should be considered "temporary" only.
     ' (PD will preferentially load this resource file, if it exists, instead of the embedded .exe
     ' copy - this is done as a convenience for testing, and should not be relied upon in a stable
@@ -419,7 +419,7 @@ Private Sub cmdExport_Click()
         lblExport.Caption = "Prepping resource file..."
         
         'Keep the existing filename, but strip the extension and replace it with "PDRC"
-        ' (for... PhotoDemon Resource Collection, I guess?)
+        ' (for... PhotoPaint Resource Collection, I guess?)
         targetResFile = UserPrefs.GetThemePath & Files.FileGetName(txtResourcePath.Text, True) & ".pdrc"
         Files.FileDeleteIfExists targetResFile
         

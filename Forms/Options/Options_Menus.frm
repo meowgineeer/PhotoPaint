@@ -209,7 +209,7 @@ Public Sub UpdateAgainstCurrentTheme()
     lblRecentFileCount.Caption = g_Language.TranslateMessage("maximum number of recent files to remember: ")
     tudRecentFiles.SetLeft lblRecentFileCount.GetLeft + lblRecentFileCount.GetWidth + Interface.FixDPI(8)
     
-    btsMRUStyle.AssignTooltip "The ""Recent Files"" menu width is limited by Windows.  To prevent this menu from overflowing, PhotoDemon can display image names only instead of full image locations."
+    btsMRUStyle.AssignTooltip "The ""Recent Files"" menu width is limited by Windows.  To prevent this menu from overflowing, PhotoPaint can display image names only instead of full image locations."
     
     Interface.ApplyThemeAndTranslations Me
     

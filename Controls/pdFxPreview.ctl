@@ -58,13 +58,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Effect Preview custom control
+'PhotoPaint Effect Preview custom control
 'Copyright 2013-2025 by Tanner Helland
 'Created: 10/January/13
 'Last updated: 13/October/20
 'Last update: rework resize code to allow for efficient run-time resizing of previews
 '
-'For the first decade of its life, PhotoDemon relied on simple picture boxes for rendering its effect previews.
+'For the first decade of its life, PhotoPaint relied on simple picture boxes for rendering its effect previews.
 ' This worked well enough when there were only a handful of tools available, but as the complexity of the program
 ' - and its various effects and tools - has grown, it has become more and more painful to update the preview
 ' system, because any changes have to be mirrored across a huge number of forms.

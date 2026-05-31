@@ -246,7 +246,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Canvas User Control (previously a standalone form)
+'PhotoPaint Canvas User Control (previously a standalone form)
 'Copyright 2002-2025 by Tanner Helland
 'Created: 29/November/02
 'Last updated: 28/December/24
@@ -1589,7 +1589,7 @@ End Sub
 
 Private Sub HandleCanvasScroll(ByVal Button As PDMouseButtonConstants, ByVal Shift As ShiftConstants, ByVal x As Long, ByVal y As Long, ByVal scrollAmount As Double)
 
-    'PhotoDemon uses the standard photo editor convention of Ctrl+Wheel = zoom, Shift+Wheel = h_scroll, and Wheel = v_scroll.
+    'PhotoPaint uses the standard photo editor convention of Ctrl+Wheel = zoom, Shift+Wheel = h_scroll, and Wheel = v_scroll.
     ' Some users (for reasons I don't understand??) expect plain mousewheel to zoom the image.  For these users, we now
     ' display a helpful message telling them to use the damn Ctrl modifier like everyone else.
     If vScroll.Visible Then

@@ -28,14 +28,14 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Unicode Text Box control
+'PhotoPaint Unicode Text Box control
 'Copyright 2014-2025 by Tanner Helland
 'Created: 03/November/14
 'Last updated: 09/February/16
 'Last update: move all API edit control code out of this class, and into a dedicated pdEditBoxW class.  This greatly
 '             simplifies this control, and we can reuse pdEditBoxW elsewhere.
 '
-'In a surprise to precisely no one, PhotoDemon has some unique needs when it comes to user controls - needs that
+'In a surprise to precisely no one, PhotoPaint has some unique needs when it comes to user controls - needs that
 ' the intrinsic VB controls can't handle.  These range from the obnoxious (lack of an "autosize" property for
 ' anything but labels) to the critical (no Unicode support).
 '

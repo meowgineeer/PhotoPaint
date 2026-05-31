@@ -12,24 +12,24 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Layers class
+'PhotoPaint Layers class
 'Copyright 2012-2025 by Tanner Helland
 'Created: 29/August/12
 'Last updated: 10/March/25
 'Last update: expose "suspend to disk" behavior to callers
 '
-'Once upon a time, the pdLayer class was a simple pixel array wrapper.  Once PhotoDemon grew into
+'Once upon a time, the pdLayer class was a simple pixel array wrapper.  Once PhotoPaint grew into
 ' a full layer-based photo editor, however, it became necessary to separate Layer-specific functions
 ' from generic pixel array functions.
 '
-'The current pdLayer class is a comprehensive wrapper for all PhotoDemon layers, regardless of type.
+'The current pdLayer class is a comprehensive wrapper for all PhotoPaint layers, regardless of type.
 ' All layers share key components, like opacity and blend mode, and all raster layers (and vector
 ' layers, for performance reasons) also provide a copy of the layer's contents in pdDIB format.
 ' Note that PD's main viewport renderer doesn't care how layer raster data is created - e.g. whether
 ' it comes from text or pixel arrays or vector data - it just cares that the associated pdDIB object
 ' is present and appropriately sized for its contents.
 '
-'Because layers interact heavily with PDI files (PhotoDemon's internal file format), each layer must
+'Because layers interact heavily with PDI files (PhotoPaint's internal file format), each layer must
 ' be capable of serializing all meaningful properties to XML, and recreating itself from such an XML
 ' packet when requested.  Layer pixel data is always handled separately, as some layer types may need
 ' to recreate their raster contents on-the-fly (e.g. rasterizing text layers).
@@ -39,7 +39,7 @@ Attribute VB_Exposed = False
 ' function parameter, and you should always guarantee that the reference will only be used locally.
 '
 'All source code in this file is licensed under a modified BSD license. This means you may use the code in your own
-' projects IF you provide attribution. For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution. For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -955,7 +955,7 @@ Friend Sub GetLayerCornerCoordinates(ByRef dstPoints() As PointFloat, Optional B
     
 End Sub
 
-'As of PhotoDemon 7.0, non-destructive layer rotation is supported.  Call this function to retrieve the position of the layer's on-canvas
+'As of PhotoPaint 7.0, non-destructive layer rotation is supported.  Call this function to retrieve the position of the layer's on-canvas
 ' rotation node *IN IMAGE COORDINATES*.  Note that an array is required, and it must be at least (0, 4) in size.  The first point contains
 ' the center point of the rotation node (e.g. the center of the current image), while subsequent points contain valid rotation nodes, which
 ' sit on the halfway point at each image boundary.
@@ -993,7 +993,7 @@ Friend Sub GetLayerRotationNodeCoordinates(ByRef dstPoints() As PointFloat)
         
 End Sub
 
-'As of PhotoDemon 7.0, layers support one or more affine transformations (rotation, skew, etc).
+'As of PhotoPaint 7.0, layers support one or more affine transformations (rotation, skew, etc).
 ' If a caller needs a copy of the layer's current transformation matrix, use this function to retrieve it.
 '
 'Note that scaling is not applied, by design.  The caller should handle scaling manually.
@@ -1026,7 +1026,7 @@ Friend Sub GetCopyOfLayerTransformationMatrix(ByRef dstMatrix As pd2DTransform, 
     
 End Sub
 
-'As of PhotoDemon 7.0, layers support one or more affine transformations (resize, rotation, skew, etc).
+'As of PhotoPaint 7.0, layers support one or more affine transformations (resize, rotation, skew, etc).
 ' If a caller needs a copy of the layer's current transformation matrix, it can use this function to retrieve it.
 Friend Sub GetCopyOfLayerTransformationMatrix_Full(ByRef dstMatrix As pd2DTransform)
 
@@ -1051,7 +1051,7 @@ Friend Sub GetCopyOfLayerTransformationMatrix_Full(ByRef dstMatrix As pd2DTransf
     
 End Sub
 
-'As of PhotoDemon 7.0, layers support one or more affine transformations (rotation, skew, etc).  If the caller needs to determine
+'As of PhotoPaint 7.0, layers support one or more affine transformations (rotation, skew, etc).  If the caller needs to determine
 ' layer boundaries with all affine transform operations considered, use this function.
 Friend Sub GetLayerBoundaryRect(ByRef dstRect As RectF)
     
@@ -1344,7 +1344,7 @@ Friend Function CreateNewLayerFromXML(ByRef xmlString As String, Optional ByVal 
     xmlEngine.SetParamString xmlString
     
     'Validate the XML header...
-    If (xmlEngine.DoesParamExist("photodemon-layer") And (xmlEngine.GetLong("layer-version", 0) >= 1)) Then
+    If (xmlEngine.DoesParamExist("photopaint-layer") And (xmlEngine.GetLong("layer-version", 0) >= 1)) Then
         
         'If the caller has not specified their own layer ID, use the one from file.
         If (useCustomLayerID = -1) Then m_layerID = xmlEngine.GetLong("layer-id") Else m_layerID = useCustomLayerID
@@ -1473,7 +1473,7 @@ Friend Function GetLayerHeaderAsXML() As String
     Set xmlEngine = New pdSerialize
     
     'Add a basic header and version info
-    xmlEngine.AddXMLString "<photodemon-layer>"
+    xmlEngine.AddXMLString "<photopaint-layer>"
     xmlEngine.AddParam "layer-version", 1&, True, True
     
     'Start by writing out the hard-coded layer ID.
@@ -1524,7 +1524,7 @@ Friend Function GetLayerHeaderAsXML() As String
     End With
     
     'Close the initial pdLayer tag
-    xmlEngine.AddXMLString "</photodemon-layer>"
+    xmlEngine.AddXMLString "</photopaint-layer>"
     
     'The layer XML string is now complete.  Return it.
     GetLayerHeaderAsXML = xmlEngine.GetParamString()
@@ -1546,7 +1546,7 @@ Friend Function GetVectorDataAsXML() As String
     'Prepare an XML engine, which greatly simplifies the process of assembling XML data
     Dim xmlEngine As pdSerialize
     Set xmlEngine = New pdSerialize
-    xmlEngine.AddXMLString "<photodemon-vector-object>"
+    xmlEngine.AddXMLString "<photopaint-vector-object>"
     xmlEngine.AddParam "vector-version", 1&, True, True
     
     'All vector layers store certain data attributes
@@ -1562,7 +1562,7 @@ Friend Function GetVectorDataAsXML() As String
         
     End Select
     
-    xmlEngine.AddXMLString "</photodemon-vector-object>"
+    xmlEngine.AddXMLString "</photopaint-vector-object>"
         
     'The layer XML string is now complete.  Return it.
     GetVectorDataAsXML = xmlEngine.GetParamString()
@@ -1580,7 +1580,7 @@ Friend Function SetVectorDataFromXML(ByRef xmlString As String) As Boolean
     
     'If basic validation fails, revert to the legacy font serialization engine
     Dim useLegacyLoader As Boolean
-    useLegacyLoader = (Not xmlEngine.DoesParamExist("photodemon-vector-object", True))
+    useLegacyLoader = (Not xmlEngine.DoesParamExist("photopaint-vector-object", True))
     If (Not useLegacyLoader) Then useLegacyLoader = (xmlEngine.GetLong("vector-version", 0, True) < 1)
     
     If useLegacyLoader Then
@@ -2557,7 +2557,7 @@ Friend Function SyncInternalDIB(Optional ByVal levelOfDetail As PD_CompositorLOD
             If (m_LayerType = PDL_TextBasic) Then
                 myTextRenderer.SetGenericTextProperty ptp_RenderingEngine, te_WAPI
             Else
-                myTextRenderer.SetGenericTextProperty ptp_RenderingEngine, te_PhotoDemon
+                myTextRenderer.SetGenericTextProperty ptp_RenderingEngine, te_PhotoPaint
             End If
             
             'Initialize the backer DIB as necessary

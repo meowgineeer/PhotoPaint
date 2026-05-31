@@ -71,7 +71,7 @@ Attribute VB_Exposed = False
 'Per Wikipedia (https://en.wikipedia.org/wiki/Kuwahara_filter):
 ' "The Kuwahara filter is a non-linear smoothing filter used in image processing for adaptive noise reduction."
 '
-'For performance and quality reasons, PhotoDemon's implementation calculates variance using luminance;
+'For performance and quality reasons, PhotoPaint's implementation calculates variance using luminance;
 ' the quadrant with the smallest luminance variance is then used for calculating average color.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.

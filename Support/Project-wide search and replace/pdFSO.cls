@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon File System Object Interface
+'PhotoPaint File System Object Interface
 'Copyright 2014-2016 by Tanner Helland
 'Created: 04/February/15
 'Last updated: 09/August/15
@@ -32,7 +32,7 @@ Attribute VB_Exposed = False
 ' - Dana Seaman's UnicodeTutorialVB (http://www.cyberactivex.com/UnicodeTutorialVb.htm)
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-' projects IF you provide attribution.  For more information, please visit http://photodemon.org/about/license/
+' projects IF you provide attribution.  For more information, please visit http://photopaint.org/about/license/
 '
 '***************************************************************************
 
@@ -138,7 +138,7 @@ Private Const MOVEFILE_COPY_ALLOWED As Long = &H2   'If the file is to be moved 
 
 Private Declare Function CopyFileW Lib "kernel32" (ByVal lpExistingFileName As Long, ByVal lpNewFileName As Long, ByVal bFailIfExists As Long) As Long
 
-'Because our file patching code affects critical PhotoDemon files, we need to make sure we return detailed success/failure information.
+'Because our file patching code affects critical PhotoPaint files, we need to make sure we return detailed success/failure information.
 Public Enum FILE_PATCH_RESULT
     FPR_SUCCESS = 0
     FPR_FAIL_NOTHING_CHANGED = 1
@@ -811,7 +811,7 @@ Public Function ReplaceFile(ByVal oldFile As String, ByVal newFile As String, Op
             'IMPORTANT NOTE!  If the files you're patching are critical, I STRONGLY recommend forcibly creating a backup here.
             ' Otherwise, you risk a scenario where something goes wrong during the replace step, and the original file is gone forever.
             
-            'For example, in PhotoDemon I use the standard Data/Updates folder for backups when patching, like this:
+            'For example, in PhotoPaint I use the standard Data/Updates folder for backups when patching, like this:
             'backupFile = getFilename(oldFile)
             'backupFile = g_UserPreferences.getUpdatePath & backupFile
             
@@ -821,7 +821,7 @@ Public Function ReplaceFile(ByVal oldFile As String, ByVal newFile As String, Op
             backupFile = customBackupFile
         End If
         
-        'ReplaceFileW returns a non-zero value if successful, or zero if it fails.  Because this function is used to patch PhotoDemon.exe,
+        'ReplaceFileW returns a non-zero value if successful, or zero if it fails.  Because this function is used to patch PhotoPaint.exe,
         ' there is no margin for failure, so detailed handling of every possible outcome is required.
         rfReturn = ReplaceFileW(StrPtr(oldFile), StrPtr(newFile), StrPtr(backupFile), REPLACEFILE_IGNORE_MERGE_ERRORS, 0&, 0&)
         

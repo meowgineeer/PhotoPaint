@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Seamless Texture Generation class
+'PhotoPaint Seamless Texture Generation class
 'Copyright 2022-2025 by Tanner Helland
 'Created: 21/April/22
 'Last updated: 02/May/22
@@ -35,13 +35,13 @@ Attribute VB_Exposed = False
 'https://gfx.cs.princeton.edu/pubs/Barnes_2009_PAR/patchmatch.pdf
 '
 'Note that both Resynthesizer and PatchMatch have "official" implementations by their original authors,
-' but these implementations are license-incompatible with PhotoDemon.  Argh.
+' but these implementations are license-incompatible with PhotoPaint.  Argh.
 '
 'So, I have taken the more challenging road and implemented my own version of Paul's "Resynthesizer"
 ' algorithm, as I understand it from his original paper.  While not as fast or potentially high-quality
 ' as GIMP's implementation (20 years of subsequent improvements are hard to beat), my version still works
 ' well enough to hopefully make it a reasonable take on Paul's thesis.  I definitely consider it good
-' enough to warrant inclusion in PhotoDemon, and I'm particularly proud of the performance this version
+' enough to warrant inclusion in PhotoPaint, and I'm particularly proud of the performance this version
 ' achieves, especially given VB's limitations.
 '
 'More than anything, though, I'm hoping that this BSD-licensed version of the algorithm draws attention
@@ -49,12 +49,12 @@ Attribute VB_Exposed = False
 ' let Paul's interesting algorithm languish in GIMP alone instead of being further developed by many
 ' different open-source developers.
 '
-'Broader integration of this feature into PhotoDemon itself is still a WIP, and some extended features
+'Broader integration of this feature into PhotoPaint itself is still a WIP, and some extended features
 ' available in GIMP (like "smart sharpening") are currently beyond my comprehension.  I will revisit in
 ' the future as time and/or my mental capacity allows.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -550,7 +550,7 @@ Private Function InitializeInpainter() As Boolean
     VBHacks.GetHighResTime startTime
     
     'Build an initial look-up table of the central Cauchy distribution.  This table is fixed according
-    ' to differences in pixel values (which for PhotoDemon, are guaranteed to be 8-bit color components).
+    ' to differences in pixel values (which for PhotoPaint, are guaranteed to be 8-bit color components).
     ' Because this distribution requires the expensive Log() operator, we pre-build it.
     Dim i As Long
     If (m_AllowOutliers > 0#) Then
@@ -1210,10 +1210,10 @@ Friend Sub SetDefaultParameterValues()
     ' This refinement is thus a percentage value, where e.g. 0.75 means "re-test the first 75% of synthesized
     ' pixels AGAIN after all pixels have been synthesized".
     '
-    'The default value in the original synthesize paper is 0.75.  Note that PhotoDemon, by design, synthesizes
+    'The default value in the original synthesize paper is 0.75.  Note that PhotoPaint, by design, synthesizes
     ' all points TWICE before this value kicks in.  I do this because repeat testing shows a significant
     ' (subjective) quality improvement after revisiting each pixel at least once.  Thus if you have 10,000 pixels
-    ' to synthesize, PhotoDemon will synthesize all 10,000 once, then re-synthesize them AGAIN, and then
+    ' to synthesize, PhotoPaint will synthesize all 10,000 once, then re-synthesize them AGAIN, and then
     ' resynthesize the first e.g. 75% of pixels a third time.
     '
     'This value is used repeatedly, so after e.g. 75% of pixels have been re-synthesized a third time, the first
@@ -1269,7 +1269,7 @@ Private Sub Class_Initialize()
     'Initialize a random number generator
     Set m_Random = New pdRandomize
     
-    'At present, PhotoDemon seeds the inpainter randomly.  You could also allow the user to provide their
+    'At present, PhotoPaint seeds the inpainter randomly.  You could also allow the user to provide their
     ' own random seed, which would ensure identical results every time the function is called (with the
     ' same inputs and mask, obviously).
     m_Random.SetSeed_AutomaticAndRandom

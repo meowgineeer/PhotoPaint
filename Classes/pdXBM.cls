@@ -12,13 +12,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon X Bitmap (XBM) Decoder
+'PhotoPaint X Bitmap (XBM) Decoder
 'Copyright 2024-2025 by Tanner Helland
 'Created: 15/March/24
 'Last updated: 18/March/24
 'Last update: wrap up initial build
 '
-'The XBM file format is *ancient*.  PhotoDemon originally just handed XBM support off to the 3rd-party
+'The XBM file format is *ancient*.  PhotoPaint originally just handed XBM support off to the 3rd-party
 ' FreeImage library, but FreeImage crashes on pretty much all XBM files (including modern exported ones
 ' from well-known software like GIMP).
 '
@@ -35,7 +35,7 @@ Attribute VB_Exposed = False
 'Encoding support is not planned at present, but this may be revisited (as always) if users complain.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

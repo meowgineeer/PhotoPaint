@@ -427,7 +427,7 @@ Public Sub ResizeCanvas(ByVal functionParams As String)
     End Select
     
     'Now that we have our new top-left corner coordinates (and new width/height values), resizing the canvas
-    ' is actually very easy.  In PhotoDemon, there is no such thing as "image data"; an image is just an
+    ' is actually very easy.  In PhotoPaint, there is no such thing as "image data"; an image is just an
     ' imaginary bounding box around the layers collection.  Because of this, we don't actually need to
     ' resize any pixel data - we just need to modify all layer offsets to account for the new top-left corner!
     Dim i As Long

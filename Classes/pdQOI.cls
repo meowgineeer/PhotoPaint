@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon "Quite OK Image" (QOI) Decoder/Encoder
+'PhotoPaint "Quite OK Image" (QOI) Decoder/Encoder
 'Copyright 2022-2025 by Tanner Helland
 'Created: 24/February/22
 'Last updated: 25/February/22
@@ -20,7 +20,7 @@ Attribute VB_Exposed = False
 '
 'The QOI image format was developed by Dominic Szablewski.  It is designed as a compact, lossless
 ' image format with much greater simplicity than e.g. PNG but much smaller filesizes than e.g. BMP.
-' A final 1.0 spec was released in 2022 and PhotoDemon uses that spec as the basis for its
+' A final 1.0 spec was released in 2022 and PhotoPaint uses that spec as the basis for its
 ' custom VB6 implementation.  You can find the QOI spec here (link good as of Feb 2022):
 '
 ' https://qoiformat.org/qoi-specification.pdf
@@ -58,7 +58,7 @@ Attribute VB_Exposed = False
 'Thank you to Dominic for this neat concept!
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -428,7 +428,7 @@ Friend Function SaveQOI_ToFile(ByRef dstFile As String, ByRef srcImage As pdImag
     ' 2) Color-depth (alpha presence)
     ' 3) Color-management state (linear or sRGB)
     
-    'PhotoDemon guarantees that (2) will always be TRUE and (3) will always be sRGB, which makes this very simple!
+    'PhotoPaint guarantees that (2) will always be TRUE and (3) will always be sRGB, which makes this very simple!
     
     'Start by opening a pdStream instance on the target file, then writing a fixed-size header.
     Set m_Stream = New pdStream

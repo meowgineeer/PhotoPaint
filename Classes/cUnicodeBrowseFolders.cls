@@ -11,7 +11,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
-'Note: this file has been modified for use within PhotoDemon.
+'Note: this file has been modified for use within PhotoPaint.
 
 'You may download the original version of this class from the following link (good as of May '16):
 ' http://www.vbforums.com/showthread.php?585762-VB6-Unicode-File-Open-Save-Dialog
@@ -19,7 +19,7 @@ Attribute VB_Exposed = False
 'This class was originally written by vbforums.com user LaVolpe.  To the best of my knowledge, the code has
 ' been released into the public domain.
 
-'Many thanks to LaVolpe for this comprehensive folder browsing interface, which PhotoDemon uses on XP installs.
+'Many thanks to LaVolpe for this comprehensive folder browsing interface, which PhotoPaint uses on XP installs.
 
 Option Explicit
 
@@ -393,7 +393,7 @@ Private Sub pvInitStructure(hWnd As Long)
         If Not m_InitPath = vbNullString Then           ' do we have a startup pidl/path
             
             'Thunks are not required in TwinBasic; use built-in language features instead!
-            ' (Thank you to @fafalone for this fix: https://github.com/tannerhelland/PhotoDemon/issues/665)
+            ' (Thank you to @fafalone for this fix: https://github.com/tannerhelland/PhotoPaint/issues/665)
             #If TWINBASIC Then
                 obif.lpfnCallback = AddressOf pvBrowseCallbackProc
             #Else

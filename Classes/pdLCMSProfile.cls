@@ -12,17 +12,17 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon LCMS (LittleCMS) Color Profile Manager
+'PhotoPaint LCMS (LittleCMS) Color Profile Manager
 'Copyright 2015-2025 by Tanner Helland
 'Created: 26/May/16
 'Last updated: 09/June/16
 'Last update: add support for linear RGB profiles
 '
 'This class interacts heavily with the LittleCMS module.  Look there for implementation details.
-' (Also, this class obviously relies on the LittleCMS DLL, which must be present inside PhotoDemon's Plugins folder.)
+' (Also, this class obviously relies on the LittleCMS DLL, which must be present inside PhotoPaint's Plugins folder.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -1,13 +1,13 @@
 Attribute VB_Name = "ImageFormats_PSP"
 '***************************************************************************
-'PhotoDemon PSP (PaintShop Pro) Container and Parser
+'PhotoPaint PSP (PaintShop Pro) Container and Parser
 'Copyright 2020-2025 by Tanner Helland
 'Created: 30/December/20
 'Last updated: 03/February/21
 'Last update: wrap up finishing touches on export support
 '
 'This module (and associated pdPSP- classes) handle JASC/Corel Paint Shop Pro image parsing.
-' All code has been custom-built for PhotoDemon, with a special emphasis on parsing performance.
+' All code has been custom-built for PhotoPaint, with a special emphasis on parsing performance.
 '
 'Both import and export of PSP files are supported.  I have attempted to support all possible
 ' versions of PSP files (PSP 5 was the version that "invented" the PSP format, and all versions
@@ -16,7 +16,7 @@ Attribute VB_Name = "ImageFormats_PSP"
 ' on guesswork and heuristics instead of an authoritative "Spec".
 '
 'As with all 3rd-party PSP engines, Paint Shop Pro has many features that don't have direct analogs
-' in PhotoDemon.  Many of these settings are still parsed by PD's PSP engine, but they will not
+' in PhotoPaint.  Many of these settings are still parsed by PD's PSP engine, but they will not
 ' "appear" in the final loaded image.  My ongoing goal is to expand support in this class as various
 ' PSP features are implemented in PD itself.
 '
@@ -29,7 +29,7 @@ Attribute VB_Name = "ImageFormats_PSP"
 ' http://www.telegraphics.com.au/svn/pspformat/trunk
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

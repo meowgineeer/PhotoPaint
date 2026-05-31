@@ -104,7 +104,7 @@ Attribute VB_Exposed = False
 'Last updated: 27/April/20
 'Last update: perf improvements; tool is 2x faster now!
 '
-'This function uses an algorithm very similar to PhotoDemon's green screen (FormTransparency_FromColor) algorithm.
+'This function uses an algorithm very similar to PhotoPaint's green screen (FormTransparency_FromColor) algorithm.
 ' Separate sliders are provided for both a replacement threshold, and a blend threshold, to help the user minimize
 ' harsh edges between the color and its surroundings.
 '

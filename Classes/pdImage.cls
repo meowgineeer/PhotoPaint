@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Image class
+'PhotoPaint Image class
 'Copyright 2006-2025 by Tanner Helland
 'Created: sometime 2006
 'Last updated: 10/March/25
@@ -32,7 +32,7 @@ Attribute VB_Exposed = False
 ' image operations.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -919,7 +919,7 @@ Friend Function GetHeaderAsXML() As String
     Set xmlEngine = New pdSerialize
     
     'Add a basic header and version info
-    xmlEngine.AddXMLString "<photodemon-image>"
+    xmlEngine.AddXMLString "<photopaint-image>"
     xmlEngine.AddParam "image-version", 1&, True, True
     
     'Start by writing out the hard-coded image ID.  This value can effectively be ignored at load-time;
@@ -967,7 +967,7 @@ Friend Function SetHeaderFromXML(ByRef srcText As String, Optional ByVal sourceI
     xmlEngine.SetParamString srcText
     
     'Validate the XML header...
-    If (xmlEngine.DoesParamExist("photodemon-image") And (xmlEngine.GetLong("image-version", 0) >= 1)) Then
+    If (xmlEngine.DoesParamExist("photopaint-image") And (xmlEngine.GetLong("image-version", 0) >= 1)) Then
     
         'The XML package appears to be valid.  Start retrieving values.
         Me.Width = xmlEngine.GetLong("width", 0, True)

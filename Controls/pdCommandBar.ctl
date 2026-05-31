@@ -133,13 +133,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Tool Dialog Command Bar custom control
+'PhotoPaint Tool Dialog Command Bar custom control
 'Copyright 2013-2025 by Tanner Helland
 'Created: 14/August/13
 'Last updated: 04/November/24
 'Last update: allow owner to cancel reset actions (for example, if the user declines a "want to proceed?" prompt)
 '
-'For the first decade of its life, PhotoDemon relied on a simple OK and CANCEL button at the bottom of each tool dialog.
+'For the first decade of its life, PhotoPaint relied on a simple OK and CANCEL button at the bottom of each tool dialog.
 ' These two buttons were dutifully copy+pasted on each new tool, but beyond that they received little attention.
 '
 'As the program has grown more complex, I have wanted to add a variety of new features to each tool - things like dedicated
@@ -1208,7 +1208,7 @@ Private Function GetPresetParamString(Optional ByVal srcPresetName As String = "
             Case "pdTextBox"
                 controlValue = eControl.Text
                 
-            'PhotoDemon's resize UC is a special case.  Because it uses multiple properties (despite being
+            'PhotoPaint's resize UC is a special case.  Because it uses multiple properties (despite being
             ' a single control), we must combine its various values into a single string.
             Case "pdResize"
                 controlValue = eControl.GetCurrentSettingsAsXML()

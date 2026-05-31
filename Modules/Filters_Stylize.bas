@@ -9,7 +9,7 @@ Attribute VB_Name = "Filters_Stylize"
 'Container module for PD's stylize filter collection.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -18,7 +18,7 @@ Option Explicit
 Private m_tmpDIB As pdDIB
 
 'Given two DIBs, fill one with a stylized "color halftone" version of the other.
-' Per PhotoDemon convention, this function will return a non-zero value if successful, and 0 if canceled.
+' Per PhotoPaint convention, this function will return a non-zero value if successful, and 0 if canceled.
 '
 'As described in FormColorHalftone, this tool's algorithm was developed with help from a similar function
 ' originally written by Jerry Huxtable of JH Labs. Jerry's original code is licensed under an Apache 2.0 license

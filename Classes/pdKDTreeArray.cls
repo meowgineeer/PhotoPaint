@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon array-backed KD-Tree (slower than normal KD-tree, but much faster tear-down due to no child classes)
+'PhotoPaint array-backed KD-Tree (slower than normal KD-tree, but much faster tear-down due to no child classes)
 'Copyright 2018-2025 by Tanner Helland
 'Created: 28/January/18
 'Last updated: 23/June/22
@@ -23,7 +23,7 @@ Attribute VB_Exposed = False
 ' painful issues with COM teardown performance in VB6 when large numbers of classes are created.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

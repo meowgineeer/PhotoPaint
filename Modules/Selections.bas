@@ -6,13 +6,13 @@ Attribute VB_Name = "Selections"
 'Last updated: 13/February/22
 'Last update: lots of changes to enable multiple selection support!
 '
-'Selection tools have existed in PhotoDemon for awhile, but this module is the first to support Process varieties of
+'Selection tools have existed in PhotoPaint for awhile, but this module is the first to support Process varieties of
 ' selection operations - e.g. internal actions like "Process "Create Selection"".  Selection commands must be passed
 ' through the Process module so they can be recorded as macros, and as part of the program's Undo/Redo chain.  This
 ' module provides all selection-related functions that the Process module can call.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

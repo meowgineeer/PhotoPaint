@@ -114,7 +114,7 @@ Begin VB.Form frmMain
       Height          =   375
       Left            =   1320
       TabIndex        =   2
-      Text            =   "C:\PhotoDemon v4\PhotoDemon\PhotoPaint.vbp"
+      Text            =   "C:\PhotoPaint v4\PhotoPaint\PhotoPaint.vbp"
       Top             =   120
       Width           =   6615
    End

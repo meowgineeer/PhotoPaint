@@ -12,14 +12,14 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon ICO (Icon) Container and Import/Export engine
+'PhotoPaint ICO (Icon) Container and Import/Export engine
 'Copyright 2020-2025 by Tanner Helland
 'Created: 07/May/20
 'Last updated: 28/October/22
 'Last update: improve alpha thresholding behavior for better color quality when creating tiny icon sizes
 '
 'This class (and its associated pdICO- child classes) handle import and export of
-' old-school ICO files.  The class was custom-built for PhotoDemon, with an emphasis on
+' old-school ICO files.  The class was custom-built for PhotoPaint, with an emphasis on
 ' performance, robustness, and automatic coverage of core ICO features - e.g. users
 ' shouldn't need to know any details about the ICO format to produce useable ICO files.
 '
@@ -31,7 +31,7 @@ Attribute VB_Exposed = False
 ' https://en.wikipedia.org/wiki/ICO_(file_format)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

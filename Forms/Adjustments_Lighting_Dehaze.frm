@@ -126,7 +126,7 @@ Attribute VB_Exposed = False
 '
 'Many thanks to Zhong Luan et al for sharing their work under a Creative Commons Attribution License.
 '
-'I read quite a few dehazing papers from the past two decades before settling on this one for PhotoDemon's
+'I read quite a few dehazing papers from the past two decades before settling on this one for PhotoPaint's
 ' implementation.  One of the biggest issues I have in PD development is implementing methods that meet a
 ' few strict criteria:
 ' 1) no massive 3rd-party libraries (e.g. OpenCV is out) or amd64-only libraries

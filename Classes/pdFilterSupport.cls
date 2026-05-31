@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Filter Support Class
+'PhotoPaint Filter Support Class
 'Copyright 2013-2025 by Tanner Helland
 'Created: 15/January/13
 'Last updated: 02/November/22
@@ -25,7 +25,7 @@ Attribute VB_Exposed = False
 'The main utilizer of this class is the Effects -> Distort menu.  See any Distort tool for example usage.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -42,7 +42,7 @@ Private m_DstX As Double, m_DstY As Double
 ' The downside is that you *MUST* free the reference manually or crashes will occur.
 '
 '(This is technically bypassable by setting different flags in the passed SafeArray header,
-' but I like to deliberately enforce strict array freeing behavior in PhotoDemon as it removes
+' but I like to deliberately enforce strict array freeing behavior in PhotoPaint as it removes
 ' the risk for surprise crashes down the road.)
 '
 'Anyway - not all filters use these faster, less-safe wrappers yet, but I hope to migrate
@@ -213,7 +213,7 @@ End Function
 
 'IMPORTANT NOTE: this function does not handle pixel erasing in ERASE mode.  This function also assumes
 ' the source x/y position actually exists in-bounds (because this is how the normal color handler works).
-' To use this shortcut function, as PhotoDemon does in the PerspectiveImage function, you must:
+' To use this shortcut function, as PhotoPaint does in the PerspectiveImage function, you must:
 ' 1) Handle pixel erasing manually, as relevant
 ' 2) Ensure srcX and srcY are IN-BOUNDS
 Friend Function HandleInterpolationOnly(ByVal srcX As Double, ByVal srcY As Double) As RGBQuad

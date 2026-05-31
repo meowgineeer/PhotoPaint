@@ -6,7 +6,7 @@ Attribute VB_Name = "PDImages"
 'Last updated: 10/March/25
 'Last update: new "StrategicMemoryReduction" function to reduce memory when multiple images are loaded
 '
-'In "ye good ol' days", PhotoDemon exposed the collection of currently loaded user images as a bare array.
+'In "ye good ol' days", PhotoPaint exposed the collection of currently loaded user images as a bare array.
 ' This was a terrible idea (for too many reasons to count).
 '
 'These days, the open image collection is instead managed by this module.  This provides much more
@@ -14,13 +14,13 @@ Attribute VB_Name = "PDImages"
 ' like memory management (e.g. suspending inactive images to disk).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
 Option Explicit
 
-'The number of images PhotoDemon has loaded this session (always goes up, never down; starts at zero when
+'The number of images PhotoPaint has loaded this session (always goes up, never down; starts at zero when
 ' the program is loaded).  This value correlates to the upper bound of the primary pdImages array.
 ' For performance reasons, that array is not dynamically resized when images are loaded - the array stays
 ' the same size, and entries are deactivated as needed.  Thus, WHENEVER YOU NEED TO ITERATE THROUGH ALL

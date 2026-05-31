@@ -11,7 +11,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
-'Note: this file has been modified for use within PhotoDemon.
+'Note: this file has been modified for use within PhotoPaint.
 
 'You may download the original version of this class from the following link (good as of May '16):
 ' http://www.vbforums.com/showthread.php?785837-VB6-Common-Dialog-Replacement-IFileDialog-Vista-%28No-TLBs%29
@@ -20,7 +20,7 @@ Attribute VB_Exposed = False
 ' been released into the public domain.
 
 'Many thanks to LaVolpe for this non-TLB implementation of the new IFileDialog interface available in Vista+.
-' PhotoDemon currently uses its updated PathBrowseDialog implementation, which is significantly better than
+' PhotoPaint currently uses its updated PathBrowseDialog implementation, which is significantly better than
 ' the old XP-style browse box.
 
 

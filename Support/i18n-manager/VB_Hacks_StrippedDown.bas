@@ -6,7 +6,7 @@ Attribute VB_Name = "VBHacks"
 'Last updated: 27/May/22
 'Last update: move various incarnations of Get/SetBitFlag functions here, and build a fixed-size flag table for perf reasons
 '
-'PhotoDemon relies on a lot of "not officially sanctioned" VB6 behavior to enable various optimizations
+'PhotoPaint relies on a lot of "not officially sanctioned" VB6 behavior to enable various optimizations
 ' and C-style code techniques. If a function's primary purpose is a VB6-specific workaround, I prefer to
 ' move it here instead of cluttering purposeful modules with obscure, VB-specific hackery.
 '
@@ -18,7 +18,7 @@ Attribute VB_Name = "VBHacks"
 ' http://vb.mvps.org/ - thank you, Karl!
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -429,13 +429,13 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Primary Toolbox
+'PhotoPaint Primary Toolbox
 'Copyright 2013-2025 by Tanner Helland
 'Created: 02/Oct/13
 'Last updated: 06/March/22
 'Last update: rename "non-destructive" tool group to "layout tools"
 '
-'This form was initially integrated into the main MDI form.  In fall 2013, PhotoDemon left behind
+'This form was initially integrated into the main MDI form.  In fall 2013, PhotoPaint left behind
 ' the MDI model, and all toolboxes were moved to their own windows.  This toolbox now manages
 ' all on-canvas tools, while also providing shortcuts to open/save/undo/redo tasks.
 '

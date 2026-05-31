@@ -12,13 +12,13 @@ Attribute VB_Name = "ImageImporter"
 ' as necessary, sparing you the messy work of handling format-specific import details.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
 Option Explicit
 
-'PhotoDemon now provides many of its own image format parsers.  You can disable individual
+'PhotoPaint now provides many of its own image format parsers.  You can disable individual
 ' formats for testing purposes, but note that fallback methods like internal Windows libraries
 ' *CANNOT* read most (if any) of these formats.  If you encounter problems with a specific
 ' image format, PLEASE FILE AN ISSUE ON GITHUB.
@@ -56,7 +56,7 @@ Public Function GetImportPref_JPEGOrientation() As Boolean
     GetImportPref_JPEGOrientation = (m_JpegObeyEXIFOrientation = PD_BOOL_TRUE)
 End Function
 
-'PDI loading.  PDI is PhotoDemon's native format, e.g. PDI is to PhotoDemon what PSD is to PhotoShop,
+'PDI loading.  PDI is PhotoPaint's native format, e.g. PDI is to PhotoPaint what PSD is to PhotoShop,
 ' or XCF to GIMP.
 '
 'Note the unique "sourceIsUndoFile" parameter for this load function.  PDI files are used
@@ -571,7 +571,7 @@ LoadLayerFromPDIFail:
 
 End Function
 
-'Load a single PhotoDemon layer from a standalone pdLayer file (which is really just a modified PDI file).
+'Load a single PhotoPaint layer from a standalone pdLayer file (which is really just a modified PDI file).
 ' This function is only used internally by the Undo/Redo engine.  Its counterpart is SavePDI_SingleLayer in
 ' the Saving module; any changes there must be mirrored here.
 Private Function LoadPDLayer(ByVal pdiPath As String, ByRef dstLayer As pdLayer, Optional ByVal loadHeaderOnly As Boolean = False) As Boolean
@@ -1223,7 +1223,7 @@ Public Function CascadeLoadInternalImage(ByVal internalFormatID As Long, ByRef s
         Case PDIF_PDI
         
             'PDI images require various compression plugins to be present, and are only loaded via a custom routine
-            ' (obviously, since they are PhotoDemon's native format)
+            ' (obviously, since they are PhotoPaint's native format)
             CascadeLoadInternalImage = LoadPDI_Normal(srcFile, dstDIB, dstImage)
             
             dstImage.SetOriginalFileFormat PDIF_PDI
@@ -1246,7 +1246,7 @@ Public Function CascadeLoadInternalImage(ByVal internalFormatID As Long, ByRef s
             dstImage.NotifyImageChanged UNDO_Everything
             decoderUsed = id_PDIParser
             
-        'Straight TMP files are internal files (BMP, typically) used by PhotoDemon.
+        'Straight TMP files are internal files (BMP, typically) used by PhotoPaint.
         ' As ridiculous as it sounds, we must default to the generic load engine list,
         ' as the format of a TMP file is not guaranteed in advance.  Because of this,
         ' we can rely on the generic load engine to properly set things like
@@ -1268,7 +1268,7 @@ Private Function LoadAVIF(ByRef srcFile As String, ByRef dstImage As pdImage, By
     
     'AVIF support was provisionally added in v9.0.  Loading requires 64-bit Windows and a copy of the official
     ' exe binaries (for example, https://github.com/AOMediaCodec/libavif/releases/tag/v0.9.0) inside the
-    ' /App/PhotoDemon/Plugins subfolder.  PhotoDemon will offer to automatically download and configure a
+    ' /App/PhotoPaint/Plugins subfolder.  PhotoPaint will offer to automatically download and configure a
     ' portable copy if the user interacts with the AVIF format in some way (import/export).
     Dim potentialAVIF As Boolean
     potentialAVIF = Strings.StringsEqualAny(Files.FileGetExtension(srcFile), True, "avci", "avcs", "avif", "avifs", "heic")
@@ -1361,7 +1361,7 @@ Public Function LoadDDS(ByRef srcFile As String, ByRef dstImage As pdImage, ByRe
     
     'FreeImage claims to support DDS, but it only supports a tiny subset of ancient DDS files.
     ' In v2025.5+ I added DirectXTex as an alternate load path for DDS files.  This requires a copy
-    ' of texconv.exe in the /App/PhotoDemon/Plugins subfolder.
+    ' of texconv.exe in the /App/PhotoPaint/Plugins subfolder.
     Dim potentialDDS As Boolean
     potentialDDS = Strings.StringsEqualAny(Files.FileGetExtension(srcFile), True, "dds")
     

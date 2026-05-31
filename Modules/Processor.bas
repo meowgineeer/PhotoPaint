@@ -9,8 +9,8 @@ Attribute VB_Name = "Processor"
 'Module for controlling calls to the various program functions.  Any action the program takes has to pass
 ' through here.  Why go to all that extra work?  A couple of reasons:
 ' 1) a central error handler
-' 2) PhotoDemon can run macros by simply tracking the values that pass through this routine
-' 3) PhotoDemon can control code flow by delaying requests that pass through here (for example,
+' 2) PhotoPaint can run macros by simply tracking the values that pass through this routine
+' 3) PhotoPaint can control code flow by delaying requests that pass through here (for example,
 '    if the program is busy applying a filter, we can wait to process subsequent calls)
 ' 4) miscellaneous semantic benefits
 '
@@ -18,7 +18,7 @@ Attribute VB_Name = "Processor"
 ' more interesting functions.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -63,7 +63,7 @@ Private Const NUM_OF_TEXT_PROPERTY_ENUMS As Long = 44
 Private prevTextLayerID As Long, prevTextSetting() As Variant
 
 
-'PhotoDemon's software processor.  (Almost) every action the program takes is first routed
+'PhotoPaint's software processor.  (Almost) every action the program takes is first routed
 ' through this method.  This processor is what makes recording and playing macros possible,
 ' as well as a host of other features.  (See comment at top of page for more details.)
 '
@@ -83,7 +83,7 @@ Private prevTextLayerID As Long, prevTextSetting() As Variant
 '                  selection tools).  This parameter can contain the relevant tool for a given action.  If Undo is used to return to a
 '                  previous state, the relevant tool can automatically be selected, making it much easier for the user to make changes
 '                  to an action using the proper tool.
-' - *recordAction: are macros allowed to record this action?  Actions are assumed to be recordable.  However, some PhotoDemon functions
+' - *recordAction: are macros allowed to record this action?  Actions are assumed to be recordable.  However, some PhotoPaint functions
 '                  are actually several actions strung together; when these are used, subsequent actions are marked as "not recordable"
 '                  to prevent them from being executed twice.
 Public Sub Process(ByVal processID As String, Optional raiseDialog As Boolean = False, Optional processParameters As String = vbNullString, Optional createUndo As PD_UndoType = UNDO_Nothing, Optional relevantTool As Long = -1, Optional recordAction As Boolean = True)
@@ -203,11 +203,11 @@ Public Sub Process(ByVal processID As String, Optional raiseDialog As Boolean = 
     'BEGIN PROCESS SORTING
     '
     'The bulk of this routine starts here.  From this point on, the processID string is compared against a hard-coded
-    ' list of every possible PhotoDemon action, filter, or other operation.  Depending on the processID, additional
+    ' list of every possible PhotoPaint action, filter, or other operation.  Depending on the processID, additional
     ' actions will be performed.
     '
     'For ease of reference, the various processIDs are divided into categories of similar functions.  These categories
-    ' match the organization of PhotoDemon's menus.  Please note that such organization is simply to improve
+    ' match the organization of PhotoPaint's menus.  Please note that such organization is simply to improve
     ' readability; there are no functional implications.
     '
     '******************************************************************************************************************
@@ -220,7 +220,7 @@ Public Sub Process(ByVal processID As String, Optional raiseDialog As Boolean = 
     ' codes immediately.
     If processFound Then
         
-        'The "exit program" menu item requires us to close PhotoDemon immediately; check the returnDetails string for this case
+        'The "exit program" menu item requires us to close PhotoPaint immediately; check the returnDetails string for this case
         If Strings.StringsEqual(returnDetails, PD_PROCESS_EXIT_NOW, True) Then
         
             Unload FormMain
@@ -277,7 +277,7 @@ Public Sub Process(ByVal processID As String, Optional raiseDialog As Boolean = 
         
         ElseIf Strings.StringsEqual(processID, "Fill tool", True) Then
             
-            'Per https://github.com/tannerhelland/PhotoDemon/issues/286, I'm attempting to support flood fill
+            'Per https://github.com/tannerhelland/PhotoPaint/issues/286, I'm attempting to support flood fill
             ' operations in recorded macros.  (Apparently this can be a huge timesaver in certain workflows!)
             ' To make this possible, PD needs to know if a macro is currently running; if it is, it will
             ' attempt to manually apply a flood fill.  We do *NOT* want to do this during normal operations,
@@ -397,7 +397,7 @@ Public Sub Process(ByVal processID As String, Optional raiseDialog As Boolean = 
     
     Exit Sub
 
-'MAIN PHOTODEMON ERROR HANDLER STARTS HERE
+'MAIN PHOTOPAINT ERROR HANDLER STARTS HERE
 
 MainErrHandler:
     
@@ -434,20 +434,20 @@ MainErrHandler:
     'File not found error
     ElseIf (Err.Number = 53) Then
         On Error GoTo 0
-        addInfo = g_Language.TranslateMessage("The specified file could not be located.  If it was located on removable media, please re-insert the proper floppy disk, CD, or portable drive.  If the file is not located on portable media, make sure that:" & vbCrLf & "1) the file hasn't been deleted, and..." & vbCrLf & "2) the file location provided to PhotoDemon is correct.")
+        addInfo = g_Language.TranslateMessage("The specified file could not be located.  If it was located on removable media, please re-insert the proper floppy disk, CD, or portable drive.  If the file is not located on portable media, make sure that:" & vbCrLf & "1) the file hasn't been deleted, and..." & vbCrLf & "2) the file location provided to PhotoPaint is correct.")
         Message "File not found"
         mType = vbExclamation Or vbOKOnly
         
     'Unknown error
     Else
         On Error GoTo 0
-        addInfo = g_Language.TranslateMessage("PhotoDemon cannot locate additional information for this error.  That probably means this error is a bug, and it needs to be fixed!" & vbCrLf & vbCrLf & "Would you like to submit a bug report?  (It takes less than one minute, and it helps everyone who uses the software.)")
+        addInfo = g_Language.TranslateMessage("PhotoPaint cannot locate additional information for this error.  That probably means this error is a bug, and it needs to be fixed!" & vbCrLf & vbCrLf & "Would you like to submit a bug report?  (It takes less than one minute, and it helps everyone who uses the software.)")
         mType = vbCritical Or vbYesNo
         Message "Unknown error."
     End If
     
     'Create the message box to return the error information
-    msgReturn = PDMsgBox("PhotoDemon has experienced an error.  Details on the problem include:" & vbCrLf & vbCrLf & "Error number %1" & vbCrLf & "Description: %2" & vbCrLf & vbCrLf & "%3", mType, "Error", Err.Number, Err.Description, addInfo)
+    msgReturn = PDMsgBox("PhotoPaint has experienced an error.  Details on the problem include:" & vbCrLf & vbCrLf & "Error number %1" & vbCrLf & "Description: %2" & vbCrLf & vbCrLf & "%3", mType, "Error", Err.Number, Err.Description, addInfo)
     
     'If the message box return value is "Yes", the user is willing to file a bug report.
     If (msgReturn = vbYes) Then FileErrorReport Err.Number
@@ -1352,10 +1352,10 @@ End Sub
 Private Sub FileErrorReport(ByVal errNumber As Long)
 
     'Shell a browser window with the GitHub issue report form
-    Web.OpenURL "https://github.com/tannerhelland/PhotoDemon/issues/"
+    Web.OpenURL "https://github.com/tannerhelland/PhotoPaint/issues/"
     
     'Display one final message box with additional instructions
-    PDMsgBox "PhotoDemon has automatically opened the bug report webpage for you.  Please click the ""New Issue"" button, then select ""Bug Report"".  Answer the questions as best you can, and please include the following error number somewhere in your report: %1" & vbCrLf & vbCrLf & "When finished, click the Submit New Issue button.  Thank you!", vbInformation Or vbOKOnly, "Bug report instructions", errNumber
+    PDMsgBox "PhotoPaint has automatically opened the bug report webpage for you.  Please click the ""New Issue"" button, then select ""Bug Report"".  Answer the questions as best you can, and please include the following error number somewhere in your report: %1" & vbCrLf & vbCrLf & "When finished, click the Submit New Issue button.  Thank you!", vbInformation Or vbOKOnly, "Bug report instructions", errNumber
     
 End Sub
 

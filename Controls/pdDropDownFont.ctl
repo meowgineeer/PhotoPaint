@@ -39,7 +39,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Font-specific Drop Down control 2.0
+'PhotoPaint Font-specific Drop Down control 2.0
 'Copyright 2016-2025 by Tanner Helland
 'Created: 01/June/16
 'Last updated: 29/April/20

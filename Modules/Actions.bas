@@ -9,7 +9,7 @@ Attribute VB_Name = "Actions"
 '
 'Want to execute a program operation?  Call this module.
 '
-'Why does this module exist when PhotoDemon already has the Processor module (which seems to do the
+'Why does this module exist when PhotoPaint already has the Processor module (which seems to do the
 ' same thing)?  Well, they don't actually do the same thing.  PD's Processor module is a very low-level
 ' interface for executing program commands.  It has to manage a ton of special per-function details
 ' like branching for "show dialog" vs "execute action related to dialog".  It has to manage multiple
@@ -20,7 +20,7 @@ Attribute VB_Name = "Actions"
 ' For adjustments and effects, that means displaying their dialog.  This module also launches actions
 ' with no direct processor equivalent, like "switch to tool [x]".
 '
-'PhotoDemon's menus, hotkeys, and search bar all rely on this module for their high-level redirection.
+'PhotoPaint's menus, hotkeys, and search bar all rely on this module for their high-level redirection.
 ' Any new tool (including adjustments, effects, etc) needs to be accessible through this interface,
 ' so that users can do things like bind hotkeys to that action.
 '
@@ -29,7 +29,7 @@ Attribute VB_Name = "Actions"
 ' launching.)  Check the Menus module for additional details.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -42,7 +42,7 @@ Option Explicit
 Public Const COMMAND_FILE_OPEN_RECENT As String = "file_open_recent_"
 Public Const COMMAND_TOOLS_MACRO_RECENT As String = "tools_macro_recent_"
 
-'PhotoDemon actions can be triggered by different places: menu clicks, hotkeys, or searches.  Some actions
+'PhotoPaint actions can be triggered by different places: menu clicks, hotkeys, or searches.  Some actions
 ' behave slightly differently depending on source.  (For example, "Paste to cursor" only works if the
 ' source is a hotkey; if it's a menu or search, a normal Paste action needs to be used instead, because we
 ' don't have a reliable cursor position.)  When calling the Action module, please pass the correct source
@@ -88,7 +88,7 @@ End Function
 ' and it is distinct from PD's Processor module because it validates actions before executing them.  For example -
 ' if you request an operation associated with a menu, this function won't apply that action if the associated menu is
 ' disabled.  Similarly, if you request an operation that requires an open image, this function will ensure an image
-' is open before actually applying that command.  PhotoDemon's central processor does not handle validation (but it
+' is open before actually applying that command.  PhotoPaint's central processor does not handle validation (but it
 ' handles a ton of other complex tasks, like Undo/Redo behavior) so for operations that need to be safely validated,
 ' call *this* function instead.
 '
@@ -1478,13 +1478,13 @@ Private Function Launch_ByName_MenuHelp(ByRef srcMenuName As String, Optional By
     Select Case srcMenuName
     
         Case "help_patreon"
-            Web.OpenURL "https://www.patreon.com/photodemon/overview"
+            Web.OpenURL "https://www.patreon.com/photopaint/overview"
             
         Case "help_donate"
-            Web.OpenURL "https://photodemon.org/donate"
+            Web.OpenURL "https://photopaint.org/donate"
             
         Case "help_forum"
-            Web.OpenURL "https://github.com/tannerhelland/PhotoDemon/discussions"
+            Web.OpenURL "https://github.com/tannerhelland/PhotoPaint/discussions"
             
         Case "help_checkupdates"
             
@@ -1492,19 +1492,19 @@ Private Function Launch_ByName_MenuHelp(ByRef srcMenuName As String, Optional By
             ' When the asynchronous download completes, the downloader will place the completed update file in the /Data/Updates subfolder.
             ' On exit (or subsequent program runs), PD will check for the presence of that file, then proceed accordingly.
             Message "Checking for software updates..."
-            FormMain.RequestAsynchronousDownload "PROGRAM_UPDATE_CHECK_USER", "https://tannerhelland.github.io/PhotoDemon-Updates-v2/", , vbAsyncReadForceUpdate, UserPrefs.GetUpdatePath & "updates.xml"
+            FormMain.RequestAsynchronousDownload "PROGRAM_UPDATE_CHECK_USER", "https://tannerhelland.github.io/PhotoPaint-Updates-v2/", , vbAsyncReadForceUpdate, UserPrefs.GetUpdatePath & "updates.xml"
             
         Case "help_reportbug"
-            Web.OpenURL "https://github.com/tannerhelland/PhotoDemon/issues/new/choose"
+            Web.OpenURL "https://github.com/tannerhelland/PhotoPaint/issues/new/choose"
             
         Case "help_license"
-            Web.OpenURL "https://photodemon.org/license/"
+            Web.OpenURL "https://photopaint.org/license/"
             
         Case "help_sourcecode"
-            Web.OpenURL "https://github.com/tannerhelland/PhotoDemon"
+            Web.OpenURL "https://github.com/tannerhelland/PhotoPaint"
             
         Case "help_website"
-            Web.OpenURL "https://photodemon.org"
+            Web.OpenURL "https://photopaint.org"
         
         Case "help_3rdpartylibs"
             ShowPDDialog vbModal, FormPluginManager

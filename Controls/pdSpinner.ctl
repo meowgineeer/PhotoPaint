@@ -28,14 +28,14 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Spinner (formerly Text+UpDown) custom control
+'PhotoPaint Spinner (formerly Text+UpDown) custom control
 'Copyright 2013-2025 by Tanner Helland
 'Created: 19/April/13
 'Last updated: 15/April/22
 'Last update: add a "before reset" event so controls can suspend behavior accordingly (this is used by the
 '             Effects > Transform > Perspective tool, which resets x/y coordinates in pairs)
 '
-'Software like PhotoDemon requires a lot of controls.  Ideally, every setting should be adjustable by at least
+'Software like PhotoPaint requires a lot of controls.  Ideally, every setting should be adjustable by at least
 ' two mechanisms: direct text entry, and some kind of slider or scroll bar, which allows for a quick method to
 ' make both large and small adjustments to a given parameter.
 '
@@ -714,7 +714,7 @@ Private Sub m_EditBox_Change()
                 tipText = g_Language.TranslateMessage("""%1"" produces an out of range result (%2)." & vbCrLf & "The final value must be between %3 and %4.", m_EditBox.Text, Evaluator.Evaluate(m_EditBox.Text), GetFormattedStringValue(m_Min), GetFormattedStringValue(m_Max))
                 Me.AssignTooltip tipText, "Invalid entry", True
             Else
-                tipText = g_Language.TranslateMessage("PhotoDemon doesn't understand the expression: %1", m_EditBox.Text)
+                tipText = g_Language.TranslateMessage("PhotoPaint doesn't understand the expression: %1", m_EditBox.Text)
                 Me.AssignTooltip tipText, "Invalid entry", True
             End If
             

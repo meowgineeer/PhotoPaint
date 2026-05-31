@@ -12,19 +12,19 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon PSP (PaintShop Pro) Container and Parser
+'PhotoPaint PSP (PaintShop Pro) Container and Parser
 'Copyright 2020-2025 by Tanner Helland
 'Created: 30/December/20
 'Last updated: 04/February/21
 'Last update: get ICC profile embedding working when exporting
 '
 'This class (and its associated pdPSP- child classes) handle import and export of PSP
-' (JASC/Corel Paint Shop Pro) image files.  All code here has been custom-built for PhotoDemon,
+' (JASC/Corel Paint Shop Pro) image files.  All code here has been custom-built for PhotoPaint,
 ' with a particular emphasis on parsing performance.  This class will often outperform PSP's own
 ' file parser, especially on images with vector layers.
 '
 'As with all 3rd-party PSP engines, Paint Shop Pro has many features that don't have direct analogs
-' in PhotoDemon.  Such features are still extracted by this class, but they may not "appear" in the
+' in PhotoPaint.  Such features are still extracted by this class, but they may not "appear" in the
 ' final loaded image.  My ongoing goal is to expand support in this class as various PSP features are
 ' implemented in PD itself.
 '
@@ -36,7 +36,7 @@ Attribute VB_Exposed = False
 ' http://www.telegraphics.com.au/svn/pspformat/trunk
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -128,7 +128,7 @@ Private m_CompositePalette() As RGBQuad, m_CompositePaletteCount As Long
 Private m_ParentPalette() As RGBQuad, m_ParentPaletteCount As Long
 
 'Central layer collection.  The total number of layers is mirrored by the image header, but note
-' that PhotoDemon may choose to "deactivate" layers it doesn't understand - so post-parsing,
+' that PhotoPaint may choose to "deactivate" layers it doesn't understand - so post-parsing,
 ' it's critical to defer to this layer count instead of the one embedded in the image header.
 Private m_LayerCount As Long, m_Layers() As pdPSPLayer
 
@@ -235,7 +235,7 @@ Friend Function LoadPSP(ByRef srcFile As String, ByRef dstImage As pdImage, ByRe
     ' if something goes wrong when reading the composite block.  You can keep parsing
     ' the rest of the image just fine, regardless of composite image state.
     '
-    'With all that said, now that PhotoDemon is perfectly capable of importing individual
+    'With all that said, now that PhotoPaint is perfectly capable of importing individual
     ' PSP layers, it no longer parses the composite block except as a last-resort failsafe
     ' (if it can't find any useable layers, for example), or if you've activated the debug-only
     ' "import merged image as layer" constant at the top of this class.  If those conditions
@@ -265,7 +265,7 @@ Friend Function LoadPSP(ByRef srcFile As String, ByRef dstImage As pdImage, ByRe
     ' get dumped out to the debug log.  This is especially useful when new versions of PaintShop Pro
     ' release, as they often bring new parsing surprises/nightmares.
     If (Me.Warnings_GetCount() > 0) Then
-        PDDebug.LogAction "PhotoDemon's PSP parser generated one or more warnings.  Here is a full list:"
+        PDDebug.LogAction "PhotoPaint's PSP parser generated one or more warnings.  Here is a full list:"
         Me.Warnings_DumpToDebugger
     End If
     

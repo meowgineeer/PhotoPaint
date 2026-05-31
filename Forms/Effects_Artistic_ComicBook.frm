@@ -91,7 +91,7 @@ Attribute VB_Exposed = False
 'Last updated: 29/June/20
 'Last update: switch to real-time bilateral filter for huge performance improvements
 '
-'PhotoDemon has provided a "comic book" effect for a long time, but despite going through
+'PhotoPaint has provided a "comic book" effect for a long time, but despite going through
 ' many incarnations, it always used low-quality, "quick and dirty" approximations.
 '
 'In July '14, this changed, and the entire tool was rethought from the ground up.
@@ -136,7 +136,7 @@ Public Sub fxComicBook(ByVal effectParams As String, Optional ByVal toPreview As
     
     If (Not toPreview) Then Message "Animating image (stage %1 of %2)...", 1, numOfSteps
     
-    'Initiate PhotoDemon's central image handler
+    'Initiate PhotoPaint's central image handler
     Dim dstSA As SafeArray2D
     EffectPrep.PrepImageData dstSA, toPreview, dstPic
     

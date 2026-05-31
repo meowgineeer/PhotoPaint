@@ -7,7 +7,7 @@ Attribute VB_Name = "Plugin_AVIF"
 'Last update: update to the latest libavif (1.2.0)
 '
 'Module for handling all libavif interfacing (via avifdec/enc.exe).  This module is pointless without
-' those exes, which need to be placed in the App/PhotoDemon/Plugins subdirectory.  (PD will automatically
+' those exes, which need to be placed in the App/PhotoPaint/Plugins subdirectory.  (PD will automatically
 ' download these for you if you attempt to interact with AVIF files.)
 '
 'libavif is a free, open-source portable-C implementation of the AV1 AVIF still image extension.
@@ -15,16 +15,16 @@ Attribute VB_Name = "Plugin_AVIF"
 '
 ' https://github.com/AOMediaCodec/libavif
 '
-'PhotoDemon has been designed against v1.2.0 (Feb 2025).  It may not work with other versions.
+'PhotoPaint has been designed against v1.2.0 (Feb 2025).  It may not work with other versions.
 ' Additional documentation regarding the use of libavif is available as part of the official library,
 ' downloadable from https://github.com/AOMediaCodec/libavif.  You can also run the exe files manually
 ' with the -h extension for details on how they work.
 '
-'libavif is available under a BSD license.  Please see the App/PhotoDemon/Plugins/avif-LICENSE.txt file
+'libavif is available under a BSD license.  Please see the App/PhotoPaint/Plugins/avif-LICENSE.txt file
 ' for questions regarding copyright or licensing.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -512,7 +512,7 @@ Public Function CheckAVIFVersionAndOfferUpdates(Optional ByVal targetIsImportLib
     End If
     
     'Still here?  libavif exists in this install.  Let's pull its version and compare it to the expected version
-    ' (for this build of PhotoDemon).
+    ' (for this build of PhotoPaint).
     Dim curVersion As String
     curVersion = Plugin_AVIF.GetVersion(targetIsImportLib)
     
@@ -547,11 +547,11 @@ Public Function PromptForLibraryDownload_AVIF(Optional ByVal targetIsImportLib A
         'Ask the user for permission
         Dim uiMsg As pdString
         Set uiMsg = New pdString
-        uiMsg.AppendLine g_Language.TranslateMessage("AVIF is a modern image format developed by the Alliance for Open Media.  PhotoDemon does not natively support AVIF images, but it can download a free, open-source plugin that permanently enables AVIF support.")
+        uiMsg.AppendLine g_Language.TranslateMessage("AVIF is a modern image format developed by the Alliance for Open Media.  PhotoPaint does not natively support AVIF images, but it can download a free, open-source plugin that permanently enables AVIF support.")
         uiMsg.AppendLineBreak
-        uiMsg.AppendLine g_Language.TranslateMessage("The Alliance for Open Media provides free, open-source 64-bit AVIF encoder and decoder libraries.  These libraries are roughly ~%1 mb each (~%2 mb total).  Once downloaded, they will allow PhotoDemon to import and export AVIF files on any 64-bit system.", 12, 24)
+        uiMsg.AppendLine g_Language.TranslateMessage("The Alliance for Open Media provides free, open-source 64-bit AVIF encoder and decoder libraries.  These libraries are roughly ~%1 mb each (~%2 mb total).  Once downloaded, they will allow PhotoPaint to import and export AVIF files on any 64-bit system.", 12, 24)
         uiMsg.AppendLineBreak
-        uiMsg.Append g_Language.TranslateMessage("Would you like PhotoDemon to download these libraries to your PhotoDemon plugin folder?")
+        uiMsg.Append g_Language.TranslateMessage("Would you like PhotoPaint to download these libraries to your PhotoPaint plugin folder?")
         
         Dim msgReturn As VbMsgBoxResult
         msgReturn = PDMsgBox(uiMsg.ToString, vbInformation Or vbYesNoCancel, "Download required")
@@ -560,9 +560,9 @@ Public Function PromptForLibraryDownload_AVIF(Optional ByVal targetIsImportLib A
             'On a NO response, provide additional feedback.
             If (msgReturn = vbNo) Then
                 uiMsg.Reset
-                uiMsg.AppendLine g_Language.TranslateMessage("PhotoDemon will not download the AVIF libraries at this time.")
+                uiMsg.AppendLine g_Language.TranslateMessage("PhotoPaint will not download the AVIF libraries at this time.")
                 uiMsg.AppendLineBreak
-                uiMsg.AppendLine g_Language.TranslateMessage("To manually enable AVIF support, you can download the latest copies of the free ""%1"" and ""%2"" programs and place them into your PhotoDemon plugin folder:", "avifdec.exe", "avifenc.exe")
+                uiMsg.AppendLine g_Language.TranslateMessage("To manually enable AVIF support, you can download the latest copies of the free ""%1"" and ""%2"" programs and place them into your PhotoPaint plugin folder:", "avifdec.exe", "avifenc.exe")
                 uiMsg.AppendLine PluginManager.GetPluginPath()
                 uiMsg.AppendLineBreak
                 uiMsg.AppendLine g_Language.TranslateMessage("These free libraries are always available at the Alliance for Open Media libavif release page:")
@@ -599,7 +599,7 @@ Private Function DownloadLatestLibAVIF() As Boolean
     
     'Current libavif build is 1.2.0, downloaded from https://github.com/AOMediaCodec/libavif/releases/
     Const EXPECTED_TOTAL_EXTRACT_SIZE As Long = 24539456
-    Const UPDATE_URL As String = "https://github.com/tannerhelland/PhotoDemon-Updates-v2/releases/download/libavif-plugins-1.2.0/libavif-1.2.0.pdz"
+    Const UPDATE_URL As String = "https://github.com/tannerhelland/PhotoPaint-Updates-v2/releases/download/libavif-plugins-1.2.0/libavif-1.2.0.pdz"
     DownloadLatestLibAVIF = Updates.DownloadPluginUpdate(CCP_libavif, UPDATE_URL, EXPECTED_NUM_FILES, EXPECTED_TOTAL_EXTRACT_SIZE)
     
 End Function

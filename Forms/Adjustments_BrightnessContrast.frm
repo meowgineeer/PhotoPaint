@@ -98,7 +98,7 @@ Attribute VB_Exposed = False
 'Created: 2/6/01
 'Last updated: 21/October/22
 'Last update: fix potential overflow due to unintended use of \ instead of /
-'             (see https://github.com/tannerhelland/PhotoDemon/issues/452)
+'             (see https://github.com/tannerhelland/PhotoPaint/issues/452)
 '
 'Basic brightness/contrast handler.  A legacy LUT-based method is provided, but the modern L*a*b* implementation
 ' (via LittleCMS) is preferred.

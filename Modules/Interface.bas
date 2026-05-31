@@ -6,14 +6,14 @@ Attribute VB_Name = "Interface"
 'Last updated: 17/August/17
 'Last update: overhaul PDMsgBox to use an internal renderer
 '
-'Miscellaneous routines related to rendering and handling PhotoDemon's interface.  As the program's complexity has
+'Miscellaneous routines related to rendering and handling PhotoPaint's interface.  As the program's complexity has
 ' increased, so has the need for specialized handling of certain UI elements.
 '
 'Many of the functions in this module rely on subclassing, either directly or through things like PD's window manager.
 ' As such, some functions may operate differently (or not at all) while in the IDE.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -80,7 +80,7 @@ End Enum
     Private Const PDUI_SelectionTransforms = 13, PDUI_LayerTools = 14, PDUI_ICCProfile = 15, PDUI_FileOnDisk = 16
 #End If
 
-'PhotoDemon is designed against pixels at an expected screen resolution of 96 DPI.
+'PhotoPaint is designed against pixels at an expected screen resolution of 96 DPI.
 ' Other DPI settings mess up spacing calculations. To remedy this, we dynamically modify
 ' pixel measurements at run-time, using the current screen resolution as our guide.
 Private m_DPIRatio As Double
@@ -559,7 +559,7 @@ Private Sub SetUIMode_NoImages()
     If (Not g_WindowManager Is Nothing) Then
         g_WindowManager.SetWindowCaptionW FormMain.hWnd, Interface.GetWindowCaption(Nothing)
     Else
-        FormMain.Caption = Updates.GetPhotoDemonNameAndVersion()
+        FormMain.Caption = Updates.GetPhotoPaintNameAndVersion()
     End If
         
     'Ask the canvas to reset itself.  Note that this also covers the status bar area and the image tabstrip, if they were
@@ -1467,7 +1467,7 @@ Public Sub ApplyThemeAndTranslations(ByRef dstForm As Form, Optional ByVal handl
     Dim eControl As Control
     For Each eControl In dstForm.Controls
         
-        'We now want to ignore all built-in VB6 controls.  PhotoDemon doesn't use many of these
+        'We now want to ignore all built-in VB6 controls.  PhotoPaint doesn't use many of these
         ' (menus are the exception) but a few picture boxes may still linger in the project...
         If (TypeOf eControl Is Menu) Then
             
@@ -1491,7 +1491,7 @@ Public Sub ApplyThemeAndTranslations(ByRef dstForm As Form, Optional ByVal handl
             
             ctlThemedOK = False
             
-            'All of PhotoDemon's custom UI controls implement an UpdateAgainstCurrentTheme function.
+            'All of PhotoPaint's custom UI controls implement an UpdateAgainstCurrentTheme function.
             ' This function updates two things:
             ' 1) The control's visual appearance (to reflect any changes to visual themes)
             ' 2) Updating any translatable text against the current translation
@@ -1535,7 +1535,7 @@ Public Sub ReleaseFormTheming(ByRef srcForm As Form)
     
 End Sub
 
-'Given a pdImage object, generate an appropriate caption for the main PhotoDemon window.
+'Given a pdImage object, generate an appropriate caption for the main PhotoPaint window.
 Public Function GetWindowCaption(ByRef srcImage As pdImage, Optional ByVal appendPDInfo As Boolean = True, Optional ByVal doNotAppendImageFormat As Boolean = False) As String
 
     Dim captionBase As String
@@ -1590,13 +1590,13 @@ Public Function GetWindowCaption(ByRef srcImage As pdImage, Optional ByVal appen
     
     End If
     
-    'Append the current PhotoDemon version number and exit
+    'Append the current PhotoPaint version number and exit
     If appendPDInfo Then
         
         If (LenB(captionBase) <> 0) Then
-            GetWindowCaption = captionBase & "  -  " & Updates.GetPhotoDemonNameAndVersion()
+            GetWindowCaption = captionBase & "  -  " & Updates.GetPhotoPaintNameAndVersion()
         Else
-            GetWindowCaption = Updates.GetPhotoDemonNameAndVersion()
+            GetWindowCaption = Updates.GetPhotoPaintNameAndVersion()
         End If
         
         'When devs send me screenshots, it's helpful to see if they're running in the IDE or not, as this can explain some issues

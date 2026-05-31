@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Inpainting (Texture Synthesis) class
+'PhotoPaint Inpainting (Texture Synthesis) class
 'Copyright 2022-2025 by Tanner Helland
 'Created: 21/April/22
 'Last updated: 16/June/22
@@ -33,7 +33,7 @@ Attribute VB_Exposed = False
 'https://gfx.cs.princeton.edu/pubs/Barnes_2009_PAR/patchmatch.pdf
 '
 'Note that both Resynthesizer and PatchMatch have "official" implementations by their original authors,
-' but these implementations are license-incompatible with PhotoDemon.  Argh.
+' but these implementations are license-incompatible with PhotoPaint.  Argh.
 '
 'So I have gone ahead and implemented my own version of Paul's "Resynthesizer" algorithm, as I understand
 ' it from his original paper.  I think the resulting code works pretty damn well, with very favorable
@@ -51,7 +51,7 @@ Attribute VB_Exposed = False
 ' these options to PD as time allows.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -168,7 +168,7 @@ Private m_CauchyMax As Long
 ' are only concerned with finding the most likely match, not relative likelihoods, the Euclidean
 ' distance metric may be simulated in this metric by choosing a very large [sigma]."  The paper
 ' suggests a default value of 30 which makes no sense, so I assume it is meant to be "30 / 256" (~0.12).
-' In PhotoDemon I've bumped the default value up slightly, to 0.15, purely for aesthetic reasons
+' In PhotoPaint I've bumped the default value up slightly, to 0.15, purely for aesthetic reasons
 ' (it looks better in the UI lol).
 Private m_AllowOutliers As Double
 Private Const ALLOW_OUTLIERS_DEFAULT As Double = 0.15
@@ -249,7 +249,7 @@ Private Const RANDOM_CANDIDATES_DEFAULT As Long = 60
 ' look good on their initial synthesis, but the first few pixels were effectively random and must be
 ' reevaluated after more neighbors exist.)
 '
-'The suggested default value in the paper is 0.75.  In PhotoDemon, I've chosen to handle this a little
+'The suggested default value in the paper is 0.75.  In PhotoPaint, I've chosen to handle this a little
 ' differently.  Instead of doing a single pass over the image and then applying the refinement parameter,
 ' my version does *two* passes over the image before applying the refinement parameter.  I've found this
 ' to meaningfully reduce the likelihood of "garbage" patches that match very poorly, by ensuring that
@@ -704,7 +704,7 @@ Private Function InitializeInpainter() As Boolean
     VBHacks.GetHighResTime startTime
     
     'Build an initial look-up table of the central Cauchy distribution.  This table is fixed according
-    ' to differences in pixel values (which for PhotoDemon, are guaranteed to be 8-bit color components).
+    ' to differences in pixel values (which for PhotoPaint, are guaranteed to be 8-bit color components).
     ' Because this distribution requires the expensive Log() operator, we pre-build it.
     Dim i As Long
     If (m_AllowOutliers > 0#) Then
@@ -1301,7 +1301,7 @@ End Sub
 
 'Sort an arbitrary list of coordinates in ascending order.  It's up to the caller to transform their data
 ' into QSEntry format, and rearrange their list according to the final order when this function finishes.
-' (PhotoDemon uses this approach because different coordinate lists may be sorted by this function.)
+' (PhotoPaint uses this approach because different coordinate lists may be sorted by this function.)
 Private Sub OptimizedSort_CoordinateList_Ascending(ByRef sortList() As QSEntry, ByVal numPoints As Long)
 
     'Prep an internal stack (this is faster and more reliable than recursion).  Note that because
@@ -1490,10 +1490,10 @@ Friend Sub SetDefaultParameterValues()
     ' This refinement is thus a percentage value, where e.g. 0.75 means "re-test the first 75% of synthesized
     ' pixels AGAIN after all pixels have been synthesized".
     '
-    'The default value in the original synthesize paper is 0.75.  Note that PhotoDemon, by design, synthesizes
+    'The default value in the original synthesize paper is 0.75.  Note that PhotoPaint, by design, synthesizes
     ' all points TWICE before this value kicks in.  I do this because repeat testing shows a significant
     ' (subjective) quality improvement after revisiting each pixel at least once.  Thus if you have 10,000 pixels
-    ' to synthesize, PhotoDemon will synthesize all 10,000 once, then re-synthesize them AGAIN, and then
+    ' to synthesize, PhotoPaint will synthesize all 10,000 once, then re-synthesize them AGAIN, and then
     ' resynthesize the first e.g. 75% of pixels a third time.
     '
     'This value is used repeatedly, so after e.g. 75% of pixels have been re-synthesized a third time, the first
@@ -1556,7 +1556,7 @@ Private Sub Class_Initialize()
     'Initialize a random number generator
     Set m_Random = New pdRandomize
     
-    'At present, PhotoDemon seeds the inpainter randomly.  You could also allow the user to provide their
+    'At present, PhotoPaint seeds the inpainter randomly.  You could also allow the user to provide their
     ' own random seed, which would ensure identical results every time the function is called (with the
     ' same inputs and mask, obviously).
     m_Random.SetSeed_AutomaticAndRandom

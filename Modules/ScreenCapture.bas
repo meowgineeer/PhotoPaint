@@ -11,7 +11,7 @@ Attribute VB_Name = "ScreenCapture"
 ' in various OS versions.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -81,7 +81,7 @@ Private Declare Function GetWindowPlacement Lib "user32" (ByVal hWnd As Long, By
 Private m_WindowNames As pdStringStack
 Private m_WindowHWnds As pdStringStack
 
-'ShowWindow is used to minimize and restore the PhotoDemon window, if requested.  Using VB's internal .WindowState
+'ShowWindow is used to minimize and restore the PhotoPaint window, if requested.  Using VB's internal .WindowState
 ' command doesn't notify the window manager (I have no idea why) so this necessary to prevent parts of the toolbar
 ' client areas from disappearing upon restoration.
 Private Const SW_SHOWMINIMIZED As Long = &H2
@@ -133,7 +133,7 @@ Public Sub CaptureScreen(ByRef screenCaptureParams As String)
     
     'Set the picture of the form to equal its image
     Dim tmpFilename As String
-    tmpFilename = UserPrefs.GetTempPath & "PhotoDemon Screen Capture.tmpdib"
+    tmpFilename = UserPrefs.GetTempPath & "PhotoPaint Screen Capture.tmpdib"
     
     'Ask the DIB to write out its data to file in PD's internal temporary DIB format
     tmpDIB.WriteToFile tmpFilename, cf_Lz4

@@ -29,7 +29,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Interactive PictureBox Replacement control
+'PhotoPaint Interactive PictureBox Replacement control
 'Copyright 2018-2025 by Tanner Helland
 'Created: 21/March/18
 'Last updated: 12/November/20

@@ -13,7 +13,7 @@ Attribute VB_Name = "Plugin_libdeflate"
 ' - "libdeflate is heavily optimized. It is significantly faster than the zlib library, both for
 '    compression and decompression, and especially on x86 processors."
 '
-'PhotoDemon uses libdeflate for reading/writing DEFLATE, zlib, and gzip data buffers.
+'PhotoPaint uses libdeflate for reading/writing DEFLATE, zlib, and gzip data buffers.
 '
 'In v1.4, libdeflate authors switched to using stdcall builds for their 32-bit Windows builds.  Unfortunately for
 ' me, they reversed this decision several years later in v1.13, so if you check the history of this module on GitHub
@@ -21,7 +21,7 @@ Attribute VB_Name = "Plugin_libdeflate"
 ' callconv-agnostic solution because I never want to rewrite all this code again!
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

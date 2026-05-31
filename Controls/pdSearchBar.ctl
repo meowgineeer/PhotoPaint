@@ -39,11 +39,11 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Search Bar control
+'PhotoPaint Search Bar control
 'Copyright 2019-2025 by Tanner Helland
 'Created: 25/April/19
 'Last updated: 09/January/24
-'Last update: harden against potential errors (see https://github.com/tannerhelland/PhotoDemon/issues/509)
+'Last update: harden against potential errors (see https://github.com/tannerhelland/PhotoPaint/issues/509)
 '
 'This is PD's version of a "search box" - an edit box that raises a neighboring list window with a list
 ' of "hits" that match the current search query.  Search matching is left up to the parent window, which

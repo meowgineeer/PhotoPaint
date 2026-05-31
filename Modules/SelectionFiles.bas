@@ -10,7 +10,7 @@ Attribute VB_Name = "SelectionFiles"
 ' functions will be used primarily for PD's Undo/Redo engine, so performance considerations are paramount.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -44,7 +44,7 @@ Public Function ExportSelectedAreaAsImage() As Boolean
     tmpImage.UpdateSize
     
     'Give the selection a basic filename
-    tmpImage.ImgStorage.AddEntry "OriginalFileName", "PhotoDemon selection"
+    tmpImage.ImgStorage.AddEntry "OriginalFileName", "PhotoPaint selection"
     
     'Get the last "save image" path from the preferences file
     Dim tempPathString As String
@@ -73,7 +73,7 @@ Public Function ExportSelectedAreaAsImage() As Boolean
         tmpImage.SetCurrentFileFormat ImageFormats.GetOutputPDIF(saveFormat - 1)
         
         'Transfer control to the core SaveImage routine, which will handle color depth analysis and actual saving
-        ExportSelectedAreaAsImage = PhotoDemon_SaveImage(tmpImage, sFile, True)
+        ExportSelectedAreaAsImage = PhotoPaint_SaveImage(tmpImage, sFile, True)
         
     Else
         ExportSelectedAreaAsImage = False
@@ -115,7 +115,7 @@ Public Function ExportSelectionMaskAsImage() As Boolean
     tmpImage.UpdateSize
     
     'Give the selection a basic filename
-    tmpImage.ImgStorage.AddEntry "OriginalFileName", g_Language.TranslateMessage("PhotoDemon selection")
+    tmpImage.ImgStorage.AddEntry "OriginalFileName", g_Language.TranslateMessage("PhotoPaint selection")
         
     'Get the last "save image" path from the preferences file
     Dim tempPathString As String
@@ -140,7 +140,7 @@ Public Function ExportSelectionMaskAsImage() As Boolean
         tmpImage.SetCurrentFileFormat ImageFormats.GetOutputPDIF(saveFormat - 1)
                                 
         'Transfer control to the core SaveImage routine, which will handle color depth analysis and actual saving
-        ExportSelectionMaskAsImage = PhotoDemon_SaveImage(tmpImage, sFile, True)
+        ExportSelectionMaskAsImage = PhotoPaint_SaveImage(tmpImage, sFile, True)
         
     Else
         ExportSelectionMaskAsImage = False
@@ -166,7 +166,7 @@ Public Sub LoadSelectionFromFile(ByVal displayDialog As Boolean, Optional ByVal 
         Dim sFile As String
         
         Dim cdFilter As String
-        cdFilter = g_Language.TranslateMessage("PhotoDemon selection") & " (.pds)|*.pds|"
+        cdFilter = g_Language.TranslateMessage("PhotoPaint selection") & " (.pds)|*.pds|"
         cdFilter = cdFilter & g_Language.TranslateMessage("All files") & "|*.*"
         
         Dim cdTitle As String
@@ -188,7 +188,7 @@ Public Sub LoadSelectionFromFile(ByVal displayDialog As Boolean, Optional ByVal 
                 Process "Load selection", False, BuildParamList("selectionpath", sFile), UNDO_Selection
                     
             Else
-                PDMsgBox "An error occurred while attempting to load %1.  Please verify that the file is a valid PhotoDemon selection file.", vbOKOnly Or vbExclamation, "Error", sFile
+                PDMsgBox "An error occurred while attempting to load %1.  Please verify that the file is a valid PhotoPaint selection file.", vbOKOnly Or vbExclamation, "Error", sFile
             End If
             
             'Release the temporary selection object
@@ -231,7 +231,7 @@ Public Sub SaveSelectionToFile()
     Dim sFile As String
     
     Dim cdFilter As String
-    cdFilter = g_Language.TranslateMessage("PhotoDemon selection") & " (.pds)|*.pds"
+    cdFilter = g_Language.TranslateMessage("PhotoPaint selection") & " (.pds)|*.pds"
     
     Dim cdTitle As String
     cdTitle = g_Language.TranslateMessage("Save the current selection")

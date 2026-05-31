@@ -1,5 +1,5 @@
 Attribute VB_Name = "modMain"
-'Note: this file has been modified for use within PhotoDemon.
+'Note: this file has been modified for use within PhotoPaint.
 
 'This module is required for theming via embedded manifest.  Many thanks to LaVolpe for the automated tool that coincides
 ' with this fine piece of code.  Download it yourself at: http://www.vbforums.com/showthread.php?t=606736
@@ -17,7 +17,7 @@ End Type
 Private Declare Function LoadLibrary Lib "kernel32" Alias "LoadLibraryA" (ByVal lpLibFileName As String) As Long
 Private Declare Function FreeLibrary Lib "kernel32" (ByVal hLibModule As Long) As Long
 
-'PhotoDemon starts here.  Main() is necessary as a start point (vs a form) to make sure that theming is implemented
+'PhotoPaint starts here.  Main() is necessary as a start point (vs a form) to make sure that theming is implemented
 ' correctly.  Note that this code is irrelevant within the IDE.
 Public Sub Main()
 
@@ -52,7 +52,7 @@ Public Sub Main()
     ' safe, use On Error Resume Next.
     On Error Resume Next
     
-    'The following block of code prevents XP crashes when VB usercontrols are present in a project (as they are in PhotoDemon)
+    'The following block of code prevents XP crashes when VB usercontrols are present in a project (as they are in PhotoPaint)
     Dim hMod As Long
     hMod = LoadLibrary("shell32.dll")
     InitCommonControlsEx iccex

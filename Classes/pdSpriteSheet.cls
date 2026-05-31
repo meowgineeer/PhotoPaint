@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon spritesheet cache
+'PhotoPaint spritesheet cache
 'Copyright 2018-2025 by Tanner Helland
 'Created: 13/July/18
 'Last updated: 26/August/20
@@ -30,7 +30,7 @@ Attribute VB_Exposed = False
 ' gain anything by storing them here.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

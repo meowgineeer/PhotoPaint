@@ -19,7 +19,7 @@ Attribute VB_Exposed = False
 'Last update: modify File > Revert behavior; it now creates a *new* entry on the Undo stack (similar to Photoshop),
 '             which allows the user to return to previous states even after reverting.
 '
-'PhotoDemon has had Undo/Redo capabilities for a long time.  The first incarnation (way back in 2001) stored a single
+'PhotoPaint has had Undo/Redo capabilities for a long time.  The first incarnation (way back in 2001) stored a single
 ' byte-array copy of the image in RAM, allowing for a lone Undo step if necessary.  Eventually this was converted
 ' to a more robust HDD-based solution, and further updates have tacked on features to (the very poor) original
 ' Undo/Redo framework.
@@ -59,7 +59,7 @@ Attribute VB_Exposed = False
 ' crash (probably), but as expected, Undo/Redo functionality will stop working.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -555,7 +555,7 @@ Friend Sub RestoreUndoData()
     'If (GetUndoTool > -1) Then toolbar_Toolbox.SelectNewTool GetUndoTool
     
     'With all prep work complete, we now need to figure out the most recent diff file that possesses data we need.
-    ' (Remember that PhotoDemon doesn't save a full copy of the image on every Undo action.  Instead, it only saves
+    ' (Remember that PhotoPaint doesn't save a full copy of the image on every Undo action.  Instead, it only saves
     ' the data that has changed.  This makes Undo-ing a bit more complicated, as we sometimes have to revert to a
     ' much earlier state, then "replay" all subsequent steps to arrive at the correct image state.)
     
@@ -1099,7 +1099,7 @@ Friend Sub ClearUndos()
     
 End Sub
 
-'Retrieve a copy of an original, unmodified layer using PhotoDemon's Undo engine.  This is currently used by
+'Retrieve a copy of an original, unmodified layer using PhotoPaint's Undo engine.  This is currently used by
 ' the "Export > Color lookup" feature (which compares current image state to original image state, then tries to
 ' generate a matching 3D LUT defining any changes that have taken place).
 '

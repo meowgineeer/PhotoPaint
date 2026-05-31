@@ -48,7 +48,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Random Number UI control
+'PhotoPaint Random Number UI control
 'Copyright 2018-2025 by Tanner Helland
 'Created: 02/April/18
 'Last updated: 16/August/21

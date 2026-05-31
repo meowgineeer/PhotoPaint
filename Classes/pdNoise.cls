@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Noise Generator
+'PhotoPaint Noise Generator
 'Copyright 2017-2025 by Tanner Helland
 'Created: 17/October/17
 'Last updated: 17/October/17
@@ -28,7 +28,7 @@ Attribute VB_Exposed = False
 ' not much use for them at present (and 3D implementations are significantly slower).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

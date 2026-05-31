@@ -152,7 +152,7 @@ Option Explicit
 Private Sub Form_Load()
 
     btsMultiInstance.AddItem "load into this instance", 0
-    btsMultiInstance.AddItem "load into a new PhotoDemon instance", 1
+    btsMultiInstance.AddItem "load into a new PhotoPaint instance", 1
     
 End Sub
 
@@ -207,7 +207,7 @@ End Function
 Public Sub UpdateAgainstCurrentTheme()
     
     chkToneMapping.AssignTooltip "HDR and RAW images contain more colors than PC screens can physically display.  Before displaying such images, a tone mapping operation must be applied to the original image data."
-    chkSystemReboots.AssignTooltip "If your PC reboots while PhotoDemon is running, PhotoDemon can automatically restore your previous session."
+    chkSystemReboots.AssignTooltip "If your PC reboots while PhotoPaint is running, PhotoPaint can automatically restore your previous session."
     
     Interface.ApplyThemeAndTranslations Me
     

@@ -1,6 +1,6 @@
 Attribute VB_Name = "IconsAndCursors"
 '***************************************************************************
-'PhotoDemon Icon and Cursor Handler
+'PhotoPaint Icon and Cursor Handler
 'Copyright 2012-2025 by Tanner Helland
 'Created: 24/June/12
 'Last updated: 14/December/21
@@ -19,7 +19,7 @@ Attribute VB_Name = "IconsAndCursors"
 ' http://support.microsoft.com/kb/318876
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -138,7 +138,7 @@ Private m_CursorSize As Long
 'PD icon overlay for the task bar icon
 Private m_PDIconOverlay As pdDIB
 
-'Load all the menu icons from PhotoDemon's embedded resource file
+'Load all the menu icons from PhotoPaint's embedded resource file
 Public Sub LoadMenuIcons(Optional ByVal alsoApplyMenuIcons As Boolean = True)
 
     FreeMenuIconCache
@@ -558,7 +558,7 @@ Public Sub InitializeCursors()
 
     ReDim m_customCursorHandles(0) As Long
 
-    'Previously, system cursors were cached here.  This is no longer needed per https://github.com/tannerhelland/PhotoDemon/issues/78
+    'Previously, system cursors were cached here.  This is no longer needed per https://github.com/tannerhelland/PhotoPaint/issues/78
     ' I am leaving this sub in case I need to pre-load tool cursors in the future.
     
     'Note that UnloadAllCursors below is still required, as the program may dynamically generate custom cursors while running, and

@@ -130,7 +130,7 @@ Option Explicit
 ' 1) Photoshop updates layer boundaries to the union of the existing layer and the stroke.
 ' 2) GIMP leaves layer boundaries unchanged, and simply crops the stroke to fit the current layer.
 '
-'PhotoDemon supports both modes.  (Obviously, this is only relevant if a selection is active;
+'PhotoPaint supports both modes.  (Obviously, this is only relevant if a selection is active;
 ' if one is *not* active, we'll stroke the entire layer border as-is, with no boundary changes.)
 Private Enum PD_StrokeBoundary
     sb_UseLayer = 0

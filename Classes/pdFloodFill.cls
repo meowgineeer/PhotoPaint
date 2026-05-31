@@ -12,11 +12,11 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Flood Fill Engine
+'PhotoPaint Flood Fill Engine
 'Copyright 2014-2025 by Tanner Helland
 'Created: 11/October/14
 'Last updated: 11/March/22
-'Last update: fix half-pixel offset when antialiasing is enabled; see https://github.com/tannerhelland/PhotoDemon/issues/395
+'Last update: fix half-pixel offset when antialiasing is enabled; see https://github.com/tannerhelland/PhotoPaint/issues/395
 '
 'This class supplies the flood fill algorithm for a number of different tools in PD (magic wand, bucket fill, etc).
 ' The flood fill approach itself is pretty basic - a stack is used in place of recursion, and a global mapping array
@@ -40,7 +40,7 @@ Attribute VB_Exposed = False
 'Like any array-based tool, this class will be slow inside the IDE.  Please use only when compiled.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

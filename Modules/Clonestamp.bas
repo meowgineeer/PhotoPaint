@@ -10,7 +10,7 @@ Attribute VB_Name = "Tools_Clone"
 ' source overlay is calculated (e.g. instead of a solid fill, it samples from a source image/layer).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -981,7 +981,7 @@ End Sub
 
 'Render the current brush outline to the canvas, using the stored mouse coordinates as the brush's position.
 ' (As of August 2022, Caps Lock can be used to toggle between precision and outline modes; this mimics Photoshop.
-'  See https://github.com/tannerhelland/PhotoDemon/issues/425 for details.)
+'  See https://github.com/tannerhelland/PhotoPaint/issues/425 for details.)
 Public Sub RenderBrushOutline(ByRef targetCanvas As pdCanvas)
     
     'If a brush outline doesn't exist, create one now

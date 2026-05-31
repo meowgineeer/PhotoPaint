@@ -73,9 +73,9 @@ Attribute VB_Exposed = False
 'Last update: add support for WebP as a target format (in addition to existing APNG support)
 '
 'PD can write both animated PNGs and animated WebP files.  These formats are a great fit
-' for animated screen captures (24-bit color!).  PhotoDemon provides a rudimentary screen
+' for animated screen captures (24-bit color!).  PhotoPaint provides a rudimentary screen
 ' recorder that can dump frames directly to either format, or cache them internally for
-' subsequent loading into PhotoDemon (as a generic animated image container which you can then
+' subsequent loading into PhotoPaint (as a generic animated image container which you can then
 ' export however you want, even to GIF with all its limitations).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
@@ -297,7 +297,7 @@ Public Sub ShowDialog(ByVal ptrToParentRect As Long, ByRef listOfSettings As Str
         
     End With
     
-    'Initialize a last-used settings object.  (Because this isn't a "standard" PhotoDemon dialog,
+    'Initialize a last-used settings object.  (Because this isn't a "standard" PhotoPaint dialog,
     ' it doesn't get things like last-used settings for free.)
     Set m_lastUsedSettings = New pdLastUsedSettings
     m_lastUsedSettings.SetParentForm Me

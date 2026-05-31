@@ -22,7 +22,7 @@ Attribute VB_Exposed = False
 ' because animated GIFs require a ton of preprocessing (to optimize animation frames),
 ' so I've moved them to their own home.
 '
-'PhotoDemon automatically optimizes saved GIFs to produce the smallest possible files.
+'PhotoPaint automatically optimizes saved GIFs to produce the smallest possible files.
 ' A variety of optimizations are used, and the encoder tests various strategies to try
 ' and choose the "best" (smallest) solution on each frame.  As you can see from the
 ' size of this module, many many many different optimizations are attempted.
@@ -41,7 +41,7 @@ Attribute VB_Exposed = False
 ' details for that portion of the library.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -439,7 +439,7 @@ Friend Function SaveGIF_ToStream_Animated(ByRef srcPDImage As pdImage, ByRef dst
     'GIF files support a "global palette".  This is a shared palette that any frame can choose to
     ' use (in place of a "local palette").
     
-    'PhotoDemon always writes a global palette, because even if just the first frame uses it,
+    'PhotoPaint always writes a global palette, because even if just the first frame uses it,
     ' there is no increase in file size (as the first frame will simply not provide a local palette).
     ' If, however, the first frame does *not* require a full 256-color palette, we will merge colors
     ' from subsequent frames into the global palette, until we arrive at 256 colors (or until all

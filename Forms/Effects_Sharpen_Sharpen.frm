@@ -73,7 +73,7 @@ Attribute VB_Exposed = False
 ' be inferior to Unsharp Masking - but the tool is much simpler, and for minor sharpening, the results
 ' are often acceptable.
 '
-'The bulk of the work happens in the ApplyConvolutionFilter routine that handles all of PhotoDemon's
+'The bulk of the work happens in the ApplyConvolutionFilter routine that handles all of PhotoPaint's
 ' generic convolution tasks.  All this dialog does is set up the kernel, then pass it to that function.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.

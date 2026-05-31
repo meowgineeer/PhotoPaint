@@ -18,7 +18,7 @@ Attribute VB_Exposed = False
 'Last updated: 13/July/22
 'Last update: copy from PD and replace lib-deflate-based hash with internal VB one
 '
-'PhotoDemon's run-time localization engine has to manage a ton of strings.  Historically, we've just
+'PhotoPaint's run-time localization engine has to manage a ton of strings.  Historically, we've just
 ' pulled strings on-demand from the base XML string.  This is very fast (especially since localization
 ' files are < 500kb), but can we make it faster?  (Spoiler alert: we can!)
 '
@@ -44,7 +44,7 @@ Attribute VB_Exposed = False
 ' table assignment vs slower % ops, improving performance further.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

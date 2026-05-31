@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Countdown Timer (modified wrapper around pdTimer, targeting precise countdowns)
+'PhotoPaint Countdown Timer (modified wrapper around pdTimer, targeting precise countdowns)
 'Copyright 2020-2025 by Tanner Helland
 'Created: 24/July/20
 'Last updated: 24/July/20
@@ -28,7 +28,7 @@ Attribute VB_Exposed = False
 ' take a closer look at using that API instad.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

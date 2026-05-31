@@ -365,9 +365,9 @@ Private Sub Form_Load()
     chkColorManagement(0).AssignTooltip "BPC is primarily relevant in colorimetric rendering intents, where it helps preserve detail in dark (shadow) regions of images.  For most workflows, BPC should be turned ON."
     
     chkColorManagement(1).Value = ColorManagement.UseEmbeddedICCProfiles()
-    chkColorManagement(1).AssignTooltip "Embedded ICC profiles improve color fidelity.  Even if this setting is turned off, PhotoDemon may still use ICC profiles for some tasks (like handling CMYK data)."
+    chkColorManagement(1).AssignTooltip "Embedded ICC profiles improve color fidelity.  Even if this setting is turned off, PhotoPaint may still use ICC profiles for some tasks (like handling CMYK data)."
     chkColorManagement(2).Value = ColorManagement.UseEmbeddedLegacyProfiles()
-    chkColorManagement(2).AssignTooltip "Some image formats support both ICC profiles and their own color management solutions.  PhotoDemon always prefers ICC profiles, but when none are embedded, other color management approaches can be tried."
+    chkColorManagement(2).AssignTooltip "Some image formats support both ICC profiles and their own color management solutions.  PhotoPaint always prefers ICC profiles, but when none are embedded, other color management approaches can be tried."
     
 End Sub
 

@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form frmMain 
    BackColor       =   &H80000005&
-   Caption         =   " PhotoDemon i18n manager"
+   Caption         =   " PhotoPaint i18n manager"
    ClientHeight    =   7590
    ClientLeft      =   120
    ClientTop       =   450
@@ -21,7 +21,7 @@ Begin VB.Form frmMain
    ScaleWidth      =   969
    StartUpPosition =   3  'Windows Default
    Begin VB.CommandButton cmdMergeAll 
-      Caption         =   "2a (Optional) Automatically merge all PhotoDemon localizations against the latest en-US data..."
+      Caption         =   "2a (Optional) Automatically merge all PhotoPaint localizations against the latest en-US data..."
       BeginProperty Font 
          Name            =   "Segoe UI"
          Size            =   9.75
@@ -285,17 +285,17 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Master English Language File (XML) Generator
+'PhotoPaint Master English Language File (XML) Generator
 'Copyright 2013-2022 by Tanner Helland
 'Created: 23/January/13
 'Last updated: 01/August/22
 'Last update: dump a micro "phrase database" alongside the primary en-US file
 '
-'This project is designed to scan through all project files in PhotoDemon, extract any user-facing English text, and compile
+'This project is designed to scan through all project files in PhotoPaint, extract any user-facing English text, and compile
 ' it into an XML file which can be used as the basis for translations into other languages.  It reads the master PhotoPaint.vbp
 ' file, compiles a list of all project files, then analyzes them individually.  Control text is extracted (unless the text is
 ' in an FRX file - in that case the text needs to be manually rewritten so this project can find it).  Message box and
-' progress/status bar text is also extracted, but this project relies on some particular PhotoDemon implementation quirks to
+' progress/status bar text is also extracted, but this project relies on some particular PhotoPaint implementation quirks to
 ' do so.
 '
 'Basic statistics and organization information are added as comments to the final XML file.
@@ -308,7 +308,7 @@ Attribute VB_Exposed = False
 '      As such, the code is pretty ugly.  Organization is minimal.  Read at your own risk.
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-' projects IF you provide attribution.  For more information, please visit http://www.tannerhelland.com/photodemon/#license
+' projects IF you provide attribution.  For more information, please visit http://www.tannerhelland.com/photopaint/#license
 '
 '***************************************************************************
 
@@ -391,14 +391,14 @@ Private Sub cmdEnUsFile_Click()
     Dim cDialog As pdOpenSaveDialog
     Set cDialog = New pdOpenSaveDialog
     
-    'This project should be located in a sub-path of a normal PhotoDemon install.
+    'This project should be located in a sub-path of a normal PhotoPaint install.
     ' We can use shlwapi's PathCanonicalize function to automatically "guess" at the location of PD's
     ' base en-US language file.
     Dim likelyDefaultLocation As String
     If Files.PathCanonicalize(Files.AppPathW() & "..\..", likelyDefaultLocation) Then likelyDefaultLocation = Files.PathAddBackslash(likelyDefaultLocation)
-    likelyDefaultLocation = likelyDefaultLocation & "App\PhotoDemon\Languages\Master\MASTER.xml"
+    likelyDefaultLocation = likelyDefaultLocation & "App\PhotoPaint\Languages\Master\MASTER.xml"
     
-    If cDialog.GetOpenFileName(likelyDefaultLocation, , True, False, "XML - PhotoDemon Language File|*.xml", 1, , "Please select a PhotoDemon language file (XML)", "xml", Me.hWnd) Then
+    If cDialog.GetOpenFileName(likelyDefaultLocation, , True, False, "XML - PhotoPaint Language File|*.xml", 1, , "Please select a PhotoPaint language file (XML)", "xml", Me.hWnd) Then
         Files.FileLoadAsString likelyDefaultLocation, m_AllEnUsText, True
         
         'Remove tabstops, if any exist
@@ -511,7 +511,7 @@ Private Sub cmdMerge_Click()
     Dim fPath As String
     fPath = m_OldLanguagePath
     
-    If cDialog.GetSaveFileName(fPath, , True, "XML - PhotoDemon Language File|*.xml", 1, , "Save the merged language file (XML)", "xml", Me.hWnd) Then
+    If cDialog.GetSaveFileName(fPath, , True, "XML - PhotoPaint Language File|*.xml", 1, , "Save the merged language file (XML)", "xml", Me.hWnd) Then
         
         'Worried about breaking something?  Enable strict overwrite checking:
         'If Files.FileExists(fPath) Then
@@ -645,7 +645,7 @@ Private Sub cmdMergeAll_Click()
     If Files.PathCanonicalize(Files.AppPathW() & "..\..", baseFolder) Then baseFolder = Files.PathAddBackslash(baseFolder)
     
     Dim srcFolder As String
-    srcFolder = baseFolder & "App\PhotoDemon\Languages\"
+    srcFolder = baseFolder & "App\PhotoPaint\Languages\"
     
     'Auto-load the latest master language file and remove tabstops from the text (if any exist)
     Files.FileLoadAsString srcFolder & "Master\MASTER.xml", m_AllEnUsText, True
@@ -728,7 +728,7 @@ Private Sub cmdMergeAll_Click()
                 origText = oldLangXML.GetUniqueTag_String(TAG_NAME_ORIG, vbNullString, phraseLocations(i))
                 translatedText = oldLangXML.GetUniqueTag_String(TAG_NAME_TRNS, vbNullString, phraseLocations(i) + Len(origText))
                 
-                'Old PhotoDemon language files used manually inserted & characters for keyboard accelerators.
+                'Old PhotoPaint language files used manually inserted & characters for keyboard accelerators.
                 ' Accelerators are now handled automatically on a per-language basis.  To ensure work isn't lost
                 ' when upgrading these old files, strip any accelerators from the incoming text.
                 ' (As of 2024, this change is no longer necessary.)
@@ -1048,10 +1048,10 @@ Private Sub cmdOldLanguage_Click()
     ' neighboring folder where language files will be located.
     Dim likelyDefaultLocation As String
     If Files.PathCanonicalize(Files.AppPathW() & "..\..", likelyDefaultLocation) Then likelyDefaultLocation = Files.PathAddBackslash(likelyDefaultLocation)
-    likelyDefaultLocation = likelyDefaultLocation & "App\PhotoDemon\Languages\"
+    likelyDefaultLocation = likelyDefaultLocation & "App\PhotoPaint\Languages\"
     
     Dim tmpLangFile As String
-    If cDialog.GetOpenFileName(tmpLangFile, , True, False, "XML - PhotoDemon Language File|*.xml", 1, likelyDefaultLocation, "Please select a PhotoDemon language file (XML)", "xml", Me.hWnd) Then
+    If cDialog.GetOpenFileName(tmpLangFile, , True, False, "XML - PhotoPaint Language File|*.xml", 1, likelyDefaultLocation, "Please select a PhotoPaint language file (XML)", "xml", Me.hWnd) Then
         
         m_OldLanguagePath = tmpLangFile
         
@@ -1090,7 +1090,7 @@ Private Sub cmdProcess_Click()
     m_outputText.AppendLine vbTab & vbTab & "<langid>en-US</langid>"
     m_outputText.AppendLine vbTab & vbTab & "<langname>English (US) - MASTER COPY</langname>"
     m_outputText.AppendLine vbTab & vbTab & "<langversion>" & m_VersionString & "</langversion>"
-    m_outputText.AppendLine vbTab & vbTab & "<langstatus>Automatically generated from PhotoDemon's source code</langstatus>"
+    m_outputText.AppendLine vbTab & vbTab & "<langstatus>Automatically generated from PhotoPaint's source code</langstatus>"
     m_outputText.AppendLineBreak
     m_outputText.AppendLine vbTab & vbTab & "<author>Tanner Helland</author>"
     m_outputText.AppendLineBreak
@@ -1119,11 +1119,11 @@ Private Sub cmdProcess_Click()
     
     'Proceed with human-readable phrase statistics
     If CBool(chkRemoveDuplicates) Then
-        m_outputText.AppendLine vbTab & "<!-- As of this build, PhotoDemon contains " & m_NumOfPhrasesFound & " phrases. -->"
+        m_outputText.AppendLine vbTab & "<!-- As of this build, PhotoPaint contains " & m_NumOfPhrasesFound & " phrases. -->"
         m_outputText.AppendLine vbTab & "<!-- " & CStr(m_NumOfPhrasesFound - m_NumOfPhrasesWritten) & " are duplicates, so only " & m_NumOfPhrasesWritten & " unique phrases have been written to file. -->"
         m_outputText.AppendLine vbTab & "<!-- These " & m_NumOfPhrasesWritten & " phrases contain approximately " & m_numOfWords & " total words. -->"
     Else
-        m_outputText.AppendLine vbTab & "<!-- As of this build, PhotoDemon contains " & m_NumOfPhrasesWritten & " phrases (including duplicates). -->"
+        m_outputText.AppendLine vbTab & "<!-- As of this build, PhotoPaint contains " & m_NumOfPhrasesWritten & " phrases (including duplicates). -->"
         m_outputText.AppendLine vbTab & "<!-- These " & m_NumOfPhrasesWritten & " phrases contain approximately " & m_numOfWords & " total words. -->"
     End If
     
@@ -1133,9 +1133,9 @@ Private Sub cmdProcess_Click()
     
     'Write the text out to file
     If CBool(chkRemoveDuplicates) Then
-        outputFile = m_VBPPath & "App\PhotoDemon\Languages\Master\MASTER.xml"
+        outputFile = m_VBPPath & "App\PhotoPaint\Languages\Master\MASTER.xml"
     Else
-        outputFile = m_VBPPath & "App\PhotoDemon\Languages\Master\MASTER (with duplicates).xml"
+        outputFile = m_VBPPath & "App\PhotoPaint\Languages\Master\MASTER (with duplicates).xml"
     End If
     
     'We are now going to compare the length of the old file and new file.
@@ -1166,7 +1166,7 @@ Private Sub cmdProcess_Click()
     Set cStream = New pdStream
     
     Dim dbFilePath As String
-    dbFilePath = m_VBPPath & "App\PhotoDemon\Languages\Master\Phrases.db"
+    dbFilePath = m_VBPPath & "App\PhotoPaint\Languages\Master\Phrases.db"
     Files.FileDeleteIfExists dbFilePath
     
     If cStream.StartStream(PD_SM_FileMemoryMapped, PD_SA_ReadWrite, dbFilePath) Then
@@ -1351,7 +1351,7 @@ Private Sub ProcessFile(ByRef srcFile As String)
             processedTextSecondary = FindMsgBoxTitle(fileLines, curLineNumber)
             curPhraseType = pt_MsgBox
             
-        '7) Specific to PhotoDemon - check for action names that may not be present elsewhere
+        '7) Specific to PhotoPaint - check for action names that may not be present elsewhere
         ElseIf InStr(1, curLineText, "Process """) <> 0 Then
             processedText = FindCaptionInQuotes(fileLines, curLineNumber, InStr(1, curLineText, "Process """))
             curPhraseType = pt_ActionName
@@ -1555,7 +1555,7 @@ Private Function AddPhrase(ByRef phraseText As String, ByRef curPhraseType As PD
     
 End Function
 
-'Given a line number and the original file contents, search for a custom PhotoDemon translation request.
+'Given a line number and the original file contents, search for a custom PhotoPaint translation request.
 Private Function FindMessage(ByRef srcLines() As String, ByRef lineNumber As Long, Optional ByVal inReverse As Boolean = False) As String
     
     'Finding the text of the message is tricky, because it may be spliced between multiple quotations.  As an example, I frequently
@@ -1610,7 +1610,7 @@ Private Function FindMessage(ByRef srcLines() As String, ByRef lineNumber As Lon
     
 End Function
 
-'Given a line number and the original file contents, search for a custom PhotoDemon tooltip assignment
+'Given a line number and the original file contents, search for a custom PhotoPaint tooltip assignment
 Private Function FindTooltipMessage(ByRef srcLines() As String, ByRef lineNumber As Long, Optional ByVal inReverse As Boolean = False, Optional ByRef isSecondarySearchNecessary As Boolean) As String
     
     'Finding the text of the message is tricky, because it may be spliced between multiple quotations.  As an example, I frequently
@@ -2007,7 +2007,7 @@ End Function
 'Extract a list of all project files from a VBP file
 Private Sub cmdSelectVBP_Click()
     
-    'This project should be located in a sub-path of a normal PhotoDemon install.
+    'This project should be located in a sub-path of a normal PhotoPaint install.
     ' We can use shlwapi's PathCanonicalize function to automatically "guess" at the location of PD's
     ' base en-US language file.
     Dim likelyDefaultLocation As String
@@ -2115,7 +2115,7 @@ Private Function CountWordsInString(ByVal srcString As String) As Long
 
 End Function
 
-'VB's IsNumeric function can't detect percentage text (e.g. "100%").  PhotoDemon includes text like this,
+'VB's IsNumeric function can't detect percentage text (e.g. "100%").  PhotoPaint includes text like this,
 ' but I don't want that text translated - so manually check for and reject it.
 Private Function IsNumericPercentage(ByVal srcString As String) As Boolean
     
@@ -2215,7 +2215,7 @@ Private Sub Form_Load()
     AddBlacklist "Simplex"
     AddBlacklist "OpenSimplex"
     AddBlacklist "Lab"
-    AddBlacklist "PhotoDemon"
+    AddBlacklist "PhotoPaint"
     AddBlacklist "Hilite"
     AddBlacklist "Laplacian"
     AddBlacklist "Prewitt"
@@ -2236,7 +2236,7 @@ Private Sub Form_Load()
     'If silent mode is activated, automatically "click" the relevant button
     If m_SilentMode Then
     
-        'Load the current PhotoDemon VBP file
+        'Load the current PhotoPaint VBP file
         Call cmdSelectVBP_Click
         
         'Generate a new master English file
@@ -2261,7 +2261,7 @@ Private Function IsBlacklisted(ByRef blString As String) As Boolean
 End Function
 
 'Used to estimate if a given string is an English word or not (where not means a number, standalone punctuation, etc).
-' (PhotoDemon uses this to *VERY* roughly estimate word count in language files.)
+' (PhotoPaint uses this to *VERY* roughly estimate word count in language files.)
 Private Function IsAlpha(ByRef srcString As String) As Boolean
     
     IsAlpha = False

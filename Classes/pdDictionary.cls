@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Dictionary Class
+'PhotoPaint Dictionary Class
 'Copyright 2014-2025 by Tanner Helland
 'Created: 16/October/14
 'Last updated: 06/February/16
@@ -40,7 +40,7 @@ Attribute VB_Exposed = False
 ' class treats keys as case-specific (e.g. "key" and "KEY" would be treated as separate entries).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

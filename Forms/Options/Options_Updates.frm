@@ -126,15 +126,15 @@ Private Sub Form_Load()
     cboUpdates(0).AddItem "weekly", 1
     cboUpdates(0).AddItem "monthly", 2
     cboUpdates(0).AddItem "never (not recommended)", 3
-    cboUpdates(0).AssignTooltip "Because PhotoDemon is a portable application, it can only check for updates when the program is running.  By default, PhotoDemon will check for updates whenever the program is launched, but you can reduce this frequency if desired."
+    cboUpdates(0).AssignTooltip "Because PhotoPaint is a portable application, it can only check for updates when the program is running.  By default, PhotoPaint will check for updates whenever the program is launched, but you can reduce this frequency if desired."
     
     cboUpdates(1).Clear
     cboUpdates(1).AddItem "stable releases", 0
     cboUpdates(1).AddItem "stable and beta releases", 1
     cboUpdates(1).AddItem "stable, beta, and developer releases", 2
-    cboUpdates(1).AssignTooltip "One of the best ways to support PhotoDemon is to help test new releases.  By default, PhotoDemon will suggest both stable and beta releases, but the truly adventurous can also try developer releases.  (Developer releases give you immediate access to the latest program enhancements, but you might encounter some bugs.)"
+    cboUpdates(1).AssignTooltip "One of the best ways to support PhotoPaint is to help test new releases.  By default, PhotoPaint will suggest both stable and beta releases, but the truly adventurous can also try developer releases.  (Developer releases give you immediate access to the latest program enhancements, but you might encounter some bugs.)"
     
-    chkUpdates(0).AssignTooltip "PhotoDemon can notify you when it's ready to apply an update.  This allows you to use the updated version immediately."
+    chkUpdates(0).AssignTooltip "PhotoPaint can notify you when it's ready to apply an update.  This allows you to use the updated version immediately."
     
     'In normal (portable) mode, I like to provide a short explanation of how automatic updates work.
     ' In non-portable mode, however, we don't have write access to our own folder (because the user
@@ -152,11 +152,11 @@ Private Sub Form_Load()
             chkUpdates(i).Enabled = False
         Next i
         
-        lblExplanation.Caption = g_Language.TranslateMessage("You have placed PhotoDemon in a restricted system folder.  Security precautions prevent PhotoDemon from modifying this folder, so automatic updates are now disabled.  To restore them, you must move PhotoDemon to a non-admin folder, like Desktop, Documents, or Downloads." & vbCrLf & vbCrLf & "(If you leave PhotoDemon where it is, please don't forget to visit photopaint.org from time to time to check for new versions.)")
+        lblExplanation.Caption = g_Language.TranslateMessage("You have placed PhotoPaint in a restricted system folder.  Security precautions prevent PhotoPaint from modifying this folder, so automatic updates are now disabled.  To restore them, you must move PhotoPaint to a non-admin folder, like Desktop, Documents, or Downloads." & vbCrLf & vbCrLf & "(If you leave PhotoPaint where it is, please don't forget to visit photopaint.org from time to time to check for new versions.)")
         
     'This is a normal (portable) install.  Populate the network access disclaimer in the "Update" panel.
     Else
-        lblExplanation.Caption = g_Language.TranslateMessage("The developers of PhotoDemon take privacy very seriously, so no information - statistical or otherwise - is uploaded during the update process.  Updates simply involve downloading several small XML files from photopaint.org. These files contain the latest software, plugin, and language version numbers. If updated versions are found, and user preferences allow, the updated files are then downloaded and patched automatically." & vbCrLf & vbCrLf & "If you still choose to disable updates, don't forget to visit photopaint.org from time to time to check for new versions.")
+        lblExplanation.Caption = g_Language.TranslateMessage("The developers of PhotoPaint take privacy very seriously, so no information - statistical or otherwise - is uploaded during the update process.  Updates simply involve downloading several small XML files from photopaint.org. These files contain the latest software, plugin, and language version numbers. If updated versions are found, and user preferences allow, the updated files are then downloaded and patched automatically." & vbCrLf & vbCrLf & "If you still choose to disable updates, don't forget to visit photopaint.org from time to time to check for new versions.")
     End If
     
 End Sub

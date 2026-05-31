@@ -224,7 +224,7 @@ Attribute VB_Exposed = False
 'Last updated: 29/October/21
 'Last update: remove "web-optimized PNG" panel; instead, we're gonna do a full-blown Save for Web tool
 '
-'PhotoDemon ships with a custom-built PNG encoder capable of better performance and compression than
+'PhotoPaint ships with a custom-built PNG encoder capable of better performance and compression than
 ' standard libraries like libPNG.  This means that we can expose a lot of extra options for pro users,
 ' without having to hack up an external library to support all those options.
 '
@@ -381,7 +381,7 @@ Public Sub ShowDialog(Optional ByRef srcImage As pdImage = Nothing)
     cboOptimize.AddItem "single filter: up", 5
     cboOptimize.AddItem "single filter: average", 6
     cboOptimize.AddItem "single filter: paeth", 7
-    cboOptimize.AssignTooltip "PNG files support different compression strategies (called ""filters"").  Smart filter selection produces better compression.  Use the automatic setting to have PhotoDemon test multiple strategies, and automatically select the one that produces the best compression."
+    cboOptimize.AssignTooltip "PNG files support different compression strategies (called ""filters"").  Smart filter selection produces better compression.  Use the automatic setting to have PhotoPaint test multiple strategies, and automatically select the one that produces the best compression."
     cboOptimize.ListIndex = 0
     cboOptimize.SetAutomaticRedraws True, True
     

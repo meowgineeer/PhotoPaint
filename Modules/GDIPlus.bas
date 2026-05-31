@@ -8,7 +8,7 @@ Attribute VB_Name = "GDI_Plus"
 '
 'This interface provides a means for interacting with various GDI+ features.  GDI+ was originally
 ' used as a fallback for image loading and saving if the FreeImage DLL was not found, but over time
-' it has become more and more essential to PhotoDemon .  As of version 7.0, GDI+ is deeply embedded
+' it has become more and more essential to PhotoPaint .  As of version 7.0, GDI+ is deeply embedded
 ' into PD's rendering pipeline, as it's currently the easiest+fastest way to reasmple 32-bpp pixel
 ' data regardless of underlying PC features.  It is also used extensively in rendering PD's custom UI.
 '
@@ -16,7 +16,7 @@ Attribute VB_Name = "GDI_Plus"
 ' http://www.jose.it-berater.org/gdiplus/iframe/index.htm
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -734,7 +734,7 @@ Public Enum GP_StringAlignment
     StringAlignmentCenter = 1
     StringAlignmentFar = 2
     
-    'IMPORTANT NOTE: GDI+ cannot render justified text.  This setting *ONLY* works with PhotoDemon's advanced text renderer.
+    'IMPORTANT NOTE: GDI+ cannot render justified text.  This setting *ONLY* works with PhotoPaint's advanced text renderer.
     StringAlignmentJustify = 3
 End Enum
 
@@ -4298,7 +4298,7 @@ Public Function GDIPlus_ImageSaveToArray(ByVal hImage As Long, ByRef dstArray() 
         ' Then, you would need to copy subsequent parameters into place *after* it.  (But *only* the parameters,
         ' not additional "Count" values.)
         '
-        'Look at PhotoDemon's source code for an example of how to do this.
+        'Look at PhotoPaint's source code for an example of how to do this.
         Dim paramsInUse As Boolean: paramsInUse = False
         Dim tmpEncoderParams As GP_EncoderParameters, tmpConstString As String
         
@@ -4385,7 +4385,7 @@ Public Function GDIPlus_ImageSaveToFile(ByVal hImage As Long, ByVal dstFilename 
         ' Then, you would need to copy subsequent parameters into place *after* it.  (But *only* the parameters,
         ' not additional "Count" values.)
         '
-        'Look at PhotoDemon's source code for an example of how to do this.
+        'Look at PhotoPaint's source code for an example of how to do this.
         Dim paramsInUse As Boolean: paramsInUse = False
         Dim tmpEncoderParams As GP_EncoderParameters, tmpConstString As String
         

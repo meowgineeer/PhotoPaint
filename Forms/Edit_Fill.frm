@@ -130,7 +130,7 @@ Option Explicit
 ' 1) Photoshop updates layer boundaries to the union of the existing layer and the active selection.
 ' 2) GIMP leaves the layer boundaries unchanged.  (Paint.NET does too, implicitly, since all layers are image-sized.)
 '
-'PhotoDemon supports both modes and also adds a 3rd one - cropping the layer to the selection during the fill.
+'PhotoPaint supports both modes and also adds a 3rd one - cropping the layer to the selection during the fill.
 ' (Obviously, these settings are only relevant if a selection is active; if one is *not* active, we'll fill the
 ' entire layer as-is, with no boundary changes.)
 Private Enum PD_FillBoundary

@@ -9,14 +9,14 @@ Attribute VB_Name = "Filters_Natural"
 'Runs all nature-type filters.  Includes water, steel, burn, rainbow, etc.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
 Option Explicit
 
 'Given two DIBs, fill one with a "chrome-filtered" version of the other.
-' Per PhotoDemon convention, this function will return a non-zero value if successful, and 0 if canceled.
+' Per PhotoPaint convention, this function will return a non-zero value if successful, and 0 if canceled.
 ' This operation is performed in-place, so no separate destination DIB is required.
 Public Function GetChromeDIB(ByRef srcDIB As pdDIB, ByVal steelDetail As Long, ByVal steelSmoothness As Double, Optional ByVal shadowColor As Long = vbBlack, Optional ByVal highlightColor As Long = vbWhite, Optional ByVal suppressMessages As Boolean = False, Optional ByVal modifyProgBarMax As Long = -1, Optional ByVal modifyProgBarOffset As Long = 0) As Long
     

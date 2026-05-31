@@ -43,7 +43,7 @@ Attribute VB_Exposed = False
 '   stream data directly to a file on persistent media, without requiring a matching in-memory copy.
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-' projects IF you provide attribution.  For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution.  For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -896,7 +896,7 @@ End Function
 'If (n) bytes are not available, the buffer will automatically be resized to ensure at least (n) bytes are available.
 ' (Note that allocations are likely to be larger than the requested amount, for performance reasons.)
 '
-'This function is currently designed against PhotoDemon's unique needs, where stream objects tend to wrap very large
+'This function is currently designed against PhotoPaint's unique needs, where stream objects tend to wrap very large
 ' targets (like image files).  If you only use this class for very small streams, you may want to change the allocation
 ' strategy to better support tiny objects.  (Also, you'll want to look at the .StartStream function - by default,
 ' memory streams are allocated as 4k to start.  That may be too big for something like a string builder.)

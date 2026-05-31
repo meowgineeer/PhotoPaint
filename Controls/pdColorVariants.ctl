@@ -28,7 +28,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon "Color Variants" color selector
+'PhotoPaint "Color Variants" color selector
 'Copyright 2015-2025 by Tanner Helland
 'Created: 22/October/15
 'Last updated: 23/October/15

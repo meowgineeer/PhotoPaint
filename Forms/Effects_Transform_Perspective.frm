@@ -279,7 +279,7 @@ Attribute VB_Exposed = False
 'Copyright 2013-2025 by Tanner Helland
 'Created: 08/April/13
 'Last updated: 02/November/22
-'Last update: new custom foreshortening support (see https://github.com/tannerhelland/PhotoDemon/issues/454)
+'Last update: new custom foreshortening support (see https://github.com/tannerhelland/PhotoPaint/issues/454)
 '
 'This tool allows the user to remap their image (or layer) to any arbitrary quadrilateral.  The code is
 ' fairly standard linear algebra, as a series of equations must be solved to generate the homography matrix
@@ -288,7 +288,7 @@ Attribute VB_Exposed = False
 '
 ' https://en.wikipedia.org/wiki/Homography
 '
-'As with all distort tools in PhotoDemon, reverse-mapping plus supersampling is supported for high-quality
+'As with all distort tools in PhotoPaint, reverse-mapping plus supersampling is supported for high-quality
 ' antialiasing.  A "bonus" simpler remapping function is also provided for generating the on-screen preview
 ' of the effect; this may be a more useful reference for beginners, although it only operates at a fixed
 ' quality with much more limited processing options.

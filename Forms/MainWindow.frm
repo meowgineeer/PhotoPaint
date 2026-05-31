@@ -2,7 +2,7 @@ VERSION 5.00
 Begin VB.Form FormMain 
    Appearance      =   0  'Flat
    BackColor       =   &H80000005&
-   Caption         =   "PhotoDemon by Tanner Helland - www.photopaint.org"
+   Caption         =   "PhotoPaint by Tanner Helland - www.photopaint.org"
    ClientHeight    =   11130
    ClientLeft      =   120
    ClientTop       =   765
@@ -1944,19 +1944,19 @@ Begin VB.Form FormMain
          Index           =   6
       End
       Begin VB.Menu MnuHelp 
-         Caption         =   "PhotoDemon forum..."
+         Caption         =   "PhotoPaint forum..."
          Index           =   7
       End
       Begin VB.Menu MnuHelp 
-         Caption         =   "PhotoDemon license and terms of use..."
+         Caption         =   "PhotoPaint license and terms of use..."
          Index           =   8
       End
       Begin VB.Menu MnuHelp 
-         Caption         =   "PhotoDemon source code..."
+         Caption         =   "PhotoPaint source code..."
          Index           =   9
       End
       Begin VB.Menu MnuHelp 
-         Caption         =   "PhotoDemon website..."
+         Caption         =   "PhotoPaint website..."
          Index           =   10
       End
       Begin VB.Menu MnuHelp 
@@ -1982,24 +1982,24 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-'PhotoDemon is Copyright 1999-2025 by Tanner Helland, tannerhelland.com
+'PhotoPaint is Copyright 1999-2025 by Tanner Helland, tannerhelland.com
 '
-'PhotoDemon's INSTALL file provides important information for developers:
-' https://github.com/tannerhelland/PhotoDemon/blob/master/INSTALL.md
+'PhotoPaint's INSTALL file provides important information for developers:
+' https://github.com/tannerhelland/PhotoPaint/blob/master/INSTALL.md
 '
-'PhotoDemon's LICENSE file provides important information on code licensing and redistribution:
-' https://github.com/tannerhelland/PhotoDemon/blob/master/LICENSE.md
+'PhotoPaint's LICENSE file provides important information on code licensing and redistribution:
+' https://github.com/tannerhelland/PhotoPaint/blob/master/LICENSE.md
 '
-'For further information, visit https://photopaint.org or https://github.com/tannerhelland/PhotoDemon
+'For further information, visit https://photopaint.org or https://github.com/tannerhelland/PhotoPaint
 '
 '***************************************************************************
-'Primary PhotoDemon Interface
+'Primary PhotoPaint Interface
 'Copyright 2002-2025 by Tanner Helland
 'Created: 15/September/02
 'Last updated: 06/October/21
 'Last update: remove all hotkey code - it's now handled elsewhere!
 '
-'This is PhotoDemon's main window.  In actuality, it contains relatively little code.  Its primary purpose
+'This is PhotoPaint's main window.  In actuality, it contains relatively little code.  Its primary purpose
 ' is sending parameters to other, more interesting sections of the program.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
@@ -2031,14 +2031,14 @@ Attribute m_FocusDetector.VB_VarHelpID = -1
 'FormMain is loaded by PDMain.Main().  Look there for the *true* start of the program.
 Private Sub Form_Load()
     
-    'PhotoDemon is always developed with the VB6 IDE set to "Break on All Errors"
+    'PhotoPaint is always developed with the VB6 IDE set to "Break on All Errors"
     ' (Tools > Options > General > Error Trapping > Break on All Errors)
     '
     'VB6-raised errors are *never* intended behavior in PhotoPaint.  The program is designed to check
     ' potential problem-states in advance, and deal with them preemptively instead of plowing ahead
     ' and waiting for errors to raise.  Built-in VB6 error handling constructs exist only as an
     ' absolute last resort, and they are only used in a select few places - like here, where I've
-    ' included an error clause in case new developers want to "play around" with PhotoDemon and
+    ' included an error clause in case new developers want to "play around" with PhotoPaint and
     ' accidentally break something.
     '
     'From this point forward in the program, do not rely on VB6 error handling.  Validate incoming
@@ -2054,9 +2054,9 @@ Private Sub Form_Load()
     If PDMain.ContinueLoadingProgram(suspendAdditionalMessages) Then
         
         'With the program successfully initialized, we now need to (optionally) start listening
-        ' for other active PhotoDemon sessions.  The user can set an option (in Tools > Options)
-        ' to only allow one PhotoDemon instance at a time.  Attempting to load an image into a
-        ' new PhotoDemon instance will instead route that image here, to this instance.
+        ' for other active PhotoPaint sessions.  The user can set an option (in Tools > Options)
+        ' to only allow one PhotoPaint instance at a time.  Attempting to load an image into a
+        ' new PhotoPaint instance will instead route that image here, to this instance.
         '
         '(Note that this check *also* occurs in the IDE, contingent on a compile-time constant
         ' in the Mutex module.)
@@ -2071,7 +2071,7 @@ Private Sub Form_Load()
             Set m_SessionStream = New pdStream
             m_SessionStream.StartStream PD_SM_MemoryBacked, PD_SA_ReadWrite
             
-            'Start listening for other PhotoDemon sessions.  (Note that this function will
+            'Start listening for other PhotoPaint sessions.  (Note that this function will
             ' check the user's preference before initializing single-session mode, but we
             ' initialize the session stream in advance in case the user changes the option
             ' mid-session - we'll already have everything ready to go for them!)
@@ -2143,7 +2143,7 @@ Private Sub Form_Load()
         '*************************************************************************************************************************************
         
         'Update checks only work in (default) portable mode, because we require write access to our
-        ' own folder.  Note that PhotoDemon will still attempt to run even if the user places us in
+        ' own folder.  Note that PhotoPaint will still attempt to run even if the user places us in
         ' a restricted folder (e.g. /Program Files), but we suspend updates and silently remap PD's
         ' user folder to the local Users folder instead.
         If (Not UserPrefs.IsNonPortableModeActive()) Then Updates.StandardUpdateChecks
@@ -2214,7 +2214,7 @@ FormMainLoadError:
         ' a plain English error message, then terminate the program.
         If (Not suspendAdditionalMessages) Then
             Dim tmpMsg As String, tmpTitle As String
-            tmpMsg = "PhotoDemon has experienced a critical startup error." & vbCrLf & vbCrLf & "This can occur when the application is placed in a restricted system folder, like C:\Program Files\ or C:\Windows\.  Because PhotoDemon is a portable application, security precautions require it to operate from a non-system folder, like Desktop, Documents, or Downloads.  Please relocate the program to one of these folders, then try again." & vbCrLf & vbCrLf & "(The application will now close.)"
+            tmpMsg = "PhotoPaint has experienced a critical startup error." & vbCrLf & vbCrLf & "This can occur when the application is placed in a restricted system folder, like C:\Program Files\ or C:\Windows\.  Because PhotoPaint is a portable application, security precautions require it to operate from a non-system folder, like Desktop, Documents, or Downloads.  Please relocate the program to one of these folders, then try again." & vbCrLf & vbCrLf & "(The application will now close.)"
             tmpTitle = "Startup failure"
             MsgBox tmpMsg, vbOKOnly + vbCritical, tmpTitle
         End If
@@ -2516,11 +2516,11 @@ Private Sub AsyncDownloader_FinishedOneItem(ByVal downloadSuccessful As Boolean,
             If Strings.StringsEqual(entryKey, "PROGRAM_UPDATE_CHECK_USER", True) Then
                 
                 If updateAvailable Then
-                    Message "A new version of PhotoDemon is available.  The update is automatically processing in the background..."
-                    PDMsgBox "A new version of PhotoDemon is available!" & vbCrLf & vbCrLf & "The update is automatically processing in the background.  You will receive a new notification when it completes.", vbOKOnly Or vbInformation, "PhotoDemon Updates", App.Major, App.Minor, App.Revision
+                    Message "A new version of PhotoPaint is available.  The update is automatically processing in the background..."
+                    PDMsgBox "A new version of PhotoPaint is available!" & vbCrLf & vbCrLf & "The update is automatically processing in the background.  You will receive a new notification when it completes.", vbOKOnly Or vbInformation, "PhotoPaint Updates", App.Major, App.Minor, App.Revision
                 Else
-                    Message "This copy of PhotoDemon is up to date."
-                    PDMsgBox "This copy of PhotoDemon is the newest version available." & vbCrLf & vbCrLf & "(Current version: %1.%2.%3)", vbOKOnly Or vbInformation, "PhotoDemon Updates", App.Major, App.Minor, App.Revision
+                    Message "This copy of PhotoPaint is up to date."
+                    PDMsgBox "This copy of PhotoPaint is the newest version available." & vbCrLf & vbCrLf & "(Current version: %1.%2.%3)", vbOKOnly Or vbInformation, "PhotoPaint Updates", App.Major, App.Minor, App.Revision
                 End If
                 
                 'If the update managed to download while the reader was staring at the message box,
@@ -2541,13 +2541,13 @@ Private Sub AsyncDownloader_FinishedOneItem(ByVal downloadSuccessful As Boolean,
                 
                 Dim xpErrorMsg As pdString
                 Set xpErrorMsg = New pdString
-                xpErrorMsg.AppendLine "Unfortunately, PhotoDemon is unable to check for updates.  This copy of Windows lacks the necessary security protocol (TLS 1.2) to securely connect to the update server."
+                xpErrorMsg.AppendLine "Unfortunately, PhotoPaint is unable to check for updates.  This copy of Windows lacks the necessary security protocol (TLS 1.2) to securely connect to the update server."
                 xpErrorMsg.AppendLineBreak
-                xpErrorMsg.AppendLine "To protect your privacy and safety, PhotoDemon will not auto-update without a secure connection.  If you are using Windows 7 or later, please run Windows Update to ensure that all security patches have been applied to this PC."
+                xpErrorMsg.AppendLine "To protect your privacy and safety, PhotoPaint will not auto-update without a secure connection.  If you are using Windows 7 or later, please run Windows Update to ensure that all security patches have been applied to this PC."
                 xpErrorMsg.AppendLineBreak
-                xpErrorMsg.AppendLine "If you are using Windows XP, Microsoft has unfortunately chosen not to provide an update with these security features.  You will need to manually download new versions of PhotoDemon from photopaint.org using a secure 3rd-party web browser (like Mozilla Firefox)."
+                xpErrorMsg.AppendLine "If you are using Windows XP, Microsoft has unfortunately chosen not to provide an update with these security features.  You will need to manually download new versions of PhotoPaint from photopaint.org using a secure 3rd-party web browser (like Mozilla Firefox)."
                 xpErrorMsg.AppendLineBreak
-                xpErrorMsg.Append "(To prevent this message from interrupting you again, PhotoDemon will now deactivate automatic updates.  You can always reactivate this feature from the Tools > Options menu.)"
+                xpErrorMsg.Append "(To prevent this message from interrupting you again, PhotoPaint will now deactivate automatic updates.  You can always reactivate this feature from the Tools > Options menu.)"
                 UserPrefs.SetPref_Long "Updates", "Update Frequency", PDUF_NEVER
                 PDMsgBox xpErrorMsg.ToString(), vbInformation Or vbOKOnly Or vbApplicationModal, "Updates unavailable"
                 

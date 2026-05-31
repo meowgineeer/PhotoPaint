@@ -1,12 +1,12 @@
 Attribute VB_Name = "Fonts"
 '***************************************************************************
-'PhotoDemon Font Manager
+'PhotoPaint Font Manager
 'Copyright 2013-2025 by Tanner Helland
 'Created: 31/May/13
 'Last updated: 07/April/25
 'Last update: add support for rendering from custom user font files (never installed!) at run-time
 '
-'For many years, PhotoDemon has used the pdFont class for GDI text rendering.  Unfortunately, that class
+'For many years, PhotoPaint has used the pdFont class for GDI text rendering.  Unfortunately, that class
 ' was designed before I knew much about GDI font management, and it has some sketchy design considerations
 ' that make it a poor fit for PD's text tool.
 '
@@ -17,7 +17,7 @@ Attribute VB_Name = "Fonts"
 'Obviously, this class relies heavily on WAPI.  Functions are documented to the best of my knowledge and ability.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -7,26 +7,26 @@ Attribute VB_Name = "Plugin_DDS"
 'Last update: continued workarounds for lack of output file parameters in texconv
 '
 'Module for handling all DirectXTex interfacing (via texconv.exe).  This module is pointless without
-' that exe, which needs to be placed in the App/PhotoDemon/Plugins subdirectory.
+' that exe, which needs to be placed in the App/PhotoPaint/Plugins subdirectory.
 '
 'DirectXTex is a free, open-source, Microsoft-sponsored interface for DDS (DirectDraw Surface) texture files.
 ' You can learn more about it here:
 '
 ' https://github.com/microsoft/DirectXTex
 '
-'PhotoDemon was designed against the October 2024 release, which is the last release to support Win 7.
+'PhotoPaint was designed against the October 2024 release, which is the last release to support Win 7.
 ' It may also work with newer (or older) versions.  You can also run the exe file manually with the -h
 ' extension for (extensive) details on how it works.
 '
-'DirectXTex is available under an MIT license.  Please see the App/PhotoDemon/Plugins/DirectXTex-LICENSE.txt
+'DirectXTex is available under an MIT license.  Please see the App/PhotoPaint/Plugins/DirectXTex-LICENSE.txt
 ' file for questions regarding copyright or licensing.
 '
 'Thank you also to Nicholas Hayes (https://github.com/0xC0000054), author of Paint.NET's DDS plugin
 ' (https://github.com/0xC0000054/pdn-ddsfiletype-plus), who first pointed me to DirectXTex and whose work
-' export dialog features I shamelessly copied when building PhotoDemon's DDS export dialog.
+' export dialog features I shamelessly copied when building PhotoPaint's DDS export dialog.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

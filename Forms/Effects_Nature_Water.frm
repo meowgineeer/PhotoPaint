@@ -111,7 +111,7 @@ Attribute VB_Exposed = False
 'Last updated: 18/October/17
 'Last update: created dedicated UI, expose more options to the user
 '
-'PhotoDemon has always provided some sort of silly "underwater" effect.
+'PhotoPaint has always provided some sort of silly "underwater" effect.
 '
 'In 7.0, the filter was expanded to provide a full UI and user-controllable parameters.
 '

@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Display Device Manager (parent class)
+'PhotoPaint Display Device Manager (parent class)
 'Copyright 2012-2025 by Tanner Helland
 'Created: 12/November/2012
 'Last updated: 18/September/15
@@ -28,7 +28,7 @@ Attribute VB_Exposed = False
 ' devices, particularly in a multiple-display environment.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

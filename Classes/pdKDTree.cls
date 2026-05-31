@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon KD-Tree for fast palette matching
+'PhotoPaint KD-Tree for fast palette matching
 'Copyright 2018-2025 by Tanner Helland
 'Created: 28/January/18
 'Last updated: 15/June/22
@@ -40,7 +40,7 @@ Attribute VB_Exposed = False
 ' could provide meaningful perf improvements without some of the restrictions of our current Voronoi implementation.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

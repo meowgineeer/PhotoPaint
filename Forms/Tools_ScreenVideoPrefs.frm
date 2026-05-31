@@ -35,7 +35,7 @@ Begin VB.Form FormScreenVideoPrefs
       Width           =   5655
       _ExtentX        =   9975
       _ExtentY        =   661
-      Caption         =   "open in PhotoDemon (for further editing)"
+      Caption         =   "open in PhotoPaint (for further editing)"
    End
    Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
@@ -214,7 +214,7 @@ Attribute VB_Exposed = False
 'As of 2021, animated PNG (APNG) and WebP are supported as recording targets.  GIF is not
 ' supported due to performance issues and poor quality (and frankly, better alternatives like
 ' LiceCAP).  If you *really* need an animated GIF, select the option to import the frames directly
-' into PhotoDemon after recording; from there, you can save as an animated GIF (although this is not
+' into PhotoPaint after recording; from there, you can save as an animated GIF (although this is not
 ' recommended since the other formats will produce better results with smaller file sizes).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
@@ -242,7 +242,7 @@ Private Sub cmdBar_OKClick()
     'Because this dialog is modal, it needs to be hidden before we invoke a modeless dialog
     Me.Hide
     
-    'Also hide the main PhotoDemon window
+    'Also hide the main PhotoPaint window
     FormMain.WindowState = vbMinimized
     
     'The loop setting is a little weird.

@@ -7,7 +7,7 @@ Attribute VB_Name = "VBHacks"
 'Last update: add support for window subclassing via built-in WAPI functions; I'm migrating PD to this faster
 ' (and safer) alternative instead of the old-school cSelfSubHookCallback approach.
 '
-'PhotoDemon relies on a lot of "not officially sanctioned" VB6 behavior to enable various optimizations and C-style
+'PhotoPaint relies on a lot of "not officially sanctioned" VB6 behavior to enable various optimizations and C-style
 ' code techniques. If a function's primary purpose is a VB6-specific workaround, I prefer to move it here, so I
 ' don't clutter up purposeful modules with obscure, VB-specific hackery.
 '
@@ -19,7 +19,7 @@ Attribute VB_Name = "VBHacks"
 ' Thank you, Karl!
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-' projects IF you provide attribution.  For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution.  For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 

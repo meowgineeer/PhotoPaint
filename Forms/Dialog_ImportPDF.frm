@@ -240,7 +240,7 @@ Attribute VB_Exposed = False
 'Last update: fix crash on setting focus to invalid entries in the "page range" edit box
 '             (needed if the user enteres an invalid page range then switches to a different panel)
 '
-'Like Photoshop and GIMP (and probably others), PhotoDemon allows users to set their own PDF resolution,
+'Like Photoshop and GIMP (and probably others), PhotoPaint allows users to set their own PDF resolution,
 ' image size, pages-to-import, and various other PDF-specific features at import-time.  This dialog
 ' provides a UI for any custom settings.
 '

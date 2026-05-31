@@ -108,7 +108,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Debug Window
+'PhotoPaint Debug Window
 'Copyright 2014-2016 by Tanner Helland
 'Created: 30/October/14
 'Last updated: 30/October/14

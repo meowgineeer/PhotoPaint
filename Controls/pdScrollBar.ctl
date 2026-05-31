@@ -31,13 +31,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Scrollbar control
+'PhotoPaint Scrollbar control
 'Copyright 2015-2025 by Tanner Helland
 'Created: 07/October/15
 'Last updated: 29/May/19
 'Last update: switch to pdPopupMenu for right-clicks; this allows for localization (finally)
 '
-'In a surprise to precisely no one, PhotoDemon has some unique needs when it comes to user controls - needs that
+'In a surprise to precisely no one, PhotoPaint has some unique needs when it comes to user controls - needs that
 ' the intrinsic VB controls can't handle.  These range from the obnoxious (lack of an "autosize" property for
 ' anything but labels) to the critical (no Unicode support).
 '
@@ -77,7 +77,7 @@ Public Event LostFocusAPI()
 
 'To enable specialized behavior of the ESC key on the primary canvas scrollbars, we also raise a special
 ' "system" key event IFF the scrollbar is not sited on a modal dialog.
-' (For additional details, see https://github.com/tannerhelland/PhotoDemon/issues/476 )
+' (For additional details, see https://github.com/tannerhelland/PhotoPaint/issues/476 )
 Public Event KeyDownSystem(ByVal Shift As ShiftConstants, ByVal whichSysKey As PD_NavigationKey, ByRef markEventHandled As Boolean)
 
 'If the mouse is currently INSIDE the control, this will be set to TRUE; this affects control rendering
@@ -792,7 +792,7 @@ End Sub
 
 'Mousewheel zoom (Ctrl+scroll) isn't a relevant scroll bar command.  If we receive a zoom event, assume the user wants it
 ' relayed to the currently active canvas (with appropriate checks for viewport unavailability - e.g. an active modal dialog).
-' This change addresses https://github.com/tannerhelland/PhotoDemon/issues/476
+' This change addresses https://github.com/tannerhelland/PhotoPaint/issues/476
 Private Sub ucSupport_MouseWheelZoom(ByVal Button As PDMouseButtonConstants, ByVal Shift As ShiftConstants, ByVal x As Long, ByVal y As Long, ByVal zoomAmount As Double)
     
     'If a modal dialog is active, disregard

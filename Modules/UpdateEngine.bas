@@ -6,13 +6,13 @@ Attribute VB_Name = "Updates"
 'Last updated: 02/April/24
 'Last update: rework to prep for a more rapid release schedule (using year.month version numbers)
 '
-'This module includes support functions for determining if a new version of PhotoDemon is available
+'This module includes support functions for determining if a new version of PhotoPaint is available
 ' for automatic patching.
 '
 'IMPORTANT NOTE: this module doesn't do the actual updating (e.g. overwriting program files); it just
 ' CHECKS for updates.  Patching is handled by a separate exe.
 '
-'As of March 2015, this module has been completely overhauled to support live-patching of PhotoDemon
+'As of March 2015, this module has been completely overhauled to support live-patching of PhotoPaint
 ' and its various support files (plugins, languages, etc).  Various bits of update code have been moved
 ' into the new update support app in the /Support folder.  The use of a separate patching app greatly
 ' simplifies things like updating in-use binary files.
@@ -22,7 +22,7 @@ Attribute VB_Name = "Updates"
 ' 'Options' menu.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -158,9 +158,9 @@ DontDoUpdates:
     
 End Function
 
-'tl;dr: given an XML report from photodemon.org, initiate a program update package download, as necessary.
+'tl;dr: given an XML report from photopaint.org, initiate a program update package download, as necessary.
 '
-'Long explanation: this function checks to see if PhotoDemon.exe is out of date against the current
+'Long explanation: this function checks to see if PhotoPaint.exe is out of date against the current
 ' update track (stable, beta, or nightly, per the current user preference).  If the .exe *is* out of date,
 ' the latest update package will be downloaded.
 '
@@ -210,7 +210,7 @@ Public Function ProcessProgramUpdateFile(ByRef srcXML As String) As Boolean
     'We start with the current PD version as a baseline.  If newer update targets are found,
     ' this string will be updated with a newer version number, instead.
     Dim curVersionMatch As String
-    curVersionMatch = GetPhotoDemonVersionCanonical()
+    curVersionMatch = GetPhotoPaintVersionCanonical()
     
     'If you want to test against random version numbers, feel free to plug in a custom test version number...
     'curVersionMatch = "6.4.0"
@@ -219,7 +219,7 @@ Public Function ProcessProgramUpdateFile(ByRef srcXML As String) As Boolean
     Dim newPDVersionString As String
         
     'The new update file is (literally) just the index.html page of PD's GitHub Pages update server
-    ' (https://tannerhelland.github.io/PhotoDemon-Updates-v2/).
+    ' (https://tannerhelland.github.io/PhotoPaint-Updates-v2/).
     '
     'We want to compare against the specific release numbers listed on that page.
     
@@ -244,7 +244,7 @@ Public Function ProcessProgramUpdateFile(ByRef srcXML As String) As Boolean
         If (tagStartPos <> 0) And (tagEndPos <> 0) And (tagEndPos > tagStartPos) Then
             
             newPDVersionString = Mid$(srcXML, tagStartPos, tagEndPos - tagStartPos)
-            InternalDebugMsg "Update track " & i & " reports version " & newPDVersionString & " (our version: " & GetPhotoDemonVersionCanonical() & ")", "ProcessProgramUpdateFile"
+            InternalDebugMsg "Update track " & i & " reports version " & newPDVersionString & " (our version: " & GetPhotoPaintVersionCanonical() & ")", "ProcessProgramUpdateFile"
             
             'If this value is newer than our current update target, mark it and proceed.  Note that this approach gives
             ' us the highest possible update target from all available/enabled update tracks.
@@ -309,7 +309,7 @@ Public Function ProcessProgramUpdateFile(ByRef srcXML As String) As Boolean
         
         'Construct a URL that matches the selected update track.  GitHub currently hosts PD's update downloads.
         Dim updateURL As String
-        updateURL = "https://tannerhelland.github.io/PhotoDemon-Updates-v2/auto/"
+        updateURL = "https://tannerhelland.github.io/PhotoPaint-Updates-v2/auto/"
         
         Select Case trackWithValidUpdate
         
@@ -525,7 +525,7 @@ Public Sub StandardUpdateChecks()
         ' When the asynchronous download completes, the downloader will place the completed update file in the /Data/Updates subfolder.
         ' On exit (or subsequent program runs), PD will check for the presence of that file, then proceed accordingly.
         Dim srcPath As String
-        srcPath = "https://tannerhelland.github.io/PhotoDemon-Updates-v2/"
+        srcPath = "https://tannerhelland.github.io/PhotoPaint-Updates-v2/"
         FormMain.RequestAsynchronousDownload "PROGRAM_UPDATE_CHECK", srcPath, , vbAsyncReadForceUpdate, UserPrefs.GetUpdatePath & "updates.xml"
         
     End If
@@ -660,12 +660,12 @@ VersionFormatError:
 End Function
 
 'Retrieve PD's current name and version, modified against "beta" labels, etc
-Public Function GetPhotoDemonNameAndVersion() As String
-    GetPhotoDemonNameAndVersion = App.Title & " " & Updates.GetPhotoDemonVersion()
+Public Function GetPhotoPaintNameAndVersion() As String
+    GetPhotoPaintNameAndVersion = App.Title & " " & Updates.GetPhotoPaintVersion()
 End Function
 
 'Retrieve PD's current version, modified against "beta" labels, etc
-Public Function GetPhotoDemonVersion() As String
+Public Function GetPhotoPaintVersion() As String
     
     'Build state can be retrieved from the compile-time const PD_BUILD_QUALITY
     Dim buildStateString As String
@@ -694,14 +694,14 @@ Public Function GetPhotoDemonVersion() As String
     
     'Strip exact build numbers from production builds; on all other builds, include a text description
     ' (e.g. "alpha" or "beta") and full build number so I can more easily track bug reports.
-    GetPhotoDemonVersion = CStr(App.Major) & "." & CStr(App.Minor)
-    If (PD_BUILD_QUALITY <> PD_PRODUCTION) Then GetPhotoDemonVersion = GetPhotoDemonVersion & " " & buildStateString & " (build " & CStr(App.Revision) & ")"
+    GetPhotoPaintVersion = CStr(App.Major) & "." & CStr(App.Minor)
+    If (PD_BUILD_QUALITY <> PD_PRODUCTION) Then GetPhotoPaintVersion = GetPhotoPaintVersion & " " & buildStateString & " (build " & CStr(App.Revision) & ")"
     
 End Function
 
 'Retrieve PD's current version witout any appended tags (e.g. "beta"), and with a "0" automatically plugged in for build.
-Public Function GetPhotoDemonVersionCanonical() As String
-    GetPhotoDemonVersionCanonical = Trim$(Str$(App.Major)) & "." & Trim$(Str$(App.Minor)) & ".0." & Trim$(Str$(App.Revision))
+Public Function GetPhotoPaintVersionCanonical() As String
+    GetPhotoPaintVersionCanonical = Trim$(Str$(App.Major)) & "." & Trim$(Str$(App.Minor)) & ".0." & Trim$(Str$(App.Revision))
 End Function
 
 'Given two version numbers, return TRUE if the second version is larger than the first.
@@ -838,7 +838,7 @@ Public Function OfferPluginUpdate(Optional ByRef pluginName As String = vbNullSt
         uiMsg.AppendLineBreak
     End If
     
-    uiMsg.AppendLine g_Language.TranslateMessage("Would you like PhotoDemon to update this plugin for you?")
+    uiMsg.AppendLine g_Language.TranslateMessage("Would you like PhotoPaint to update this plugin for you?")
     
     OfferPluginUpdate = PDMsgBox(uiMsg.ToString, vbYesNoCancel Or vbApplicationModal Or vbInformation, "Update available")
     
@@ -855,14 +855,14 @@ Public Function DownloadPluginUpdate(ByVal pluginID As PD_PluginCore, ByRef srcU
     'Before downloading anything, ensure we have write access on the plugin folder.
     dstFileTemp = PluginManager.GetPluginPath()
     If Not Files.PathExists(dstFileTemp, True) Then
-        PDMsgBox g_Language.TranslateMessage("You have placed PhotoDemon in a restricted system folder.  Because PhotoDemon does not have administrator access, it cannot download files for you.  Please move PhotoDemon to an unrestricted folder and try again."), vbOKOnly Or vbApplicationModal Or vbCritical, g_Language.TranslateMessage("Error")
+        PDMsgBox g_Language.TranslateMessage("You have placed PhotoPaint in a restricted system folder.  Because PhotoPaint does not have administrator access, it cannot download files for you.  Please move PhotoPaint to an unrestricted folder and try again."), vbOKOnly Or vbApplicationModal Or vbCritical, g_Language.TranslateMessage("Error")
         DownloadPluginUpdate = False
         Exit Function
     End If
     
     PDDebug.LogAction "Attempting to update " & PluginManager.GetPluginName(pluginID) & "..."
     
-    'Previously, PhotoDemon downloaded each plugin file as-is.  Now we package them into a single pdPackage file
+    'Previously, PhotoPaint downloaded each plugin file as-is.  Now we package them into a single pdPackage file
     ' and extract them post-download.  (This cuts download size significantly.)
     
     'Generate a temporary filename based on the plugin being downloaded
@@ -934,7 +934,7 @@ Public Function DownloadPluginUpdate(ByVal pluginID As PD_PluginCore, ByRef srcU
         Loop
         
     Else
-        InternalDebugMsg "download failed!  " & PluginManager.GetPluginName(pluginID) & " will *not* be available to this PhotoDemon instance.", FUNC_NAME
+        InternalDebugMsg "download failed!  " & PluginManager.GetPluginName(pluginID) & " will *not* be available to this PhotoPaint instance.", FUNC_NAME
     End If
     
     'Free the underlying package object

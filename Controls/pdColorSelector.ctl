@@ -30,7 +30,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Color Selector custom control
+'PhotoPaint Color Selector custom control
 'Copyright 2013-2025 by Tanner Helland
 'Created: 17/August/13
 'Last updated: 28/October/15

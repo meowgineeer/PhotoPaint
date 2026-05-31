@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon "pdPackage" Interface (e.g. Zip-like archive handler)
+'PhotoPaint "pdPackage" Interface (e.g. Zip-like archive handler)
 'Copyright 2014-2025 by Tanner Helland
 'Created: 05/April/14
 'Last updated: 25/February/20
@@ -21,14 +21,14 @@ Attribute VB_Exposed = False
 '             statements when few - if any - files that require this class are still out in
 '             the wild!  I have not had a bug report for this format in many years, so I do
 '             not expect to need the (many) debug statements in this class any time soon.
-'Dependencies: pdStream class from photodemon.org (used to easily read/write memory and file buffers)
-'              pdFSO class from photodemon.org (Unicode-friendly file operations)
-'              pdStringStack class from photodemon.org (optimized handling of large string collections)
+'Dependencies: pdStream class from photopaint.org (used to easily read/write memory and file buffers)
+'              pdFSO class from photopaint.org (Unicode-friendly file operations)
+'              pdStringStack class from photopaint.org (optimized handling of large string collections)
 '
 'This class provides an interface for creating and reading "pdPackage" files.  pdPackages are zip-like archive files
 ' that contain one or more "nodes" (e.g. pieces of data), compressed or uncompressed, in a VB-friendly structure.
 '
-'Though I have created pdPackages specifically for use with PhotoDemon, this class should be easily usable by others
+'Though I have created pdPackages specifically for use with PhotoPaint, this class should be easily usable by others
 ' with only minor modifications.  Note that an explicit path to an STDCALL (sometimes called WAPI) variant of zlib.dll
 ' is required, with the expected filename of "zlibwapi.dll".  If your STDCALL copy is called "zLib.dll", you must
 ' rewrite the zLib API declarations at the top of the class to match.
@@ -60,7 +60,7 @@ Attribute VB_Exposed = False
 '
 ' 1) At present, pdPackage files are not easily editable.  Once created, there is no interface for adding new nodes,
 '     erasing existing nodes, or modifying any of the pdPackage settings (compression, etc).  There's nothing in the format
-'     design that prevents these actions, but I haven't written edit functions because I have no reason to do so in PhotoDemon.
+'     design that prevents these actions, but I haven't written edit functions because I have no reason to do so in PhotoPaint.
 '
 ' 2) As noted above, zLib is required for compression.  pdPackages are designed in a way that makes it easy to use any
 '     compression (or other modification functions, e.g. encryption) functions of your choosing, or to ignore compression
@@ -77,7 +77,7 @@ Attribute VB_Exposed = False
 '     period of time, this allows you to load it just once, then perform any operations from the in-memory copy alone.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -89,7 +89,7 @@ Option Explicit
 ' - Version 65 slightly modified the format of the directory chunk, by using a straight byte array instead of the actual UDT struct
 '   used in previous versions (which VB custom-formats).  This was a necessary change prior to enabling second-pass compression of
 '   the directory and data chunks.
-' - The lowest expected value for this constant is 64, representative of PhotoDemon 6.4, when the PDI format was first implemented.
+' - The lowest expected value for this constant is 64, representative of PhotoPaint 6.4, when the PDI format was first implemented.
 ' - v64, 65, and 66 packages are still supported by this class, but it will only write v66 packages.
 Private Const THIS_PDPACKAGE_VERSION As Long = 66
 Private Const OLD_PDPACKAGE_VERSION_SUMMER_2014 As Long = 64
@@ -535,11 +535,11 @@ End Function
 'When subfolder recursion is in use, each file automatically has a relative path automatically generated for it.  By default, this path is
 ' constructed relative to the srcFolder parameter.  If this behavior is not desirable, an alternate base folder can be specified via the
 ' useCustomRelativeFolderBase string.  This is preferable if you are adding multiple folders via this call, but you want all added files
-' extracted relative to some parent folder.  For example, when updating PD, I manually add the "PhotoDemon\App" subfolder to the update package.
-' By default, all added files will be constructed relative to the \App subfolder, so "C:\PhotoDemon\App\Languages\Deutsch.xml" becomes
+' extracted relative to some parent folder.  For example, when updating PD, I manually add the "PhotoPaint\App" subfolder to the update package.
+' By default, all added files will be constructed relative to the \App subfolder, so "C:\PhotoPaint\App\Languages\Deutsch.xml" becomes
 ' "\Languages\Deutsch.xml".  At extraction time, this file would be erroneously extracted to "C:\New PD Folder\Languages\Deutsch.xml", because
 ' the \App folder was the original relative base.  To override this behavior, I manually specify a different base folder at creation time,
-' e.g. "C:\PhotoDemon\".  This causes all added files to receive the relative path "App\Languages\Deutsch.xml", making extraction much simpler.
+' e.g. "C:\PhotoPaint\".  This causes all added files to receive the relative path "App\Languages\Deutsch.xml", making extraction much simpler.
 '
 'If you do not want relative paths used whatsoever, set the optional preserveFolders parameter to FALSE.  If you do this, note that you cannot
 ' change your mind at extraction time, as relative paths will not physically exist inside the package.
@@ -1775,7 +1775,7 @@ End Function
 ' For common cases, this is simply not possible, as the caller does not have enough knowledge necessary to prep such a buffer.  Instead, it relies
 ' on this class to construct the destination buffer for it, using the size values stored inside this instance.
 '
-'PhotoDemon is unique in this regard, as it can correctly calculate the size of raster layer pixel buffers (because it knows the associated
+'PhotoPaint is unique in this regard, as it can correctly calculate the size of raster layer pixel buffers (because it knows the associated
 ' width, height, stride and color depth of the buffer).  Because PD has to create a matching DIB in advance, a destination buffer of perfect size
 ' is already implicitly allocated, so there is no need for a temporary VB array to shuttle the data around.
 '
@@ -1977,7 +1977,7 @@ Private Sub Class_Terminate()
 End Sub
 
 'If something unexpected occurs, and the user needs to know about it (e.g. it's not just debugging data), pdPackage will raise a message
-' using this function.  PhotoDemon uses a central "Message" function to handle messages like this, but you can change it to Debug.Print instead.
+' using this function.  PhotoPaint uses a central "Message" function to handle messages like this, but you can change it to Debug.Print instead.
 Private Sub InternalError(ByVal msgString As String, ParamArray ExtraText() As Variant)
     
     If UBound(ExtraText) >= LBound(ExtraText) Then

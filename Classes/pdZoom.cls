@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Zoom Handler - calculates and tracks zoom values for a given image
+'PhotoPaint Zoom Handler - calculates and tracks zoom values for a given image
 'Copyright 2001-2020 by Tanner Helland
 'Created: 4/15/01
 'Last updated: 28/August/17
@@ -21,7 +21,7 @@ Attribute VB_Exposed = False
 'The main user of this class is the Viewport_Handler module.  Look there for relevant implementation details.
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-' projects IF you provide attribution.  For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution.  For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 

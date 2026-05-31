@@ -24,7 +24,7 @@ Attribute VB_Exposed = False
 ' matched, and the saved coordinates are used to find the "new" color at that same position.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

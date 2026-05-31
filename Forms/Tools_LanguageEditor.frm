@@ -36,7 +36,7 @@ Begin VB.Form FormLanguageEditor
       _ExtentY        =   661
       Alignment       =   2
       Caption         =   "click here for detailed instructions (in English)"
-      URL             =   "https://github.com/tannerhelland/PhotoDemon/tree/main/App/PhotoDemon/Languages#readme"
+      URL             =   "https://github.com/tannerhelland/PhotoPaint/tree/main/App/PhotoPaint/Languages#readme"
    End
    Begin PhotoPaint.pdButton cmdPrevious 
       Height          =   615
@@ -623,14 +623,14 @@ Attribute VB_Exposed = False
 'Copyright 2013-2025 by Tanner Helland
 'Created: 28/August/13
 'Last updated: 02/November/22
-'Last update: fix issues with Ctrl+U key combination in non-en-US locales (https://github.com/tannerhelland/PhotoDemon/issues/455)
+'Last update: fix issues with Ctrl+U key combination in non-en-US locales (https://github.com/tannerhelland/PhotoPaint/issues/455)
 '
-'This tool can simplify the PhotoDemon localization process.  The original version (built in 2013) was
+'This tool can simplify the PhotoPaint localization process.  The original version (built in 2013) was
 ' heavily influenced by feedback from Frank Donckers.  Many thanks to Frank for his contributions to
-' PhotoDemon i18n.  (Frank also contributed the first three language files to the project!)  You can see
+' PhotoPaint i18n.  (Frank also contributed the first three language files to the project!)  You can see
 ' Frank's original, unaltered contributions in the old commit logs for the original version of this tool:
 '
-'https://github.com/tannerhelland/PhotoDemon/commits/c5d55af4ba3683eec49efc9c6e3d0e5bfc6d2395/Forms/VBP_FormLanguageEditor.frm
+'https://github.com/tannerhelland/PhotoPaint/commits/c5d55af4ba3683eec49efc9c6e3d0e5bfc6d2395/Forms/VBP_FormLanguageEditor.frm
 '
 'Data retention is a key focus of the current editor.  As a safeguard against crashes, two autosaves
 ' are always maintained.  Autosaves are generated every time a phrase is edited. This (should) guarantee
@@ -653,7 +653,7 @@ Attribute VB_Exposed = False
 
 Option Explicit
 
-'The current list of available languages (e.g. XML files stored in the App - /App/PhotoDemon/Languages - and
+'The current list of available languages (e.g. XML files stored in the App - /App/PhotoPaint/Languages - and
 ' user - Data/Languages - folders).
 Private m_listOfLanguages() As PDLanguageFile
 
@@ -701,7 +701,7 @@ Private m_AutoTranslate As pdAutoLocalize
 'An internal XML engine is used to parse and update the actual language file contents
 Private m_XMLEngine As pdXML
 
-'To minimize the chance of data loss, PhotoDemon backs up translation data to two alternating files.
+'To minimize the chance of data loss, PhotoPaint backs up translation data to two alternating files.
 ' In the event of a crash, this guarantees that we never lose more than the last-edited phrase.
 Private m_curBackupFile As Long
 Private Const BACKUP_FILE_PREFIX As String = "PD_LANG_EDIT_BACKUP_"
@@ -1050,7 +1050,7 @@ Private Sub ChangeWizardPage(ByVal moveForward As Boolean)
                 'For some reason, we failed to load the master language file.  Tell them to download a fresh copy of PD.
                 Else
                     Screen.MousePointer = vbDefault
-                    PDMsgBox "Unfortunately, PhotoDemon's en-US language file could not be located on this PC.  This file is included with the official release of PhotoDemon, but it may not be included with development or beta builds." & vbCrLf & vbCrLf & "To start a new translation, please download a fresh copy of PhotoDemon from photopaint.org.", vbOKOnly Or vbExclamation, "Error"
+                    PDMsgBox "Unfortunately, PhotoPaint's en-US language file could not be located on this PC.  This file is included with the official release of PhotoPaint, but it may not be included with development or beta builds." & vbCrLf & vbCrLf & "To start a new translation, please download a fresh copy of PhotoPaint from photopaint.org.", vbOKOnly Or vbExclamation, "Error"
                     Unload Me
                 End If
             
@@ -1070,7 +1070,7 @@ Private Sub ChangeWizardPage(ByVal moveForward As Boolean)
                 'For some reason, we failed to load the master language file.  Tell them to download a fresh copy of PD.
                 Else
                     Screen.MousePointer = vbDefault
-                    PDMsgBox "Unfortunately, this language file could not be loaded.  It's possible the copy on this PC is out-of-date." & vbCrLf & vbCrLf & "To continue, please download a fresh copy of PhotoDemon from photopaint.org.", vbOKOnly Or vbExclamation, "Language file could not be loaded"
+                    PDMsgBox "Unfortunately, this language file could not be loaded.  It's possible the copy on this PC is out-of-date." & vbCrLf & vbCrLf & "To continue, please download a fresh copy of PhotoPaint from photopaint.org.", vbOKOnly Or vbExclamation, "Language file could not be loaded"
                     Unload Me
                 End If
             

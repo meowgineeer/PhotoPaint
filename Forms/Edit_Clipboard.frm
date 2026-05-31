@@ -182,7 +182,7 @@ End Sub
 Private Sub ListSupportedFormats()
     lstFormats.SetAutomaticRedraws False
     lstFormats.Clear
-    lstFormats.AddItem "PhotoDemon Image", 0
+    lstFormats.AddItem "PhotoPaint Image", 0
     lstFormats.AddItem "Bitmap", 1
     lstFormats.AddItem "DIB", 2
     lstFormats.AddItem "DIB v5", 3

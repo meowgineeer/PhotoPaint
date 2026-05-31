@@ -41,7 +41,7 @@ Begin VB.Form dialog_IDEWarning
       Width           =   6690
       _ExtentX        =   11800
       _ExtentY        =   1323
-      Caption         =   "I understand the risks of running PhotoDemon in the IDE"
+      Caption         =   "I understand the risks of running PhotoPaint in the IDE"
    End
    Begin PhotoPaint.pdCheckBox chkRepeat 
       Height          =   300
@@ -116,7 +116,7 @@ Attribute VB_Exposed = False
 'Last update: remove translation wrappers for text; it's fine for these warnings to appear
 '             in English, only - and it reduces burdens for volunteer translators!
 '
-'Generally speaking, it's not a great idea to run PhotoDemon in the IDE.  This dialog
+'Generally speaking, it's not a great idea to run PhotoPaint in the IDE.  This dialog
 ' is used to warn the user of the associated risks with doing so.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
@@ -151,10 +151,10 @@ Public Sub ShowDialog()
     'This hack prevents these strings from being picked up by PD's translation generator.
     ' It does not inspect individual strings for translatable text.
     Dim strDialog(0 To 4) As String
-    strDialog(0) = "You are running PhotoDemon inside the Visual Basic IDE.  This is not recommended."
-    strDialog(1) = "Please compile PhotoDemon before using it.  Many features that rely on subclassing are disabled in the IDE, but some - such as custom command buttons - cannot be disabled without severely impacting the program's functionality.  As such, you may experience IDE instability and crashes, especially if you close the program using the IDE's Stop button."
-    strDialog(2) = "Additionally, like all other photo editors, PhotoDemon relies heavily on multidimensional arrays. Array performance is severely degraded in the IDE, so some functions may perform very slowly."
-    strDialog(3) = "If you insist on running PhotoDemon in the IDE, please do not submit bugs regarding IDE crashes or freezes.  PhotoDemon's developers can only address issues and bugs that affect the compiled .exe."
+    strDialog(0) = "You are running PhotoPaint inside the Visual Basic IDE.  This is not recommended."
+    strDialog(1) = "Please compile PhotoPaint before using it.  Many features that rely on subclassing are disabled in the IDE, but some - such as custom command buttons - cannot be disabled without severely impacting the program's functionality.  As such, you may experience IDE instability and crashes, especially if you close the program using the IDE's Stop button."
+    strDialog(2) = "Additionally, like all other photo editors, PhotoPaint relies heavily on multidimensional arrays. Array performance is severely degraded in the IDE, so some functions may perform very slowly."
+    strDialog(3) = "If you insist on running PhotoPaint in the IDE, please do not submit bugs regarding IDE crashes or freezes.  PhotoPaint's developers can only address issues and bugs that affect the compiled .exe."
     strDialog(4) = "Visual Basic IDE Detected"
     lblWarning(0).Caption = strDialog(0)
     lblWarning(1).Caption = strDialog(1)

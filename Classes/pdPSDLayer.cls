@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon PSD (PhotoShop Image) Layer Container and Parser
+'PhotoPaint PSD (PhotoShop Image) Layer Container and Parser
 'Copyright 2019-2025 by Tanner Helland
 'Created: 15/January/19
 'Last updated: 17/April/24
@@ -20,7 +20,7 @@ Attribute VB_Exposed = False
 '
 'This class contains layer-specific data pulled from a PSD file.  It is populated by a parent
 ' pdPSD instance.  It has no purpose outside of a PSD parsing context; for layer handling inside
-' PhotoDemon itself, refer to the pdLayer class.
+' PhotoPaint itself, refer to the pdLayer class.
 '
 'Unless otherwise noted, all code in this class is my original work.  It is based off the
 ' "official" Adobe spec at this URL (link good as of January 2019):
@@ -33,7 +33,7 @@ Attribute VB_Exposed = False
 ' available here (link good as of January 2019): https://github.com/PsdPlugin/PsdPlugin
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -307,7 +307,7 @@ Friend Function ConstructImage(ByRef srcStream As pdStream, ByRef warningStack A
     
     m_ColorMode = imgColorMode
     
-    'AFAIK, all bit-depths and color modes are now fully covered by PhotoDemon's importer.
+    'AFAIK, all bit-depths and color modes are now fully covered by PhotoPaint's importer.
     'If PSD_DEBUG_VERBOSE Then PDDebug.LogAction "Bit-depth and color mode are supported; attempting to decode now..."
     Dim startTime As Currency
     VBHacks.GetHighResTime startTime
@@ -382,14 +382,14 @@ Private Function ConstructImage_CMYK(ByRef warningStack As pdStringStack, ByVal 
     Dim bytesPerChannel As Long
     bytesPerChannel = (bitsPC \ 8)
     
-    'Set a flag to determine ICC profile availability.  If I had my way, PhotoDemon wouldn't load
+    'Set a flag to determine ICC profile availability.  If I had my way, PhotoPaint wouldn't load
     ' CMYK images without an embedded color profile as the results will be borderline garbage.
     ' This is not generally an issue because Photoshop *never* writes CMYK images without embedded
     ' color profiles, but 3rd-party PSD encoders are a different story.
     '
     'That said, we try to make life easy for users, and given the number of bad 3rd-party PSDs
     ' floating around the web, we want to try and load bad CMYK data as best we can.  Currently,
-    ' that means using a generic CMYK profile that ships with PhotoDemon.  It is a public-domain
+    ' that means using a generic CMYK profile that ships with PhotoPaint.  It is a public-domain
     ' CMYK transfer built by Graeme Gill of ArgyllCMS fame, and originally shared in the LittleCMS
     ' mailing list (https://sourceforge.net/p/lcms/mailman/message/32755884/).
     '
@@ -626,7 +626,7 @@ Private Function ConstructImage_Lab(ByRef warningStack As pdStringStack, ByVal i
         End If
     Next i
     
-    If (channelsFound < 3) Then warningStack.AddString "Lab image is missing channels; PhotoDemon will try to assemble a usable image anyway."
+    If (channelsFound < 3) Then warningStack.AddString "Lab image is missing channels; PhotoPaint will try to assemble a usable image anyway."
     
     'Layer dimensions determine the size of the constructed layer, obviously; layer sizes are completely
     ' independent of the parent image.
@@ -1618,7 +1618,7 @@ InternalVBError:
 End Function
 
 'Retrieve layer masks, if any.  The original design of this function involved merging layer mask data
-' directly into the alpha channel of this layer (because PhotoDemon didn't layer masks yet).  Now, however,
+' directly into the alpha channel of this layer (because PhotoPaint didn't layer masks yet).  Now, however,
 ' there are some contingencies for placing layer mask data directly into its own structure.  As this function
 ' is rapidly evolving, be sure to check comments before modifying.
 Private Function ConstructLayerMasks(ByRef warningStack As pdStringStack, ByVal imageIsPSB As Boolean, ByVal bitsPC As Long, ByVal imgColorMode As PSD_ColorMode, ByRef parentPSD As pdPSD, ByRef imageHasAlpha As Boolean, Optional ByVal loadGroupMasksAsPixels As Boolean = False) As PD_PSDResult
@@ -1735,10 +1735,10 @@ Private Function ConstructLayerMasks(ByRef warningStack As pdStringStack, ByVal 
             
         If maskDisabled Then GoTo SkipChannel
         
-        'We now enter a branch that is a temporary fix due to PhotoDemon's lack of full mask support.
+        'We now enter a branch that is a temporary fix due to PhotoPaint's lack of full mask support.
         '
         'In the future, we will want to extract layer masks to their own special mask structure.
-        ' As a preliminary test, PhotoDemon *will* do this for layer groups right now (but *not* for
+        ' As a preliminary test, PhotoPaint *will* do this for layer groups right now (but *not* for
         ' normal layers).  The mask will then be stored with the layer group and exported back out
         ' to PSD as desired.
         '
@@ -3264,7 +3264,7 @@ Friend Sub WriteLayerData(ByRef cStream As pdStream, ByRef srcLayer As pdLayer, 
     'The first chunk of a layer record is a (mostly) fixed-length segment describing basic layer parameters.
     With srcLayer
         
-        'Because PhotoDemon supports non-destructive affine layer transformations (rotate, resize, etc),
+        'Because PhotoPaint supports non-destructive affine layer transformations (rotate, resize, etc),
         ' and we don't have a way to embed this data inside PSDs (that I know of), we need to first generate
         ' a temporary copy of the source layer's data, with all affine transforms accounted for.  (This is
         ' also useful as we will generate planar channel data in this step, and we want to un-premultiply a
@@ -3291,7 +3291,7 @@ Friend Sub WriteLayerData(ByRef cStream As pdStream, ByRef srcLayer As pdLayer, 
         
         'UPDATE April 2024
         '
-        'PhotoDemon has traditionally written out 24-bit RGB data if a layer doesn't use meaningful alpha,
+        'PhotoPaint has traditionally written out 24-bit RGB data if a layer doesn't use meaningful alpha,
         ' but this produces unexpected results on some versions of Photoshop.  Unfortunately, I haven't been
         ' able to track down a consistent pattern in why this happens - all other software can open PD's PSDs
         ' without trouble when this occurs, but PS shows some kind of file offset problem, with weird layer
@@ -3343,7 +3343,7 @@ Friend Sub WriteLayerData(ByRef cStream As pdStream, ByRef srcLayer As pdLayer, 
             
         End If
             
-        'Next is a list of channel information, 6 bytes per channel (so 6*4 for typical PhotoDemon RGBA layer)
+        'Next is a list of channel information, 6 bytes per channel (so 6*4 for typical PhotoPaint RGBA layer)
         ' - 2 bytes: Channel ID
         ' - 4 bytes: Channel length (PSB is 8 bytes)
         Dim rleSize As Long
@@ -3441,7 +3441,7 @@ Friend Sub WriteLayerData(ByRef cStream As pdStream, ByRef srcLayer As pdLayer, 
         cStream.WriteLong_BE 0
         
         'Layer mask data comes next.
-        ' PhotoDemon doesn't support masks on normal layers but it *does* support group masks,
+        ' PhotoPaint doesn't support masks on normal layers but it *does* support group masks,
         ' so branch accordingly
         If (isGroupMarker And .GetLayerMaskExists) Then
             
@@ -3701,7 +3701,7 @@ End Sub
 
 'Note that this function may be called externally; this is by design, as it is shared by our parent pdPSD class
 ' when writing a composite image copy out to the end of a PSD file.  (Also note that masks are *not* fully
-' supported yet - at present, PhotoDemon only supports them for layer group markers, and only if the group markers
+' supported yet - at present, PhotoPaint only supports them for layer group markers, and only if the group markers
 ' came from a PSD with embedded group masks.)
 Friend Sub PrepChannelsForWrite(ByRef srcLayerDIB As pdDIB, ByVal channelCompression As PSD_ChannelCompression, Optional ByVal skipAlpha As Boolean = False, Optional ByVal prepMaskToo As Boolean = False, Optional ByRef srcLayer As pdLayer = Nothing)
     

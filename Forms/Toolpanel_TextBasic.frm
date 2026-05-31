@@ -314,7 +314,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Basic Text Tool Panel
+'PhotoPaint Basic Text Tool Panel
 'Copyright 2013-2025 by Tanner Helland
 'Created: 02/Oct/13
 'Last updated: 09/March/22

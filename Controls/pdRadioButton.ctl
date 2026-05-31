@@ -32,13 +32,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Radio Button control
+'PhotoPaint Radio Button control
 'Copyright 2013-2025 by Tanner Helland
 'Created: 28/January/13
 'Last updated: 15/February/16
 'Last update: finalize theming support
 '
-'In a surprise to precisely no one, PhotoDemon has some unique needs when it comes to user controls - needs that
+'In a surprise to precisely no one, PhotoPaint has some unique needs when it comes to user controls - needs that
 ' the intrinsic VB controls can't handle.  These range from the obnoxious (lack of an "autosize" property for
 ' anything but labels) to the critical (no Unicode support).
 '

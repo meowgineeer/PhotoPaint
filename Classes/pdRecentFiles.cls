@@ -20,7 +20,7 @@ Attribute VB_Exposed = False
 '             of a full pdImage object; this is used by the Record APNG tool to pass a thumbnail of
 '             a just-recorded file.
 '
-'PhotoDemon's File > Open Recent menu supports some neat features, like large thumbnail icons on Vista+.
+'PhotoPaint's File > Open Recent menu supports some neat features, like large thumbnail icons on Vista+.
 ' This class is responsible for maintaining the full list of file paths and thumbnails for that menu.
 '
 'Many thanks to Raj Chaudhuri for his original work on this class.  I feel bad that I had to rewrite
@@ -30,7 +30,7 @@ Attribute VB_Exposed = False
 ' needed to be dealt with before v7.0 released.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 Option Explicit

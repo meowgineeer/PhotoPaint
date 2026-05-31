@@ -271,7 +271,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Plugin Manager
+'PhotoPaint Plugin Manager
 'Copyright 2012-2025 by Tanner Helland
 'Created: 21/December/12
 'Last updated: 22/August/23
@@ -430,7 +430,7 @@ Private Sub Form_Load()
     Dim shortPathToLibs As String
     shortPathToLibs = PluginManager.GetPluginPath()
     If (InStr(1, shortPathToLibs, UserPrefs.GetProgramPath(), vbTextCompare) = 1) Then
-        shortPathToLibs = "[PhotoDemon folder]\" & Right$(shortPathToLibs, Len(shortPathToLibs) - Len(UserPrefs.GetProgramPath()))
+        shortPathToLibs = "[PhotoPaint folder]\" & Right$(shortPathToLibs, Len(shortPathToLibs) - Len(UserPrefs.GetProgramPath()))
     End If
     
     hypPluginFolder.Caption = shortPathToLibs
@@ -728,7 +728,7 @@ Private Sub LibraryChanged()
             
             additionalInfo.AppendLine g_Language.TranslateMessage("This library does not ship with PhotoPaint.")
             additionalInfo.AppendLineBreak
-            additionalInfo.Append g_Language.TranslateMessage("If you interact with %1, PhotoDemon will offer to download and configure this library for you.", actionTarget)
+            additionalInfo.Append g_Language.TranslateMessage("If you interact with %1, PhotoPaint will offer to download and configure this library for you.", actionTarget)
             lblAdditionalInfo.Caption = additionalInfo.ToString()
             
             lblAdditionalInfo.Visible = True

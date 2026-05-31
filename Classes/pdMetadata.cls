@@ -12,13 +12,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Image Metadata Handler
+'PhotoPaint Image Metadata Handler
 'Copyright 2013-2025 by Tanner Helland
 'Created: 23/May/13
 'Last updated: 09/June/16
 'Last update: improve parsing behavior against incorrectly formed multiline print values that are non-binary in nature
 '
-'As of version 6.0, PhotoDemon now provides support for loading and saving image metadata.  What is metadata, you ask?
+'As of version 6.0, PhotoPaint now provides support for loading and saving image metadata.  What is metadata, you ask?
 ' See https://en.wikipedia.org/wiki/Metadata#Photographs for more details.
 '
 'Because metadata handling is complicated, I have created this dedicated metadata handler class.  Each pdImage object
@@ -31,7 +31,7 @@ Attribute VB_Exposed = False
 ' plans to write a fallback for users without the plugin.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -281,7 +281,7 @@ Friend Function GetResolution(ByRef xResolution As Double, ByRef yResolution As 
     ' notion that Adobe gets to do whatever the hell it wants and others will just "play along", but because
     ' Photoshop-exported JPEGs can often have 3+ different resolution values in 3+ different locations, we
     ' default to the internal Photoshop resolution value, if one exists.  (See this GitHub issue for additional
-    ' details/discussion: https://github.com/tannerhelland/PhotoDemon/issues/260 )
+    ' details/discussion: https://github.com/tannerhelland/PhotoPaint/issues/260 )
     If DoesTagExistFullName("Photoshop:XResolution", xResTagIndex) And DoesTagExistFullName("Photoshop:YResolution", yResTagIndex) Then
         
         'Photoshop resolution tags exist.  To my knowledge, PS resolution values are always stored in inches.
@@ -703,7 +703,7 @@ Private Function CalculateIdealGroupName(ByRef dstMetadata As PDMetadataItem, By
     'Next comes a tricky one.  There is no technical prohibition against duplicate metadata tags - and in fact, some software may
     ' choose to deliberately add duplicate tags in multiple groups (IPTC, EXIF, XMP, etc) to maximize compatibility.
     
-    'PhotoDemon allows the presence of multiple tags everywhere except in JFIF headers.  JPEG thumbnails embedded inside a JPEG
+    'PhotoPaint allows the presence of multiple tags everywhere except in JFIF headers.  JPEG thumbnails embedded inside a JPEG
     ' parent image will have their own JFIF header, which includes information like x/y resolution that is totally irrelevant
     ' (and confusing, as it makes the image look like it has multiple headers!).  Here, we want to check for duplicate JFIF tags,
     ' and place them into their own category as necessary.
@@ -1509,7 +1509,7 @@ End Sub
 'Given a path to a saved image (yes, that's right - make certain it is already saved!) and a reference
 ' to the image in question, embed as much or as little metadata as the image's settings specify.
 ' (Note: this absolutely needs to be done *after* the destination file has been saved, because ExifTool
-' requires an on-disk source for writing.  In PD, this function is generally called only by PhotoDemon_SaveImage().)
+' requires an on-disk source for writing.  In PD, this function is generally called only by PhotoPaint_SaveImage().)
 Friend Function WriteAllMetadata(ByRef outputPath As String, ByRef srcImage As pdImage) As Boolean
     
     'XML writing is handled by PD's central XML engine

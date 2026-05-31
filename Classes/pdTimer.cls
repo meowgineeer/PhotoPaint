@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Class-only Timer
+'PhotoPaint Class-only Timer
 'Copyright 2016-2025 by Tanner Helland
 'Created: 07/February/16
 'Last updated: 08/February/16
@@ -31,7 +31,7 @@ Attribute VB_Exposed = False
 ' (retrieved from http://vb.mvps.org/samples/TimerObj/)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

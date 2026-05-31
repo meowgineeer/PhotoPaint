@@ -17,7 +17,7 @@ Attribute VB_Name = "CanvasManager"
 ' to that class, which instead uses WAPI to return various window measurements.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -259,7 +259,7 @@ Public Function FullPDImageUnload(ByVal imageID As Long, Optional ByVal displayM
     
 End Function
 
-'Previously, we could unload images by just unloading their containing form.  Since PhotoDemon moved away from an MDI interface,
+'Previously, we could unload images by just unloading their containing form.  Since PhotoPaint moved away from an MDI interface,
 ' this is no longer possible, so we must query unload images using this custom function.
 'RETURNS: TRUE if the image was unloaded successfully; FALSE if the unload process was interrupted by the user
 Public Function QueryUnloadPDImage(ByVal imageID As Long) As Boolean

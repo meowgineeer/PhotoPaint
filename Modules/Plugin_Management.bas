@@ -6,10 +6,10 @@ Attribute VB_Name = "PluginManager"
 'Last updated: 19/September/25
 'Last update: add OpenJPEG as standalone library
 '
-'As with any project of reasonable size, PhotoDemon can't supply all of its needs through WAPI alone.
+'As with any project of reasonable size, PhotoPaint can't supply all of its needs through WAPI alone.
 ' Current builds require a number of third-party libraries for full feature availability.  (Some of these
 ' libraries are mandatory, some are not; PD will attempt to gracefully degrade feature availability if it
-' can, but if you're acquiring PD from photodemon.org or it's official GitHub page you never need to
+' can, but if you're acquiring PD from photopaint.org or it's official GitHub page you never need to
 ' worry about this.)
 '
 'To simplify the management of external libraries, I've created this small "plugin manager".  It exists
@@ -19,14 +19,14 @@ Attribute VB_Name = "PluginManager"
 ' particularly the PD_PluginCore enum and the CORE_PLUGIN_COUNT constant at the top of this file.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
 Option Explicit
 
 'This constant is used to iterate all core plugins (as listed under the PD_PluginCore enum),
-' so if you add or remove a plugin, YOU MUST UPDATE THIS.  PhotoDemon iterates plugins in order,
+' so if you add or remove a plugin, YOU MUST UPDATE THIS.  PhotoPaint iterates plugins in order,
 ' so if you do not update this count, the plugin at the end of the chain (probably zstd) won't be
 ' initialized and PD will crash.
 Private Const CORE_PLUGIN_COUNT As Long = 18
@@ -60,7 +60,7 @@ End Enum
     Private Const CCP_PDHelper = 0, CCP_pspiHost = 0, CCP_resvg = 0, CCP_zstd = 0
 #End If
 
-'Expected version numbers of plugins.  These are updated at each new PhotoDemon release (if a new version of
+'Expected version numbers of plugins.  These are updated at each new PhotoPaint release (if a new version of
 ' the plugin is available, obviously).
 Private Const EXPECTED_CHARLS_VERSION As String = "2.4.2"
 Private Const EXPECTED_DIRECTXTEX_VERSION As String = "2024.10.29"
@@ -102,7 +102,7 @@ Private m_ZstdEnabled As Boolean
 Private m_hPDHelper As Long
 
 'Path to plugin folder.  For security reasons, this is forcibly constructed as an absolute path
-' (generally "App.Path/App/PhotoDemon/Plugins"), because we pass it directly to LoadLibrary.
+' (generally "App.Path/App/PhotoPaint/Plugins"), because we pass it directly to LoadLibrary.
 Private m_PluginPath As String
 
 'External libraries use a variety of error-reporting mechanisms.  Before sustained interaction with a library,
@@ -225,7 +225,7 @@ End Sub
 '
 '(By design, the message box this function raises is disabled during batch processes.)
 Public Sub GenericLibraryMissingError(ByVal pluginID As PD_PluginCore)
-    If (Macros.GetMacroStatus <> MacroBATCH) Then PDMsgBox "A necessary third-party library (%1) is missing or disabled." & vbCrLf & vbCrLf & "To enable this feature, please download a fresh copy of PhotoDemon or restore the missing library.", vbCritical Or vbOKOnly, "Error", PluginManager.GetPluginName(pluginID)
+    If (Macros.GetMacroStatus <> MacroBATCH) Then PDMsgBox "A necessary third-party library (%1) is missing or disabled." & vbCrLf & vbCrLf & "To enable this feature, please download a fresh copy of PhotoPaint or restore the missing library.", vbCritical Or vbOKOnly, "Error", PluginManager.GetPluginName(pluginID)
     Message "Error: %1", PluginManager.GetPluginName(pluginID)
 End Sub
 
@@ -759,7 +759,7 @@ Public Function GetPluginHomepage(ByVal pluginEnumID As PD_PluginCore) As String
         Case CCP_pdfium
             GetPluginHomepage = "https://pdfium.googlesource.com/pdfium/"
         Case CCP_PDHelper
-            GetPluginHomepage = "https://photodemon.org"
+            GetPluginHomepage = "https://photopaint.org"
         Case CCP_pspiHost
             GetPluginHomepage = "https://github.com/spetric/Photoshop-Plugin-Host"
         Case CCP_resvg
@@ -843,7 +843,7 @@ Public Function GetPluginLicenseURL(ByVal pluginEnumID As PD_PluginCore) As Stri
         Case CCP_pdfium
             GetPluginLicenseURL = "https://pdfium.googlesource.com/pdfium/+/main/LICENSE"
         Case CCP_PDHelper
-            GetPluginLicenseURL = "https://github.com/tannerhelland/PhotoDemon/blob/main/LICENSE.md"
+            GetPluginLicenseURL = "https://github.com/tannerhelland/PhotoPaint/blob/main/LICENSE.md"
         Case CCP_pspiHost
             GetPluginLicenseURL = "https://github.com/spetric/Photoshop-Plugin-Host/blob/master/LICENSE"
         Case CCP_resvg
@@ -884,7 +884,7 @@ Private Function InitializePlugin(ByVal pluginEnumID As PD_PluginCore) As Boolea
             ' starting new ones.  (Note that we must *not* kill ExifTool instances if
             ' multiple PD sessions are active, or we'll screw up piping for them!)
             If (Not Autosaves.PeekLastShutdownClean) And Mutex.IsThisOnlyInstance() Then
-                PDDebug.LogAction "Previous PhotoDemon session terminated unexpectedly.  Performing plugin clean-up..."
+                PDDebug.LogAction "Previous PhotoPaint session terminated unexpectedly.  Performing plugin clean-up..."
                 ExifTool.KillStrandedExifToolInstances
             End If
             

@@ -10,7 +10,7 @@ Attribute VB_Name = "Filters_Transform"
 'Functions for generic 2D transformations, including rotate, flip, mirror and crop.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -1043,7 +1043,7 @@ Public Sub MenuFitCanvasToLayer(ByVal dstLayerIndex As Long)
     dstY = curLayerBounds.Top
     
     'Now that we have new top-left corner coordinates (and new width/height values), resizing the canvas
-    ' is actually very easy.  In PhotoDemon, there is no such thing as "image data"; an image is just an
+    ' is actually very easy.  In PhotoPaint, there is no such thing as "image data"; an image is just an
     ' imaginary bounding box around the layers collection.  Because of this, we don't actually need to
     ' resize any pixel data - we just need to modify all layer offsets to account for the new top-left corner!
     Dim i As Long
@@ -1108,7 +1108,7 @@ Public Sub MenuFitCanvasToAllLayers()
     Next i
     
     'Now that we have new top-left corner coordinates (and new width/height values), resizing the canvas
-    ' is actually very easy.  In PhotoDemon, there is no such thing as "image data"; an image is just an
+    ' is actually very easy.  In PhotoPaint, there is no such thing as "image data"; an image is just an
     ' imaginary bounding box around the layers collection.  Because of this, we don't actually need to
     ' resize any pixel data - we just need to modify all layer offsets to account for the new top-left corner!
     For i = 0 To PDImages.GetActiveImage.GetNumOfLayers - 1
@@ -1289,7 +1289,7 @@ Public Sub TrimImage()
         SetProgBarVal 4
         
         'Now that we have new top-left corner coordinates (and new width/height values), resizing the canvas
-        ' is actually very easy.  In PhotoDemon, there is no such thing as "image data"; an image is just an
+        ' is actually very easy.  In PhotoPaint, there is no such thing as "image data"; an image is just an
         ' imaginary bounding box around the layers collection.  Because of this, we don't actually need to
         ' resize any pixel data - we just need to modify all layer offsets to account for the new top-left corner!
         Dim i As Long

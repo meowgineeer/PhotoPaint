@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Generic (int) Stack
+'PhotoPaint Generic (int) Stack
 'Copyright 2015-2025 by Tanner Helland
 'Created: 05/February/15
 'Last updated: 08/March/24
@@ -24,7 +24,7 @@ Attribute VB_Exposed = False
 ' from the middle of the stack (rather than enforcing a strict push/pop access system).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

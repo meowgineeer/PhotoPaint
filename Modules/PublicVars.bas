@@ -56,7 +56,7 @@ Public g_ProgramShuttingDown As Boolean
 'The user is attempting to close all images (necessary for handling the "repeat for all images" check box)
 Public g_ClosingAllImages As Boolean
 
-'If this is the first time the user has run PhotoDemon (as determined by the lack of a preferences XML file), this
+'If this is the first time the user has run PhotoPaint (as determined by the lack of a preferences XML file), this
 ' variable will be set to TRUE early in the load process.  Other routines can then modify their behavior accordingly.
 Public g_IsFirstRun As Boolean
 
@@ -81,18 +81,18 @@ Public g_RecentMacros As pdMRUManager
 ' to restore this variable to FALSE when you're done, including catching any error states!
 Public g_DisableUserInput As Boolean
 
-'As of v6.4, PhotoDemon supports a number of performance-related preferences.  Because performance settings (obviously)
+'As of v6.4, PhotoPaint supports a number of performance-related preferences.  Because performance settings (obviously)
 ' affect performance-sensitive parts of the program, these preferences are cached to global variables (rather than
 ' constantly pulled on-demand from file, which is unacceptably slow for performance-sensitive pipelines).
 Public g_ViewportPerformance As PD_PerformanceSetting, g_InterfacePerformance As PD_PerformanceSetting
 
-'As of v6.4, PhotoDemon allows the user to specify compression settings for Undo/Redo data.  By default, Undo/Redo data is
+'As of v6.4, PhotoPaint allows the user to specify compression settings for Undo/Redo data.  By default, Undo/Redo data is
 ' uncompressed, which takes up a lot of (cheap) disk space but provides excellent performance.  The user can modify this
 ' setting to their liking, but they'll have to live with the performance implications.  The default setting for this value
 ' is 0, for no compression.
 Public g_UndoCompressionLevel As Long
 
-'Set this value to TRUE if you want PhotoDemon to report time-to-completion for various program actions.
+'Set this value to TRUE if you want PhotoPaint to report time-to-completion for various program actions.
 ' NOTE: this value is currently set automatically, in the LoadTheProgram sub.  PRE-ALPHA and ALPHA builds will report
 '       timing for a variety of actions; BETA and PRODUCTION builds will not.  This can be overridden by changing the
 '       activation code in LoadTheProgram.

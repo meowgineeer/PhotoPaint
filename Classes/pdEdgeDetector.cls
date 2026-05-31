@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Edge Detector ("Marching squares") Engine
+'PhotoPaint Edge Detector ("Marching squares") Engine
 'Copyright 2017-2025 by Tanner Helland
 'Created: 05/January/17
 'Last updated: 09/May/17
@@ -38,7 +38,7 @@ Attribute VB_Exposed = False
 'Like any array-based tool, this class will be slow inside the IDE.  Please use only when compiled.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -46,7 +46,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Navigation/Overview Tool Panel
+'PhotoPaint Navigation/Overview Tool Panel
 'Copyright 2015-2025 by Tanner Helland
 'Created: 15/October/15
 'Last updated: 15/October/15

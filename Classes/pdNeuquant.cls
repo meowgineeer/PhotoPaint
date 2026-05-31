@@ -49,7 +49,7 @@ Attribute VB_Exposed = False
 ' learned about this algorithm from the FreeImage project, for example, which provides their
 ' own C version of the algorithm.)
 '
-'Note also that this implementation is specifically adapted to PhotoDemon's needs (and toolkit).
+'Note also that this implementation is specifically adapted to PhotoPaint's needs (and toolkit).
 ' For example, instead of implementing variable sampling rates here, I instead prefer to simply
 ' resample the source image.  (It's much faster.)  I've also added support for alpha channels,
 ' converted all the critical portions of the algorithm to floating-point (for improved accuracy
@@ -57,7 +57,7 @@ Attribute VB_Exposed = False
 ' original, and changed the prime numbers sampling strategy to make it work better on small images.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

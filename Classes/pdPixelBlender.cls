@@ -12,14 +12,14 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Pixel Blender class
+'PhotoPaint Pixel Blender class
 'Copyright 2014-2025 by Tanner Helland
 'Created: 01/May/14
 'Last updated: 03/March/25
 'Last update: implement "Overwrite/Replace" blend mode
 '
 'This class exists for a single purpose: blending colors from two DIBs, using any of the
-' blend and/or alpha modes supported by PhotoDemon.
+' blend and/or alpha modes supported by PhotoPaint.
 '
 'Blending was previously handled inside pdCompositor, but as part of broad compositor
 ' optimizations in PD 7.0, it was split off into this dedicated class.  This allows us to
@@ -27,7 +27,7 @@ Attribute VB_Exposed = False
 ' compositor (which already deals with way too many tasks).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

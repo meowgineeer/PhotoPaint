@@ -110,10 +110,10 @@ Attribute VB_Exposed = False
 'Last updated: 10/January/17
 'Last update: implement better theming support
 '
-'PhotoDemon now provides AutoSave functionality.  If the program terminates unexpectedly, this dialog will be raised,
+'PhotoPaint now provides AutoSave functionality.  If the program terminates unexpectedly, this dialog will be raised,
 ' which gives the user an option to restore any in-progress image edits.
 '
-'Images that had been loaded by PhotoDemon but never modified will not be shown.
+'Images that had been loaded by PhotoPaint but never modified will not be shown.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
 ' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
@@ -161,7 +161,7 @@ Public Sub ShowDialog()
     End If
     
     'Display a brief explanation of the dialog at the top of the window
-    lblWarning(1).Caption = g_Language.TranslateMessage("A previous PhotoDemon session terminated unexpectedly.  Would you like to automatically recover the following autosaved images?")
+    lblWarning(1).Caption = g_Language.TranslateMessage("A previous PhotoPaint session terminated unexpectedly.  Would you like to automatically recover the following autosaved images?")
     
     'Provide a default answer of "do not restore" (in the event that the user clicks the "x" button in the top-right)
     userAnswer = vbNo

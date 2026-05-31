@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Filter LUT (Look Up Table) Support Class
+'PhotoPaint Filter LUT (Look Up Table) Support Class
 'Copyright 2014-2025 by Tanner Helland
 'Created: 15/January/15
 'Last updated: 26/March/20
@@ -43,7 +43,7 @@ Attribute VB_Exposed = False
 ' could be a headache to reverse-engineer this.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

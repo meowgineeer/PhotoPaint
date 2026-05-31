@@ -18,14 +18,14 @@ Attribute VB_Exposed = False
 'Last updated: 14/September/15
 'Last update: greatly simplify the way PD measures its own memory usage
 '
-'Sometimes, PhotoDemon needs to grab OS-specific data (e.g. the current OS version of Windows, available RAM , etc.)
+'Sometimes, PhotoPaint needs to grab OS-specific data (e.g. the current OS version of Windows, available RAM , etc.)
 ' This module is designed to make such requests easier.
 '
 'I am currently working on migrating random bits of code from other places in PD to this class, so please be patient and ignore
 ' duplicate code entries in the meantime.  :)
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-' projects IF you provide attribution.  For more information, please visit http://photodemon.org/about/license/
+' projects IF you provide attribution.  For more information, please visit http://photopaint.org/about/license/
 '
 '***************************************************************************
 
@@ -108,7 +108,7 @@ End Type
 
 Private Declare Function GlobalMemoryStatusEx Lib "kernel32" (ByRef lpBuffer As MemoryStatusEx) As Long
 
-'Types and calls necessary for calculating PhotoDemon's current memory usage
+'Types and calls necessary for calculating PhotoPaint's current memory usage
 Private Type PROCESS_MEMORY_COUNTERS
    cb As Long
    PageFaultCount As Long

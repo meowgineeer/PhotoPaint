@@ -12,18 +12,18 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Resource Manager
+'PhotoPaint Resource Manager
 'Copyright 2016-2025 by Tanner Helland
 'Created: 13/December/16
 'Last updated: 21/June/22
 'Last update: automatically extract 3D LUT (color lookup table) collection on first run
 '
-'PhotoDemon needs to include a whole swatch of custom resources.  These resources take up a lot of space,
+'PhotoPaint needs to include a whole swatch of custom resources.  These resources take up a lot of space,
 ' and we also need to pull different resources depending on things like screen DPI.  To simplify this process,
 ' we manage resources manually, rather than relying on an external .rc file to do it for us.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -70,7 +70,7 @@ Friend Function LoadInitialResourceCollection() As Boolean
     
     Dim loadSuccess As Boolean
     
-    'In developer builds, we preferentially load the file-based resource file from the App/PhotoDemon/Themes folder.
+    'In developer builds, we preferentially load the file-based resource file from the App/PhotoPaint/Themes folder.
     ' (The resource file is updated frequently, and it's easier to work with a standalone file.)
     If (PD_BUILD_QUALITY <= PD_BETA) Then
     

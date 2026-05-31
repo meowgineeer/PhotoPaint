@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon "String Stack" Class
+'PhotoPaint "String Stack" Class
 'Copyright 2014-2021 by Tanner Helland
 'Created: 05/February/15
 'Last updated: 20/July/21
@@ -28,7 +28,7 @@ Attribute VB_Exposed = False
 ' went with it. ;)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

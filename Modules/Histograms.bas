@@ -12,7 +12,7 @@ Attribute VB_Name = "Histograms"
 'Note that some UI code pops up here as well, as various PD tools provide a histogram overlay.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

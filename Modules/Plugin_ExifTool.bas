@@ -7,17 +7,17 @@ Attribute VB_Name = "ExifTool"
 'Last update: manually write pHYs block when exporting PNGs
 '
 'Module for handling all ExifTool interfacing.  This module is pointless without the accompanying ExifTool plugin,
-' which can be found in the App/PhotoDemon/Plugins subdirectory as "exiftool.exe".  The ExifTool plugin is
-' available by default in all versions of PhotoDemon after (and including) 6.0.
+' which can be found in the App/PhotoPaint/Plugins subdirectory as "exiftool.exe".  The ExifTool plugin is
+' available by default in all versions of PhotoPaint after (and including) 6.0.
 '
 'ExifTool is a comprehensive image metadata handler written by Phil Harvey.  No DLL or VB-compatible library
-' is available, so PhotoDemon relies on the stock Windows ExifTool executable file for all interfacing.
+' is available, so PhotoPaint relies on the stock Windows ExifTool executable file for all interfacing.
 ' You can read more about ExifTool at its homepage:
 '
 'https://exiftool.org/
 '
-'As of PhotoDemon 6.1.499, all ExifTool interaction is piped across stdin/out.  This includes sending requests
-' to ExifTool, retrieving ExifTool results, and checking ExifTool returns for success/failure.  All of PhotoDemon's
+'As of PhotoPaint 6.1.499, all ExifTool interaction is piped across stdin/out.  This includes sending requests
+' to ExifTool, retrieving ExifTool results, and checking ExifTool returns for success/failure.  All of PhotoPaint's
 ' metadata code has been rewritten to take advantage of this new asynchronous implementation.
 '
 'Prior to that release, I used a sample VB module as a valuable reference (c/o Michael Wandel):
@@ -36,7 +36,7 @@ Attribute VB_Name = "ExifTool"
 ' downloadable from https://exiftool.org/
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -91,13 +91,13 @@ Private Type PROCESSENTRY32
     szExeFile As String * MAX_PATH_LEN
 End Type
 
-'This type is what PhotoDemon uses internally for storing and displaying metadata.  Its complexity is a testament to the
+'This type is what PhotoPaint uses internally for storing and displaying metadata.  Its complexity is a testament to the
 ' nightmare that is metadata management.
 Public Type PDMetadataItem
     
     TagGroupAndName As String       'Something like "IFD0:ResolutionUnit".  This is the tag name used by ExifTool
     TagGroup As String              'The first half of FullGroupAndName
-    TagGroupFriendly As String      'The PhotoDemon-specific categoriziation of this tag.  Users do not generally need to know subgroups; instead, we use naming conventions similar to other photo editors.
+    TagGroupFriendly As String      'The PhotoPaint-specific categoriziation of this tag.  Users do not generally need to know subgroups; instead, we use naming conventions similar to other photo editors.
     tagName As String               'The second half of FullGroupAndName
     TagNameFriendly As String       'The human-friendly tag name (supports spaces and special chars)
     TagTable As String              'The primary categorization of this tag, e.g. "Exif::Main", "JPEG::Adobe", "ICC_Profile::Main"
@@ -858,7 +858,7 @@ Public Function ShowMetadataDialog(ByRef srcImage As pdImage, Optional ByRef par
                 
                 Dim waitTitle As String, waitDescription As String
                 waitTitle = g_Language.TranslateMessage("Please wait while the tag database is created...")
-                waitDescription = g_Language.TranslateMessage("The tag database handles technical details of the 20,000+ metadata tags supported by PhotoDemon.  Creating the database takes 10 to 15 seconds, and it only needs to be created once, when the metadata editor is used for the first time.")
+                waitDescription = g_Language.TranslateMessage("The tag database handles technical details of the 20,000+ metadata tags supported by PhotoPaint.  Creating the database takes 10 to 15 seconds, and it only needs to be created once, when the metadata editor is used for the first time.")
                 
                 'When raising the metadata dialog from a save dialog, we cannot display the "please wait" window modelessly
                 ' (as the save dialog will be modal).  As such, we must use different methods for unloading it.
@@ -1218,7 +1218,7 @@ Public Function WriteMetadata(ByRef srcMetadataFile As String, ByRef dstImageFil
     ' If the user has NOT requested anonymization, list PD as the processing software.  (Note that this behavior can also be
     ' disabled from the Preferences dialog.)
     If (Not forciblyAnonymize) Then
-        If UserPrefs.GetPref_Boolean("Saving", "MetadataListPD", True) Then cmdParams.AppendLine "-Software=" & GetPhotoDemonNameAndVersion()
+        If UserPrefs.GetPref_Boolean("Saving", "MetadataListPD", True) Then cmdParams.AppendLine "-Software=" & GetPhotoPaintNameAndVersion()
     End If
     
     'ExifTool will always note itself as the XMP toolkit unless we specifically tell it not to; when "privacy mode" is active,
@@ -1364,7 +1364,7 @@ Public Function StartExifTool() As Boolean
                         Dim efVersion As String
                         efVersion = Mid$(fileContents, posVersion, posVersionEnd - posVersion)
                         
-                        'Compare the embedded version to the expected version for this PhotoDemon build.
+                        'Compare the embedded version to the expected version for this PhotoPaint build.
                         Dim versionMatch As Boolean
                         versionMatch = Strings.StringsEqual(efVersion, PluginManager.ExpectedPluginVersion(CCP_ExifTool), True)
                         

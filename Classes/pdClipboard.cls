@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Clipboard Interface
+'PhotoPaint Clipboard Interface
 'Copyright 2013-2025 by Tanner Helland
 'Created: 06/November/15 (formally split off from a heavily modified cCustomClipboard by Steve McMahon)
 'Last updated: 30/March/17
@@ -21,7 +21,7 @@ Attribute VB_Exposed = False
 'For many years, PD used vbAccelerator's "cCustomClipboard" class to simplify Windows clipboard interactions:
 ' http://www.vbaccelerator.com/home/VB/Code/Libraries/Clipboard/Customising_Clipboard_Use/article.asp
 '
-'Starting in May 2013 (https://github.com/tannerhelland/PhotoDemon/commit/c61951048c8a411e5e100cba9010dad8d81fc096),
+'Starting in May 2013 (https://github.com/tannerhelland/PhotoPaint/commit/c61951048c8a411e5e100cba9010dad8d81fc096),
 ' I rewrote much of the class to add new features and solve some long-standing stability issues.
 ' Unfortunately, the cCustomClipboard class is extremely bug-prone.  API returns are not always
 ' checked correctly, and when they are, they are handled out-of-order in various If/Then branches,
@@ -44,7 +44,7 @@ Attribute VB_Exposed = False
 ' http://www.vbaccelerator.com/home/VB/Code/Libraries/Clipboard/Customising_Clipboard_Use/article.asp
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -499,7 +499,7 @@ Friend Function SetClipboardBinaryData_Ptr(ByVal clipFormatID As PredefinedClipb
                 SetClipboardBinaryData_Ptr = (SetClipboardData(clipFormatID, hGlobalHandle) <> 0)
                 
                 'If SetClipboardData fails, we must free the hGlobal handle to prevent a leak.
-                'Thank you to @wqweto for this tip; see https://github.com/tannerhelland/PhotoDemon/issues/234
+                'Thank you to @wqweto for this tip; see https://github.com/tannerhelland/PhotoPaint/issues/234
                 If ((Not SetClipboardBinaryData_Ptr) And freeOnFailure) Then GlobalFree hGlobalHandle
                 
             Else
@@ -535,7 +535,7 @@ Friend Function SetClipboardMemoryHandle(ByVal clipFormatID As PredefinedClipboa
     ' we are not using delayed rendering (e.g. hMem <> 0), and if we are not using CF_BITMAP (which is an exception,
     ' as you don't pass an hGlobal, but a direct DDB handle).
     '
-    'Thank you to @wqweto for this tip; see https://github.com/tannerhelland/PhotoDemon/issues/234
+    'Thank you to @wqweto for this tip; see https://github.com/tannerhelland/PhotoPaint/issues/234
     If ((Not SetClipboardMemoryHandle) And freeOnFailure And (hMem <> 0)) Then GlobalFree hMem
     
 End Function

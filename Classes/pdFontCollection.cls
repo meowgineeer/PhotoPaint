@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Font Collection Manager
+'PhotoPaint Font Collection Manager
 'Copyright 2014-2025 by Tanner Helland
 'Created: 12/May/15
 'Last updated: 29/October/15
@@ -29,7 +29,7 @@ Attribute VB_Exposed = False
 'Obviously, this class relies heavily on WAPI.  Functions are documented to the best of my knowledge and ability.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

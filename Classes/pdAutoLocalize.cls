@@ -20,13 +20,13 @@ Attribute VB_Exposed = False
 'TODO: investigate wqweto's https://github.com/wqweto/VbAsyncSocket as an XP-compatible solution
 '      (vs the lazy WinHttpRequest approach I'm using currently)
 '
-'PhotoDemon's built-in Language Editor tool can interface with the DeepL web service to provide "suggested"
+'PhotoPaint's built-in Language Editor tool can interface with the DeepL web service to provide "suggested"
 ' translations for localizers.  This is especially helpful with long, complex, and/or overtly technical text.
 '
 'Use of this class requires a valid free DeepL API key.  You must set up a free DeepL account and supply
 ' the API key you receive to this class via the .SetAPIKey function.
 '
-'Besides its relatively high translation quality, DeepL was chosen for PhotoDemon localization because
+'Besides its relatively high translation quality, DeepL was chosen for PhotoPaint localization because
 ' it explicitly releases copyright on all translated text.  From section 6 of their Terms and Conditions
 ' (retrieved June 2022):
 '
@@ -43,7 +43,7 @@ Attribute VB_Exposed = False
 ' in particular ChenLin and Zhu JinYong.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -112,7 +112,7 @@ Public Function GetDeepLTranslation(ByVal srcText As String) As String
     'Anything involving the web can fail unexpectedly
     On Error GoTo NoTranslationAvailable
     
-    'To ensure some PhotoDemon text formatting quirks are OK, we pre- and post-process text.  You may need to modify
+    'To ensure some PhotoPaint text formatting quirks are OK, we pre- and post-process text.  You may need to modify
     ' this for your own purposes.
     Dim returnText As String
     returnText = vbNullString
@@ -122,13 +122,13 @@ Public Function GetDeepLTranslation(ByVal srcText As String) As String
         
         'Manually escape some chars in the source text.  This list is not exhaustive - use UrlEscapeW for that:
         ' https://docs.microsoft.com/en-us/windows/win32/api/shlwapi/nf-shlwapi-urlescapew
-        ' - ...but is intended to cover common behavior in PhotoDemon text.
+        ' - ...but is intended to cover common behavior in PhotoPaint text.
         
-        'PhotoDemon uses %n to define custom parameters in text entries.  URLs also make use of the % identifier,
+        'PhotoPaint uses %n to define custom parameters in text entries.  URLs also make use of the % identifier,
         ' so replace our % with something else before attempting to translate.
         If (InStr(srcText, "%") <> 0) Then srcText = Replace$(srcText, "%", "%25")
         
-        'Some PhotoDemon phrases contain line breaks.  We can't pass these in a URL, so replace 'em.
+        'Some PhotoPaint phrases contain line breaks.  We can't pass these in a URL, so replace 'em.
         If (InStr(srcText, vbCrLf) <> 0) Then srcText = Replace$(srcText, vbCrLf, "%0A")
         If (InStr(srcText, vbLf) <> 0) Then srcText = Replace$(srcText, vbLf, "%0A")
         If (InStr(srcText, vbCr) <> 0) Then srcText = Replace$(srcText, vbCr, "%0A")

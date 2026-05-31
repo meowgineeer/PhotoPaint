@@ -39,7 +39,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Tooltip replacement window
+'PhotoPaint Tooltip replacement window
 'Copyright 2016-2025 by Tanner Helland
 'Created: 21/September/16
 'Last updated: 21/September/16

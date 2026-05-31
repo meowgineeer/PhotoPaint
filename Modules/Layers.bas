@@ -6,11 +6,11 @@ Attribute VB_Name = "Layers"
 'Last updated: 14/November/23
 'Last update: new support for adding multiple layers from file at once (Layers > Add > from File...)
 '
-'This module provides all layer-related functions that interact with PhotoDemon's central processor.  Most of these
+'This module provides all layer-related functions that interact with PhotoPaint's central processor.  Most of these
 ' functions are triggered by either the Layer menu, or the Layer toolbox.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -143,8 +143,8 @@ Public Sub AddNewLayer_XML(ByRef processParameters As String)
     'One such compromise was layer groups.  PD doesn't support layer groups.  PS does.
     ' My workaround (inspired by the 3rd-party Paint.NET PSD plugin) is to add "dummy layers"
     ' as group start/end markers.  These "dummy" layers use a specific naming scheme, and when found,
-    ' PhotoDemon automatically maps them to/from PSD layers at export/import time.  This is a
-    ' temporary solution until PhotoDemon natively supports layer groups.
+    ' PhotoPaint automatically maps them to/from PSD layers at export/import time.  This is a
+    ' temporary solution until PhotoPaint natively supports layer groups.
     
     'This implementation obviously creates some annoyances when trying to add layer groups to an
     ' image destined for cross-support with Photoshop.  As an additional hacky workaround, I've
@@ -523,7 +523,7 @@ Public Function LoadImageAsNewLayer(ByVal raiseDialog As Boolean, Optional ByVal
         If replaceActiveLayerInstead Then
             
             'Ask for a single file
-            LoadImageAsNewLayer = FileMenu.PhotoDemon_OpenImageDialog_SingleFile(imgListCondensed, FormMain.hWnd)
+            LoadImageAsNewLayer = FileMenu.PhotoPaint_OpenImageDialog_SingleFile(imgListCondensed, FormMain.hWnd)
             If LoadImageAsNewLayer Then
                 Process "Replace layer from file", False, imgListCondensed, UNDO_Layer
             Else
@@ -534,7 +534,7 @@ Public Function LoadImageAsNewLayer(ByVal raiseDialog As Boolean, Optional ByVal
         Else
             
             'Ask for as many files as the user wants
-            LoadImageAsNewLayer = FileMenu.PhotoDemon_OpenImageDialog(listOfFiles, FormMain.hWnd)
+            LoadImageAsNewLayer = FileMenu.PhotoPaint_OpenImageDialog(listOfFiles, FormMain.hWnd)
             If LoadImageAsNewLayer Then
             
                 'Serialize the stack to a single string object, then continue processing

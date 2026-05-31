@@ -28,7 +28,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Owner-Drawn Strip control
+'PhotoPaint Owner-Drawn Strip control
 'Copyright 2017-2025 by Tanner Helland
 'Created: 13/February/17
 'Last updated: 13/February/17

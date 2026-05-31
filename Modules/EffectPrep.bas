@@ -8,13 +8,13 @@ Attribute VB_Name = "EffectPrep"
 '
 'This interface provides API support for the main image interaction routines. It assigns memory data
 ' into a useable array, and later transfers that array back into memory.  Very fast, very compact, can't
-' live without it. These functions are arguably the most integral part of PhotoDemon.
+' live without it. These functions are arguably the most integral part of PhotoPaint.
 '
 'If you want to know more about how DIB sections work - and why they're so fast compared to VB's internal
 ' .PSet and .Point methods - please visit https://tannerhelland.com/2008/06/18/vb-graphics-programming-3.html
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -22,7 +22,7 @@ Option Explicit
 
 'Any time a tool dialog is in use, the image to be operated on will be stored IN THIS LAYER.
 '- In preview mode, workingDIB contains a small, preview-size version of the image.
-'- In non-preview mode, workingDIB contains a full-sized copy of the active layer.  PhotoDemon doesn't allow effects
+'- In non-preview mode, workingDIB contains a full-sized copy of the active layer.  PhotoPaint doesn't allow effects
 '   and tools to operate on original image data; this is why a user can cancel functions mid-process.
 '- If a selection is active, workingDIB contains only the selected portion of the image; unselected regions will be
 '   auto-masked with transparency, so individual functions don't need to concern themselves with those details.
@@ -34,7 +34,7 @@ Public workingDIB As pdDIB
 ' area onto the main DIB while doing extra selection processing.
 Private workingDIBBackup As pdDIB
 
-'EffectPrep.PrepImageData() is what PhotoDemon adjustments and effects call to request a copy of the current image.
+'EffectPrep.PrepImageData() is what PhotoPaint adjustments and effects call to request a copy of the current image.
 ' That function fills a variable of this type (FilterInfo) with everything the effect could possibly want to know
 ' about the active DIB.
 Public Type FilterInfo

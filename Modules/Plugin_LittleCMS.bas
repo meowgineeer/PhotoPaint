@@ -7,20 +7,20 @@ Attribute VB_Name = "LittleCMS"
 'Last update: add wrapper for creating custom RGB profiles via custom tone curves
 '
 'Module for handling all LittleCMS interfacing.  This module is pointless without the accompanying
-' LittleCMS plugin, which will be in the App/PhotoDemon/Plugins subdirectory as "lcms2.dll".
+' LittleCMS plugin, which will be in the App/PhotoPaint/Plugins subdirectory as "lcms2.dll".
 '
 'LittleCMS is a free, open-source color management library.  You can learn more about it here:
 ' http://www.littlecms.com/
 '
-'PhotoDemon has been designed against v2.8.0.  It may not work with other versions.
+'PhotoPaint has been designed against v2.8.0.  It may not work with other versions.
 ' Additional documentation regarding the use of LittleCMS is available as part of the official
 ' LittleCMS library, available from https://github.com/mm2/Little-CMS.
 '
-'LittleCMS is available under the MIT license.  Please see the App/PhotoDemon/Plugins/lcms2-LICENSE.txt
+'LittleCMS is available under the MIT license.  Please see the App/PhotoPaint/Plugins/lcms2-LICENSE.txt
 ' file for questions regarding copyright or licensing.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -951,7 +951,7 @@ Public Function ApplyICCProfileToPDDIB(ByRef targetDIB As pdDIB, ByRef srcIccPro
     
     'Start by creating two LCMS profile handles:
     ' 1) a source profile (the in-memory copy of the ICC profile associated with this DIB)
-    ' 2) a destination profile (the current PhotoDemon working space)
+    ' 2) a destination profile (the current PhotoPaint working space)
     Dim srcProfile As pdLCMSProfile, dstProfile As pdLCMSProfile
     Set srcProfile = New pdLCMSProfile
     Set dstProfile = New pdLCMSProfile

@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon "Shuttle Radar Topography Mission (SRTM)" (HGT) Decoder
+'PhotoPaint "Shuttle Radar Topography Mission (SRTM)" (HGT) Decoder
 'Copyright 2022-2025 by Tanner Helland
 'Created: 13/September/22
 'Last updated: 15/November/22
@@ -33,7 +33,7 @@ Attribute VB_Exposed = False
 'You will need a free NASA Earthdata login; a link to sign-up is provided at that site.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

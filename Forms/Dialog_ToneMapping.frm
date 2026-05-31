@@ -314,7 +314,7 @@ Attribute VB_Exposed = False
 '
 'The linear and filmic options are custom coded for PD.  Drago and Reinhard simply wrap the matching FreeImage.dll functions.
 '
-'Many thanks to Hans Nolte for his invaluable help on this topic.  (https://github.com/tannerhelland/PhotoDemon/issues/149)
+'Many thanks to Hans Nolte for his invaluable help on this topic.  (https://github.com/tannerhelland/PhotoPaint/issues/149)
 '
 'Thanks also to John Hable (formerly of Naughty Dog) for his great presentation on tone-mapping, including a breakdown
 ' of his fast and reliable Filmic Tonemapping method: http://fr.slideshare.net/ozlael/hable-john-uncharted2-hdr-lighting

@@ -10,7 +10,7 @@ Attribute VB_Name = "PDMath"
 ' until June '13.  This module is now used to store all the random bits of specialized math required by the program.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -83,7 +83,7 @@ End Function
 ' https://stackoverflow.com/questions/471962/how-do-i-efficiently-determine-if-a-polygon-is-convex-non-convex-or-complex
 '
 'Note that this version is deliberately modified to allow points to sit on the same line (angle = 0);
-' because PhotoDemon always passes points in clockwise order, we don't need to worry about how this 0
+' because PhotoPaint always passes points in clockwise order, we don't need to worry about how this 0
 ' would otherwise affect checks for directional changes in angle.
 '
 'Returns: TRUE if convex, FALSE otherwise

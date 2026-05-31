@@ -6,10 +6,10 @@ Attribute VB_Name = "Toolboxes"
 'Last updated: 06/March/16
 'Last update: split toolbox-specific code out of the (now very large) Interface module and into this dedicated home.
 '
-'Miscellaneous routines related to rendering and handling PhotoDemon's toolboxes.
+'Miscellaneous routines related to rendering and handling PhotoPaint's toolboxes.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

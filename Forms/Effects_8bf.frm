@@ -582,9 +582,9 @@ Private Sub ScanForPlugins()
         fullCaption.AppendLineBreak
         fullCaption.AppendLine g_Language.TranslateMessage("Photoshop (8bf) plugins are files with an ""8bf"" extension.  These plugins provide new image effects.  Thousands of 8bf plugins are available online.")
         fullCaption.AppendLineBreak
-        fullCaption.AppendLine g_Language.TranslateMessage("PhotoDemon does not ship with 8bf plugins, but if you find plugins online, you can download them and add them to PhotoPaint.  (PhotoDemon supports most 32-bit 8bf plugins.  64-bit plugins are not supported.)")
+        fullCaption.AppendLine g_Language.TranslateMessage("PhotoPaint does not ship with 8bf plugins, but if you find plugins online, you can download them and add them to PhotoPaint.  (PhotoPaint supports most 32-bit 8bf plugins.  64-bit plugins are not supported.)")
         fullCaption.AppendLineBreak
-        fullCaption.AppendLine g_Language.TranslateMessage("After downloading one or more 8bf files, use the settings button (above) to tell PhotoDemon where to find them.  PhotoDemon will then add them to your Effects collection.")
+        fullCaption.AppendLine g_Language.TranslateMessage("After downloading one or more 8bf files, use the settings button (above) to tell PhotoPaint where to find them.  PhotoPaint will then add them to your Effects collection.")
         
         lblNoPlugins.Caption = fullCaption.ToString()
         

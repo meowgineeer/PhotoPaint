@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Pop-up Menu Manager
+'PhotoPaint Pop-up Menu Manager
 'Copyright 2019-2025 by Tanner Helland
 'Created: 29/May/19
 'Last updated: 16/December/23
@@ -22,7 +22,7 @@ Attribute VB_Exposed = False
 ' custom solution by interacting directly with WAPI (user32), specifically TrackPopupMenu.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

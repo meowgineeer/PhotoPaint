@@ -12,18 +12,18 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Layer Mask class
+'PhotoPaint Layer Mask class
 'Copyright 2022-2025 by Tanner Helland
 'Created: 24/March/22
 'Last updated: 24/March/22
 'Last update: initial build
 '
-'This class is a WIP.  Layer masks are not fully supported by PhotoDemon yet, so this class's interfaces
+'This class is a WIP.  Layer masks are not fully supported by PhotoPaint yet, so this class's interfaces
 ' are likely to change in the future.  (At present, this class primarily exists to persist layer masks
 ' to/from PSD files.)
 '
 'All source code in this file is licensed under a modified BSD license. This means you may use the code in your own
-' projects IF you provide attribution. For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution. For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -45,7 +45,7 @@ Private m_MaskBytes() As Byte
 ' currently lock the value to [0] or [max] when exporting to PSD.
 Private m_OpacityOutsideMask As Single
 
-'If the mask came from an outside file format (like PSD), it may behave differently than a normal PhotoDemon mask.
+'If the mask came from an outside file format (like PSD), it may behave differently than a normal PhotoPaint mask.
 ' As of 2022, this is relevant for layer group masks because PD does not support layer groups yet.  These flag(s)
 ' can be used to note special mask properties that affect the way this mask is handled internally.
 Private m_MaskBelongsToPSGroup As Boolean

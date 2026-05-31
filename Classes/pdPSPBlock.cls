@@ -12,14 +12,14 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon PSP (PaintShop Pro) Block Container
+'PhotoPaint PSP (PaintShop Pro) Block Container
 'Copyright 2020-2025 by Tanner Helland
 'Created: 30/December/20
 'Last updated: 02/January/21
 'Last update: add helper function for human-readable block names
 '
 'This class describes a single "block" inside a JASC/Corel Paint Shop Pro image file.
-' It has been custom-built for PhotoDemon, with a special emphasis on parsing performance.
+' It has been custom-built for PhotoPaint, with a special emphasis on parsing performance.
 '
 'Unless otherwise noted, all code in this class is my original work.  I've based my work off the
 ' "official" PSP spec at this URL (link good as of December 2020):
@@ -30,7 +30,7 @@ Attribute VB_Exposed = False
 ' http://www.telegraphics.com.au/svn/pspformat/trunk
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

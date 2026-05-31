@@ -352,7 +352,7 @@ Private Sub Form_Load()
     'Interface prefs
     btsTitleText.AddItem "compact (filename only)", 0
     btsTitleText.AddItem "verbose (filename and path)", 1
-    btsTitleText.AssignTooltip "The title bar of the main PhotoDemon window displays information about the currently loaded image.  Use this preference to control how much information is displayed."
+    btsTitleText.AssignTooltip "The title bar of the main PhotoPaint window displays information about the currently loaded image.  Use this preference to control how much information is displayed."
     
     lblCanvasColor.Caption = g_Language.TranslateMessage("canvas background color: ")
     csCanvasColor.SetLeft lblCanvasColor.GetLeft + lblCanvasColor.GetWidth + Interface.FixDPI(8)

@@ -17,7 +17,7 @@ Attribute VB_Name = "Plugin_EZTwain"
 ' available from the EZTW32 developers at http://eztwain.com/ezt1_download.htm
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -104,7 +104,7 @@ Public Function IsScannerAvailable() As Boolean
     IsScannerAvailable = m_ScanningAvailable
 End Function
 
-'Allow the user to select which hardware PhotoDemon will use for scanning
+'Allow the user to select which hardware PhotoPaint will use for scanning
 Public Sub Twain32SelectScanner()
     
     If m_ScanningAvailable Then

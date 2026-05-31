@@ -12,14 +12,14 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon PSP (PaintShop Pro) Vector Shape Container
+'PhotoPaint PSP (PaintShop Pro) Vector Shape Container
 'Copyright 2020-2025 by Tanner Helland
 'Created: 31/December/20
 'Last updated: 25/May/22
 'Last update: in text layers, replace standalone LF chars with CRLF to ensure correct linebreak behavior
 '
 'This class describes a single vector "shape" inside a JASC/Corel Paint Shop Pro image file.
-' It has been custom-built for PhotoDemon, with a special emphasis on parsing performance.
+' It has been custom-built for PhotoPaint, with a special emphasis on parsing performance.
 ' Vector rendering elements are automatically translated to pd2D as needed (and pd2D ultimately
 ' handles all rendering).
 '
@@ -32,7 +32,7 @@ Attribute VB_Exposed = False
 ' http://www.telegraphics.com.au/svn/pspformat/trunk
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -439,7 +439,7 @@ Friend Function CreateTextLayerNow(ByRef dstImage As pdImage, ByRef dstLayer As 
     Set finalString = New pdString
     
     'We also need to determine things like font name, color, etc.  PSP supports multiple styles
-    ' within a single text layer.  PhotoDemon does not.  For now, all we can do is take the
+    ' within a single text layer.  PhotoPaint does not.  For now, all we can do is take the
     ' first style in a text layer, and apply that to the layer as a whole.
     Dim styleIndex As Long
     styleIndex = -1

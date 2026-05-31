@@ -11,14 +11,14 @@ Attribute VB_Name = "WIC"
 ' "The Windows Imaging Component (WIC) is an extensible platform that provides [a]
 '  low-level API for digital images."
 '
-'At present, PhotoDemon makes limited use of WIC for importing esoteric file formats (e.g. HEIC/HEIF).
+'At present, PhotoPaint makes limited use of WIC for importing esoteric file formats (e.g. HEIC/HEIF).
 ' Usage may expand in the future as needs require.
 '
 'Thank you to vbforums user Victor Bravo VI for first documenting lightweight WIC usage from VB6:
 ' http://www.vbforums.com/showthread.php?879695-Anyone-familiar-with-Windows-Imaging-Component-or-odd-IDL-pointer-types-in-general&p=5427029&viewfull=1#post5427029
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

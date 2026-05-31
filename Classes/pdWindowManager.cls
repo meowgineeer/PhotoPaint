@@ -12,13 +12,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Window Manager class
+'PhotoPaint Window Manager class
 'Copyright 2013-2025 by Tanner Helland
 'Created: 02/October/13
 'Last updated: 04/March/25
 'Last update: improve saving/restoring window location for child windows
 '
-'PhotoDemon first began as a single-pane, single-image editor.  About a decade ago,
+'PhotoPaint first began as a single-pane, single-image editor.  About a decade ago,
 ' I rewrote it as an MDI project, and in 2013 I rewrote it again - this time, to a
 ' tabbed interface in line with the UI trends of the era.
 '
@@ -37,7 +37,7 @@ Attribute VB_Exposed = False
 ' (http://www.vbforums.com/showthread.php?527802-VB6-UniCaption).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -496,7 +496,7 @@ Friend Sub ForceWindowAppearInAltTab(ByVal srcHWnd As Long, ByVal appearState As
     
 End Sub
 
-'The first time PhotoDemon is run, this sub can be called to nicely center the window on the user's primary monitor.
+'The first time PhotoPaint is run, this sub can be called to nicely center the window on the user's primary monitor.
 Friend Sub SetFirstRunMainWindowPosition()
 
     'Start by retrieving the primary monitor's dimensions.  Note that this check relies on access to PD's g_Displays class.
@@ -617,7 +617,7 @@ Friend Function RestoreWindowLocation(ByRef frmReference As Form) As Boolean
         End If
         
         'Make sure the location values will result in an on-screen form.
-        ' If they will not (for example, if the user detached a secondary monitor on which PhotoDemon was being used),
+        ' If they will not (for example, if the user detached a secondary monitor on which PhotoPaint was being used),
         ' change the values to ensure this window appears on-screen.
         
         'Note that this check relies on access to PD's g_Displays class, which returns the full
@@ -806,11 +806,11 @@ End Function
 Private Sub ResetXMLData()
     m_XML.PrepareNewXML "Window locations"
     m_XML.WriteBlankLine
-    m_XML.WriteComment "Everything past this point is window location data for various PhotoDemon dialogs."
+    m_XML.WriteComment "Everything past this point is window location data for various PhotoPaint dialogs."
     m_XML.WriteBlankLine
 End Sub
 
-'The primary PhotoDemon form must register its hWnd, so we can track its movement and move any children windows accordingly.
+'The primary PhotoPaint form must register its hWnd, so we can track its movement and move any children windows accordingly.
 Friend Sub RegisterMainForm(ByRef parentForm As Form)
     
     'Add this window to the collection, and cache its hWnd (because we reference the main window handle frequently)

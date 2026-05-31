@@ -29,13 +29,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Progress Bar UI element
+'PhotoPaint Progress Bar UI element
 'Copyright 2014-2025 by Tanner Helland
 'Created: 20/March/18
 'Last updated: 20/March/18
 'Last update: initial build
 '
-'In a surprise to precisely no one, PhotoDemon has some unique needs when it comes to user controls - needs that
+'In a surprise to precisely no one, PhotoPaint has some unique needs when it comes to user controls - needs that
 ' the intrinsic VB controls can't handle.  These range from the obnoxious (lack of an "autosize" property for
 ' anything but labels) to the critical (no Unicode support).
 '

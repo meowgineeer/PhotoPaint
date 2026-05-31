@@ -73,7 +73,7 @@ Attribute VB_Exposed = False
 'Last update: migrate to XML params
 '
 'Tint is a simple adjustment along the magenta/green axis of the image.  While of limited use in a
-' separate dialog like this, PhotoDemon sticks to convention by providing it as a "quick-fix" non-destructive
+' separate dialog like this, PhotoPaint sticks to convention by providing it as a "quick-fix" non-destructive
 ' action, which also means that it needs to exist as a dedicated menu entry.
 '
 'The formula used here is more nuanced than the "quick fix" version.  This tool will attempt to preserve image

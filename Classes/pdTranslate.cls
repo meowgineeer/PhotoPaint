@@ -16,16 +16,16 @@ Attribute VB_Exposed = False
 'Copyright 2012-2025 by Frank Donckers and Tanner Helland
 'Created: 21/December/12
 'Last updated: 28/September/23
-'Last update: new "assign translation by object ID instead of caption" feature (see https://github.com/tannerhelland/PhotoDemon/issues/491)
+'Last update: new "assign translation by object ID instead of caption" feature (see https://github.com/tannerhelland/PhotoPaint/issues/491)
 '
-'In 2012, Frank Donckers made a significant contribution to PhotoDemon: a prototype for a run-time
+'In 2012, Frank Donckers made a significant contribution to PhotoPaint: a prototype for a run-time
 ' localization engine.  This may not sound like much, but VB6 does not provide native support for
 ' anything like this, so this was a *huge* undertaking, especially for a volunteer working on a
 ' foreign codebase.  Thank you to Frank for kicking off what would become a multi-year initiative
 ' to provide the best multi-language experience ever achieved in VB6.  (Frank also provided the
 ' initial language files for three new localizations: Vlaams, Francais, and Deutsch.)
 '
-'Today, PhotoDemon's translation engine is a lean-and-mean little machine.  It provides full
+'Today, PhotoPaint's translation engine is a lean-and-mean little machine.  It provides full
 ' support for Unicode text both on the backend (e.g. Unicode filenames) and on the front-end
 ' (UI elements, user input).  This is achieved via a fully themable, UTF-8 compatible UI
 ' suite hand-built for the project. New localizations can be applied (or undone) *at* run-time and
@@ -33,7 +33,7 @@ Attribute VB_Exposed = False
 ' supplied by volunteers and may not always be 100% up-to-date.
 '
 'Translation files are shipped as basic XML.  You can see (and freely edit) these files inside the
-' /App/PhotoDemon/Languages/ subfolder wherever PD is installed.  If you do decide to edit PD's
+' /App/PhotoPaint/Languages/ subfolder wherever PD is installed.  If you do decide to edit PD's
 ' language files, I strongly suggest saving the new files inside the USER folder of the project,
 ' e.g. /Data/Languages/.  This will ensure they are not overwritten by software updates or future
 ' changes to the official language files that ship with the app.
@@ -44,7 +44,7 @@ Attribute VB_Exposed = False
 ' starting with the Loading module, and looking at the way this class is initialized and loaded.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -69,7 +69,7 @@ Private m_numOfLanguages As Long
 Private m_AvailableLanguages() As PDLanguageFile
 
 'Array ID of the current language.
-' If no language is selected (e.g. PhotoDemon is using en-US), this value is -1.
+' If no language is selected (e.g. PhotoPaint is using en-US), this value is -1.
 Private m_currentLanguage As Long
 
 'Array ID of the default language (en-US).
@@ -110,7 +110,7 @@ Private m_FoundTranslations As pdStringHash
 
 'Some languages need translations that do not map 1:1 with English text.
 ' (For example, `Color > Invert` vs `Select > Invert` requires different translations in Chinese for `Invert`,
-'  per https://github.com/tannerhelland/PhotoDemon/issues/491.)
+'  per https://github.com/tannerhelland/PhotoPaint/issues/491.)
 ' Not all languages require this cache, so it may contain 0 entries at run-time - which is fine!
 Private m_ObjectTranslations As pdStringHash
 
@@ -191,7 +191,7 @@ End Sub
 ' 1) If the user has already specified a language, use it (obviously)
 ' 2) If the user has *not* specified a language, and this is *not* the first time they've run the program,
 '     assume they want English.
-' 3) If this is the user's first time running PhotoDemon, estimate what language to present based on the
+' 3) If this is the user's first time running PhotoPaint, estimate what language to present based on the
 '     current system language.  If a matching language is available, present that.  (If not, present English.)
 Friend Sub DetermineLanguage()
 
@@ -205,8 +205,8 @@ Friend Sub DetermineLanguage()
     'By default, do not display a language selection dialog
     m_needToShowLanguageDialog = False
 
-    'Is this the first time PhotoDemon has been run?  If it is, check the system language - we'll use that
-    ' to determine which available PhotoDemon language file is the best match for this user.
+    'Is this the first time PhotoPaint has been run?  If it is, check the system language - we'll use that
+    ' to determine which available PhotoPaint language file is the best match for this user.
     If g_IsFirstRun Then
     
         Dim curLangID As String
@@ -308,7 +308,7 @@ Private Function IsExactLanguageMatch(ByRef srcLangID As String) As Long
 End Function
 
 'ALWAYS CALL DetermineLanguage BEFORE THIS STAGE!
-'Once a PhotoDemon language has been selected (via DetermineLanguage), this function can be called to "apply" that language to the program.
+'Once a PhotoPaint language has been selected (via DetermineLanguage), this function can be called to "apply" that language to the program.
 ' NOTE: if the language is changed, this function must be called again to set the new language program-wide.
 Friend Sub ApplyLanguage(Optional ByVal redrawMainUI As Boolean = True, Optional ByVal useDoEvents As Boolean = False)
     
@@ -318,7 +318,7 @@ Friend Sub ApplyLanguage(Optional ByVal redrawMainUI As Boolean = True, Optional
         Set m_XMLEngine = New pdXML
         m_XMLEngine.LoadXMLFile m_AvailableLanguages(m_currentLanguage).FileName
         
-        'PhotoDemon uses stict binary text comparisons when matching translations.  This provides a large
+        'PhotoPaint uses stict binary text comparisons when matching translations.  This provides a large
         ' performance boost, and is necessary to produce correct captioning when the same word is used in
         ' multiple places with different cases (e.g. titlecase in menus vs lowercase in other UI elements).
         m_XMLEngine.SetTextCompareMode vbBinaryCompare
@@ -619,7 +619,7 @@ Friend Sub CheckAvailableLanguages()
         VBHacks.GetHighResTime startTime
     End If
     
-    'Add a dummy entry for PhotoDemon's default language (en-US)
+    'Add a dummy entry for PhotoPaint's default language (en-US)
     m_AvailableLanguages(m_numOfLanguages).FileName = vbNullString
     m_AvailableLanguages(m_numOfLanguages).langID = "en-US"
     m_AvailableLanguages(m_numOfLanguages).LangName = "English (US)"
@@ -666,7 +666,7 @@ End Sub
 
 'Some languages need access to translations that do not map 1:1 with English text.
 ' (For example, `Color > Invert` vs `Select > Invert` requires different translations in Chinese for `Invert`,
-'  per https://github.com/tannerhelland/PhotoDemon/issues/491.)
+'  per https://github.com/tannerhelland/PhotoPaint/issues/491.)
 '
 'To enable this type of mapping, translators are allowed to add a custom <special-translations> block to
 ' a language file, which maps text to an *object-ID* instead of an English equivalent.
@@ -1031,10 +1031,10 @@ Friend Function TranslateMessage(ByRef srcMessage As String, ParamArray ExtraTex
     If (UBound(ExtraText) >= LBound(ExtraText)) Then numOptionalParams = (UBound(ExtraText) - LBound(ExtraText)) + 1
     
     'In version 9.2+, objects can now (optionally) identify themselves with a unique object ID.
-    ' PhotoDemon can use this ID to assign special translations that do not map 1:1 to English text
+    ' PhotoPaint can use this ID to assign special translations that do not map 1:1 to English text
     ' (based on caption alone.)
     
-    'See https://github.com/tannerhelland/PhotoDemon/issues/491 for details on why this solution was necessary.
+    'See https://github.com/tannerhelland/PhotoPaint/issues/491 for details on why this solution was necessary.
     Dim searchString As String, newString As String
     Dim customIdTranslationFound As Boolean
     

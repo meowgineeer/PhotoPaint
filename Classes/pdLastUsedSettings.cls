@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Auto-Save Form Settings custom class
+'PhotoPaint Auto-Save Form Settings custom class
 'Copyright 2013-2025 by Tanner Helland
 'Created: 14/September/13
 'Last updated: 18/October/21
@@ -28,7 +28,7 @@ Attribute VB_Exposed = False
 ' easily read/write custom data as well.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

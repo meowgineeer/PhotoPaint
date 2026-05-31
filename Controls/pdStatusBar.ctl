@@ -154,7 +154,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon primary canvas status bar control
+'PhotoPaint primary canvas status bar control
 'Copyright 2002-2025 by Tanner Helland
 'Created: 29/November/02
 'Last updated: 07/December/21

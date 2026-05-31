@@ -18,10 +18,10 @@ Attribute VB_Exposed = False
 'Last updated: 27/February/24
 'Last update: finish work on initial import prototype
 '
-'PhotoDemon uses the pdfium library (https://pdfium.googlesource.com/pdfium/) for all PDF features.
+'PhotoPaint uses the pdfium library (https://pdfium.googlesource.com/pdfium/) for all PDF features.
 ' pdfium is provided under BSD-3 and Apache 2.0 licenses (https://pdfium.googlesource.com/pdfium/+/main/LICENSE).
 '
-'Support for this format was added during the PhotoDemon 10.0 release cycle.
+'Support for this format was added during the PhotoPaint 10.0 release cycle.
 '
 'This class relies on pdfium initialization and interface code written in Plugin_PDF.bas.
 ' You *MUST* call Plugin_PDF.InitializeEngine() with a valid path to pdfium.dll before initializing
@@ -32,7 +32,7 @@ Attribute VB_Exposed = False
 ' http://www.vbforums.com/showthread.php?781595-VB6-Call-Functions-By-Pointer-(Universall-DLL-Calls)&p=4795471&viewfull=1#post4795471
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

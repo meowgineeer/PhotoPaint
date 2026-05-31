@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Window Synchronization class
+'PhotoPaint Window Synchronization class
 'Copyright 2015-2025 by Tanner Helland
 'Created: 26/September/15
 'Last updated: 06/February/16
@@ -31,7 +31,7 @@ Attribute VB_Exposed = False
 ' to the same parent, by design.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

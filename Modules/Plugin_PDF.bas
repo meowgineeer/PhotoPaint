@@ -6,10 +6,10 @@ Attribute VB_Name = "Plugin_PDF"
 'Last updated: 25/March/25
 'Last update: delay-load the library to improve performance
 '
-'PhotoDemon uses the pdfium library (https://pdfium.googlesource.com/pdfium/) for all PDF features.
+'PhotoPaint uses the pdfium library (https://pdfium.googlesource.com/pdfium/) for all PDF features.
 ' pdfium is provided under BSD-3 and Apache 2.0 licenses (https://pdfium.googlesource.com/pdfium/+/main/LICENSE).
 '
-'Support for this format was added during the PhotoDemon 10.0 release cycle.
+'Support for this format was added during the PhotoPaint 10.0 release cycle.
 '
 'This module primarily deals with initializing and low-level interfacing with pdfium.  For higher-level
 ' implementation details, please refer to the pdPDF class (which is designed to hold a single PDF instance).
@@ -19,7 +19,7 @@ Attribute VB_Name = "Plugin_PDF"
 ' http://www.vbforums.com/showthread.php?781595-VB6-Call-Functions-By-Pointer-(Universall-DLL-Calls)&p=4795471&viewfull=1#post4795471
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

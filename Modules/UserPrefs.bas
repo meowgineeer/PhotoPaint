@@ -1,11 +1,11 @@
 Attribute VB_Name = "UserPrefs"
 '***************************************************************************
-'PhotoDemon User Preferences Manager
+'PhotoPaint User Preferences Manager
 'Copyright 2012-2025 by Tanner Helland
 'Created: 03/November/12
 'Last updated: 06/October/25
 'Last update: perform additional validation when loading the user preferences file (count for matched tags),
-'             and if validation fails, do a hard reset on the pref file.  (See https://github.com/tannerhelland/PhotoDemon/issues/700)
+'             and if validation fails, do a hard reset on the pref file.  (See https://github.com/tannerhelland/PhotoPaint/issues/700)
 '
 'This is the modern incarnation of PD's old "INI file" module.  It is responsible for managing all
 ' persistent user settings.
@@ -25,17 +25,17 @@ Attribute VB_Name = "UserPrefs"
 ' settings will always behave correctly.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
 Option Explicit
 
-'To make PhotoDemon compatible with the PortableApps spec (http://portableapps.com/), several sub-folders
+'To make PhotoPaint compatible with the PortableApps spec (http://portableapps.com/), several sub-folders
 ' are necessary.  These include:
-'  /App subfolder, which contains information ESSENTIAL and UNIVERSAL for each PhotoDemon install
+'  /App subfolder, which contains information ESSENTIAL and UNIVERSAL for each PhotoPaint install
 '        (e.g. plugin DLLs, language files)
-'  /Data subfolder, which contains information that is OPTIONAL and UNIQUE for each PhotoDemon install
+'  /Data subfolder, which contains information that is OPTIONAL and UNIQUE for each PhotoPaint install
 '        (e.g. user prefs, saved macros, last-used dialog settings)
 Private m_ProgramPath As String
 Private m_AppPath As String
@@ -49,7 +49,7 @@ Private m_ThemePath As String
 Private m_LanguagePath As String
 
 '/Data subfolders come next.  Note that some of these can be modified at run-time by user behavior -
-' e.g. PhotoDemon does not currently ship with a prebuilt palette collection, so its palette path
+' e.g. PhotoPaint does not currently ship with a prebuilt palette collection, so its palette path
 ' changes as the user loads/saves palettes from standalone palette files.
 '
 'Similarly, some features support additional user paths - like 8bf plugins, which have a default folder
@@ -376,7 +376,7 @@ Public Function InitializePaths() As Boolean
     Set cFile = New pdFSO
     m_ProgramPath = cFile.AppPathW
     
-    'If this is the first time PhotoDemon is run, we need to create a series of data folders.
+    'If this is the first time PhotoPaint is run, we need to create a series of data folders.
     ' Because PD is a portable application, we default to creating those folders in our own
     ' application folder.  Unfortunately, some users do dumb things like put PD inside protected
     ' system folders, which causes this step to fail.  We try to handle this situation gracefully,
@@ -440,11 +440,11 @@ Public Function InitializePaths() As Boolean
     If (Not Files.PathExists(m_AppPath)) Then InitializePaths = Files.PathCreate(m_AppPath)
     If (Not InitializePaths) Then Exit Function
     
-    'Within the App\PhotoDemon\ folder, create a folder for any available OFFICIAL translations.  (User translations go in the Data folder.)
+    'Within the App\PhotoPaint\ folder, create a folder for any available OFFICIAL translations.  (User translations go in the Data folder.)
     m_LanguagePath = m_AppPath & "Languages\"
     If (Not Files.PathExists(m_LanguagePath)) Then Files.PathCreate m_LanguagePath
     
-    'Within the App\PhotoDemon\ folder, create a folder for any available OFFICIAL themes.  (User themes go in the Data folder.)
+    'Within the App\PhotoPaint\ folder, create a folder for any available OFFICIAL themes.  (User themes go in the Data folder.)
     m_ThemePath = m_AppPath & "Themes\"
     If (Not Files.PathExists(m_ThemePath)) Then Files.PathCreate m_ThemePath
     
@@ -539,7 +539,7 @@ Public Function InitializePaths() As Boolean
     If (Not Files.PathExists(m_UpdatesPath)) Then Files.PathCreate m_UpdatesPath
     
     'After all paths have been validated, we sometimes need to perform path clean-up.  This is required if new builds
-    ' change where key PhotoDemon files are stored, or renames key files.  (Without this, we risk leaving behind
+    ' change where key PhotoPaint files are stored, or renames key files.  (Without this, we risk leaving behind
     ' duplicate files between builds.)
     PerformPathCleanup
     
@@ -571,7 +571,7 @@ Private Sub PerformPathCleanup()
     
     'In PD 7.0, I switched to distributing text files like README.txt as markdown files (README.md).
     ' This spares me from maintaining duplicate copies, and it ensures that the actual README used
-    ' on GitHub is identical to the one downloaded from photodemon.org.
+    ' on GitHub is identical to the one downloaded from photopaint.org.
     
     'To prevent duplicate copies, check for any leftover.txt instances and remove them.
     ' (Note that we explicitly check file size to avoid removing files that are not ours.)
@@ -765,11 +765,11 @@ End Sub
 ' added to this function, to ensure that the most intelligent preference is selected by default.
 Private Sub CreateNewPreferencesFile()
 
-    'This function is used to determine whether PhotoDemon is being run for the first time.  Why do it here?
-    ' 1) When first downloaded, PhotoDemon doesn't come with a prefs file.  Thus this routine MUST be called.
+    'This function is used to determine whether PhotoPaint is being run for the first time.  Why do it here?
+    ' 1) When first downloaded, PhotoPaint doesn't come with a prefs file.  Thus this routine MUST be called.
     ' 2) When preferences are reset, this file is deleted.  That is an appropriate time to mark the program as
     '     "first run", to ensure that any first-run dialogs are also reset.
-    ' 3) If the user moves PhotoDemon but leaves behind the old prefs file.  There's no easy way to check this,
+    ' 3) If the user moves PhotoPaint but leaves behind the old prefs file.  There's no easy way to check this,
     '     but treating the program like it's being run for the first time is as good a plan as any.
     g_IsFirstRun = True
     
@@ -1110,14 +1110,14 @@ Public Function WritePreference(ByVal strSectionHeader As String, ByVal strVaria
     strSectionHeader = Replace$(strSectionHeader, SPACE_CHAR, vbNullString)
     strVariableName = Replace$(strVariableName, SPACE_CHAR, vbNullString)
     
-    'Check for a few necessary tags, just to make sure this is actually a PhotoDemon preferences file
+    'Check for a few necessary tags, just to make sure this is actually a PhotoPaint preferences file
     If m_XMLEngine.IsPDDataType("User Preferences") And m_XMLEngine.ValidateLoadedXMLData("Paths") Then
     
         'Update the requested tag, and if it does not exist, write it out as a new tag at the end of the specified section
         WritePreference = m_XMLEngine.UpdateTag(strVariableName, strValue, strSectionHeader)
         
         'Tag updates will fail if the requested preferences section doesn't exist
-        ' (which may happen after the user upgrades from an old PhotoDemon version,
+        ' (which may happen after the user upgrades from an old PhotoPaint version,
         ' but retains their existing preferences file).  To prevent the problem from recurring,
         ' add this section to the current preferences file.
         If (Not WritePreference) Then

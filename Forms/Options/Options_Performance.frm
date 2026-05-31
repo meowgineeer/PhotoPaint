@@ -197,8 +197,8 @@ Private Sub Form_Load()
     Next i
         
     cboPerformance(0).AssignTooltip "Some interface elements receive custom decorations (like drop shadows).  On older PCs, these decorations can be suspended for a small performance boost."
-    cboPerformance(1).AssignTooltip "PhotoDemon generates many thumbnail images, especially when images contain multiple layers.  Thumbnail quality can be lowered to improve performance."
-    cboPerformance(2).AssignTooltip "Rendering the primary image canvas is a common bottleneck for PhotoDemon's performance.  The automatic setting is recommended, but for older PCs, you can manually select the Maximize Performance option to sacrifice quality for raw performance."
+    cboPerformance(1).AssignTooltip "PhotoPaint generates many thumbnail images, especially when images contain multiple layers.  Thumbnail quality can be lowered to improve performance."
+    cboPerformance(2).AssignTooltip "Rendering the primary image canvas is a common bottleneck for PhotoPaint's performance.  The automatic setting is recommended, but for older PCs, you can manually select the Maximize Performance option to sacrifice quality for raw performance."
     sltUndoCompression.AssignTooltip "Low compression settings require more disk space, but undo/redo operations will be faster.  High compression settings require less disk space, but undo/redo operations will be slower.  Undo data is erased when images are closed, so this setting only affects disk space while images are actively being edited."
     
 End Sub

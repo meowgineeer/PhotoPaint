@@ -30,13 +30,13 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Checkbox control
+'PhotoPaint Checkbox control
 'Copyright 2013-2025 by Tanner Helland
 'Created: 28/January/13
 'Last updated: 29/April/20
 'Last update: migrate UI rendering to pd2D
 '
-'In a surprise to precisely no one, PhotoDemon has some unique needs when it comes to user controls - needs that
+'In a surprise to precisely no one, PhotoPaint has some unique needs when it comes to user controls - needs that
 ' the intrinsic VB controls can't handle.  These range from the obnoxious (lack of an "autosize" property for
 ' anything but labels) to the critical (no Unicode support).
 '
@@ -176,7 +176,7 @@ Public Sub SetTop(ByVal newTop As Long)
 End Sub
 
 'This control also supports a unique "GetClickableWidth" property, which is the width of the checkbox
-' AND the caption (but no trailing dead space).  Checkboxes in PhotoDemon are typically made longer
+' AND the caption (but no trailing dead space).  Checkboxes in PhotoPaint are typically made longer
 ' than necessary for en-US text, because other locales may require more width for their caption.
 Public Function GetWidth_Clickable() As Long
     GetWidth_Clickable = m_ClickableRect.Width

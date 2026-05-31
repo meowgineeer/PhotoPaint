@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Gradient Manager
+'PhotoPaint Gradient Manager
 'Copyright 2015-2025 by Tanner Helland
 'Created: 23/July/15
 'Last updated: 14/January/21
@@ -27,7 +27,7 @@ Attribute VB_Exposed = False
 ' handles automatically, so you don't have to worry about leaks.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -715,10 +715,10 @@ Private Function LoadGradient_GIMP(ByRef srcStream As pdStream) As Boolean
                         'The next four values are RGBA values for the left end-point
                         'The next four values are RGBA values for the right end-point
                         
-                        'This format is problematic for PhotoDemon, which behaves like most other software and defines
+                        'This format is problematic for PhotoPaint, which behaves like most other software and defines
                         ' gradients as a series of standalone nodes, each with their own RGBA values.
                         
-                        'As such, we need to translate the GIMP values into usable PhotoDemon ones.
+                        'As such, we need to translate the GIMP values into usable PhotoPaint ones.
                         
                         'The way we do this is simple:
                         '1) Create nodes for all left endpoints using left colors
@@ -1084,7 +1084,7 @@ Friend Function SaveGradient_SVG(ByRef dstFilename As String) As Boolean
     
     'Start by appending standard XML headers
     dstText.AppendLine "<?xml version=""1.0"" encoding=""UTF-8"" ?>"
-    dstText.AppendLine "<!-- Created with PhotoDemon (https://photodemon.org) -->"
+    dstText.AppendLine "<!-- Created with PhotoPaint (https://photopaint.org) -->"
     dstText.AppendLine "<svg>"
     
     'Next, a header for the gradient object itself.  Note that some attributes are simply placeholders

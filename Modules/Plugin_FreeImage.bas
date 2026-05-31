@@ -15,7 +15,7 @@ Attribute VB_Name = "Plugin_FreeImage"
 ' myriad FreeImage declares into VB-compatible formats.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -312,7 +312,7 @@ Public Function FI_LoadImage_V5(ByVal srcFilename As String, ByRef dstDIB As pdD
             dstDIB.ForceNewAlpha 255
         End If
         
-        'Regardless of original bit-depth, the final PhotoDemon image will always be 32-bits, with pre-multiplied alpha.
+        'Regardless of original bit-depth, the final PhotoPaint image will always be 32-bits, with pre-multiplied alpha.
         dstDIB.SetInitialAlphaPremultiplicationState True
         
         '****************************************************************************
@@ -786,7 +786,7 @@ End Function
 'Given a path to a file and a destination pdDIB object, detect the file's type and store it inside the target DIB.
 ' (Knowing the source of a DIB allows us to run better heuristics on various image attributes.)
 ' On success, returns the detected FIF; on failure, returns FIF_UNKNOWN.  Note that the dstDIB's format may vary
-' from the returned format, as part of the translation process between FreeImage format IDs and PhotoDemon format IDs.
+' from the returned format, as part of the translation process between FreeImage format IDs and PhotoPaint format IDs.
 Private Function FI_DetermineFiletype(ByVal srcFilename As String, ByRef dstDIB As pdDIB) As FREE_IMAGE_FORMAT
 
     'While we could manually test our extension against the FreeImage database, it is capable of doing so itself.
@@ -1084,7 +1084,7 @@ Private Function GenerateICCCorrectedFIDIB(ByVal srcFIHandle As Long, ByRef dstD
     
     'Start by creating two LCMS profile handles:
     ' 1) a source profile (the in-memory copy of the ICC profile associated with this DIB)
-    ' 2) a destination profile (the current PhotoDemon working space)
+    ' 2) a destination profile (the current PhotoPaint working space)
     Dim srcProfile As pdLCMSProfile, dstProfile As pdLCMSProfile
     Set srcProfile = New pdLCMSProfile
     Set dstProfile = New pdLCMSProfile
@@ -1284,7 +1284,7 @@ Private Function ConvertCMYKFiDIBToRGB(ByVal srcFIHandle As Long, ByRef dstDIB A
             
             'Start by creating two LCMS profile handles:
             ' 1) a source profile (the in-memory copy of the ICC profile associated with this DIB)
-            ' 2) a destination profile (the current PhotoDemon working space)
+            ' 2) a destination profile (the current PhotoPaint working space)
             Dim srcProfile As pdLCMSProfile, dstProfile As pdLCMSProfile
             Set srcProfile = New pdLCMSProfile
             Set dstProfile = New pdLCMSProfile
@@ -1648,7 +1648,7 @@ Private Function ConvertFreeImageRGBFTo24bppDIB(ByVal fi_Handle As Long, Optiona
     Dim rDist As Double, gDist As Double, bDist As Double
     
     'The toNormalize input has three possible values: false, true, or "decide for yourself".  In the last case, the image will be scanned,
-    ' and normalization will only be enabled if values fall outside the [0, 1] range.  (Files written by PhotoDemon will always be normalized
+    ' and normalization will only be enabled if values fall outside the [0, 1] range.  (Files written by PhotoPaint will always be normalized
     ' at write-time, so this technique works well when moving images into and out of PD.)
     If toNormalize = PD_BOOL_AUTO Then
         mustNormalize = IsNormalizeRequired(fi_Handle, minR, maxR, minG, maxG, minB, maxB)

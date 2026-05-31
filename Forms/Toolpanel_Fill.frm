@@ -285,7 +285,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon Bucket Fill Tool Panel
+'PhotoPaint Bucket Fill Tool Panel
 'Copyright 2017-2025 by Tanner Helland
 'Created: 30/August/17
 'Last updated: 02/December/21

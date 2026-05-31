@@ -12,7 +12,7 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 '***************************************************************************
-'PhotoDemon 2D Transformation manager
+'PhotoPaint 2D Transformation manager
 'Copyright 2014-2025 by Tanner Helland
 'Created: 09/May/15 (though assembled from various parts written much earlier)
 'Last updated: 02/March/22
@@ -27,7 +27,7 @@ Attribute VB_Exposed = False
 ' reason, you must never cache the transformation handle returned by the GetHandle() function.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 Option Explicit

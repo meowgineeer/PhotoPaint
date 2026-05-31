@@ -1,12 +1,12 @@
 Attribute VB_Name = "Legacy"
 '***************************************************************************
-'Legacy PhotoDemon support functions
+'Legacy PhotoPaint support functions
 'Copyright 2020-2025 by Tanner Helland
 'Created: 25/February/20
 'Last updated: 25/February/20
 'Last update: migrate legacy functions from elsewhere to this dedicated legacy module
 '
-'PhotoDemon has existed for multiple decades!
+'PhotoPaint has existed for multiple decades!
 '
 'During that time, many (if not *all*) decisions have been revisited multiple times.
 ' Sometimes, major program features have even been scrapped or rewritten from scratch.
@@ -20,7 +20,7 @@ Attribute VB_Name = "Legacy"
 ' and that's okay - I replaced them for a reason!
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
