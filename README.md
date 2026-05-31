@@ -1,12 +1,5 @@
-## Download
 
-| Stable (2025.12) | Nightly | Source code |
-| :----------: | :-------------: | :---------: |
-| [Download ZIP (22 MB)](https://github.com/tannerhelland/PhotoPaint/releases/download/v2025.12/PhotoPaint-2025.12.zip) | [Download ZIP (22 MB)](https://github.com/tannerhelland/PhotoPaint/releases/download/PhotoPaint-nightly/PhotoPaint-nightly.zip) | [Download ZIP (26 MB)](https://github.com/tannerhelland/PhotoPaint/archive/main.zip) |
-
-## About PhotoPaint
-
-PhotoPaint is a portable photo editor.  It is 100% free and [100% open-source](https://github.com/tannerhelland/PhotoPaint/blob/main/README.md#licensing).  
+PhotoPaint is a lightweight photo editor.  It is 100% free and [100% open-source]  
 
 1. [Overview](#overview)
 2. [What makes PhotoPaint unique?](#what-makes-PhotoPaint-unique)
