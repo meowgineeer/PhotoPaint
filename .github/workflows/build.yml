@@ -1,0 +1,61 @@
+name: Build and Release PhotoPain
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Compile and Package PhotoPain
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Compile PhotoPain
+        shell: cmd
+        run: |
+          call "Support\CI\build.bat" "%CD%"
+
+      - name: Prepare Release Package
+        shell: powershell
+        run: |
+          $build_dir = "build_dist"
+          New-Item -ItemType Directory -Force -Path $build_dir
+          
+          # Copy executable and essential auxiliary files
+          Copy-Item -Path "PhotoPain.exe" -Destination $build_dir/
+          Copy-Item -Path "AUTHORS.md" -Destination $build_dir/ -ErrorAction SilentlyContinue
+          Copy-Item -Path "INSTALL.md" -Destination $build_dir/ -ErrorAction SilentlyContinue
+          Copy-Item -Path "LICENSE.md" -Destination $build_dir/ -ErrorAction SilentlyContinue
+          Copy-Item -Path "README.md" -Destination $build_dir/ -ErrorAction SilentlyContinue
+          Copy-Item -Path "Gimp.ico" -Destination $build_dir/ -ErrorAction SilentlyContinue
+          
+          # Copy App folder (contains plugins, themes, languages, etc.)
+          Copy-Item -Path "App" -Destination $build_dir/ -Recurse -Force
+          
+          # Package as ZIP
+          Compress-Archive -Path "$build_dir\*" -DestinationPath "PhotoPain-portable.zip" -Force
+          Write-Host "Created PhotoPain-portable.zip successfully!"
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PhotoPain-portable
+          path: PhotoPain-portable.zip
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: PhotoPain-portable.zip
+          name: PhotoPain ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
