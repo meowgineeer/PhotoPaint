@@ -1,11 +1,11 @@
 @echo off
 ::***************************************************************************
-:: PhotoDemon Build Script
+:: PhotoPaint Build Script
 :: Copyright 2019 by wqweto@gmail.com
 :: Created: 25/October/19
 ::
 :: All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-::  projects IF you provide attribution.  For more information, please visit https://photodemon.org/license/
+::  projects IF you provide attribution.  For more information, please visit https://PhotoPaint.org/license/
 ::
 ::***************************************************************************
 setlocal

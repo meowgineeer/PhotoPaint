@@ -394,7 +394,7 @@ End Function
 
 Private Function GetNameOfRenderer(ByVal rID As PD_GradientRenderer) As String
     If (rID = gr_Internal) Then
-        GetNameOfRenderer = "PhotoDemon"
+        GetNameOfRenderer = "PhotoPaint"
     ElseIf (rID = gr_GDIPlus) Then
         GetNameOfRenderer = "GDI+"
     End If

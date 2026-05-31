@@ -405,7 +405,7 @@ Public Function InitializePaths() As Boolean
         
         'Our only real option is to silently redirect the program's settings subfolder to known-good folder, in this case
         ' the standard local app storage folder.
-        baseFolder = localAppDataPath & "PhotoDemon\"
+        baseFolder = localAppDataPath & "PhotoPaint\"
         If (Not Files.PathExists(baseFolder)) Then
             
             If (Not Files.PathCreate(baseFolder)) Then
@@ -436,7 +436,7 @@ Public Function InitializePaths() As Boolean
     If (Not Files.PathExists(m_AppPath)) Then InitializePaths = Files.PathCreate(m_AppPath)
     If (Not InitializePaths) Then Exit Function
     
-    m_AppPath = m_AppPath & "PhotoDemon\"
+    m_AppPath = m_AppPath & "PhotoPaint\"
     If (Not Files.PathExists(m_AppPath)) Then InitializePaths = Files.PathCreate(m_AppPath)
     If (Not InitializePaths) Then Exit Function
     
@@ -472,8 +472,8 @@ Public Function InitializePaths() As Boolean
         'If we're running in portable mode, look for an existing (orphaned) data folder in local app storage.
         If (Not m_NonPortableModeActive) Then
         
-            If Files.PathExists(localAppDataPath & "PhotoDemon\Data\") Then
-                m_DataPath = localAppDataPath & "PhotoDemon\Data\"
+            If Files.PathExists(localAppDataPath & "PhotoPaint\Data\") Then
+                m_DataPath = localAppDataPath & "PhotoPaint\Data\"
                 needToCreateDataFolder = False
             End If
         
@@ -545,7 +545,7 @@ Public Function InitializePaths() As Boolean
     
     'The user preferences file is also located in the \Data folder.  We don't actually load it yet; this is handled
     ' by the (rather large) LoadUserSettings() function.
-    m_PreferencesPath = m_DataPath & "PhotoDemon_settings.xml"
+    m_PreferencesPath = m_DataPath & "PhotoPaint_settings.xml"
     
     'Last-used dialog settings are also located in the \Presets subfolder; this file *is* loaded now, if it exists.
     m_CentralPresetFile = m_PresetPath & "MainPanels.xml"

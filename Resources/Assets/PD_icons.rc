@@ -4,7 +4,7 @@
 AAA				ICON		pd_icons_new.ico
 
 // Manifest
-1				RT_MANIFEST	PhotoDemon.exe.manifest
+1				RT_MANIFEST	PhotoPaint.exe.manifest
 
 // Essential resources follow
 // (These are things that PD requires for a successful run - this does *not* include stuff like translation files,
