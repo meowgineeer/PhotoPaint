@@ -25,7 +25,7 @@ Begin VB.Form dialog_ImportPDF
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   900
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdSlider sldPreview 
+   Begin PhotoPaint.pdSlider sldPreview 
       Height          =   855
       Left            =   240
       TabIndex        =   10
@@ -35,7 +35,7 @@ Begin VB.Form dialog_ImportPDF
       _ExtentY        =   1508
       Caption         =   "preview"
    End
-   Begin PhotoDemon.pdButtonStrip btsPanel 
+   Begin PhotoPaint.pdButtonStrip btsPanel 
       Height          =   1095
       Left            =   4800
       TabIndex        =   4
@@ -46,7 +46,7 @@ Begin VB.Form dialog_ImportPDF
       Caption         =   "import settings"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdPictureBox picPreview 
+   Begin PhotoPaint.pdPictureBox picPreview 
       Height          =   5535
       Left            =   240
       Top             =   1080
@@ -54,7 +54,7 @@ Begin VB.Form dialog_ImportPDF
       _ExtentX        =   7646
       _ExtentY        =   9763
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -65,7 +65,7 @@ Begin VB.Form dialog_ImportPDF
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   1
       Left            =   4800
@@ -76,7 +76,7 @@ Begin VB.Form dialog_ImportPDF
       Caption         =   "file information"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdLabel lblOriginal 
+   Begin PhotoPaint.pdLabel lblOriginal 
       Height          =   345
       Index           =   0
       Left            =   4920
@@ -86,7 +86,7 @@ Begin VB.Form dialog_ImportPDF
       _ExtentY        =   609
       Caption         =   ""
    End
-   Begin PhotoDemon.pdLabel lblOriginal 
+   Begin PhotoPaint.pdLabel lblOriginal 
       Height          =   375
       Index           =   1
       Left            =   4920
@@ -96,7 +96,7 @@ Begin VB.Form dialog_ImportPDF
       _ExtentY        =   661
       Caption         =   ""
    End
-   Begin PhotoDemon.pdContainer pnlOptions 
+   Begin PhotoPaint.pdContainer pnlOptions 
       Height          =   4095
       Index           =   2
       Left            =   4800
@@ -104,7 +104,7 @@ Begin VB.Form dialog_ImportPDF
       Width           =   8535
       _ExtentX        =   15055
       _ExtentY        =   7223
-      Begin PhotoDemon.pdColorSelector clsBackground 
+      Begin PhotoPaint.pdColorSelector clsBackground 
          Height          =   615
          Left            =   360
          TabIndex        =   7
@@ -113,7 +113,7 @@ Begin VB.Form dialog_ImportPDF
          _ExtentX        =   14208
          _ExtentY        =   1085
       End
-      Begin PhotoDemon.pdButtonStrip btsTransparency 
+      Begin PhotoPaint.pdButtonStrip btsTransparency 
          Height          =   975
          Left            =   120
          TabIndex        =   6
@@ -123,7 +123,7 @@ Begin VB.Form dialog_ImportPDF
          _ExtentY        =   1720
          Caption         =   "background"
       End
-      Begin PhotoDemon.pdButtonStrip btsAntialiasing 
+      Begin PhotoPaint.pdButtonStrip btsAntialiasing 
          Height          =   975
          Left            =   120
          TabIndex        =   8
@@ -133,7 +133,7 @@ Begin VB.Form dialog_ImportPDF
          _ExtentY        =   1720
          Caption         =   "antialiasing"
       End
-      Begin PhotoDemon.pdButtonStrip btsAnnotations 
+      Begin PhotoPaint.pdButtonStrip btsAnnotations 
          Height          =   975
          Left            =   120
          TabIndex        =   9
@@ -144,7 +144,7 @@ Begin VB.Form dialog_ImportPDF
          Caption         =   "annotations"
       End
    End
-   Begin PhotoDemon.pdContainer pnlOptions 
+   Begin PhotoPaint.pdContainer pnlOptions 
       Height          =   4095
       Index           =   0
       Left            =   4800
@@ -152,7 +152,7 @@ Begin VB.Form dialog_ImportPDF
       Width           =   8535
       _ExtentX        =   15055
       _ExtentY        =   7223
-      Begin PhotoDemon.pdResize rszUI 
+      Begin PhotoPaint.pdResize rszUI 
          Height          =   2895
          Left            =   120
          TabIndex        =   1
@@ -162,7 +162,7 @@ Begin VB.Form dialog_ImportPDF
          _ExtentY        =   5106
          DefaultToRealWorldUnits=   -1  'True
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   375
          Index           =   2
          Left            =   120
@@ -174,7 +174,7 @@ Begin VB.Form dialog_ImportPDF
          FontSize        =   12
       End
    End
-   Begin PhotoDemon.pdContainer pnlOptions 
+   Begin PhotoPaint.pdContainer pnlOptions 
       Height          =   4095
       Index           =   1
       Left            =   4800
@@ -183,7 +183,7 @@ Begin VB.Form dialog_ImportPDF
       Width           =   8535
       _ExtentX        =   15055
       _ExtentY        =   7223
-      Begin PhotoDemon.pdCheckBox chkPageOptions 
+      Begin PhotoPaint.pdCheckBox chkPageOptions 
          Height          =   375
          Index           =   0
          Left            =   360
@@ -195,7 +195,7 @@ Begin VB.Form dialog_ImportPDF
          Caption         =   "reverse page order"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdTextBox txtPageRange 
+      Begin PhotoPaint.pdTextBox txtPageRange 
          Height          =   375
          Left            =   240
          TabIndex        =   2
@@ -204,7 +204,7 @@ Begin VB.Form dialog_ImportPDF
          _ExtentX        =   14420
          _ExtentY        =   661
       End
-      Begin PhotoDemon.pdButtonStrip btsPages 
+      Begin PhotoPaint.pdButtonStrip btsPages 
          Height          =   975
          Left            =   120
          TabIndex        =   3
@@ -214,7 +214,7 @@ Begin VB.Form dialog_ImportPDF
          _ExtentY        =   1720
          Caption         =   "pages to import"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   375
          Index           =   3
          Left            =   120
@@ -245,7 +245,7 @@ Attribute VB_Exposed = False
 ' provides a UI for any custom settings.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

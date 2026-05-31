@@ -24,7 +24,7 @@ Begin VB.Form FormGamma
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   804
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormGamma
       _ExtentX        =   21273
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdCheckBox chkUnison 
+   Begin PhotoPaint.pdCheckBox chkUnison 
       Height          =   330
       Left            =   6120
       TabIndex        =   4
@@ -43,7 +43,7 @@ Begin VB.Form FormGamma
       _ExtentY        =   582
       Caption         =   "keep all colors in sync"
    End
-   Begin PhotoDemon.pdPictureBox picChart 
+   Begin PhotoPaint.pdPictureBox picChart 
       Height          =   2415
       Left            =   8280
       Top             =   120
@@ -51,7 +51,7 @@ Begin VB.Form FormGamma
       _ExtentX        =   0
       _ExtentY        =   0
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -60,7 +60,7 @@ Begin VB.Form FormGamma
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltGamma 
+   Begin PhotoPaint.pdSlider sltGamma 
       Height          =   705
       Index           =   0
       Left            =   6000
@@ -77,7 +77,7 @@ Begin VB.Form FormGamma
       NotchPosition   =   2
       NotchValueCustom=   1
    End
-   Begin PhotoDemon.pdSlider sltGamma 
+   Begin PhotoPaint.pdSlider sltGamma 
       Height          =   705
       Index           =   1
       Left            =   6000
@@ -94,7 +94,7 @@ Begin VB.Form FormGamma
       NotchPosition   =   2
       NotchValueCustom=   1
    End
-   Begin PhotoDemon.pdSlider sltGamma 
+   Begin PhotoPaint.pdSlider sltGamma 
       Height          =   705
       Index           =   2
       Left            =   6000
@@ -111,7 +111,7 @@ Begin VB.Form FormGamma
       NotchPosition   =   2
       NotchValueCustom=   1
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   1005
       Index           =   2
       Left            =   6000
@@ -141,7 +141,7 @@ Attribute VB_Exposed = False
 'Gamma correction isn't exactly rocket science, but it's an important part of any photo editor.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -24,7 +24,7 @@ Begin VB.Form FormRangeFilter
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   786
-   Begin PhotoDemon.pdCheckBox chkSynchronize 
+   Begin PhotoPaint.pdCheckBox chkSynchronize 
       Height          =   375
       Left            =   6120
       TabIndex        =   5
@@ -34,7 +34,7 @@ Begin VB.Form FormRangeFilter
       _ExtentY        =   661
       Caption         =   "synchronize search radius"
    End
-   Begin PhotoDemon.pdButtonStrip btsKernelShape 
+   Begin PhotoPaint.pdButtonStrip btsKernelShape 
       Height          =   1095
       Left            =   6000
       TabIndex        =   4
@@ -44,7 +44,7 @@ Begin VB.Form FormRangeFilter
       _ExtentY        =   1931
       Caption         =   "kernel shape"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -53,7 +53,7 @@ Begin VB.Form FormRangeFilter
       _ExtentX        =   20796
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -62,7 +62,7 @@ Begin VB.Form FormRangeFilter
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Index           =   0
       Left            =   6000
@@ -78,7 +78,7 @@ Begin VB.Form FormRangeFilter
       Value           =   5
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Index           =   1
       Left            =   6000
@@ -120,7 +120,7 @@ Attribute VB_Exposed = False
 ' output of the function.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

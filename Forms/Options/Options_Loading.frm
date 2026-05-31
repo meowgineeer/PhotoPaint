@@ -29,7 +29,7 @@ Begin VB.Form options_Loading
    ScaleWidth      =   553
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdCheckBox chkSplash 
+   Begin PhotoPaint.pdCheckBox chkSplash 
       Height          =   330
       Left            =   180
       TabIndex        =   3
@@ -39,7 +39,7 @@ Begin VB.Form options_Loading
       _ExtentY        =   582
       Caption         =   "display splash screen"
    End
-   Begin PhotoDemon.pdButtonStrip btsMultiInstance 
+   Begin PhotoPaint.pdButtonStrip btsMultiInstance 
       Height          =   975
       Left            =   150
       TabIndex        =   0
@@ -50,7 +50,7 @@ Begin VB.Form options_Loading
       Caption         =   "when images arrive from an external source (like Windows Explorer):"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdCheckBox chkToneMapping 
+   Begin PhotoPaint.pdCheckBox chkToneMapping 
       Height          =   330
       Left            =   180
       TabIndex        =   1
@@ -60,7 +60,7 @@ Begin VB.Form options_Loading
       _ExtentY        =   582
       Caption         =   "display tone mapping options when importing HDR and RAW images"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   2
       Left            =   0
@@ -72,7 +72,7 @@ Begin VB.Form options_Loading
       FontSize        =   12
       ForeColor       =   5263440
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   1
       Left            =   0
@@ -84,7 +84,7 @@ Begin VB.Form options_Loading
       FontSize        =   12
       ForeColor       =   5263440
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   5
       Left            =   0
@@ -96,7 +96,7 @@ Begin VB.Form options_Loading
       FontSize        =   12
       ForeColor       =   5263440
    End
-   Begin PhotoDemon.pdCheckBox chkSystemReboots 
+   Begin PhotoPaint.pdCheckBox chkSystemReboots 
       Height          =   330
       Left            =   180
       TabIndex        =   2
@@ -106,7 +106,7 @@ Begin VB.Form options_Loading
       _ExtentY        =   582
       Caption         =   "automatically restore sessions interrupted by system updates or reboots"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   0
       Left            =   0
@@ -143,7 +143,7 @@ Attribute VB_Exposed = False
 ' (That module is responsible for all low-level preference reading/writing.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

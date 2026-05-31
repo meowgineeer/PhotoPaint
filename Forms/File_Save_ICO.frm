@@ -22,7 +22,7 @@ Begin VB.Form dialog_ExportICO
    ScaleHeight     =   497
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   842
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -33,7 +33,7 @@ Begin VB.Form dialog_ExportICO
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdDropDown ddIcon 
+   Begin PhotoPaint.pdDropDown ddIcon 
       Height          =   735
       Left            =   6000
       TabIndex        =   64
@@ -43,7 +43,7 @@ Begin VB.Form dialog_ExportICO
       _ExtentY        =   1296
       Caption         =   "icon purpose"
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   6465
       Left            =   120
       TabIndex        =   1
@@ -52,7 +52,7 @@ Begin VB.Form dialog_ExportICO
       _ExtentX        =   9922
       _ExtentY        =   11404
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4695
       Index           =   0
       Left            =   5880
@@ -60,7 +60,7 @@ Begin VB.Form dialog_ExportICO
       Width           =   6495
       _ExtentX        =   11456
       _ExtentY        =   8281
-      Begin PhotoDemon.pdCheckBox chk768 
+      Begin PhotoPaint.pdCheckBox chk768 
          Height          =   285
          Index           =   0
          Left            =   1680
@@ -72,7 +72,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   345
          Index           =   2
          Left            =   2400
@@ -82,7 +82,7 @@ Begin VB.Form dialog_ExportICO
          _ExtentY        =   609
          Caption         =   "32-bpp"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   345
          Index           =   3
          Left            =   3240
@@ -92,7 +92,7 @@ Begin VB.Form dialog_ExportICO
          _ExtentY        =   609
          Caption         =   "24-bpp"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   345
          Index           =   4
          Left            =   4080
@@ -102,7 +102,7 @@ Begin VB.Form dialog_ExportICO
          _ExtentY        =   609
          Caption         =   "8-bpp"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   345
          Index           =   5
          Left            =   4920
@@ -112,7 +112,7 @@ Begin VB.Form dialog_ExportICO
          _ExtentY        =   609
          Caption         =   "4-bpp"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   345
          Index           =   6
          Left            =   5760
@@ -122,7 +122,7 @@ Begin VB.Form dialog_ExportICO
          _ExtentY        =   609
          Caption         =   "1-bpp"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   345
          Index           =   7
          Left            =   1650
@@ -132,7 +132,7 @@ Begin VB.Form dialog_ExportICO
          _ExtentY        =   609
          Caption         =   "PNG"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   8
          Left            =   240
@@ -143,7 +143,7 @@ Begin VB.Form dialog_ExportICO
          Alignment       =   1
          Caption         =   "128x128"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   9
          Left            =   240
@@ -154,7 +154,7 @@ Begin VB.Form dialog_ExportICO
          Alignment       =   1
          Caption         =   "768x768"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   10
          Left            =   240
@@ -165,7 +165,7 @@ Begin VB.Form dialog_ExportICO
          Alignment       =   1
          Caption         =   "256x256"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   11
          Left            =   240
@@ -176,7 +176,7 @@ Begin VB.Form dialog_ExportICO
          Alignment       =   1
          Caption         =   "512x512"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   12
          Left            =   240
@@ -187,7 +187,7 @@ Begin VB.Form dialog_ExportICO
          Alignment       =   1
          Caption         =   "96x96"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   13
          Left            =   240
@@ -198,7 +198,7 @@ Begin VB.Form dialog_ExportICO
          Alignment       =   1
          Caption         =   "64x64"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   14
          Left            =   240
@@ -209,7 +209,7 @@ Begin VB.Form dialog_ExportICO
          Alignment       =   1
          Caption         =   "48x48"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   15
          Left            =   240
@@ -220,7 +220,7 @@ Begin VB.Form dialog_ExportICO
          Alignment       =   1
          Caption         =   "40x40"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   16
          Left            =   240
@@ -231,7 +231,7 @@ Begin VB.Form dialog_ExportICO
          Alignment       =   1
          Caption         =   "32x32"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   17
          Left            =   240
@@ -242,7 +242,7 @@ Begin VB.Form dialog_ExportICO
          Alignment       =   1
          Caption         =   "24x24"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   18
          Left            =   240
@@ -253,7 +253,7 @@ Begin VB.Form dialog_ExportICO
          Alignment       =   1
          Caption         =   "16x16"
       End
-      Begin PhotoDemon.pdCheckBox chk512 
+      Begin PhotoPaint.pdCheckBox chk512 
          Height          =   285
          Index           =   0
          Left            =   1680
@@ -265,7 +265,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk256 
+      Begin PhotoPaint.pdCheckBox chk256 
          Height          =   285
          Index           =   0
          Left            =   1680
@@ -276,7 +276,7 @@ Begin VB.Form dialog_ExportICO
          _ExtentY        =   503
          Caption         =   ""
       End
-      Begin PhotoDemon.pdCheckBox chk256 
+      Begin PhotoPaint.pdCheckBox chk256 
          Height          =   285
          Index           =   1
          Left            =   2520
@@ -288,7 +288,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk256 
+      Begin PhotoPaint.pdCheckBox chk256 
          Height          =   285
          Index           =   2
          Left            =   3360
@@ -300,7 +300,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk256 
+      Begin PhotoPaint.pdCheckBox chk256 
          Height          =   285
          Index           =   3
          Left            =   4200
@@ -312,7 +312,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk256 
+      Begin PhotoPaint.pdCheckBox chk256 
          Height          =   285
          Index           =   4
          Left            =   5040
@@ -324,7 +324,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk256 
+      Begin PhotoPaint.pdCheckBox chk256 
          Height          =   285
          Index           =   5
          Left            =   5880
@@ -336,7 +336,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk128 
+      Begin PhotoPaint.pdCheckBox chk128 
          Height          =   285
          Index           =   0
          Left            =   1680
@@ -348,7 +348,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk128 
+      Begin PhotoPaint.pdCheckBox chk128 
          Height          =   285
          Index           =   1
          Left            =   2520
@@ -360,7 +360,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk128 
+      Begin PhotoPaint.pdCheckBox chk128 
          Height          =   285
          Index           =   2
          Left            =   3360
@@ -372,7 +372,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk128 
+      Begin PhotoPaint.pdCheckBox chk128 
          Height          =   285
          Index           =   3
          Left            =   4200
@@ -384,7 +384,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk128 
+      Begin PhotoPaint.pdCheckBox chk128 
          Height          =   285
          Index           =   4
          Left            =   5040
@@ -396,7 +396,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk128 
+      Begin PhotoPaint.pdCheckBox chk128 
          Height          =   285
          Index           =   5
          Left            =   5880
@@ -408,7 +408,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk96 
+      Begin PhotoPaint.pdCheckBox chk96 
          Height          =   285
          Index           =   0
          Left            =   1680
@@ -420,7 +420,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk96 
+      Begin PhotoPaint.pdCheckBox chk96 
          Height          =   285
          Index           =   1
          Left            =   2520
@@ -432,7 +432,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk96 
+      Begin PhotoPaint.pdCheckBox chk96 
          Height          =   285
          Index           =   2
          Left            =   3360
@@ -444,7 +444,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk96 
+      Begin PhotoPaint.pdCheckBox chk96 
          Height          =   285
          Index           =   3
          Left            =   4200
@@ -456,7 +456,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk96 
+      Begin PhotoPaint.pdCheckBox chk96 
          Height          =   285
          Index           =   4
          Left            =   5040
@@ -468,7 +468,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk96 
+      Begin PhotoPaint.pdCheckBox chk96 
          Height          =   285
          Index           =   5
          Left            =   5880
@@ -480,7 +480,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk64 
+      Begin PhotoPaint.pdCheckBox chk64 
          Height          =   285
          Index           =   0
          Left            =   1680
@@ -492,7 +492,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk64 
+      Begin PhotoPaint.pdCheckBox chk64 
          Height          =   285
          Index           =   1
          Left            =   2520
@@ -504,7 +504,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk64 
+      Begin PhotoPaint.pdCheckBox chk64 
          Height          =   285
          Index           =   2
          Left            =   3360
@@ -516,7 +516,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk64 
+      Begin PhotoPaint.pdCheckBox chk64 
          Height          =   285
          Index           =   3
          Left            =   4200
@@ -528,7 +528,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk64 
+      Begin PhotoPaint.pdCheckBox chk64 
          Height          =   285
          Index           =   4
          Left            =   5040
@@ -540,7 +540,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk64 
+      Begin PhotoPaint.pdCheckBox chk64 
          Height          =   285
          Index           =   5
          Left            =   5880
@@ -552,7 +552,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk48 
+      Begin PhotoPaint.pdCheckBox chk48 
          Height          =   285
          Index           =   0
          Left            =   1680
@@ -564,7 +564,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk48 
+      Begin PhotoPaint.pdCheckBox chk48 
          Height          =   285
          Index           =   1
          Left            =   2520
@@ -576,7 +576,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk48 
+      Begin PhotoPaint.pdCheckBox chk48 
          Height          =   285
          Index           =   2
          Left            =   3360
@@ -588,7 +588,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk48 
+      Begin PhotoPaint.pdCheckBox chk48 
          Height          =   285
          Index           =   3
          Left            =   4200
@@ -600,7 +600,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk48 
+      Begin PhotoPaint.pdCheckBox chk48 
          Height          =   285
          Index           =   4
          Left            =   5040
@@ -612,7 +612,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk48 
+      Begin PhotoPaint.pdCheckBox chk48 
          Height          =   285
          Index           =   5
          Left            =   5880
@@ -624,7 +624,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk40 
+      Begin PhotoPaint.pdCheckBox chk40 
          Height          =   285
          Index           =   0
          Left            =   1680
@@ -636,7 +636,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk40 
+      Begin PhotoPaint.pdCheckBox chk40 
          Height          =   285
          Index           =   1
          Left            =   2520
@@ -648,7 +648,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk40 
+      Begin PhotoPaint.pdCheckBox chk40 
          Height          =   285
          Index           =   2
          Left            =   3360
@@ -660,7 +660,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk40 
+      Begin PhotoPaint.pdCheckBox chk40 
          Height          =   285
          Index           =   3
          Left            =   4200
@@ -672,7 +672,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk40 
+      Begin PhotoPaint.pdCheckBox chk40 
          Height          =   285
          Index           =   4
          Left            =   5040
@@ -684,7 +684,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk40 
+      Begin PhotoPaint.pdCheckBox chk40 
          Height          =   285
          Index           =   5
          Left            =   5880
@@ -696,7 +696,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk32 
+      Begin PhotoPaint.pdCheckBox chk32 
          Height          =   285
          Index           =   0
          Left            =   1680
@@ -708,7 +708,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk32 
+      Begin PhotoPaint.pdCheckBox chk32 
          Height          =   285
          Index           =   1
          Left            =   2520
@@ -720,7 +720,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk32 
+      Begin PhotoPaint.pdCheckBox chk32 
          Height          =   285
          Index           =   2
          Left            =   3360
@@ -732,7 +732,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk32 
+      Begin PhotoPaint.pdCheckBox chk32 
          Height          =   285
          Index           =   3
          Left            =   4200
@@ -744,7 +744,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk32 
+      Begin PhotoPaint.pdCheckBox chk32 
          Height          =   285
          Index           =   4
          Left            =   5040
@@ -756,7 +756,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk32 
+      Begin PhotoPaint.pdCheckBox chk32 
          Height          =   285
          Index           =   5
          Left            =   5880
@@ -768,7 +768,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk24 
+      Begin PhotoPaint.pdCheckBox chk24 
          Height          =   285
          Index           =   0
          Left            =   1680
@@ -780,7 +780,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk24 
+      Begin PhotoPaint.pdCheckBox chk24 
          Height          =   285
          Index           =   1
          Left            =   2520
@@ -792,7 +792,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk24 
+      Begin PhotoPaint.pdCheckBox chk24 
          Height          =   285
          Index           =   2
          Left            =   3360
@@ -804,7 +804,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk24 
+      Begin PhotoPaint.pdCheckBox chk24 
          Height          =   285
          Index           =   3
          Left            =   4200
@@ -816,7 +816,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk24 
+      Begin PhotoPaint.pdCheckBox chk24 
          Height          =   285
          Index           =   4
          Left            =   5040
@@ -828,7 +828,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk24 
+      Begin PhotoPaint.pdCheckBox chk24 
          Height          =   285
          Index           =   5
          Left            =   5880
@@ -840,7 +840,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk16 
+      Begin PhotoPaint.pdCheckBox chk16 
          Height          =   285
          Index           =   0
          Left            =   1680
@@ -852,7 +852,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk16 
+      Begin PhotoPaint.pdCheckBox chk16 
          Height          =   285
          Index           =   1
          Left            =   2520
@@ -864,7 +864,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk16 
+      Begin PhotoPaint.pdCheckBox chk16 
          Height          =   285
          Index           =   2
          Left            =   3360
@@ -876,7 +876,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk16 
+      Begin PhotoPaint.pdCheckBox chk16 
          Height          =   285
          Index           =   3
          Left            =   4200
@@ -888,7 +888,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk16 
+      Begin PhotoPaint.pdCheckBox chk16 
          Height          =   285
          Index           =   4
          Left            =   5040
@@ -900,7 +900,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk16 
+      Begin PhotoPaint.pdCheckBox chk16 
          Height          =   285
          Index           =   5
          Left            =   5880
@@ -912,7 +912,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   0
          Left            =   240
@@ -923,7 +923,7 @@ Begin VB.Form dialog_ExportICO
          Alignment       =   1
          Caption         =   "20x20"
       End
-      Begin PhotoDemon.pdCheckBox chk20 
+      Begin PhotoPaint.pdCheckBox chk20 
          Height          =   285
          Index           =   0
          Left            =   1680
@@ -935,7 +935,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk20 
+      Begin PhotoPaint.pdCheckBox chk20 
          Height          =   285
          Index           =   1
          Left            =   2520
@@ -947,7 +947,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk20 
+      Begin PhotoPaint.pdCheckBox chk20 
          Height          =   285
          Index           =   2
          Left            =   3360
@@ -959,7 +959,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk20 
+      Begin PhotoPaint.pdCheckBox chk20 
          Height          =   285
          Index           =   3
          Left            =   4200
@@ -971,7 +971,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk20 
+      Begin PhotoPaint.pdCheckBox chk20 
          Height          =   285
          Index           =   4
          Left            =   5040
@@ -983,7 +983,7 @@ Begin VB.Form dialog_ExportICO
          Caption         =   ""
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chk20 
+      Begin PhotoPaint.pdCheckBox chk20 
          Height          =   285
          Index           =   5
          Left            =   5880
@@ -996,7 +996,7 @@ Begin VB.Form dialog_ExportICO
          Value           =   0   'False
       End
    End
-   Begin PhotoDemon.pdDropDown ddSource 
+   Begin PhotoPaint.pdDropDown ddSource 
       Height          =   735
       Left            =   6000
       TabIndex        =   65
@@ -1032,7 +1032,7 @@ Attribute VB_Exposed = False
 ' editors have garbage UIs so they're not exactly a helpful reference!
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

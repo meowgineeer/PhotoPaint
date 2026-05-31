@@ -25,7 +25,7 @@ Begin VB.Form FormCrystallize
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   777
    Visible         =   0   'False
-   Begin PhotoDemon.pdDropDown cboColorSampling 
+   Begin PhotoPaint.pdDropDown cboColorSampling 
       Height          =   735
       Left            =   6000
       TabIndex        =   4
@@ -35,7 +35,7 @@ Begin VB.Form FormCrystallize
       _ExtentY        =   1296
       Caption         =   "color sampling"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -44,7 +44,7 @@ Begin VB.Form FormCrystallize
       _ExtentX        =   20558
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5475
       Left            =   120
       TabIndex        =   1
@@ -53,7 +53,7 @@ Begin VB.Form FormCrystallize
       _ExtentX        =   9922
       _ExtentY        =   9657
    End
-   Begin PhotoDemon.pdSlider sltSize 
+   Begin PhotoPaint.pdSlider sltSize 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -67,7 +67,7 @@ Begin VB.Form FormCrystallize
       Value           =   20
       DefaultValue    =   20
    End
-   Begin PhotoDemon.pdSlider sltTurbulence 
+   Begin PhotoPaint.pdSlider sltTurbulence 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -79,7 +79,7 @@ Begin VB.Form FormCrystallize
       Max             =   1
       SigDigits       =   2
    End
-   Begin PhotoDemon.pdDropDown cboDistance 
+   Begin PhotoPaint.pdDropDown cboDistance 
       Height          =   735
       Left            =   6000
       TabIndex        =   5
@@ -89,7 +89,7 @@ Begin VB.Form FormCrystallize
       _ExtentY        =   1296
       Caption         =   "distance method"
    End
-   Begin PhotoDemon.pdDropDown cboPattern 
+   Begin PhotoPaint.pdDropDown cboPattern 
       Height          =   735
       Left            =   6000
       TabIndex        =   6
@@ -128,7 +128,7 @@ Attribute VB_Exposed = False
 ' Link here: http://rrprogs.com/)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

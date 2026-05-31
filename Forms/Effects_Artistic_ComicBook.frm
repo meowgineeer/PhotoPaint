@@ -24,7 +24,7 @@ Begin VB.Form FormComicBook
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   802
-   Begin PhotoDemon.pdButtonStrip btsStrength 
+   Begin PhotoPaint.pdButtonStrip btsStrength 
       Height          =   1095
       Left            =   6000
       TabIndex        =   4
@@ -34,7 +34,7 @@ Begin VB.Form FormComicBook
       _ExtentY        =   1931
       Caption         =   "brush smoothing"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -43,7 +43,7 @@ Begin VB.Form FormComicBook
       _ExtentX        =   21220
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -52,7 +52,7 @@ Begin VB.Form FormComicBook
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltInk 
+   Begin PhotoPaint.pdSlider sltInk 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -65,7 +65,7 @@ Begin VB.Form FormComicBook
       Value           =   50
       DefaultValue    =   50
    End
-   Begin PhotoDemon.pdSlider sltColor 
+   Begin PhotoPaint.pdSlider sltColor 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -100,7 +100,7 @@ Attribute VB_Exposed = False
 ' image copies keeps things nice and fast.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

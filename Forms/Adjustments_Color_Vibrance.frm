@@ -24,7 +24,7 @@ Begin VB.Form FormVibrance
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   778
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormVibrance
       _ExtentX        =   21220
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltVibrance 
+   Begin PhotoPaint.pdSlider sltVibrance 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -45,7 +45,7 @@ Begin VB.Form FormVibrance
       Min             =   -100
       Max             =   100
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -80,7 +80,7 @@ Attribute VB_Exposed = False
 ' low ends of the scale.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

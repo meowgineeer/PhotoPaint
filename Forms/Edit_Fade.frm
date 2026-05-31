@@ -24,7 +24,7 @@ Begin VB.Form FormFadeLast
    ScaleHeight     =   435
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   753
-   Begin PhotoDemon.pdDropDown cboBlendMode 
+   Begin PhotoPaint.pdDropDown cboBlendMode 
       Height          =   735
       Left            =   6000
       TabIndex        =   1
@@ -34,7 +34,7 @@ Begin VB.Form FormFadeLast
       _ExtentY        =   1296
       Caption         =   "blend mode"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -43,7 +43,7 @@ Begin VB.Form FormFadeLast
       _ExtentX        =   19923
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   2
@@ -52,7 +52,7 @@ Begin VB.Form FormFadeLast
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltOpacity 
+   Begin PhotoPaint.pdSlider sltOpacity 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -87,7 +87,7 @@ Attribute VB_Exposed = False
 'Note that this function relies heavily on the pdUndo class for retrieving data on previous image states.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

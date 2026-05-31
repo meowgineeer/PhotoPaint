@@ -28,7 +28,7 @@ Begin VB.Form FormWait
    ShowInTaskbar   =   0   'False
    StartUpPosition =   1  'CenterOwner
    Visible         =   0   'False
-   Begin PhotoDemon.pdProgressBar pbMarquee 
+   Begin PhotoPaint.pdProgressBar pbMarquee 
       Height          =   495
       Left            =   120
       TabIndex        =   0
@@ -37,7 +37,7 @@ Begin VB.Form FormWait
       _ExtentX        =   0
       _ExtentY        =   0
    End
-   Begin PhotoDemon.pdLabel lblWaitTitle 
+   Begin PhotoPaint.pdLabel lblWaitTitle 
       Height          =   405
       Left            =   240
       Top             =   240
@@ -50,7 +50,7 @@ Begin VB.Form FormWait
       FontSize        =   12
       ForeColor       =   9437184
    End
-   Begin PhotoDemon.pdLabel lblWaitDescription 
+   Begin PhotoPaint.pdLabel lblWaitDescription 
       Height          =   960
       Left            =   240
       Top             =   1560

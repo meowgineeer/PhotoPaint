@@ -26,7 +26,7 @@ Begin VB.Form FormLayerFlatten
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   642
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdColorSelector clsBackground 
+   Begin PhotoPaint.pdColorSelector clsBackground 
       Height          =   975
       Left            =   240
       TabIndex        =   2
@@ -36,7 +36,7 @@ Begin VB.Form FormLayerFlatten
       _ExtentY        =   1931
       Caption         =   "background color"
    End
-   Begin PhotoDemon.pdButtonStrip btsFlatten 
+   Begin PhotoPaint.pdButtonStrip btsFlatten 
       Height          =   1095
       Left            =   240
       TabIndex        =   1
@@ -47,7 +47,7 @@ Begin VB.Form FormLayerFlatten
       Caption         =   "flatten behavior"
       FontSize        =   11
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -79,7 +79,7 @@ Attribute VB_Exposed = False
 ' so the user can specify exactly which flatten behavior they prefer.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -29,7 +29,7 @@ Begin VB.Form options_ColorManagement
    ScaleWidth      =   553
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdCheckBox chkColorManagement 
+   Begin PhotoPaint.pdCheckBox chkColorManagement 
       Height          =   315
       Index           =   1
       Left            =   240
@@ -40,7 +40,7 @@ Begin VB.Form options_ColorManagement
       _ExtentY        =   556
       Caption         =   "use embedded ICC profiles, when available"
    End
-   Begin PhotoDemon.pdCheckBox chkColorManagement 
+   Begin PhotoPaint.pdCheckBox chkColorManagement 
       Height          =   315
       Index           =   0
       Left            =   240
@@ -51,7 +51,7 @@ Begin VB.Form options_ColorManagement
       _ExtentY        =   556
       Caption         =   "use black point compensation"
    End
-   Begin PhotoDemon.pdDropDown cboDisplayRenderIntent 
+   Begin PhotoPaint.pdDropDown cboDisplayRenderIntent 
       Height          =   735
       Left            =   180
       TabIndex        =   2
@@ -62,7 +62,7 @@ Begin VB.Form options_ColorManagement
       Caption         =   "display rendering intent:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdButton cmdColorProfilePath 
+   Begin PhotoPaint.pdButton cmdColorProfilePath 
       Height          =   375
       Left            =   7380
       TabIndex        =   3
@@ -72,7 +72,7 @@ Begin VB.Form options_ColorManagement
       _ExtentY        =   661
       Caption         =   "..."
    End
-   Begin PhotoDemon.pdDropDown cboDisplays 
+   Begin PhotoPaint.pdDropDown cboDisplays 
       Height          =   690
       Left            =   780
       TabIndex        =   4
@@ -83,7 +83,7 @@ Begin VB.Form options_ColorManagement
       Caption         =   "available displays:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdTextBox txtColorProfilePath 
+   Begin PhotoPaint.pdTextBox txtColorProfilePath 
       Height          =   315
       Left            =   900
       TabIndex        =   5
@@ -93,7 +93,7 @@ Begin VB.Form options_ColorManagement
       _ExtentY        =   556
       Text            =   "(none)"
    End
-   Begin PhotoDemon.pdRadioButton optColorManagement 
+   Begin PhotoPaint.pdRadioButton optColorManagement 
       Height          =   330
       Index           =   0
       Left            =   180
@@ -105,7 +105,7 @@ Begin VB.Form options_ColorManagement
       Caption         =   "turn off display color management"
       Value           =   -1  'True
    End
-   Begin PhotoDemon.pdRadioButton optColorManagement 
+   Begin PhotoPaint.pdRadioButton optColorManagement 
       Height          =   330
       Index           =   1
       Left            =   180
@@ -116,7 +116,7 @@ Begin VB.Form options_ColorManagement
       _ExtentY        =   582
       Caption         =   "use the current system profiles for each display"
    End
-   Begin PhotoDemon.pdLabel lblColorManagement 
+   Begin PhotoPaint.pdLabel lblColorManagement 
       Height          =   240
       Index           =   2
       Left            =   780
@@ -127,7 +127,7 @@ Begin VB.Form options_ColorManagement
       Caption         =   "color profile for this display:"
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   0
       Left            =   0
@@ -139,7 +139,7 @@ Begin VB.Form options_ColorManagement
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdRadioButton optColorManagement 
+   Begin PhotoPaint.pdRadioButton optColorManagement 
       Height          =   330
       Index           =   2
       Left            =   180
@@ -150,7 +150,7 @@ Begin VB.Form options_ColorManagement
       _ExtentY        =   582
       Caption         =   "use custom profiles for each display"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   24
       Left            =   0
@@ -162,7 +162,7 @@ Begin VB.Form options_ColorManagement
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdCheckBox chkColorManagement 
+   Begin PhotoPaint.pdCheckBox chkColorManagement 
       Height          =   315
       Index           =   2
       Left            =   240
@@ -198,7 +198,7 @@ Attribute VB_Exposed = False
 ' (That module is responsible for all low-level preference reading/writing.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

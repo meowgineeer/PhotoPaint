@@ -29,7 +29,7 @@ Begin VB.Form options_Menus
    ScaleWidth      =   553
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdButtonStrip btsMnemonics 
+   Begin PhotoPaint.pdButtonStrip btsMnemonics 
       Height          =   975
       Left            =   0
       TabIndex        =   2
@@ -39,7 +39,7 @@ Begin VB.Form options_Menus
       _ExtentY        =   1720
       Caption         =   "display access keys (mnemonics)"
    End
-   Begin PhotoDemon.pdLabel lblRecentFileCount 
+   Begin PhotoPaint.pdLabel lblRecentFileCount 
       Height          =   240
       Left            =   135
       Top             =   1620
@@ -50,7 +50,7 @@ Begin VB.Form options_Menus
       ForeColor       =   4210752
       Layout          =   2
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   13
       Left            =   0
@@ -62,7 +62,7 @@ Begin VB.Form options_Menus
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdButtonStrip btsMRUStyle 
+   Begin PhotoPaint.pdButtonStrip btsMRUStyle 
       Height          =   975
       Left            =   120
       TabIndex        =   0
@@ -73,7 +73,7 @@ Begin VB.Form options_Menus
       Caption         =   "recent file menu text:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdSpinner tudRecentFiles 
+   Begin PhotoPaint.pdSpinner tudRecentFiles 
       Height          =   345
       Left            =   3840
       TabIndex        =   1
@@ -111,7 +111,7 @@ Attribute VB_Exposed = False
 ' (That module is responsible for all low-level preference reading/writing.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -24,7 +24,7 @@ Begin VB.Form FormShadowHighlight
    ScaleHeight     =   438
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   808
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormShadowHighlight
       _ExtentX        =   21378
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -42,7 +42,7 @@ Begin VB.Form FormShadowHighlight
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdButtonStrip btsOptions 
+   Begin PhotoPaint.pdButtonStrip btsOptions 
       Height          =   960
       Left            =   6000
       TabIndex        =   2
@@ -52,7 +52,7 @@ Begin VB.Form FormShadowHighlight
       _ExtentY        =   1693
       Caption         =   "options"
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4575
       Index           =   0
       Left            =   5880
@@ -60,7 +60,7 @@ Begin VB.Form FormShadowHighlight
       Width           =   6135
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdSlider sltShadowAmount 
+      Begin PhotoPaint.pdSlider sltShadowAmount 
          Height          =   705
          Left            =   120
          TabIndex        =   6
@@ -72,7 +72,7 @@ Begin VB.Form FormShadowHighlight
          Min             =   -100
          Max             =   100
       End
-      Begin PhotoDemon.pdSlider sltHighlightAmount 
+      Begin PhotoPaint.pdSlider sltHighlightAmount 
          Height          =   705
          Left            =   120
          TabIndex        =   7
@@ -84,7 +84,7 @@ Begin VB.Form FormShadowHighlight
          Min             =   -100
          Max             =   100
       End
-      Begin PhotoDemon.pdSlider sltMidtoneContrast 
+      Begin PhotoPaint.pdSlider sltMidtoneContrast 
          Height          =   705
          Left            =   120
          TabIndex        =   8
@@ -97,7 +97,7 @@ Begin VB.Form FormShadowHighlight
          Max             =   100
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4575
       Index           =   1
       Left            =   5880
@@ -105,7 +105,7 @@ Begin VB.Form FormShadowHighlight
       Width           =   6135
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdSlider sltShadowWidth 
+      Begin PhotoPaint.pdSlider sltShadowWidth 
          Height          =   705
          Left            =   240
          TabIndex        =   4
@@ -119,7 +119,7 @@ Begin VB.Form FormShadowHighlight
          NotchPosition   =   2
          NotchValueCustom=   75
       End
-      Begin PhotoDemon.pdSlider sltShadowRadius 
+      Begin PhotoPaint.pdSlider sltShadowRadius 
          Height          =   705
          Left            =   240
          TabIndex        =   3
@@ -133,7 +133,7 @@ Begin VB.Form FormShadowHighlight
          NotchPosition   =   2
          NotchValueCustom=   25
       End
-      Begin PhotoDemon.pdSlider sltHighlightWidth 
+      Begin PhotoPaint.pdSlider sltHighlightWidth 
          Height          =   705
          Left            =   240
          TabIndex        =   9
@@ -147,7 +147,7 @@ Begin VB.Form FormShadowHighlight
          NotchPosition   =   2
          NotchValueCustom=   75
       End
-      Begin PhotoDemon.pdSlider sltHighlightRadius 
+      Begin PhotoPaint.pdSlider sltHighlightRadius 
          Height          =   705
          Left            =   240
          TabIndex        =   5
@@ -161,7 +161,7 @@ Begin VB.Form FormShadowHighlight
          NotchPosition   =   2
          NotchValueCustom=   25
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   1
          Left            =   0
@@ -173,7 +173,7 @@ Begin VB.Form FormShadowHighlight
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   0
          Left            =   0
@@ -207,7 +207,7 @@ Attribute VB_Exposed = False
 ' function (currently inside the Filters_Layers module).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

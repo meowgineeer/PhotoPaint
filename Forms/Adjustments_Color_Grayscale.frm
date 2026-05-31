@@ -25,7 +25,7 @@ Begin VB.Form FormGrayscale
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   793
    Visible         =   0   'False
-   Begin PhotoDemon.pdSlider sldDitherAmount 
+   Begin PhotoPaint.pdSlider sldDitherAmount 
       Height          =   735
       Left            =   6000
       TabIndex        =   7
@@ -38,7 +38,7 @@ Begin VB.Form FormGrayscale
       Value           =   100
       DefaultValue    =   100
    End
-   Begin PhotoDemon.pdDropDown cboDithering 
+   Begin PhotoPaint.pdDropDown cboDithering 
       Height          =   735
       Left            =   6000
       TabIndex        =   1
@@ -48,7 +48,7 @@ Begin VB.Form FormGrayscale
       _ExtentY        =   1296
       Caption         =   "dithering"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -57,7 +57,7 @@ Begin VB.Form FormGrayscale
       _ExtentX        =   20981
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltShades 
+   Begin PhotoPaint.pdSlider sltShades 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -72,7 +72,7 @@ Begin VB.Form FormGrayscale
       NotchPosition   =   2
       NotchValueCustom=   256
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   2
@@ -81,7 +81,7 @@ Begin VB.Form FormGrayscale
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdDropDown cboMethod 
+   Begin PhotoPaint.pdDropDown cboMethod 
       Height          =   735
       Left            =   6000
       TabIndex        =   4
@@ -91,7 +91,7 @@ Begin VB.Form FormGrayscale
       _ExtentY        =   1296
       Caption         =   "style"
    End
-   Begin PhotoDemon.pdButtonStrip btsChannel 
+   Begin PhotoPaint.pdButtonStrip btsChannel 
       Height          =   630
       Left            =   6120
       TabIndex        =   6
@@ -101,7 +101,7 @@ Begin VB.Form FormGrayscale
       _ExtentX        =   9975
       _ExtentY        =   1111
    End
-   Begin PhotoDemon.pdButtonStrip btsDecompose 
+   Begin PhotoPaint.pdButtonStrip btsDecompose 
       Height          =   630
       Left            =   6120
       TabIndex        =   5
@@ -132,7 +132,7 @@ Attribute VB_Exposed = False
 ' strength.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -21,7 +21,7 @@ Begin VB.Form dialog_ExportJPEG
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   874
-   Begin PhotoDemon.pdButtonStrip btsCategory 
+   Begin PhotoPaint.pdButtonStrip btsCategory 
       Height          =   615
       Left            =   6000
       TabIndex        =   1
@@ -31,7 +31,7 @@ Begin VB.Form dialog_ExportJPEG
       _ExtentY        =   1085
       FontSize        =   11
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -42,7 +42,7 @@ Begin VB.Form dialog_ExportJPEG
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   2
@@ -51,7 +51,7 @@ Begin VB.Form dialog_ExportJPEG
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4695
       Index           =   0
       Left            =   5880
@@ -59,7 +59,7 @@ Begin VB.Form dialog_ExportJPEG
       Width           =   7215
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdButtonStrip btsCompression 
+      Begin PhotoPaint.pdButtonStrip btsCompression 
          Height          =   1095
          Left            =   120
          TabIndex        =   8
@@ -69,7 +69,7 @@ Begin VB.Form dialog_ExportJPEG
          _ExtentY        =   1931
          Caption         =   "compression method"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   375
          Index           =   0
          Left            =   120
@@ -80,7 +80,7 @@ Begin VB.Form dialog_ExportJPEG
          Caption         =   "quality"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdDropDown cboSaveQuality 
+      Begin PhotoPaint.pdDropDown cboSaveQuality 
          Height          =   375
          Left            =   240
          TabIndex        =   6
@@ -89,7 +89,7 @@ Begin VB.Form dialog_ExportJPEG
          _ExtentX        =   4604
          _ExtentY        =   661
       End
-      Begin PhotoDemon.pdSlider sltQuality 
+      Begin PhotoPaint.pdSlider sltQuality 
          Height          =   405
          Left            =   2880
          TabIndex        =   4
@@ -103,7 +103,7 @@ Begin VB.Form dialog_ExportJPEG
          NotchPosition   =   1
          DefaultValue    =   90
       End
-      Begin PhotoDemon.pdColorSelector clsBackground 
+      Begin PhotoPaint.pdColorSelector clsBackground 
          Height          =   1095
          Left            =   120
          TabIndex        =   3
@@ -114,7 +114,7 @@ Begin VB.Form dialog_ExportJPEG
          Caption         =   "background color"
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4695
       Index           =   1
       Left            =   5880
@@ -122,7 +122,7 @@ Begin VB.Form dialog_ExportJPEG
       Width           =   7215
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdButtonStrip btsSubsampling 
+      Begin PhotoPaint.pdButtonStrip btsSubsampling 
          Height          =   1095
          Left            =   120
          TabIndex        =   5
@@ -132,7 +132,7 @@ Begin VB.Form dialog_ExportJPEG
          _ExtentY        =   1931
          Caption         =   "chroma subsampling"
       End
-      Begin PhotoDemon.pdButtonStrip btsDepth 
+      Begin PhotoPaint.pdButtonStrip btsDepth 
          Height          =   1095
          Left            =   120
          TabIndex        =   9
@@ -143,7 +143,7 @@ Begin VB.Form dialog_ExportJPEG
          Caption         =   "depth"
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4695
       Index           =   2
       Left            =   5880
@@ -151,7 +151,7 @@ Begin VB.Form dialog_ExportJPEG
       Width           =   7215
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdMetadataExport mtdManager 
+      Begin PhotoPaint.pdMetadataExport mtdManager 
          Height          =   4215
          Left            =   240
          TabIndex        =   7
@@ -178,7 +178,7 @@ Attribute VB_Exposed = False
 ' rely on FreeImage for implementation, and will be disabled and/or ignored if FreeImage cannot be found.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

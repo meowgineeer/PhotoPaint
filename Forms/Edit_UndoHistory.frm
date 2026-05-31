@@ -26,7 +26,7 @@ Begin VB.Form FormUndoHistory
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   641
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   255
       Index           =   0
       Left            =   480
@@ -37,7 +37,7 @@ Begin VB.Form FormUndoHistory
       Caption         =   "* current image state"
       FontItalic      =   -1  'True
    End
-   Begin PhotoDemon.pdListBoxOD lstUndo 
+   Begin PhotoPaint.pdListBoxOD lstUndo 
       Height          =   5055
       Left            =   240
       TabIndex        =   1
@@ -47,7 +47,7 @@ Begin VB.Form FormUndoHistory
       _ExtentY        =   8916
       Caption         =   "available image states"
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBar 
+   Begin PhotoPaint.pdCommandBarMini cmdBar 
       Align           =   2  'Align Bottom
       Height          =   735
       Left            =   0
@@ -84,7 +84,7 @@ Attribute VB_Exposed = False
 ' to that point.  This dialog simply presents the list to the user, and returns a clicked index position to pdUndo.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

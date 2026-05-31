@@ -26,7 +26,7 @@ Begin VB.Form FormScreenVideoPrefs
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   785
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdRadioButton rdoAfter 
+   Begin PhotoPaint.pdRadioButton rdoAfter 
       Height          =   375
       Index           =   0
       Left            =   6000
@@ -37,7 +37,7 @@ Begin VB.Form FormScreenVideoPrefs
       _ExtentY        =   661
       Caption         =   "open in PhotoDemon (for further editing)"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   735
       Left            =   0
@@ -47,7 +47,7 @@ Begin VB.Form FormScreenVideoPrefs
       _ExtentX        =   20770
       _ExtentY        =   1296
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   0
       Left            =   120
@@ -58,7 +58,7 @@ Begin VB.Form FormScreenVideoPrefs
       Caption         =   "recording settings"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdSlider sldFrameRate 
+   Begin PhotoPaint.pdSlider sldFrameRate 
       Height          =   735
       Left            =   360
       TabIndex        =   0
@@ -75,7 +75,7 @@ Begin VB.Form FormScreenVideoPrefs
       NotchPosition   =   2
       NotchValueCustom=   10
    End
-   Begin PhotoDemon.pdButtonStrip btsLoop 
+   Begin PhotoPaint.pdButtonStrip btsLoop 
       Height          =   975
       Left            =   6360
       TabIndex        =   1
@@ -86,7 +86,7 @@ Begin VB.Form FormScreenVideoPrefs
       Caption         =   "repeat final animation"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdSlider sldLoop 
+   Begin PhotoPaint.pdSlider sldLoop 
       Height          =   735
       Left            =   6360
       TabIndex        =   2
@@ -102,7 +102,7 @@ Begin VB.Form FormScreenVideoPrefs
       Value           =   1
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdButtonStrip btsMouse 
+   Begin PhotoPaint.pdButtonStrip btsMouse 
       Height          =   975
       Left            =   360
       TabIndex        =   3
@@ -113,7 +113,7 @@ Begin VB.Form FormScreenVideoPrefs
       Caption         =   "record mouse actions"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdSlider sldCompression 
+   Begin PhotoPaint.pdSlider sldCompression 
       Height          =   735
       Left            =   6360
       TabIndex        =   4
@@ -129,7 +129,7 @@ Begin VB.Form FormScreenVideoPrefs
       NotchPosition   =   2
       NotchValueCustom=   9
    End
-   Begin PhotoDemon.pdSlider sldCountdown 
+   Begin PhotoPaint.pdSlider sldCountdown 
       Height          =   735
       Left            =   360
       TabIndex        =   5
@@ -145,7 +145,7 @@ Begin VB.Form FormScreenVideoPrefs
       NotchPosition   =   2
       NotchValueCustom=   3
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   1
       Left            =   6000
@@ -156,7 +156,7 @@ Begin VB.Form FormScreenVideoPrefs
       Caption         =   "when recording finishes"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdRadioButton rdoAfter 
+   Begin PhotoPaint.pdRadioButton rdoAfter 
       Height          =   375
       Index           =   1
       Left            =   6000
@@ -168,7 +168,7 @@ Begin VB.Form FormScreenVideoPrefs
       Caption         =   "save directly to image file"
       Value           =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sldQuality 
+   Begin PhotoPaint.pdSlider sldQuality 
       Height          =   735
       Left            =   6360
       TabIndex        =   9
@@ -184,7 +184,7 @@ Begin VB.Form FormScreenVideoPrefs
       NotchPosition   =   2
       NotchValueCustom=   75
    End
-   Begin PhotoDemon.pdButtonStrip btsFormat 
+   Begin PhotoPaint.pdButtonStrip btsFormat 
       Height          =   975
       Left            =   6360
       TabIndex        =   10
@@ -218,7 +218,7 @@ Attribute VB_Exposed = False
 ' recommended since the other formats will produce better results with smaller file sizes).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

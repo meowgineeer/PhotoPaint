@@ -25,7 +25,7 @@ Begin VB.Form dialog_ImportSVG
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   890
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdResize rszUI 
+   Begin PhotoPaint.pdResize rszUI 
       Height          =   2895
       Left            =   4800
       TabIndex        =   1
@@ -34,7 +34,7 @@ Begin VB.Form dialog_ImportSVG
       _ExtentX        =   14843
       _ExtentY        =   6165
    End
-   Begin PhotoDemon.pdPictureBox picPreview 
+   Begin PhotoPaint.pdPictureBox picPreview 
       Height          =   4335
       Left            =   120
       Top             =   120
@@ -42,7 +42,7 @@ Begin VB.Form dialog_ImportSVG
       _ExtentX        =   7858
       _ExtentY        =   7646
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -70,7 +70,7 @@ Attribute VB_Exposed = False
 ' for this feature.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

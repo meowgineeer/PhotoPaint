@@ -24,7 +24,7 @@ Begin VB.Form FormOutlineEffect
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   776
-   Begin PhotoDemon.pdColorSelector csBackground 
+   Begin PhotoPaint.pdColorSelector csBackground 
       Height          =   975
       Left            =   5880
       TabIndex        =   5
@@ -34,7 +34,7 @@ Begin VB.Form FormOutlineEffect
       _ExtentY        =   1720
       Caption         =   "background color"
    End
-   Begin PhotoDemon.pdButtonStrip btsEdgeType 
+   Begin PhotoPaint.pdButtonStrip btsEdgeType 
       Height          =   975
       Left            =   5880
       TabIndex        =   4
@@ -44,7 +44,7 @@ Begin VB.Form FormOutlineEffect
       _ExtentY        =   1720
       Caption         =   "edge type"
    End
-   Begin PhotoDemon.pdPenSelector pnsOutline 
+   Begin PhotoPaint.pdPenSelector pnsOutline 
       Height          =   1335
       Left            =   5880
       TabIndex        =   3
@@ -54,7 +54,7 @@ Begin VB.Form FormOutlineEffect
       _ExtentY        =   2355
       Caption         =   "outline style"
    End
-   Begin PhotoDemon.pdSlider sldThreshold 
+   Begin PhotoPaint.pdSlider sldThreshold 
       Height          =   735
       Left            =   5880
       TabIndex        =   2
@@ -67,7 +67,7 @@ Begin VB.Form FormOutlineEffect
       SigDigits       =   1
       GradientColorRight=   1703935
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -77,7 +77,7 @@ Begin VB.Form FormOutlineEffect
       _ExtentY        =   9922
       DisableZoomPan  =   -1  'True
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -108,7 +108,7 @@ Attribute VB_Exposed = False
 ' interior holes (which are ignored at present).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

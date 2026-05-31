@@ -292,7 +292,7 @@ Attribute VB_Exposed = False
 'Last update: dump a micro "phrase database" alongside the primary en-US file
 '
 'This project is designed to scan through all project files in PhotoDemon, extract any user-facing English text, and compile
-' it into an XML file which can be used as the basis for translations into other languages.  It reads the master PhotoDemon.vbp
+' it into an XML file which can be used as the basis for translations into other languages.  It reads the master PhotoPaint.vbp
 ' file, compiles a list of all project files, then analyzes them individually.  Control text is extracted (unless the text is
 ' in an FRX file - in that case the text needs to be manually rewritten so this project can find it).  Message box and
 ' progress/status bar text is also extracted, but this project relies on some particular PhotoDemon implementation quirks to
@@ -304,7 +304,7 @@ Attribute VB_Exposed = False
 ' of which can be used to fill-in missing translations while keeping any that are still valid.  I typically use this a week or
 ' two before a formal release, so I can hand off new XML files to translators for them to update with any new or modified text.
 '
-'NOTE: this project is intended only as a support tool for PhotoDemon.  It is not designed or tested for general-purpose use.
+'NOTE: this project is intended only as a support tool for PhotoPaint.  It is not designed or tested for general-purpose use.
 '      As such, the code is pretty ugly.  Organization is minimal.  Read at your own risk.
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
@@ -1316,7 +1316,7 @@ Private Sub ProcessFile(ByRef srcFile As String)
             curPhraseType = pt_UIElement
                 
         '2) Check for a control caption.  (This has to be handled slightly differently than form caption.)
-        ElseIf ((InStr(1, ucCurLineText, "BEGIN VB.", vbBinaryCompare) > 0) Or (InStr(1, ucCurLineText, "BEGIN PHOTODEMON.", vbBinaryCompare) > 0)) And (InStr(1, ucCurLineText, "PICTUREBOX", vbBinaryCompare) = 0) And (InStr(1, curLineText, "ComboBox") = 0) And (InStr(1, curLineText, ".Shape") = 0) And (InStr(1, curLineText, "TextBox") = 0) And (InStr(1, curLineText, "HScrollBar") = 0) And (InStr(1, curLineText, "VScrollBar") = 0) Then
+        ElseIf ((InStr(1, ucCurLineText, "BEGIN VB.", vbBinaryCompare) > 0) Or (InStr(1, ucCurLineText, "BEGIN PHOTOPAINT.", vbBinaryCompare) > 0)) And (InStr(1, ucCurLineText, "PICTUREBOX", vbBinaryCompare) = 0) And (InStr(1, curLineText, "ComboBox") = 0) And (InStr(1, curLineText, ".Shape") = 0) And (InStr(1, curLineText, "TextBox") = 0) And (InStr(1, curLineText, "HScrollBar") = 0) And (InStr(1, curLineText, "VScrollBar") = 0) Then
             processedText = FindControlCaption(fileLines, curLineNumber)
             curPhraseType = pt_UIElement
         
@@ -2012,7 +2012,7 @@ Private Sub cmdSelectVBP_Click()
     ' base en-US language file.
     Dim likelyDefaultLocation As String
     If Files.PathCanonicalize(Files.AppPathW() & "..\..", likelyDefaultLocation) Then likelyDefaultLocation = Files.PathAddBackslash(likelyDefaultLocation)
-    m_VBPFile = likelyDefaultLocation & "PhotoDemon.vbp"
+    m_VBPFile = likelyDefaultLocation & "PhotoPaint.vbp"
     
     lblVBP = "Active VBP: " & m_VBPFile
     m_VBPPath = Files.FileGetPath(m_VBPFile)
@@ -2176,8 +2176,8 @@ Private Sub Form_Load()
     AddBlacklist "X.X"
     AddBlacklist "XX.XX.XX"
     AddBlacklist "tannerhelland.com/contact"
-    AddBlacklist "photodemon.org/about/contact"
-    AddBlacklist "photodemon.org/about/contact/"
+    AddBlacklist "photopaint.org/about/contact"
+    AddBlacklist "photopaint.org/about/contact/"
     AddBlacklist "HTML / CSS"
     AddBlacklist "while it downloads."
     AddBlacklist "16x16"

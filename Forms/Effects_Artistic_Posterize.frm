@@ -24,7 +24,7 @@ Begin VB.Form FormPosterize
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   798
-   Begin PhotoDemon.pdButtonStrip btsAdaptiveColoring 
+   Begin PhotoPaint.pdButtonStrip btsAdaptiveColoring 
       Height          =   1020
       Left            =   6000
       TabIndex        =   7
@@ -34,7 +34,7 @@ Begin VB.Form FormPosterize
       _ExtentY        =   1799
       Caption         =   "adaptive coloring"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -43,7 +43,7 @@ Begin VB.Form FormPosterize
       _ExtentX        =   21114
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -52,7 +52,7 @@ Begin VB.Form FormPosterize
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltRed 
+   Begin PhotoPaint.pdSlider sltRed 
       Height          =   735
       Left            =   6000
       TabIndex        =   2
@@ -66,7 +66,7 @@ Begin VB.Form FormPosterize
       Value           =   6
       DefaultValue    =   6
    End
-   Begin PhotoDemon.pdSlider sltGreen 
+   Begin PhotoPaint.pdSlider sltGreen 
       Height          =   735
       Left            =   6000
       TabIndex        =   3
@@ -80,7 +80,7 @@ Begin VB.Form FormPosterize
       Value           =   7
       DefaultValue    =   6
    End
-   Begin PhotoDemon.pdSlider sltBlue 
+   Begin PhotoPaint.pdSlider sltBlue 
       Height          =   735
       Left            =   6000
       TabIndex        =   4
@@ -94,7 +94,7 @@ Begin VB.Form FormPosterize
       Value           =   6
       DefaultValue    =   6
    End
-   Begin PhotoDemon.pdSlider sldDitherAmount 
+   Begin PhotoPaint.pdSlider sldDitherAmount 
       Height          =   735
       Left            =   6000
       TabIndex        =   5
@@ -108,7 +108,7 @@ Begin VB.Form FormPosterize
       GradientColorRight=   1703935
       DefaultValue    =   50
    End
-   Begin PhotoDemon.pdDropDown cboDither 
+   Begin PhotoPaint.pdDropDown cboDither 
       Height          =   780
       Left            =   6000
       TabIndex        =   6
@@ -134,7 +134,7 @@ Attribute VB_Exposed = False
 '"Posterizing" effect interface.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

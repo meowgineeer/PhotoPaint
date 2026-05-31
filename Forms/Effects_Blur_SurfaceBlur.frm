@@ -24,7 +24,7 @@ Begin VB.Form FormSurfaceBlur
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   771
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormSurfaceBlur
       _ExtentX        =   20399
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sldRadius 
+   Begin PhotoPaint.pdSlider sldRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -49,7 +49,7 @@ Begin VB.Form FormSurfaceBlur
       Value           =   3
       DefaultValue    =   3
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -58,7 +58,7 @@ Begin VB.Form FormSurfaceBlur
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sldRange 
+   Begin PhotoPaint.pdSlider sldRange 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -119,7 +119,7 @@ Attribute VB_Exposed = False
 'Ming's code is available under an MIT license.  Thank you to him/her/them for sharing their work!
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -24,7 +24,7 @@ Begin VB.Form FormLava
    ScaleHeight     =   437
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   806
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormLava
       _ExtentX        =   21325
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltScale 
+   Begin PhotoPaint.pdSlider sltScale 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -49,7 +49,7 @@ Begin VB.Form FormLava
       NotchPosition   =   2
       NotchValueCustom=   25
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -59,7 +59,7 @@ Begin VB.Form FormLava
       _ExtentY        =   9922
       DisableZoomPan  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sldOpacity 
+   Begin PhotoPaint.pdSlider sldOpacity 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -74,7 +74,7 @@ Begin VB.Form FormLava
       NotchValueCustom=   25
       DefaultValue    =   100
    End
-   Begin PhotoDemon.pdDropDown cboBlendMode 
+   Begin PhotoPaint.pdDropDown cboBlendMode 
       Height          =   735
       Left            =   6000
       TabIndex        =   4
@@ -84,7 +84,7 @@ Begin VB.Form FormLava
       _ExtentY        =   1296
       Caption         =   "blend mode"
    End
-   Begin PhotoDemon.pdRandomizeUI rndSeed 
+   Begin PhotoPaint.pdRandomizeUI rndSeed 
       Height          =   735
       Left            =   6000
       TabIndex        =   5
@@ -94,7 +94,7 @@ Begin VB.Form FormLava
       _ExtentY        =   1296
       Caption         =   "random seed:"
    End
-   Begin PhotoDemon.pdColorSelector cpHighlight 
+   Begin PhotoPaint.pdColorSelector cpHighlight 
       Height          =   975
       Left            =   9000
       TabIndex        =   6
@@ -105,7 +105,7 @@ Begin VB.Form FormLava
       Caption         =   "highlight color"
       curColor        =   6262010
    End
-   Begin PhotoDemon.pdColorSelector cpShadow 
+   Begin PhotoPaint.pdColorSelector cpShadow 
       Height          =   975
       Left            =   6000
       TabIndex        =   7
@@ -134,7 +134,7 @@ Attribute VB_Exposed = False
 ' a lava-like map.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

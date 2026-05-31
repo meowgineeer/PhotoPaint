@@ -24,7 +24,7 @@ Begin VB.Form FormColorBalance
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   788
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormColorBalance
       _ExtentX        =   20849
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   4
@@ -42,7 +42,7 @@ Begin VB.Form FormColorBalance
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltRed 
+   Begin PhotoPaint.pdSlider sltRed 
       Height          =   405
       Left            =   6000
       TabIndex        =   1
@@ -57,7 +57,7 @@ Begin VB.Form FormColorBalance
       GradientColorRight=   255
       GradientColorMiddle=   8881021
    End
-   Begin PhotoDemon.pdSlider sltGreen 
+   Begin PhotoPaint.pdSlider sltGreen 
       Height          =   405
       Left            =   6000
       TabIndex        =   2
@@ -71,7 +71,7 @@ Begin VB.Form FormColorBalance
       GradientColorLeft=   16711935
       GradientColorRight=   65280
    End
-   Begin PhotoDemon.pdSlider sltBlue 
+   Begin PhotoPaint.pdSlider sltBlue 
       Height          =   405
       Left            =   6000
       TabIndex        =   3
@@ -85,7 +85,7 @@ Begin VB.Form FormColorBalance
       GradientColorLeft=   65535
       GradientColorRight=   16711680
    End
-   Begin PhotoDemon.pdCheckBox chkLuminance 
+   Begin PhotoPaint.pdCheckBox chkLuminance 
       Height          =   360
       Left            =   6120
       TabIndex        =   5
@@ -95,7 +95,7 @@ Begin VB.Form FormColorBalance
       _ExtentY        =   635
       Caption         =   "preserve luminance"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   0
       Left            =   6000
@@ -107,7 +107,7 @@ Begin VB.Form FormColorBalance
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblYellow 
+   Begin PhotoPaint.pdLabel lblYellow 
       Height          =   270
       Left            =   6120
       Top             =   3840
@@ -117,7 +117,7 @@ Begin VB.Form FormColorBalance
       Caption         =   "yellow"
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblMagenta 
+   Begin PhotoPaint.pdLabel lblMagenta 
       Height          =   270
       Left            =   6120
       Top             =   2880
@@ -127,7 +127,7 @@ Begin VB.Form FormColorBalance
       Caption         =   "magenta"
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblCyan 
+   Begin PhotoPaint.pdLabel lblCyan 
       Height          =   270
       Left            =   6120
       Top             =   1920
@@ -137,7 +137,7 @@ Begin VB.Form FormColorBalance
       Caption         =   "cyan"
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblBlue 
+   Begin PhotoPaint.pdLabel lblBlue 
       Height          =   270
       Left            =   8160
       Top             =   3840
@@ -148,7 +148,7 @@ Begin VB.Form FormColorBalance
       Caption         =   "blue"
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblGreen 
+   Begin PhotoPaint.pdLabel lblGreen 
       Height          =   270
       Left            =   8160
       Top             =   2880
@@ -159,7 +159,7 @@ Begin VB.Form FormColorBalance
       Caption         =   "green"
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblRed 
+   Begin PhotoPaint.pdLabel lblRed 
       Height          =   270
       Left            =   8160
       Top             =   1920
@@ -187,7 +187,7 @@ Attribute VB_Exposed = False
 ' in GIMP and Photoshop.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

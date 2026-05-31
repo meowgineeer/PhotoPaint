@@ -24,7 +24,7 @@ Begin VB.Form FormPalettize
    ScaleHeight     =   493
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   821
-   Begin PhotoDemon.pdButtonStrip btsOptions 
+   Begin PhotoPaint.pdButtonStrip btsOptions 
       Height          =   615
       Left            =   5880
       TabIndex        =   4
@@ -33,7 +33,7 @@ Begin VB.Form FormPalettize
       _ExtentX        =   11033
       _ExtentY        =   1085
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -42,7 +42,7 @@ Begin VB.Form FormPalettize
       _ExtentX        =   21722
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   6360
       Left            =   120
       TabIndex        =   1
@@ -51,7 +51,7 @@ Begin VB.Form FormPalettize
       _ExtentX        =   9922
       _ExtentY        =   11218
    End
-   Begin PhotoDemon.pdContainer pnlQuantize 
+   Begin PhotoPaint.pdContainer pnlQuantize 
       Height          =   5640
       Index           =   0
       Left            =   5880
@@ -59,7 +59,7 @@ Begin VB.Form FormPalettize
       Width           =   6375
       _ExtentX        =   11245
       _ExtentY        =   9948
-      Begin PhotoDemon.pdCheckBox chkLab 
+      Begin PhotoPaint.pdCheckBox chkLab 
          Height          =   375
          Left            =   240
          TabIndex        =   16
@@ -69,7 +69,7 @@ Begin VB.Form FormPalettize
          _ExtentY        =   661
          Caption         =   "use Lab color space"
       End
-      Begin PhotoDemon.pdColorSelector clsBackground 
+      Begin PhotoPaint.pdColorSelector clsBackground 
          Height          =   855
          Left            =   120
          TabIndex        =   11
@@ -80,7 +80,7 @@ Begin VB.Form FormPalettize
          Caption         =   "background color"
          FontSize        =   11
       End
-      Begin PhotoDemon.pdSlider sldDitherAmount 
+      Begin PhotoPaint.pdSlider sldDitherAmount 
          Height          =   735
          Index           =   0
          Left            =   3180
@@ -96,7 +96,7 @@ Begin VB.Form FormPalettize
          GradientColorRight=   1703935
          DefaultValue    =   100
       End
-      Begin PhotoDemon.pdDropDown cboDither 
+      Begin PhotoPaint.pdDropDown cboDither 
          Height          =   735
          Index           =   0
          Left            =   120
@@ -108,7 +108,7 @@ Begin VB.Form FormPalettize
          Caption         =   "dithering"
          FontSizeCaption =   11
       End
-      Begin PhotoDemon.pdSlider sldPalette 
+      Begin PhotoPaint.pdSlider sldPalette 
          Height          =   735
          Left            =   120
          TabIndex        =   14
@@ -125,7 +125,7 @@ Begin VB.Form FormPalettize
          NotchPosition   =   2
          NotchValueCustom=   256
       End
-      Begin PhotoDemon.pdButtonStrip btsMethod 
+      Begin PhotoPaint.pdButtonStrip btsMethod 
          Height          =   975
          Left            =   120
          TabIndex        =   15
@@ -136,7 +136,7 @@ Begin VB.Form FormPalettize
          Caption         =   "quantization method"
          FontSizeCaption =   11
       End
-      Begin PhotoDemon.pdCheckBox chkPreserveWB 
+      Begin PhotoPaint.pdCheckBox chkPreserveWB 
          Height          =   375
          Left            =   240
          TabIndex        =   2
@@ -146,7 +146,7 @@ Begin VB.Form FormPalettize
          _ExtentY        =   661
          Caption         =   "preserve white and black"
       End
-      Begin PhotoDemon.pdButtonStrip btsAlpha 
+      Begin PhotoPaint.pdButtonStrip btsAlpha 
          Height          =   975
          Left            =   120
          TabIndex        =   3
@@ -158,7 +158,7 @@ Begin VB.Form FormPalettize
          FontSizeCaption =   11
       End
    End
-   Begin PhotoDemon.pdContainer pnlQuantize 
+   Begin PhotoPaint.pdContainer pnlQuantize 
       Height          =   5640
       Index           =   1
       Left            =   5880
@@ -166,7 +166,7 @@ Begin VB.Form FormPalettize
       Width           =   6375
       _ExtentX        =   11245
       _ExtentY        =   9948
-      Begin PhotoDemon.pdCheckBox chkMatchAlpha 
+      Begin PhotoPaint.pdCheckBox chkMatchAlpha 
          Height          =   375
          Left            =   210
          TabIndex        =   10
@@ -176,7 +176,7 @@ Begin VB.Form FormPalettize
          _ExtentY        =   661
          Caption         =   "use palette's alpha values"
       End
-      Begin PhotoDemon.pdListBox lstPalettes 
+      Begin PhotoPaint.pdListBox lstPalettes 
          Height          =   2175
          Left            =   120
          TabIndex        =   8
@@ -187,7 +187,7 @@ Begin VB.Form FormPalettize
          Caption         =   "palettes in this file:"
          FontSizeCaption =   11
       End
-      Begin PhotoDemon.pdButton cmdLoadPalette 
+      Begin PhotoPaint.pdButton cmdLoadPalette 
          Height          =   495
          Left            =   5400
          TabIndex        =   6
@@ -197,7 +197,7 @@ Begin VB.Form FormPalettize
          _ExtentY        =   873
          Caption         =   "..."
       End
-      Begin PhotoDemon.pdTextBox txtPalette 
+      Begin PhotoPaint.pdTextBox txtPalette 
          Height          =   375
          Left            =   240
          TabIndex        =   5
@@ -206,7 +206,7 @@ Begin VB.Form FormPalettize
          _ExtentX        =   8705
          _ExtentY        =   661
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   255
          Left            =   120
          Top             =   0
@@ -216,7 +216,7 @@ Begin VB.Form FormPalettize
          Caption         =   "choose a palette file:"
          FontSize        =   11
       End
-      Begin PhotoDemon.pdDropDown cboDither 
+      Begin PhotoPaint.pdDropDown cboDither 
          Height          =   705
          Index           =   1
          Left            =   120
@@ -228,7 +228,7 @@ Begin VB.Form FormPalettize
          Caption         =   "dithering"
          FontSizeCaption =   11
       End
-      Begin PhotoDemon.pdSlider sldDitherAmount 
+      Begin PhotoPaint.pdSlider sldDitherAmount 
          Height          =   705
          Index           =   1
          Left            =   3240
@@ -262,7 +262,7 @@ Attribute VB_Exposed = False
 ' either by automatic palette generation or by applying an external palette.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

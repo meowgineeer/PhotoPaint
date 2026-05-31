@@ -26,7 +26,7 @@ Begin VB.Form dialog_GenericMemory
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   479
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdPictureBox picIcon 
+   Begin PhotoPaint.pdPictureBox picIcon 
       Height          =   735
       Left            =   240
       Top             =   360
@@ -34,7 +34,7 @@ Begin VB.Form dialog_GenericMemory
       _ExtentX        =   1296
       _ExtentY        =   1296
    End
-   Begin PhotoDemon.pdButton cmdAnswer 
+   Begin PhotoPaint.pdButton cmdAnswer 
       Height          =   735
       Index           =   0
       Left            =   240
@@ -45,7 +45,7 @@ Begin VB.Form dialog_GenericMemory
       _ExtentY        =   1085
       Caption         =   "Yes"
    End
-   Begin PhotoDemon.pdCheckBox chkRemember 
+   Begin PhotoPaint.pdCheckBox chkRemember 
       Height          =   330
       Left            =   240
       TabIndex        =   0
@@ -55,7 +55,7 @@ Begin VB.Form dialog_GenericMemory
       _ExtentY        =   582
       Caption         =   " "
    End
-   Begin PhotoDemon.pdLabel lblExplanation 
+   Begin PhotoPaint.pdLabel lblExplanation 
       Height          =   1290
       Left            =   1200
       Top             =   150
@@ -66,7 +66,7 @@ Begin VB.Form dialog_GenericMemory
       ForeColor       =   2105376
       Layout          =   1
    End
-   Begin PhotoDemon.pdButton cmdAnswer 
+   Begin PhotoPaint.pdButton cmdAnswer 
       Height          =   735
       Index           =   1
       Left            =   240
@@ -77,7 +77,7 @@ Begin VB.Form dialog_GenericMemory
       _ExtentY        =   1296
       Caption         =   "No"
    End
-   Begin PhotoDemon.pdButton cmdAnswer 
+   Begin PhotoPaint.pdButton cmdAnswer 
       Height          =   735
       Index           =   2
       Left            =   240
@@ -102,7 +102,7 @@ Attribute VB_Exposed = False
 'Last update: merge code from other dialogs into a single, universal version
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

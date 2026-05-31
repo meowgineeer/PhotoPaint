@@ -24,7 +24,7 @@ Begin VB.Form FormAnisotropic
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   802
-   Begin PhotoDemon.pdButtonStrip btsDirection 
+   Begin PhotoPaint.pdButtonStrip btsDirection 
       Height          =   975
       Left            =   6000
       TabIndex        =   3
@@ -34,7 +34,7 @@ Begin VB.Form FormAnisotropic
       _ExtentY        =   1085
       Caption         =   "directionality"
    End
-   Begin PhotoDemon.pdSlider sltFlow 
+   Begin PhotoPaint.pdSlider sltFlow 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -48,7 +48,7 @@ Begin VB.Form FormAnisotropic
       Value           =   50
       DefaultValue    =   50
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -57,7 +57,7 @@ Begin VB.Form FormAnisotropic
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -66,7 +66,7 @@ Begin VB.Form FormAnisotropic
       _ExtentX        =   21220
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltStrength 
+   Begin PhotoPaint.pdSlider sltStrength 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -79,7 +79,7 @@ Begin VB.Form FormAnisotropic
       Value           =   50
       DefaultValue    =   50
    End
-   Begin PhotoDemon.pdSlider sltIterations 
+   Begin PhotoPaint.pdSlider sltIterations 
       Height          =   705
       Left            =   6000
       TabIndex        =   5
@@ -93,7 +93,7 @@ Begin VB.Form FormAnisotropic
       Value           =   1
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdButtonStrip btsEmphasis 
+   Begin PhotoPaint.pdButtonStrip btsEmphasis 
       Height          =   975
       Left            =   6000
       TabIndex        =   6
@@ -130,7 +130,7 @@ Attribute VB_Exposed = False
 ' beginners, but suggestions for further improvement are obviously welcome.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

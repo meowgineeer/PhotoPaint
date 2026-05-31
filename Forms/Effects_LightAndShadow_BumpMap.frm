@@ -24,7 +24,7 @@ Begin VB.Form FormBumpMap
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   795
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormBumpMap
       _ExtentX        =   20981
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdColorSelector csLight 
+   Begin PhotoPaint.pdColorSelector csLight 
       Height          =   975
       Left            =   5880
       TabIndex        =   2
@@ -43,7 +43,7 @@ Begin VB.Form FormBumpMap
       _ExtentY        =   1720
       Caption         =   "color"
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -54,7 +54,7 @@ Begin VB.Form FormBumpMap
       DisableZoomPan  =   -1  'True
       PointSelection  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sldIntensity 
+   Begin PhotoPaint.pdSlider sldIntensity 
       Height          =   705
       Left            =   8880
       TabIndex        =   3
@@ -71,7 +71,7 @@ Begin VB.Form FormBumpMap
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdSlider sldDepth 
+   Begin PhotoPaint.pdSlider sldDepth 
       Height          =   705
       Left            =   5880
       TabIndex        =   4
@@ -86,7 +86,7 @@ Begin VB.Form FormBumpMap
       NotchPosition   =   2
       NotchValueCustom=   2
    End
-   Begin PhotoDemon.pdSlider sldXCenter 
+   Begin PhotoPaint.pdSlider sldXCenter 
       Height          =   405
       Left            =   5880
       TabIndex        =   5
@@ -100,7 +100,7 @@ Begin VB.Form FormBumpMap
       NotchPosition   =   2
       NotchValueCustom=   0.5
    End
-   Begin PhotoDemon.pdSlider sldYCenter 
+   Begin PhotoPaint.pdSlider sldYCenter 
       Height          =   405
       Left            =   8880
       TabIndex        =   6
@@ -114,7 +114,7 @@ Begin VB.Form FormBumpMap
       NotchPosition   =   2
       NotchValueCustom=   0.5
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   330
       Index           =   0
       Left            =   5880
@@ -126,7 +126,7 @@ Begin VB.Form FormBumpMap
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblExplanation 
+   Begin PhotoPaint.pdLabel lblExplanation 
       Height          =   435
       Index           =   0
       Left            =   6000
@@ -140,7 +140,7 @@ Begin VB.Form FormBumpMap
       ForeColor       =   4210752
       Layout          =   1
    End
-   Begin PhotoDemon.pdSlider sldRadius 
+   Begin PhotoPaint.pdSlider sldRadius 
       Height          =   705
       Left            =   5880
       TabIndex        =   7
@@ -155,7 +155,7 @@ Begin VB.Form FormBumpMap
       NotchPosition   =   2
       NotchValueCustom=   50
    End
-   Begin PhotoDemon.pdSlider sldAmbient 
+   Begin PhotoPaint.pdSlider sldAmbient 
       Height          =   705
       Left            =   8880
       TabIndex        =   8
@@ -166,7 +166,7 @@ Begin VB.Form FormBumpMap
       Caption         =   "ambient light"
       Max             =   100
    End
-   Begin PhotoDemon.pdSlider sldOpacity 
+   Begin PhotoPaint.pdSlider sldOpacity 
       Height          =   720
       Left            =   5880
       TabIndex        =   9
@@ -182,7 +182,7 @@ Begin VB.Form FormBumpMap
       NotchValueCustom=   25
       DefaultValue    =   100
    End
-   Begin PhotoDemon.pdDropDown cboBlendMode 
+   Begin PhotoPaint.pdDropDown cboBlendMode 
       Height          =   735
       Left            =   8880
       TabIndex        =   10
@@ -210,7 +210,7 @@ Attribute VB_Exposed = False
 ' to FastStone Image Viewer's "bump map" effect.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

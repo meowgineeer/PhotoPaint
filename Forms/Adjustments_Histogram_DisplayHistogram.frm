@@ -26,7 +26,7 @@ Begin VB.Form FormHistogram
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   706
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdSlider sldSmoothing 
+   Begin PhotoPaint.pdSlider sldSmoothing 
       Height          =   375
       Left            =   7200
       TabIndex        =   8
@@ -39,7 +39,7 @@ Begin VB.Form FormHistogram
       Value           =   50
       DefaultValue    =   50
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBar 
+   Begin PhotoPaint.pdCommandBarMini cmdBar 
       Align           =   2  'Align Bottom
       Height          =   735
       Left            =   0
@@ -49,7 +49,7 @@ Begin VB.Form FormHistogram
       _ExtentX        =   18680
       _ExtentY        =   1296
    End
-   Begin PhotoDemon.pdPictureBox picGradient 
+   Begin PhotoPaint.pdPictureBox picGradient 
       Height          =   300
       Left            =   120
       Top             =   4200
@@ -57,7 +57,7 @@ Begin VB.Form FormHistogram
       _ExtentX        =   18230
       _ExtentY        =   529
    End
-   Begin PhotoDemon.pdPictureBox picH 
+   Begin PhotoPaint.pdPictureBox picH 
       Height          =   3975
       Left            =   120
       Top             =   120
@@ -65,7 +65,7 @@ Begin VB.Form FormHistogram
       _ExtentX        =   18230
       _ExtentY        =   7011
    End
-   Begin PhotoDemon.pdCheckBox chkLog 
+   Begin PhotoPaint.pdCheckBox chkLog 
       Height          =   330
       Left            =   7200
       TabIndex        =   0
@@ -76,7 +76,7 @@ Begin VB.Form FormHistogram
       Caption         =   "use logarithmic values"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdCheckBox chkChannel 
+   Begin PhotoPaint.pdCheckBox chkChannel 
       Height          =   330
       Index           =   0
       Left            =   4560
@@ -87,7 +87,7 @@ Begin VB.Form FormHistogram
       _ExtentY        =   582
       Caption         =   "red"
    End
-   Begin PhotoDemon.pdCheckBox chkChannel 
+   Begin PhotoPaint.pdCheckBox chkChannel 
       Height          =   330
       Index           =   1
       Left            =   4560
@@ -98,7 +98,7 @@ Begin VB.Form FormHistogram
       _ExtentY        =   582
       Caption         =   "green"
    End
-   Begin PhotoDemon.pdCheckBox chkChannel 
+   Begin PhotoPaint.pdCheckBox chkChannel 
       Height          =   330
       Index           =   2
       Left            =   4560
@@ -109,7 +109,7 @@ Begin VB.Form FormHistogram
       _ExtentY        =   582
       Caption         =   "blue"
    End
-   Begin PhotoDemon.pdCheckBox chkChannel 
+   Begin PhotoPaint.pdCheckBox chkChannel 
       Height          =   330
       Index           =   3
       Left            =   4560
@@ -121,7 +121,7 @@ Begin VB.Form FormHistogram
       Caption         =   "luminance"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdCheckBox chkFillCurve 
+   Begin PhotoPaint.pdCheckBox chkFillCurve 
       Height          =   330
       Left            =   7200
       TabIndex        =   5
@@ -131,7 +131,7 @@ Begin VB.Form FormHistogram
       _ExtentY        =   582
       Caption         =   "fill histogram curves"
    End
-   Begin PhotoDemon.pdLabel lblVisibleChannels 
+   Begin PhotoPaint.pdLabel lblVisibleChannels 
       Height          =   285
       Left            =   4440
       Top             =   4680
@@ -142,7 +142,7 @@ Begin VB.Form FormHistogram
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   0
       Left            =   240
@@ -154,7 +154,7 @@ Begin VB.Form FormHistogram
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblMouseInstructions 
+   Begin PhotoPaint.pdLabel lblMouseInstructions 
       Height          =   450
       Left            =   360
       Top             =   7680
@@ -166,7 +166,7 @@ Begin VB.Form FormHistogram
       Layout          =   1
       UseCustomForeColor=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblDrawOptions 
+   Begin PhotoPaint.pdLabel lblDrawOptions 
       Height          =   285
       Left            =   7080
       Top             =   4680
@@ -177,7 +177,7 @@ Begin VB.Form FormHistogram
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   240
       Index           =   0
       Left            =   960
@@ -188,7 +188,7 @@ Begin VB.Form FormHistogram
       Caption         =   "level"
       ForeColor       =   4194304
    End
-   Begin PhotoDemon.pdLabel lblMaxCount 
+   Begin PhotoPaint.pdLabel lblMaxCount 
       Height          =   240
       Left            =   360
       Top             =   5520
@@ -198,7 +198,7 @@ Begin VB.Form FormHistogram
       Caption         =   "maximum count:"
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   240
       Index           =   1
       Left            =   960
@@ -211,7 +211,7 @@ Begin VB.Form FormHistogram
       Layout          =   2
       UseCustomForeColor=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValueTitle 
+   Begin PhotoPaint.pdLabel lblValueTitle 
       Height          =   240
       Index           =   1
       Left            =   360
@@ -223,7 +223,7 @@ Begin VB.Form FormHistogram
       ForeColor       =   4210752
       Layout          =   2
    End
-   Begin PhotoDemon.pdLabel lblValueTitle 
+   Begin PhotoPaint.pdLabel lblValueTitle 
       Height          =   240
       Index           =   0
       Left            =   360
@@ -235,7 +235,7 @@ Begin VB.Form FormHistogram
       ForeColor       =   4210752
       Layout          =   2
    End
-   Begin PhotoDemon.pdLabel lblTotalPixels 
+   Begin PhotoPaint.pdLabel lblTotalPixels 
       Height          =   240
       Left            =   360
       Top             =   5160
@@ -245,7 +245,7 @@ Begin VB.Form FormHistogram
       Caption         =   "total pixels:"
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblValueTitle 
+   Begin PhotoPaint.pdLabel lblValueTitle 
       Height          =   240
       Index           =   2
       Left            =   360
@@ -257,7 +257,7 @@ Begin VB.Form FormHistogram
       ForeColor       =   4210752
       Layout          =   2
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   240
       Index           =   2
       Left            =   1080
@@ -270,7 +270,7 @@ Begin VB.Form FormHistogram
       Layout          =   2
       UseCustomForeColor=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValueTitle 
+   Begin PhotoPaint.pdLabel lblValueTitle 
       Height          =   240
       Index           =   3
       Left            =   360
@@ -282,7 +282,7 @@ Begin VB.Form FormHistogram
       ForeColor       =   4210752
       Layout          =   2
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   240
       Index           =   3
       Left            =   1080
@@ -295,7 +295,7 @@ Begin VB.Form FormHistogram
       Layout          =   2
       UseCustomForeColor=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValueTitle 
+   Begin PhotoPaint.pdLabel lblValueTitle 
       Height          =   240
       Index           =   4
       Left            =   360
@@ -307,7 +307,7 @@ Begin VB.Form FormHistogram
       ForeColor       =   4210752
       Layout          =   2
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   240
       Index           =   4
       Left            =   1560
@@ -319,7 +319,7 @@ Begin VB.Form FormHistogram
       ForeColor       =   -2147483640
       Layout          =   2
    End
-   Begin PhotoDemon.pdCheckBox chkSmooth 
+   Begin PhotoPaint.pdCheckBox chkSmooth 
       Height          =   330
       Left            =   7200
       TabIndex        =   7
@@ -344,7 +344,7 @@ Attribute VB_Exposed = False
 '             rendering strategy to the Curves, Levels, etc dialogs
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

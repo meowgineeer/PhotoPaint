@@ -26,7 +26,7 @@ Begin VB.Form FormCanvasSize
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   647
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   0
       Left            =   840
@@ -36,7 +36,7 @@ Begin VB.Form FormCanvasSize
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -47,7 +47,7 @@ Begin VB.Form FormCanvasSize
       _ExtentY        =   1323
       AutoloadLastPreset=   -1  'True
    End
-   Begin PhotoDemon.pdResize ucResize 
+   Begin PhotoPaint.pdResize ucResize 
       Height          =   2850
       Left            =   360
       TabIndex        =   3
@@ -56,7 +56,7 @@ Begin VB.Form FormCanvasSize
       _ExtentX        =   15478
       _ExtentY        =   5027
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   1
       Left            =   1680
@@ -66,7 +66,7 @@ Begin VB.Form FormCanvasSize
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   2
       Left            =   2520
@@ -76,7 +76,7 @@ Begin VB.Form FormCanvasSize
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   3
       Left            =   840
@@ -86,7 +86,7 @@ Begin VB.Form FormCanvasSize
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   4
       Left            =   1680
@@ -96,7 +96,7 @@ Begin VB.Form FormCanvasSize
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   5
       Left            =   2520
@@ -106,7 +106,7 @@ Begin VB.Form FormCanvasSize
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   6
       Left            =   840
@@ -116,7 +116,7 @@ Begin VB.Form FormCanvasSize
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   7
       Left            =   1680
@@ -126,7 +126,7 @@ Begin VB.Form FormCanvasSize
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   8
       Left            =   2520
@@ -136,7 +136,7 @@ Begin VB.Form FormCanvasSize
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdLabel lblAnchor 
+   Begin PhotoPaint.pdLabel lblAnchor 
       Height          =   285
       Left            =   360
       Top             =   3360
@@ -168,7 +168,7 @@ Attribute VB_Exposed = False
 'But now I have such tools at my disposal, so no excuses!  :)  The resulting tool should be self-explanatory.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

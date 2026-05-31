@@ -26,7 +26,7 @@ Begin VB.Form dialog_UnsavedChanges
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   674
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdDropDown cboImageNames 
+   Begin PhotoPaint.pdDropDown cboImageNames 
       Height          =   795
       Left            =   105
       TabIndex        =   4
@@ -37,7 +37,7 @@ Begin VB.Form dialog_UnsavedChanges
       Caption         =   "images with unsaved changes:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdPictureBox picWarning 
+   Begin PhotoPaint.pdPictureBox picWarning 
       Height          =   855
       Left            =   3915
       Top             =   240
@@ -45,7 +45,7 @@ Begin VB.Form dialog_UnsavedChanges
       _ExtentX        =   0
       _ExtentY        =   0
    End
-   Begin PhotoDemon.pdLabel lblWarning 
+   Begin PhotoPaint.pdLabel lblWarning 
       Height          =   840
       Left            =   4920
       Top             =   360
@@ -55,7 +55,7 @@ Begin VB.Form dialog_UnsavedChanges
       Caption         =   ""
       Layout          =   1
    End
-   Begin PhotoDemon.pdButton cmdAnswer 
+   Begin PhotoPaint.pdButton cmdAnswer 
       Height          =   735
       Index           =   0
       Left            =   3960
@@ -66,7 +66,7 @@ Begin VB.Form dialog_UnsavedChanges
       _ExtentY        =   1296
       Caption         =   "Save the image before closing it"
    End
-   Begin PhotoDemon.pdCheckBox chkRepeat 
+   Begin PhotoPaint.pdCheckBox chkRepeat 
       Height          =   330
       Left            =   3945
       TabIndex        =   3
@@ -77,7 +77,7 @@ Begin VB.Form dialog_UnsavedChanges
       Caption         =   "Repeat this action for all unsaved images (%1 in total)"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdPictureBox picPreview 
+   Begin PhotoPaint.pdPictureBox picPreview 
       Height          =   3495
       Left            =   120
       Top             =   120
@@ -85,7 +85,7 @@ Begin VB.Form dialog_UnsavedChanges
       _ExtentX        =   0
       _ExtentY        =   0
    End
-   Begin PhotoDemon.pdButton cmdAnswer 
+   Begin PhotoPaint.pdButton cmdAnswer 
       Height          =   735
       Index           =   1
       Left            =   3960
@@ -96,7 +96,7 @@ Begin VB.Form dialog_UnsavedChanges
       _ExtentY        =   1296
       Caption         =   "Do not save the image (discard all changes)"
    End
-   Begin PhotoDemon.pdButton cmdAnswer 
+   Begin PhotoPaint.pdButton cmdAnswer 
       Height          =   735
       Index           =   2
       Left            =   3960
@@ -133,7 +133,7 @@ Attribute VB_Exposed = False
 'Finally, note that this prompt can be turned off completely from the Edit -> Preferences menu.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

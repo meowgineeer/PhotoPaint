@@ -24,7 +24,7 @@ Begin VB.Form FormRechannel
    ScaleHeight     =   438
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   793
-   Begin PhotoDemon.pdButtonStrip btsColorSpace 
+   Begin PhotoPaint.pdButtonStrip btsColorSpace 
       Height          =   1095
       Left            =   5880
       TabIndex        =   2
@@ -34,7 +34,7 @@ Begin VB.Form FormRechannel
       _ExtentY        =   1931
       Caption         =   "color space"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -44,7 +44,7 @@ Begin VB.Form FormRechannel
       _ExtentX        =   20981
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -53,7 +53,7 @@ Begin VB.Form FormRechannel
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   255
       Index           =   1
       Left            =   5880
@@ -64,7 +64,7 @@ Begin VB.Form FormRechannel
       Caption         =   "channel"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdButtonStrip btsChannel 
+   Begin PhotoPaint.pdButtonStrip btsChannel 
       Height          =   615
       Index           =   0
       Left            =   6000
@@ -75,7 +75,7 @@ Begin VB.Form FormRechannel
       _ExtentX        =   9975
       _ExtentY        =   1085
    End
-   Begin PhotoDemon.pdButtonStrip btsChannel 
+   Begin PhotoPaint.pdButtonStrip btsChannel 
       Height          =   615
       Index           =   1
       Left            =   6000
@@ -86,7 +86,7 @@ Begin VB.Form FormRechannel
       _ExtentX        =   9975
       _ExtentY        =   1085
    End
-   Begin PhotoDemon.pdButtonStrip btsChannel 
+   Begin PhotoPaint.pdButtonStrip btsChannel 
       Height          =   615
       Index           =   2
       Left            =   6000
@@ -114,7 +114,7 @@ Attribute VB_Exposed = False
 ' the RGB and CMY/CMYK color spaces.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

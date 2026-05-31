@@ -24,7 +24,7 @@ Begin VB.Form FormLensCorrect
    ScaleHeight     =   446
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   806
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormLensCorrect
       _ExtentX        =   21325
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -44,7 +44,7 @@ Begin VB.Form FormLensCorrect
       DisableZoomPan  =   -1  'True
       PointSelection  =   -1  'True
    End
-   Begin PhotoDemon.pdButtonStrip btsOptions 
+   Begin PhotoPaint.pdButtonStrip btsOptions 
       Height          =   960
       Left            =   6000
       TabIndex        =   2
@@ -54,7 +54,7 @@ Begin VB.Form FormLensCorrect
       _ExtentY        =   1693
       Caption         =   "correction type"
    End
-   Begin PhotoDemon.pdContainer pnlMode 
+   Begin PhotoPaint.pdContainer pnlMode 
       Height          =   4575
       Index           =   1
       Left            =   5880
@@ -62,7 +62,7 @@ Begin VB.Form FormLensCorrect
       Width           =   6135
       _ExtentX        =   10821
       _ExtentY        =   8070
-      Begin PhotoDemon.pdSlider sldAdvanced 
+      Begin PhotoPaint.pdSlider sldAdvanced 
          Height          =   705
          Index           =   0
          Left            =   120
@@ -76,7 +76,7 @@ Begin VB.Form FormLensCorrect
          Max             =   5
          SigDigits       =   3
       End
-      Begin PhotoDemon.pdSlider sldAdvanced 
+      Begin PhotoPaint.pdSlider sldAdvanced 
          Height          =   705
          Index           =   1
          Left            =   120
@@ -90,7 +90,7 @@ Begin VB.Form FormLensCorrect
          Max             =   5
          SigDigits       =   3
       End
-      Begin PhotoDemon.pdSlider sldAdvanced 
+      Begin PhotoPaint.pdSlider sldAdvanced 
          Height          =   705
          Index           =   2
          Left            =   3120
@@ -104,7 +104,7 @@ Begin VB.Form FormLensCorrect
          Max             =   5
          SigDigits       =   3
       End
-      Begin PhotoDemon.pdSlider sldAdvanced 
+      Begin PhotoPaint.pdSlider sldAdvanced 
          Height          =   705
          Index           =   3
          Left            =   3120
@@ -118,7 +118,7 @@ Begin VB.Form FormLensCorrect
          Max             =   5
          SigDigits       =   3
       End
-      Begin PhotoDemon.pdSlider sltQuality 
+      Begin PhotoPaint.pdSlider sltQuality 
          Height          =   705
          Index           =   1
          Left            =   120
@@ -134,7 +134,7 @@ Begin VB.Form FormLensCorrect
          NotchPosition   =   2
          NotchValueCustom=   2
       End
-      Begin PhotoDemon.pdDropDown cboEdges 
+      Begin PhotoPaint.pdDropDown cboEdges 
          Height          =   735
          Index           =   1
          Left            =   120
@@ -145,7 +145,7 @@ Begin VB.Form FormLensCorrect
          _ExtentY        =   1296
          Caption         =   "if pixels lie outside the corrected area"
       End
-      Begin PhotoDemon.pdSlider sltXCenter 
+      Begin PhotoPaint.pdSlider sltXCenter 
          Height          =   405
          Left            =   120
          TabIndex        =   3
@@ -159,7 +159,7 @@ Begin VB.Form FormLensCorrect
          NotchPosition   =   2
          NotchValueCustom=   0.5
       End
-      Begin PhotoDemon.pdSlider sltYCenter 
+      Begin PhotoPaint.pdSlider sltYCenter 
          Height          =   405
          Left            =   3120
          TabIndex        =   4
@@ -173,7 +173,7 @@ Begin VB.Form FormLensCorrect
          NotchPosition   =   2
          NotchValueCustom=   0.5
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   330
          Index           =   0
          Left            =   120
@@ -185,7 +185,7 @@ Begin VB.Form FormLensCorrect
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblExplanation 
+      Begin PhotoPaint.pdLabel lblExplanation 
          Height          =   435
          Index           =   0
          Left            =   240
@@ -200,7 +200,7 @@ Begin VB.Form FormLensCorrect
          Layout          =   1
       End
    End
-   Begin PhotoDemon.pdContainer pnlMode 
+   Begin PhotoPaint.pdContainer pnlMode 
       Height          =   4575
       Index           =   0
       Left            =   5880
@@ -208,7 +208,7 @@ Begin VB.Form FormLensCorrect
       Width           =   6135
       _ExtentX        =   10821
       _ExtentY        =   8070
-      Begin PhotoDemon.pdSlider sltStrength 
+      Begin PhotoPaint.pdSlider sltStrength 
          Height          =   705
          Left            =   120
          TabIndex        =   5
@@ -222,7 +222,7 @@ Begin VB.Form FormLensCorrect
          Value           =   3
          DefaultValue    =   3
       End
-      Begin PhotoDemon.pdSlider sltZoom 
+      Begin PhotoPaint.pdSlider sltZoom 
          Height          =   705
          Left            =   120
          TabIndex        =   6
@@ -239,7 +239,7 @@ Begin VB.Form FormLensCorrect
          NotchValueCustom=   1
          DefaultValue    =   1.5
       End
-      Begin PhotoDemon.pdSlider sltRadius 
+      Begin PhotoPaint.pdSlider sltRadius 
          Height          =   705
          Left            =   120
          TabIndex        =   7
@@ -254,7 +254,7 @@ Begin VB.Form FormLensCorrect
          NotchPosition   =   2
          NotchValueCustom=   100
       End
-      Begin PhotoDemon.pdSlider sltQuality 
+      Begin PhotoPaint.pdSlider sltQuality 
          Height          =   705
          Index           =   0
          Left            =   120
@@ -270,7 +270,7 @@ Begin VB.Form FormLensCorrect
          NotchPosition   =   2
          NotchValueCustom=   2
       End
-      Begin PhotoDemon.pdDropDown cboEdges 
+      Begin PhotoPaint.pdDropDown cboEdges 
          Height          =   735
          Index           =   0
          Left            =   120
@@ -306,7 +306,7 @@ Attribute VB_Exposed = False
 ' image to the desired shape.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

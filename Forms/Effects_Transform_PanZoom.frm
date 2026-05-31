@@ -25,7 +25,7 @@ Begin VB.Form FormPanAndZoom
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   784
    Visible         =   0   'False
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -34,7 +34,7 @@ Begin VB.Form FormPanAndZoom
       _ExtentX        =   20743
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   4
@@ -44,7 +44,7 @@ Begin VB.Form FormPanAndZoom
       _ExtentY        =   9922
       DisableZoomPan  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sltHorizontal 
+   Begin PhotoPaint.pdSlider sltHorizontal 
       Height          =   705
       Left            =   6000
       TabIndex        =   1
@@ -57,7 +57,7 @@ Begin VB.Form FormPanAndZoom
       Max             =   100
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSlider sltVertical 
+   Begin PhotoPaint.pdSlider sltVertical 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -70,7 +70,7 @@ Begin VB.Form FormPanAndZoom
       Max             =   100
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSlider sltZoom 
+   Begin PhotoPaint.pdSlider sltZoom 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -82,7 +82,7 @@ Begin VB.Form FormPanAndZoom
       Min             =   -10
       SigDigits       =   2
    End
-   Begin PhotoDemon.pdSlider sltQuality 
+   Begin PhotoPaint.pdSlider sltQuality 
       Height          =   705
       Left            =   6000
       TabIndex        =   6
@@ -97,7 +97,7 @@ Begin VB.Form FormPanAndZoom
       NotchPosition   =   2
       NotchValueCustom=   2
    End
-   Begin PhotoDemon.pdDropDown cboEdges 
+   Begin PhotoPaint.pdDropDown cboEdges 
       Height          =   735
       Left            =   6000
       TabIndex        =   5
@@ -124,7 +124,7 @@ Attribute VB_Exposed = False
 'Dialog for handling a Ken Burns transform (https://en.wikipedia.org/wiki/Ken_burns_effect).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

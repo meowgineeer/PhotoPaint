@@ -22,7 +22,7 @@ Begin VB.Form dialog_ExportGIF
    ScaleHeight     =   482
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   873
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -32,7 +32,7 @@ Begin VB.Form dialog_ExportGIF
       _ExtentX        =   23098
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   6225
       Left            =   120
       TabIndex        =   1
@@ -42,7 +42,7 @@ Begin VB.Form dialog_ExportGIF
       _ExtentY        =   10980
       ColorSelection  =   -1  'True
    End
-   Begin PhotoDemon.pdButtonStrip btsCategory 
+   Begin PhotoPaint.pdButtonStrip btsCategory 
       Height          =   615
       Left            =   5880
       TabIndex        =   10
@@ -52,7 +52,7 @@ Begin VB.Form dialog_ExportGIF
       _ExtentY        =   1085
       FontSize        =   11
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   5535
       Index           =   0
       Left            =   5880
@@ -60,7 +60,7 @@ Begin VB.Form dialog_ExportGIF
       Width           =   7095
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdSlider sldAlphaCutoff 
+      Begin PhotoPaint.pdSlider sldAlphaCutoff 
          Height          =   855
          Left            =   0
          TabIndex        =   3
@@ -76,7 +76,7 @@ Begin VB.Form dialog_ExportGIF
          NotchPosition   =   2
          NotchValueCustom=   64
       End
-      Begin PhotoDemon.pdCheckBox chkColorCount 
+      Begin PhotoPaint.pdCheckBox chkColorCount 
          Height          =   375
          Left            =   120
          TabIndex        =   4
@@ -87,7 +87,7 @@ Begin VB.Form dialog_ExportGIF
          Caption         =   "restrict palette size"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdColorSelector clsBackground 
+      Begin PhotoPaint.pdColorSelector clsBackground 
          Height          =   975
          Left            =   0
          TabIndex        =   5
@@ -97,7 +97,7 @@ Begin VB.Form dialog_ExportGIF
          _ExtentY        =   1720
          Caption         =   "background color"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   375
          Index           =   0
          Left            =   3480
@@ -107,7 +107,7 @@ Begin VB.Form dialog_ExportGIF
          _ExtentY        =   661
          Caption         =   "unique colors"
       End
-      Begin PhotoDemon.pdSlider sldColorCount 
+      Begin PhotoPaint.pdSlider sldColorCount 
          Height          =   375
          Left            =   360
          TabIndex        =   6
@@ -121,7 +121,7 @@ Begin VB.Form dialog_ExportGIF
          NotchPosition   =   2
          NotchValueCustom=   256
       End
-      Begin PhotoDemon.pdButtonStrip btsAlpha 
+      Begin PhotoPaint.pdButtonStrip btsAlpha 
          Height          =   1095
          Left            =   0
          TabIndex        =   7
@@ -131,7 +131,7 @@ Begin VB.Form dialog_ExportGIF
          _ExtentY        =   1931
          Caption         =   "transparency"
       End
-      Begin PhotoDemon.pdButtonStrip btsColorModel 
+      Begin PhotoPaint.pdButtonStrip btsColorModel 
          Height          =   1095
          Left            =   0
          TabIndex        =   8
@@ -141,7 +141,7 @@ Begin VB.Form dialog_ExportGIF
          _ExtentY        =   1931
          Caption         =   "color model"
       End
-      Begin PhotoDemon.pdColorSelector clsAlphaColor 
+      Begin PhotoPaint.pdColorSelector clsAlphaColor 
          Height          =   975
          Left            =   0
          TabIndex        =   9
@@ -153,7 +153,7 @@ Begin VB.Form dialog_ExportGIF
          curColor        =   16711935
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   5535
       Index           =   1
       Left            =   5880
@@ -161,7 +161,7 @@ Begin VB.Form dialog_ExportGIF
       Width           =   7095
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdMetadataExport mtdManager 
+      Begin PhotoPaint.pdMetadataExport mtdManager 
          Height          =   4935
          Left            =   120
          TabIndex        =   2
@@ -189,7 +189,7 @@ Attribute VB_Exposed = False
 ' slow GIFs for no good reason.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

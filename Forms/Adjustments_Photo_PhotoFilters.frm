@@ -24,7 +24,7 @@ Begin VB.Form FormPhotoFilters
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   778
-   Begin PhotoDemon.pdColorSelector csColor 
+   Begin PhotoPaint.pdColorSelector csColor 
       Height          =   975
       Left            =   6000
       TabIndex        =   4
@@ -34,7 +34,7 @@ Begin VB.Form FormPhotoFilters
       _ExtentY        =   1720
       Caption         =   "color"
    End
-   Begin PhotoDemon.pdListBoxOD lstFilters 
+   Begin PhotoPaint.pdListBoxOD lstFilters 
       Height          =   3015
       Left            =   6000
       TabIndex        =   3
@@ -44,7 +44,7 @@ Begin VB.Form FormPhotoFilters
       _ExtentY        =   6800
       Caption         =   "filter"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -53,7 +53,7 @@ Begin VB.Form FormPhotoFilters
       _ExtentX        =   25294
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -62,7 +62,7 @@ Begin VB.Form FormPhotoFilters
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltDensity 
+   Begin PhotoPaint.pdSlider sltDensity 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -79,7 +79,7 @@ Begin VB.Form FormPhotoFilters
       NotchPosition   =   2
       NotchValueCustom=   30
    End
-   Begin PhotoDemon.pdCheckBox chkLuminance 
+   Begin PhotoPaint.pdCheckBox chkLuminance 
       Height          =   375
       Left            =   6120
       TabIndex        =   5
@@ -124,7 +124,7 @@ Attribute VB_Exposed = False
 'http://www.filmcentre.co.uk/faqs_filter.htm
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

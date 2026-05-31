@@ -24,7 +24,7 @@ Begin VB.Form FormExposure
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   779
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormExposure
       _ExtentX        =   20611
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdPictureBox picChart 
+   Begin PhotoPaint.pdPictureBox picChart 
       Height          =   2415
       Left            =   8400
       Top             =   240
@@ -41,7 +41,7 @@ Begin VB.Form FormExposure
       _ExtentX        =   5530
       _ExtentY        =   4260
    End
-   Begin PhotoDemon.pdSlider sltExposure 
+   Begin PhotoPaint.pdSlider sltExposure 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -55,7 +55,7 @@ Begin VB.Form FormExposure
       SigDigits       =   2
       SliderTrackStyle=   2
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -64,7 +64,7 @@ Begin VB.Form FormExposure
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltOffset 
+   Begin PhotoPaint.pdSlider sltOffset 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -77,7 +77,7 @@ Begin VB.Form FormExposure
       Max             =   1
       SigDigits       =   2
    End
-   Begin PhotoDemon.pdSlider sltGamma 
+   Begin PhotoPaint.pdSlider sltGamma 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -93,7 +93,7 @@ Begin VB.Form FormExposure
       NotchPosition   =   2
       NotchValueCustom=   1
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   1005
       Index           =   2
       Left            =   6000
@@ -136,7 +136,7 @@ Attribute VB_Exposed = False
 ' so we may as well, too.  (They can always be ignored if you just want "pure" exposure correction.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

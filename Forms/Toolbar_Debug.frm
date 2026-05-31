@@ -29,7 +29,7 @@ Begin VB.Form toolbar_Debug
       Left            =   2280
       Top             =   600
    End
-   Begin PhotoDemon.pdLabel lblDIB 
+   Begin PhotoPaint.pdLabel lblDIB 
       Height          =   195
       Index           =   0
       Left            =   75
@@ -41,7 +41,7 @@ Begin VB.Form toolbar_Debug
       ForeColor       =   32768
       UseCustomForeColor=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblDIB 
+   Begin PhotoPaint.pdLabel lblDIB 
       Height          =   195
       Index           =   1
       Left            =   75
@@ -53,7 +53,7 @@ Begin VB.Form toolbar_Debug
       ForeColor       =   192
       UseCustomForeColor=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblDIB 
+   Begin PhotoPaint.pdLabel lblDIB 
       Height          =   195
       Index           =   2
       Left            =   75
@@ -65,7 +65,7 @@ Begin VB.Form toolbar_Debug
       ForeColor       =   12582912
       UseCustomForeColor=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblDIB 
+   Begin PhotoPaint.pdLabel lblDIB 
       Height          =   195
       Index           =   3
       Left            =   1800
@@ -77,7 +77,7 @@ Begin VB.Form toolbar_Debug
       ForeColor       =   32768
       UseCustomForeColor=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblDIB 
+   Begin PhotoPaint.pdLabel lblDIB 
       Height          =   195
       Index           =   4
       Left            =   1800
@@ -89,7 +89,7 @@ Begin VB.Form toolbar_Debug
       ForeColor       =   192
       UseCustomForeColor=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblDIB 
+   Begin PhotoPaint.pdLabel lblDIB 
       Height          =   195
       Index           =   5
       Left            =   1800
@@ -124,7 +124,7 @@ Attribute VB_Exposed = False
 ' amount of memory PD churns on UC work.
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-' projects IF you provide attribution.  For more information, please visit http://photodemon.org/about/license/
+' projects IF you provide attribution.  For more information, please visit http://photopaint.org/about/license/
 '
 '***************************************************************************
 

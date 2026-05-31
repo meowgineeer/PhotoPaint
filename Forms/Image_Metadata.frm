@@ -26,7 +26,7 @@ Begin VB.Form FormMetadata
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   946
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdButtonStrip btsEditPanel 
+   Begin PhotoPaint.pdButtonStrip btsEditPanel 
       Height          =   975
       Left            =   8040
       TabIndex        =   3
@@ -36,7 +36,7 @@ Begin VB.Form FormMetadata
       _ExtentY        =   2990
       Caption         =   "tools"
    End
-   Begin PhotoDemon.pdListBox lstGroup 
+   Begin PhotoPaint.pdListBox lstGroup 
       Height          =   5895
       Left            =   120
       TabIndex        =   2
@@ -46,7 +46,7 @@ Begin VB.Form FormMetadata
       _ExtentY        =   11245
       Caption         =   "metadata groups in this image"
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBarMini 
+   Begin PhotoPaint.pdCommandBarMini cmdBarMini 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -56,7 +56,7 @@ Begin VB.Form FormMetadata
       _ExtentX        =   25030
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdListBoxOD lstMetadata 
+   Begin PhotoPaint.pdListBoxOD lstMetadata 
       Height          =   7095
       Left            =   3525
       TabIndex        =   1
@@ -66,7 +66,7 @@ Begin VB.Form FormMetadata
       _ExtentY        =   11245
       Caption         =   "tags in this category"
    End
-   Begin PhotoDemon.pdLabel lblGroupDescription 
+   Begin PhotoPaint.pdLabel lblGroupDescription 
       Height          =   495
       Left            =   240
       Top             =   6120
@@ -78,7 +78,7 @@ Begin VB.Form FormMetadata
       FontSize        =   9
       Layout          =   3
    End
-   Begin PhotoDemon.pdButtonToolbox btnGroupOptions 
+   Begin PhotoPaint.pdButtonToolbox btnGroupOptions 
       Height          =   630
       Index           =   0
       Left            =   240
@@ -89,7 +89,7 @@ Begin VB.Form FormMetadata
       _ExtentY        =   1111
       StickyToggle    =   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox btnGroupOptions 
+   Begin PhotoPaint.pdButtonToolbox btnGroupOptions 
       Height          =   630
       Index           =   1
       Left            =   900
@@ -100,7 +100,7 @@ Begin VB.Form FormMetadata
       _ExtentY        =   1111
       AutoToggle      =   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox btnGroupOptions 
+   Begin PhotoPaint.pdButtonToolbox btnGroupOptions 
       Height          =   630
       Index           =   2
       Left            =   1560
@@ -111,7 +111,7 @@ Begin VB.Form FormMetadata
       _ExtentY        =   1111
       AutoToggle      =   -1  'True
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   6015
       Index           =   1
       Left            =   8040
@@ -120,7 +120,7 @@ Begin VB.Form FormMetadata
       Width           =   6090
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdButtonStrip btsTechnical 
+      Begin PhotoPaint.pdButtonStrip btsTechnical 
          Height          =   975
          Index           =   0
          Left            =   240
@@ -131,7 +131,7 @@ Begin VB.Form FormMetadata
          _ExtentY        =   1720
          Caption         =   "tag names"
       End
-      Begin PhotoDemon.pdButtonStrip btsTechnical 
+      Begin PhotoPaint.pdButtonStrip btsTechnical 
          Height          =   975
          Index           =   1
          Left            =   240
@@ -142,7 +142,7 @@ Begin VB.Form FormMetadata
          _ExtentY        =   1720
          Caption         =   "tag values"
       End
-      Begin PhotoDemon.pdButton cmdTechnicalReport 
+      Begin PhotoPaint.pdButton cmdTechnicalReport 
          Height          =   555
          Left            =   420
          TabIndex        =   8
@@ -152,7 +152,7 @@ Begin VB.Form FormMetadata
          _ExtentY        =   979
          Caption         =   "Generate full metadata report (HTML)..."
       End
-      Begin PhotoDemon.pdLabel lblTechnicalReport 
+      Begin PhotoPaint.pdLabel lblTechnicalReport 
          Height          =   270
          Left            =   240
          Top             =   2160
@@ -163,7 +163,7 @@ Begin VB.Form FormMetadata
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdHyperlink hypExiftool 
+      Begin PhotoPaint.pdHyperlink hypExiftool 
          Height          =   255
          Left            =   0
          TabIndex        =   16
@@ -176,7 +176,7 @@ Begin VB.Form FormMetadata
          FontSize        =   9
          URL             =   "http://www.sno.phy.queensu.ca/~phil/exiftool/"
       End
-      Begin PhotoDemon.pdLabel lblExifTool 
+      Begin PhotoPaint.pdLabel lblExifTool 
          Height          =   255
          Left            =   120
          Top             =   5370
@@ -189,7 +189,7 @@ Begin VB.Form FormMetadata
          ForeColor       =   -2147483640
          Layout          =   1
       End
-      Begin PhotoDemon.pdButton cmdMarkPrivateTags 
+      Begin PhotoPaint.pdButton cmdMarkPrivateTags 
          Height          =   555
          Left            =   420
          TabIndex        =   15
@@ -200,7 +200,7 @@ Begin VB.Form FormMetadata
          Caption         =   "Remove tags that might contain personal information"
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   6015
       Index           =   0
       Left            =   8040
@@ -208,7 +208,7 @@ Begin VB.Form FormMetadata
       Width           =   6090
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdButtonToolbox btnTagOptions 
+      Begin PhotoPaint.pdButtonToolbox btnTagOptions 
          Height          =   630
          Index           =   0
          Left            =   120
@@ -219,7 +219,7 @@ Begin VB.Form FormMetadata
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdListBox lstValue 
+      Begin PhotoPaint.pdListBox lstValue 
          Height          =   3000
          Left            =   120
          TabIndex        =   10
@@ -228,7 +228,7 @@ Begin VB.Form FormMetadata
          _ExtentX        =   10398
          _ExtentY        =   5292
       End
-      Begin PhotoDemon.pdLabel lblValue 
+      Begin PhotoPaint.pdLabel lblValue 
          Height          =   3000
          Left            =   195
          Top             =   390
@@ -239,7 +239,7 @@ Begin VB.Form FormMetadata
          Caption         =   ""
          Layout          =   3
       End
-      Begin PhotoDemon.pdTextBox txtValue 
+      Begin PhotoPaint.pdTextBox txtValue 
          Height          =   3000
          Left            =   120
          TabIndex        =   9
@@ -249,7 +249,7 @@ Begin VB.Form FormMetadata
          _ExtentY        =   5292
          Multiline       =   -1  'True
       End
-      Begin PhotoDemon.pdLabel lblTagName 
+      Begin PhotoPaint.pdLabel lblTagName 
          Height          =   300
          Left            =   120
          Top             =   0
@@ -260,7 +260,7 @@ Begin VB.Form FormMetadata
          FontBold        =   -1  'True
          FontSize        =   12
       End
-      Begin PhotoDemon.pdLabel lblTagType 
+      Begin PhotoPaint.pdLabel lblTagType 
          Height          =   300
          Left            =   120
          Top             =   3480
@@ -270,7 +270,7 @@ Begin VB.Form FormMetadata
          Caption         =   ""
          Layout          =   3
       End
-      Begin PhotoDemon.pdLabel lblWarning 
+      Begin PhotoPaint.pdLabel lblWarning 
          Height          =   540
          Left            =   150
          Top             =   3840
@@ -281,7 +281,7 @@ Begin VB.Form FormMetadata
          Layout          =   1
          UseCustomForeColor=   -1  'True
       End
-      Begin PhotoDemon.pdButtonToolbox btnTagOptions 
+      Begin PhotoPaint.pdButtonToolbox btnTagOptions 
          Height          =   630
          Index           =   1
          Left            =   780
@@ -292,7 +292,7 @@ Begin VB.Form FormMetadata
          _ExtentY        =   1111
          AutoToggle      =   -1  'True
       End
-      Begin PhotoDemon.pdButtonToolbox btnTagOptions 
+      Begin PhotoPaint.pdButtonToolbox btnTagOptions 
          Height          =   630
          Index           =   2
          Left            =   1440
@@ -331,7 +331,7 @@ Attribute VB_Exposed = False
 ' could include the ability to add individual tags, and ideally, a simplified interface for common tags...
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -738,7 +738,7 @@ Private Sub SortCategoryList()
     
     'We now want to do something weird.  Certain hard-coded, non-editable categories should always come first.  Specifically:
     ' "System" / "File" / "ICC Profile" / "Inferred"
-    ' These categories tend to be persistent across image formats, and their behavior is controlled by PhotoDemon.
+    ' These categories tend to be persistent across image formats, and their behavior is controlled by PhotoPaint.
     Dim targetPosition As Long
     targetPosition = 0
     
@@ -887,7 +887,7 @@ Private Sub lstGroup_Click()
     ElseIf Strings.StringsEqual(catName, "file", True) Then
         groupDescription = g_Language.TranslateMessage("""File"" tags are required by this image format.  They are not embedded as traditional metadata.")
     ElseIf Strings.StringsEqual(catName, "icc profile", True) Then
-        groupDescription = g_Language.TranslateMessage("ICC profiles are handled automatically by PhotoDemon.  They are not embedded as traditional metadata.")
+        groupDescription = g_Language.TranslateMessage("ICC profiles are handled automatically by PhotoPaint.  They are not embedded as traditional metadata.")
     ElseIf Strings.StringsEqual(catName, "inferred", True) Then
         groupDescription = g_Language.TranslateMessage("""Inferred"" tags are hypothetical values inferred from other metadata.  They are not embedded as traditional metadata.")
     End If

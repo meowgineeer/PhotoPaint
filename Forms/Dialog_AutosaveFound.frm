@@ -26,7 +26,7 @@ Begin VB.Form dialog_AutosaveWarning
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   611
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdPictureBox picWarning 
+   Begin PhotoPaint.pdPictureBox picWarning 
       Height          =   615
       Left            =   240
       Top             =   240
@@ -34,7 +34,7 @@ Begin VB.Form dialog_AutosaveWarning
       _ExtentX        =   1296
       _ExtentY        =   1085
    End
-   Begin PhotoDemon.pdListBox lstAutosaves 
+   Begin PhotoPaint.pdListBox lstAutosaves 
       Height          =   2730
       Left            =   240
       TabIndex        =   1
@@ -43,7 +43,7 @@ Begin VB.Form dialog_AutosaveWarning
       _ExtentX        =   6376
       _ExtentY        =   6085
    End
-   Begin PhotoDemon.pdButton cmdOK 
+   Begin PhotoPaint.pdButton cmdOK 
       Height          =   735
       Left            =   1800
       TabIndex        =   0
@@ -53,7 +53,7 @@ Begin VB.Form dialog_AutosaveWarning
       _ExtentY        =   1296
       Caption         =   "Attempt to recover"
    End
-   Begin PhotoDemon.pdPictureBox picPreview 
+   Begin PhotoPaint.pdPictureBox picPreview 
       Height          =   2730
       Left            =   3960
       Top             =   1830
@@ -61,7 +61,7 @@ Begin VB.Form dialog_AutosaveWarning
       _ExtentX        =   8784
       _ExtentY        =   4815
    End
-   Begin PhotoDemon.pdButton cmdCancel 
+   Begin PhotoPaint.pdButton cmdCancel 
       Height          =   735
       Left            =   5400
       TabIndex        =   2
@@ -71,7 +71,7 @@ Begin VB.Form dialog_AutosaveWarning
       _ExtentY        =   1296
       Caption         =   "Discard"
    End
-   Begin PhotoDemon.pdLabel lblWarning 
+   Begin PhotoPaint.pdLabel lblWarning 
       Height          =   645
       Index           =   1
       Left            =   240
@@ -83,7 +83,7 @@ Begin VB.Form dialog_AutosaveWarning
       ForeColor       =   4210752
       Layout          =   1
    End
-   Begin PhotoDemon.pdLabel lblWarning 
+   Begin PhotoPaint.pdLabel lblWarning 
       Height          =   525
       Index           =   0
       Left            =   1005
@@ -116,7 +116,7 @@ Attribute VB_Exposed = False
 'Images that had been loaded by PhotoDemon but never modified will not be shown.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

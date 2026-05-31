@@ -24,7 +24,7 @@ Begin VB.Form FormPortraitGlow
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   772
-   Begin PhotoDemon.pdButtonStrip btsStyle 
+   Begin PhotoPaint.pdButtonStrip btsStyle 
       Height          =   1095
       Left            =   6000
       TabIndex        =   5
@@ -34,7 +34,7 @@ Begin VB.Form FormPortraitGlow
       _ExtentY        =   1931
       Caption         =   "style"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -43,7 +43,7 @@ Begin VB.Form FormPortraitGlow
       _ExtentX        =   20426
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -52,7 +52,7 @@ Begin VB.Form FormPortraitGlow
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -66,7 +66,7 @@ Begin VB.Form FormPortraitGlow
       Value           =   5
       DefaultValue    =   5
    End
-   Begin PhotoDemon.pdSlider sltBoost 
+   Begin PhotoPaint.pdSlider sltBoost 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -77,7 +77,7 @@ Begin VB.Form FormPortraitGlow
       Caption         =   "exposure boost"
       Max             =   200
    End
-   Begin PhotoDemon.pdSlider sltStrength 
+   Begin PhotoPaint.pdSlider sltStrength 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -107,7 +107,7 @@ Attribute VB_Exposed = False
 ' Screen blend mode, but a one-shot menu has been requested by multiple users, so there's probably some merit to it.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

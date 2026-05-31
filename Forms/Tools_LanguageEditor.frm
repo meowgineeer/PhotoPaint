@@ -26,7 +26,7 @@ Begin VB.Form FormLanguageEditor
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   804
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdHyperlink hypReadme 
+   Begin PhotoPaint.pdHyperlink hypReadme 
       Height          =   375
       Left            =   120
       TabIndex        =   24
@@ -38,7 +38,7 @@ Begin VB.Form FormLanguageEditor
       Caption         =   "click here for detailed instructions (in English)"
       URL             =   "https://github.com/tannerhelland/PhotoDemon/tree/main/App/PhotoDemon/Languages#readme"
    End
-   Begin PhotoDemon.pdButton cmdPrevious 
+   Begin PhotoPaint.pdButton cmdPrevious 
       Height          =   615
       Left            =   6720
       TabIndex        =   2
@@ -48,7 +48,7 @@ Begin VB.Form FormLanguageEditor
       _ExtentY        =   1085
       Caption         =   "Previous"
    End
-   Begin PhotoDemon.pdButton cmdNext 
+   Begin PhotoPaint.pdButton cmdNext 
       Height          =   615
       Left            =   8520
       TabIndex        =   16
@@ -58,7 +58,7 @@ Begin VB.Form FormLanguageEditor
       _ExtentY        =   1085
       Caption         =   "Next"
    End
-   Begin PhotoDemon.pdButton cmdCancel 
+   Begin PhotoPaint.pdButton cmdCancel 
       Height          =   615
       Left            =   10500
       TabIndex        =   17
@@ -68,7 +68,7 @@ Begin VB.Form FormLanguageEditor
       _ExtentY        =   1085
       Caption         =   "Cancel"
    End
-   Begin PhotoDemon.pdLabel lblWizardTitle 
+   Begin PhotoPaint.pdLabel lblWizardTitle 
       Height          =   405
       Left            =   120
       Top             =   120
@@ -79,7 +79,7 @@ Begin VB.Form FormLanguageEditor
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   7455
       Index           =   2
       Left            =   120
@@ -87,7 +87,7 @@ Begin VB.Form FormLanguageEditor
       Width           =   11910
       _ExtentX        =   21008
       _ExtentY        =   13150
-      Begin PhotoDemon.pdLabel lblPhraseWhere 
+      Begin PhotoPaint.pdLabel lblPhraseWhere 
          Height          =   330
          Left            =   5040
          Top             =   4440
@@ -97,7 +97,7 @@ Begin VB.Form FormLanguageEditor
          Caption         =   ""
          Layout          =   1
       End
-      Begin PhotoDemon.pdCheckBox chkPhraseTypes 
+      Begin PhotoPaint.pdCheckBox chkPhraseTypes 
          Height          =   300
          Index           =   0
          Left            =   120
@@ -108,7 +108,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentY        =   529
          Caption         =   "UI elements"
       End
-      Begin PhotoDemon.pdButton cmdUseReference 
+      Begin PhotoPaint.pdButton cmdUseReference 
          Height          =   495
          Left            =   5280
          TabIndex        =   20
@@ -118,7 +118,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentY        =   873
          Caption         =   "replace translation with reference text (Ctrl+U)"
       End
-      Begin PhotoDemon.pdTextBox txtReference 
+      Begin PhotoPaint.pdTextBox txtReference 
          Height          =   495
          Left            =   5040
          TabIndex        =   19
@@ -128,7 +128,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentY        =   873
          Multiline       =   -1  'True
       End
-      Begin PhotoDemon.pdListBox lstPhrases 
+      Begin PhotoPaint.pdListBox lstPhrases 
          Height          =   4095
          Left            =   0
          TabIndex        =   6
@@ -138,7 +138,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentY        =   7223
          Caption         =   "list of phrases (%1 items)"
       End
-      Begin PhotoDemon.pdDropDown cboPhraseFilter 
+      Begin PhotoPaint.pdDropDown cboPhraseFilter 
          Height          =   735
          Left            =   0
          TabIndex        =   9
@@ -148,7 +148,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentY        =   1296
          Caption         =   "phrase groups"
       End
-      Begin PhotoDemon.pdButton cmdNextPhrase 
+      Begin PhotoPaint.pdButton cmdNextPhrase 
          Height          =   615
          Left            =   5040
          TabIndex        =   3
@@ -158,7 +158,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentY        =   1085
          Caption         =   "Save this translation and proceed to the next phrase"
       End
-      Begin PhotoDemon.pdTextBox txtTranslation 
+      Begin PhotoPaint.pdTextBox txtTranslation 
          Height          =   1605
          Left            =   5040
          TabIndex        =   5
@@ -168,7 +168,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentY        =   3254
          Multiline       =   -1  'True
       End
-      Begin PhotoDemon.pdTextBox txtOriginal 
+      Begin PhotoPaint.pdTextBox txtOriginal 
          Height          =   1635
          Left            =   5040
          TabIndex        =   7
@@ -178,7 +178,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentY        =   3307
          Multiline       =   -1  'True
       End
-      Begin PhotoDemon.pdLabel lblTranslatedPhrase 
+      Begin PhotoPaint.pdLabel lblTranslatedPhrase 
          Height          =   285
          Left            =   4920
          Top             =   2040
@@ -189,7 +189,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   9
          Left            =   4920
@@ -201,7 +201,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdButton cmdAutoTranslate 
+      Begin PhotoPaint.pdButton cmdAutoTranslate 
          Height          =   615
          Left            =   240
          TabIndex        =   18
@@ -211,7 +211,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentY        =   1085
          Caption         =   "Auto-translate all missing phrases"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   11
          Left            =   4920
@@ -223,7 +223,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   6
          Left            =   5040
@@ -234,7 +234,7 @@ Begin VB.Form FormLanguageEditor
          Caption         =   "(NOTE: CTRL+ENTER automatically saves and proceeds to next phrase.)"
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   2
          Left            =   0
@@ -246,7 +246,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdCheckBox chkPhraseTypes 
+      Begin PhotoPaint.pdCheckBox chkPhraseTypes 
          Height          =   300
          Index           =   1
          Left            =   120
@@ -257,7 +257,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentY        =   529
          Caption         =   "action names"
       End
-      Begin PhotoDemon.pdCheckBox chkPhraseTypes 
+      Begin PhotoPaint.pdCheckBox chkPhraseTypes 
          Height          =   300
          Index           =   2
          Left            =   120
@@ -268,7 +268,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentY        =   529
          Caption         =   "message boxes"
       End
-      Begin PhotoDemon.pdCheckBox chkPhraseTypes 
+      Begin PhotoPaint.pdCheckBox chkPhraseTypes 
          Height          =   300
          Index           =   3
          Left            =   2520
@@ -279,7 +279,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentY        =   529
          Caption         =   "status bar messages"
       End
-      Begin PhotoDemon.pdCheckBox chkPhraseTypes 
+      Begin PhotoPaint.pdCheckBox chkPhraseTypes 
          Height          =   300
          Index           =   4
          Left            =   2520
@@ -290,7 +290,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentY        =   529
          Caption         =   "tooltips"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   12
          Left            =   4920
@@ -302,7 +302,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdCheckBox chkPhraseTypes 
+      Begin PhotoPaint.pdCheckBox chkPhraseTypes 
          Height          =   300
          Index           =   5
          Left            =   2520
@@ -314,7 +314,7 @@ Begin VB.Form FormLanguageEditor
          Caption         =   "miscellaneous"
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   7455
       Index           =   1
       Left            =   120
@@ -322,7 +322,7 @@ Begin VB.Form FormLanguageEditor
       Width           =   11910
       _ExtentX        =   21008
       _ExtentY        =   13150
-      Begin PhotoDemon.pdCheckBox chkUserLocale 
+      Begin PhotoPaint.pdCheckBox chkUserLocale 
          Height          =   360
          Left            =   8280
          TabIndex        =   27
@@ -333,7 +333,7 @@ Begin VB.Form FormLanguageEditor
          Caption         =   "copy system locale"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdHyperlink hypISO 
+      Begin PhotoPaint.pdHyperlink hypISO 
          Height          =   375
          Index           =   0
          Left            =   6120
@@ -345,7 +345,7 @@ Begin VB.Form FormLanguageEditor
          Caption         =   "official ISO language codes at Wikipedia"
          URL             =   "https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes"
       End
-      Begin PhotoDemon.pdTextBox txtLangID 
+      Begin PhotoPaint.pdTextBox txtLangID 
          Height          =   345
          Index           =   1
          Left            =   6840
@@ -357,7 +357,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   11
          Text            =   "US"
       End
-      Begin PhotoDemon.pdTextBox txtLangID 
+      Begin PhotoPaint.pdTextBox txtLangID 
          Height          =   345
          Index           =   0
          Left            =   6120
@@ -369,7 +369,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   11
          Text            =   "en"
       End
-      Begin PhotoDemon.pdTextBox txtLangName 
+      Begin PhotoPaint.pdTextBox txtLangName 
          Height          =   345
          Left            =   240
          TabIndex        =   12
@@ -380,7 +380,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   11
          Text            =   "English (US)"
       End
-      Begin PhotoDemon.pdTextBox txtLangStatus 
+      Begin PhotoPaint.pdTextBox txtLangStatus 
          Height          =   345
          Left            =   240
          TabIndex        =   13
@@ -391,7 +391,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   11
          Text            =   "incomplete"
       End
-      Begin PhotoDemon.pdTextBox txtLangVersion 
+      Begin PhotoPaint.pdTextBox txtLangVersion 
          Height          =   345
          Left            =   240
          TabIndex        =   14
@@ -402,7 +402,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   11
          Text            =   "1.0.0"
       End
-      Begin PhotoDemon.pdTextBox txtLangAuthor 
+      Begin PhotoPaint.pdTextBox txtLangAuthor 
          Height          =   345
          Left            =   240
          TabIndex        =   15
@@ -413,7 +413,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   11
          Text            =   "enter your name here"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   8
          Left            =   0
@@ -425,7 +425,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   4
          Left            =   0
@@ -437,7 +437,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   3
          Left            =   0
@@ -449,7 +449,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   7
          Left            =   0
@@ -461,7 +461,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   5
          Left            =   5880
@@ -473,7 +473,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   0
          Left            =   0
@@ -485,7 +485,7 @@ Begin VB.Form FormLanguageEditor
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdTextBox txtApiKey 
+      Begin PhotoPaint.pdTextBox txtApiKey 
          Height          =   345
          Left            =   360
          TabIndex        =   21
@@ -494,7 +494,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentX        =   19500
          _ExtentY        =   609
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   1
          Left            =   240
@@ -505,7 +505,7 @@ Begin VB.Form FormLanguageEditor
          Caption         =   "free DeepL.com API key for automatic translation suggestions"
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   10
          Left            =   240
@@ -516,7 +516,7 @@ Begin VB.Form FormLanguageEditor
          Caption         =   "language file (.po) from any other software, as a reference"
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdTextBox txtPO 
+      Begin PhotoPaint.pdTextBox txtPO 
          Height          =   345
          Left            =   360
          TabIndex        =   22
@@ -525,7 +525,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentX        =   18865
          _ExtentY        =   609
       End
-      Begin PhotoDemon.pdButton cmdPO 
+      Begin PhotoPaint.pdButton cmdPO 
          Height          =   330
          Left            =   11160
          TabIndex        =   23
@@ -535,7 +535,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentY        =   582
          Caption         =   "..."
       End
-      Begin PhotoDemon.pdHyperlink hypISO 
+      Begin PhotoPaint.pdHyperlink hypISO 
          Height          =   375
          Index           =   1
          Left            =   6120
@@ -547,7 +547,7 @@ Begin VB.Form FormLanguageEditor
          Caption         =   "official ISO country codes at Wikipedia"
          URL             =   "https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements"
       End
-      Begin PhotoDemon.pdLabel lblSubheader 
+      Begin PhotoPaint.pdLabel lblSubheader 
          Height          =   360
          Index           =   0
          Left            =   240
@@ -560,7 +560,7 @@ Begin VB.Form FormLanguageEditor
          Layout          =   1
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   7455
       Index           =   0
       Left            =   120
@@ -568,7 +568,7 @@ Begin VB.Form FormLanguageEditor
       Width           =   11910
       _ExtentX        =   21008
       _ExtentY        =   13150
-      Begin PhotoDemon.pdListBox lstLanguages 
+      Begin PhotoPaint.pdListBox lstLanguages 
          Height          =   5055
          Left            =   840
          TabIndex        =   4
@@ -577,7 +577,7 @@ Begin VB.Form FormLanguageEditor
          _ExtentX        =   19076
          _ExtentY        =   8916
       End
-      Begin PhotoDemon.pdButton cmdDeleteLanguage 
+      Begin PhotoPaint.pdButton cmdDeleteLanguage 
          Height          =   690
          Left            =   8400
          TabIndex        =   8
@@ -588,7 +588,7 @@ Begin VB.Form FormLanguageEditor
          Caption         =   "delete selected language file"
          Enabled         =   0   'False
       End
-      Begin PhotoDemon.pdRadioButton optBaseLanguage 
+      Begin PhotoPaint.pdRadioButton optBaseLanguage 
          Height          =   375
          Index           =   0
          Left            =   120
@@ -600,7 +600,7 @@ Begin VB.Form FormLanguageEditor
          Caption         =   "start new language"
          Value           =   -1  'True
       End
-      Begin PhotoDemon.pdRadioButton optBaseLanguage 
+      Begin PhotoPaint.pdRadioButton optBaseLanguage 
          Height          =   375
          Index           =   1
          Left            =   120
@@ -647,7 +647,7 @@ Attribute VB_Exposed = False
 ' helpful for accelerating the process, especially on lengthy and/or highly technical text.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -1050,7 +1050,7 @@ Private Sub ChangeWizardPage(ByVal moveForward As Boolean)
                 'For some reason, we failed to load the master language file.  Tell them to download a fresh copy of PD.
                 Else
                     Screen.MousePointer = vbDefault
-                    PDMsgBox "Unfortunately, PhotoDemon's en-US language file could not be located on this PC.  This file is included with the official release of PhotoDemon, but it may not be included with development or beta builds." & vbCrLf & vbCrLf & "To start a new translation, please download a fresh copy of PhotoDemon from photodemon.org.", vbOKOnly Or vbExclamation, "Error"
+                    PDMsgBox "Unfortunately, PhotoDemon's en-US language file could not be located on this PC.  This file is included with the official release of PhotoDemon, but it may not be included with development or beta builds." & vbCrLf & vbCrLf & "To start a new translation, please download a fresh copy of PhotoDemon from photopaint.org.", vbOKOnly Or vbExclamation, "Error"
                     Unload Me
                 End If
             
@@ -1070,7 +1070,7 @@ Private Sub ChangeWizardPage(ByVal moveForward As Boolean)
                 'For some reason, we failed to load the master language file.  Tell them to download a fresh copy of PD.
                 Else
                     Screen.MousePointer = vbDefault
-                    PDMsgBox "Unfortunately, this language file could not be loaded.  It's possible the copy on this PC is out-of-date." & vbCrLf & vbCrLf & "To continue, please download a fresh copy of PhotoDemon from photodemon.org.", vbOKOnly Or vbExclamation, "Language file could not be loaded"
+                    PDMsgBox "Unfortunately, this language file could not be loaded.  It's possible the copy on this PC is out-of-date." & vbCrLf & vbCrLf & "To continue, please download a fresh copy of PhotoDemon from photopaint.org.", vbOKOnly Or vbExclamation, "Language file could not be loaded"
                     Unload Me
                 End If
             

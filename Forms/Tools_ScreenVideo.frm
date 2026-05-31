@@ -28,7 +28,7 @@ Begin VB.Form FormScreenVideo
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   640
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdLabel lblInfo 
+   Begin PhotoPaint.pdLabel lblInfo 
       Height          =   540
       Left            =   120
       Top             =   6600
@@ -39,7 +39,7 @@ Begin VB.Form FormScreenVideo
       Caption         =   ""
       Layout          =   1
    End
-   Begin PhotoDemon.pdButton cmdExit 
+   Begin PhotoPaint.pdButton cmdExit 
       Height          =   495
       Left            =   8280
       TabIndex        =   1
@@ -49,7 +49,7 @@ Begin VB.Form FormScreenVideo
       _ExtentY        =   873
       Caption         =   "Cancel"
    End
-   Begin PhotoDemon.pdButton cmdStart 
+   Begin PhotoPaint.pdButton cmdStart 
       Height          =   495
       Left            =   5880
       TabIndex        =   0
@@ -79,7 +79,7 @@ Attribute VB_Exposed = False
 ' export however you want, even to GIF with all its limitations).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

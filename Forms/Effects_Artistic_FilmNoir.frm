@@ -24,7 +24,7 @@ Begin VB.Form FormFilmNoir
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   780
-   Begin PhotoDemon.pdSlider sltShadow 
+   Begin PhotoPaint.pdSlider sltShadow 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -38,7 +38,7 @@ Begin VB.Form FormFilmNoir
       Value           =   50
       DefaultValue    =   50
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -47,7 +47,7 @@ Begin VB.Form FormFilmNoir
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -56,7 +56,7 @@ Begin VB.Form FormFilmNoir
       _ExtentX        =   20638
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltContrast 
+   Begin PhotoPaint.pdSlider sltContrast 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -70,7 +70,7 @@ Begin VB.Form FormFilmNoir
       Value           =   50
       DefaultValue    =   50
    End
-   Begin PhotoDemon.pdSlider sltHighlight 
+   Begin PhotoPaint.pdSlider sltHighlight 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -84,7 +84,7 @@ Begin VB.Form FormFilmNoir
       Value           =   50
       DefaultValue    =   50
    End
-   Begin PhotoDemon.pdSlider sltMidpoint 
+   Begin PhotoPaint.pdSlider sltMidpoint 
       Height          =   705
       Left            =   6000
       TabIndex        =   5
@@ -98,7 +98,7 @@ Begin VB.Form FormFilmNoir
       Value           =   50
       DefaultValue    =   50
    End
-   Begin PhotoDemon.pdSlider sltGrain 
+   Begin PhotoPaint.pdSlider sltGrain 
       Height          =   705
       Left            =   6000
       TabIndex        =   6
@@ -132,7 +132,7 @@ Attribute VB_Exposed = False
 ' and minimize contrast loss.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

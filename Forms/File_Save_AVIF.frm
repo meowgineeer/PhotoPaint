@@ -22,7 +22,7 @@ Begin VB.Form dialog_ExportAVIF
    ScaleHeight     =   439
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   809
-   Begin PhotoDemon.pdCheckBox chkLivePreview 
+   Begin PhotoPaint.pdCheckBox chkLivePreview 
       Height          =   375
       Left            =   6120
       TabIndex        =   3
@@ -34,7 +34,7 @@ Begin VB.Form dialog_ExportAVIF
       FontSize        =   11
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -45,7 +45,7 @@ Begin VB.Form dialog_ExportAVIF
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -54,7 +54,7 @@ Begin VB.Form dialog_ExportAVIF
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sldQuality 
+   Begin PhotoPaint.pdSlider sldQuality 
       Height          =   765
       Left            =   6120
       TabIndex        =   2
@@ -69,7 +69,7 @@ Begin VB.Form dialog_ExportAVIF
       NotchValueCustom=   100
       DefaultValue    =   63
    End
-   Begin PhotoDemon.pdLabel lblBefore 
+   Begin PhotoPaint.pdLabel lblBefore 
       Height          =   435
       Left            =   6240
       Top             =   2880
@@ -82,7 +82,7 @@ Begin VB.Form dialog_ExportAVIF
       ForeColor       =   4210752
       Layout          =   1
    End
-   Begin PhotoDemon.pdLabel lblAfter 
+   Begin PhotoPaint.pdLabel lblAfter 
       Height          =   435
       Left            =   8520
       Top             =   2880
@@ -114,7 +114,7 @@ Attribute VB_Exposed = False
 ' if the required 3rd-party library isn't available.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

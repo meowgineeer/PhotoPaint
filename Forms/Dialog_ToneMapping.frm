@@ -26,7 +26,7 @@ Begin VB.Form dialog_ToneMapping
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   777
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdPictureBox picPreview 
+   Begin PhotoPaint.pdPictureBox picPreview 
       Height          =   4500
       Left            =   120
       Top             =   1200
@@ -34,7 +34,7 @@ Begin VB.Form dialog_ToneMapping
       _ExtentX        =   7938
       _ExtentY        =   7938
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -45,7 +45,7 @@ Begin VB.Form dialog_ToneMapping
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdCheckBox chkRemember 
+   Begin PhotoPaint.pdCheckBox chkRemember 
       Height          =   330
       Left            =   4920
       TabIndex        =   1
@@ -56,7 +56,7 @@ Begin VB.Form dialog_ToneMapping
       Caption         =   "in the future, automatically apply these settings"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdButtonStrip btsMethod 
+   Begin PhotoPaint.pdButtonStrip btsMethod 
       Height          =   960
       Left            =   4920
       TabIndex        =   2
@@ -67,7 +67,7 @@ Begin VB.Form dialog_ToneMapping
       Caption         =   "tone-mapping operator"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdLabel lblWarning 
+   Begin PhotoPaint.pdLabel lblWarning 
       Height          =   765
       Left            =   975
       Top             =   240
@@ -78,7 +78,7 @@ Begin VB.Form dialog_ToneMapping
       ForeColor       =   2105376
       Layout          =   1
    End
-   Begin PhotoDemon.pdPictureBox picWarning 
+   Begin PhotoPaint.pdPictureBox picWarning 
       Height          =   615
       Left            =   120
       Top             =   210
@@ -86,7 +86,7 @@ Begin VB.Form dialog_ToneMapping
       _ExtentX        =   873
       _ExtentY        =   1085
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   3135
       Index           =   1
       Left            =   4800
@@ -95,7 +95,7 @@ Begin VB.Form dialog_ToneMapping
       Width           =   6855
       _ExtentX        =   12091
       _ExtentY        =   5530
-      Begin PhotoDemon.pdSlider sltGamma 
+      Begin PhotoPaint.pdSlider sltGamma 
          Height          =   690
          Index           =   2
          Left            =   120
@@ -113,7 +113,7 @@ Begin VB.Form dialog_ToneMapping
          NotchPosition   =   2
          NotchValueCustom=   2.2
       End
-      Begin PhotoDemon.pdSlider sltExposure 
+      Begin PhotoPaint.pdSlider sltExposure 
          Height          =   690
          Index           =   1
          Left            =   120
@@ -131,7 +131,7 @@ Begin VB.Form dialog_ToneMapping
          NotchPosition   =   2
          NotchValueCustom=   2
       End
-      Begin PhotoDemon.pdSlider sltWhitepoint 
+      Begin PhotoPaint.pdSlider sltWhitepoint 
          Height          =   690
          Left            =   120
          TabIndex        =   6
@@ -149,7 +149,7 @@ Begin VB.Form dialog_ToneMapping
          NotchValueCustom=   11.2
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   3135
       Index           =   0
       Left            =   4800
@@ -157,7 +157,7 @@ Begin VB.Form dialog_ToneMapping
       Width           =   6855
       _ExtentX        =   12091
       _ExtentY        =   5530
-      Begin PhotoDemon.pdButtonStrip btsNormalize 
+      Begin PhotoPaint.pdButtonStrip btsNormalize 
          Height          =   975
          Left            =   120
          TabIndex        =   12
@@ -168,7 +168,7 @@ Begin VB.Form dialog_ToneMapping
          Caption         =   "normalize"
          FontSizeCaption =   11
       End
-      Begin PhotoDemon.pdSlider sltGamma 
+      Begin PhotoPaint.pdSlider sltGamma 
          Height          =   690
          Index           =   0
          Left            =   120
@@ -187,7 +187,7 @@ Begin VB.Form dialog_ToneMapping
          NotchValueCustom=   2.2
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   3135
       Index           =   2
       Left            =   4800
@@ -196,7 +196,7 @@ Begin VB.Form dialog_ToneMapping
       Width           =   6855
       _ExtentX        =   12091
       _ExtentY        =   5530
-      Begin PhotoDemon.pdSlider sltGamma 
+      Begin PhotoPaint.pdSlider sltGamma 
          Height          =   690
          Index           =   1
          Left            =   120
@@ -214,7 +214,7 @@ Begin VB.Form dialog_ToneMapping
          NotchPosition   =   2
          NotchValueCustom=   1
       End
-      Begin PhotoDemon.pdSlider sltExposure 
+      Begin PhotoPaint.pdSlider sltExposure 
          Height          =   690
          Index           =   0
          Left            =   120
@@ -230,7 +230,7 @@ Begin VB.Form dialog_ToneMapping
          SigDigits       =   2
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   3135
       Index           =   3
       Left            =   4800
@@ -239,7 +239,7 @@ Begin VB.Form dialog_ToneMapping
       Width           =   6855
       _ExtentX        =   12091
       _ExtentY        =   5530
-      Begin PhotoDemon.pdSlider sltIntensity 
+      Begin PhotoPaint.pdSlider sltIntensity 
          Height          =   690
          Left            =   120
          TabIndex        =   9
@@ -253,7 +253,7 @@ Begin VB.Form dialog_ToneMapping
          Max             =   4
          SigDigits       =   2
       End
-      Begin PhotoDemon.pdSlider sltAdaptation 
+      Begin PhotoPaint.pdSlider sltAdaptation 
          Height          =   690
          Left            =   120
          TabIndex        =   10
@@ -270,7 +270,7 @@ Begin VB.Form dialog_ToneMapping
          NotchPosition   =   2
          NotchValueCustom=   1
       End
-      Begin PhotoDemon.pdSlider sltColorCorrection 
+      Begin PhotoPaint.pdSlider sltColorCorrection 
          Height          =   690
          Left            =   120
          TabIndex        =   11
@@ -323,7 +323,7 @@ Attribute VB_Exposed = False
 '  - http://filmicgames.com/archives/75
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

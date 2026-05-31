@@ -25,7 +25,7 @@ Begin VB.Form dialog_ExportLUT
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   658
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdButtonStrip btsQuality 
+   Begin PhotoPaint.pdButtonStrip btsQuality 
       Height          =   735
       Left            =   360
       TabIndex        =   4
@@ -34,7 +34,7 @@ Begin VB.Form dialog_ExportLUT
       _ExtentX        =   16536
       _ExtentY        =   1296
    End
-   Begin PhotoDemon.pdSlider sldGridPoints 
+   Begin PhotoPaint.pdSlider sldGridPoints 
       Height          =   495
       Left            =   360
       TabIndex        =   3
@@ -48,7 +48,7 @@ Begin VB.Form dialog_ExportLUT
       NotchPosition   =   2
       NotchValueCustom=   17
    End
-   Begin PhotoDemon.pdTextBox txtDescription 
+   Begin PhotoPaint.pdTextBox txtDescription 
       Height          =   495
       Left            =   360
       TabIndex        =   1
@@ -57,7 +57,7 @@ Begin VB.Form dialog_ExportLUT
       _ExtentX        =   16536
       _ExtentY        =   873
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   0
       Left            =   120
@@ -68,7 +68,7 @@ Begin VB.Form dialog_ExportLUT
       Caption         =   "description"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -79,7 +79,7 @@ Begin VB.Form dialog_ExportLUT
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   1
       Left            =   120
@@ -90,7 +90,7 @@ Begin VB.Form dialog_ExportLUT
       Caption         =   "copyright"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdTextBox txtCopyright 
+   Begin PhotoPaint.pdTextBox txtCopyright 
       Height          =   495
       Left            =   360
       TabIndex        =   2
@@ -99,7 +99,7 @@ Begin VB.Form dialog_ExportLUT
       _ExtentX        =   16536
       _ExtentY        =   873
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   2
       Left            =   120
@@ -126,7 +126,7 @@ Attribute VB_Exposed = False
 'This dialog works as a simple relay to the pdLUT3D class.  Look there for specific encoding details.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

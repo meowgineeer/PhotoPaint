@@ -124,12 +124,12 @@ Attribute VB_Exposed = False
 'Last update: upgrade to v2.0, total overhaul to use pdPackager2 and zstd for compression.  Other fixes to improve
 '             reliability, and start work on support for delta patches.
 '
-'This project was built to help assemble automatic update information for PhotoDemon.  It is run by the nightly build batch
+'This project was built to help assemble automatic update information for PhotoPaint.  It is run by the nightly build batch
 ' script, and it assembles a few different things:
 ' - New pdPackage archives for the latest stable, beta (if relevant), and nightly build entries.
 ' - A central update file with version numbers and checksums for each of the pdPackage files
 '
-'NOTE: this project is intended only as a support tool for PhotoDemon.  It is not designed or tested for general-purpose use.
+'NOTE: this project is intended only as a support tool for PhotoPaint.  It is not designed or tested for general-purpose use.
 '       I do not have any intention of supporting this tool outside its intended use, so please do not submit bug reports
 '       regarding this project unless they directly relate to its intended purpose (generating PhotoDemon update files).
 '
@@ -184,12 +184,12 @@ Private Sub AssembleNightlyBuild()
     Dim nightlyList As pdStringStack
     Set nightlyList = New pdStringStack
     
-    nightlyList.AddString m_basePath & "PhotoDemon\PhotoDemon.exe"
+    nightlyList.AddString m_basePath & "PhotoDemon\PhotoPaint.exe"
     nightlyList.AddString m_basePath & "PhotoDemon\README.md"
     nightlyList.AddString m_basePath & "PhotoDemon\LICENSE.md"
     nightlyList.AddString m_basePath & "PhotoDemon\AUTHORS.md"
     nightlyList.AddString m_basePath & "PhotoDemon\CODE_OF_CONDUCT.md"
-    nightlyList.AddString m_basePath & "PhotoDemon\Donate to PhotoDemon.url"
+    nightlyList.AddString m_basePath & "PhotoDemon\Donate to PhotoPaint.url"
     
     'For the /App subfolder, we forcibly restrict which extensions are allowed, to avoid copying any backup files
     ' or other unwanted entries.
@@ -313,9 +313,9 @@ Private Sub MakeVersionFile()
     
     'Retrieve stable, beta, developer build versions
     Dim vStable As String, vBeta As String, vDev As String
-    vStable = GetFileVersion_Modified(m_basePath & "PhotoDemon\no_sync\PD_updates\stable\PhotoDemon.exe")
-    vBeta = GetFileVersion_Modified(m_basePath & "PhotoDemon\no_sync\PD_updates\beta\PhotoDemon.exe")
-    vDev = GetFileVersion_Modified(m_basePath & "PhotoDemon\no_sync\PD_updates\nightly_auto_extract_test\PhotoDemon.exe")
+    vStable = GetFileVersion_Modified(m_basePath & "PhotoDemon\no_sync\PD_updates\stable\PhotoPaint.exe")
+    vBeta = GetFileVersion_Modified(m_basePath & "PhotoDemon\no_sync\PD_updates\beta\PhotoPaint.exe")
+    vDev = GetFileVersion_Modified(m_basePath & "PhotoDemon\no_sync\PD_updates\nightly_auto_extract_test\PhotoPaint.exe")
     
     'We now want to write these version numbers out to file - specifically, the YAML file that describes
     ' the PhotoDemon update server homepage.

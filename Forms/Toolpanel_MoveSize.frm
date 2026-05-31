@@ -30,7 +30,7 @@ Begin VB.Form toolpanel_MoveSize
    ScaleWidth      =   794
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   2055
       Index           =   0
       Left            =   0
@@ -39,7 +39,7 @@ Begin VB.Form toolpanel_MoveSize
       Width           =   3975
       _ExtentX        =   7011
       _ExtentY        =   3625
-      Begin PhotoDemon.pdLabel lblOptions 
+      Begin PhotoPaint.pdLabel lblOptions 
          Height          =   240
          Index           =   10
          Left            =   0
@@ -49,7 +49,7 @@ Begin VB.Form toolpanel_MoveSize
          _ExtentY        =   423
          Caption         =   "size (w, h)"
       End
-      Begin PhotoDemon.pdSpinner tudLayerMove 
+      Begin PhotoPaint.pdSpinner tudLayerMove 
          Height          =   345
          Index           =   2
          Left            =   120
@@ -59,7 +59,7 @@ Begin VB.Form toolpanel_MoveSize
          _ExtentX        =   2566
          _ExtentY        =   609
       End
-      Begin PhotoDemon.pdSpinner tudLayerMove 
+      Begin PhotoPaint.pdSpinner tudLayerMove 
          Height          =   345
          Index           =   3
          Left            =   1680
@@ -69,7 +69,7 @@ Begin VB.Form toolpanel_MoveSize
          _ExtentX        =   2566
          _ExtentY        =   609
       End
-      Begin PhotoDemon.pdCheckBox chkAspectRatio 
+      Begin PhotoPaint.pdCheckBox chkAspectRatio 
          Height          =   375
          Left            =   90
          TabIndex        =   8
@@ -80,7 +80,7 @@ Begin VB.Form toolpanel_MoveSize
          Caption         =   "lock aspect ratio"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdDropDown cboLayerResizeQuality 
+      Begin PhotoPaint.pdDropDown cboLayerResizeQuality 
          Height          =   690
          Left            =   0
          TabIndex        =   9
@@ -91,7 +91,7 @@ Begin VB.Form toolpanel_MoveSize
          Caption         =   "transform quality"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   0
          Left            =   3480
@@ -103,7 +103,7 @@ Begin VB.Form toolpanel_MoveSize
          StickyToggle    =   -1  'True
       End
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   4935
       Index           =   2
       Left            =   8160
@@ -111,7 +111,7 @@ Begin VB.Form toolpanel_MoveSize
       Width           =   3705
       _ExtentX        =   6535
       _ExtentY        =   8705
-      Begin PhotoDemon.pdCheckBox chkIgnoreTransparent 
+      Begin PhotoPaint.pdCheckBox chkIgnoreTransparent 
          Height          =   330
          Left            =   240
          TabIndex        =   1
@@ -121,7 +121,7 @@ Begin VB.Form toolpanel_MoveSize
          _ExtentY        =   582
          Caption         =   "ignore transparent pixels"
       End
-      Begin PhotoDemon.pdCheckBox chkDistances 
+      Begin PhotoPaint.pdCheckBox chkDistances 
          Height          =   330
          Left            =   240
          TabIndex        =   2
@@ -132,7 +132,7 @@ Begin VB.Form toolpanel_MoveSize
          Caption         =   "show distances"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chkLayerNodes 
+      Begin PhotoPaint.pdCheckBox chkLayerNodes 
          Height          =   330
          Left            =   240
          TabIndex        =   0
@@ -142,7 +142,7 @@ Begin VB.Form toolpanel_MoveSize
          _ExtentY        =   582
          Caption         =   "show resize nodes"
       End
-      Begin PhotoDemon.pdLabel lblOptions 
+      Begin PhotoPaint.pdLabel lblOptions 
          Height          =   240
          Index           =   1
          Left            =   120
@@ -152,7 +152,7 @@ Begin VB.Form toolpanel_MoveSize
          _ExtentY        =   423
          Caption         =   "display options"
       End
-      Begin PhotoDemon.pdCheckBox chkRotateNode 
+      Begin PhotoPaint.pdCheckBox chkRotateNode 
          Height          =   330
          Left            =   240
          TabIndex        =   3
@@ -162,7 +162,7 @@ Begin VB.Form toolpanel_MoveSize
          _ExtentY        =   582
          Caption         =   "show rotate nodes"
       End
-      Begin PhotoDemon.pdLabel lblOptions 
+      Begin PhotoPaint.pdLabel lblOptions 
          Height          =   240
          Index           =   0
          Left            =   120
@@ -172,7 +172,7 @@ Begin VB.Form toolpanel_MoveSize
          _ExtentY        =   423
          Caption         =   "make transforms permanent"
       End
-      Begin PhotoDemon.pdButtonToolbox cmdLayerAffinePermanent 
+      Begin PhotoPaint.pdButtonToolbox cmdLayerAffinePermanent 
          Height          =   570
          Left            =   120
          TabIndex        =   14
@@ -182,7 +182,7 @@ Begin VB.Form toolpanel_MoveSize
          _ExtentY        =   1005
          AutoToggle      =   -1  'True
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   2
          Left            =   3210
@@ -193,7 +193,7 @@ Begin VB.Form toolpanel_MoveSize
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdButtonStrip btsSampleMerged 
+      Begin PhotoPaint.pdButtonStrip btsSampleMerged 
          Height          =   945
          Left            =   120
          TabIndex        =   21
@@ -204,7 +204,7 @@ Begin VB.Form toolpanel_MoveSize
          Caption         =   "sample selections from"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdButtonStrip btsCopyCut 
+      Begin PhotoPaint.pdButtonStrip btsCopyCut 
          Height          =   945
          Left            =   120
          TabIndex        =   22
@@ -216,7 +216,7 @@ Begin VB.Form toolpanel_MoveSize
          FontSizeCaption =   10
       End
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   375
       Index           =   0
       Left            =   0
@@ -228,7 +228,7 @@ Begin VB.Form toolpanel_MoveSize
       Caption         =   "position (x, y)"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdSpinner tudLayerMove 
+   Begin PhotoPaint.pdSpinner tudLayerMove 
       Height          =   345
       Index           =   0
       Left            =   120
@@ -238,7 +238,7 @@ Begin VB.Form toolpanel_MoveSize
       _ExtentX        =   2566
       _ExtentY        =   609
    End
-   Begin PhotoDemon.pdSpinner tudLayerMove 
+   Begin PhotoPaint.pdSpinner tudLayerMove 
       Height          =   345
       Index           =   1
       Left            =   1680
@@ -248,7 +248,7 @@ Begin VB.Form toolpanel_MoveSize
       _ExtentX        =   2566
       _ExtentY        =   609
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   375
       Index           =   1
       Left            =   3720
@@ -260,7 +260,7 @@ Begin VB.Form toolpanel_MoveSize
       Caption         =   "angle"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   1335
       Index           =   1
       Left            =   3960
@@ -269,7 +269,7 @@ Begin VB.Form toolpanel_MoveSize
       Width           =   4095
       _ExtentX        =   7223
       _ExtentY        =   2355
-      Begin PhotoDemon.pdSlider sltLayerShearX 
+      Begin PhotoPaint.pdSlider sltLayerShearX 
          Height          =   765
          Left            =   120
          TabIndex        =   11
@@ -283,7 +283,7 @@ Begin VB.Form toolpanel_MoveSize
          Max             =   5
          SigDigits       =   2
       End
-      Begin PhotoDemon.pdSlider sltLayerShearY 
+      Begin PhotoPaint.pdSlider sltLayerShearY 
          Height          =   405
          Left            =   120
          TabIndex        =   12
@@ -295,7 +295,7 @@ Begin VB.Form toolpanel_MoveSize
          Max             =   5
          SigDigits       =   2
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   1
          Left            =   3600
@@ -307,7 +307,7 @@ Begin VB.Form toolpanel_MoveSize
          StickyToggle    =   -1  'True
       End
    End
-   Begin PhotoDemon.pdSlider sltLayerAngle 
+   Begin PhotoPaint.pdSlider sltLayerAngle 
       Height          =   405
       Left            =   3720
       TabIndex        =   10
@@ -320,7 +320,7 @@ Begin VB.Form toolpanel_MoveSize
       Max             =   360
       SigDigits       =   2
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   375
       Index           =   2
       Left            =   7440
@@ -332,7 +332,7 @@ Begin VB.Form toolpanel_MoveSize
       Caption         =   "other options"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdCheckBox chkAutoActivateLayer 
+   Begin PhotoPaint.pdCheckBox chkAutoActivateLayer 
       Height          =   330
       Left            =   7560
       TabIndex        =   13
@@ -358,7 +358,7 @@ Attribute VB_Exposed = False
 'This form includes all user-editable settings for the Move/Size canvas tool.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

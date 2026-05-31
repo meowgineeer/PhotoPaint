@@ -26,7 +26,7 @@ Begin VB.Form FormClipboard
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   424
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdCheckBox chkMerged 
+   Begin PhotoPaint.pdCheckBox chkMerged 
       Height          =   375
       Left            =   120
       TabIndex        =   2
@@ -36,7 +36,7 @@ Begin VB.Form FormClipboard
       _ExtentY        =   661
       Caption         =   "use merged image"
    End
-   Begin PhotoDemon.pdListBox lstFormats 
+   Begin PhotoPaint.pdListBox lstFormats 
       Height          =   2655
       Left            =   120
       TabIndex        =   1
@@ -46,7 +46,7 @@ Begin VB.Form FormClipboard
       _ExtentY        =   7435
       Caption         =   "available formats"
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBar 
+   Begin PhotoPaint.pdCommandBarMini cmdBar 
       Align           =   2  'Align Bottom
       CausesValidation=   0   'False
       Height          =   735
@@ -82,7 +82,7 @@ Attribute VB_Exposed = False
 ' Similarly, at max value it performs identically to a dilate (maximum) filter.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

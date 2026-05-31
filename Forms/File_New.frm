@@ -26,7 +26,7 @@ Begin VB.Form FormNewImage
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   642
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -36,7 +36,7 @@ Begin VB.Form FormNewImage
       _ExtentX        =   16986
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdRadioButton optBackground 
+   Begin PhotoPaint.pdRadioButton optBackground 
       CausesValidation=   0   'False
       Height          =   330
       Index           =   0
@@ -49,7 +49,7 @@ Begin VB.Form FormNewImage
       Caption         =   "transparent"
       Value           =   -1  'True
    End
-   Begin PhotoDemon.pdRadioButton optBackground 
+   Begin PhotoPaint.pdRadioButton optBackground 
       CausesValidation=   0   'False
       Height          =   330
       Index           =   1
@@ -61,7 +61,7 @@ Begin VB.Form FormNewImage
       _ExtentY        =   582
       Caption         =   "black"
    End
-   Begin PhotoDemon.pdRadioButton optBackground 
+   Begin PhotoPaint.pdRadioButton optBackground 
       CausesValidation=   0   'False
       Height          =   330
       Index           =   2
@@ -73,7 +73,7 @@ Begin VB.Form FormNewImage
       _ExtentY        =   582
       Caption         =   "white"
    End
-   Begin PhotoDemon.pdRadioButton optBackground 
+   Begin PhotoPaint.pdRadioButton optBackground 
       CausesValidation=   0   'False
       Height          =   330
       Index           =   3
@@ -85,7 +85,7 @@ Begin VB.Form FormNewImage
       _ExtentY        =   582
       Caption         =   "custom color"
    End
-   Begin PhotoDemon.pdColorSelector csBackground 
+   Begin PhotoPaint.pdColorSelector csBackground 
       Height          =   615
       Left            =   840
       TabIndex        =   6
@@ -95,7 +95,7 @@ Begin VB.Form FormNewImage
       _ExtentY        =   1085
       curColor        =   16749332
    End
-   Begin PhotoDemon.pdResize ucResize 
+   Begin PhotoPaint.pdResize ucResize 
       Height          =   2850
       Left            =   360
       TabIndex        =   1
@@ -105,7 +105,7 @@ Begin VB.Form FormNewImage
       _ExtentY        =   5027
       DisablePercentOption=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   1
       Left            =   240
@@ -135,7 +135,7 @@ Attribute VB_Exposed = False
 ' to provide some kind of "template" dropdown for convenience.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

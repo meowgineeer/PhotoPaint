@@ -27,7 +27,7 @@ Begin VB.Form FormPackage
    ScaleWidth      =   753
    ShowInTaskbar   =   0   'False
    StartUpPosition =   1  'CenterOwner
-   Begin PhotoDemon.pdCheckBox chkOptions 
+   Begin PhotoPaint.pdCheckBox chkOptions 
       Height          =   375
       Index           =   0
       Left            =   7560
@@ -38,7 +38,7 @@ Begin VB.Form FormPackage
       _ExtentY        =   661
       Caption         =   "compress individual files"
    End
-   Begin PhotoDemon.pdButton cmdSave 
+   Begin PhotoPaint.pdButton cmdSave 
       Height          =   855
       Left            =   3840
       TabIndex        =   3
@@ -48,7 +48,7 @@ Begin VB.Form FormPackage
       _ExtentY        =   1508
       Caption         =   "save the final package..."
    End
-   Begin PhotoDemon.pdButton cmdAdd 
+   Begin PhotoPaint.pdButton cmdAdd 
       Height          =   855
       Left            =   120
       TabIndex        =   2
@@ -58,7 +58,7 @@ Begin VB.Form FormPackage
       _ExtentY        =   1508
       Caption         =   "add file(s) to the package..."
    End
-   Begin PhotoDemon.pdListBox lstFiles 
+   Begin PhotoPaint.pdListBox lstFiles 
       Height          =   5535
       Left            =   120
       TabIndex        =   1
@@ -68,7 +68,7 @@ Begin VB.Form FormPackage
       _ExtentY        =   9763
       Caption         =   "files in this package:"
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBar 
+   Begin PhotoPaint.pdCommandBarMini cmdBar 
       Align           =   2  'Align Bottom
       Height          =   735
       Left            =   0
@@ -96,7 +96,7 @@ Attribute VB_Exposed = False
 ' This dialog helps you construct sub-archives like this.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

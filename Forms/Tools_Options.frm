@@ -26,7 +26,7 @@ Begin VB.Form FormOptions
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   767
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdCommandBarMini cmdBarMini 
+   Begin PhotoPaint.pdCommandBarMini cmdBarMini 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -36,7 +36,7 @@ Begin VB.Form FormOptions
       _ExtentX        =   20294
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdButtonStripVertical btsvCategory 
+   Begin PhotoPaint.pdButtonStripVertical btsvCategory 
       Height          =   6675
       Left            =   120
       TabIndex        =   0
@@ -65,7 +65,7 @@ Attribute VB_Exposed = False
 ' low-level reading/writing of preferences; this is just the UI for interacting with it.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

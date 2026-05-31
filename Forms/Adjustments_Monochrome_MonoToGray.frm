@@ -24,7 +24,7 @@ Begin VB.Form FormMonoToColor
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   802
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormMonoToColor
       _ExtentX        =   21220
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -42,7 +42,7 @@ Begin VB.Form FormMonoToColor
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -56,7 +56,7 @@ Begin VB.Form FormMonoToColor
       Value           =   3
       DefaultValue    =   3
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Left            =   6000
       Top             =   3240
@@ -67,7 +67,7 @@ Begin VB.Form FormMonoToColor
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblExplanation 
+   Begin PhotoPaint.pdLabel lblExplanation 
       Height          =   1770
       Left            =   6120
       Top             =   3840
@@ -106,7 +106,7 @@ Attribute VB_Exposed = False
 ' be wonky when used on a color image.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

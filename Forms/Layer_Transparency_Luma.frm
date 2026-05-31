@@ -24,7 +24,7 @@ Begin VB.Form FormTransparency_FromLuma
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   788
-   Begin PhotoDemon.pdSlider sldGray 
+   Begin PhotoPaint.pdSlider sldGray 
       Height          =   495
       Left            =   6360
       TabIndex        =   5
@@ -38,7 +38,7 @@ Begin VB.Form FormTransparency_FromLuma
       NotchPosition   =   2
       NotchValueCustom=   127
    End
-   Begin PhotoDemon.pdRadioButton rdoSource 
+   Begin PhotoPaint.pdRadioButton rdoSource 
       Height          =   375
       Index           =   0
       Left            =   6000
@@ -51,7 +51,7 @@ Begin VB.Form FormTransparency_FromLuma
       FontSize        =   12
       Value           =   -1  'True
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -60,7 +60,7 @@ Begin VB.Form FormTransparency_FromLuma
       _ExtentX        =   20849
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -70,7 +70,7 @@ Begin VB.Form FormTransparency_FromLuma
       _ExtentY        =   9922
       ColorSelection  =   -1  'True
    End
-   Begin PhotoDemon.pdRadioButton rdoSource 
+   Begin PhotoPaint.pdRadioButton rdoSource 
       Height          =   375
       Index           =   1
       Left            =   6000
@@ -82,7 +82,7 @@ Begin VB.Form FormTransparency_FromLuma
       Caption         =   "white is transparent"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdRadioButton rdoSource 
+   Begin PhotoPaint.pdRadioButton rdoSource 
       Height          =   375
       Index           =   2
       Left            =   6000
@@ -115,7 +115,7 @@ Attribute VB_Exposed = False
 ' sharpening (and with the added benefit of all layer blend modes + opacity for toggling).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

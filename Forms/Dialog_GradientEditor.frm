@@ -26,7 +26,7 @@ Begin VB.Form dialog_GradientEditor
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   844
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdContainer pnlShared 
+   Begin PhotoPaint.pdContainer pnlShared 
       Height          =   2175
       Left            =   120
       Top             =   5880
@@ -34,7 +34,7 @@ Begin VB.Form dialog_GradientEditor
       Width           =   12375
       _ExtentX        =   21828
       _ExtentY        =   3836
-      Begin PhotoDemon.pdTextBox txtName 
+      Begin PhotoPaint.pdTextBox txtName 
          Height          =   375
          Left            =   120
          TabIndex        =   7
@@ -43,7 +43,7 @@ Begin VB.Form dialog_GradientEditor
          _ExtentX        =   7011
          _ExtentY        =   661
       End
-      Begin PhotoDemon.pdCheckBox chkDistributeEvenly 
+      Begin PhotoPaint.pdCheckBox chkDistributeEvenly 
          Height          =   330
          Left            =   8280
          TabIndex        =   8
@@ -54,7 +54,7 @@ Begin VB.Form dialog_GradientEditor
          Caption         =   "make node distances equal"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   315
          Index           =   4
          Left            =   4440
@@ -65,7 +65,7 @@ Begin VB.Form dialog_GradientEditor
          Caption         =   "additional options"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdCheckBox chkGamma 
+      Begin PhotoPaint.pdCheckBox chkGamma 
          Height          =   330
          Left            =   4680
          TabIndex        =   2
@@ -76,7 +76,7 @@ Begin VB.Form dialog_GradientEditor
          Caption         =   "use gamma when blending"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   315
          Index           =   5
          Left            =   0
@@ -87,7 +87,7 @@ Begin VB.Form dialog_GradientEditor
          Caption         =   "gradient name"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdButton cmdFile 
+      Begin PhotoPaint.pdButton cmdFile 
          Height          =   615
          Index           =   1
          Left            =   5340
@@ -98,7 +98,7 @@ Begin VB.Form dialog_GradientEditor
          _ExtentY        =   1085
          Caption         =   "import gradient file"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   315
          Index           =   3
          Left            =   0
@@ -109,7 +109,7 @@ Begin VB.Form dialog_GradientEditor
          Caption         =   "import / export"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdButton cmdFile 
+      Begin PhotoPaint.pdButton cmdFile 
          Height          =   615
          Index           =   2
          Left            =   8880
@@ -120,7 +120,7 @@ Begin VB.Form dialog_GradientEditor
          _ExtentY        =   1085
          Caption         =   "export gradient file"
       End
-      Begin PhotoDemon.pdButton cmdFile 
+      Begin PhotoPaint.pdButton cmdFile 
          Height          =   615
          Index           =   0
          Left            =   120
@@ -132,7 +132,7 @@ Begin VB.Form dialog_GradientEditor
          Caption         =   "save to gradient collection"
       End
    End
-   Begin PhotoDemon.pdButtonStrip btsEdit 
+   Begin PhotoPaint.pdButtonStrip btsEdit 
       Height          =   915
       Left            =   120
       TabIndex        =   1
@@ -143,7 +143,7 @@ Begin VB.Form dialog_GradientEditor
       DontAutoReset   =   -1  'True
       FontSize        =   12
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -155,7 +155,7 @@ Begin VB.Form dialog_GradientEditor
       DontAutoUnloadParent=   -1  'True
       DontResetAutomatically=   -1  'True
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4575
       Index           =   1
       Left            =   0
@@ -163,7 +163,7 @@ Begin VB.Form dialog_GradientEditor
       Width           =   12615
       _ExtentX        =   22251
       _ExtentY        =   8070
-      Begin PhotoDemon.pdPictureBoxInteractive picInteract 
+      Begin PhotoPaint.pdPictureBoxInteractive picInteract 
          Height          =   330
          Left            =   0
          Top             =   2400
@@ -171,7 +171,7 @@ Begin VB.Form dialog_GradientEditor
          _ExtentX        =   0
          _ExtentY        =   0
       End
-      Begin PhotoDemon.pdPictureBox picNodePreview 
+      Begin PhotoPaint.pdPictureBox picNodePreview 
          Height          =   1950
          Left            =   240
          Top             =   360
@@ -179,7 +179,7 @@ Begin VB.Form dialog_GradientEditor
          _ExtentX        =   0
          _ExtentY        =   0
       End
-      Begin PhotoDemon.pdSlider sltNodeOpacity 
+      Begin PhotoPaint.pdSlider sltNodeOpacity 
          Height          =   705
          Left            =   4320
          TabIndex        =   5
@@ -193,7 +193,7 @@ Begin VB.Form dialog_GradientEditor
          NotchPosition   =   2
          NotchValueCustom=   100
       End
-      Begin PhotoDemon.pdColorSelector csNode 
+      Begin PhotoPaint.pdColorSelector csNode 
          Height          =   855
          Left            =   240
          TabIndex        =   4
@@ -203,7 +203,7 @@ Begin VB.Form dialog_GradientEditor
          _ExtentY        =   1508
          Caption         =   "color"
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   315
          Index           =   0
          Left            =   120
@@ -214,7 +214,7 @@ Begin VB.Form dialog_GradientEditor
          Caption         =   "current node settings"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdSlider sltNodePosition 
+      Begin PhotoPaint.pdSlider sltNodePosition 
          Height          =   705
          Left            =   8280
          TabIndex        =   6
@@ -230,7 +230,7 @@ Begin VB.Form dialog_GradientEditor
          NotchPosition   =   1
          NotchValueCustom=   50
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   315
          Index           =   2
          Left            =   120
@@ -241,7 +241,7 @@ Begin VB.Form dialog_GradientEditor
          Caption         =   "node editor"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdLabel lblInstructions 
+      Begin PhotoPaint.pdLabel lblInstructions 
          Height          =   285
          Left            =   0
          Top             =   2880
@@ -254,7 +254,7 @@ Begin VB.Form dialog_GradientEditor
          Layout          =   1
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4620
       Index           =   2
       Left            =   0
@@ -262,7 +262,7 @@ Begin VB.Form dialog_GradientEditor
       Width           =   12615
       _ExtentX        =   22251
       _ExtentY        =   8149
-      Begin PhotoDemon.pdButton cmdRandomize 
+      Begin PhotoPaint.pdButton cmdRandomize 
          Height          =   615
          Left            =   240
          TabIndex        =   15
@@ -273,7 +273,7 @@ Begin VB.Form dialog_GradientEditor
          Caption         =   "generate new pattern"
          FontSize        =   11
       End
-      Begin PhotoDemon.pdPictureBox picAutoPreview 
+      Begin PhotoPaint.pdPictureBox picAutoPreview 
          Height          =   1575
          Left            =   240
          Top             =   360
@@ -281,7 +281,7 @@ Begin VB.Form dialog_GradientEditor
          _ExtentX        =   0
          _ExtentY        =   0
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   315
          Index           =   1
          Left            =   120
@@ -292,7 +292,7 @@ Begin VB.Form dialog_GradientEditor
          Caption         =   "preview"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdSlider sldOpacityAuto 
+      Begin PhotoPaint.pdSlider sldOpacityAuto 
          Height          =   585
          Index           =   0
          Left            =   240
@@ -306,7 +306,7 @@ Begin VB.Form dialog_GradientEditor
          NotchPosition   =   2
          NotchValueCustom=   100
       End
-      Begin PhotoDemon.pdColorSelector csColorAuto 
+      Begin PhotoPaint.pdColorSelector csColorAuto 
          Height          =   855
          Index           =   0
          Left            =   120
@@ -318,7 +318,7 @@ Begin VB.Form dialog_GradientEditor
          Caption         =   "start color and opacity"
          curColor        =   0
       End
-      Begin PhotoDemon.pdSlider sldOpacityAuto 
+      Begin PhotoPaint.pdSlider sldOpacityAuto 
          Height          =   585
          Index           =   1
          Left            =   3720
@@ -332,7 +332,7 @@ Begin VB.Form dialog_GradientEditor
          NotchPosition   =   2
          NotchValueCustom=   100
       End
-      Begin PhotoDemon.pdColorSelector csColorAuto 
+      Begin PhotoPaint.pdColorSelector csColorAuto 
          Height          =   855
          Index           =   1
          Left            =   3600
@@ -343,7 +343,7 @@ Begin VB.Form dialog_GradientEditor
          _ExtentY        =   1508
          Caption         =   "end color and opacity"
       End
-      Begin PhotoDemon.pdSlider sldDensityAuto 
+      Begin PhotoPaint.pdSlider sldDensityAuto 
          Height          =   735
          Left            =   7200
          TabIndex        =   14
@@ -358,7 +358,7 @@ Begin VB.Form dialog_GradientEditor
          NotchPosition   =   2
          NotchValueCustom=   10
       End
-      Begin PhotoDemon.pdSlider sldVaryHSV 
+      Begin PhotoPaint.pdSlider sldVaryHSV 
          Height          =   735
          Index           =   0
          Left            =   7200
@@ -373,7 +373,7 @@ Begin VB.Form dialog_GradientEditor
          SigDigits       =   1
          ScaleStyle      =   1
       End
-      Begin PhotoDemon.pdSlider sldVaryHSV 
+      Begin PhotoPaint.pdSlider sldVaryHSV 
          Height          =   735
          Index           =   1
          Left            =   9840
@@ -388,7 +388,7 @@ Begin VB.Form dialog_GradientEditor
          SigDigits       =   1
          ScaleStyle      =   1
       End
-      Begin PhotoDemon.pdSlider sldVaryHSV 
+      Begin PhotoPaint.pdSlider sldVaryHSV 
          Height          =   735
          Index           =   2
          Left            =   7200
@@ -405,7 +405,7 @@ Begin VB.Form dialog_GradientEditor
          Value           =   20
          DefaultValue    =   20
       End
-      Begin PhotoDemon.pdSlider sldVaryHSV 
+      Begin PhotoPaint.pdSlider sldVaryHSV 
          Height          =   735
          Index           =   3
          Left            =   9840
@@ -421,7 +421,7 @@ Begin VB.Form dialog_GradientEditor
          ScaleStyle      =   1
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   6975
       Index           =   0
       Left            =   0
@@ -429,7 +429,7 @@ Begin VB.Form dialog_GradientEditor
       Width           =   12615
       _ExtentX        =   22251
       _ExtentY        =   12303
-      Begin PhotoDemon.pdButton cmdEdit 
+      Begin PhotoPaint.pdButton cmdEdit 
          Height          =   1575
          Left            =   9240
          TabIndex        =   23
@@ -440,7 +440,7 @@ Begin VB.Form dialog_GradientEditor
          Caption         =   "edit this gradient >>"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdButtonStripVertical btsSort 
+      Begin PhotoPaint.pdButtonStripVertical btsSort 
          Height          =   4335
          Left            =   9120
          TabIndex        =   22
@@ -450,7 +450,7 @@ Begin VB.Form dialog_GradientEditor
          _ExtentY        =   10821
          Caption         =   "sort collection by"
       End
-      Begin PhotoDemon.pdHyperlink lblCollection 
+      Begin PhotoPaint.pdHyperlink lblCollection 
          Height          =   375
          Left            =   240
          TabIndex        =   9
@@ -462,7 +462,7 @@ Begin VB.Form dialog_GradientEditor
          Caption         =   ""
          RaiseClickEvent =   -1  'True
       End
-      Begin PhotoDemon.pdListBoxOD lstGradients 
+      Begin PhotoPaint.pdListBoxOD lstGradients 
          Height          =   6375
          Left            =   240
          TabIndex        =   21
@@ -495,7 +495,7 @@ Attribute VB_Exposed = False
 ' because we want gradient modifications to only happen in linear mode (matching the construction UI).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

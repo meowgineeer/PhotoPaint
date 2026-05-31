@@ -29,7 +29,7 @@ Begin VB.Form options_Input
    ScaleWidth      =   553
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdButtonStrip btsMouseWheel 
+   Begin PhotoPaint.pdButtonStrip btsMouseWheel 
       Height          =   975
       Left            =   0
       TabIndex        =   3
@@ -39,7 +39,7 @@ Begin VB.Form options_Input
       _ExtentY        =   1720
       Caption         =   "mouse wheel behavior"
    End
-   Begin PhotoDemon.pdSpinner spnSnapDistance 
+   Begin PhotoPaint.pdSpinner spnSnapDistance 
       Height          =   375
       Index           =   0
       Left            =   120
@@ -53,7 +53,7 @@ Begin VB.Form options_Input
       Max             =   255
       Value           =   8
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   23
       Left            =   0
@@ -65,7 +65,7 @@ Begin VB.Form options_Input
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   25
       Left            =   4080
@@ -77,7 +77,7 @@ Begin VB.Form options_Input
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdSpinner spnSnapDistance 
+   Begin PhotoPaint.pdSpinner spnSnapDistance 
       Height          =   375
       Index           =   1
       Left            =   4200
@@ -92,7 +92,7 @@ Begin VB.Form options_Input
       SigDigits       =   1
       Value           =   5
    End
-   Begin PhotoDemon.pdButtonStrip btsMouseHighRes 
+   Begin PhotoPaint.pdButtonStrip btsMouseHighRes 
       Height          =   975
       Left            =   0
       TabIndex        =   2
@@ -127,7 +127,7 @@ Attribute VB_Exposed = False
 ' (That module is responsible for all low-level preference reading/writing.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

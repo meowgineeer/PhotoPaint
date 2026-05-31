@@ -24,7 +24,7 @@ Begin VB.Form FormSnow
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   808
-   Begin PhotoDemon.pdSlider sldIntensity 
+   Begin PhotoPaint.pdSlider sldIntensity 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -38,7 +38,7 @@ Begin VB.Form FormSnow
       Value           =   10
       DefaultValue    =   10
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -47,7 +47,7 @@ Begin VB.Form FormSnow
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -56,7 +56,7 @@ Begin VB.Form FormSnow
       _ExtentX        =   21378
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sldAngle 
+   Begin PhotoPaint.pdSlider sldAngle 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -69,7 +69,7 @@ Begin VB.Form FormSnow
       Max             =   90
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSlider sldWind 
+   Begin PhotoPaint.pdSlider sldWind 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -83,7 +83,7 @@ Begin VB.Form FormSnow
       Value           =   2
       DefaultValue    =   2
    End
-   Begin PhotoDemon.pdSlider sldSize 
+   Begin PhotoPaint.pdSlider sldSize 
       Height          =   705
       Left            =   6000
       TabIndex        =   5
@@ -97,7 +97,7 @@ Begin VB.Form FormSnow
       Value           =   20
       DefaultValue    =   20
    End
-   Begin PhotoDemon.pdSlider sldOpacity 
+   Begin PhotoPaint.pdSlider sldOpacity 
       Height          =   705
       Left            =   6000
       TabIndex        =   6
@@ -111,7 +111,7 @@ Begin VB.Form FormSnow
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdCheckBox chkRandomize 
+   Begin PhotoPaint.pdCheckBox chkRandomize 
       Height          =   375
       Left            =   6000
       TabIndex        =   7
@@ -146,7 +146,7 @@ Attribute VB_Exposed = False
 ' result is surprisingly good, especially if used over photos of winter scenes.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

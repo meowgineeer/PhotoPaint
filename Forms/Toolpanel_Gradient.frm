@@ -30,7 +30,7 @@ Begin VB.Form toolpanel_Gradient
    ScaleWidth      =   720
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdSlider sldOffset 
+   Begin PhotoPaint.pdSlider sldOffset 
       Height          =   735
       Left            =   8160
       TabIndex        =   2
@@ -47,7 +47,7 @@ Begin VB.Form toolpanel_Gradient
       Value           =   75
       DefaultValue    =   75
    End
-   Begin PhotoDemon.pdGradientSelector grdPrimary 
+   Begin PhotoPaint.pdGradientSelector grdPrimary 
       Height          =   450
       Left            =   120
       TabIndex        =   0
@@ -57,7 +57,7 @@ Begin VB.Form toolpanel_Gradient
       _ExtentY        =   794
       FontSize        =   10
    End
-   Begin PhotoDemon.pdDropDown cboSetting 
+   Begin PhotoPaint.pdDropDown cboSetting 
       Height          =   375
       Index           =   2
       Left            =   5640
@@ -68,7 +68,7 @@ Begin VB.Form toolpanel_Gradient
       _ExtentY        =   661
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdDropDown cboSetting 
+   Begin PhotoPaint.pdDropDown cboSetting 
       Height          =   375
       Index           =   0
       Left            =   3000
@@ -79,7 +79,7 @@ Begin VB.Form toolpanel_Gradient
       _ExtentY        =   1296
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   0
       Left            =   0
@@ -91,7 +91,7 @@ Begin VB.Form toolpanel_Gradient
       Caption         =   "gradient"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   855
       Index           =   0
       Left            =   0
@@ -100,7 +100,7 @@ Begin VB.Form toolpanel_Gradient
       Width           =   3255
       _ExtentX        =   5741
       _ExtentY        =   1508
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   0
          Left            =   2760
@@ -111,7 +111,7 @@ Begin VB.Form toolpanel_Gradient
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSlider sldSetting 
+      Begin PhotoPaint.pdSlider sldSetting 
          CausesValidation=   0   'False
          Height          =   690
          Index           =   0
@@ -129,7 +129,7 @@ Begin VB.Form toolpanel_Gradient
          DefaultValue    =   100
       End
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   1
       Left            =   2880
@@ -141,7 +141,7 @@ Begin VB.Form toolpanel_Gradient
       Caption         =   "blend mode"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   855
       Index           =   1
       Left            =   3120
@@ -150,7 +150,7 @@ Begin VB.Form toolpanel_Gradient
       Width           =   3135
       _ExtentX        =   5530
       _ExtentY        =   1508
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   1
          Left            =   2640
@@ -161,7 +161,7 @@ Begin VB.Form toolpanel_Gradient
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdDropDown cboSetting 
+      Begin PhotoPaint.pdDropDown cboSetting 
          Height          =   735
          Index           =   1
          Left            =   120
@@ -174,7 +174,7 @@ Begin VB.Form toolpanel_Gradient
          FontSizeCaption =   10
       End
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   2
       Left            =   5520
@@ -186,7 +186,7 @@ Begin VB.Form toolpanel_Gradient
       Caption         =   "shape"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   855
       Index           =   2
       Left            =   6000
@@ -195,7 +195,7 @@ Begin VB.Form toolpanel_Gradient
       Width           =   3015
       _ExtentX        =   14631
       _ExtentY        =   3625
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   2
          Left            =   2520
@@ -206,7 +206,7 @@ Begin VB.Form toolpanel_Gradient
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdDropDown cboSetting 
+      Begin PhotoPaint.pdDropDown cboSetting 
          Height          =   735
          Index           =   3
          Left            =   120
@@ -235,7 +235,7 @@ Attribute VB_Exposed = False
 'This form includes all user-editable settings for the "gradient" canvas tool.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

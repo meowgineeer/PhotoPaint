@@ -25,7 +25,7 @@ Begin VB.Form FormColorHalftone
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   778
    Visible         =   0   'False
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -34,7 +34,7 @@ Begin VB.Form FormColorHalftone
       _ExtentX        =   20585
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -43,7 +43,7 @@ Begin VB.Form FormColorHalftone
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltAngle 
+   Begin PhotoPaint.pdSlider sltAngle 
       Height          =   705
       Index           =   0
       Left            =   6000
@@ -56,7 +56,7 @@ Begin VB.Form FormColorHalftone
       Max             =   360
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -71,7 +71,7 @@ Begin VB.Form FormColorHalftone
       Value           =   5
       DefaultValue    =   5
    End
-   Begin PhotoDemon.pdSlider sltAngle 
+   Begin PhotoPaint.pdSlider sltAngle 
       Height          =   705
       Index           =   1
       Left            =   6000
@@ -85,7 +85,7 @@ Begin VB.Form FormColorHalftone
       SigDigits       =   1
       DefaultValue    =   33.3
    End
-   Begin PhotoDemon.pdSlider sltAngle 
+   Begin PhotoPaint.pdSlider sltAngle 
       Height          =   705
       Index           =   2
       Left            =   6000
@@ -99,7 +99,7 @@ Begin VB.Form FormColorHalftone
       SigDigits       =   1
       DefaultValue    =   66.7
    End
-   Begin PhotoDemon.pdSlider sltDensity 
+   Begin PhotoPaint.pdSlider sltDensity 
       Height          =   705
       Left            =   6000
       TabIndex        =   6
@@ -138,7 +138,7 @@ Attribute VB_Exposed = False
 ' http://www.jhlabs.com/ip/filters/index.html
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

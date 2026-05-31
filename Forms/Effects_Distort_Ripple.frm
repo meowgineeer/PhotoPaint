@@ -24,7 +24,7 @@ Begin VB.Form FormRipple
    ScaleHeight     =   447
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   809
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormRipple
       _ExtentX        =   21405
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -44,7 +44,7 @@ Begin VB.Form FormRipple
       DisableZoomPan  =   -1  'True
       PointSelection  =   -1  'True
    End
-   Begin PhotoDemon.pdButtonStrip btsOptions 
+   Begin PhotoPaint.pdButtonStrip btsOptions 
       Height          =   1080
       Left            =   6000
       TabIndex        =   2
@@ -54,7 +54,7 @@ Begin VB.Form FormRipple
       _ExtentY        =   1905
       Caption         =   "options"
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4335
       Index           =   0
       Left            =   5880
@@ -62,7 +62,7 @@ Begin VB.Form FormRipple
       Width           =   6135
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdSlider sltAmplitude 
+      Begin PhotoPaint.pdSlider sltAmplitude 
          Height          =   705
          Left            =   120
          TabIndex        =   6
@@ -75,7 +75,7 @@ Begin VB.Form FormRipple
          Value           =   80
          DefaultValue    =   80
       End
-      Begin PhotoDemon.pdSlider sltWavelength 
+      Begin PhotoPaint.pdSlider sltWavelength 
          Height          =   705
          Left            =   120
          TabIndex        =   7
@@ -89,7 +89,7 @@ Begin VB.Form FormRipple
          Value           =   40
          DefaultValue    =   40
       End
-      Begin PhotoDemon.pdSlider sltQuality 
+      Begin PhotoPaint.pdSlider sltQuality 
          Height          =   705
          Left            =   120
          TabIndex        =   8
@@ -104,7 +104,7 @@ Begin VB.Form FormRipple
          NotchPosition   =   2
          NotchValueCustom=   2
       End
-      Begin PhotoDemon.pdSlider sltXCenter 
+      Begin PhotoPaint.pdSlider sltXCenter 
          Height          =   405
          Left            =   120
          TabIndex        =   9
@@ -118,7 +118,7 @@ Begin VB.Form FormRipple
          NotchPosition   =   2
          NotchValueCustom=   0.5
       End
-      Begin PhotoDemon.pdSlider sltYCenter 
+      Begin PhotoPaint.pdSlider sltYCenter 
          Height          =   405
          Left            =   3120
          TabIndex        =   10
@@ -132,7 +132,7 @@ Begin VB.Form FormRipple
          NotchPosition   =   2
          NotchValueCustom=   0.5
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   330
          Index           =   0
          Left            =   120
@@ -144,7 +144,7 @@ Begin VB.Form FormRipple
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblExplanation 
+      Begin PhotoPaint.pdLabel lblExplanation 
          Height          =   435
          Index           =   0
          Left            =   240
@@ -159,7 +159,7 @@ Begin VB.Form FormRipple
          Layout          =   1
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4335
       Index           =   1
       Left            =   5880
@@ -168,7 +168,7 @@ Begin VB.Form FormRipple
       Width           =   6135
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdSlider sltRadius 
+      Begin PhotoPaint.pdSlider sltRadius 
          Height          =   705
          Left            =   120
          TabIndex        =   3
@@ -183,7 +183,7 @@ Begin VB.Form FormRipple
          NotchPosition   =   2
          NotchValueCustom=   100
       End
-      Begin PhotoDemon.pdSlider sltPhase 
+      Begin PhotoPaint.pdSlider sltPhase 
          Height          =   705
          Left            =   120
          TabIndex        =   4
@@ -194,7 +194,7 @@ Begin VB.Form FormRipple
          Caption         =   "time (phase)"
          Max             =   360
       End
-      Begin PhotoDemon.pdDropDown cboEdges 
+      Begin PhotoPaint.pdDropDown cboEdges 
          Height          =   735
          Left            =   120
          TabIndex        =   5
@@ -232,7 +232,7 @@ Attribute VB_Exposed = False
 ' original version at the following link (good as of 07 January '13): http://www.jhlabs.com/ip/filters/index.html
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

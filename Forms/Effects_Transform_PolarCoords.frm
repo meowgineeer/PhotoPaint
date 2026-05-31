@@ -24,7 +24,7 @@ Begin VB.Form FormPolar
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   807
-   Begin PhotoDemon.pdButtonStrip btsRender 
+   Begin PhotoPaint.pdButtonStrip btsRender 
       Height          =   1095
       Left            =   6000
       TabIndex        =   6
@@ -34,7 +34,7 @@ Begin VB.Form FormPolar
       _ExtentY        =   1931
       Caption         =   "mode"
    End
-   Begin PhotoDemon.pdCheckBox chkSwapXY 
+   Begin PhotoPaint.pdCheckBox chkSwapXY 
       Height          =   330
       Left            =   6120
       TabIndex        =   1
@@ -44,7 +44,7 @@ Begin VB.Form FormPolar
       _ExtentY        =   582
       Caption         =   "swap x and y coordinates"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -53,7 +53,7 @@ Begin VB.Form FormPolar
       _ExtentX        =   21352
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   3
@@ -63,7 +63,7 @@ Begin VB.Form FormPolar
       _ExtentY        =   9922
       DisableZoomPan  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   5
@@ -78,7 +78,7 @@ Begin VB.Form FormPolar
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdDropDown cboEdges 
+   Begin PhotoPaint.pdDropDown cboEdges 
       Height          =   735
       Left            =   6000
       TabIndex        =   2
@@ -88,7 +88,7 @@ Begin VB.Form FormPolar
       _ExtentY        =   1296
       Caption         =   "if pixels lie outside the image..."
    End
-   Begin PhotoDemon.pdDropDown cboConvert 
+   Begin PhotoPaint.pdDropDown cboConvert 
       Height          =   735
       Left            =   6000
       TabIndex        =   4
@@ -119,7 +119,7 @@ Attribute VB_Exposed = False
 ' original version at the following link (good as of 07 January '13): http://www.jhlabs.com/ip/filters/index.html
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

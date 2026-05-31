@@ -30,7 +30,7 @@ Begin VB.Form toolpanel_Fill
    ScaleWidth      =   786
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdDropDown cboSource 
+   Begin PhotoPaint.pdDropDown cboSource 
       Height          =   375
       Left            =   120
       TabIndex        =   2
@@ -40,7 +40,7 @@ Begin VB.Form toolpanel_Fill
       _ExtentY        =   661
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdButtonStrip btsFillArea 
+   Begin PhotoPaint.pdButtonStrip btsFillArea 
       Height          =   450
       Left            =   8280
       TabIndex        =   0
@@ -50,7 +50,7 @@ Begin VB.Form toolpanel_Fill
       _ExtentY        =   794
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdSlider sldFillTolerance 
+   Begin PhotoPaint.pdSlider sldFillTolerance 
       CausesValidation=   0   'False
       Height          =   360
       Left            =   5520
@@ -66,7 +66,7 @@ Begin VB.Form toolpanel_Fill
       Value           =   15
       DefaultValue    =   15
    End
-   Begin PhotoDemon.pdDropDown cboFillBlendMode 
+   Begin PhotoPaint.pdDropDown cboFillBlendMode 
       Height          =   375
       Left            =   3000
       TabIndex        =   3
@@ -76,7 +76,7 @@ Begin VB.Form toolpanel_Fill
       _ExtentY        =   1296
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   0
       Left            =   0
@@ -88,7 +88,7 @@ Begin VB.Form toolpanel_Fill
       Caption         =   "fill source"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   855
       Index           =   0
       Left            =   0
@@ -97,7 +97,7 @@ Begin VB.Form toolpanel_Fill
       Width           =   3255
       _ExtentX        =   5741
       _ExtentY        =   1508
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   0
          Left            =   2760
@@ -108,7 +108,7 @@ Begin VB.Form toolpanel_Fill
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdBrushSelector bsFillStyle 
+      Begin PhotoPaint.pdBrushSelector bsFillStyle 
          Height          =   735
          Left            =   0
          TabIndex        =   10
@@ -119,7 +119,7 @@ Begin VB.Form toolpanel_Fill
          Caption         =   "brush style"
          FontSize        =   10
       End
-      Begin PhotoDemon.pdSlider sldOpacity 
+      Begin PhotoPaint.pdSlider sldOpacity 
          CausesValidation=   0   'False
          Height          =   690
          Left            =   0
@@ -136,7 +136,7 @@ Begin VB.Form toolpanel_Fill
          DefaultValue    =   100
       End
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   1
       Left            =   2880
@@ -148,7 +148,7 @@ Begin VB.Form toolpanel_Fill
       Caption         =   "blend mode"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   855
       Index           =   1
       Left            =   3600
@@ -157,7 +157,7 @@ Begin VB.Form toolpanel_Fill
       Width           =   3135
       _ExtentX        =   5530
       _ExtentY        =   1508
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   1
          Left            =   2640
@@ -168,7 +168,7 @@ Begin VB.Form toolpanel_Fill
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdDropDown cboFillAlphaMode 
+      Begin PhotoPaint.pdDropDown cboFillAlphaMode 
          Height          =   735
          Left            =   120
          TabIndex        =   9
@@ -180,7 +180,7 @@ Begin VB.Form toolpanel_Fill
          FontSizeCaption =   10
       End
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   2
       Left            =   5520
@@ -192,7 +192,7 @@ Begin VB.Form toolpanel_Fill
       Caption         =   "tolerance"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   855
       Index           =   2
       Left            =   4800
@@ -201,7 +201,7 @@ Begin VB.Form toolpanel_Fill
       Width           =   3135
       _ExtentX        =   14631
       _ExtentY        =   3625
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   2
          Left            =   2640
@@ -212,7 +212,7 @@ Begin VB.Form toolpanel_Fill
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdDropDown cboFillCompare 
+      Begin PhotoPaint.pdDropDown cboFillCompare 
          Height          =   765
          Left            =   120
          TabIndex        =   13
@@ -224,7 +224,7 @@ Begin VB.Form toolpanel_Fill
          FontSizeCaption =   10
       End
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   345
       Index           =   3
       Left            =   8160
@@ -236,7 +236,7 @@ Begin VB.Form toolpanel_Fill
       Caption         =   "fill area"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   1455
       Index           =   3
       Left            =   8160
@@ -245,7 +245,7 @@ Begin VB.Form toolpanel_Fill
       Width           =   3495
       _ExtentX        =   14631
       _ExtentY        =   3625
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   3
          Left            =   3000
@@ -256,7 +256,7 @@ Begin VB.Form toolpanel_Fill
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdButtonStrip btsFillMerge 
+      Begin PhotoPaint.pdButtonStrip btsFillMerge 
          Height          =   810
          Left            =   120
          TabIndex        =   16
@@ -267,7 +267,7 @@ Begin VB.Form toolpanel_Fill
          Caption         =   "sample from"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdCheckBox chkAntialiasing 
+      Begin PhotoPaint.pdCheckBox chkAntialiasing 
          Height          =   375
          Left            =   225
          TabIndex        =   17
@@ -294,7 +294,7 @@ Attribute VB_Exposed = False
 'This form includes all user-editable settings for PD's bucket fill tool.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

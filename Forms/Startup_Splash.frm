@@ -48,7 +48,7 @@ Attribute VB_Exposed = False
 '             (then produce a 32-bpp copy ourselves)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -155,8 +155,8 @@ Public Sub PrepareRestOfSplash()
         textX = Interface.FixDPI(40)
         textY = (formHeight - titleH) \ 2 - Interface.FixDPI(15)
         
-        titleShadowDIB.AlphaBlendToDC m_splashDIB.GetDIBDC, , textX + Interface.FixDPI(2), textY + Interface.FixDPI(2)
-        titleDIB.AlphaBlendToDC m_splashDIB.GetDIBDC, , textX, textY
+        titleShadowDIB.AlphaBlendToDC m_splashDIB.GetDIBDC, 255, textX + Interface.FixDPI(2), textY + Interface.FixDPI(2)
+        titleDIB.AlphaBlendToDC m_splashDIB.GetDIBDC, 255, textX, textY
         
         Set titleDIB = Nothing
         Set titleShadowDIB = Nothing

@@ -25,7 +25,7 @@ Begin VB.Form FormPencil
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   802
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdDropDown cboStyle 
+   Begin PhotoPaint.pdDropDown cboStyle 
       Height          =   735
       Left            =   6000
       TabIndex        =   4
@@ -35,7 +35,7 @@ Begin VB.Form FormPencil
       _ExtentY        =   661
       Caption         =   "style"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -44,7 +44,7 @@ Begin VB.Form FormPencil
       _ExtentX        =   21220
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -53,7 +53,7 @@ Begin VB.Form FormPencil
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -67,7 +67,7 @@ Begin VB.Form FormPencil
       Value           =   3
       DefaultValue    =   3
    End
-   Begin PhotoDemon.pdSlider sltIntensity 
+   Begin PhotoPaint.pdSlider sltIntensity 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -102,7 +102,7 @@ Attribute VB_Exposed = False
 ' central compositor for overlaying various image copies keeps things nice and fast.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

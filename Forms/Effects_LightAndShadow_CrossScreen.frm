@@ -24,7 +24,7 @@ Begin VB.Form FormCrossScreen
    ScaleHeight     =   420
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   778
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormCrossScreen
       _ExtentX        =   20585
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5340
       Left            =   120
       TabIndex        =   1
@@ -42,7 +42,7 @@ Begin VB.Form FormCrossScreen
       _ExtentX        =   9922
       _ExtentY        =   9419
    End
-   Begin PhotoDemon.pdSlider sltAngle 
+   Begin PhotoPaint.pdSlider sltAngle 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -56,7 +56,7 @@ Begin VB.Form FormCrossScreen
       Value           =   45
       DefaultValue    =   45
    End
-   Begin PhotoDemon.pdSlider sltDistance 
+   Begin PhotoPaint.pdSlider sltDistance 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -71,7 +71,7 @@ Begin VB.Form FormCrossScreen
       Value           =   10
       DefaultValue    =   10
    End
-   Begin PhotoDemon.pdSlider sltStrength 
+   Begin PhotoPaint.pdSlider sltStrength 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -85,7 +85,7 @@ Begin VB.Form FormCrossScreen
       Value           =   50
       DefaultValue    =   50
    End
-   Begin PhotoDemon.pdSlider sltThreshold 
+   Begin PhotoPaint.pdSlider sltThreshold 
       Height          =   705
       Left            =   6000
       TabIndex        =   5
@@ -99,7 +99,7 @@ Begin VB.Form FormCrossScreen
       Value           =   20
       DefaultValue    =   20
    End
-   Begin PhotoDemon.pdSlider sltSpokes 
+   Begin PhotoPaint.pdSlider sltSpokes 
       Height          =   705
       Left            =   6000
       TabIndex        =   6
@@ -113,7 +113,7 @@ Begin VB.Form FormCrossScreen
       Value           =   4
       DefaultValue    =   4
    End
-   Begin PhotoDemon.pdSlider sltSoftness 
+   Begin PhotoPaint.pdSlider sltSoftness 
       Height          =   705
       Left            =   6000
       TabIndex        =   7
@@ -154,7 +154,7 @@ Attribute VB_Exposed = False
 ' to revisit this decision in the future, I've left the engine code for FreeImage and our own internal PD method as well.
 '
 'All source code in this file is licensed under a modified BSD license. This means you may use the code in your own
-' projects IF you provide attribution. For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution. For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 

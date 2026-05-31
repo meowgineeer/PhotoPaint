@@ -24,7 +24,7 @@ Begin VB.Form FormFxTruchet
    ScaleHeight     =   438
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   806
-   Begin PhotoDemon.pdSlider sldLineWidth 
+   Begin PhotoPaint.pdSlider sldLineWidth 
       Height          =   735
       Left            =   9000
       TabIndex        =   10
@@ -39,7 +39,7 @@ Begin VB.Form FormFxTruchet
       NotchPosition   =   2
       NotchValueCustom=   20
    End
-   Begin PhotoDemon.pdSlider sldForeground 
+   Begin PhotoPaint.pdSlider sldForeground 
       Height          =   495
       Left            =   9000
       TabIndex        =   8
@@ -53,7 +53,7 @@ Begin VB.Form FormFxTruchet
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   0
       Left            =   6000
@@ -64,7 +64,7 @@ Begin VB.Form FormFxTruchet
       Caption         =   "color and opacity"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -73,7 +73,7 @@ Begin VB.Form FormFxTruchet
       _ExtentX        =   21325
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sldScale 
+   Begin PhotoPaint.pdSlider sldScale 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -89,7 +89,7 @@ Begin VB.Form FormFxTruchet
       NotchPosition   =   2
       NotchValueCustom=   25
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5505
       Left            =   120
       TabIndex        =   1
@@ -99,7 +99,7 @@ Begin VB.Form FormFxTruchet
       _ExtentY        =   9710
       DisableZoomPan  =   -1  'True
    End
-   Begin PhotoDemon.pdDropDown cboBlendMode 
+   Begin PhotoPaint.pdDropDown cboBlendMode 
       Height          =   735
       Left            =   6000
       TabIndex        =   3
@@ -109,7 +109,7 @@ Begin VB.Form FormFxTruchet
       _ExtentY        =   1296
       Caption         =   "blend mode"
    End
-   Begin PhotoDemon.pdRandomizeUI rndSeed 
+   Begin PhotoPaint.pdRandomizeUI rndSeed 
       Height          =   735
       Left            =   9000
       TabIndex        =   4
@@ -120,7 +120,7 @@ Begin VB.Form FormFxTruchet
       Caption         =   "random seed:"
       MaxLength       =   15
    End
-   Begin PhotoDemon.pdColorSelector cpForeground 
+   Begin PhotoPaint.pdColorSelector cpForeground 
       Height          =   495
       Left            =   6000
       TabIndex        =   5
@@ -130,7 +130,7 @@ Begin VB.Form FormFxTruchet
       _ExtentY        =   873
       curColor        =   0
    End
-   Begin PhotoDemon.pdDropDown cboGenerator 
+   Begin PhotoPaint.pdDropDown cboGenerator 
       Height          =   735
       Left            =   6000
       TabIndex        =   6
@@ -140,7 +140,7 @@ Begin VB.Form FormFxTruchet
       _ExtentY        =   1296
       Caption         =   "shape"
    End
-   Begin PhotoDemon.pdColorSelector cpBackground 
+   Begin PhotoPaint.pdColorSelector cpBackground 
       Height          =   495
       Left            =   6000
       TabIndex        =   7
@@ -149,7 +149,7 @@ Begin VB.Form FormFxTruchet
       _ExtentX        =   5106
       _ExtentY        =   873
    End
-   Begin PhotoDemon.pdSlider sldBackground 
+   Begin PhotoPaint.pdSlider sldBackground 
       Height          =   495
       Left            =   9000
       TabIndex        =   9
@@ -163,7 +163,7 @@ Begin VB.Form FormFxTruchet
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdDropDown cboPattern 
+   Begin PhotoPaint.pdDropDown cboPattern 
       Height          =   735
       Left            =   6000
       TabIndex        =   11
@@ -193,7 +193,7 @@ Attribute VB_Exposed = False
 ' (Note that PD's implementation shares a lot of code with the Render > Clouds effect, by design.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

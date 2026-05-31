@@ -26,7 +26,7 @@ Begin VB.Form FormNewLayer
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   642
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdDropDown cboPosition 
+   Begin PhotoPaint.pdDropDown cboPosition 
       Height          =   375
       Left            =   480
       TabIndex        =   8
@@ -35,7 +35,7 @@ Begin VB.Form FormNewLayer
       _ExtentX        =   15690
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdTextBox txtLayerName 
+   Begin PhotoPaint.pdTextBox txtLayerName 
       Height          =   345
       Left            =   480
       TabIndex        =   1
@@ -45,7 +45,7 @@ Begin VB.Form FormNewLayer
       _ExtentY        =   609
       FontSize        =   11
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -55,7 +55,7 @@ Begin VB.Form FormNewLayer
       _ExtentX        =   16986
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdRadioButton optLayer 
+   Begin PhotoPaint.pdRadioButton optLayer 
       CausesValidation=   0   'False
       Height          =   330
       Index           =   0
@@ -68,7 +68,7 @@ Begin VB.Form FormNewLayer
       Caption         =   "transparent"
       Value           =   -1  'True
    End
-   Begin PhotoDemon.pdRadioButton optLayer 
+   Begin PhotoPaint.pdRadioButton optLayer 
       CausesValidation=   0   'False
       Height          =   330
       Index           =   1
@@ -80,7 +80,7 @@ Begin VB.Form FormNewLayer
       _ExtentY        =   582
       Caption         =   "black"
    End
-   Begin PhotoDemon.pdRadioButton optLayer 
+   Begin PhotoPaint.pdRadioButton optLayer 
       CausesValidation=   0   'False
       Height          =   330
       Index           =   2
@@ -92,7 +92,7 @@ Begin VB.Form FormNewLayer
       _ExtentY        =   582
       Caption         =   "white"
    End
-   Begin PhotoDemon.pdRadioButton optLayer 
+   Begin PhotoPaint.pdRadioButton optLayer 
       CausesValidation=   0   'False
       Height          =   330
       Index           =   3
@@ -104,7 +104,7 @@ Begin VB.Form FormNewLayer
       _ExtentY        =   582
       Caption         =   "custom color"
    End
-   Begin PhotoDemon.pdColorSelector csBackground 
+   Begin PhotoPaint.pdColorSelector csBackground 
       Height          =   615
       Left            =   840
       TabIndex        =   6
@@ -114,7 +114,7 @@ Begin VB.Form FormNewLayer
       _ExtentY        =   1085
       curColor        =   16749332
    End
-   Begin PhotoDemon.pdCheckBox chkAutoSelectLayer 
+   Begin PhotoPaint.pdCheckBox chkAutoSelectLayer 
       Height          =   300
       Left            =   480
       TabIndex        =   7
@@ -124,7 +124,7 @@ Begin VB.Form FormNewLayer
       _ExtentY        =   582
       Caption         =   "make the new layer the active layer"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   2
       Left            =   240
@@ -136,7 +136,7 @@ Begin VB.Form FormNewLayer
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   1
       Left            =   240
@@ -148,7 +148,7 @@ Begin VB.Form FormNewLayer
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   0
       Left            =   240
@@ -177,7 +177,7 @@ Attribute VB_Exposed = False
 ' and the command bar allows for saving/loading presets just like every other tool.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -24,7 +24,7 @@ Begin VB.Form FormRadialBlur
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   802
-   Begin PhotoDemon.pdButtonStrip btsRender 
+   Begin PhotoPaint.pdButtonStrip btsRender 
       Height          =   1095
       Left            =   6000
       TabIndex        =   4
@@ -34,7 +34,7 @@ Begin VB.Form FormRadialBlur
       _ExtentY        =   1931
       Caption         =   "render emphasis"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -43,7 +43,7 @@ Begin VB.Form FormRadialBlur
       _ExtentX        =   21220
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -53,7 +53,7 @@ Begin VB.Form FormRadialBlur
       _ExtentY        =   9922
       DisableZoomPan  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -68,7 +68,7 @@ Begin VB.Form FormRadialBlur
       Value           =   1
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdCheckBox chkSymmetry 
+   Begin PhotoPaint.pdCheckBox chkSymmetry 
       Height          =   300
       Left            =   6120
       TabIndex        =   3
@@ -99,7 +99,7 @@ Attribute VB_Exposed = False
 ' the project before applying any actions at a large radius.
 '
 'All source code in this file is licensed under a modified BSD license. This means you may use the code in your own
-' projects IF you provide attribution. For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution. For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 

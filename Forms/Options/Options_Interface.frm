@@ -30,7 +30,7 @@ Begin VB.Form options_Interface
    ScaleWidth      =   553
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdButton cmdResetRemember 
+   Begin PhotoPaint.pdButton cmdResetRemember 
       Height          =   735
       Left            =   240
       TabIndex        =   6
@@ -40,7 +40,7 @@ Begin VB.Form options_Interface
       _ExtentY        =   1296
       Caption         =   "reset all ""remember my choice"" decisions"
    End
-   Begin PhotoDemon.pdPictureBox picGrid 
+   Begin PhotoPaint.pdPictureBox picGrid 
       Height          =   735
       Left            =   150
       Top             =   4920
@@ -48,7 +48,7 @@ Begin VB.Form options_Interface
       _ExtentX        =   1296
       _ExtentY        =   1296
    End
-   Begin PhotoDemon.pdColorSelector csCanvasColor 
+   Begin PhotoPaint.pdColorSelector csCanvasColor 
       Height          =   375
       Left            =   3840
       TabIndex        =   0
@@ -57,7 +57,7 @@ Begin VB.Form options_Interface
       _ExtentX        =   3836
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdButtonStrip btsTitleText 
+   Begin PhotoPaint.pdButtonStrip btsTitleText 
       Height          =   975
       Left            =   120
       TabIndex        =   1
@@ -68,7 +68,7 @@ Begin VB.Form options_Interface
       Caption         =   "title bar text:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   0
       Left            =   0
@@ -80,7 +80,7 @@ Begin VB.Form options_Interface
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdDropDown cboAlphaCheckSize 
+   Begin PhotoPaint.pdDropDown cboAlphaCheckSize 
       Height          =   810
       Left            =   1080
       TabIndex        =   2
@@ -91,7 +91,7 @@ Begin VB.Form options_Interface
       Caption         =   "grid size:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdDropDown cboAlphaCheck 
+   Begin PhotoPaint.pdDropDown cboAlphaCheck 
       Height          =   795
       Left            =   4140
       TabIndex        =   3
@@ -102,7 +102,7 @@ Begin VB.Form options_Interface
       Caption         =   "grid colors:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdColorSelector csAlphaOne 
+   Begin PhotoPaint.pdColorSelector csAlphaOne 
       Height          =   690
       Left            =   7260
       TabIndex        =   4
@@ -112,7 +112,7 @@ Begin VB.Form options_Interface
       _ExtentY        =   1217
       ShowMainWindowColor=   0   'False
    End
-   Begin PhotoDemon.pdColorSelector csAlphaTwo 
+   Begin PhotoPaint.pdColorSelector csAlphaTwo 
       Height          =   690
       Left            =   7770
       TabIndex        =   5
@@ -122,7 +122,7 @@ Begin VB.Form options_Interface
       _ExtentY        =   1217
       ShowMainWindowColor=   0   'False
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   2
       Left            =   0
@@ -134,7 +134,7 @@ Begin VB.Form options_Interface
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblCanvasColor 
+   Begin PhotoPaint.pdLabel lblCanvasColor 
       Height          =   240
       Left            =   120
       Top             =   420
@@ -145,7 +145,7 @@ Begin VB.Form options_Interface
       ForeColor       =   4210752
       Layout          =   2
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   1
       Left            =   0
@@ -157,7 +157,7 @@ Begin VB.Form options_Interface
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   3
       Left            =   0
@@ -169,7 +169,7 @@ Begin VB.Form options_Interface
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdCheckBox chkAfterPaste 
+   Begin PhotoPaint.pdCheckBox chkAfterPaste 
       Height          =   330
       Left            =   225
       TabIndex        =   7
@@ -204,7 +204,7 @@ Attribute VB_Exposed = False
 ' (That module is responsible for all low-level preference reading/writing.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

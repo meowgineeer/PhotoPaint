@@ -29,7 +29,7 @@ Begin VB.Form options_Metadata
    ScaleWidth      =   553
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdCheckBox chkLoadingOrientation 
+   Begin PhotoPaint.pdCheckBox chkLoadingOrientation 
       Height          =   330
       Left            =   180
       TabIndex        =   0
@@ -39,7 +39,7 @@ Begin VB.Form options_Metadata
       _ExtentY        =   582
       Caption         =   "obey auto-rotate instructions inside image files"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   1
       Left            =   0
@@ -51,7 +51,7 @@ Begin VB.Form options_Metadata
       FontSize        =   12
       ForeColor       =   5263440
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   0
       Left            =   0
@@ -63,7 +63,7 @@ Begin VB.Form options_Metadata
       FontSize        =   12
       ForeColor       =   5263440
    End
-   Begin PhotoDemon.pdCheckBox chkMetadataBinary 
+   Begin PhotoPaint.pdCheckBox chkMetadataBinary 
       Height          =   330
       Left            =   180
       TabIndex        =   1
@@ -74,7 +74,7 @@ Begin VB.Form options_Metadata
       Caption         =   "forcibly extract binary-type tags as Base64 (slow)"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdCheckBox chkMetadataJPEG 
+   Begin PhotoPaint.pdCheckBox chkMetadataJPEG 
       Height          =   330
       Left            =   180
       TabIndex        =   2
@@ -84,7 +84,7 @@ Begin VB.Form options_Metadata
       _ExtentY        =   582
       Caption         =   "estimate original JPEG quality settings"
    End
-   Begin PhotoDemon.pdCheckBox chkMetadataUnknown 
+   Begin PhotoPaint.pdCheckBox chkMetadataUnknown 
       Height          =   330
       Left            =   180
       TabIndex        =   3
@@ -95,7 +95,7 @@ Begin VB.Form options_Metadata
       Caption         =   "extract unknown tags"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdCheckBox chkMetadataDuplicates 
+   Begin PhotoPaint.pdCheckBox chkMetadataDuplicates 
       Height          =   330
       Left            =   180
       TabIndex        =   4
@@ -105,7 +105,7 @@ Begin VB.Form options_Metadata
       _ExtentY        =   582
       Caption         =   "automatically hide duplicate tags"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   4
       Left            =   0
@@ -117,7 +117,7 @@ Begin VB.Form options_Metadata
       FontSize        =   12
       ForeColor       =   5263440
    End
-   Begin PhotoDemon.pdCheckBox chkMetadataListPD 
+   Begin PhotoPaint.pdCheckBox chkMetadataListPD 
       Height          =   375
       Left            =   180
       TabIndex        =   5
@@ -152,7 +152,7 @@ Attribute VB_Exposed = False
 ' (That module is responsible for all low-level preference reading/writing.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

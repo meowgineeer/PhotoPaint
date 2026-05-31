@@ -30,7 +30,7 @@ Begin VB.Form layerpanel_Colors
    ScaleWidth      =   190
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdPaletteUI palSelector 
+   Begin PhotoPaint.pdPaletteUI palSelector 
       Height          =   735
       Left            =   120
       TabIndex        =   4
@@ -39,7 +39,7 @@ Begin VB.Form layerpanel_Colors
       _ExtentX        =   4683
       _ExtentY        =   1296
    End
-   Begin PhotoDemon.pdButton cmdSettings 
+   Begin PhotoPaint.pdButton cmdSettings 
       Height          =   255
       Left            =   2280
       TabIndex        =   3
@@ -49,7 +49,7 @@ Begin VB.Form layerpanel_Colors
       _ExtentY        =   450
       RenderMode      =   1
    End
-   Begin PhotoDemon.pdHistory clrHistory 
+   Begin PhotoPaint.pdHistory clrHistory 
       Height          =   195
       Left            =   0
       TabIndex        =   2
@@ -58,7 +58,7 @@ Begin VB.Form layerpanel_Colors
       _ExtentX        =   3969
       _ExtentY        =   344
    End
-   Begin PhotoDemon.pdColorVariants clrVariants 
+   Begin PhotoPaint.pdColorVariants clrVariants 
       Height          =   975
       Left            =   120
       TabIndex        =   1
@@ -67,7 +67,7 @@ Begin VB.Form layerpanel_Colors
       _ExtentX        =   2355
       _ExtentY        =   1720
    End
-   Begin PhotoDemon.pdColorWheel clrWheel 
+   Begin PhotoPaint.pdColorWheel clrWheel 
       Height          =   975
       Left            =   1680
       TabIndex        =   0
@@ -97,7 +97,7 @@ Attribute VB_Exposed = False
 'This form is the subpanel for the color selector panel.  It is currently under construction.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

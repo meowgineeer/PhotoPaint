@@ -26,7 +26,7 @@ Begin VB.Form FormFillContentAware
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   804
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdCheckBox chkSampleFrom 
+   Begin PhotoPaint.pdCheckBox chkSampleFrom 
       Height          =   375
       Index           =   0
       Left            =   2400
@@ -38,7 +38,7 @@ Begin VB.Form FormFillContentAware
       Caption         =   "above"
       FontSize        =   11
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   0
       Left            =   240
@@ -49,7 +49,7 @@ Begin VB.Form FormFillContentAware
       Caption         =   "sample from"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdButtonStrip btsFillOrder 
+   Begin PhotoPaint.pdButtonStrip btsFillOrder 
       Height          =   975
       Left            =   240
       TabIndex        =   6
@@ -59,7 +59,7 @@ Begin VB.Form FormFillContentAware
       _ExtentY        =   1720
       Caption         =   "fill order"
    End
-   Begin PhotoDemon.pdSlider sldOptions 
+   Begin PhotoPaint.pdSlider sldOptions 
       Height          =   975
       Index           =   1
       Left            =   6240
@@ -75,7 +75,7 @@ Begin VB.Form FormFillContentAware
       NotchPosition   =   2
       NotchValueCustom=   20
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -85,7 +85,7 @@ Begin VB.Form FormFillContentAware
       _ExtentX        =   21273
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sldOptions 
+   Begin PhotoPaint.pdSlider sldOptions 
       Height          =   975
       Index           =   2
       Left            =   6240
@@ -101,7 +101,7 @@ Begin VB.Form FormFillContentAware
       NotchPosition   =   2
       NotchValueCustom=   60
    End
-   Begin PhotoDemon.pdSlider sldOptions 
+   Begin PhotoPaint.pdSlider sldOptions 
       Height          =   975
       Index           =   3
       Left            =   6240
@@ -116,7 +116,7 @@ Begin VB.Form FormFillContentAware
       NotchPosition   =   2
       NotchValueCustom=   50
    End
-   Begin PhotoDemon.pdSlider sldOptions 
+   Begin PhotoPaint.pdSlider sldOptions 
       Height          =   975
       Index           =   4
       Left            =   6240
@@ -132,7 +132,7 @@ Begin VB.Form FormFillContentAware
       NotchPosition   =   2
       NotchValueCustom=   15
    End
-   Begin PhotoDemon.pdSlider sldOptions 
+   Begin PhotoPaint.pdSlider sldOptions 
       Height          =   975
       Index           =   0
       Left            =   240
@@ -148,7 +148,7 @@ Begin VB.Form FormFillContentAware
       NotchPosition   =   2
       NotchValueCustom=   200
    End
-   Begin PhotoDemon.pdCheckBox chkSampleFrom 
+   Begin PhotoPaint.pdCheckBox chkSampleFrom 
       Height          =   375
       Index           =   1
       Left            =   1200
@@ -160,7 +160,7 @@ Begin VB.Form FormFillContentAware
       Caption         =   "left"
       FontSize        =   11
    End
-   Begin PhotoDemon.pdCheckBox chkSampleFrom 
+   Begin PhotoPaint.pdCheckBox chkSampleFrom 
       Height          =   375
       Index           =   2
       Left            =   3720
@@ -172,7 +172,7 @@ Begin VB.Form FormFillContentAware
       Caption         =   "right"
       FontSize        =   11
    End
-   Begin PhotoDemon.pdCheckBox chkSampleFrom 
+   Begin PhotoPaint.pdCheckBox chkSampleFrom 
       Height          =   375
       Index           =   3
       Left            =   2400
@@ -203,7 +203,7 @@ Attribute VB_Exposed = False
 ' Please review that class for further details on the algorithm and how it works.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -24,7 +24,7 @@ Begin VB.Form FormMotionBlur
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   777
-   Begin PhotoDemon.pdButtonStrip btsStyle 
+   Begin PhotoPaint.pdButtonStrip btsStyle 
       Height          =   1095
       Left            =   6000
       TabIndex        =   5
@@ -34,7 +34,7 @@ Begin VB.Form FormMotionBlur
       _ExtentY        =   1931
       Caption         =   "style"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -43,7 +43,7 @@ Begin VB.Form FormMotionBlur
       _ExtentX        =   20558
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -52,7 +52,7 @@ Begin VB.Form FormMotionBlur
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltAngle 
+   Begin PhotoPaint.pdSlider sltAngle 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -65,7 +65,7 @@ Begin VB.Form FormMotionBlur
       Max             =   359.9
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdCheckBox chkSymmetry 
+   Begin PhotoPaint.pdCheckBox chkSymmetry 
       Height          =   330
       Left            =   6120
       TabIndex        =   3
@@ -75,7 +75,7 @@ Begin VB.Form FormMotionBlur
       _ExtentY        =   582
       Caption         =   "blur symmetrically"
    End
-   Begin PhotoDemon.pdSlider sltDistance 
+   Begin PhotoPaint.pdSlider sltDistance 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -111,7 +111,7 @@ Attribute VB_Exposed = False
 ' faster than either program.  Not bad, eh?
 '
 'All source code in this file is licensed under a modified BSD license. This means you may use the code in your own
-' projects IF you provide attribution. For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution. For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 

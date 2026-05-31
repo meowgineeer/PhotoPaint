@@ -29,7 +29,7 @@ Begin VB.Form options_Updates
    ScaleWidth      =   553
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdLabel lblExplanation 
+   Begin PhotoPaint.pdLabel lblExplanation 
       Height          =   3495
       Left            =   240
       Top             =   3000
@@ -40,7 +40,7 @@ Begin VB.Form options_Updates
       FontSize        =   9
       Layout          =   1
    End
-   Begin PhotoDemon.pdDropDown cboUpdates 
+   Begin PhotoPaint.pdDropDown cboUpdates 
       Height          =   735
       Index           =   0
       Left            =   180
@@ -52,7 +52,7 @@ Begin VB.Form options_Updates
       Caption         =   "automatically check for updates:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdDropDown cboUpdates 
+   Begin PhotoPaint.pdDropDown cboUpdates 
       Height          =   735
       Index           =   1
       Left            =   180
@@ -64,7 +64,7 @@ Begin VB.Form options_Updates
       Caption         =   "allow updates from these tracks:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   3
       Left            =   0
@@ -76,7 +76,7 @@ Begin VB.Form options_Updates
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdCheckBox chkUpdates 
+   Begin PhotoPaint.pdCheckBox chkUpdates 
       Height          =   330
       Index           =   0
       Left            =   180
@@ -112,7 +112,7 @@ Attribute VB_Exposed = False
 ' (That module is responsible for all low-level preference reading/writing.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -152,11 +152,11 @@ Private Sub Form_Load()
             chkUpdates(i).Enabled = False
         Next i
         
-        lblExplanation.Caption = g_Language.TranslateMessage("You have placed PhotoDemon in a restricted system folder.  Security precautions prevent PhotoDemon from modifying this folder, so automatic updates are now disabled.  To restore them, you must move PhotoDemon to a non-admin folder, like Desktop, Documents, or Downloads." & vbCrLf & vbCrLf & "(If you leave PhotoDemon where it is, please don't forget to visit photodemon.org from time to time to check for new versions.)")
+        lblExplanation.Caption = g_Language.TranslateMessage("You have placed PhotoDemon in a restricted system folder.  Security precautions prevent PhotoDemon from modifying this folder, so automatic updates are now disabled.  To restore them, you must move PhotoDemon to a non-admin folder, like Desktop, Documents, or Downloads." & vbCrLf & vbCrLf & "(If you leave PhotoDemon where it is, please don't forget to visit photopaint.org from time to time to check for new versions.)")
         
     'This is a normal (portable) install.  Populate the network access disclaimer in the "Update" panel.
     Else
-        lblExplanation.Caption = g_Language.TranslateMessage("The developers of PhotoDemon take privacy very seriously, so no information - statistical or otherwise - is uploaded during the update process.  Updates simply involve downloading several small XML files from photodemon.org. These files contain the latest software, plugin, and language version numbers. If updated versions are found, and user preferences allow, the updated files are then downloaded and patched automatically." & vbCrLf & vbCrLf & "If you still choose to disable updates, don't forget to visit photodemon.org from time to time to check for new versions.")
+        lblExplanation.Caption = g_Language.TranslateMessage("The developers of PhotoDemon take privacy very seriously, so no information - statistical or otherwise - is uploaded during the update process.  Updates simply involve downloading several small XML files from photopaint.org. These files contain the latest software, plugin, and language version numbers. If updated versions are found, and user preferences allow, the updated files are then downloaded and patched automatically." & vbCrLf & vbCrLf & "If you still choose to disable updates, don't forget to visit photopaint.org from time to time to check for new versions.")
     End If
     
 End Sub

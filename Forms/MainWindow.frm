@@ -2,7 +2,7 @@ VERSION 5.00
 Begin VB.Form FormMain 
    Appearance      =   0  'Flat
    BackColor       =   &H80000005&
-   Caption         =   "PhotoDemon by Tanner Helland - www.photodemon.org"
+   Caption         =   "PhotoDemon by Tanner Helland - www.photopaint.org"
    ClientHeight    =   11130
    ClientLeft      =   120
    ClientTop       =   765
@@ -25,13 +25,13 @@ Begin VB.Form FormMain
    ScaleHeight     =   742
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   1034
-   Begin PhotoDemon.pdAccelerator HotkeyManager 
+   Begin PhotoPaint.pdAccelerator HotkeyManager 
       Left            =   120
       Top             =   720
       _ExtentX        =   661
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdCanvas MainCanvas 
+   Begin PhotoPaint.pdCanvas MainCanvas 
       Height          =   5055
       Index           =   0
       Left            =   720
@@ -41,7 +41,7 @@ Begin VB.Form FormMain
       _ExtentX        =   10398
       _ExtentY        =   6588
    End
-   Begin PhotoDemon.pdDownload AsyncDownloader 
+   Begin PhotoPaint.pdDownload AsyncDownloader 
       Left            =   120
       Top             =   120
       _ExtentX        =   873
@@ -1990,7 +1990,7 @@ Attribute VB_Exposed = False
 'PhotoDemon's LICENSE file provides important information on code licensing and redistribution:
 ' https://github.com/tannerhelland/PhotoDemon/blob/master/LICENSE.md
 '
-'For further information, visit https://photodemon.org or https://github.com/tannerhelland/PhotoDemon
+'For further information, visit https://photopaint.org or https://github.com/tannerhelland/PhotoDemon
 '
 '***************************************************************************
 'Primary PhotoDemon Interface
@@ -2003,7 +2003,7 @@ Attribute VB_Exposed = False
 ' is sending parameters to other, more interesting sections of the program.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -2034,7 +2034,7 @@ Private Sub Form_Load()
     'PhotoDemon is always developed with the VB6 IDE set to "Break on All Errors"
     ' (Tools > Options > General > Error Trapping > Break on All Errors)
     '
-    'VB6-raised errors are *never* intended behavior in PhotoDemon.  The program is designed to check
+    'VB6-raised errors are *never* intended behavior in PhotoPaint.  The program is designed to check
     ' potential problem-states in advance, and deal with them preemptively instead of plowing ahead
     ' and waiting for errors to raise.  Built-in VB6 error handling constructs exist only as an
     ' absolute last resort, and they are only used in a select few places - like here, where I've
@@ -2545,7 +2545,7 @@ Private Sub AsyncDownloader_FinishedOneItem(ByVal downloadSuccessful As Boolean,
                 xpErrorMsg.AppendLineBreak
                 xpErrorMsg.AppendLine "To protect your privacy and safety, PhotoDemon will not auto-update without a secure connection.  If you are using Windows 7 or later, please run Windows Update to ensure that all security patches have been applied to this PC."
                 xpErrorMsg.AppendLineBreak
-                xpErrorMsg.AppendLine "If you are using Windows XP, Microsoft has unfortunately chosen not to provide an update with these security features.  You will need to manually download new versions of PhotoDemon from photodemon.org using a secure 3rd-party web browser (like Mozilla Firefox)."
+                xpErrorMsg.AppendLine "If you are using Windows XP, Microsoft has unfortunately chosen not to provide an update with these security features.  You will need to manually download new versions of PhotoDemon from photopaint.org using a secure 3rd-party web browser (like Mozilla Firefox)."
                 xpErrorMsg.AppendLineBreak
                 xpErrorMsg.Append "(To prevent this message from interrupting you again, PhotoDemon will now deactivate automatic updates.  You can always reactivate this feature from the Tools > Options menu.)"
                 UserPrefs.SetPref_Long "Updates", "Update Frequency", PDUF_NEVER

@@ -24,7 +24,7 @@ Begin VB.Form FormBoxBlur
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   802
-   Begin PhotoDemon.pdSlider sltWidth 
+   Begin PhotoPaint.pdSlider sltWidth 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -39,7 +39,7 @@ Begin VB.Form FormBoxBlur
       Value           =   2
       DefaultValue    =   2
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -48,7 +48,7 @@ Begin VB.Form FormBoxBlur
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdCheckBox chkUnison 
+   Begin PhotoPaint.pdCheckBox chkUnison 
       Height          =   330
       Left            =   6120
       TabIndex        =   2
@@ -58,7 +58,7 @@ Begin VB.Form FormBoxBlur
       _ExtentY        =   582
       Caption         =   "keep both dimensions in sync"
    End
-   Begin PhotoDemon.pdSlider sltHeight 
+   Begin PhotoPaint.pdSlider sltHeight 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -73,7 +73,7 @@ Begin VB.Form FormBoxBlur
       Value           =   2
       DefaultValue    =   2
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -103,7 +103,7 @@ Attribute VB_Exposed = False
 ' applying any box blur of a large radius.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

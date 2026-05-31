@@ -22,7 +22,7 @@ Begin VB.Form dialog_ExportPSD
    ScaleHeight     =   439
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   842
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -33,7 +33,7 @@ Begin VB.Form dialog_ExportPSD
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -42,7 +42,7 @@ Begin VB.Form dialog_ExportPSD
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdButtonStrip btsCategory 
+   Begin PhotoPaint.pdButtonStrip btsCategory 
       Height          =   615
       Left            =   5880
       TabIndex        =   2
@@ -52,7 +52,7 @@ Begin VB.Form dialog_ExportPSD
       _ExtentY        =   1085
       FontSize        =   11
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4815
       Index           =   0
       Left            =   5880
@@ -60,7 +60,7 @@ Begin VB.Form dialog_ExportPSD
       Width           =   6615
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdButtonStrip btsCompression 
+      Begin PhotoPaint.pdButtonStrip btsCompression 
          Height          =   975
          Left            =   240
          TabIndex        =   3
@@ -70,7 +70,7 @@ Begin VB.Form dialog_ExportPSD
          _ExtentY        =   1720
          Caption         =   "compression"
       End
-      Begin PhotoDemon.pdButtonStrip btsCompatibility 
+      Begin PhotoPaint.pdButtonStrip btsCompatibility 
          Height          =   975
          Left            =   240
          TabIndex        =   5
@@ -81,7 +81,7 @@ Begin VB.Form dialog_ExportPSD
          Caption         =   "maximize compatibility"
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4815
       Index           =   1
       Left            =   5880
@@ -89,7 +89,7 @@ Begin VB.Form dialog_ExportPSD
       Width           =   6615
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdMetadataExport mtdManager 
+      Begin PhotoPaint.pdMetadataExport mtdManager 
          Height          =   4215
          Left            =   120
          TabIndex        =   4
@@ -122,7 +122,7 @@ Attribute VB_Exposed = False
 ' software, but otherwise greatly increases file size).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

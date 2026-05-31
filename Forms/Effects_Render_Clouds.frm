@@ -24,7 +24,7 @@ Begin VB.Form FormFxClouds
    ScaleHeight     =   435
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   806
-   Begin PhotoDemon.pdButtonStrip btsType 
+   Begin PhotoPaint.pdButtonStrip btsType 
       Height          =   975
       Left            =   6000
       TabIndex        =   10
@@ -34,7 +34,7 @@ Begin VB.Form FormFxClouds
       _ExtentY        =   1720
       Caption         =   "colors"
    End
-   Begin PhotoDemon.pdGradientSelector grdColors 
+   Begin PhotoPaint.pdGradientSelector grdColors 
       Height          =   855
       Left            =   6000
       TabIndex        =   9
@@ -45,7 +45,7 @@ Begin VB.Form FormFxClouds
       _ExtentY        =   1508
       Caption         =   "colors"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -54,7 +54,7 @@ Begin VB.Form FormFxClouds
       _ExtentX        =   21325
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sldScale 
+   Begin PhotoPaint.pdSlider sldScale 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -70,7 +70,7 @@ Begin VB.Form FormFxClouds
       NotchPosition   =   2
       NotchValueCustom=   25
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5505
       Left            =   120
       TabIndex        =   1
@@ -80,7 +80,7 @@ Begin VB.Form FormFxClouds
       _ExtentY        =   9710
       DisableZoomPan  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sldOpacity 
+   Begin PhotoPaint.pdSlider sldOpacity 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -95,7 +95,7 @@ Begin VB.Form FormFxClouds
       NotchValueCustom=   25
       DefaultValue    =   100
    End
-   Begin PhotoDemon.pdDropDown cboBlendMode 
+   Begin PhotoPaint.pdDropDown cboBlendMode 
       Height          =   735
       Left            =   6000
       TabIndex        =   4
@@ -105,7 +105,7 @@ Begin VB.Form FormFxClouds
       _ExtentY        =   1296
       Caption         =   "blend mode"
    End
-   Begin PhotoDemon.pdRandomizeUI rndSeed 
+   Begin PhotoPaint.pdRandomizeUI rndSeed 
       Height          =   735
       Left            =   6000
       TabIndex        =   5
@@ -115,7 +115,7 @@ Begin VB.Form FormFxClouds
       _ExtentY        =   1296
       Caption         =   "random seed:"
    End
-   Begin PhotoDemon.pdColorSelector cpHighlight 
+   Begin PhotoPaint.pdColorSelector cpHighlight 
       Height          =   855
       Left            =   9000
       TabIndex        =   6
@@ -126,7 +126,7 @@ Begin VB.Form FormFxClouds
       Caption         =   "highlight color"
       curColor        =   6262010
    End
-   Begin PhotoDemon.pdColorSelector cpShadow 
+   Begin PhotoPaint.pdColorSelector cpShadow 
       Height          =   855
       Left            =   6000
       TabIndex        =   7
@@ -137,7 +137,7 @@ Begin VB.Form FormFxClouds
       Caption         =   "shadow color"
       curColor        =   50
    End
-   Begin PhotoDemon.pdSlider sldQuality 
+   Begin PhotoPaint.pdSlider sldQuality 
       Height          =   705
       Left            =   9000
       TabIndex        =   8
@@ -153,7 +153,7 @@ Begin VB.Form FormFxClouds
       NotchPosition   =   2
       NotchValueCustom=   5
    End
-   Begin PhotoDemon.pdDropDown cboGenerator 
+   Begin PhotoPaint.pdDropDown cboGenerator 
       Height          =   735
       Left            =   9000
       TabIndex        =   11
@@ -179,7 +179,7 @@ Attribute VB_Exposed = False
 'Render clouds has been available in Photoshop for decades; about time we exposed a similar option in PD.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

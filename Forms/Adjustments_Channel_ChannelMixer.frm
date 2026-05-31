@@ -24,7 +24,7 @@ Begin VB.Form FormChannelMixer
    ScaleHeight     =   481
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   810
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   6255
       Left            =   120
       TabIndex        =   1
@@ -33,7 +33,7 @@ Begin VB.Form FormChannelMixer
       _ExtentX        =   9922
       _ExtentY        =   11033
    End
-   Begin PhotoDemon.pdSlider sltRed 
+   Begin PhotoPaint.pdSlider sltRed 
       Height          =   705
       Left            =   6120
       TabIndex        =   2
@@ -47,7 +47,7 @@ Begin VB.Form FormChannelMixer
       SliderTrackStyle=   3
       GradientColorMiddle=   255
    End
-   Begin PhotoDemon.pdSlider sltGreen 
+   Begin PhotoPaint.pdSlider sltGreen 
       Height          =   705
       Left            =   6120
       TabIndex        =   3
@@ -61,7 +61,7 @@ Begin VB.Form FormChannelMixer
       SliderTrackStyle=   3
       GradientColorMiddle=   65280
    End
-   Begin PhotoDemon.pdSlider sltBlue 
+   Begin PhotoPaint.pdSlider sltBlue 
       Height          =   705
       Left            =   6120
       TabIndex        =   4
@@ -75,7 +75,7 @@ Begin VB.Form FormChannelMixer
       SliderTrackStyle=   3
       GradientColorMiddle=   16711680
    End
-   Begin PhotoDemon.pdCheckBox chkMonochrome 
+   Begin PhotoPaint.pdCheckBox chkMonochrome 
       Height          =   375
       Left            =   6120
       TabIndex        =   5
@@ -85,7 +85,7 @@ Begin VB.Form FormChannelMixer
       _ExtentY        =   582
       Caption         =   "monochrome"
    End
-   Begin PhotoDemon.pdSlider sltConstant 
+   Begin PhotoPaint.pdSlider sltConstant 
       Height          =   705
       Left            =   6120
       TabIndex        =   6
@@ -98,7 +98,7 @@ Begin VB.Form FormChannelMixer
       Max             =   255
       SliderTrackStyle=   2
    End
-   Begin PhotoDemon.pdCheckBox chkLuminance 
+   Begin PhotoPaint.pdCheckBox chkLuminance 
       Height          =   375
       Left            =   6120
       TabIndex        =   7
@@ -108,7 +108,7 @@ Begin VB.Form FormChannelMixer
       _ExtentY        =   582
       Caption         =   "preserve luminance"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -117,7 +117,7 @@ Begin VB.Form FormChannelMixer
       _ExtentX        =   21431
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdButtonStrip btsChannel 
+   Begin PhotoPaint.pdButtonStrip btsChannel 
       Height          =   960
       Left            =   6000
       TabIndex        =   8
@@ -127,7 +127,7 @@ Begin VB.Form FormChannelMixer
       _ExtentY        =   1058
       Caption         =   "output channel"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   0
       Left            =   6000
@@ -139,7 +139,7 @@ Begin VB.Form FormChannelMixer
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   1
       Left            =   6000
@@ -179,7 +179,7 @@ Attribute VB_Exposed = False
 ' (obviously, because otherwise the gray values wouldn't change!)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

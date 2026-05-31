@@ -24,7 +24,7 @@ Begin VB.Form FormReplaceColor
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   788
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormReplaceColor
       _ExtentX        =   20849
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -43,7 +43,7 @@ Begin VB.Form FormReplaceColor
       _ExtentY        =   9922
       ColorSelection  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sltErase 
+   Begin PhotoPaint.pdSlider sltErase 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -56,7 +56,7 @@ Begin VB.Form FormReplaceColor
       Value           =   15
       DefaultValue    =   15
    End
-   Begin PhotoDemon.pdSlider sltBlend 
+   Begin PhotoPaint.pdSlider sltBlend 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -69,7 +69,7 @@ Begin VB.Form FormReplaceColor
       Value           =   15
       DefaultValue    =   15
    End
-   Begin PhotoDemon.pdColorSelector colorOld 
+   Begin PhotoPaint.pdColorSelector colorOld 
       Height          =   975
       Left            =   6000
       TabIndex        =   4
@@ -80,7 +80,7 @@ Begin VB.Form FormReplaceColor
       Caption         =   "color to replace (right-click preview to select)"
       curColor        =   12582912
    End
-   Begin PhotoDemon.pdColorSelector colorNew 
+   Begin PhotoPaint.pdColorSelector colorNew 
       Height          =   975
       Left            =   6000
       TabIndex        =   5
@@ -109,7 +109,7 @@ Attribute VB_Exposed = False
 ' harsh edges between the color and its surroundings.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

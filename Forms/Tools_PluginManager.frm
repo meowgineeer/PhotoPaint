@@ -26,7 +26,7 @@ Begin VB.Form FormPluginManager
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   721
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdListBox lstPlugins 
+   Begin PhotoPaint.pdListBox lstPlugins 
       Height          =   5295
       Left            =   120
       TabIndex        =   0
@@ -35,7 +35,7 @@ Begin VB.Form FormPluginManager
       _ExtentX        =   4895
       _ExtentY        =   9340
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBarMini 
+   Begin PhotoPaint.pdCommandBarMini cmdBarMini 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -45,7 +45,7 @@ Begin VB.Form FormPluginManager
       _ExtentX        =   19076
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdButton cmdReset 
+   Begin PhotoPaint.pdButton cmdReset 
       Height          =   615
       Left            =   120
       TabIndex        =   2
@@ -55,7 +55,7 @@ Begin VB.Form FormPluginManager
       _ExtentY        =   1085
       Caption         =   "Reset all library options"
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   6135
       Index           =   0
       Left            =   3000
@@ -63,7 +63,7 @@ Begin VB.Form FormPluginManager
       Width           =   7695
       _ExtentX        =   13573
       _ExtentY        =   10821
-      Begin PhotoDemon.pdListBoxOD lstOverview 
+      Begin PhotoPaint.pdListBoxOD lstOverview 
          Height          =   5175
          Left            =   105
          TabIndex        =   4
@@ -73,7 +73,7 @@ Begin VB.Form FormPluginManager
          _ExtentY        =   9128
          Caption         =   "library details:"
       End
-      Begin PhotoDemon.pdHyperlink hypPluginFolder 
+      Begin PhotoPaint.pdHyperlink hypPluginFolder 
          Height          =   300
          Left            =   1800
          TabIndex        =   5
@@ -84,7 +84,7 @@ Begin VB.Form FormPluginManager
          FontSize        =   12
          RaiseClickEvent =   -1  'True
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   300
          Index           =   0
          Left            =   120
@@ -96,7 +96,7 @@ Begin VB.Form FormPluginManager
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblPluginStatus 
+      Begin PhotoPaint.pdLabel lblPluginStatus 
          Height          =   300
          Index           =   0
          Left            =   1800
@@ -109,7 +109,7 @@ Begin VB.Form FormPluginManager
          ForeColor       =   47369
          UseCustomForeColor=   -1  'True
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   300
          Index           =   1
          Left            =   120
@@ -122,7 +122,7 @@ Begin VB.Form FormPluginManager
          ForeColor       =   4210752
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   6135
       Index           =   1
       Left            =   3000
@@ -130,7 +130,7 @@ Begin VB.Form FormPluginManager
       Width           =   7695
       _ExtentX        =   13573
       _ExtentY        =   10821
-      Begin PhotoDemon.pdLabel lblAdditionalInfo 
+      Begin PhotoPaint.pdLabel lblAdditionalInfo 
          Height          =   1935
          Left            =   480
          Top             =   3960
@@ -140,7 +140,7 @@ Begin VB.Form FormPluginManager
          Caption         =   ""
          Layout          =   1
       End
-      Begin PhotoDemon.pdButtonStrip btsDisablePlugin 
+      Begin PhotoPaint.pdButtonStrip btsDisablePlugin 
          Height          =   1095
          Left            =   360
          TabIndex        =   3
@@ -151,7 +151,7 @@ Begin VB.Form FormPluginManager
          Caption         =   "forcibly disable:"
          FontSizeCaption =   11
       End
-      Begin PhotoDemon.pdHyperlink hypHomepage 
+      Begin PhotoPaint.pdHyperlink hypHomepage 
          Height          =   270
          Left            =   1680
          TabIndex        =   6
@@ -164,7 +164,7 @@ Begin VB.Form FormPluginManager
          ForeColor       =   12611633
          URL             =   "http://freeimage.sourceforge.net/"
       End
-      Begin PhotoDemon.pdHyperlink hypLicense 
+      Begin PhotoPaint.pdHyperlink hypLicense 
          Height          =   270
          Left            =   1680
          TabIndex        =   7
@@ -177,7 +177,7 @@ Begin VB.Form FormPluginManager
          ForeColor       =   12611633
          URL             =   "http://freeimage.sourceforge.net/freeimage-license.txt"
       End
-      Begin PhotoDemon.pdLabel lblPluginTitle 
+      Begin PhotoPaint.pdLabel lblPluginTitle 
          Height          =   285
          Left            =   120
          Top             =   15
@@ -188,7 +188,7 @@ Begin VB.Form FormPluginManager
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblSubheader 
+      Begin PhotoPaint.pdLabel lblSubheader 
          Height          =   270
          Index           =   2
          Left            =   360
@@ -201,7 +201,7 @@ Begin VB.Form FormPluginManager
          ForeColor       =   4210752
          Layout          =   2
       End
-      Begin PhotoDemon.pdLabel lblPluginVersion 
+      Begin PhotoPaint.pdLabel lblPluginVersion 
          Height          =   270
          Left            =   2400
          Top             =   2040
@@ -213,7 +213,7 @@ Begin VB.Form FormPluginManager
          ForeColor       =   49152
          UseCustomForeColor=   -1  'True
       End
-      Begin PhotoDemon.pdLabel lblPluginExpectedVersion 
+      Begin PhotoPaint.pdLabel lblPluginExpectedVersion 
          Height          =   270
          Left            =   2400
          Top             =   1560
@@ -224,7 +224,7 @@ Begin VB.Form FormPluginManager
          FontSize        =   11
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblSubheader 
+      Begin PhotoPaint.pdLabel lblSubheader 
          Height          =   270
          Index           =   3
          Left            =   360
@@ -237,7 +237,7 @@ Begin VB.Form FormPluginManager
          ForeColor       =   4210752
          Layout          =   2
       End
-      Begin PhotoDemon.pdLabel lblSubheader 
+      Begin PhotoPaint.pdLabel lblSubheader 
          Height          =   270
          Index           =   0
          Left            =   360
@@ -250,7 +250,7 @@ Begin VB.Form FormPluginManager
          ForeColor       =   4210752
          Layout          =   2
       End
-      Begin PhotoDemon.pdLabel lblSubheader 
+      Begin PhotoPaint.pdLabel lblSubheader 
          Height          =   270
          Index           =   1
          Left            =   360
@@ -286,7 +286,7 @@ Attribute VB_Exposed = False
 ' with the new library's information, and this dialog will pull those changes at run-time.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -726,7 +726,7 @@ Private Sub LibraryChanged()
             Dim additionalInfo As pdString
             Set additionalInfo = New pdString
             
-            additionalInfo.AppendLine g_Language.TranslateMessage("This library does not ship with PhotoDemon.")
+            additionalInfo.AppendLine g_Language.TranslateMessage("This library does not ship with PhotoPaint.")
             additionalInfo.AppendLineBreak
             additionalInfo.Append g_Language.TranslateMessage("If you interact with %1, PhotoDemon will offer to download and configure this library for you.", actionTarget)
             lblAdditionalInfo.Caption = additionalInfo.ToString()

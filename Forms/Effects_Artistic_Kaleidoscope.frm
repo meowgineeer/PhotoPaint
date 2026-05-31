@@ -24,7 +24,7 @@ Begin VB.Form FormKaleidoscope
    ScaleHeight     =   445
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   809
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormKaleidoscope
       _ExtentX        =   21405
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -44,7 +44,7 @@ Begin VB.Form FormKaleidoscope
       DisableZoomPan  =   -1  'True
       PointSelection  =   -1  'True
    End
-   Begin PhotoDemon.pdButtonStrip btsOptions 
+   Begin PhotoPaint.pdButtonStrip btsOptions 
       Height          =   1080
       Left            =   6000
       TabIndex        =   3
@@ -54,7 +54,7 @@ Begin VB.Form FormKaleidoscope
       _ExtentY        =   1905
       Caption         =   "options"
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   3495
       Index           =   0
       Left            =   5880
@@ -62,7 +62,7 @@ Begin VB.Form FormKaleidoscope
       Width           =   6135
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdSlider sltMirrors 
+      Begin PhotoPaint.pdSlider sltMirrors 
          Height          =   705
          Left            =   120
          TabIndex        =   6
@@ -76,7 +76,7 @@ Begin VB.Form FormKaleidoscope
          Value           =   6
          DefaultValue    =   6
       End
-      Begin PhotoDemon.pdSlider sltAngle 
+      Begin PhotoPaint.pdSlider sltAngle 
          Height          =   705
          Left            =   120
          TabIndex        =   7
@@ -88,7 +88,7 @@ Begin VB.Form FormKaleidoscope
          Max             =   360
          SigDigits       =   1
       End
-      Begin PhotoDemon.pdSlider sltXCenter 
+      Begin PhotoPaint.pdSlider sltXCenter 
          Height          =   405
          Left            =   120
          TabIndex        =   8
@@ -102,7 +102,7 @@ Begin VB.Form FormKaleidoscope
          NotchPosition   =   2
          NotchValueCustom=   0.5
       End
-      Begin PhotoDemon.pdSlider sltYCenter 
+      Begin PhotoPaint.pdSlider sltYCenter 
          Height          =   405
          Left            =   3120
          TabIndex        =   9
@@ -116,7 +116,7 @@ Begin VB.Form FormKaleidoscope
          NotchPosition   =   2
          NotchValueCustom=   0.5
       End
-      Begin PhotoDemon.pdLabel lblExplanation 
+      Begin PhotoPaint.pdLabel lblExplanation 
          Height          =   435
          Index           =   0
          Left            =   240
@@ -128,7 +128,7 @@ Begin VB.Form FormKaleidoscope
          ForeColor       =   4210752
          Layout          =   1
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   285
          Index           =   5
          Left            =   120
@@ -141,7 +141,7 @@ Begin VB.Form FormKaleidoscope
          ForeColor       =   4210752
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   3495
       Index           =   1
       Left            =   5880
@@ -150,7 +150,7 @@ Begin VB.Form FormKaleidoscope
       Width           =   6135
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdSlider sltAngle2 
+      Begin PhotoPaint.pdSlider sltAngle2 
          Height          =   705
          Left            =   120
          TabIndex        =   2
@@ -162,7 +162,7 @@ Begin VB.Form FormKaleidoscope
          Max             =   360
          SigDigits       =   1
       End
-      Begin PhotoDemon.pdSlider sltRadius 
+      Begin PhotoPaint.pdSlider sltRadius 
          Height          =   705
          Left            =   120
          TabIndex        =   4
@@ -177,7 +177,7 @@ Begin VB.Form FormKaleidoscope
          NotchPosition   =   2
          NotchValueCustom=   100
       End
-      Begin PhotoDemon.pdButtonStrip btsQuality 
+      Begin PhotoPaint.pdButtonStrip btsQuality 
          Height          =   1080
          Left            =   120
          TabIndex        =   5
@@ -212,7 +212,7 @@ Attribute VB_Exposed = False
 ' original version at the following link (good as of 14 January '13): http://www.jhlabs.com/ip/filters/index.html
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

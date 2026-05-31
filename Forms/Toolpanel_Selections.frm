@@ -29,7 +29,7 @@ Begin VB.Form toolpanel_Selections
    ScaleWidth      =   916
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdCheckBox chkAppearance 
+   Begin PhotoPaint.pdCheckBox chkAppearance 
       Height          =   345
       Index           =   0
       Left            =   120
@@ -40,7 +40,7 @@ Begin VB.Form toolpanel_Selections
       _ExtentY        =   609
       Caption         =   "animate"
    End
-   Begin PhotoDemon.pdButtonStrip btsCombine 
+   Begin PhotoPaint.pdButtonStrip btsCombine 
       Height          =   375
       Left            =   2160
       TabIndex        =   55
@@ -49,7 +49,7 @@ Begin VB.Form toolpanel_Selections
       _ExtentX        =   3413
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdDropDown cboSelSmoothing 
+   Begin PhotoPaint.pdDropDown cboSelSmoothing 
       Height          =   375
       Left            =   4320
       TabIndex        =   0
@@ -59,7 +59,7 @@ Begin VB.Form toolpanel_Selections
       _ExtentY        =   661
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   375
       Index           =   0
       Left            =   0
@@ -71,7 +71,7 @@ Begin VB.Form toolpanel_Selections
       Caption         =   "appearance"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   885
       Index           =   1
       Left            =   0
@@ -80,7 +80,7 @@ Begin VB.Form toolpanel_Selections
       Width           =   3135
       _ExtentX        =   5530
       _ExtentY        =   1561
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   1
          Left            =   2640
@@ -91,7 +91,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSlider sltSelectionFeathering 
+      Begin PhotoPaint.pdSlider sltSelectionFeathering 
          CausesValidation=   0   'False
          Height          =   765
          Left            =   150
@@ -105,7 +105,7 @@ Begin VB.Form toolpanel_Selections
          FontSizeCaption =   10
          Max             =   100
       End
-      Begin PhotoDemon.pdLabel lblNoOptions 
+      Begin PhotoPaint.pdLabel lblNoOptions 
          Height          =   375
          Index           =   1
          Left            =   0
@@ -117,7 +117,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   "(no additional options)"
       End
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   2475
       Index           =   0
       Left            =   0
@@ -126,7 +126,7 @@ Begin VB.Form toolpanel_Selections
       Width           =   3375
       _ExtentX        =   5953
       _ExtentY        =   4366
-      Begin PhotoDemon.pdDropDown ddAppearance 
+      Begin PhotoPaint.pdDropDown ddAppearance 
          Height          =   705
          Index           =   0
          Left            =   120
@@ -138,7 +138,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   "fill interior"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   0
          Left            =   2880
@@ -149,7 +149,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSpinner spnOpacity 
+      Begin PhotoPaint.pdSpinner spnOpacity 
          Height          =   375
          Index           =   0
          Left            =   1440
@@ -163,7 +163,7 @@ Begin VB.Form toolpanel_Selections
          Max             =   100
          Value           =   50
       End
-      Begin PhotoDemon.pdColorSelector csSelection 
+      Begin PhotoPaint.pdColorSelector csSelection 
          Height          =   330
          Index           =   0
          Left            =   240
@@ -173,7 +173,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentX        =   2011
          _ExtentY        =   582
       End
-      Begin PhotoDemon.pdSpinner spnOpacity 
+      Begin PhotoPaint.pdSpinner spnOpacity 
          Height          =   375
          Index           =   1
          Left            =   1440
@@ -187,7 +187,7 @@ Begin VB.Form toolpanel_Selections
          Max             =   100
          Value           =   50
       End
-      Begin PhotoDemon.pdColorSelector csSelection 
+      Begin PhotoPaint.pdColorSelector csSelection 
          Height          =   330
          Index           =   1
          Left            =   240
@@ -197,7 +197,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentX        =   2011
          _ExtentY        =   582
       End
-      Begin PhotoDemon.pdDropDown ddAppearance 
+      Begin PhotoPaint.pdDropDown ddAppearance 
          Height          =   705
          Index           =   1
          Left            =   120
@@ -210,7 +210,7 @@ Begin VB.Form toolpanel_Selections
          FontSizeCaption =   10
       End
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   2160
       Index           =   2
       Left            =   3240
@@ -219,7 +219,7 @@ Begin VB.Form toolpanel_Selections
       Width           =   6600
       _ExtentX        =   11642
       _ExtentY        =   3810
-      Begin PhotoDemon.pdCheckBox chkAutoDrop 
+      Begin PhotoPaint.pdCheckBox chkAutoDrop 
          Height          =   375
          Index           =   0
          Left            =   210
@@ -231,7 +231,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   "open panel automatically"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   2
          Left            =   6120
@@ -242,7 +242,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdDropDown cboSelArea 
+      Begin PhotoPaint.pdDropDown cboSelArea 
          Height          =   735
          Index           =   0
          Left            =   3360
@@ -254,7 +254,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   "area"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdSlider sltSelectionBorder 
+      Begin PhotoPaint.pdSlider sltSelectionBorder 
          CausesValidation=   0   'False
          Height          =   405
          Index           =   0
@@ -270,7 +270,7 @@ Begin VB.Form toolpanel_Selections
          Value           =   1
          DefaultValue    =   1
       End
-      Begin PhotoDemon.pdLabel lblColon 
+      Begin PhotoPaint.pdLabel lblColon 
          Height          =   375
          Index           =   0
          Left            =   1320
@@ -282,7 +282,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   ":"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdButtonToolbox cmdLock 
+      Begin PhotoPaint.pdButtonToolbox cmdLock 
          Height          =   360
          Index           =   2
          Left            =   2895
@@ -293,7 +293,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentY        =   635
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSpinner tudSel 
+      Begin PhotoPaint.pdSpinner tudSel 
          Height          =   345
          Index           =   2
          Left            =   240
@@ -308,7 +308,7 @@ Begin VB.Form toolpanel_Selections
          Value           =   1
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdSpinner tudSel 
+      Begin PhotoPaint.pdSpinner tudSel 
          Height          =   345
          Index           =   3
          Left            =   1815
@@ -323,7 +323,7 @@ Begin VB.Form toolpanel_Selections
          Value           =   1
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdSlider sltCornerRounding 
+      Begin PhotoPaint.pdSlider sltCornerRounding 
          CausesValidation=   0   'False
          Height          =   735
          Left            =   3360
@@ -337,7 +337,7 @@ Begin VB.Form toolpanel_Selections
          Max             =   100
          SigDigits       =   1
       End
-      Begin PhotoDemon.pdSpinner tudSel 
+      Begin PhotoPaint.pdSpinner tudSel 
          Height          =   345
          Index           =   4
          Left            =   240
@@ -350,7 +350,7 @@ Begin VB.Form toolpanel_Selections
          Max             =   32000
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdSpinner tudSel 
+      Begin PhotoPaint.pdSpinner tudSel 
          Height          =   345
          Index           =   5
          Left            =   1815
@@ -363,7 +363,7 @@ Begin VB.Form toolpanel_Selections
          Max             =   32000
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdLabel lblNoOptions 
+      Begin PhotoPaint.pdLabel lblNoOptions 
          Height          =   345
          Index           =   3
          Left            =   120
@@ -373,7 +373,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentY        =   609
          Caption         =   "aspect ratio"
       End
-      Begin PhotoDemon.pdLabel lblNoOptions 
+      Begin PhotoPaint.pdLabel lblNoOptions 
          Height          =   345
          Index           =   4
          Left            =   120
@@ -384,7 +384,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   "position (x, y)"
       End
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   375
       Index           =   1
       Left            =   4200
@@ -396,7 +396,7 @@ Begin VB.Form toolpanel_Selections
       Caption         =   "smoothing"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   1335
       Index           =   4
       Left            =   9960
@@ -405,7 +405,7 @@ Begin VB.Form toolpanel_Selections
       Width           =   3375
       _ExtentX        =   5953
       _ExtentY        =   2355
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   4
          Left            =   2880
@@ -416,7 +416,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdDropDown cboSelArea 
+      Begin PhotoPaint.pdDropDown cboSelArea 
          Height          =   735
          Index           =   2
          Left            =   120
@@ -428,7 +428,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   "area"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdSlider sltSelectionBorder 
+      Begin PhotoPaint.pdSlider sltSelectionBorder 
          CausesValidation=   0   'False
          Height          =   405
          Index           =   2
@@ -445,7 +445,7 @@ Begin VB.Form toolpanel_Selections
          DefaultValue    =   1
       End
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   495
       Index           =   5
       Left            =   10080
@@ -454,7 +454,7 @@ Begin VB.Form toolpanel_Selections
       Width           =   3375
       _ExtentX        =   5953
       _ExtentY        =   873
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   5
          Left            =   2880
@@ -465,7 +465,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSlider sltSelectionBorder 
+      Begin PhotoPaint.pdSlider sltSelectionBorder 
          CausesValidation=   0   'False
          Height          =   405
          Index           =   3
@@ -481,7 +481,7 @@ Begin VB.Form toolpanel_Selections
          Value           =   1
          DefaultValue    =   1
       End
-      Begin PhotoDemon.pdLabel lblNoOptions 
+      Begin PhotoPaint.pdLabel lblNoOptions 
          Height          =   375
          Index           =   2
          Left            =   120
@@ -493,7 +493,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   "(no additional options)"
       End
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   3015
       Index           =   6
       Left            =   9960
@@ -502,7 +502,7 @@ Begin VB.Form toolpanel_Selections
       Width           =   3615
       _ExtentX        =   6376
       _ExtentY        =   5318
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   6
          Left            =   3120
@@ -513,7 +513,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdDropDown cboWandCompare 
+      Begin PhotoPaint.pdDropDown cboWandCompare 
          Height          =   735
          Left            =   120
          TabIndex        =   28
@@ -524,7 +524,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   "compare pixels by"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdButtonStrip btsWandArea 
+      Begin PhotoPaint.pdButtonStrip btsWandArea 
          Height          =   930
          Left            =   120
          TabIndex        =   29
@@ -535,7 +535,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   "mode"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdButtonStrip btsWandMerge 
+      Begin PhotoPaint.pdButtonStrip btsWandMerge 
          Height          =   930
          Left            =   120
          TabIndex        =   31
@@ -547,7 +547,7 @@ Begin VB.Form toolpanel_Selections
          FontSizeCaption =   10
       End
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   1800
       Index           =   3
       Left            =   3240
@@ -556,7 +556,7 @@ Begin VB.Form toolpanel_Selections
       Width           =   6600
       _ExtentX        =   11642
       _ExtentY        =   3175
-      Begin PhotoDemon.pdCheckBox chkAutoDrop 
+      Begin PhotoPaint.pdCheckBox chkAutoDrop 
          Height          =   375
          Index           =   1
          Left            =   3435
@@ -568,7 +568,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   "open panel automatically"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   3
          Left            =   6120
@@ -579,7 +579,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdDropDown cboSelArea 
+      Begin PhotoPaint.pdDropDown cboSelArea 
          Height          =   735
          Index           =   1
          Left            =   3360
@@ -591,7 +591,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   "area"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdSlider sltSelectionBorder 
+      Begin PhotoPaint.pdSlider sltSelectionBorder 
          CausesValidation=   0   'False
          Height          =   405
          Index           =   1
@@ -607,7 +607,7 @@ Begin VB.Form toolpanel_Selections
          Value           =   1
          DefaultValue    =   1
       End
-      Begin PhotoDemon.pdLabel lblColon 
+      Begin PhotoPaint.pdLabel lblColon 
          Height          =   375
          Index           =   1
          Left            =   1320
@@ -619,7 +619,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   ":"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdButtonToolbox cmdLock 
+      Begin PhotoPaint.pdButtonToolbox cmdLock 
          Height          =   360
          Index           =   5
          Left            =   2895
@@ -630,7 +630,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentY        =   635
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSpinner tudSel 
+      Begin PhotoPaint.pdSpinner tudSel 
          Height          =   345
          Index           =   8
          Left            =   240
@@ -645,7 +645,7 @@ Begin VB.Form toolpanel_Selections
          Value           =   1
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdSpinner tudSel 
+      Begin PhotoPaint.pdSpinner tudSel 
          Height          =   345
          Index           =   9
          Left            =   1815
@@ -660,7 +660,7 @@ Begin VB.Form toolpanel_Selections
          Value           =   1
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdSpinner tudSel 
+      Begin PhotoPaint.pdSpinner tudSel 
          Height          =   345
          Index           =   10
          Left            =   240
@@ -673,7 +673,7 @@ Begin VB.Form toolpanel_Selections
          Max             =   32000
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdSpinner tudSel 
+      Begin PhotoPaint.pdSpinner tudSel 
          Height          =   345
          Index           =   11
          Left            =   1815
@@ -686,7 +686,7 @@ Begin VB.Form toolpanel_Selections
          Max             =   32000
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdLabel lblNoOptions 
+      Begin PhotoPaint.pdLabel lblNoOptions 
          Height          =   375
          Index           =   5
          Left            =   120
@@ -696,7 +696,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentY        =   661
          Caption         =   "aspect ratio"
       End
-      Begin PhotoDemon.pdLabel lblNoOptions 
+      Begin PhotoPaint.pdLabel lblNoOptions 
          Height          =   375
          Index           =   6
          Left            =   120
@@ -707,7 +707,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   "position (x, y)"
       End
    End
-   Begin PhotoDemon.pdContainer ctlGroupSelectionSubcontainer 
+   Begin PhotoPaint.pdContainer ctlGroupSelectionSubcontainer 
       Height          =   855
       Index           =   0
       Left            =   6780
@@ -715,7 +715,7 @@ Begin VB.Form toolpanel_Selections
       Width           =   6495
       _ExtentX        =   11456
       _ExtentY        =   1508
-      Begin PhotoDemon.pdTitle ttlPanel 
+      Begin PhotoPaint.pdTitle ttlPanel 
          Height          =   375
          Index           =   2
          Left            =   0
@@ -727,7 +727,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   "size (w, h)"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdButtonToolbox cmdLock 
+      Begin PhotoPaint.pdButtonToolbox cmdLock 
          Height          =   360
          Index           =   1
          Left            =   2775
@@ -738,7 +738,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentY        =   635
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSpinner tudSel 
+      Begin PhotoPaint.pdSpinner tudSel 
          Height          =   345
          Index           =   0
          Left            =   120
@@ -753,7 +753,7 @@ Begin VB.Form toolpanel_Selections
          Value           =   1
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdSpinner tudSel 
+      Begin PhotoPaint.pdSpinner tudSel 
          Height          =   345
          Index           =   1
          Left            =   1695
@@ -768,7 +768,7 @@ Begin VB.Form toolpanel_Selections
          Value           =   1
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdButtonToolbox cmdLock 
+      Begin PhotoPaint.pdButtonToolbox cmdLock 
          Height          =   360
          Index           =   0
          Left            =   1200
@@ -780,7 +780,7 @@ Begin VB.Form toolpanel_Selections
          StickyToggle    =   -1  'True
       End
    End
-   Begin PhotoDemon.pdContainer ctlGroupSelectionSubcontainer 
+   Begin PhotoPaint.pdContainer ctlGroupSelectionSubcontainer 
       Height          =   855
       Index           =   2
       Left            =   6780
@@ -788,7 +788,7 @@ Begin VB.Form toolpanel_Selections
       Width           =   6495
       _ExtentX        =   11456
       _ExtentY        =   1508
-      Begin PhotoDemon.pdSlider sltPolygonCurvature 
+      Begin PhotoPaint.pdSlider sltPolygonCurvature 
          CausesValidation=   0   'False
          Height          =   375
          Left            =   120
@@ -801,7 +801,7 @@ Begin VB.Form toolpanel_Selections
          Max             =   1
          SigDigits       =   2
       End
-      Begin PhotoDemon.pdTitle ttlPanel 
+      Begin PhotoPaint.pdTitle ttlPanel 
          Height          =   375
          Index           =   4
          Left            =   0
@@ -814,7 +814,7 @@ Begin VB.Form toolpanel_Selections
          Value           =   0   'False
       End
    End
-   Begin PhotoDemon.pdContainer ctlGroupSelectionSubcontainer 
+   Begin PhotoPaint.pdContainer ctlGroupSelectionSubcontainer 
       Height          =   855
       Index           =   4
       Left            =   6780
@@ -822,7 +822,7 @@ Begin VB.Form toolpanel_Selections
       Width           =   6495
       _ExtentX        =   11456
       _ExtentY        =   1508
-      Begin PhotoDemon.pdSlider sltWandTolerance 
+      Begin PhotoPaint.pdSlider sltWandTolerance 
          CausesValidation=   0   'False
          Height          =   420
          Left            =   120
@@ -838,7 +838,7 @@ Begin VB.Form toolpanel_Selections
          Value           =   15
          DefaultValue    =   15
       End
-      Begin PhotoDemon.pdTitle ttlPanel 
+      Begin PhotoPaint.pdTitle ttlPanel 
          Height          =   375
          Index           =   6
          Left            =   0
@@ -851,7 +851,7 @@ Begin VB.Form toolpanel_Selections
          Value           =   0   'False
       End
    End
-   Begin PhotoDemon.pdContainer ctlGroupSelectionSubcontainer 
+   Begin PhotoPaint.pdContainer ctlGroupSelectionSubcontainer 
       Height          =   855
       Index           =   3
       Left            =   6780
@@ -859,7 +859,7 @@ Begin VB.Form toolpanel_Selections
       Width           =   6495
       _ExtentX        =   11456
       _ExtentY        =   1508
-      Begin PhotoDemon.pdDropDown cboSelArea 
+      Begin PhotoPaint.pdDropDown cboSelArea 
          Height          =   360
          Index           =   3
          Left            =   120
@@ -870,7 +870,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentY        =   635
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdSlider sltSmoothStroke 
+      Begin PhotoPaint.pdSlider sltSmoothStroke 
          CausesValidation=   0   'False
          Height          =   735
          Left            =   2760
@@ -885,7 +885,7 @@ Begin VB.Form toolpanel_Selections
          Max             =   1
          SigDigits       =   2
       End
-      Begin PhotoDemon.pdTitle ttlPanel 
+      Begin PhotoPaint.pdTitle ttlPanel 
          Height          =   375
          Index           =   5
          Left            =   0
@@ -898,7 +898,7 @@ Begin VB.Form toolpanel_Selections
          Value           =   0   'False
       End
    End
-   Begin PhotoDemon.pdContainer ctlGroupSelectionSubcontainer 
+   Begin PhotoPaint.pdContainer ctlGroupSelectionSubcontainer 
       Height          =   855
       Index           =   1
       Left            =   6780
@@ -906,7 +906,7 @@ Begin VB.Form toolpanel_Selections
       Width           =   6495
       _ExtentX        =   11456
       _ExtentY        =   1508
-      Begin PhotoDemon.pdTitle ttlPanel 
+      Begin PhotoPaint.pdTitle ttlPanel 
          Height          =   375
          Index           =   3
          Left            =   0
@@ -918,7 +918,7 @@ Begin VB.Form toolpanel_Selections
          Caption         =   "size (w, h)"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdButtonToolbox cmdLock 
+      Begin PhotoPaint.pdButtonToolbox cmdLock 
          Height          =   360
          Index           =   4
          Left            =   2775
@@ -929,7 +929,7 @@ Begin VB.Form toolpanel_Selections
          _ExtentY        =   635
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSpinner tudSel 
+      Begin PhotoPaint.pdSpinner tudSel 
          Height          =   345
          Index           =   6
          Left            =   120
@@ -942,7 +942,7 @@ Begin VB.Form toolpanel_Selections
          Max             =   32000
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdSpinner tudSel 
+      Begin PhotoPaint.pdSpinner tudSel 
          Height          =   345
          Index           =   7
          Left            =   1695
@@ -955,7 +955,7 @@ Begin VB.Form toolpanel_Selections
          Max             =   32000
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdButtonToolbox cmdLock 
+      Begin PhotoPaint.pdButtonToolbox cmdLock 
          Height          =   360
          Index           =   3
          Left            =   1200
@@ -967,7 +967,7 @@ Begin VB.Form toolpanel_Selections
          StickyToggle    =   -1  'True
       End
    End
-   Begin PhotoDemon.pdLabel lblNoOptions 
+   Begin PhotoPaint.pdLabel lblNoOptions 
       Height          =   345
       Index           =   7
       Left            =   2040
@@ -1007,7 +1007,7 @@ Attribute VB_Exposed = False
 ' highly useable, but a lot of code is necessary to make that work!
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

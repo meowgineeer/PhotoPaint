@@ -30,7 +30,7 @@ Begin VB.Form layerpanel_Search
    ScaleWidth      =   304
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdSearchBar srchMain 
+   Begin PhotoPaint.pdSearchBar srchMain 
       Height          =   255
       Left            =   120
       TabIndex        =   0
@@ -55,7 +55,7 @@ Attribute VB_Exposed = False
 'PhotoDemon has a lot of tools and menus.  It can be hard to find things.  This search tool can help.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

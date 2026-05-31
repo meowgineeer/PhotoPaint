@@ -30,7 +30,7 @@ Begin VB.Form toolpanel_Measure
    ScaleWidth      =   949
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   2055
       Index           =   0
       Left            =   0
@@ -38,7 +38,7 @@ Begin VB.Form toolpanel_Measure
       Width           =   4575
       _ExtentX        =   8070
       _ExtentY        =   3625
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   375
          Index           =   0
          Left            =   0
@@ -48,7 +48,7 @@ Begin VB.Form toolpanel_Measure
          _ExtentY        =   661
          Caption         =   "modify measurement"
       End
-      Begin PhotoDemon.pdCheckBox chkShare 
+      Begin PhotoPaint.pdCheckBox chkShare 
          Height          =   345
          Left            =   0
          TabIndex        =   3
@@ -59,7 +59,7 @@ Begin VB.Form toolpanel_Measure
          Caption         =   "share measurements between images"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdButton cmdAction 
+      Begin PhotoPaint.pdButton cmdAction 
          Height          =   450
          Index           =   0
          Left            =   2025
@@ -70,7 +70,7 @@ Begin VB.Form toolpanel_Measure
          _ExtentY        =   794
          Caption         =   "swap points"
       End
-      Begin PhotoDemon.pdButton cmdAction 
+      Begin PhotoPaint.pdButton cmdAction 
          Height          =   450
          Index           =   3
          Left            =   0
@@ -81,7 +81,7 @@ Begin VB.Form toolpanel_Measure
          _ExtentY        =   794
          Caption         =   "rotate 90"
       End
-      Begin PhotoDemon.pdButton cmdAction 
+      Begin PhotoPaint.pdButton cmdAction 
          Height          =   450
          Index           =   4
          Left            =   0
@@ -92,7 +92,7 @@ Begin VB.Form toolpanel_Measure
          _ExtentY        =   794
          Caption         =   "clear points"
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   0
          Left            =   4080
@@ -104,7 +104,7 @@ Begin VB.Form toolpanel_Measure
          StickyToggle    =   -1  'True
       End
    End
-   Begin PhotoDemon.pdLabel lblMeasure 
+   Begin PhotoPaint.pdLabel lblMeasure 
       Height          =   255
       Index           =   0
       Left            =   4080
@@ -115,7 +115,7 @@ Begin VB.Form toolpanel_Measure
       Alignment       =   1
       Caption         =   "distance:"
    End
-   Begin PhotoDemon.pdLabel lblMeasure 
+   Begin PhotoPaint.pdLabel lblMeasure 
       Height          =   255
       Index           =   1
       Left            =   6600
@@ -126,7 +126,7 @@ Begin VB.Form toolpanel_Measure
       Alignment       =   1
       Caption         =   "angle:"
    End
-   Begin PhotoDemon.pdLabel lblMeasure 
+   Begin PhotoPaint.pdLabel lblMeasure 
       Height          =   255
       Index           =   2
       Left            =   9120
@@ -137,7 +137,7 @@ Begin VB.Form toolpanel_Measure
       Alignment       =   1
       Caption         =   "width:"
    End
-   Begin PhotoDemon.pdLabel lblMeasure 
+   Begin PhotoPaint.pdLabel lblMeasure 
       Height          =   255
       Index           =   3
       Left            =   11640
@@ -148,7 +148,7 @@ Begin VB.Form toolpanel_Measure
       Alignment       =   1
       Caption         =   "height:"
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   0
       Left            =   5640
@@ -159,7 +159,7 @@ Begin VB.Form toolpanel_Measure
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   1
       Left            =   8040
@@ -170,7 +170,7 @@ Begin VB.Form toolpanel_Measure
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   2
       Left            =   10680
@@ -181,7 +181,7 @@ Begin VB.Form toolpanel_Measure
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   3
       Left            =   13200
@@ -192,7 +192,7 @@ Begin VB.Form toolpanel_Measure
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblMeasure 
+   Begin PhotoPaint.pdLabel lblMeasure 
       Height          =   255
       Index           =   4
       Left            =   4080
@@ -203,7 +203,7 @@ Begin VB.Form toolpanel_Measure
       Alignment       =   1
       Caption         =   "distance:"
    End
-   Begin PhotoDemon.pdLabel lblMeasure 
+   Begin PhotoPaint.pdLabel lblMeasure 
       Height          =   255
       Index           =   5
       Left            =   6600
@@ -214,7 +214,7 @@ Begin VB.Form toolpanel_Measure
       Alignment       =   1
       Caption         =   "angle:"
    End
-   Begin PhotoDemon.pdLabel lblMeasure 
+   Begin PhotoPaint.pdLabel lblMeasure 
       Height          =   255
       Index           =   6
       Left            =   9120
@@ -225,7 +225,7 @@ Begin VB.Form toolpanel_Measure
       Alignment       =   1
       Caption         =   "width:"
    End
-   Begin PhotoDemon.pdLabel lblMeasure 
+   Begin PhotoPaint.pdLabel lblMeasure 
       Height          =   255
       Index           =   7
       Left            =   11640
@@ -236,7 +236,7 @@ Begin VB.Form toolpanel_Measure
       Alignment       =   1
       Caption         =   "height:"
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   4
       Left            =   5640
@@ -247,7 +247,7 @@ Begin VB.Form toolpanel_Measure
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   5
       Left            =   8040
@@ -258,7 +258,7 @@ Begin VB.Form toolpanel_Measure
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   6
       Left            =   10680
@@ -269,7 +269,7 @@ Begin VB.Form toolpanel_Measure
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   7
       Left            =   13200
@@ -280,7 +280,7 @@ Begin VB.Form toolpanel_Measure
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdButton cmdAction 
+   Begin PhotoPaint.pdButton cmdAction 
       Height          =   450
       Index           =   1
       Left            =   0
@@ -291,7 +291,7 @@ Begin VB.Form toolpanel_Measure
       _ExtentY        =   794
       Caption         =   "straighten image"
    End
-   Begin PhotoDemon.pdButton cmdAction 
+   Begin PhotoPaint.pdButton cmdAction 
       Height          =   450
       Index           =   2
       Left            =   2025
@@ -302,7 +302,7 @@ Begin VB.Form toolpanel_Measure
       _ExtentY        =   794
       Caption         =   "straighten layer"
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   0
       Left            =   0
@@ -336,7 +336,7 @@ Attribute VB_Exposed = False
 ' for this automagically.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

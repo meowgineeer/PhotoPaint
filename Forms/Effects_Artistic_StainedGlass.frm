@@ -25,7 +25,7 @@ Begin VB.Form FormStainedGlass
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   785
    Visible         =   0   'False
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -34,7 +34,7 @@ Begin VB.Form FormStainedGlass
       _ExtentX        =   21325
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5745
       Left            =   120
       TabIndex        =   1
@@ -43,7 +43,7 @@ Begin VB.Form FormStainedGlass
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdButtonStrip btsOptions 
+   Begin PhotoPaint.pdButtonStrip btsOptions 
       Height          =   1080
       Left            =   6000
       TabIndex        =   2
@@ -53,7 +53,7 @@ Begin VB.Form FormStainedGlass
       _ExtentY        =   1905
       Caption         =   "options"
    End
-   Begin PhotoDemon.pdContainer pnlOptions 
+   Begin PhotoPaint.pdContainer pnlOptions 
       Height          =   4695
       Index           =   0
       Left            =   5880
@@ -61,7 +61,7 @@ Begin VB.Form FormStainedGlass
       Width           =   5775
       _ExtentX        =   10186
       _ExtentY        =   7858
-      Begin PhotoDemon.pdDropDown cboPattern 
+      Begin PhotoPaint.pdDropDown cboPattern 
          Height          =   735
          Left            =   120
          TabIndex        =   3
@@ -71,7 +71,7 @@ Begin VB.Form FormStainedGlass
          _ExtentY        =   1296
          Caption         =   "pattern"
       End
-      Begin PhotoDemon.pdSlider sltSize 
+      Begin PhotoPaint.pdSlider sltSize 
          Height          =   705
          Left            =   120
          TabIndex        =   4
@@ -85,7 +85,7 @@ Begin VB.Form FormStainedGlass
          Value           =   20
          DefaultValue    =   20
       End
-      Begin PhotoDemon.pdSlider sltShadeQuality 
+      Begin PhotoPaint.pdSlider sltShadeQuality 
          Height          =   705
          Left            =   120
          TabIndex        =   5
@@ -100,7 +100,7 @@ Begin VB.Form FormStainedGlass
          NotchPosition   =   2
          NotchValueCustom=   6
       End
-      Begin PhotoDemon.pdSlider sltTurbulence 
+      Begin PhotoPaint.pdSlider sltTurbulence 
          Height          =   705
          Left            =   120
          TabIndex        =   9
@@ -115,7 +115,7 @@ Begin VB.Form FormStainedGlass
          DefaultValue    =   0.5
       End
    End
-   Begin PhotoDemon.pdContainer pnlOptions 
+   Begin PhotoPaint.pdContainer pnlOptions 
       Height          =   4695
       Index           =   1
       Left            =   5880
@@ -123,7 +123,7 @@ Begin VB.Form FormStainedGlass
       Width           =   5775
       _ExtentX        =   10186
       _ExtentY        =   7858
-      Begin PhotoDemon.pdDropDown cboDistance 
+      Begin PhotoPaint.pdDropDown cboDistance 
          Height          =   735
          Left            =   120
          TabIndex        =   6
@@ -133,7 +133,7 @@ Begin VB.Form FormStainedGlass
          _ExtentY        =   1296
          Caption         =   "distance method"
       End
-      Begin PhotoDemon.pdSlider sltEdge 
+      Begin PhotoPaint.pdSlider sltEdge 
          Height          =   705
          Left            =   120
          TabIndex        =   7
@@ -145,7 +145,7 @@ Begin VB.Form FormStainedGlass
          Max             =   1
          SigDigits       =   2
       End
-      Begin PhotoDemon.pdDropDown cboColorSampling 
+      Begin PhotoPaint.pdDropDown cboColorSampling 
          Height          =   735
          Left            =   120
          TabIndex        =   8
@@ -155,7 +155,7 @@ Begin VB.Form FormStainedGlass
          _ExtentY        =   1296
          Caption         =   "color sampling"
       End
-      Begin PhotoDemon.pdSlider sldOpacity 
+      Begin PhotoPaint.pdSlider sldOpacity 
          Height          =   495
          Left            =   120
          TabIndex        =   10
@@ -169,7 +169,7 @@ Begin VB.Form FormStainedGlass
          NotchPosition   =   2
          NotchValueCustom=   100
       End
-      Begin PhotoDemon.pdColorSelector csBackground 
+      Begin PhotoPaint.pdColorSelector csBackground 
          Height          =   855
          Left            =   120
          TabIndex        =   11
@@ -221,7 +221,7 @@ Attribute VB_Exposed = False
 ' Link here: http://rrprogs.com/)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

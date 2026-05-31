@@ -24,7 +24,7 @@ Begin VB.Form FormGlassTiles
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   785
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormGlassTiles
       _ExtentX        =   20770
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltAngle 
+   Begin PhotoPaint.pdSlider sltAngle 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -47,7 +47,7 @@ Begin VB.Form FormGlassTiles
       SigDigits       =   1
       Value           =   45
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -57,7 +57,7 @@ Begin VB.Form FormGlassTiles
       _ExtentY        =   9922
       DisableZoomPan  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sltSize 
+   Begin PhotoPaint.pdSlider sltSize 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -73,7 +73,7 @@ Begin VB.Form FormGlassTiles
       NotchPosition   =   2
       NotchValueCustom=   20
    End
-   Begin PhotoDemon.pdSlider sltCurvature 
+   Begin PhotoPaint.pdSlider sltCurvature 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -88,7 +88,7 @@ Begin VB.Form FormGlassTiles
       Value           =   8
       DefaultValue    =   8
    End
-   Begin PhotoDemon.pdSlider sltQuality 
+   Begin PhotoPaint.pdSlider sltQuality 
       Height          =   705
       Left            =   6000
       TabIndex        =   6
@@ -103,7 +103,7 @@ Begin VB.Form FormGlassTiles
       NotchPosition   =   2
       NotchValueCustom=   2
    End
-   Begin PhotoDemon.pdDropDown cboEdges 
+   Begin PhotoPaint.pdDropDown cboEdges 
       Height          =   735
       Left            =   6000
       TabIndex        =   5
@@ -130,7 +130,7 @@ Attribute VB_Exposed = False
 ' The curvature parameter generates a convex surface for positive values and a concave surface
 ' for negative values.
 '
-'An outside contributor first submitted this tool to PhotoDemon.  Their contribution was a VB6
+'An outside contributor first submitted this tool to PhotoPaint.  Their contribution was a VB6
 ' translation of code first adopted from the open-source Pinta project.  Pinta, in turn, is derived
 ' from Paint.NET code from when Paint.NET was MIT-licensed.  (Long story.)  The current version of
 ' this algorithm is quite far removed from the original, but the basic trig underlying the transform
@@ -141,7 +141,7 @@ Attribute VB_Exposed = False
 ' August 2017): https://github.com/PintaProject/Pinta/blob/master/Pinta.Effects/Effects/TileEffect.cs
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -26,7 +26,7 @@ Begin VB.Form dialog_ColorPanel
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   603
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdButtonStrip btsStyle 
+   Begin PhotoPaint.pdButtonStrip btsStyle 
       Height          =   1095
       Left            =   120
       TabIndex        =   1
@@ -36,7 +36,7 @@ Begin VB.Form dialog_ColorPanel
       _ExtentY        =   1931
       Caption         =   "style"
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBar 
+   Begin PhotoPaint.pdCommandBarMini cmdBar 
       Align           =   2  'Align Bottom
       Height          =   735
       Left            =   0
@@ -46,7 +46,7 @@ Begin VB.Form dialog_ColorPanel
       _ExtentX        =   15954
       _ExtentY        =   1296
    End
-   Begin PhotoDemon.pdContainer pnlOptions 
+   Begin PhotoPaint.pdContainer pnlOptions 
       Height          =   2055
       Index           =   1
       Left            =   120
@@ -54,7 +54,7 @@ Begin VB.Form dialog_ColorPanel
       Width           =   8775
       _ExtentX        =   15478
       _ExtentY        =   2355
-      Begin PhotoDemon.pdDropDown cboPalettes 
+      Begin PhotoPaint.pdDropDown cboPalettes 
          Height          =   735
          Left            =   120
          TabIndex        =   2
@@ -65,7 +65,7 @@ Begin VB.Form dialog_ColorPanel
          Caption         =   "palettes in this file (%1)"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdButton cmdPaletteChoose 
+      Begin PhotoPaint.pdButton cmdPaletteChoose 
          Height          =   375
          Left            =   8280
          TabIndex        =   3
@@ -75,7 +75,7 @@ Begin VB.Form dialog_ColorPanel
          _ExtentY        =   661
          Caption         =   "..."
       End
-      Begin PhotoDemon.pdTextBox txtPaletteFile 
+      Begin PhotoPaint.pdTextBox txtPaletteFile 
          Height          =   375
          Left            =   210
          TabIndex        =   4
@@ -84,7 +84,7 @@ Begin VB.Form dialog_ColorPanel
          _ExtentX        =   14076
          _ExtentY        =   661
       End
-      Begin PhotoDemon.pdLabel lblOptions 
+      Begin PhotoPaint.pdLabel lblOptions 
          Height          =   255
          Index           =   0
          Left            =   120
@@ -95,7 +95,7 @@ Begin VB.Form dialog_ColorPanel
          Caption         =   "palette to use"
       End
    End
-   Begin PhotoDemon.pdContainer pnlOptions 
+   Begin PhotoPaint.pdContainer pnlOptions 
       Height          =   1335
       Index           =   0
       Left            =   120
@@ -121,7 +121,7 @@ Attribute VB_Exposed = False
 ' increased freedom when deciding how they want to paint an image.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

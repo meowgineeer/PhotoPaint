@@ -26,7 +26,7 @@ Begin VB.Form dialog_ExportPalette
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   730
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdButtonStrip btsTargetFile 
+   Begin PhotoPaint.pdButtonStrip btsTargetFile 
       Height          =   1050
       Left            =   4560
       TabIndex        =   6
@@ -36,7 +36,7 @@ Begin VB.Form dialog_ExportPalette
       _ExtentY        =   1852
       Caption         =   "target palette file"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   255
       Index           =   0
       Left            =   4560
@@ -47,7 +47,7 @@ Begin VB.Form dialog_ExportPalette
       Caption         =   "palette name"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdTextBox txtPaletteName 
+   Begin PhotoPaint.pdTextBox txtPaletteName 
       Height          =   375
       Left            =   4680
       TabIndex        =   5
@@ -56,7 +56,7 @@ Begin VB.Form dialog_ExportPalette
       _ExtentX        =   10821
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdSlider sldColorCount 
+   Begin PhotoPaint.pdSlider sldColorCount 
       Height          =   735
       Left            =   4560
       TabIndex        =   4
@@ -71,7 +71,7 @@ Begin VB.Form dialog_ExportPalette
       NotchPosition   =   2
       NotchValueCustom=   256
    End
-   Begin PhotoDemon.pdButtonStrip btsColorCount 
+   Begin PhotoPaint.pdButtonStrip btsColorCount 
       Height          =   1050
       Left            =   4560
       TabIndex        =   3
@@ -81,7 +81,7 @@ Begin VB.Form dialog_ExportPalette
       _ExtentY        =   1852
       Caption         =   "palette color count"
    End
-   Begin PhotoDemon.pdPaletteUI palPreview 
+   Begin PhotoPaint.pdPaletteUI palPreview 
       Height          =   5655
       Left            =   120
       TabIndex        =   2
@@ -92,7 +92,7 @@ Begin VB.Form dialog_ExportPalette
       Caption         =   "palette contents"
       UseRGBA         =   -1  'True
    End
-   Begin PhotoDemon.pdButtonStrip btsPalette 
+   Begin PhotoPaint.pdButtonStrip btsPalette 
       Height          =   1050
       Left            =   4560
       TabIndex        =   1
@@ -102,7 +102,7 @@ Begin VB.Form dialog_ExportPalette
       _ExtentY        =   1852
       Caption         =   "palette to export"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -131,7 +131,7 @@ Attribute VB_Exposed = False
 ' will have to do.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

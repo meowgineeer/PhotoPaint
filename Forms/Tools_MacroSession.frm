@@ -26,7 +26,7 @@ Begin VB.Form FormMacroSession
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   786
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdLabel lblSummary 
+   Begin PhotoPaint.pdLabel lblSummary 
       Height          =   495
       Left            =   360
       Top             =   6000
@@ -38,7 +38,7 @@ Begin VB.Form FormMacroSession
       FontBold        =   -1  'True
       FontSize        =   11
    End
-   Begin PhotoDemon.pdListBoxOD lstStart 
+   Begin PhotoPaint.pdListBoxOD lstStart 
       Height          =   5055
       Left            =   240
       TabIndex        =   1
@@ -48,7 +48,7 @@ Begin VB.Form FormMacroSession
       _ExtentY        =   8916
       Caption         =   "first action"
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBar 
+   Begin PhotoPaint.pdCommandBarMini cmdBar 
       Align           =   2  'Align Bottom
       Height          =   735
       Left            =   0
@@ -59,7 +59,7 @@ Begin VB.Form FormMacroSession
       _ExtentY        =   1296
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdListBoxOD lstEnd 
+   Begin PhotoPaint.pdListBoxOD lstEnd 
       Height          =   5055
       Left            =   6120
       TabIndex        =   2
@@ -69,7 +69,7 @@ Begin VB.Form FormMacroSession
       _ExtentY        =   8916
       Caption         =   "last action"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   255
       Index           =   0
       Left            =   360
@@ -110,7 +110,7 @@ Attribute VB_Exposed = False
 ' Thank you again to jpbro for his suggestion and subsequent testing.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

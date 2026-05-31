@@ -26,7 +26,7 @@ Begin VB.Form FormPerspective
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   945
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdPictureBoxInteractive picDraw 
+   Begin PhotoPaint.pdPictureBoxInteractive picDraw 
       Height          =   8475
       Left            =   6000
       Top             =   120
@@ -34,7 +34,7 @@ Begin VB.Form FormPerspective
       _ExtentX        =   14182
       _ExtentY        =   14949
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   4305
       Left            =   120
       TabIndex        =   1
@@ -44,7 +44,7 @@ Begin VB.Form FormPerspective
       _ExtentY        =   7594
       DisableZoomPan  =   -1  'True
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -54,7 +54,7 @@ Begin VB.Form FormPerspective
       _ExtentX        =   25003
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdButtonStrip btsSettings 
+   Begin PhotoPaint.pdButtonStrip btsSettings 
       Height          =   1095
       Left            =   120
       TabIndex        =   11
@@ -64,7 +64,7 @@ Begin VB.Form FormPerspective
       _ExtentY        =   1931
       Caption         =   "options"
    End
-   Begin PhotoDemon.pdContainer pnlSettings 
+   Begin PhotoPaint.pdContainer pnlSettings 
       Height          =   2895
       Index           =   1
       Left            =   120
@@ -73,7 +73,7 @@ Begin VB.Form FormPerspective
       Width           =   5790
       _ExtentX        =   10213
       _ExtentY        =   5106
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   372
          Index           =   1
          Left            =   0
@@ -84,7 +84,7 @@ Begin VB.Form FormPerspective
          Caption         =   "custom foreshortening (x, y)"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdSlider sltQuality 
+      Begin PhotoPaint.pdSlider sltQuality 
          Height          =   705
          Left            =   0
          TabIndex        =   12
@@ -99,7 +99,7 @@ Begin VB.Form FormPerspective
          NotchPosition   =   2
          NotchValueCustom=   2
       End
-      Begin PhotoDemon.pdDropDown cboEdges 
+      Begin PhotoPaint.pdDropDown cboEdges 
          Height          =   855
          Left            =   0
          TabIndex        =   13
@@ -109,7 +109,7 @@ Begin VB.Form FormPerspective
          _ExtentY        =   1508
          Caption         =   "if pixels lie outside the image..."
       End
-      Begin PhotoDemon.pdSlider sldForeshortening 
+      Begin PhotoPaint.pdSlider sldForeshortening 
          Height          =   495
          Index           =   1
          Left            =   3000
@@ -123,7 +123,7 @@ Begin VB.Form FormPerspective
          SigDigits       =   2
          GradientColorRight=   1703935
       End
-      Begin PhotoDemon.pdSlider sldForeshortening 
+      Begin PhotoPaint.pdSlider sldForeshortening 
          Height          =   495
          Index           =   0
          Left            =   0
@@ -138,7 +138,7 @@ Begin VB.Form FormPerspective
          GradientColorRight=   1703935
       End
    End
-   Begin PhotoDemon.pdContainer pnlSettings 
+   Begin PhotoPaint.pdContainer pnlSettings 
       Height          =   2895
       Index           =   0
       Left            =   120
@@ -146,7 +146,7 @@ Begin VB.Form FormPerspective
       Width           =   5790
       _ExtentX        =   11456
       _ExtentY        =   7223
-      Begin PhotoDemon.pdSpinner spnCoords 
+      Begin PhotoPaint.pdSpinner spnCoords 
          Height          =   375
          Index           =   0
          Left            =   120
@@ -159,7 +159,7 @@ Begin VB.Form FormPerspective
          Max             =   32000
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   375
          Index           =   0
          Left            =   0
@@ -170,7 +170,7 @@ Begin VB.Form FormPerspective
          Caption         =   "coordinates (x, y)"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdDropDown cboMapping 
+      Begin PhotoPaint.pdDropDown cboMapping 
          Height          =   735
          Left            =   0
          TabIndex        =   3
@@ -180,7 +180,7 @@ Begin VB.Form FormPerspective
          _ExtentY        =   1296
          Caption         =   "transformation type"
       End
-      Begin PhotoDemon.pdSpinner spnCoords 
+      Begin PhotoPaint.pdSpinner spnCoords 
          Height          =   375
          Index           =   1
          Left            =   1320
@@ -192,7 +192,7 @@ Begin VB.Form FormPerspective
          Min             =   -32000
          Max             =   32000
       End
-      Begin PhotoDemon.pdSpinner spnCoords 
+      Begin PhotoPaint.pdSpinner spnCoords 
          Height          =   375
          Index           =   2
          Left            =   3240
@@ -205,7 +205,7 @@ Begin VB.Form FormPerspective
          Max             =   32000
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdSpinner spnCoords 
+      Begin PhotoPaint.pdSpinner spnCoords 
          Height          =   375
          Index           =   3
          Left            =   4440
@@ -217,7 +217,7 @@ Begin VB.Form FormPerspective
          Min             =   -32000
          Max             =   32000
       End
-      Begin PhotoDemon.pdSpinner spnCoords 
+      Begin PhotoPaint.pdSpinner spnCoords 
          Height          =   375
          Index           =   6
          Left            =   120
@@ -230,7 +230,7 @@ Begin VB.Form FormPerspective
          Max             =   32000
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdSpinner spnCoords 
+      Begin PhotoPaint.pdSpinner spnCoords 
          Height          =   375
          Index           =   7
          Left            =   1320
@@ -242,7 +242,7 @@ Begin VB.Form FormPerspective
          Min             =   -32000
          Max             =   32000
       End
-      Begin PhotoDemon.pdSpinner spnCoords 
+      Begin PhotoPaint.pdSpinner spnCoords 
          Height          =   375
          Index           =   4
          Left            =   3240
@@ -255,7 +255,7 @@ Begin VB.Form FormPerspective
          Max             =   32000
          ShowResetButton =   0   'False
       End
-      Begin PhotoDemon.pdSpinner spnCoords 
+      Begin PhotoPaint.pdSpinner spnCoords 
          Height          =   375
          Index           =   5
          Left            =   4440
@@ -303,7 +303,7 @@ Attribute VB_Exposed = False
 ' https://stackoverflow.com/questions/471962/how-do-i-efficiently-determine-if-a-polygon-is-convex-non-convex-or-complex
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

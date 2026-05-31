@@ -22,7 +22,7 @@ Begin VB.UserControl pdResize
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   552
    ToolboxBitmap   =   "pdResize.ctx":0000
-   Begin PhotoDemon.pdButtonToolbox cmdAspectRatio 
+   Begin PhotoPaint.pdButtonToolbox cmdAspectRatio 
       Height          =   630
       Left            =   7590
       TabIndex        =   2
@@ -33,7 +33,7 @@ Begin VB.UserControl pdResize
       DontHighlightDownState=   -1  'True
       StickyToggle    =   -1  'True
    End
-   Begin PhotoDemon.pdDropDown cmbResolution 
+   Begin PhotoPaint.pdDropDown cmbResolution 
       Height          =   360
       Left            =   3825
       TabIndex        =   6
@@ -43,7 +43,7 @@ Begin VB.UserControl pdResize
       _ExtentY        =   635
       FontSize        =   11
    End
-   Begin PhotoDemon.pdDropDown cmbHeightUnit 
+   Begin PhotoPaint.pdDropDown cmbHeightUnit 
       Height          =   360
       Left            =   3825
       TabIndex        =   3
@@ -53,7 +53,7 @@ Begin VB.UserControl pdResize
       _ExtentY        =   635
       FontSize        =   11
    End
-   Begin PhotoDemon.pdDropDown cmbWidthUnit 
+   Begin PhotoPaint.pdDropDown cmbWidthUnit 
       Height          =   360
       Left            =   3825
       TabIndex        =   4
@@ -63,7 +63,7 @@ Begin VB.UserControl pdResize
       _ExtentY        =   635
       FontSize        =   11
    End
-   Begin PhotoDemon.pdSpinner tudWidth 
+   Begin PhotoPaint.pdSpinner tudWidth 
       Height          =   375
       Left            =   2130
       TabIndex        =   0
@@ -77,7 +77,7 @@ Begin VB.UserControl pdResize
       Value           =   1
       FontSize        =   11
    End
-   Begin PhotoDemon.pdSpinner tudHeight 
+   Begin PhotoPaint.pdSpinner tudHeight 
       Height          =   375
       Left            =   2130
       TabIndex        =   1
@@ -91,7 +91,7 @@ Begin VB.UserControl pdResize
       Value           =   1
       FontSize        =   11
    End
-   Begin PhotoDemon.pdSpinner tudResolution 
+   Begin PhotoPaint.pdSpinner tudResolution 
       Height          =   375
       Left            =   2130
       TabIndex        =   5
@@ -106,7 +106,7 @@ Begin VB.UserControl pdResize
       Value           =   1
       FontSize        =   11
    End
-   Begin PhotoDemon.pdLabel lblResolution 
+   Begin PhotoPaint.pdLabel lblResolution 
       Height          =   285
       Left            =   0
       Top             =   1230
@@ -118,7 +118,7 @@ Begin VB.UserControl pdResize
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblDimensions 
+   Begin PhotoPaint.pdLabel lblDimensions 
       Height          =   285
       Index           =   0
       Left            =   0
@@ -131,7 +131,7 @@ Begin VB.UserControl pdResize
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblDimensions 
+   Begin PhotoPaint.pdLabel lblDimensions 
       Height          =   285
       Index           =   1
       Left            =   2130
@@ -143,7 +143,7 @@ Begin VB.UserControl pdResize
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblAspectRatio 
+   Begin PhotoPaint.pdLabel lblAspectRatio 
       Height          =   285
       Index           =   1
       Left            =   2130
@@ -155,7 +155,7 @@ Begin VB.UserControl pdResize
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblWidth 
+   Begin PhotoPaint.pdLabel lblWidth 
       Height          =   285
       Left            =   0
       Top             =   30
@@ -167,7 +167,7 @@ Begin VB.UserControl pdResize
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblHeight 
+   Begin PhotoPaint.pdLabel lblHeight 
       Height          =   285
       Left            =   0
       Top             =   630
@@ -179,7 +179,7 @@ Begin VB.UserControl pdResize
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblAspectRatio 
+   Begin PhotoPaint.pdLabel lblAspectRatio 
       Height          =   285
       Index           =   0
       Left            =   0
@@ -216,7 +216,7 @@ Attribute VB_Exposed = False
 ' automatically propagate across them.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

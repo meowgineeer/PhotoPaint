@@ -24,7 +24,7 @@ Begin VB.Form FormDustAndScratches
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   802
-   Begin PhotoDemon.pdCheckBox chkLuminance 
+   Begin PhotoPaint.pdCheckBox chkLuminance 
       Height          =   375
       Left            =   6120
       TabIndex        =   3
@@ -34,7 +34,7 @@ Begin VB.Form FormDustAndScratches
       _ExtentY        =   661
       Caption         =   "luminance only"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -43,7 +43,7 @@ Begin VB.Form FormDustAndScratches
       _ExtentX        =   21220
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -52,7 +52,7 @@ Begin VB.Form FormDustAndScratches
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -67,7 +67,7 @@ Begin VB.Form FormDustAndScratches
       Value           =   5
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdSlider sldThreshold 
+   Begin PhotoPaint.pdSlider sldThreshold 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -101,13 +101,13 @@ Attribute VB_Exposed = False
 '
 '...we finally have "official" confirmation that Photoshop's Dust and Scratches tool is just a
 ' median filter with a threshold parameter slapped on top.  This confirmation makes it trivial
-' for me to add an identical tool to PhotoDemon.
+' for me to add an identical tool to PhotoPaint.
 '
 'For details on PD's median filter implementation, please refer to the median effect dialog;
 ' this tool is just a minor modification of work already done there.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

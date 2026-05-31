@@ -22,7 +22,7 @@ Begin VB.Form dialog_ExportWebP
    ScaleHeight     =   439
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   809
-   Begin PhotoDemon.pdDropDown ddImageHint 
+   Begin PhotoPaint.pdDropDown ddImageHint 
       Height          =   855
       Left            =   6000
       TabIndex        =   4
@@ -32,7 +32,7 @@ Begin VB.Form dialog_ExportWebP
       _ExtentY        =   1508
       Caption         =   "image type:"
    End
-   Begin PhotoDemon.pdButtonStrip btsCompression 
+   Begin PhotoPaint.pdButtonStrip btsCompression 
       Height          =   1095
       Left            =   6000
       TabIndex        =   3
@@ -42,7 +42,7 @@ Begin VB.Form dialog_ExportWebP
       _ExtentY        =   1931
       Caption         =   "compression"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -53,7 +53,7 @@ Begin VB.Form dialog_ExportWebP
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -62,7 +62,7 @@ Begin VB.Form dialog_ExportWebP
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sldQuality 
+   Begin PhotoPaint.pdSlider sldQuality 
       Height          =   765
       Left            =   6000
       TabIndex        =   2
@@ -77,7 +77,7 @@ Begin VB.Form dialog_ExportWebP
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdLabel lblInfo 
+   Begin PhotoPaint.pdLabel lblInfo 
       Height          =   435
       Index           =   0
       Left            =   6240
@@ -91,7 +91,7 @@ Begin VB.Form dialog_ExportWebP
       ForeColor       =   4210752
       Layout          =   1
    End
-   Begin PhotoDemon.pdLabel lblInfo 
+   Begin PhotoPaint.pdLabel lblInfo 
       Height          =   435
       Index           =   1
       Left            =   8520
@@ -126,7 +126,7 @@ Attribute VB_Exposed = False
 ' there's a lot of work involved in encoding WebP files, and that class handles it all for us.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

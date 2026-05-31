@@ -23,7 +23,7 @@ Begin VB.UserControl pdCommandBarMini
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   637
    ToolboxBitmap   =   "pdCommandBarMini.ctx":0000
-   Begin PhotoDemon.pdButton cmdOK 
+   Begin PhotoPaint.pdButton cmdOK 
       Height          =   510
       Left            =   6600
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.UserControl pdCommandBarMini
       _ExtentY        =   900
       Caption         =   "OK"
    End
-   Begin PhotoDemon.pdButton cmdCancel 
+   Begin PhotoPaint.pdButton cmdCancel 
       Height          =   510
       Left            =   8070
       TabIndex        =   1
@@ -61,7 +61,7 @@ Attribute VB_Exposed = False
 ' the standard command bar.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

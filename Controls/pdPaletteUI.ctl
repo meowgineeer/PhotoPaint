@@ -44,7 +44,7 @@ Attribute VB_Exposed = False
 ' but if you want full RGBA handling, you'll need to manually set the relevant property at design-time.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

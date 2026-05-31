@@ -22,7 +22,7 @@ Begin VB.UserControl pdRandomizeUI
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   400
    ToolboxBitmap   =   "pdRandomizeUI.ctx":0000
-   Begin PhotoDemon.pdTextBox txtSeed 
+   Begin PhotoPaint.pdTextBox txtSeed 
       Height          =   375
       Left            =   120
       TabIndex        =   1
@@ -31,7 +31,7 @@ Begin VB.UserControl pdRandomizeUI
       _ExtentX        =   9128
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdButtonToolbox cmdRandomize 
+   Begin PhotoPaint.pdButtonToolbox cmdRandomize 
       Height          =   375
       Left            =   5400
       TabIndex        =   0
@@ -58,7 +58,7 @@ Attribute VB_Exposed = False
 ' little dice button (on the right-side of the control) to have the control generate a random seed for you.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

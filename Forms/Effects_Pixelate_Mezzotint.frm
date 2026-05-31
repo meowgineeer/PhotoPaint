@@ -24,7 +24,7 @@ Begin VB.Form FormMezzotint
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   777
-   Begin PhotoDemon.pdButtonStrip btsType 
+   Begin PhotoPaint.pdButtonStrip btsType 
       Height          =   1095
       Left            =   6000
       TabIndex        =   4
@@ -34,7 +34,7 @@ Begin VB.Form FormMezzotint
       _ExtentY        =   1931
       Caption         =   "type"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -43,7 +43,7 @@ Begin VB.Form FormMezzotint
       _ExtentX        =   20558
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -52,7 +52,7 @@ Begin VB.Form FormMezzotint
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltSmoothness 
+   Begin PhotoPaint.pdSlider sltSmoothness 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -66,7 +66,7 @@ Begin VB.Form FormMezzotint
       NotchPosition   =   2
       NotchValueCustom=   10
    End
-   Begin PhotoDemon.pdSlider sltRandom 
+   Begin PhotoPaint.pdSlider sltRandom 
       Height          =   705
       Left            =   6000
       TabIndex        =   5
@@ -80,7 +80,7 @@ Begin VB.Form FormMezzotint
       NotchPosition   =   2
       NotchValueCustom=   50
    End
-   Begin PhotoDemon.pdButtonStrip btsStippling 
+   Begin PhotoPaint.pdButtonStrip btsStippling 
       Height          =   1095
       Left            =   6000
       TabIndex        =   2
@@ -113,7 +113,7 @@ Attribute VB_Exposed = False
 ' resemblance to the traditional technique, there seems to be merit in including it.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

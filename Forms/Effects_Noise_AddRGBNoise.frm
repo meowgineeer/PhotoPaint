@@ -24,7 +24,7 @@ Begin VB.Form FormNoise
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   777
-   Begin PhotoDemon.pdButtonStrip btsColor 
+   Begin PhotoPaint.pdButtonStrip btsColor 
       Height          =   1095
       Left            =   6000
       TabIndex        =   3
@@ -35,7 +35,7 @@ Begin VB.Form FormNoise
       Caption         =   "appearance"
       FontSize        =   11
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -44,7 +44,7 @@ Begin VB.Form FormNoise
       _ExtentX        =   20558
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -53,7 +53,7 @@ Begin VB.Form FormNoise
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltNoise 
+   Begin PhotoPaint.pdSlider sltNoise 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -67,7 +67,7 @@ Begin VB.Form FormNoise
       Value           =   10
       DefaultValue    =   10
    End
-   Begin PhotoDemon.pdButtonStrip btsDistribution 
+   Begin PhotoPaint.pdButtonStrip btsDistribution 
       Height          =   1095
       Left            =   6000
       TabIndex        =   4
@@ -97,7 +97,7 @@ Attribute VB_Exposed = False
 ' value to the user.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

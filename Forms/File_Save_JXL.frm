@@ -22,7 +22,7 @@ Begin VB.Form dialog_ExportJXL
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   874
-   Begin PhotoDemon.pdButtonStrip btsCategory 
+   Begin PhotoPaint.pdButtonStrip btsCategory 
       Height          =   615
       Left            =   6000
       TabIndex        =   1
@@ -32,7 +32,7 @@ Begin VB.Form dialog_ExportJXL
       _ExtentY        =   1085
       FontSize        =   11
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -43,7 +43,7 @@ Begin VB.Form dialog_ExportJXL
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   2
@@ -52,7 +52,7 @@ Begin VB.Form dialog_ExportJXL
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4695
       Index           =   0
       Left            =   5880
@@ -60,7 +60,7 @@ Begin VB.Form dialog_ExportJXL
       Width           =   7215
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdButtonStrip btsQuality 
+      Begin PhotoPaint.pdButtonStrip btsQuality 
          Height          =   1095
          Left            =   120
          TabIndex        =   6
@@ -70,7 +70,7 @@ Begin VB.Form dialog_ExportJXL
          _ExtentY        =   1931
          Caption         =   "quality"
       End
-      Begin PhotoDemon.pdSlider sldEffort 
+      Begin PhotoPaint.pdSlider sldEffort 
          Height          =   975
          Left            =   120
          TabIndex        =   5
@@ -85,7 +85,7 @@ Begin VB.Form dialog_ExportJXL
          NotchPosition   =   2
          NotchValueCustom=   7
       End
-      Begin PhotoDemon.pdSlider sldQuality 
+      Begin PhotoPaint.pdSlider sldQuality 
          Height          =   405
          Left            =   120
          TabIndex        =   3
@@ -98,7 +98,7 @@ Begin VB.Form dialog_ExportJXL
          NotchPosition   =   2
          NotchValueCustom=   90
       End
-      Begin PhotoDemon.pdLabel lblHint 
+      Begin PhotoPaint.pdLabel lblHint 
          Height          =   255
          Index           =   0
          Left            =   480
@@ -110,7 +110,7 @@ Begin VB.Form dialog_ExportJXL
          FontItalic      =   -1  'True
          FontSize        =   9
       End
-      Begin PhotoDemon.pdLabel lblHint 
+      Begin PhotoPaint.pdLabel lblHint 
          Height          =   255
          Index           =   1
          Left            =   2880
@@ -123,7 +123,7 @@ Begin VB.Form dialog_ExportJXL
          FontItalic      =   -1  'True
          FontSize        =   9
       End
-      Begin PhotoDemon.pdLabel lblHint 
+      Begin PhotoPaint.pdLabel lblHint 
          Height          =   255
          Index           =   3
          Left            =   2880
@@ -138,7 +138,7 @@ Begin VB.Form dialog_ExportJXL
          ForeColor       =   4210752
          Layout          =   1
       End
-      Begin PhotoDemon.pdLabel lblHint 
+      Begin PhotoPaint.pdLabel lblHint 
          Height          =   255
          Index           =   2
          Left            =   480
@@ -152,7 +152,7 @@ Begin VB.Form dialog_ExportJXL
          ForeColor       =   4210752
          Layout          =   1
       End
-      Begin PhotoDemon.pdCheckBox chkLivePreview 
+      Begin PhotoPaint.pdCheckBox chkLivePreview 
          Height          =   375
          Left            =   120
          TabIndex        =   7
@@ -164,7 +164,7 @@ Begin VB.Form dialog_ExportJXL
          FontSize        =   11
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4695
       Index           =   1
       Left            =   5880
@@ -172,7 +172,7 @@ Begin VB.Form dialog_ExportJXL
       Width           =   7215
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdMetadataExport mtdManager 
+      Begin PhotoPaint.pdMetadataExport mtdManager 
          Height          =   4215
          Left            =   240
          TabIndex        =   4
@@ -199,7 +199,7 @@ Attribute VB_Exposed = False
 ' libjxl for their actual implementation.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

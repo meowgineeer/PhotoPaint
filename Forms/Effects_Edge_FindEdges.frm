@@ -25,7 +25,7 @@ Begin VB.Form FormFindEdges
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   813
    Visible         =   0   'False
-   Begin PhotoDemon.pdListBox lstEdgeOptions 
+   Begin PhotoPaint.pdListBox lstEdgeOptions 
       Height          =   2775
       Left            =   6000
       TabIndex        =   5
@@ -35,7 +35,7 @@ Begin VB.Form FormFindEdges
       _ExtentY        =   4895
       Caption         =   "edge detection technique"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -44,7 +44,7 @@ Begin VB.Form FormFindEdges
       _ExtentX        =   21511
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdCheckBox chkInvert 
+   Begin PhotoPaint.pdCheckBox chkInvert 
       Height          =   330
       Left            =   6240
       TabIndex        =   3
@@ -54,7 +54,7 @@ Begin VB.Form FormFindEdges
       _ExtentY        =   582
       Caption         =   "use black background"
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   2
@@ -63,7 +63,7 @@ Begin VB.Form FormFindEdges
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdCheckBox chkDirection 
+   Begin PhotoPaint.pdCheckBox chkDirection 
       Height          =   360
       Index           =   0
       Left            =   6240
@@ -74,7 +74,7 @@ Begin VB.Form FormFindEdges
       _ExtentY        =   582
       Caption         =   "horizontal"
    End
-   Begin PhotoDemon.pdCheckBox chkDirection 
+   Begin PhotoPaint.pdCheckBox chkDirection 
       Height          =   360
       Index           =   1
       Left            =   6240
@@ -85,7 +85,7 @@ Begin VB.Form FormFindEdges
       _ExtentY        =   582
       Caption         =   "vertical"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   2
       Left            =   6000
@@ -97,7 +97,7 @@ Begin VB.Form FormFindEdges
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   1
       Left            =   6000
@@ -129,7 +129,7 @@ Attribute VB_Exposed = False
 ' it easier to add additional operators in the future.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

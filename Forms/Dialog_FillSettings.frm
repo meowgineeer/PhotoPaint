@@ -26,7 +26,7 @@ Begin VB.Form dialog_FillSettings
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   818
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdPictureBox picBrushPreview 
+   Begin PhotoPaint.pdPictureBox picBrushPreview 
       Height          =   1815
       Left            =   270
       Top             =   480
@@ -34,7 +34,7 @@ Begin VB.Form dialog_FillSettings
       _ExtentX        =   0
       _ExtentY        =   0
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -47,7 +47,7 @@ Begin VB.Form dialog_FillSettings
       DontAutoUnloadParent=   -1  'True
       DontResetAutomatically=   -1  'True
    End
-   Begin PhotoDemon.pdButtonStrip btsStyle 
+   Begin PhotoPaint.pdButtonStrip btsStyle 
       Height          =   1050
       Left            =   120
       TabIndex        =   0
@@ -58,7 +58,7 @@ Begin VB.Form dialog_FillSettings
       Caption         =   "fill style"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   315
       Index           =   0
       Left            =   120
@@ -69,7 +69,7 @@ Begin VB.Form dialog_FillSettings
       Caption         =   "preview"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdSlider sltFillOpacity 
+   Begin PhotoPaint.pdSlider sltFillOpacity 
       CausesValidation=   0   'False
       Height          =   705
       Left            =   120
@@ -84,7 +84,7 @@ Begin VB.Form dialog_FillSettings
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdContainer ctlGroupFill 
+   Begin PhotoPaint.pdContainer ctlGroupFill 
       Height          =   3600
       Index           =   0
       Left            =   120
@@ -92,7 +92,7 @@ Begin VB.Form dialog_FillSettings
       Width           =   12015
       _ExtentX        =   21193
       _ExtentY        =   6350
-      Begin PhotoDemon.pdColorSelector csFillColor 
+      Begin PhotoPaint.pdColorSelector csFillColor 
          Height          =   2535
          Left            =   0
          TabIndex        =   7
@@ -104,7 +104,7 @@ Begin VB.Form dialog_FillSettings
          curColor        =   0
       End
    End
-   Begin PhotoDemon.pdContainer ctlGroupFill 
+   Begin PhotoPaint.pdContainer ctlGroupFill 
       Height          =   3600
       Index           =   3
       Left            =   120
@@ -113,7 +113,7 @@ Begin VB.Form dialog_FillSettings
       _ExtentX        =   21193
       _ExtentY        =   6350
    End
-   Begin PhotoDemon.pdContainer ctlGroupFill 
+   Begin PhotoPaint.pdContainer ctlGroupFill 
       Height          =   3600
       Index           =   2
       Left            =   120
@@ -121,7 +121,7 @@ Begin VB.Form dialog_FillSettings
       Width           =   12015
       _ExtentX        =   21193
       _ExtentY        =   6350
-      Begin PhotoDemon.pdGradientSelector gsPrimary 
+      Begin PhotoPaint.pdGradientSelector gsPrimary 
          Height          =   2535
          Left            =   0
          TabIndex        =   3
@@ -131,7 +131,7 @@ Begin VB.Form dialog_FillSettings
          _ExtentY        =   4471
          Caption         =   "colors"
       End
-      Begin PhotoDemon.pdButtonStrip btsGradientShape 
+      Begin PhotoPaint.pdButtonStrip btsGradientShape 
          Height          =   1035
          Left            =   6120
          TabIndex        =   4
@@ -141,7 +141,7 @@ Begin VB.Form dialog_FillSettings
          _ExtentY        =   1826
          Caption         =   "shape"
       End
-      Begin PhotoDemon.pdSlider sldGradientAngle 
+      Begin PhotoPaint.pdSlider sldGradientAngle 
          Height          =   705
          Left            =   6120
          TabIndex        =   5
@@ -154,7 +154,7 @@ Begin VB.Form dialog_FillSettings
          SigDigits       =   1
       End
    End
-   Begin PhotoDemon.pdContainer ctlGroupFill 
+   Begin PhotoPaint.pdContainer ctlGroupFill 
       Height          =   3600
       Index           =   1
       Left            =   120
@@ -162,7 +162,7 @@ Begin VB.Form dialog_FillSettings
       Width           =   12015
       _ExtentX        =   21193
       _ExtentY        =   6350
-      Begin PhotoDemon.pdListBoxOD lstFillPattern 
+      Begin PhotoPaint.pdListBoxOD lstFillPattern 
          Height          =   2535
          Left            =   0
          TabIndex        =   6
@@ -172,7 +172,7 @@ Begin VB.Form dialog_FillSettings
          _ExtentY        =   4471
          Caption         =   "pattern"
       End
-      Begin PhotoDemon.pdColorSelector csPattern 
+      Begin PhotoPaint.pdColorSelector csPattern 
          Height          =   1095
          Index           =   0
          Left            =   6000
@@ -183,7 +183,7 @@ Begin VB.Form dialog_FillSettings
          _ExtentY        =   1931
          Caption         =   "pattern color"
       End
-      Begin PhotoDemon.pdColorSelector csPattern 
+      Begin PhotoPaint.pdColorSelector csPattern 
          Height          =   1095
          Index           =   1
          Left            =   9060
@@ -195,7 +195,7 @@ Begin VB.Form dialog_FillSettings
          Caption         =   "background color"
          curColor        =   0
       End
-      Begin PhotoDemon.pdSlider sltPatternOpacity 
+      Begin PhotoPaint.pdSlider sltPatternOpacity 
          CausesValidation=   0   'False
          Height          =   405
          Index           =   0
@@ -210,7 +210,7 @@ Begin VB.Form dialog_FillSettings
          NotchPosition   =   2
          NotchValueCustom=   100
       End
-      Begin PhotoDemon.pdSlider sltPatternOpacity 
+      Begin PhotoPaint.pdSlider sltPatternOpacity 
          CausesValidation=   0   'False
          Height          =   405
          Index           =   1
@@ -243,7 +243,7 @@ Attribute VB_Exposed = False
 ' could easily be expanded in the future thanks to its modular design.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -24,7 +24,7 @@ Begin VB.Form FormWater
    ScaleHeight     =   437
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   776
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormWater
       _ExtentX        =   20532
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltScale 
+   Begin PhotoPaint.pdSlider sltScale 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -49,7 +49,7 @@ Begin VB.Form FormWater
       NotchPosition   =   2
       NotchValueCustom=   10
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -59,7 +59,7 @@ Begin VB.Form FormWater
       _ExtentY        =   9922
       DisableZoomPan  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sltTurbulence 
+   Begin PhotoPaint.pdSlider sltTurbulence 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -74,7 +74,7 @@ Begin VB.Form FormWater
       NotchPosition   =   2
       NotchValueCustom=   0.5
    End
-   Begin PhotoDemon.pdSlider sldColor 
+   Begin PhotoPaint.pdSlider sldColor 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -88,7 +88,7 @@ Begin VB.Form FormWater
       NotchPosition   =   2
       NotchValueCustom=   50
    End
-   Begin PhotoDemon.pdRandomizeUI rndSeed 
+   Begin PhotoPaint.pdRandomizeUI rndSeed 
       Height          =   735
       Left            =   6000
       TabIndex        =   5
@@ -116,7 +116,7 @@ Attribute VB_Exposed = False
 'In 7.0, the filter was expanded to provide a full UI and user-controllable parameters.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

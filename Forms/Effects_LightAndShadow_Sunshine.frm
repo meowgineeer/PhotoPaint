@@ -24,7 +24,7 @@ Begin VB.Form FormSunshine
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   806
-   Begin PhotoDemon.pdCheckBox chkRandomize 
+   Begin PhotoPaint.pdCheckBox chkRandomize 
       Height          =   375
       Left            =   6075
       TabIndex        =   11
@@ -35,7 +35,7 @@ Begin VB.Form FormSunshine
       Caption         =   "randomize"
       FontSize        =   11
    End
-   Begin PhotoDemon.pdSlider sldRadius 
+   Begin PhotoPaint.pdSlider sldRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   1
@@ -51,7 +51,7 @@ Begin VB.Form FormSunshine
       NotchPosition   =   2
       NotchValueCustom=   50
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   0
@@ -62,7 +62,7 @@ Begin VB.Form FormSunshine
       DisableZoomPan  =   -1  'True
       PointSelection  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sldRays 
+   Begin PhotoPaint.pdSlider sldRays 
       Height          =   705
       Left            =   9000
       TabIndex        =   2
@@ -77,7 +77,7 @@ Begin VB.Form FormSunshine
       NotchPosition   =   2
       NotchValueCustom=   50
    End
-   Begin PhotoDemon.pdSlider sldXCenter 
+   Begin PhotoPaint.pdSlider sldXCenter 
       Height          =   405
       Left            =   6000
       TabIndex        =   3
@@ -91,7 +91,7 @@ Begin VB.Form FormSunshine
       NotchPosition   =   2
       NotchValueCustom=   0.5
    End
-   Begin PhotoDemon.pdSlider sldYCenter 
+   Begin PhotoPaint.pdSlider sldYCenter 
       Height          =   405
       Left            =   9000
       TabIndex        =   4
@@ -105,7 +105,7 @@ Begin VB.Form FormSunshine
       NotchPosition   =   2
       NotchValueCustom=   0.5
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   7
@@ -114,7 +114,7 @@ Begin VB.Form FormSunshine
       _ExtentX        =   21325
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdColorSelector clrBase 
+   Begin PhotoPaint.pdColorSelector clrBase 
       Height          =   810
       Left            =   6000
       TabIndex        =   5
@@ -125,7 +125,7 @@ Begin VB.Form FormSunshine
       Caption         =   "color"
       curColor        =   8978431
    End
-   Begin PhotoDemon.pdSlider sldColorVariance 
+   Begin PhotoPaint.pdSlider sldColorVariance 
       Height          =   705
       Left            =   9000
       TabIndex        =   6
@@ -137,7 +137,7 @@ Begin VB.Form FormSunshine
       Max             =   100
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdLabel lblExplanation 
+   Begin PhotoPaint.pdLabel lblExplanation 
       Height          =   435
       Index           =   0
       Left            =   6120
@@ -151,7 +151,7 @@ Begin VB.Form FormSunshine
       ForeColor       =   4210752
       Layout          =   1
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Left            =   6000
       Top             =   120
@@ -162,7 +162,7 @@ Begin VB.Form FormSunshine
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdSlider sldLengthVariance 
+   Begin PhotoPaint.pdSlider sldLengthVariance 
       Height          =   705
       Left            =   6000
       TabIndex        =   8
@@ -174,7 +174,7 @@ Begin VB.Form FormSunshine
       Max             =   100
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdDropDown cboBlendMode 
+   Begin PhotoPaint.pdDropDown cboBlendMode 
       Height          =   735
       Left            =   9000
       TabIndex        =   9
@@ -184,7 +184,7 @@ Begin VB.Form FormSunshine
       _ExtentY        =   1296
       Caption         =   "blend mode"
    End
-   Begin PhotoDemon.pdSlider sldStrength 
+   Begin PhotoPaint.pdSlider sldStrength 
       Height          =   705
       Left            =   6000
       TabIndex        =   10
@@ -200,7 +200,7 @@ Begin VB.Form FormSunshine
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdSlider sldHDR 
+   Begin PhotoPaint.pdSlider sldHDR 
       Height          =   705
       Left            =   9000
       TabIndex        =   12
@@ -238,7 +238,7 @@ Attribute VB_Exposed = False
 ' http://www.jhlabs.com/ip/filters/index.html
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

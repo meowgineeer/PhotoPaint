@@ -22,7 +22,7 @@ Begin VB.Form dialog_ExportDDS
    ScaleHeight     =   439
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   809
-   Begin PhotoDemon.pdButtonStrip btsMipMaps 
+   Begin PhotoPaint.pdButtonStrip btsMipMaps 
       Height          =   975
       Left            =   6120
       TabIndex        =   4
@@ -32,7 +32,7 @@ Begin VB.Form dialog_ExportDDS
       _ExtentY        =   1720
       Caption         =   "mipmaps"
    End
-   Begin PhotoDemon.pdDropDown ddFilter 
+   Begin PhotoPaint.pdDropDown ddFilter 
       Height          =   495
       Left            =   8880
       TabIndex        =   6
@@ -41,7 +41,7 @@ Begin VB.Form dialog_ExportDDS
       _ExtentX        =   5318
       _ExtentY        =   873
    End
-   Begin PhotoDemon.pdSlider sldMipMaps 
+   Begin PhotoPaint.pdSlider sldMipMaps 
       Height          =   495
       Left            =   6120
       TabIndex        =   5
@@ -54,7 +54,7 @@ Begin VB.Form dialog_ExportDDS
       Value           =   2
       DefaultValue    =   2
    End
-   Begin PhotoDemon.pdListBox lstFormat 
+   Begin PhotoPaint.pdListBox lstFormat 
       Height          =   2895
       Left            =   6120
       TabIndex        =   3
@@ -64,7 +64,7 @@ Begin VB.Form dialog_ExportDDS
       _ExtentY        =   5106
       Caption         =   "format"
    End
-   Begin PhotoDemon.pdCheckBox chkLivePreview 
+   Begin PhotoPaint.pdCheckBox chkLivePreview 
       Height          =   375
       Left            =   120
       TabIndex        =   2
@@ -76,7 +76,7 @@ Begin VB.Form dialog_ExportDDS
       FontSize        =   11
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -87,7 +87,7 @@ Begin VB.Form dialog_ExportDDS
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5145
       Left            =   120
       TabIndex        =   1
@@ -96,7 +96,7 @@ Begin VB.Form dialog_ExportDDS
       _ExtentX        =   9922
       _ExtentY        =   9075
    End
-   Begin PhotoDemon.pdButtonStrip btsCompression 
+   Begin PhotoPaint.pdButtonStrip btsCompression 
       Height          =   975
       Left            =   6120
       TabIndex        =   8
@@ -106,7 +106,7 @@ Begin VB.Form dialog_ExportDDS
       _ExtentY        =   1720
       Caption         =   "compression"
    End
-   Begin PhotoDemon.pdButtonStrip btsDither 
+   Begin PhotoPaint.pdButtonStrip btsDither 
       Height          =   975
       Left            =   6120
       TabIndex        =   7
@@ -134,7 +134,7 @@ Attribute VB_Exposed = False
 ' not accessible if the required 3rd-party library isn't available.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -26,7 +26,7 @@ Begin VB.Form FormSelectionDialogs
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   444
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdCommandBarMini cmdBarMini 
+   Begin PhotoPaint.pdCommandBarMini cmdBarMini 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -37,7 +37,7 @@ Begin VB.Form FormSelectionDialogs
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdSlider sltSelValue 
+   Begin PhotoPaint.pdSlider sltSelValue 
       Height          =   405
       Left            =   360
       TabIndex        =   0
@@ -71,7 +71,7 @@ Attribute VB_Exposed = False
 ' Selection_Handler module to properly initialize it (and properly capture all return values).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

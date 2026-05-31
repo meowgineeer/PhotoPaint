@@ -24,7 +24,7 @@ Begin VB.Form FormMetal
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   770
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormMetal
       _ExtentX        =   20373
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -47,7 +47,7 @@ Begin VB.Form FormMetal
       Value           =   20
       DefaultValue    =   20
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -56,7 +56,7 @@ Begin VB.Form FormMetal
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltDetail 
+   Begin PhotoPaint.pdSlider sltDetail 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -70,7 +70,7 @@ Begin VB.Form FormMetal
       NotchPosition   =   2
       NotchValueCustom=   4
    End
-   Begin PhotoDemon.pdColorSelector csHighlight 
+   Begin PhotoPaint.pdColorSelector csHighlight 
       Height          =   975
       Left            =   6000
       TabIndex        =   4
@@ -81,7 +81,7 @@ Begin VB.Form FormMetal
       Caption         =   "highlight color"
       curColor        =   14737632
    End
-   Begin PhotoDemon.pdColorSelector csShadow 
+   Begin PhotoPaint.pdColorSelector csShadow 
       Height          =   975
       Left            =   6000
       TabIndex        =   5
@@ -113,7 +113,7 @@ Attribute VB_Exposed = False
 ' and "detail" which controls the number of octaves in the lookup table.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

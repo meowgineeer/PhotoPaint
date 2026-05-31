@@ -26,7 +26,7 @@ Begin VB.Form FormScreenCapture
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   873
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4335
       Index           =   1
       Left            =   120
@@ -34,7 +34,7 @@ Begin VB.Form FormScreenCapture
       Width           =   5895
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdButton cmdResetList 
+      Begin PhotoPaint.pdButton cmdResetList 
          Height          =   615
          Left            =   5175
          TabIndex        =   3
@@ -43,7 +43,7 @@ Begin VB.Form FormScreenCapture
          _ExtentX        =   1085
          _ExtentY        =   1085
       End
-      Begin PhotoDemon.pdListBox lstWindows 
+      Begin PhotoPaint.pdListBox lstWindows 
          Height          =   3135
          Left            =   120
          TabIndex        =   1
@@ -54,7 +54,7 @@ Begin VB.Form FormScreenCapture
          Caption         =   "currently available programs (listed by window title):"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdCheckBox chkChrome 
+      Begin PhotoPaint.pdCheckBox chkChrome 
          Height          =   330
          Left            =   240
          TabIndex        =   5
@@ -64,7 +64,7 @@ Begin VB.Form FormScreenCapture
          _ExtentY        =   582
          Caption         =   "include window decorations"
       End
-      Begin PhotoDemon.pdLabel lblMinimizedWarning 
+      Begin PhotoPaint.pdLabel lblMinimizedWarning 
          Height          =   615
          Left            =   240
          Top             =   3660
@@ -80,7 +80,7 @@ Begin VB.Form FormScreenCapture
          UseCustomForeColor=   -1  'True
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4335
       Index           =   0
       Left            =   120
@@ -88,7 +88,7 @@ Begin VB.Form FormScreenCapture
       Width           =   5895
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdCheckBox chkMinimize 
+      Begin PhotoPaint.pdCheckBox chkMinimize 
          Height          =   300
          Left            =   120
          TabIndex        =   4
@@ -99,7 +99,7 @@ Begin VB.Form FormScreenCapture
          Caption         =   "minimize PhotoDemon prior to capture"
       End
    End
-   Begin PhotoDemon.pdButtonStrip btsSource 
+   Begin PhotoPaint.pdButtonStrip btsSource 
       Height          =   975
       Left            =   120
       TabIndex        =   2
@@ -109,7 +109,7 @@ Begin VB.Form FormScreenCapture
       _ExtentY        =   1720
       Caption         =   "screenshot source"
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBarMini 
+   Begin PhotoPaint.pdCommandBarMini cmdBarMini 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -119,7 +119,7 @@ Begin VB.Form FormScreenCapture
       _ExtentX        =   23098
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdPictureBox picPreview 
+   Begin PhotoPaint.pdPictureBox picPreview 
       Height          =   4935
       Left            =   6120
       Top             =   600
@@ -127,7 +127,7 @@ Begin VB.Form FormScreenCapture
       _ExtentX        =   0
       _ExtentY        =   0
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   1
       Left            =   6120
@@ -139,7 +139,7 @@ Begin VB.Form FormScreenCapture
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblSecurity 
+   Begin PhotoPaint.pdLabel lblSecurity 
       Height          =   600
       Left            =   360
       Top             =   5580
@@ -166,7 +166,7 @@ Attribute VB_Exposed = False
 'Basic screen and window capture dialog.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

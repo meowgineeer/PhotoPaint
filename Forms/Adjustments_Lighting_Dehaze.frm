@@ -24,7 +24,7 @@ Begin VB.Form FormDehaze
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   770
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormDehaze
       _ExtentX        =   20373
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -42,7 +42,7 @@ Begin VB.Form FormDehaze
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sldBackground 
+   Begin PhotoPaint.pdSlider sldBackground 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -57,7 +57,7 @@ Begin VB.Form FormDehaze
       NotchPosition   =   2
       NotchValueCustom=   85
    End
-   Begin PhotoDemon.pdSlider sldThreshold 
+   Begin PhotoPaint.pdSlider sldThreshold 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -72,7 +72,7 @@ Begin VB.Form FormDehaze
       NotchPosition   =   2
       NotchValueCustom=   80
    End
-   Begin PhotoDemon.pdSlider sldForeground 
+   Begin PhotoPaint.pdSlider sldForeground 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -87,7 +87,7 @@ Begin VB.Form FormDehaze
       NotchPosition   =   2
       NotchValueCustom=   90
    End
-   Begin PhotoDemon.pdSlider sldGamma 
+   Begin PhotoPaint.pdSlider sldGamma 
       Height          =   705
       Left            =   6000
       TabIndex        =   5
@@ -146,7 +146,7 @@ Attribute VB_Exposed = False
 ' computation... He, Sun, and Tang mentioned using the Preconditioned Conjugate Gradient algorithm as a solver,
 ' allowing them to process a 600x400 pixel image in roughly 10-20 seconds."
 '
-'10-20 seconds for a 600x400 image!  Not gonna work for PhotoDemon.
+'10-20 seconds for a 600x400 image!  Not gonna work for PhotoPaint.
 '
 'Convesely, the paper by Zhong Luan et al uses a much-simpler per-pixel analysis with good - and predictable! -
 ' results, excellent performance, low memory requirements, and many areas of potential further optimization
@@ -162,7 +162,7 @@ Attribute VB_Exposed = False
 'Ideas for further improvements are of course welcome.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

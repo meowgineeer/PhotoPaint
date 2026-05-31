@@ -24,7 +24,7 @@ Begin VB.Form FormCurves
    ScaleHeight     =   547
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   873
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormCurves
       _ExtentX        =   23098
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -42,7 +42,7 @@ Begin VB.Form FormCurves
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdButtonStrip btsOptions 
+   Begin PhotoPaint.pdButtonStrip btsOptions 
       Height          =   960
       Left            =   6030
       TabIndex        =   3
@@ -52,7 +52,7 @@ Begin VB.Form FormCurves
       _ExtentY        =   1693
       Caption         =   "display"
    End
-   Begin PhotoDemon.pdLabel lblExplanation 
+   Begin PhotoPaint.pdLabel lblExplanation 
       Height          =   1440
       Left            =   240
       Top             =   5910
@@ -63,7 +63,7 @@ Begin VB.Form FormCurves
       ForeColor       =   4210752
       Layout          =   1
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   6150
       Index           =   0
       Left            =   5880
@@ -71,7 +71,7 @@ Begin VB.Form FormCurves
       Width           =   7215
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdPictureBoxInteractive picDraw 
+      Begin PhotoPaint.pdPictureBoxInteractive picDraw 
          Height          =   5160
          Left            =   120
          Top             =   0
@@ -79,7 +79,7 @@ Begin VB.Form FormCurves
          _ExtentX        =   0
          _ExtentY        =   0
       End
-      Begin PhotoDemon.pdButtonStrip btsChannel 
+      Begin PhotoPaint.pdButtonStrip btsChannel 
          Height          =   960
          Left            =   150
          TabIndex        =   6
@@ -90,7 +90,7 @@ Begin VB.Form FormCurves
          Caption         =   "channel"
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   6150
       Index           =   1
       Left            =   5880
@@ -98,7 +98,7 @@ Begin VB.Form FormCurves
       Width           =   7215
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdButtonStrip btsHistogram 
+      Begin PhotoPaint.pdButtonStrip btsHistogram 
          Height          =   1080
          Left            =   120
          TabIndex        =   4
@@ -108,7 +108,7 @@ Begin VB.Form FormCurves
          _ExtentY        =   1905
          Caption         =   "histogram overlay"
       End
-      Begin PhotoDemon.pdButtonStrip btsGrid 
+      Begin PhotoPaint.pdButtonStrip btsGrid 
          Height          =   1080
          Left            =   120
          TabIndex        =   2
@@ -118,7 +118,7 @@ Begin VB.Form FormCurves
          _ExtentY        =   1905
          Caption         =   "grid"
       End
-      Begin PhotoDemon.pdButtonStrip btsDiagonalLine 
+      Begin PhotoPaint.pdButtonStrip btsDiagonalLine 
          Height          =   1080
          Left            =   120
          TabIndex        =   5
@@ -160,7 +160,7 @@ Attribute VB_Exposed = False
 ' (e.g. VERY FAST!).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

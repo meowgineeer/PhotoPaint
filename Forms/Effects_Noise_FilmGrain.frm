@@ -24,7 +24,7 @@ Begin VB.Form FormFilmGrain
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   761
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormFilmGrain
       _ExtentX        =   20135
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltNoise 
+   Begin PhotoPaint.pdSlider sltNoise 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -47,7 +47,7 @@ Begin VB.Form FormFilmGrain
       Value           =   10
       DefaultValue    =   10
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -56,7 +56,7 @@ Begin VB.Form FormFilmGrain
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -89,7 +89,7 @@ Attribute VB_Exposed = False
 'The separate standalone Gaussian Blur function is used for noise smoothing.
 '
 'All source code in this file is licensed under a modified BSD license. This means you may use the code in your own
-' projects IF you provide attribution. For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution. For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 

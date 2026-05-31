@@ -27,7 +27,7 @@ Begin VB.Form FormPrint
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   583
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdSlider sldCopies 
+   Begin PhotoPaint.pdSlider sldCopies 
       Height          =   735
       Left            =   3960
       TabIndex        =   0
@@ -43,7 +43,7 @@ Begin VB.Form FormPrint
       NotchPosition   =   1
       NotchValueCustom=   1
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBar 
+   Begin PhotoPaint.pdCommandBarMini cmdBar 
       Align           =   2  'Align Bottom
       Height          =   735
       Left            =   0
@@ -53,7 +53,7 @@ Begin VB.Form FormPrint
       _ExtentX        =   15425
       _ExtentY        =   1296
    End
-   Begin PhotoDemon.pdDropDown cbOrientation 
+   Begin PhotoPaint.pdDropDown cbOrientation 
       Height          =   735
       Left            =   3960
       TabIndex        =   1
@@ -63,7 +63,7 @@ Begin VB.Form FormPrint
       _ExtentY        =   1296
       Caption         =   "orientation"
    End
-   Begin PhotoDemon.pdDropDown cbQuality 
+   Begin PhotoPaint.pdDropDown cbQuality 
       Height          =   735
       Left            =   3960
       TabIndex        =   2
@@ -73,7 +73,7 @@ Begin VB.Form FormPrint
       _ExtentY        =   1296
       Caption         =   "quality"
    End
-   Begin PhotoDemon.pdDropDown cbPrinters 
+   Begin PhotoPaint.pdDropDown cbPrinters 
       Height          =   735
       Left            =   3960
       TabIndex        =   3
@@ -83,7 +83,7 @@ Begin VB.Form FormPrint
       _ExtentY        =   1296
       Caption         =   "printer"
    End
-   Begin PhotoDemon.pdPictureBox picPreview 
+   Begin PhotoPaint.pdPictureBox picPreview 
       Height          =   3300
       Left            =   240
       Top             =   360
@@ -91,7 +91,7 @@ Begin VB.Form FormPrint
       _ExtentX        =   5821
       _ExtentY        =   5821
    End
-   Begin PhotoDemon.pdLabel lblPaperSize 
+   Begin PhotoPaint.pdLabel lblPaperSize 
       Height          =   375
       Left            =   240
       Top             =   3840
@@ -136,7 +136,7 @@ Attribute VB_Exposed = False
 ' to cover a bare-minimum usage case.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

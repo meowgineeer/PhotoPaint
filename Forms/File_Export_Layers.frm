@@ -26,7 +26,7 @@ Begin VB.Form FormExportLayers
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   800
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdCheckBox chkOverwrite 
+   Begin PhotoPaint.pdCheckBox chkOverwrite 
       Height          =   375
       Left            =   210
       TabIndex        =   11
@@ -36,7 +36,7 @@ Begin VB.Form FormExportLayers
       _ExtentY        =   661
       Caption         =   "overwrite matching filenames in the destination folder"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   10
@@ -46,7 +46,7 @@ Begin VB.Form FormExportLayers
       _ExtentY        =   1323
       HideRandomizeButton=   -1  'True
    End
-   Begin PhotoDemon.pdButtonStrip btsWhichLayers 
+   Begin PhotoPaint.pdButtonStrip btsWhichLayers 
       Height          =   1695
       Left            =   120
       TabIndex        =   5
@@ -56,7 +56,7 @@ Begin VB.Form FormExportLayers
       _ExtentY        =   2990
       Caption         =   "layers to export"
    End
-   Begin PhotoDemon.pdButton cmdDstFolder 
+   Begin PhotoPaint.pdButton cmdDstFolder 
       Height          =   450
       Left            =   11250
       TabIndex        =   0
@@ -66,7 +66,7 @@ Begin VB.Form FormExportLayers
       _ExtentY        =   794
       Caption         =   "..."
    End
-   Begin PhotoDemon.pdTextBox txtDstFolder 
+   Begin PhotoPaint.pdTextBox txtDstFolder 
       Height          =   315
       Left            =   240
       TabIndex        =   1
@@ -76,7 +76,7 @@ Begin VB.Form FormExportLayers
       _ExtentY        =   556
       Text            =   "automatically generated at run-time"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   0
       Left            =   120
@@ -88,7 +88,7 @@ Begin VB.Form FormExportLayers
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdTextBox txtPrefix 
+   Begin PhotoPaint.pdTextBox txtPrefix 
       Height          =   315
       Left            =   390
       TabIndex        =   2
@@ -97,7 +97,7 @@ Begin VB.Form FormExportLayers
       _ExtentX        =   9499
       _ExtentY        =   556
    End
-   Begin PhotoDemon.pdButton cmdExportSettings 
+   Begin PhotoPaint.pdButton cmdExportSettings 
       Height          =   855
       Left            =   6105
       TabIndex        =   3
@@ -107,7 +107,7 @@ Begin VB.Form FormExportLayers
       _ExtentY        =   1508
       Caption         =   "set export settings for this format..."
    End
-   Begin PhotoDemon.pdDropDown cboOutputFormat 
+   Begin PhotoPaint.pdDropDown cboOutputFormat 
       Height          =   735
       Left            =   6000
       TabIndex        =   4
@@ -117,7 +117,7 @@ Begin VB.Form FormExportLayers
       _ExtentY        =   1296
       Caption         =   "file type"
    End
-   Begin PhotoDemon.pdButtonStrip btsFilename 
+   Begin PhotoPaint.pdButtonStrip btsFilename 
       Height          =   990
       Left            =   120
       TabIndex        =   6
@@ -127,7 +127,7 @@ Begin VB.Form FormExportLayers
       _ExtentY        =   1746
       Caption         =   "filename"
    End
-   Begin PhotoDemon.pdTextBox txtSuffix 
+   Begin PhotoPaint.pdTextBox txtSuffix 
       Height          =   315
       Left            =   6030
       TabIndex        =   7
@@ -136,7 +136,7 @@ Begin VB.Form FormExportLayers
       _ExtentX        =   10134
       _ExtentY        =   556
    End
-   Begin PhotoDemon.pdCheckBox chkSuffix 
+   Begin PhotoPaint.pdCheckBox chkSuffix 
       Height          =   330
       Left            =   6000
       TabIndex        =   8
@@ -147,7 +147,7 @@ Begin VB.Form FormExportLayers
       Caption         =   "add a suffix to each filename:"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdCheckBox chkPrefix 
+   Begin PhotoPaint.pdCheckBox chkPrefix 
       Height          =   330
       Left            =   360
       TabIndex        =   9
@@ -175,12 +175,12 @@ Attribute VB_Exposed = False
 ' tool in the "Scripts" menu).  This feature is a common request in other software, like Paint.NET
 ' (see https://superuser.com/questions/424033/extracting-layers-from-paint-net).
 '
-'This dialog provides similar functionality in PhotoDemon.  The user can specify output format,
+'This dialog provides similar functionality in PhotoPaint.  The user can specify output format,
 ' visible vs all layers, and a few simple file naming tools.  This feature set is largely copied
 ' from the same tool in Photoshop.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

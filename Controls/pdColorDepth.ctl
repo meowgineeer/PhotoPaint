@@ -22,7 +22,7 @@ Begin VB.UserControl pdColorDepth
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   478
    ToolboxBitmap   =   "pdColorDepth.ctx":0000
-   Begin PhotoDemon.pdColorSelector clsComposite 
+   Begin PhotoPaint.pdColorSelector clsComposite 
       Height          =   735
       Left            =   3600
       TabIndex        =   7
@@ -32,7 +32,7 @@ Begin VB.UserControl pdColorDepth
       _ExtentY        =   1296
       Caption         =   "compositing color"
    End
-   Begin PhotoDemon.pdDropDown cboDepthGrayscale 
+   Begin PhotoPaint.pdDropDown cboDepthGrayscale 
       Height          =   735
       Left            =   0
       TabIndex        =   6
@@ -42,7 +42,7 @@ Begin VB.UserControl pdColorDepth
       _ExtentY        =   1296
       Caption         =   "depth"
    End
-   Begin PhotoDemon.pdDropDown cboDepthColor 
+   Begin PhotoPaint.pdDropDown cboDepthColor 
       Height          =   735
       Left            =   0
       TabIndex        =   5
@@ -52,7 +52,7 @@ Begin VB.UserControl pdColorDepth
       _ExtentY        =   1296
       Caption         =   "depth"
    End
-   Begin PhotoDemon.pdDropDown cboAlphaModel 
+   Begin PhotoPaint.pdDropDown cboAlphaModel 
       Height          =   735
       Left            =   3600
       TabIndex        =   4
@@ -62,7 +62,7 @@ Begin VB.UserControl pdColorDepth
       _ExtentY        =   1296
       Caption         =   "transparency format"
    End
-   Begin PhotoDemon.pdDropDown cboColorModel 
+   Begin PhotoPaint.pdDropDown cboColorModel 
       Height          =   735
       Left            =   0
       TabIndex        =   3
@@ -72,7 +72,7 @@ Begin VB.UserControl pdColorDepth
       _ExtentY        =   1296
       Caption         =   "color format"
    End
-   Begin PhotoDemon.pdSlider sldColorCount 
+   Begin PhotoPaint.pdSlider sldColorCount 
       Height          =   735
       Left            =   0
       TabIndex        =   1
@@ -87,7 +87,7 @@ Begin VB.UserControl pdColorDepth
       NotchPosition   =   2
       NotchValueCustom=   256
    End
-   Begin PhotoDemon.pdColorSelector clsAlphaColor 
+   Begin PhotoPaint.pdColorSelector clsAlphaColor 
       Height          =   735
       Left            =   3600
       TabIndex        =   2
@@ -98,7 +98,7 @@ Begin VB.UserControl pdColorDepth
       Caption         =   "transparent color"
       curColor        =   16711935
    End
-   Begin PhotoDemon.pdSlider sldAlphaCutoff 
+   Begin PhotoPaint.pdSlider sldAlphaCutoff 
       Height          =   735
       Left            =   3600
       TabIndex        =   0
@@ -128,7 +128,7 @@ Attribute VB_Exposed = False
 'Last update: improve UI reflow behavior when control is not yet visible (e.g. first load)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

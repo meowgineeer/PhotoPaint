@@ -24,7 +24,7 @@ Begin VB.Form FormRelief
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   770
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormRelief
       _ExtentX        =   20373
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -42,7 +42,7 @@ Begin VB.Form FormRelief
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltDistance 
+   Begin PhotoPaint.pdSlider sltDistance 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -56,7 +56,7 @@ Begin VB.Form FormRelief
       Value           =   1
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdSlider sltAngle 
+   Begin PhotoPaint.pdSlider sltAngle 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -69,7 +69,7 @@ Begin VB.Form FormRelief
       Max             =   180
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSlider sltDepth 
+   Begin PhotoPaint.pdSlider sltDepth 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -103,7 +103,7 @@ Attribute VB_Exposed = False
 ' better than past versions.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

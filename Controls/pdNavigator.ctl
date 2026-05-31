@@ -22,7 +22,7 @@ Begin VB.UserControl pdNavigator
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   322
    ToolboxBitmap   =   "pdNavigator.ctx":0000
-   Begin PhotoDemon.pdContainer pnlAnimation 
+   Begin PhotoPaint.pdContainer pnlAnimation 
       Height          =   375
       Left            =   0
       Top             =   1560
@@ -30,7 +30,7 @@ Begin VB.UserControl pdNavigator
       Width           =   4815
       _ExtentX        =   8493
       _ExtentY        =   661
-      Begin PhotoDemon.pdButtonToolbox btnPlay 
+      Begin PhotoPaint.pdButtonToolbox btnPlay 
          Height          =   375
          Index           =   0
          Left            =   0
@@ -42,7 +42,7 @@ Begin VB.UserControl pdNavigator
          DontHighlightDownState=   -1  'True
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdButtonToolbox btnPlay 
+      Begin PhotoPaint.pdButtonToolbox btnPlay 
          Height          =   375
          Index           =   1
          Left            =   480
@@ -54,7 +54,7 @@ Begin VB.UserControl pdNavigator
          DontHighlightDownState=   -1  'True
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSliderStandalone sldFrame 
+      Begin PhotoPaint.pdSliderStandalone sldFrame 
          Height          =   375
          Left            =   960
          TabIndex        =   1
@@ -64,7 +64,7 @@ Begin VB.UserControl pdNavigator
          _ExtentY        =   661
       End
    End
-   Begin PhotoDemon.pdNavigatorInner navInner 
+   Begin PhotoPaint.pdNavigatorInner navInner 
       Height          =   855
       Left            =   120
       TabIndex        =   0
@@ -94,7 +94,7 @@ Attribute VB_Exposed = False
 ' flagged as animated (animated GIFs or APNGs, for example).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

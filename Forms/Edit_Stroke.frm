@@ -24,7 +24,7 @@ Begin VB.Form FormStroke
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   786
-   Begin PhotoDemon.pdPenSelector penSelector 
+   Begin PhotoPaint.pdPenSelector penSelector 
       Height          =   1815
       Left            =   6000
       TabIndex        =   5
@@ -34,7 +34,7 @@ Begin VB.Form FormStroke
       _ExtentY        =   3201
       Caption         =   "pen"
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -44,7 +44,7 @@ Begin VB.Form FormStroke
       _ExtentY        =   9922
       DisableZoomPan  =   -1  'True
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -53,7 +53,7 @@ Begin VB.Form FormStroke
       _ExtentX        =   20743
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sldOpacity 
+   Begin PhotoPaint.pdSlider sldOpacity 
       Height          =   720
       Left            =   6000
       TabIndex        =   2
@@ -69,7 +69,7 @@ Begin VB.Form FormStroke
       NotchValueCustom=   25
       DefaultValue    =   100
    End
-   Begin PhotoDemon.pdDropDown cboBlendMode 
+   Begin PhotoPaint.pdDropDown cboBlendMode 
       Height          =   735
       Left            =   6000
       TabIndex        =   3
@@ -79,7 +79,7 @@ Begin VB.Form FormStroke
       _ExtentY        =   1296
       Caption         =   "blend mode"
    End
-   Begin PhotoDemon.pdDropDown cboAlphaMode 
+   Begin PhotoPaint.pdDropDown cboAlphaMode 
       Height          =   735
       Left            =   6000
       TabIndex        =   4
@@ -89,7 +89,7 @@ Begin VB.Form FormStroke
       _ExtentY        =   1296
       Caption         =   "alpha mode"
    End
-   Begin PhotoDemon.pdDropDown cboLayerSize 
+   Begin PhotoPaint.pdDropDown cboLayerSize 
       Height          =   735
       Left            =   6000
       TabIndex        =   6
@@ -120,7 +120,7 @@ Attribute VB_Exposed = False
 ' as the stroke will increase the dimensions of the underlying layer.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

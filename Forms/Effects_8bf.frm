@@ -26,7 +26,7 @@ Begin VB.Form FormEffects8bf
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   693
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdButtonStrip btsPanel 
+   Begin PhotoPaint.pdButtonStrip btsPanel 
       Height          =   735
       Left            =   120
       TabIndex        =   1
@@ -35,7 +35,7 @@ Begin VB.Form FormEffects8bf
       _ExtentX        =   17806
       _ExtentY        =   1296
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -46,7 +46,7 @@ Begin VB.Form FormEffects8bf
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdContainer pnlOptions 
+   Begin PhotoPaint.pdContainer pnlOptions 
       Height          =   5175
       Index           =   0
       Left            =   120
@@ -54,7 +54,7 @@ Begin VB.Form FormEffects8bf
       Width           =   10095
       _ExtentX        =   17806
       _ExtentY        =   9128
-      Begin PhotoDemon.pdLabel lblNoPlugins 
+      Begin PhotoPaint.pdLabel lblNoPlugins 
          Height          =   4095
          Left            =   0
          Top             =   120
@@ -65,7 +65,7 @@ Begin VB.Form FormEffects8bf
          FontSize        =   11
          Layout          =   1
       End
-      Begin PhotoDemon.pdButton cmdRescan 
+      Begin PhotoPaint.pdButton cmdRescan 
          Height          =   615
          Left            =   120
          TabIndex        =   7
@@ -75,7 +75,7 @@ Begin VB.Form FormEffects8bf
          _ExtentY        =   1085
          Caption         =   "scan for new plugins"
       End
-      Begin PhotoDemon.pdHyperlink hypAbout 
+      Begin PhotoPaint.pdHyperlink hypAbout 
          Height          =   495
          Left            =   5280
          TabIndex        =   8
@@ -88,7 +88,7 @@ Begin VB.Form FormEffects8bf
          Caption         =   "about this plugin"
          RaiseClickEvent =   -1  'True
       End
-      Begin PhotoDemon.pdListBox lstPlugins 
+      Begin PhotoPaint.pdListBox lstPlugins 
          Height          =   4335
          Left            =   0
          TabIndex        =   5
@@ -99,7 +99,7 @@ Begin VB.Form FormEffects8bf
          Caption         =   "available plugins:"
       End
    End
-   Begin PhotoDemon.pdContainer pnlOptions 
+   Begin PhotoPaint.pdContainer pnlOptions 
       Height          =   5175
       Index           =   1
       Left            =   120
@@ -107,7 +107,7 @@ Begin VB.Form FormEffects8bf
       Width           =   10095
       _ExtentX        =   17806
       _ExtentY        =   9128
-      Begin PhotoDemon.pdButton cmdFolders 
+      Begin PhotoPaint.pdButton cmdFolders 
          Height          =   615
          Index           =   1
          Left            =   7080
@@ -118,7 +118,7 @@ Begin VB.Form FormEffects8bf
          _ExtentY        =   1085
          Caption         =   "add folder..."
       End
-      Begin PhotoDemon.pdListBox lstFolders 
+      Begin PhotoPaint.pdListBox lstFolders 
          Height          =   2775
          Left            =   0
          TabIndex        =   2
@@ -127,7 +127,7 @@ Begin VB.Form FormEffects8bf
          _ExtentX        =   17806
          _ExtentY        =   4895
       End
-      Begin PhotoDemon.pdHyperlink hypPlugins 
+      Begin PhotoPaint.pdHyperlink hypPlugins 
          Height          =   375
          Left            =   0
          TabIndex        =   9
@@ -139,7 +139,7 @@ Begin VB.Form FormEffects8bf
          Caption         =   ""
          RaiseClickEvent =   -1  'True
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   375
          Index           =   0
          Left            =   0
@@ -150,7 +150,7 @@ Begin VB.Form FormEffects8bf
          Caption         =   "default plugin folder:"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   375
          Index           =   1
          Left            =   0
@@ -161,7 +161,7 @@ Begin VB.Form FormEffects8bf
          Caption         =   "additional folders:"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdButton cmdFolders 
+      Begin PhotoPaint.pdButton cmdFolders 
          Height          =   615
          Index           =   0
          Left            =   0
@@ -174,7 +174,7 @@ Begin VB.Form FormEffects8bf
          Enabled         =   0   'False
       End
    End
-   Begin PhotoDemon.pdContainer pnlOptions 
+   Begin PhotoPaint.pdContainer pnlOptions 
       Height          =   5175
       Index           =   2
       Left            =   120
@@ -182,7 +182,7 @@ Begin VB.Form FormEffects8bf
       Width           =   10095
       _ExtentX        =   17806
       _ExtentY        =   9128
-      Begin PhotoDemon.pdProgressBar prgUpdate 
+      Begin PhotoPaint.pdProgressBar prgUpdate 
          Height          =   495
          Left            =   120
          TabIndex        =   6
@@ -191,7 +191,7 @@ Begin VB.Form FormEffects8bf
          _ExtentX        =   17383
          _ExtentY        =   873
       End
-      Begin PhotoDemon.pdLabel lblUpdate 
+      Begin PhotoPaint.pdLabel lblUpdate 
          Height          =   375
          Left            =   0
          Top             =   240
@@ -228,7 +228,7 @@ Attribute VB_Exposed = False
 ' intentionally specific to this very weird, specific use-case.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -582,7 +582,7 @@ Private Sub ScanForPlugins()
         fullCaption.AppendLineBreak
         fullCaption.AppendLine g_Language.TranslateMessage("Photoshop (8bf) plugins are files with an ""8bf"" extension.  These plugins provide new image effects.  Thousands of 8bf plugins are available online.")
         fullCaption.AppendLineBreak
-        fullCaption.AppendLine g_Language.TranslateMessage("PhotoDemon does not ship with 8bf plugins, but if you find plugins online, you can download them and add them to PhotoDemon.  (PhotoDemon supports most 32-bit 8bf plugins.  64-bit plugins are not supported.)")
+        fullCaption.AppendLine g_Language.TranslateMessage("PhotoDemon does not ship with 8bf plugins, but if you find plugins online, you can download them and add them to PhotoPaint.  (PhotoDemon supports most 32-bit 8bf plugins.  64-bit plugins are not supported.)")
         fullCaption.AppendLineBreak
         fullCaption.AppendLine g_Language.TranslateMessage("After downloading one or more 8bf files, use the settings button (above) to tell PhotoDemon where to find them.  PhotoDemon will then add them to your Effects collection.")
         

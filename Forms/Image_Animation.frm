@@ -23,7 +23,7 @@ Begin VB.Form FormAnimation
    ScaleHeight     =   420
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   804
-   Begin PhotoDemon.pdButtonStrip btsAnimated 
+   Begin PhotoPaint.pdButtonStrip btsAnimated 
       Height          =   975
       Left            =   6240
       TabIndex        =   8
@@ -33,7 +33,7 @@ Begin VB.Form FormAnimation
       _ExtentY        =   1720
       Caption         =   "animation enabled for this image"
    End
-   Begin PhotoDemon.pdButtonStrip btsLoop 
+   Begin PhotoPaint.pdButtonStrip btsLoop 
       Height          =   975
       Left            =   6240
       TabIndex        =   5
@@ -43,7 +43,7 @@ Begin VB.Form FormAnimation
       _ExtentY        =   1720
       Caption         =   "repeat"
    End
-   Begin PhotoDemon.pdButtonToolbox btnPlay 
+   Begin PhotoPaint.pdButtonToolbox btnPlay 
       Height          =   375
       Index           =   0
       Left            =   120
@@ -55,7 +55,7 @@ Begin VB.Form FormAnimation
       DontHighlightDownState=   -1  'True
       StickyToggle    =   -1  'True
    End
-   Begin PhotoDemon.pdSliderStandalone sldFrame 
+   Begin PhotoPaint.pdSliderStandalone sldFrame 
       Height          =   375
       Left            =   600
       TabIndex        =   1
@@ -64,7 +64,7 @@ Begin VB.Form FormAnimation
       _ExtentX        =   8705
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdPictureBox picPreview 
+   Begin PhotoPaint.pdPictureBox picPreview 
       Height          =   4815
       Left            =   120
       Top             =   120
@@ -72,7 +72,7 @@ Begin VB.Form FormAnimation
       _ExtentX        =   10398
       _ExtentY        =   8493
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -82,7 +82,7 @@ Begin VB.Form FormAnimation
       _ExtentX        =   21273
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdButtonToolbox btnPlay 
+   Begin PhotoPaint.pdButtonToolbox btnPlay 
       Height          =   375
       Index           =   1
       Left            =   5640
@@ -93,7 +93,7 @@ Begin VB.Form FormAnimation
       _ExtentY        =   661
       StickyToggle    =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sldLoop 
+   Begin PhotoPaint.pdSlider sldLoop 
       Height          =   735
       Left            =   6600
       TabIndex        =   4
@@ -109,7 +109,7 @@ Begin VB.Form FormAnimation
       Value           =   1
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdButtonStrip btsFrameTimes 
+   Begin PhotoPaint.pdButtonStrip btsFrameTimes 
       Height          =   975
       Left            =   6240
       TabIndex        =   6
@@ -119,7 +119,7 @@ Begin VB.Form FormAnimation
       _ExtentY        =   1720
       Caption         =   "animation speed"
    End
-   Begin PhotoDemon.pdSlider sldFrameTime 
+   Begin PhotoPaint.pdSlider sldFrameTime 
       Height          =   735
       Left            =   6600
       TabIndex        =   7
@@ -158,7 +158,7 @@ Attribute VB_Exposed = False
 ' test-bed for most of PD's run-time animation display capabilities.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

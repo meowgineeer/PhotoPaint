@@ -24,7 +24,7 @@ Begin VB.Form FormPoke
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   806
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   0
@@ -35,7 +35,7 @@ Begin VB.Form FormPoke
       DisableZoomPan  =   -1  'True
       PointSelection  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sltStrength 
+   Begin PhotoPaint.pdSlider sltStrength 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -51,7 +51,7 @@ Begin VB.Form FormPoke
       NotchPosition   =   2
       NotchValueCustom=   1
    End
-   Begin PhotoDemon.pdSlider sltXCenter 
+   Begin PhotoPaint.pdSlider sltXCenter 
       Height          =   405
       Left            =   6000
       TabIndex        =   3
@@ -65,7 +65,7 @@ Begin VB.Form FormPoke
       NotchPosition   =   2
       NotchValueCustom=   0.5
    End
-   Begin PhotoDemon.pdSlider sltYCenter 
+   Begin PhotoPaint.pdSlider sltYCenter 
       Height          =   405
       Left            =   9000
       TabIndex        =   4
@@ -79,7 +79,7 @@ Begin VB.Form FormPoke
       NotchPosition   =   2
       NotchValueCustom=   0.5
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   1
@@ -88,7 +88,7 @@ Begin VB.Form FormPoke
       _ExtentX        =   21325
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltQuality 
+   Begin PhotoPaint.pdSlider sltQuality 
       Height          =   705
       Left            =   6000
       TabIndex        =   5
@@ -103,7 +103,7 @@ Begin VB.Form FormPoke
       NotchPosition   =   2
       NotchValueCustom=   2
    End
-   Begin PhotoDemon.pdDropDown cboEdges 
+   Begin PhotoPaint.pdDropDown cboEdges 
       Height          =   735
       Left            =   6000
       TabIndex        =   6
@@ -113,7 +113,7 @@ Begin VB.Form FormPoke
       _ExtentY        =   1296
       Caption         =   "if pixels lie outside the image..."
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   330
       Index           =   0
       Left            =   6000
@@ -125,7 +125,7 @@ Begin VB.Form FormPoke
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblExplanation 
+   Begin PhotoPaint.pdLabel lblExplanation 
       Height          =   435
       Index           =   0
       Left            =   6120
@@ -167,7 +167,7 @@ Attribute VB_Exposed = False
 ' http://paulbourke.net/miscellaneous/imagewarp/
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

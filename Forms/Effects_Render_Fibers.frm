@@ -24,7 +24,7 @@ Begin VB.Form FormFxFibers
    ScaleHeight     =   477
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   806
-   Begin PhotoDemon.pdButtonStrip btsType 
+   Begin PhotoPaint.pdButtonStrip btsType 
       Height          =   975
       Left            =   6000
       TabIndex        =   10
@@ -34,7 +34,7 @@ Begin VB.Form FormFxFibers
       _ExtentY        =   1720
       Caption         =   "colors"
    End
-   Begin PhotoDemon.pdGradientSelector grdColors 
+   Begin PhotoPaint.pdGradientSelector grdColors 
       Height          =   855
       Left            =   6000
       TabIndex        =   9
@@ -45,7 +45,7 @@ Begin VB.Form FormFxFibers
       _ExtentY        =   1508
       Caption         =   "colors"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -54,7 +54,7 @@ Begin VB.Form FormFxFibers
       _ExtentX        =   21325
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sldSize 
+   Begin PhotoPaint.pdSlider sldSize 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -69,7 +69,7 @@ Begin VB.Form FormFxFibers
       NotchPosition   =   2
       NotchValueCustom=   25
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   6225
       Left            =   120
       TabIndex        =   1
@@ -79,7 +79,7 @@ Begin VB.Form FormFxFibers
       _ExtentY        =   10980
       DisableZoomPan  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sldOpacity 
+   Begin PhotoPaint.pdSlider sldOpacity 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -94,7 +94,7 @@ Begin VB.Form FormFxFibers
       NotchValueCustom=   25
       DefaultValue    =   100
    End
-   Begin PhotoDemon.pdDropDown cboBlendMode 
+   Begin PhotoPaint.pdDropDown cboBlendMode 
       Height          =   735
       Left            =   6000
       TabIndex        =   4
@@ -104,7 +104,7 @@ Begin VB.Form FormFxFibers
       _ExtentY        =   1296
       Caption         =   "blend mode"
    End
-   Begin PhotoDemon.pdRandomizeUI rndSeed 
+   Begin PhotoPaint.pdRandomizeUI rndSeed 
       Height          =   735
       Left            =   6000
       TabIndex        =   5
@@ -114,7 +114,7 @@ Begin VB.Form FormFxFibers
       _ExtentY        =   1296
       Caption         =   "random seed:"
    End
-   Begin PhotoDemon.pdColorSelector cpHighlight 
+   Begin PhotoPaint.pdColorSelector cpHighlight 
       Height          =   855
       Left            =   9000
       TabIndex        =   6
@@ -125,7 +125,7 @@ Begin VB.Form FormFxFibers
       Caption         =   "highlight color"
       curColor        =   6262010
    End
-   Begin PhotoDemon.pdColorSelector cpShadow 
+   Begin PhotoPaint.pdColorSelector cpShadow 
       Height          =   855
       Left            =   6000
       TabIndex        =   7
@@ -136,7 +136,7 @@ Begin VB.Form FormFxFibers
       Caption         =   "shadow color"
       curColor        =   50
    End
-   Begin PhotoDemon.pdSlider sldStrength 
+   Begin PhotoPaint.pdSlider sldStrength 
       Height          =   705
       Left            =   9000
       TabIndex        =   8
@@ -152,7 +152,7 @@ Begin VB.Form FormFxFibers
       NotchPosition   =   2
       NotchValueCustom=   50
    End
-   Begin PhotoDemon.pdSlider sldNoise 
+   Begin PhotoPaint.pdSlider sldNoise 
       Height          =   705
       Left            =   6000
       TabIndex        =   11
@@ -168,7 +168,7 @@ Begin VB.Form FormFxFibers
       NotchPosition   =   2
       NotchValueCustom=   10
    End
-   Begin PhotoDemon.pdSlider sldContrast 
+   Begin PhotoPaint.pdSlider sldContrast 
       Height          =   705
       Left            =   9000
       TabIndex        =   12
@@ -198,7 +198,7 @@ Attribute VB_Exposed = False
 ' changes to better match similar options in other PD tools.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

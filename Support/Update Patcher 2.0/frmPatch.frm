@@ -62,7 +62,7 @@ Attribute VB_Exposed = False
 ' and shells it prior to closing; this file then handles the rest of the patching process.
 '
 'All source code in this file is licensed under a modified BSD license.  This means you may use the code in your own
-' projects IF you provide attribution.  For more information, please visit http://photodemon.org/about/license/
+' projects IF you provide attribution.  For more information, please visit http://photopaint.org/about/license/
 '
 '***************************************************************************
 
@@ -85,13 +85,13 @@ Private Type PROCESSENTRY32
     szExeFile As String * MAX_PATH_LEN
 End Type
 
-'APIs for making sure PhotoDemon.exe has terminated
+'APIs for making sure PhotoPaint.exe has terminated
 Private Declare Function CreateToolhelpSnapshot Lib "kernel32" Alias "CreateToolhelp32Snapshot" (ByVal lFlags As Long, lProcessID As Long) As Long
 Private Declare Function ProcessFirst Lib "kernel32" Alias "Process32First" (ByVal hSnapShot As Long, uProcess As PROCESSENTRY32) As Long
 Private Declare Function ProcessNext Lib "kernel32" Alias "Process32Next" (ByVal hSnapShot As Long, uProcess As PROCESSENTRY32) As Long
 Private Declare Function CloseHandle Lib "kernel32" (ByVal hObject As Long) As Long
 
-'APIs for restarting PhotoDemon.exe when we're done
+'APIs for restarting PhotoPaint.exe when we're done
 Private Declare Function ShellExecute Lib "shell32" Alias "ShellExecuteW" (ByVal hWnd As Long, ByVal lpOperationStr As Long, ByVal lpFileStr As Long, ByVal lpParametersStr As Long, ByVal lpDirectoryStr As Long, ByVal nShowCmd As Long) As Long
 Private Const SW_SHOWNORMAL = 1
 
@@ -100,7 +100,7 @@ Private Declare Sub CopyMemory Lib "kernel32" Alias "RtlMoveMemory" (lpDst As An
 'Several paths are required for the update process: a path to PD's folder, the update subfolder, and the plugin folder (for accessing zLib)
 Private m_PDPath As String, m_PDUpdatePath As String, m_PluginPath As String
 
-'Once PhotoDemon.exe can no longer be detected as an active process, this will be set to TRUE
+'Once PhotoPaint.exe can no longer be detected as an active process, this will be set to TRUE
 Private m_PDClosed As Boolean
 
 'If the user asked PD to restart after patching, this app will be notified of the decision via command-line
@@ -217,8 +217,8 @@ Private Sub tmrCheck_Timer()
                     
                     szExename = LCase$(Left$(uProcess.szExeFile, i - 1))
                     
-                    'If the process name is "PhotoDemon.exe", note it
-                    If Right$(szExename, Len("PhotoDemon.exe")) = "PhotoDemon.exe" Then
+                    'If the process name is "PhotoPaint.exe", note it
+                    If Right$(szExename, Len("PhotoPaint.exe")) = "PhotoPaint.exe" Then
                         pdFound = True
                         Exit Do
                     End If
@@ -505,7 +505,7 @@ Private Sub FinishPatching()
         
         Dim actionString As String, fileString As String, pathString As String, paramString As String
         actionString = "open"
-        fileString = "PhotoDemon.exe"
+        fileString = "PhotoPaint.exe"
         pathString = m_PDPath
         paramString = ""
         

@@ -24,7 +24,7 @@ Begin VB.Form FormMonochrome
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   810
-   Begin PhotoDemon.pdSlider sldDitheringAmount 
+   Begin PhotoPaint.pdSlider sldDitheringAmount 
       Height          =   855
       Left            =   6000
       TabIndex        =   8
@@ -37,7 +37,7 @@ Begin VB.Form FormMonochrome
       Value           =   100
       DefaultValue    =   100
    End
-   Begin PhotoDemon.pdDropDown cboDither 
+   Begin PhotoPaint.pdDropDown cboDither 
       Height          =   855
       Left            =   6000
       TabIndex        =   7
@@ -47,7 +47,7 @@ Begin VB.Form FormMonochrome
       _ExtentY        =   1508
       Caption         =   "dithering"
    End
-   Begin PhotoDemon.pdButtonStrip btsTransparency 
+   Begin PhotoPaint.pdButtonStrip btsTransparency 
       Height          =   1065
       Left            =   6000
       TabIndex        =   6
@@ -57,7 +57,7 @@ Begin VB.Form FormMonochrome
       _ExtentY        =   1879
       Caption         =   "transparency"
    End
-   Begin PhotoDemon.pdSlider sltThreshold 
+   Begin PhotoPaint.pdSlider sltThreshold 
       Height          =   705
       Left            =   6000
       TabIndex        =   5
@@ -72,7 +72,7 @@ Begin VB.Form FormMonochrome
       NotchPosition   =   2
       NotchValueCustom=   127
    End
-   Begin PhotoDemon.pdCheckBox chkAutoThreshold 
+   Begin PhotoPaint.pdCheckBox chkAutoThreshold 
       Height          =   330
       Left            =   6120
       TabIndex        =   4
@@ -83,7 +83,7 @@ Begin VB.Form FormMonochrome
       Caption         =   "automatically calculate threshold"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   3
@@ -92,7 +92,7 @@ Begin VB.Form FormMonochrome
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdColorSelector csMono 
+   Begin PhotoPaint.pdColorSelector csMono 
       Height          =   615
       Index           =   0
       Left            =   6120
@@ -103,7 +103,7 @@ Begin VB.Form FormMonochrome
       _ExtentY        =   1085
       curColor        =   0
    End
-   Begin PhotoDemon.pdColorSelector csMono 
+   Begin PhotoPaint.pdColorSelector csMono 
       Height          =   615
       Index           =   1
       Left            =   9120
@@ -113,7 +113,7 @@ Begin VB.Form FormMonochrome
       _ExtentX        =   5106
       _ExtentY        =   1085
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -122,7 +122,7 @@ Begin VB.Form FormMonochrome
       _ExtentX        =   21431
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   1
       Left            =   6000
@@ -152,7 +152,7 @@ Attribute VB_Exposed = False
 ' real algorithm info.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

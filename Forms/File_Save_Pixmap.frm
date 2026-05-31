@@ -22,7 +22,7 @@ Begin VB.Form dialog_ExportPixmap
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   833
-   Begin PhotoDemon.pdCheckBox chkFileExtension 
+   Begin PhotoPaint.pdCheckBox chkFileExtension 
       Height          =   375
       Left            =   6000
       TabIndex        =   6
@@ -32,7 +32,7 @@ Begin VB.Form dialog_ExportPixmap
       _ExtentY        =   661
       Caption         =   "change file extension to match color model"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -43,7 +43,7 @@ Begin VB.Form dialog_ExportPixmap
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -52,7 +52,7 @@ Begin VB.Form dialog_ExportPixmap
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdButtonStrip btsFormat 
+   Begin PhotoPaint.pdButtonStrip btsFormat 
       Height          =   1095
       Left            =   5880
       TabIndex        =   2
@@ -62,7 +62,7 @@ Begin VB.Form dialog_ExportPixmap
       _ExtentY        =   1931
       Caption         =   "format"
    End
-   Begin PhotoDemon.pdColorSelector clsBackground 
+   Begin PhotoPaint.pdColorSelector clsBackground 
       Height          =   1095
       Left            =   5880
       TabIndex        =   3
@@ -72,7 +72,7 @@ Begin VB.Form dialog_ExportPixmap
       _ExtentY        =   1931
       Caption         =   "background color"
    End
-   Begin PhotoDemon.pdButtonStrip btsDepth 
+   Begin PhotoPaint.pdButtonStrip btsDepth 
       Height          =   1095
       Left            =   5880
       TabIndex        =   4
@@ -82,7 +82,7 @@ Begin VB.Form dialog_ExportPixmap
       _ExtentY        =   1931
       Caption         =   "depth"
    End
-   Begin PhotoDemon.pdButtonStrip btsColorModel 
+   Begin PhotoPaint.pdButtonStrip btsColorModel 
       Height          =   1095
       Left            =   5880
       TabIndex        =   5
@@ -111,7 +111,7 @@ Attribute VB_Exposed = False
 ' import if FreeImage cannot be found.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

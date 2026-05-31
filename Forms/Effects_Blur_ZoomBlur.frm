@@ -24,7 +24,7 @@ Begin VB.Form FormZoomBlur
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   802
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormZoomBlur
       _ExtentX        =   21220
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -44,7 +44,7 @@ Begin VB.Form FormZoomBlur
       DisableZoomPan  =   -1  'True
       PointSelection  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sltDistance 
+   Begin PhotoPaint.pdSlider sltDistance 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -56,7 +56,7 @@ Begin VB.Form FormZoomBlur
       Min             =   -200
       Max             =   200
    End
-   Begin PhotoDemon.pdSlider sltXCenter 
+   Begin PhotoPaint.pdSlider sltXCenter 
       Height          =   405
       Left            =   6000
       TabIndex        =   3
@@ -70,7 +70,7 @@ Begin VB.Form FormZoomBlur
       NotchPosition   =   2
       NotchValueCustom=   0.5
    End
-   Begin PhotoDemon.pdSlider sltYCenter 
+   Begin PhotoPaint.pdSlider sltYCenter 
       Height          =   405
       Left            =   9000
       TabIndex        =   4
@@ -84,7 +84,7 @@ Begin VB.Form FormZoomBlur
       NotchPosition   =   2
       NotchValueCustom=   0.5
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   0
       Left            =   6000
@@ -96,7 +96,7 @@ Begin VB.Form FormZoomBlur
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblExplanation 
+   Begin PhotoPaint.pdLabel lblExplanation 
       Height          =   435
       Index           =   0
       Left            =   6120
@@ -126,7 +126,7 @@ Attribute VB_Exposed = False
 'Basic zoom blur tool.  Performance is middling, but the end result is of reasonably good quality.
 '
 'All source code in this file is licensed under a modified BSD license. This means you may use the code in your own
-' projects IF you provide attribution. For more information, please visit https://photodemon.org/license/
+' projects IF you provide attribution. For more information, please visit https://photopaint.org/license/
 '
 '***************************************************************************
 

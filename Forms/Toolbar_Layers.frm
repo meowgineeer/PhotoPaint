@@ -31,7 +31,7 @@ Begin VB.Form toolbar_Layers
    ScaleWidth      =   249
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdContainer ctlContainer 
+   Begin PhotoPaint.pdContainer ctlContainer 
       Height          =   615
       Index           =   0
       Left            =   240
@@ -40,7 +40,7 @@ Begin VB.Form toolbar_Layers
       _ExtentX        =   4471
       _ExtentY        =   1085
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   270
       Index           =   0
       Left            =   120
@@ -52,7 +52,7 @@ Begin VB.Form toolbar_Layers
       Caption         =   "search"
       Draggable       =   -1  'True
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   270
       Index           =   2
       Left            =   120
@@ -64,7 +64,7 @@ Begin VB.Form toolbar_Layers
       Caption         =   "colors"
       Draggable       =   -1  'True
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   270
       Index           =   1
       Left            =   120
@@ -76,7 +76,7 @@ Begin VB.Form toolbar_Layers
       Caption         =   "overview"
       Draggable       =   -1  'True
    End
-   Begin PhotoDemon.pdContainer ctlContainer 
+   Begin PhotoPaint.pdContainer ctlContainer 
       Height          =   615
       Index           =   1
       Left            =   240
@@ -85,7 +85,7 @@ Begin VB.Form toolbar_Layers
       _ExtentX        =   4471
       _ExtentY        =   1085
    End
-   Begin PhotoDemon.pdContainer ctlContainer 
+   Begin PhotoPaint.pdContainer ctlContainer 
       Height          =   615
       Index           =   2
       Left            =   240
@@ -94,7 +94,7 @@ Begin VB.Form toolbar_Layers
       _ExtentX        =   4471
       _ExtentY        =   1085
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   270
       Index           =   3
       Left            =   120
@@ -106,7 +106,7 @@ Begin VB.Form toolbar_Layers
       Caption         =   "layers"
       Draggable       =   -1  'True
    End
-   Begin PhotoDemon.pdContainer ctlContainer 
+   Begin PhotoPaint.pdContainer ctlContainer 
       Height          =   615
       Index           =   3
       Left            =   240
@@ -136,7 +136,7 @@ Attribute VB_Exposed = False
 'For details on the individual panels, refer to the various layerpanel_* forms.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

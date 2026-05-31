@@ -26,7 +26,7 @@ Begin VB.Form dialog_ColorSelector
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   769
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdHistory hstColors 
+   Begin PhotoPaint.pdHistory hstColors 
       Height          =   900
       Left            =   5070
       TabIndex        =   10
@@ -37,7 +37,7 @@ Begin VB.Form dialog_ColorSelector
       FontSize        =   10
       HistoryRows     =   2
    End
-   Begin PhotoDemon.pdNewOld noColor 
+   Begin PhotoPaint.pdNewOld noColor 
       Height          =   1095
       Left            =   240
       TabIndex        =   9
@@ -46,7 +46,7 @@ Begin VB.Form dialog_ColorSelector
       _ExtentX        =   7673
       _ExtentY        =   1931
    End
-   Begin PhotoDemon.pdSlider sldHSV 
+   Begin PhotoPaint.pdSlider sldHSV 
       Height          =   375
       Index           =   0
       Left            =   6480
@@ -60,7 +60,7 @@ Begin VB.Form dialog_ColorSelector
       SliderTrackStyle=   5
       NotchPosition   =   2
    End
-   Begin PhotoDemon.pdSlider sldRGB 
+   Begin PhotoPaint.pdSlider sldRGB 
       Height          =   375
       Index           =   0
       Left            =   6480
@@ -74,7 +74,7 @@ Begin VB.Form dialog_ColorSelector
       SliderTrackStyle=   2
       NotchPosition   =   2
    End
-   Begin PhotoDemon.pdColorWheel clrWheel 
+   Begin PhotoPaint.pdColorWheel clrWheel 
       Height          =   3855
       Left            =   720
       TabIndex        =   2
@@ -84,7 +84,7 @@ Begin VB.Form dialog_ColorSelector
       _ExtentY        =   6800
       WheelWidth      =   25
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBarMini 
+   Begin PhotoPaint.pdCommandBarMini cmdBarMini 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -94,7 +94,7 @@ Begin VB.Form dialog_ColorSelector
       _ExtentX        =   20346
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdTextBox txtHex 
+   Begin PhotoPaint.pdTextBox txtHex 
       Height          =   315
       Left            =   6600
       TabIndex        =   1
@@ -104,7 +104,7 @@ Begin VB.Form dialog_ColorSelector
       _ExtentY        =   556
       Text            =   "abcdef"
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   360
       Index           =   8
       Left            =   5070
@@ -117,7 +117,7 @@ Begin VB.Form dialog_ColorSelector
       ForeColor       =   0
       Layout          =   1
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   240
       Index           =   7
       Left            =   5130
@@ -129,7 +129,7 @@ Begin VB.Form dialog_ColorSelector
       Caption         =   "blue:"
       ForeColor       =   0
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   240
       Index           =   6
       Left            =   5115
@@ -141,7 +141,7 @@ Begin VB.Form dialog_ColorSelector
       Caption         =   "green:"
       ForeColor       =   0
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   240
       Index           =   5
       Left            =   5085
@@ -153,7 +153,7 @@ Begin VB.Form dialog_ColorSelector
       Caption         =   "red:"
       ForeColor       =   0
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   240
       Index           =   4
       Left            =   5040
@@ -165,7 +165,7 @@ Begin VB.Form dialog_ColorSelector
       Caption         =   "value:"
       ForeColor       =   0
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   240
       Index           =   3
       Left            =   5115
@@ -177,7 +177,7 @@ Begin VB.Form dialog_ColorSelector
       Caption         =   "saturation:"
       ForeColor       =   0
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   240
       Index           =   2
       Left            =   5055
@@ -189,7 +189,7 @@ Begin VB.Form dialog_ColorSelector
       Caption         =   "hue:"
       ForeColor       =   0
    End
-   Begin PhotoDemon.pdSlider sldRGB 
+   Begin PhotoPaint.pdSlider sldRGB 
       Height          =   375
       Index           =   1
       Left            =   6480
@@ -203,7 +203,7 @@ Begin VB.Form dialog_ColorSelector
       SliderTrackStyle=   2
       NotchPosition   =   2
    End
-   Begin PhotoDemon.pdSlider sldRGB 
+   Begin PhotoPaint.pdSlider sldRGB 
       Height          =   375
       Index           =   2
       Left            =   6480
@@ -217,7 +217,7 @@ Begin VB.Form dialog_ColorSelector
       SliderTrackStyle=   2
       NotchPosition   =   2
    End
-   Begin PhotoDemon.pdSlider sldHSV 
+   Begin PhotoPaint.pdSlider sldHSV 
       Height          =   375
       Index           =   1
       Left            =   6480
@@ -231,7 +231,7 @@ Begin VB.Form dialog_ColorSelector
       SliderTrackStyle=   5
       NotchPosition   =   2
    End
-   Begin PhotoDemon.pdSlider sldHSV 
+   Begin PhotoPaint.pdSlider sldHSV 
       Height          =   375
       Index           =   2
       Left            =   6480
@@ -265,7 +265,7 @@ Attribute VB_Exposed = False
 '    for the DB32 palette that provides a great default color selection on first load.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -30,7 +30,7 @@ Begin VB.Form toolpanel_Paintbrush
    ScaleWidth      =   669
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   3000
       Index           =   2
       Left            =   5880
@@ -39,7 +39,7 @@ Begin VB.Form toolpanel_Paintbrush
       Width           =   3840
       _ExtentX        =   6773
       _ExtentY        =   5292
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   2
          Left            =   3360
@@ -50,7 +50,7 @@ Begin VB.Form toolpanel_Paintbrush
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSlider sltBrushSetting 
+      Begin PhotoPaint.pdSlider sltBrushSetting 
          CausesValidation=   0   'False
          Height          =   690
          Index           =   3
@@ -68,7 +68,7 @@ Begin VB.Form toolpanel_Paintbrush
          NotchPosition   =   2
          NotchValueCustom=   100
       End
-      Begin PhotoDemon.pdSlider sldSpacing 
+      Begin PhotoPaint.pdSlider sldSpacing 
          Height          =   495
          Left            =   180
          TabIndex        =   12
@@ -84,7 +84,7 @@ Begin VB.Form toolpanel_Paintbrush
          NotchPosition   =   2
          NotchValueCustom=   100
       End
-      Begin PhotoDemon.pdButtonStrip btsSpacing 
+      Begin PhotoPaint.pdButtonStrip btsSpacing 
          Height          =   855
          Left            =   120
          TabIndex        =   13
@@ -95,7 +95,7 @@ Begin VB.Form toolpanel_Paintbrush
          Caption         =   "spacing"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdCheckBox chkStrictPixel 
+      Begin PhotoPaint.pdCheckBox chkStrictPixel 
          Height          =   375
          Left            =   120
          TabIndex        =   14
@@ -107,7 +107,7 @@ Begin VB.Form toolpanel_Paintbrush
          Value           =   0   'False
       End
    End
-   Begin PhotoDemon.pdSlider sltBrushSetting 
+   Begin PhotoPaint.pdSlider sltBrushSetting 
       CausesValidation=   0   'False
       Height          =   330
       Index           =   2
@@ -125,7 +125,7 @@ Begin VB.Form toolpanel_Paintbrush
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdDropDown cboBrushSetting 
+   Begin PhotoPaint.pdDropDown cboBrushSetting 
       Height          =   375
       Index           =   0
       Left            =   3000
@@ -136,7 +136,7 @@ Begin VB.Form toolpanel_Paintbrush
       _ExtentY        =   1296
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdSlider sltBrushSetting 
+   Begin PhotoPaint.pdSlider sltBrushSetting 
       CausesValidation=   0   'False
       Height          =   330
       Index           =   0
@@ -156,7 +156,7 @@ Begin VB.Form toolpanel_Paintbrush
       NotchPosition   =   1
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   0
       Left            =   0
@@ -168,7 +168,7 @@ Begin VB.Form toolpanel_Paintbrush
       Caption         =   "size"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   855
       Index           =   0
       Left            =   0
@@ -177,7 +177,7 @@ Begin VB.Form toolpanel_Paintbrush
       Width           =   3255
       _ExtentX        =   5741
       _ExtentY        =   1508
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   0
          Left            =   2760
@@ -188,7 +188,7 @@ Begin VB.Form toolpanel_Paintbrush
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSlider sltBrushSetting 
+      Begin PhotoPaint.pdSlider sltBrushSetting 
          CausesValidation=   0   'False
          Height          =   690
          Index           =   1
@@ -206,7 +206,7 @@ Begin VB.Form toolpanel_Paintbrush
          DefaultValue    =   100
       End
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   1
       Left            =   2880
@@ -218,7 +218,7 @@ Begin VB.Form toolpanel_Paintbrush
       Caption         =   "blend mode"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   855
       Index           =   1
       Left            =   2640
@@ -227,7 +227,7 @@ Begin VB.Form toolpanel_Paintbrush
       Width           =   3135
       _ExtentX        =   5530
       _ExtentY        =   1508
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   1
          Left            =   2640
@@ -238,7 +238,7 @@ Begin VB.Form toolpanel_Paintbrush
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdDropDown cboBrushSetting 
+      Begin PhotoPaint.pdDropDown cboBrushSetting 
          Height          =   735
          Index           =   1
          Left            =   120
@@ -251,7 +251,7 @@ Begin VB.Form toolpanel_Paintbrush
          FontSizeCaption =   10
       End
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   2
       Left            =   5520
@@ -279,7 +279,7 @@ Attribute VB_Exposed = False
 'This form includes all user-editable settings for the "paintbrush" canvas tool.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

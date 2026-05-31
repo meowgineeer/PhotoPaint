@@ -26,7 +26,7 @@ Begin VB.Form FormHotkeys
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   784
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdButton cmdAll 
+   Begin PhotoPaint.pdButton cmdAll 
       Height          =   615
       Index           =   0
       Left            =   6240
@@ -37,7 +37,7 @@ Begin VB.Form FormHotkeys
       _ExtentY        =   1085
       Caption         =   "undo all changes"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   1
       Left            =   6120
@@ -48,7 +48,7 @@ Begin VB.Form FormHotkeys
       Caption         =   "all hotkeys"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdButton cmdThisHotkey 
+   Begin PhotoPaint.pdButton cmdThisHotkey 
       Height          =   615
       Index           =   0
       Left            =   240
@@ -59,7 +59,7 @@ Begin VB.Form FormHotkeys
       _ExtentY        =   1085
       Caption         =   "undo changes"
    End
-   Begin PhotoDemon.pdCheckBox chkAutoCapture 
+   Begin PhotoPaint.pdCheckBox chkAutoCapture 
       Height          =   375
       Left            =   240
       TabIndex        =   7
@@ -70,7 +70,7 @@ Begin VB.Form FormHotkeys
       Caption         =   "try to capture automatically"
       FontSize        =   11
    End
-   Begin PhotoDemon.pdDropDown ddKey 
+   Begin PhotoPaint.pdDropDown ddKey 
       Height          =   855
       Left            =   120
       TabIndex        =   6
@@ -81,7 +81,7 @@ Begin VB.Form FormHotkeys
       Caption         =   "this hotkey"
       FontSize        =   11
    End
-   Begin PhotoDemon.pdCheckBox chkModifier 
+   Begin PhotoPaint.pdCheckBox chkModifier 
       Height          =   375
       Index           =   0
       Left            =   240
@@ -94,7 +94,7 @@ Begin VB.Form FormHotkeys
       FontSize        =   11
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdTextBox txtHotkey 
+   Begin PhotoPaint.pdTextBox txtHotkey 
       Height          =   735
       Left            =   8520
       TabIndex        =   2
@@ -105,7 +105,7 @@ Begin VB.Form FormHotkeys
       _ExtentY        =   1296
       FontSize        =   12
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   735
       Left            =   0
@@ -118,7 +118,7 @@ Begin VB.Form FormHotkeys
       DontResetAutomatically=   -1  'True
       HideRandomizeButton=   -1  'True
    End
-   Begin PhotoDemon.pdTreeviewOD tvMenus 
+   Begin PhotoPaint.pdTreeviewOD tvMenus 
       Height          =   3975
       Left            =   120
       TabIndex        =   1
@@ -127,7 +127,7 @@ Begin VB.Form FormHotkeys
       _ExtentX        =   20346
       _ExtentY        =   7011
    End
-   Begin PhotoDemon.pdCheckBox chkModifier 
+   Begin PhotoPaint.pdCheckBox chkModifier 
       Height          =   375
       Index           =   1
       Left            =   2160
@@ -140,7 +140,7 @@ Begin VB.Form FormHotkeys
       FontSize        =   11
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdCheckBox chkModifier 
+   Begin PhotoPaint.pdCheckBox chkModifier 
       Height          =   375
       Index           =   2
       Left            =   4080
@@ -153,7 +153,7 @@ Begin VB.Form FormHotkeys
       FontSize        =   11
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdButton cmdThisHotkey 
+   Begin PhotoPaint.pdButton cmdThisHotkey 
       Height          =   615
       Index           =   1
       Left            =   2160
@@ -164,7 +164,7 @@ Begin VB.Form FormHotkeys
       _ExtentY        =   1085
       Caption         =   "restore default"
    End
-   Begin PhotoDemon.pdButton cmdAll 
+   Begin PhotoPaint.pdButton cmdAll 
       Height          =   615
       Index           =   3
       Left            =   9000
@@ -175,7 +175,7 @@ Begin VB.Form FormHotkeys
       _ExtentY        =   1085
       Caption         =   "export to file..."
    End
-   Begin PhotoDemon.pdButton cmdAll 
+   Begin PhotoPaint.pdButton cmdAll 
       Height          =   615
       Index           =   2
       Left            =   6240
@@ -186,7 +186,7 @@ Begin VB.Form FormHotkeys
       _ExtentY        =   1085
       Caption         =   "import from file..."
    End
-   Begin PhotoDemon.pdButton cmdThisHotkey 
+   Begin PhotoPaint.pdButton cmdThisHotkey 
       Height          =   615
       Index           =   2
       Left            =   4080
@@ -197,7 +197,7 @@ Begin VB.Form FormHotkeys
       _ExtentY        =   1085
       Caption         =   "delete"
    End
-   Begin PhotoDemon.pdButton cmdAll 
+   Begin PhotoPaint.pdButton cmdAll 
       Height          =   615
       Index           =   1
       Left            =   9000
@@ -208,7 +208,7 @@ Begin VB.Form FormHotkeys
       _ExtentY        =   1085
       Caption         =   "restore all defaults"
    End
-   Begin PhotoDemon.pdButton cmdAll 
+   Begin PhotoPaint.pdButton cmdAll 
       Height          =   615
       Index           =   4
       Left            =   6240
@@ -235,7 +235,7 @@ Attribute VB_Exposed = False
 'This dialog allows the user to customize hotkeys.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

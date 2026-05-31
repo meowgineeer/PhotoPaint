@@ -26,7 +26,7 @@ Begin VB.Form dialog_OutlineSettings
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   844
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdDropDown cboCorner 
+   Begin PhotoPaint.pdDropDown cboCorner 
       Height          =   750
       Left            =   6480
       TabIndex        =   6
@@ -36,7 +36,7 @@ Begin VB.Form dialog_OutlineSettings
       _ExtentY        =   1323
       Caption         =   "corner shape"
    End
-   Begin PhotoDemon.pdColorSelector csOutline 
+   Begin PhotoPaint.pdColorSelector csOutline 
       Height          =   1215
       Left            =   120
       TabIndex        =   4
@@ -46,7 +46,7 @@ Begin VB.Form dialog_OutlineSettings
       _ExtentY        =   2143
       Caption         =   "color and opacity"
    End
-   Begin PhotoDemon.pdPictureBox picPenPreview 
+   Begin PhotoPaint.pdPictureBox picPenPreview 
       Height          =   2535
       Left            =   120
       Top             =   480
@@ -54,7 +54,7 @@ Begin VB.Form dialog_OutlineSettings
       _ExtentX        =   0
       _ExtentY        =   0
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -67,7 +67,7 @@ Begin VB.Form dialog_OutlineSettings
       DontAutoUnloadParent=   -1  'True
       DontResetAutomatically=   -1  'True
    End
-   Begin PhotoDemon.pdButtonStrip btsStyle 
+   Begin PhotoPaint.pdButtonStrip btsStyle 
       Height          =   1095
       Left            =   120
       TabIndex        =   0
@@ -78,7 +78,7 @@ Begin VB.Form dialog_OutlineSettings
       Caption         =   "style"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   315
       Index           =   0
       Left            =   120
@@ -89,7 +89,7 @@ Begin VB.Form dialog_OutlineSettings
       Caption         =   "preview"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdSlider sltOutlineOpacity 
+   Begin PhotoPaint.pdSlider sltOutlineOpacity 
       CausesValidation=   0   'False
       Height          =   405
       Left            =   120
@@ -103,7 +103,7 @@ Begin VB.Form dialog_OutlineSettings
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdSlider sltOutlineWidth 
+   Begin PhotoPaint.pdSlider sltOutlineWidth 
       CausesValidation=   0   'False
       Height          =   705
       Left            =   120
@@ -121,7 +121,7 @@ Begin VB.Form dialog_OutlineSettings
       NotchValueCustom=   100
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdDropDown cboLineCap 
+   Begin PhotoPaint.pdDropDown cboLineCap 
       Height          =   750
       Left            =   6480
       TabIndex        =   7
@@ -131,7 +131,7 @@ Begin VB.Form dialog_OutlineSettings
       _ExtentY        =   1323
       Caption         =   "line cap shape"
    End
-   Begin PhotoDemon.pdSlider sltMiterLimit 
+   Begin PhotoPaint.pdSlider sltMiterLimit 
       CausesValidation=   0   'False
       Height          =   705
       Left            =   6480
@@ -165,7 +165,7 @@ Attribute VB_Exposed = False
 ' but it could easily be expanded in the future due to its modular design.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

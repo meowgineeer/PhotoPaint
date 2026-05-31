@@ -30,7 +30,7 @@ Begin VB.Form toolpanel_TextBasic
    ScaleWidth      =   997
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdHyperlink hypEditText 
+   Begin PhotoPaint.pdHyperlink hypEditText 
       Height          =   375
       Left            =   0
       TabIndex        =   0
@@ -42,7 +42,7 @@ Begin VB.Form toolpanel_TextBasic
       Caption         =   "click to edit text"
       RaiseClickEvent =   -1  'True
    End
-   Begin PhotoDemon.pdContainer picConvertLayer 
+   Begin PhotoPaint.pdContainer picConvertLayer 
       Height          =   1695
       Left            =   120
       Top             =   3960
@@ -50,7 +50,7 @@ Begin VB.Form toolpanel_TextBasic
       Width           =   13575
       _ExtentX        =   23945
       _ExtentY        =   2990
-      Begin PhotoDemon.pdButton cmdConvertLayer 
+      Begin PhotoPaint.pdButton cmdConvertLayer 
          Height          =   615
          Left            =   120
          TabIndex        =   16
@@ -60,7 +60,7 @@ Begin VB.Form toolpanel_TextBasic
          _ExtentY        =   1085
          Caption         =   "yes"
       End
-      Begin PhotoDemon.pdLabel lblConvertLayer 
+      Begin PhotoPaint.pdLabel lblConvertLayer 
          Height          =   735
          Left            =   5280
          Top             =   120
@@ -72,7 +72,7 @@ Begin VB.Form toolpanel_TextBasic
          Layout          =   1
       End
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   0
       Left            =   0
@@ -84,7 +84,7 @@ Begin VB.Form toolpanel_TextBasic
       Caption         =   "edit text"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   2310
       Index           =   0
       Left            =   0
@@ -93,7 +93,7 @@ Begin VB.Form toolpanel_TextBasic
       Width           =   7800
       _ExtentX        =   13758
       _ExtentY        =   4075
-      Begin PhotoDemon.pdCheckBox chkAutoOpenText 
+      Begin PhotoPaint.pdCheckBox chkAutoOpenText 
          Height          =   360
          Left            =   90
          TabIndex        =   18
@@ -103,7 +103,7 @@ Begin VB.Form toolpanel_TextBasic
          _ExtentY        =   635
          Caption         =   "always open this panel for new text layers"
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   0
          Left            =   7350
@@ -114,7 +114,7 @@ Begin VB.Form toolpanel_TextBasic
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdTextBox txtTextTool 
+      Begin PhotoPaint.pdTextBox txtTextTool 
          Height          =   1815
          Left            =   120
          TabIndex        =   2
@@ -125,7 +125,7 @@ Begin VB.Form toolpanel_TextBasic
          Multiline       =   -1  'True
       End
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   1
       Left            =   2400
@@ -137,7 +137,7 @@ Begin VB.Form toolpanel_TextBasic
       Caption         =   "font"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdButtonStrip btsHAlignment 
+   Begin PhotoPaint.pdButtonStrip btsHAlignment 
       Height          =   435
       Left            =   7950
       TabIndex        =   4
@@ -147,7 +147,7 @@ Begin VB.Form toolpanel_TextBasic
       _ExtentY        =   767
       ColorScheme     =   1
    End
-   Begin PhotoDemon.pdButtonStrip btsVAlignment 
+   Begin PhotoPaint.pdButtonStrip btsVAlignment 
       Height          =   435
       Left            =   9510
       TabIndex        =   5
@@ -157,7 +157,7 @@ Begin VB.Form toolpanel_TextBasic
       _ExtentY        =   767
       ColorScheme     =   1
    End
-   Begin PhotoDemon.pdDropDownFont cboTextFontFace 
+   Begin PhotoPaint.pdDropDownFont cboTextFontFace 
       Height          =   375
       Left            =   2520
       TabIndex        =   6
@@ -166,7 +166,7 @@ Begin VB.Form toolpanel_TextBasic
       _ExtentX        =   5106
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdColorSelector csTextFontColor 
+   Begin PhotoPaint.pdColorSelector csTextFontColor 
       Height          =   750
       Left            =   5640
       TabIndex        =   7
@@ -178,7 +178,7 @@ Begin VB.Form toolpanel_TextBasic
       FontSize        =   10
       curColor        =   0
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   1740
       Index           =   1
       Left            =   8400
@@ -187,7 +187,7 @@ Begin VB.Form toolpanel_TextBasic
       Width           =   6135
       _ExtentX        =   10821
       _ExtentY        =   3069
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   1
          Left            =   5640
@@ -198,7 +198,7 @@ Begin VB.Form toolpanel_TextBasic
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSlider sldTextFontSize 
+      Begin PhotoPaint.pdSlider sldTextFontSize 
          Height          =   735
          Left            =   120
          TabIndex        =   9
@@ -215,7 +215,7 @@ Begin VB.Form toolpanel_TextBasic
          NotchPosition   =   2
          NotchValueCustom=   16
       End
-      Begin PhotoDemon.pdButtonToolbox btnFontStyles 
+      Begin PhotoPaint.pdButtonToolbox btnFontStyles 
          Height          =   435
          Index           =   0
          Left            =   240
@@ -226,7 +226,7 @@ Begin VB.Form toolpanel_TextBasic
          _ExtentY        =   767
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdLabel lblText 
+      Begin PhotoPaint.pdLabel lblText 
          Height          =   300
          Index           =   2
          Left            =   120
@@ -237,7 +237,7 @@ Begin VB.Form toolpanel_TextBasic
          Caption         =   "style"
          ForeColor       =   0
       End
-      Begin PhotoDemon.pdButtonToolbox btnFontStyles 
+      Begin PhotoPaint.pdButtonToolbox btnFontStyles 
          Height          =   435
          Index           =   1
          Left            =   720
@@ -248,7 +248,7 @@ Begin VB.Form toolpanel_TextBasic
          _ExtentY        =   767
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdButtonToolbox btnFontStyles 
+      Begin PhotoPaint.pdButtonToolbox btnFontStyles 
          Height          =   435
          Index           =   2
          Left            =   1200
@@ -259,7 +259,7 @@ Begin VB.Form toolpanel_TextBasic
          _ExtentY        =   767
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdButtonToolbox btnFontStyles 
+      Begin PhotoPaint.pdButtonToolbox btnFontStyles 
          Height          =   435
          Index           =   3
          Left            =   1680
@@ -270,7 +270,7 @@ Begin VB.Form toolpanel_TextBasic
          _ExtentY        =   767
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSlider sltTextClarity 
+      Begin PhotoPaint.pdSlider sltTextClarity 
          Height          =   765
          Left            =   3360
          TabIndex        =   14
@@ -284,7 +284,7 @@ Begin VB.Form toolpanel_TextBasic
          NotchPosition   =   2
          NotchValueCustom=   5
       End
-      Begin PhotoDemon.pdDropDown cboTextRenderingHint 
+      Begin PhotoPaint.pdDropDown cboTextRenderingHint 
          Height          =   735
          Left            =   3360
          TabIndex        =   15
@@ -296,7 +296,7 @@ Begin VB.Form toolpanel_TextBasic
          FontSizeCaption =   10
       End
    End
-   Begin PhotoDemon.pdLabel lblText 
+   Begin PhotoPaint.pdLabel lblText 
       Height          =   300
       Index           =   0
       Left            =   7950
@@ -323,7 +323,7 @@ Attribute VB_Exposed = False
 'This form includes all user-editable settings for the Basic Text tool.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

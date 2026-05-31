@@ -24,7 +24,7 @@ Begin VB.Form FormPointillize
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   814
-   Begin PhotoDemon.pdRandomizeUI rndUI 
+   Begin PhotoPaint.pdRandomizeUI rndUI 
       Height          =   855
       Left            =   5880
       TabIndex        =   7
@@ -34,7 +34,7 @@ Begin VB.Form FormPointillize
       _ExtentY        =   1508
       Caption         =   "random seed"
    End
-   Begin PhotoDemon.pdSlider sldOpacity 
+   Begin PhotoPaint.pdSlider sldOpacity 
       Height          =   495
       Left            =   5880
       TabIndex        =   3
@@ -48,7 +48,7 @@ Begin VB.Form FormPointillize
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdColorSelector csBackground 
+   Begin PhotoPaint.pdColorSelector csBackground 
       Height          =   855
       Left            =   5880
       TabIndex        =   2
@@ -58,7 +58,7 @@ Begin VB.Form FormPointillize
       _ExtentY        =   1508
       Caption         =   "background color and opacity"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -67,7 +67,7 @@ Begin VB.Form FormPointillize
       _ExtentX        =   21537
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -76,7 +76,7 @@ Begin VB.Form FormPointillize
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sldSize 
+   Begin PhotoPaint.pdSlider sldSize 
       Height          =   855
       Left            =   5880
       TabIndex        =   4
@@ -92,7 +92,7 @@ Begin VB.Form FormPointillize
       GradientColorRight=   1703935
       NotchValueCustom=   15
    End
-   Begin PhotoDemon.pdSlider sldDensity 
+   Begin PhotoPaint.pdSlider sldDensity 
       Height          =   855
       Left            =   5880
       TabIndex        =   5
@@ -109,7 +109,7 @@ Begin VB.Form FormPointillize
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdSlider sldRandom 
+   Begin PhotoPaint.pdSlider sldRandom 
       Height          =   855
       Left            =   5880
       TabIndex        =   6
@@ -150,7 +150,7 @@ Attribute VB_Exposed = False
 ' faster, too!).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

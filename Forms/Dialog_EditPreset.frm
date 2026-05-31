@@ -27,7 +27,7 @@ Begin VB.Form dialog_AddPreset
    ScaleWidth      =   449
    ShowInTaskbar   =   0   'False
    StartUpPosition =   1  'CenterOwner
-   Begin PhotoDemon.pdButtonStrip btsOptions 
+   Begin PhotoPaint.pdButtonStrip btsOptions 
       Height          =   735
       Left            =   120
       TabIndex        =   2
@@ -37,7 +37,7 @@ Begin VB.Form dialog_AddPreset
       _ExtentY        =   1296
       FontSize        =   12
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBarMini 
+   Begin PhotoPaint.pdCommandBarMini cmdBarMini 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -48,7 +48,7 @@ Begin VB.Form dialog_AddPreset
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdContainer pnlOptions 
+   Begin PhotoPaint.pdContainer pnlOptions 
       Height          =   2535
       Index           =   0
       Left            =   120
@@ -56,7 +56,7 @@ Begin VB.Form dialog_AddPreset
       Width           =   6495
       _ExtentX        =   11456
       _ExtentY        =   4471
-      Begin PhotoDemon.pdTextBox txtName 
+      Begin PhotoPaint.pdTextBox txtName 
          Height          =   375
          Left            =   240
          TabIndex        =   0
@@ -66,7 +66,7 @@ Begin VB.Form dialog_AddPreset
          _ExtentY        =   661
          FontSize        =   11
       End
-      Begin PhotoDemon.pdLabel lblName 
+      Begin PhotoPaint.pdLabel lblName 
          Height          =   375
          Left            =   135
          Top             =   15
@@ -77,7 +77,7 @@ Begin VB.Form dialog_AddPreset
          FontSize        =   11
       End
    End
-   Begin PhotoDemon.pdContainer pnlOptions 
+   Begin PhotoPaint.pdContainer pnlOptions 
       Height          =   2535
       Index           =   1
       Left            =   120
@@ -85,7 +85,7 @@ Begin VB.Form dialog_AddPreset
       Width           =   6495
       _ExtentX        =   11456
       _ExtentY        =   4471
-      Begin PhotoDemon.pdButton cmdMove 
+      Begin PhotoPaint.pdButton cmdMove 
          Height          =   615
          Index           =   0
          Left            =   240
@@ -95,7 +95,7 @@ Begin VB.Form dialog_AddPreset
          _ExtentX        =   1667
          _ExtentY        =   1085
       End
-      Begin PhotoDemon.pdButton cmdDelete 
+      Begin PhotoPaint.pdButton cmdDelete 
          Height          =   615
          Left            =   2370
          TabIndex        =   6
@@ -105,7 +105,7 @@ Begin VB.Form dialog_AddPreset
          _ExtentY        =   1085
          Caption         =   "delete preset"
       End
-      Begin PhotoDemon.pdListBox lstPresets 
+      Begin PhotoPaint.pdListBox lstPresets 
          Height          =   1695
          Left            =   120
          TabIndex        =   5
@@ -116,7 +116,7 @@ Begin VB.Form dialog_AddPreset
          Caption         =   "saved presets for this tool"
          FontSizeCaption =   11
       End
-      Begin PhotoDemon.pdButton cmdMove 
+      Begin PhotoPaint.pdButton cmdMove 
          Height          =   615
          Index           =   1
          Left            =   1305
@@ -150,7 +150,7 @@ Attribute VB_Exposed = False
 ' controls (particularly pdButtonToolbox).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

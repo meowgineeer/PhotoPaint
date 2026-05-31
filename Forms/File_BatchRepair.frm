@@ -26,7 +26,7 @@ Begin VB.Form FormBatchRepair
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   570
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdCheckBox chkRecurseFolders 
+   Begin PhotoPaint.pdCheckBox chkRecurseFolders 
       Height          =   255
       Left            =   360
       TabIndex        =   6
@@ -36,7 +36,7 @@ Begin VB.Form FormBatchRepair
       _ExtentY        =   450
       Caption         =   "include subfolders"
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBar 
+   Begin PhotoPaint.pdCommandBarMini cmdBar 
       Align           =   2  'Align Bottom
       Height          =   615
       Left            =   0
@@ -47,7 +47,7 @@ Begin VB.Form FormBatchRepair
       _ExtentY        =   1085
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblProgress 
+   Begin PhotoPaint.pdLabel lblProgress 
       Height          =   495
       Left            =   120
       Top             =   5520
@@ -58,7 +58,7 @@ Begin VB.Form FormBatchRepair
       Caption         =   "click OK to begin the repair operation"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdCheckBox chkRepairs 
+   Begin PhotoPaint.pdCheckBox chkRepairs 
       Height          =   375
       Index           =   0
       Left            =   360
@@ -69,7 +69,7 @@ Begin VB.Form FormBatchRepair
       _ExtentY        =   873
       Caption         =   "attempt to repair image files"
    End
-   Begin PhotoDemon.pdButton cmdSrcFolder 
+   Begin PhotoPaint.pdButton cmdSrcFolder 
       Height          =   450
       Left            =   7800
       TabIndex        =   0
@@ -79,7 +79,7 @@ Begin VB.Form FormBatchRepair
       _ExtentY        =   794
       Caption         =   "..."
    End
-   Begin PhotoDemon.pdTextBox txtSrcFolder 
+   Begin PhotoPaint.pdTextBox txtSrcFolder 
       Height          =   315
       Left            =   360
       TabIndex        =   1
@@ -89,7 +89,7 @@ Begin VB.Form FormBatchRepair
       _ExtentY        =   556
       Text            =   "automatically generated at run-time"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   1
       Left            =   120
@@ -101,7 +101,7 @@ Begin VB.Form FormBatchRepair
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdButton cmdDstFolder 
+   Begin PhotoPaint.pdButton cmdDstFolder 
       Height          =   450
       Left            =   7800
       TabIndex        =   2
@@ -111,7 +111,7 @@ Begin VB.Form FormBatchRepair
       _ExtentY        =   794
       Caption         =   "..."
    End
-   Begin PhotoDemon.pdTextBox txtDstFolder 
+   Begin PhotoPaint.pdTextBox txtDstFolder 
       Height          =   315
       Left            =   360
       TabIndex        =   3
@@ -121,7 +121,7 @@ Begin VB.Form FormBatchRepair
       _ExtentY        =   556
       Text            =   "automatically generated at run-time"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   0
       Left            =   120
@@ -133,7 +133,7 @@ Begin VB.Form FormBatchRepair
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   2
       Left            =   120
@@ -145,7 +145,7 @@ Begin VB.Form FormBatchRepair
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   3
       Left            =   120
@@ -157,7 +157,7 @@ Begin VB.Form FormBatchRepair
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdCheckBox chkRepairs 
+   Begin PhotoPaint.pdCheckBox chkRepairs 
       Height          =   375
       Index           =   1
       Left            =   360
@@ -168,7 +168,7 @@ Begin VB.Form FormBatchRepair
       _ExtentY        =   661
       Caption         =   "attempt to repair video and audio files"
    End
-   Begin PhotoDemon.pdCheckBox chkRepairs 
+   Begin PhotoPaint.pdCheckBox chkRepairs 
       Height          =   375
       Index           =   2
       Left            =   360
@@ -180,7 +180,7 @@ Begin VB.Form FormBatchRepair
       Caption         =   "overwrite matching filenames in the destination folder"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdCheckBox chkRepairs 
+   Begin PhotoPaint.pdCheckBox chkRepairs 
       Height          =   375
       Index           =   3
       Left            =   360
@@ -218,7 +218,7 @@ Attribute VB_Exposed = False
 ' folder of the user's choosing.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

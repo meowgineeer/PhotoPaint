@@ -24,7 +24,7 @@ Begin VB.Form FormBrightnessContrast
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   805
-   Begin PhotoDemon.pdButtonStrip btsModel 
+   Begin PhotoPaint.pdButtonStrip btsModel 
       Height          =   975
       Left            =   6000
       TabIndex        =   5
@@ -34,7 +34,7 @@ Begin VB.Form FormBrightnessContrast
       _ExtentY        =   1720
       Caption         =   "model"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -43,7 +43,7 @@ Begin VB.Form FormBrightnessContrast
       _ExtentX        =   21299
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdCheckBox chkSample 
+   Begin PhotoPaint.pdCheckBox chkSample 
       Height          =   330
       Left            =   6120
       TabIndex        =   3
@@ -53,7 +53,7 @@ Begin VB.Form FormBrightnessContrast
       _ExtentY        =   582
       Caption         =   "sample image for true contrast (slower but more accurate)"
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   4
@@ -62,7 +62,7 @@ Begin VB.Form FormBrightnessContrast
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltBright 
+   Begin PhotoPaint.pdSlider sltBright 
       Height          =   705
       Left            =   6000
       TabIndex        =   1
@@ -74,7 +74,7 @@ Begin VB.Form FormBrightnessContrast
       Min             =   -255
       Max             =   255
    End
-   Begin PhotoDemon.pdSlider sltContrast 
+   Begin PhotoPaint.pdSlider sltContrast 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -104,7 +104,7 @@ Attribute VB_Exposed = False
 ' (via LittleCMS) is preferred.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

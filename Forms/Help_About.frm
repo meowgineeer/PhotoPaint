@@ -26,7 +26,7 @@ Begin VB.Form FormAbout
    ScaleWidth      =   658
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdCommandBarMini cmdBar 
+   Begin PhotoPaint.pdCommandBarMini cmdBar 
       Align           =   2  'Align Bottom
       Height          =   615
       Left            =   0
@@ -36,7 +36,7 @@ Begin VB.Form FormAbout
       _ExtentX        =   17410
       _ExtentY        =   1085
    End
-   Begin PhotoDemon.pdButtonStrip btsPanel 
+   Begin PhotoPaint.pdButtonStrip btsPanel 
       Height          =   615
       Left            =   120
       TabIndex        =   0
@@ -45,7 +45,7 @@ Begin VB.Form FormAbout
       _ExtentX        =   16960
       _ExtentY        =   1085
    End
-   Begin PhotoDemon.pdContainer pnlAbout 
+   Begin PhotoPaint.pdContainer pnlAbout 
       Height          =   6375
       Index           =   0
       Left            =   120
@@ -53,7 +53,7 @@ Begin VB.Form FormAbout
       Width           =   9615
       _ExtentX        =   16960
       _ExtentY        =   11245
-      Begin PhotoDemon.pdHyperlink hypAbout 
+      Begin PhotoPaint.pdHyperlink hypAbout 
          Height          =   375
          Index           =   1
          Left            =   240
@@ -63,9 +63,9 @@ Begin VB.Form FormAbout
          _ExtentX        =   16404
          _ExtentY        =   661
          Caption         =   ""
-         URL             =   "http://photodemon.org/donate/"
+         URL             =   "http://photopaint.org/donate/"
       End
-      Begin PhotoDemon.pdLabel lblAbout 
+      Begin PhotoPaint.pdLabel lblAbout 
          Height          =   375
          Index           =   0
          Left            =   240
@@ -75,7 +75,7 @@ Begin VB.Form FormAbout
          _ExtentY        =   661
          Caption         =   ""
       End
-      Begin PhotoDemon.pdLabel lblAbout 
+      Begin PhotoPaint.pdLabel lblAbout 
          Height          =   495
          Index           =   1
          Left            =   120
@@ -87,7 +87,7 @@ Begin VB.Form FormAbout
          FontBold        =   -1  'True
          FontSize        =   14
       End
-      Begin PhotoDemon.pdLabel lblAbout 
+      Begin PhotoPaint.pdLabel lblAbout 
          Height          =   495
          Index           =   2
          Left            =   120
@@ -98,7 +98,7 @@ Begin VB.Form FormAbout
          Caption         =   "the fast, free, portable photo editor"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdHyperlink hypAbout 
+      Begin PhotoPaint.pdHyperlink hypAbout 
          Height          =   375
          Index           =   2
          Left            =   240
@@ -108,9 +108,9 @@ Begin VB.Form FormAbout
          _ExtentX        =   16404
          _ExtentY        =   661
          Caption         =   "Participate in development, design, or translation work"
-         URL             =   "http://photodemon.org/get-involved/"
+         URL             =   "http://photopaint.org/get-involved/"
       End
-      Begin PhotoDemon.pdHyperlink hypAbout 
+      Begin PhotoPaint.pdHyperlink hypAbout 
          Height          =   375
          Index           =   0
          Left            =   240
@@ -122,7 +122,7 @@ Begin VB.Form FormAbout
          Caption         =   ""
          URL             =   "https://www.patreon.com/photodemon/overview"
       End
-      Begin PhotoDemon.pdHyperlink hypAbout 
+      Begin PhotoPaint.pdHyperlink hypAbout 
          Height          =   375
          Index           =   3
          Left            =   240
@@ -134,7 +134,7 @@ Begin VB.Form FormAbout
          Caption         =   "Download program source code"
          URL             =   "https://github.com/tannerhelland/PhotoDemon"
       End
-      Begin PhotoDemon.pdHyperlink hypAbout 
+      Begin PhotoPaint.pdHyperlink hypAbout 
          Height          =   375
          Index           =   4
          Left            =   240
@@ -144,9 +144,9 @@ Begin VB.Form FormAbout
          _ExtentX        =   16404
          _ExtentY        =   661
          Caption         =   "Review program and plugin licenses"
-         URL             =   "http://photodemon.org/about/license/"
+         URL             =   "http://photopaint.org/about/license/"
       End
-      Begin PhotoDemon.pdHyperlink hypAbout 
+      Begin PhotoPaint.pdHyperlink hypAbout 
          Height          =   375
          Index           =   5
          Left            =   240
@@ -156,10 +156,10 @@ Begin VB.Form FormAbout
          _ExtentX        =   16404
          _ExtentY        =   661
          Caption         =   "Latest news"
-         URL             =   "http://photodemon.org/blog/"
+         URL             =   "http://photopaint.org/blog/"
       End
    End
-   Begin PhotoDemon.pdContainer pnlAbout 
+   Begin PhotoPaint.pdContainer pnlAbout 
       Height          =   6375
       Index           =   1
       Left            =   120
@@ -167,7 +167,7 @@ Begin VB.Form FormAbout
       Width           =   9615
       _ExtentX        =   16960
       _ExtentY        =   11245
-      Begin PhotoDemon.pdListBoxOD lstContributors 
+      Begin PhotoPaint.pdListBoxOD lstContributors 
          Height          =   6135
          Left            =   120
          TabIndex        =   1
@@ -178,7 +178,7 @@ Begin VB.Form FormAbout
          BorderlessMode  =   -1  'True
       End
    End
-   Begin PhotoDemon.pdContainer pnlAbout 
+   Begin PhotoPaint.pdContainer pnlAbout 
       Height          =   6375
       Index           =   2
       Left            =   120
@@ -186,7 +186,7 @@ Begin VB.Form FormAbout
       Width           =   9615
       _ExtentX        =   16960
       _ExtentY        =   11245
-      Begin PhotoDemon.pdListBoxOD lstPatrons 
+      Begin PhotoPaint.pdListBoxOD lstPatrons 
          Height          =   6135
          Left            =   120
          TabIndex        =   2
@@ -213,10 +213,10 @@ Attribute VB_Exposed = False
 'PhotoDemon would not be possible without the help of many, many amazing people.  THANK YOU!
 '
 'If you contributed to PhotoDemon's development in some way, but your name isn't listed here,
-' please let me know!  I can always be reached via https://photodemon.org/about/contact/
+' please let me know!  I can always be reached via https://photopaint.org/about/contact/
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

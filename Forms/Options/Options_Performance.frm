@@ -29,7 +29,7 @@ Begin VB.Form options_Performance
    ScaleWidth      =   553
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdSlider sltUndoCompression 
+   Begin PhotoPaint.pdSlider sltUndoCompression 
       Height          =   765
       Left            =   180
       TabIndex        =   0
@@ -45,7 +45,7 @@ Begin VB.Form options_Performance
       NotchPosition   =   2
       NotchValueCustom=   1
    End
-   Begin PhotoDemon.pdDropDown cboPerformance 
+   Begin PhotoPaint.pdDropDown cboPerformance 
       Height          =   690
       Index           =   0
       Left            =   180
@@ -57,7 +57,7 @@ Begin VB.Form options_Performance
       Caption         =   "when decorating interface elements:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdDropDown cboPerformance 
+   Begin PhotoPaint.pdDropDown cboPerformance 
       Height          =   690
       Index           =   1
       Left            =   180
@@ -69,7 +69,7 @@ Begin VB.Form options_Performance
       Caption         =   "when generating image and layer thumbnail images:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdDropDown cboPerformance 
+   Begin PhotoPaint.pdDropDown cboPerformance 
       Height          =   690
       Index           =   2
       Left            =   180
@@ -81,7 +81,7 @@ Begin VB.Form options_Performance
       Caption         =   "when rendering the image canvas:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   16
       Left            =   0
@@ -93,7 +93,7 @@ Begin VB.Form options_Performance
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblPNGCompression 
+   Begin PhotoPaint.pdLabel lblPNGCompression 
       Height          =   240
       Index           =   3
       Left            =   300
@@ -105,7 +105,7 @@ Begin VB.Form options_Performance
       FontSize        =   8
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblPNGCompression 
+   Begin PhotoPaint.pdLabel lblPNGCompression 
       Height          =   240
       Index           =   2
       Left            =   3960
@@ -118,7 +118,7 @@ Begin VB.Form options_Performance
       FontSize        =   8
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   18
       Left            =   0
@@ -130,7 +130,7 @@ Begin VB.Form options_Performance
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   15
       Left            =   0
@@ -142,7 +142,7 @@ Begin VB.Form options_Performance
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   17
       Left            =   0
@@ -179,7 +179,7 @@ Attribute VB_Exposed = False
 ' (That module is responsible for all low-level preference reading/writing.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

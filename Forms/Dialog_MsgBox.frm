@@ -26,7 +26,7 @@ Begin VB.Form dialog_MsgBox
    ScaleWidth      =   603
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdPictureBox picIcon 
+   Begin PhotoPaint.pdPictureBox picIcon 
       Height          =   615
       Left            =   240
       Top             =   1080
@@ -34,14 +34,14 @@ Begin VB.Form dialog_MsgBox
       _ExtentX        =   1085
       _ExtentY        =   1085
    End
-   Begin PhotoDemon.pdContainer pnlBase 
+   Begin PhotoPaint.pdContainer pnlBase 
       Height          =   750
       Left            =   0
       Top             =   5400
       Width           =   9015
       _ExtentX        =   15901
       _ExtentY        =   1508
-      Begin PhotoDemon.pdButton cmdBase 
+      Begin PhotoPaint.pdButton cmdBase 
          Height          =   510
          Index           =   0
          Left            =   7440
@@ -51,7 +51,7 @@ Begin VB.Form dialog_MsgBox
          _ExtentX        =   2910
          _ExtentY        =   1323
       End
-      Begin PhotoDemon.pdButton cmdBase 
+      Begin PhotoPaint.pdButton cmdBase 
          Height          =   510
          Index           =   1
          Left            =   5880
@@ -61,7 +61,7 @@ Begin VB.Form dialog_MsgBox
          _ExtentX        =   2910
          _ExtentY        =   1323
       End
-      Begin PhotoDemon.pdButton cmdBase 
+      Begin PhotoPaint.pdButton cmdBase 
          Height          =   510
          Index           =   2
          Left            =   4320
@@ -72,7 +72,7 @@ Begin VB.Form dialog_MsgBox
          _ExtentY        =   1323
       End
    End
-   Begin PhotoDemon.pdLabel lblMsg 
+   Begin PhotoPaint.pdLabel lblMsg 
       Height          =   4725
       Left            =   1005
       Top             =   390
@@ -100,7 +100,7 @@ Attribute VB_Exposed = False
 ' "PDMsgBox" function are routed through here.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

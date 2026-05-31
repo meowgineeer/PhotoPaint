@@ -22,7 +22,7 @@ Begin VB.UserControl pdFxPreviewCtl
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   384
    ToolboxBitmap   =   "pdFxPreview.ctx":0000
-   Begin PhotoDemon.pdPreview pdPreviewBox 
+   Begin PhotoPaint.pdPreview pdPreviewBox 
       Height          =   5055
       Left            =   0
       TabIndex        =   2
@@ -31,7 +31,7 @@ Begin VB.UserControl pdFxPreviewCtl
       _ExtentX        =   10186
       _ExtentY        =   8916
    End
-   Begin PhotoDemon.pdButtonStrip btsZoom 
+   Begin PhotoPaint.pdButtonStrip btsZoom 
       Height          =   495
       Left            =   3000
       TabIndex        =   1
@@ -41,7 +41,7 @@ Begin VB.UserControl pdFxPreviewCtl
       _ExtentY        =   873
       FontSize        =   9
    End
-   Begin PhotoDemon.pdButtonStrip btsState 
+   Begin PhotoPaint.pdButtonStrip btsState 
       Height          =   495
       Left            =   0
       TabIndex        =   0
@@ -87,7 +87,7 @@ Attribute VB_Exposed = False
 '    location on the image as, say, a center point for a filter (e.g. vignetting works great with this).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

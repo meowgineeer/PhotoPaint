@@ -24,7 +24,7 @@ Begin VB.Form FormGradientMap
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   808
-   Begin PhotoDemon.pdButtonStrip btsCategory 
+   Begin PhotoPaint.pdButtonStrip btsCategory 
       Height          =   975
       Left            =   6000
       TabIndex        =   4
@@ -34,7 +34,7 @@ Begin VB.Form FormGradientMap
       _ExtentY        =   1720
       Caption         =   "gradient type"
    End
-   Begin PhotoDemon.pdDropDown cboBlendMode 
+   Begin PhotoPaint.pdDropDown cboBlendMode 
       Height          =   975
       Left            =   6000
       TabIndex        =   3
@@ -44,7 +44,7 @@ Begin VB.Form FormGradientMap
       _ExtentY        =   1720
       Caption         =   "blend mode"
    End
-   Begin PhotoDemon.pdSlider sldIntensity 
+   Begin PhotoPaint.pdSlider sldIntensity 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -58,7 +58,7 @@ Begin VB.Form FormGradientMap
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -67,7 +67,7 @@ Begin VB.Form FormGradientMap
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -76,7 +76,7 @@ Begin VB.Form FormGradientMap
       _ExtentX        =   21378
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdContainer pnlMode 
+   Begin PhotoPaint.pdContainer pnlMode 
       Height          =   1560
       Index           =   0
       Left            =   5880
@@ -84,7 +84,7 @@ Begin VB.Form FormGradientMap
       Width           =   6135
       _ExtentX        =   10821
       _ExtentY        =   2752
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   375
          Index           =   0
          Left            =   0
@@ -95,7 +95,7 @@ Begin VB.Form FormGradientMap
          Alignment       =   1
          Caption         =   "midpoint"
       End
-      Begin PhotoDemon.pdSlider sldMidpoint 
+      Begin PhotoPaint.pdSlider sldMidpoint 
          Height          =   495
          Left            =   1430
          TabIndex        =   9
@@ -109,7 +109,7 @@ Begin VB.Form FormGradientMap
          NotchPosition   =   2
          NotchValueCustom=   50
       End
-      Begin PhotoDemon.pdColorSelector csSimple 
+      Begin PhotoPaint.pdColorSelector csSimple 
          Height          =   615
          Index           =   0
          Left            =   240
@@ -121,7 +121,7 @@ Begin VB.Form FormGradientMap
          curColor        =   0
          ShowMainWindowColor=   0   'False
       End
-      Begin PhotoDemon.pdColorSelector csSimple 
+      Begin PhotoPaint.pdColorSelector csSimple 
          Height          =   615
          Index           =   1
          Left            =   2220
@@ -132,7 +132,7 @@ Begin VB.Form FormGradientMap
          _ExtentY        =   1085
          curColor        =   5085183
       End
-      Begin PhotoDemon.pdColorSelector csSimple 
+      Begin PhotoPaint.pdColorSelector csSimple 
          Height          =   615
          Index           =   2
          Left            =   4200
@@ -144,7 +144,7 @@ Begin VB.Form FormGradientMap
          ShowMainWindowColor=   0   'False
       End
    End
-   Begin PhotoDemon.pdContainer pnlMode 
+   Begin PhotoPaint.pdContainer pnlMode 
       Height          =   1560
       Index           =   1
       Left            =   5880
@@ -152,7 +152,7 @@ Begin VB.Form FormGradientMap
       Width           =   6135
       _ExtentX        =   10821
       _ExtentY        =   2752
-      Begin PhotoDemon.pdGradientSelector grdSource 
+      Begin PhotoPaint.pdGradientSelector grdSource 
          Height          =   1335
          Left            =   240
          TabIndex        =   5
@@ -179,7 +179,7 @@ Attribute VB_Exposed = False
 ' adjustment layers yet.  Until that point, this standalone tool must fill the gap.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

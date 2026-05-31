@@ -29,7 +29,7 @@ Begin VB.Form options_Advanced
    ScaleWidth      =   553
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdButton cmdReset 
+   Begin PhotoPaint.pdButton cmdReset 
       Height          =   600
       Left            =   240
       TabIndex        =   0
@@ -39,7 +39,7 @@ Begin VB.Form options_Advanced
       _ExtentY        =   1058
       Caption         =   "reset all program settings"
    End
-   Begin PhotoDemon.pdButton cmdTmpPath 
+   Begin PhotoPaint.pdButton cmdTmpPath 
       Height          =   450
       Left            =   7680
       TabIndex        =   1
@@ -49,7 +49,7 @@ Begin VB.Form options_Advanced
       _ExtentY        =   794
       Caption         =   "..."
    End
-   Begin PhotoDemon.pdTextBox txtTempPath 
+   Begin PhotoPaint.pdTextBox txtTempPath 
       Height          =   315
       Left            =   240
       TabIndex        =   2
@@ -59,7 +59,7 @@ Begin VB.Form options_Advanced
       _ExtentY        =   556
       Text            =   "automatically generated at run-time"
    End
-   Begin PhotoDemon.pdLabel lblMemoryUsageMax 
+   Begin PhotoPaint.pdLabel lblMemoryUsageMax 
       Height          =   345
       Left            =   240
       Top             =   2655
@@ -69,7 +69,7 @@ Begin VB.Form options_Advanced
       Caption         =   "memory usage will be displayed here"
       ForeColor       =   8405056
    End
-   Begin PhotoDemon.pdLabel lblMemoryUsageCurrent 
+   Begin PhotoPaint.pdLabel lblMemoryUsageCurrent 
       Height          =   345
       Left            =   240
       Top             =   2295
@@ -79,7 +79,7 @@ Begin VB.Form options_Advanced
       Caption         =   "memory usage will be displayed here"
       ForeColor       =   8405056
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   5
       Left            =   0
@@ -91,7 +91,7 @@ Begin VB.Form options_Advanced
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   19
       Left            =   0
@@ -103,7 +103,7 @@ Begin VB.Form options_Advanced
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTempPathWarning 
+   Begin PhotoPaint.pdLabel lblTempPathWarning 
       Height          =   480
       Left            =   240
       Top             =   5040
@@ -115,7 +115,7 @@ Begin VB.Form options_Advanced
       Layout          =   1
       UseCustomForeColor=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   1
       Left            =   0
@@ -127,7 +127,7 @@ Begin VB.Form options_Advanced
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   20
       Left            =   0
@@ -139,7 +139,7 @@ Begin VB.Form options_Advanced
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblSettingsFolder 
+   Begin PhotoPaint.pdLabel lblSettingsFolder 
       Height          =   285
       Left            =   240
       Top             =   360
@@ -149,7 +149,7 @@ Begin VB.Form options_Advanced
       Caption         =   ""
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdButtonStrip btsDebug 
+   Begin PhotoPaint.pdButtonStrip btsDebug 
       Height          =   975
       Left            =   0
       TabIndex        =   3
@@ -184,7 +184,7 @@ Attribute VB_Exposed = False
 ' (That module is responsible for all low-level preference reading/writing.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

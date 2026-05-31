@@ -32,7 +32,7 @@ Begin VB.Form toolbar_Toolbox
    ScaleWidth      =   156
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdTitle ttlCategories 
+   Begin PhotoPaint.pdTitle ttlCategories 
       Height          =   240
       Index           =   0
       Left            =   120
@@ -44,7 +44,7 @@ Begin VB.Form toolbar_Toolbox
       Caption         =   "file"
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   0
       Left            =   120
@@ -55,7 +55,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1085
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   1
       Left            =   840
@@ -66,7 +66,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   2
       Left            =   1560
@@ -77,7 +77,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   6
       Left            =   120
@@ -88,7 +88,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   7
       Left            =   840
@@ -99,7 +99,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   8
       Left            =   1560
@@ -110,7 +110,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   9
       Left            =   120
@@ -121,7 +121,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   10
       Left            =   840
@@ -132,7 +132,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdFile 
+   Begin PhotoPaint.pdButtonToolbox cmdFile 
       Height          =   600
       Index           =   0
       Left            =   120
@@ -144,7 +144,7 @@ Begin VB.Form toolbar_Toolbox
       AutoToggle      =   -1  'True
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdFile 
+   Begin PhotoPaint.pdButtonToolbox cmdFile 
       Height          =   600
       Index           =   1
       Left            =   840
@@ -156,7 +156,7 @@ Begin VB.Form toolbar_Toolbox
       AutoToggle      =   -1  'True
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdFile 
+   Begin PhotoPaint.pdButtonToolbox cmdFile 
       Height          =   600
       Index           =   2
       Left            =   1560
@@ -168,7 +168,7 @@ Begin VB.Form toolbar_Toolbox
       AutoToggle      =   -1  'True
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdFile 
+   Begin PhotoPaint.pdButtonToolbox cmdFile 
       Height          =   600
       Index           =   3
       Left            =   120
@@ -180,7 +180,7 @@ Begin VB.Form toolbar_Toolbox
       AutoToggle      =   -1  'True
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdFile 
+   Begin PhotoPaint.pdButtonToolbox cmdFile 
       Height          =   600
       Index           =   4
       Left            =   840
@@ -192,7 +192,7 @@ Begin VB.Form toolbar_Toolbox
       AutoToggle      =   -1  'True
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdFile 
+   Begin PhotoPaint.pdButtonToolbox cmdFile 
       Height          =   600
       Index           =   5
       Left            =   1560
@@ -204,7 +204,7 @@ Begin VB.Form toolbar_Toolbox
       AutoToggle      =   -1  'True
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdFile 
+   Begin PhotoPaint.pdButtonToolbox cmdFile 
       Height          =   600
       Index           =   6
       Left            =   120
@@ -216,7 +216,7 @@ Begin VB.Form toolbar_Toolbox
       AutoToggle      =   -1  'True
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdFile 
+   Begin PhotoPaint.pdButtonToolbox cmdFile 
       Height          =   600
       Index           =   7
       Left            =   840
@@ -228,7 +228,7 @@ Begin VB.Form toolbar_Toolbox
       AutoToggle      =   -1  'True
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   11
       Left            =   120
@@ -239,7 +239,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   12
       Left            =   840
@@ -250,7 +250,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   13
       Left            =   120
@@ -261,7 +261,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdTitle ttlCategories 
+   Begin PhotoPaint.pdTitle ttlCategories 
       Height          =   240
       Index           =   1
       Left            =   120
@@ -273,7 +273,7 @@ Begin VB.Form toolbar_Toolbox
       Caption         =   "undo"
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdTitle ttlCategories 
+   Begin PhotoPaint.pdTitle ttlCategories 
       Height          =   240
       Index           =   2
       Left            =   120
@@ -285,7 +285,7 @@ Begin VB.Form toolbar_Toolbox
       Caption         =   "layout"
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdTitle ttlCategories 
+   Begin PhotoPaint.pdTitle ttlCategories 
       Height          =   240
       Index           =   3
       Left            =   120
@@ -297,7 +297,7 @@ Begin VB.Form toolbar_Toolbox
       Caption         =   "select"
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdTitle ttlCategories 
+   Begin PhotoPaint.pdTitle ttlCategories 
       Height          =   240
       Index           =   4
       Left            =   120
@@ -309,7 +309,7 @@ Begin VB.Form toolbar_Toolbox
       Caption         =   "text"
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdTitle ttlCategories 
+   Begin PhotoPaint.pdTitle ttlCategories 
       Height          =   240
       Index           =   5
       Left            =   120
@@ -321,7 +321,7 @@ Begin VB.Form toolbar_Toolbox
       Caption         =   "paint"
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   14
       Left            =   840
@@ -332,7 +332,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblRecording 
+   Begin PhotoPaint.pdLabel lblRecording 
       Height          =   720
       Left            =   120
       Top             =   8640
@@ -345,7 +345,7 @@ Begin VB.Form toolbar_Toolbox
       CustomDragDropEnabled=   -1  'True
       Layout          =   1
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   15
       Left            =   1560
@@ -356,7 +356,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   16
       Left            =   120
@@ -367,7 +367,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   3
       Left            =   120
@@ -378,7 +378,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   17
       Left            =   840
@@ -389,7 +389,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   18
       Left            =   1560
@@ -400,7 +400,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   4
       Left            =   840
@@ -411,7 +411,7 @@ Begin VB.Form toolbar_Toolbox
       _ExtentY        =   1058
       CustomDragDropEnabled=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdTools 
+   Begin PhotoPaint.pdButtonToolbox cmdTools 
       Height          =   600
       Index           =   5
       Left            =   1560
@@ -440,7 +440,7 @@ Attribute VB_Exposed = False
 ' all on-canvas tools, while also providing shortcuts to open/save/undo/redo tasks.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -1435,7 +1435,7 @@ Public Sub UpdateAgainstCurrentTheme()
     
     'File tool buttons come first
     cmdFile(FILE_NEW).AssignTooltip "This option will create a blank image.  Other ways to create new images can be found in the File -> Import menu.", "New Image"
-    cmdFile(FILE_OPEN).AssignTooltip "Another way to open images is dragging them from your desktop or Windows Explorer and dropping them onto PhotoDemon.", "Open one or more images for editing"
+    cmdFile(FILE_OPEN).AssignTooltip "Another way to open images is dragging them from your desktop or Windows Explorer and dropping them onto PhotoPaint.", "Open one or more images for editing"
     
     If g_ConfirmClosingUnsaved Then
         cmdFile(FILE_CLOSE).AssignTooltip "If the current image has not been saved, you will receive a prompt to save it before it closes.", "Close the current image"

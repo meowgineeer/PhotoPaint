@@ -24,7 +24,7 @@ Begin VB.Form FormSplitTone
    ScaleHeight     =   432
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   806
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   2
@@ -33,7 +33,7 @@ Begin VB.Form FormSplitTone
       _ExtentX        =   21325
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5505
       Left            =   120
       TabIndex        =   0
@@ -42,7 +42,7 @@ Begin VB.Form FormSplitTone
       _ExtentX        =   9922
       _ExtentY        =   9710
    End
-   Begin PhotoDemon.pdSlider sltBalance 
+   Begin PhotoPaint.pdSlider sltBalance 
       Height          =   705
       Left            =   6000
       TabIndex        =   1
@@ -56,7 +56,7 @@ Begin VB.Form FormSplitTone
       SliderTrackStyle=   3
       GradientColorMiddle=   16777215
    End
-   Begin PhotoDemon.pdColorSelector cpHighlight 
+   Begin PhotoPaint.pdColorSelector cpHighlight 
       Height          =   975
       Left            =   6000
       TabIndex        =   3
@@ -67,7 +67,7 @@ Begin VB.Form FormSplitTone
       Caption         =   "highlight color"
       curColor        =   16744192
    End
-   Begin PhotoDemon.pdColorSelector cpShadow 
+   Begin PhotoPaint.pdColorSelector cpShadow 
       Height          =   975
       Left            =   6000
       TabIndex        =   4
@@ -78,7 +78,7 @@ Begin VB.Form FormSplitTone
       Caption         =   "shadow color"
       curColor        =   32767
    End
-   Begin PhotoDemon.pdSlider sltStrength 
+   Begin PhotoPaint.pdSlider sltStrength 
       Height          =   705
       Left            =   6000
       TabIndex        =   5
@@ -124,7 +124,7 @@ Attribute VB_Exposed = False
 ' to what you'd get from (much more expensive) professional software like Adobe Lightroom.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

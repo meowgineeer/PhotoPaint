@@ -26,7 +26,7 @@ Begin VB.Form FormImageCreateLUT
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   471
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdCheckBox chkAvailable 
+   Begin PhotoPaint.pdCheckBox chkAvailable 
       Height          =   375
       Left            =   480
       TabIndex        =   8
@@ -36,7 +36,7 @@ Begin VB.Form FormImageCreateLUT
       _ExtentY        =   661
       Caption         =   "add this to the ""Adjustments > Color > Color lookup"" tool"
    End
-   Begin PhotoDemon.pdDropDown ddQuality 
+   Begin PhotoPaint.pdDropDown ddQuality 
       Height          =   375
       Left            =   600
       TabIndex        =   7
@@ -45,7 +45,7 @@ Begin VB.Form FormImageCreateLUT
       _ExtentX        =   11033
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdLabel lblSettings 
+   Begin PhotoPaint.pdLabel lblSettings 
       Height          =   315
       Left            =   120
       Top             =   3240
@@ -55,7 +55,7 @@ Begin VB.Form FormImageCreateLUT
       Caption         =   "options"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBar 
+   Begin PhotoPaint.pdCommandBarMini cmdBar 
       Align           =   2  'Align Bottom
       Height          =   855
       Left            =   0
@@ -65,7 +65,7 @@ Begin VB.Form FormImageCreateLUT
       _ExtentX        =   12462
       _ExtentY        =   1508
    End
-   Begin PhotoDemon.pdDropDown ddSource 
+   Begin PhotoPaint.pdDropDown ddSource 
       Height          =   735
       Index           =   0
       Left            =   120
@@ -76,7 +76,7 @@ Begin VB.Form FormImageCreateLUT
       _ExtentY        =   1296
       Caption         =   "base image and layer"
    End
-   Begin PhotoDemon.pdDropDown ddSource 
+   Begin PhotoPaint.pdDropDown ddSource 
       Height          =   375
       Index           =   1
       Left            =   480
@@ -87,7 +87,7 @@ Begin VB.Form FormImageCreateLUT
       _ExtentY        =   661
       FontSizeCaption =   11
    End
-   Begin PhotoDemon.pdDropDown ddSource 
+   Begin PhotoPaint.pdDropDown ddSource 
       Height          =   735
       Index           =   2
       Left            =   120
@@ -98,7 +98,7 @@ Begin VB.Form FormImageCreateLUT
       _ExtentY        =   1296
       Caption         =   "modified image and layer"
    End
-   Begin PhotoDemon.pdDropDown ddSource 
+   Begin PhotoPaint.pdDropDown ddSource 
       Height          =   375
       Index           =   3
       Left            =   480
@@ -109,7 +109,7 @@ Begin VB.Form FormImageCreateLUT
       _ExtentY        =   661
       FontSizeCaption =   11
    End
-   Begin PhotoDemon.pdSlider sldGridPoints 
+   Begin PhotoPaint.pdSlider sldGridPoints 
       Height          =   495
       Left            =   600
       TabIndex        =   5
@@ -123,7 +123,7 @@ Begin VB.Form FormImageCreateLUT
       NotchPosition   =   2
       NotchValueCustom=   17
    End
-   Begin PhotoDemon.pdTextBox txtDescription 
+   Begin PhotoPaint.pdTextBox txtDescription 
       Height          =   375
       Left            =   600
       TabIndex        =   6
@@ -132,7 +132,7 @@ Begin VB.Form FormImageCreateLUT
       _ExtentX        =   11033
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   315
       Index           =   0
       Left            =   480
@@ -142,7 +142,7 @@ Begin VB.Form FormImageCreateLUT
       _ExtentY        =   556
       Caption         =   "description"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   315
       Index           =   2
       Left            =   480
@@ -174,7 +174,7 @@ Attribute VB_Exposed = False
 'This feature relies heavily on the pdLUT3D class for handling all the actual LUT generation and export work.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

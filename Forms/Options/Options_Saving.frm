@@ -29,7 +29,7 @@ Begin VB.Form options_Saving
    ScaleWidth      =   553
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdCheckBox chkConfirmUnsaved 
+   Begin PhotoPaint.pdCheckBox chkConfirmUnsaved 
       Height          =   330
       Left            =   180
       TabIndex        =   0
@@ -39,7 +39,7 @@ Begin VB.Form options_Saving
       _ExtentY        =   582
       Caption         =   "when closing images, warn about unsaved changes"
    End
-   Begin PhotoDemon.pdDropDown cboDefaultSaveFormat 
+   Begin PhotoPaint.pdDropDown cboDefaultSaveFormat 
       Height          =   690
       Left            =   180
       TabIndex        =   1
@@ -50,7 +50,7 @@ Begin VB.Form options_Saving
       Caption         =   "when using ""Save As"", set the default file format to:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdDropDown cboSaveBehavior 
+   Begin PhotoPaint.pdDropDown cboSaveBehavior 
       Height          =   690
       Left            =   180
       TabIndex        =   2
@@ -61,7 +61,7 @@ Begin VB.Form options_Saving
       Caption         =   "when ""Save"" is used:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   6
       Left            =   0
@@ -73,7 +73,7 @@ Begin VB.Form options_Saving
       FontSize        =   12
       ForeColor       =   5263440
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   7
       Left            =   0
@@ -85,7 +85,7 @@ Begin VB.Form options_Saving
       FontSize        =   12
       ForeColor       =   5263440
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   8
       Left            =   0
@@ -97,7 +97,7 @@ Begin VB.Form options_Saving
       FontSize        =   12
       ForeColor       =   5263440
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   21
       Left            =   0
@@ -109,7 +109,7 @@ Begin VB.Form options_Saving
       FontSize        =   12
       ForeColor       =   5263440
    End
-   Begin PhotoDemon.pdDropDown cboDefaultSaveFolder 
+   Begin PhotoPaint.pdDropDown cboDefaultSaveFolder 
       Height          =   690
       Left            =   180
       TabIndex        =   3
@@ -120,7 +120,7 @@ Begin VB.Form options_Saving
       Caption         =   "when using ""Save As"", set the initial folder to:"
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdDropDown cboSaveAsBehavior 
+   Begin PhotoPaint.pdDropDown cboSaveAsBehavior 
       Height          =   690
       Left            =   180
       TabIndex        =   4
@@ -156,7 +156,7 @@ Attribute VB_Exposed = False
 ' (That module is responsible for all low-level preference reading/writing.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

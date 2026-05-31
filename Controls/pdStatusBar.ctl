@@ -22,7 +22,7 @@ Begin VB.UserControl pdStatusBar
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   796
    ToolboxBitmap   =   "pdStatusBar.ctx":0000
-   Begin PhotoDemon.pdDropDown cmbSizeUnit 
+   Begin PhotoPaint.pdDropDown cmbSizeUnit 
       Height          =   360
       Left            =   3630
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.UserControl pdStatusBar
       UseCustomBackgroundColor=   -1  'True
       FontSize        =   9
    End
-   Begin PhotoDemon.pdDropDown cmbZoom 
+   Begin PhotoPaint.pdDropDown cmbZoom 
       Height          =   360
       Left            =   840
       TabIndex        =   1
@@ -44,7 +44,7 @@ Begin VB.UserControl pdStatusBar
       UseCustomBackgroundColor=   -1  'True
       FontSize        =   9
    End
-   Begin PhotoDemon.pdLabel lblImgSize 
+   Begin PhotoPaint.pdLabel lblImgSize 
       Height          =   210
       Left            =   3240
       Top             =   60
@@ -57,7 +57,7 @@ Begin VB.UserControl pdStatusBar
       Layout          =   2
       UseCustomBackColor=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdZoomFit 
+   Begin PhotoPaint.pdButtonToolbox cmdZoomFit 
       Height          =   345
       Left            =   0
       TabIndex        =   2
@@ -68,7 +68,7 @@ Begin VB.UserControl pdStatusBar
       BackColor       =   -2147483626
       UseCustomBackColor=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdZoomOut 
+   Begin PhotoPaint.pdButtonToolbox cmdZoomOut 
       Height          =   345
       Left            =   390
       TabIndex        =   3
@@ -80,7 +80,7 @@ Begin VB.UserControl pdStatusBar
       BackColor       =   -2147483626
       UseCustomBackColor=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdZoomIn 
+   Begin PhotoPaint.pdButtonToolbox cmdZoomIn 
       Height          =   345
       Left            =   2190
       TabIndex        =   4
@@ -92,7 +92,7 @@ Begin VB.UserControl pdStatusBar
       BackColor       =   -2147483626
       UseCustomBackColor=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdImgSize 
+   Begin PhotoPaint.pdButtonToolbox cmdImgSize 
       Height          =   345
       Left            =   2790
       TabIndex        =   5
@@ -104,7 +104,7 @@ Begin VB.UserControl pdStatusBar
       BackColor       =   -2147483626
       UseCustomBackColor=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblCoordinates 
+   Begin PhotoPaint.pdLabel lblCoordinates 
       Height          =   210
       Index           =   0
       Left            =   4680
@@ -119,7 +119,7 @@ Begin VB.UserControl pdStatusBar
       Layout          =   2
       UseCustomBackColor=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblCoordinates 
+   Begin PhotoPaint.pdLabel lblCoordinates 
       Height          =   210
       Index           =   1
       Left            =   5100
@@ -134,7 +134,7 @@ Begin VB.UserControl pdStatusBar
       Layout          =   2
       UseCustomBackColor=   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblMessages 
+   Begin PhotoPaint.pdLabel lblMessages 
       Height          =   210
       Left            =   6360
       Top             =   60
@@ -166,7 +166,7 @@ Attribute VB_Exposed = False
 'For implementation details, please refer to pdCanvas.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

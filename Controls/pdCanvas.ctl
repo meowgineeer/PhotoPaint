@@ -24,7 +24,7 @@ Begin VB.UserControl pdCanvas
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   886
    ToolboxBitmap   =   "pdCanvas.ctx":0000
-   Begin PhotoDemon.pdContainer pnlNoImages 
+   Begin PhotoPaint.pdContainer pnlNoImages 
       Height          =   3375
       Left            =   6240
       Top             =   2160
@@ -32,7 +32,7 @@ Begin VB.UserControl pdCanvas
       Width           =   3255
       _ExtentX        =   5741
       _ExtentY        =   5953
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   495
          Index           =   0
          Left            =   120
@@ -44,7 +44,7 @@ Begin VB.UserControl pdCanvas
          CustomDragDropEnabled=   -1  'True
          FontSize        =   18
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   495
          Index           =   1
          Left            =   1200
@@ -56,7 +56,7 @@ Begin VB.UserControl pdCanvas
          CustomDragDropEnabled=   -1  'True
          FontSize        =   18
       End
-      Begin PhotoDemon.pdHyperlink hypRecentFiles 
+      Begin PhotoPaint.pdHyperlink hypRecentFiles 
          Height          =   375
          Left            =   120
          TabIndex        =   15
@@ -68,7 +68,7 @@ Begin VB.UserControl pdCanvas
          Caption         =   "clear recent image list"
          RaiseClickEvent =   -1  'True
       End
-      Begin PhotoDemon.pdCheckBox chkRecentFiles 
+      Begin PhotoPaint.pdCheckBox chkRecentFiles 
          Height          =   375
          Left            =   120
          TabIndex        =   13
@@ -79,7 +79,7 @@ Begin VB.UserControl pdCanvas
          Caption         =   "show recent images, if any"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdButton cmdStart 
+      Begin PhotoPaint.pdButton cmdStart 
          Height          =   495
          Index           =   0
          Left            =   120
@@ -92,7 +92,7 @@ Begin VB.UserControl pdCanvas
          CustomDragDropEnabled=   -1  'True
          FontSize        =   12
       End
-      Begin PhotoDemon.pdButton cmdStart 
+      Begin PhotoPaint.pdButton cmdStart 
          Height          =   495
          Index           =   1
          Left            =   120
@@ -105,7 +105,7 @@ Begin VB.UserControl pdCanvas
          CustomDragDropEnabled=   -1  'True
          FontSize        =   12
       End
-      Begin PhotoDemon.pdButton cmdStart 
+      Begin PhotoPaint.pdButton cmdStart 
          Height          =   495
          Index           =   2
          Left            =   120
@@ -118,7 +118,7 @@ Begin VB.UserControl pdCanvas
          CustomDragDropEnabled=   -1  'True
          FontSize        =   12
       End
-      Begin PhotoDemon.pdButton cmdStart 
+      Begin PhotoPaint.pdButton cmdStart 
          Height          =   495
          Index           =   3
          Left            =   120
@@ -131,7 +131,7 @@ Begin VB.UserControl pdCanvas
          CustomDragDropEnabled=   -1  'True
          FontSize        =   12
       End
-      Begin PhotoDemon.pdButton cmdRecent 
+      Begin PhotoPaint.pdButton cmdRecent 
          Height          =   495
          Index           =   0
          Left            =   960
@@ -143,7 +143,7 @@ Begin VB.UserControl pdCanvas
          CustomDragDropEnabled=   -1  'True
       End
    End
-   Begin PhotoDemon.pdProgressBar mainProgBar 
+   Begin PhotoPaint.pdProgressBar mainProgBar 
       Height          =   255
       Left            =   360
       TabIndex        =   6
@@ -153,7 +153,7 @@ Begin VB.UserControl pdCanvas
       _ExtentX        =   8705
       _ExtentY        =   450
    End
-   Begin PhotoDemon.pdRuler vRuler 
+   Begin PhotoPaint.pdRuler vRuler 
       Height          =   4935
       Left            =   0
       TabIndex        =   8
@@ -164,7 +164,7 @@ Begin VB.UserControl pdCanvas
       _ExtentY        =   8705
       Orientation     =   1
    End
-   Begin PhotoDemon.pdRuler hRuler 
+   Begin PhotoPaint.pdRuler hRuler 
       Height          =   255
       Left            =   360
       TabIndex        =   7
@@ -174,7 +174,7 @@ Begin VB.UserControl pdCanvas
       _ExtentX        =   8070
       _ExtentY        =   450
    End
-   Begin PhotoDemon.pdImageStrip ImageStrip 
+   Begin PhotoPaint.pdImageStrip ImageStrip 
       Height          =   990
       Left            =   6240
       TabIndex        =   5
@@ -185,7 +185,7 @@ Begin VB.UserControl pdCanvas
       _ExtentY        =   1746
       Alignment       =   0
    End
-   Begin PhotoDemon.pdStatusBar StatusBar 
+   Begin PhotoPaint.pdStatusBar StatusBar 
       Height          =   345
       Left            =   0
       TabIndex        =   4
@@ -194,7 +194,7 @@ Begin VB.UserControl pdCanvas
       _ExtentX        =   23442
       _ExtentY        =   609
    End
-   Begin PhotoDemon.pdCanvasView CanvasView 
+   Begin PhotoPaint.pdCanvasView CanvasView 
       Height          =   4935
       Left            =   360
       TabIndex        =   0
@@ -203,7 +203,7 @@ Begin VB.UserControl pdCanvas
       _ExtentX        =   8281
       _ExtentY        =   8916
    End
-   Begin PhotoDemon.pdButtonToolbox cmdCenter 
+   Begin PhotoPaint.pdButtonToolbox cmdCenter 
       Height          =   255
       Left            =   5040
       TabIndex        =   3
@@ -216,7 +216,7 @@ Begin VB.UserControl pdCanvas
       BackColor       =   -2147483626
       UseCustomBackColor=   -1  'True
    End
-   Begin PhotoDemon.pdScrollBar hScroll 
+   Begin PhotoPaint.pdScrollBar hScroll 
       Height          =   255
       Left            =   360
       TabIndex        =   2
@@ -228,7 +228,7 @@ Begin VB.UserControl pdCanvas
       OrientationHorizontal=   -1  'True
       VisualStyle     =   1
    End
-   Begin PhotoDemon.pdScrollBar vScroll 
+   Begin PhotoPaint.pdScrollBar vScroll 
       Height          =   4935
       Left            =   5040
       TabIndex        =   1
@@ -272,7 +272,7 @@ Attribute VB_Exposed = False
 ' well-contained.  I hope to someday remedy this.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

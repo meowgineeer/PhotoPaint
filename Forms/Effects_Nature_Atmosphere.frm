@@ -24,7 +24,7 @@ Begin VB.Form FormAtmosphere
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   808
-   Begin PhotoDemon.pdDropDown cboBlendMode 
+   Begin PhotoPaint.pdDropDown cboBlendMode 
       Height          =   975
       Left            =   6000
       TabIndex        =   4
@@ -34,7 +34,7 @@ Begin VB.Form FormAtmosphere
       _ExtentY        =   1720
       Caption         =   "blend mode"
    End
-   Begin PhotoDemon.pdButtonStrip btsStyle 
+   Begin PhotoPaint.pdButtonStrip btsStyle 
       Height          =   975
       Left            =   6000
       TabIndex        =   3
@@ -44,7 +44,7 @@ Begin VB.Form FormAtmosphere
       _ExtentY        =   1720
       Caption         =   "style"
    End
-   Begin PhotoDemon.pdSlider sltIntensity 
+   Begin PhotoPaint.pdSlider sltIntensity 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -57,7 +57,7 @@ Begin VB.Form FormAtmosphere
       Value           =   50
       DefaultValue    =   50
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -66,7 +66,7 @@ Begin VB.Form FormAtmosphere
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -93,7 +93,7 @@ Attribute VB_Exposed = False
 ' given how the underlying function works), but somehow it ended up with that name, and it's stuck ever since.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

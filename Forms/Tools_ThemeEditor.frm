@@ -26,7 +26,7 @@ Begin VB.Form FormThemeEditor
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   884
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdCheckBox chkSort 
+   Begin PhotoPaint.pdCheckBox chkSort 
       Height          =   375
       Left            =   240
       TabIndex        =   10
@@ -37,7 +37,7 @@ Begin VB.Form FormThemeEditor
       Caption         =   "sort before saving"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdCheckBox chkCustomMenuColor 
+   Begin PhotoPaint.pdCheckBox chkCustomMenuColor 
       Height          =   375
       Left            =   4200
       TabIndex        =   17
@@ -48,7 +48,7 @@ Begin VB.Form FormThemeEditor
       Caption         =   "use custom menu color"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdLabel lblExport 
+   Begin PhotoPaint.pdLabel lblExport 
       Height          =   375
       Left            =   4200
       Top             =   8760
@@ -59,7 +59,7 @@ Begin VB.Form FormThemeEditor
       Caption         =   ""
       FontSize        =   12
    End
-   Begin PhotoDemon.pdCheckBox chkDelete 
+   Begin PhotoPaint.pdCheckBox chkDelete 
       Height          =   375
       Left            =   9600
       TabIndex        =   15
@@ -69,7 +69,7 @@ Begin VB.Form FormThemeEditor
       _ExtentY        =   661
       Caption         =   "mark resource for deletion"
    End
-   Begin PhotoDemon.pdButton cmdExport 
+   Begin PhotoPaint.pdButton cmdExport 
       Height          =   615
       Left            =   240
       TabIndex        =   14
@@ -79,7 +79,7 @@ Begin VB.Form FormThemeEditor
       _ExtentY        =   1085
       Caption         =   "export finished resource file"
    End
-   Begin PhotoDemon.pdButtonStrip btsBackcolor 
+   Begin PhotoPaint.pdButtonStrip btsBackcolor 
       Height          =   615
       Left            =   9600
       TabIndex        =   13
@@ -88,7 +88,7 @@ Begin VB.Form FormThemeEditor
       _ExtentX        =   6165
       _ExtentY        =   1085
    End
-   Begin PhotoDemon.pdColorSelector csLight 
+   Begin PhotoPaint.pdColorSelector csLight 
       Height          =   855
       Left            =   4200
       TabIndex        =   11
@@ -99,7 +99,7 @@ Begin VB.Form FormThemeEditor
       Caption         =   "light theme color"
       FontSize        =   10
    End
-   Begin PhotoDemon.pdPictureBox picPreview 
+   Begin PhotoPaint.pdPictureBox picPreview 
       Height          =   2535
       Left            =   9600
       Top             =   4560
@@ -107,7 +107,7 @@ Begin VB.Form FormThemeEditor
       _ExtentX        =   0
       _ExtentY        =   0
    End
-   Begin PhotoDemon.pdCheckBox chkColoration 
+   Begin PhotoPaint.pdCheckBox chkColoration 
       Height          =   375
       Left            =   4200
       TabIndex        =   9
@@ -117,7 +117,7 @@ Begin VB.Form FormThemeEditor
       _ExtentY        =   661
       Caption         =   "run-time coloration"
    End
-   Begin PhotoDemon.pdButton cmdSave 
+   Begin PhotoPaint.pdButton cmdSave 
       Height          =   615
       Left            =   240
       TabIndex        =   8
@@ -127,7 +127,7 @@ Begin VB.Form FormThemeEditor
       _ExtentY        =   873
       Caption         =   "force save resource package"
    End
-   Begin PhotoDemon.pdButtonStrip btsResourceType 
+   Begin PhotoPaint.pdButtonStrip btsResourceType 
       Height          =   975
       Left            =   4200
       TabIndex        =   6
@@ -137,7 +137,7 @@ Begin VB.Form FormThemeEditor
       _ExtentY        =   1720
       Caption         =   "resource type"
    End
-   Begin PhotoDemon.pdTextBox txtResourceName 
+   Begin PhotoPaint.pdTextBox txtResourceName 
       Height          =   375
       Left            =   4200
       TabIndex        =   5
@@ -146,7 +146,7 @@ Begin VB.Form FormThemeEditor
       _ExtentX        =   15690
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdButton cmdResourcePath 
+   Begin PhotoPaint.pdButton cmdResourcePath 
       Height          =   375
       Left            =   12720
       TabIndex        =   4
@@ -156,7 +156,7 @@ Begin VB.Form FormThemeEditor
       _ExtentY        =   661
       Caption         =   "..."
    End
-   Begin PhotoDemon.pdTextBox txtResourcePath 
+   Begin PhotoPaint.pdTextBox txtResourcePath 
       Height          =   375
       Left            =   240
       TabIndex        =   3
@@ -166,7 +166,7 @@ Begin VB.Form FormThemeEditor
       _ExtentY        =   661
       FontSize        =   12
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   0
       Left            =   120
@@ -177,7 +177,7 @@ Begin VB.Form FormThemeEditor
       Caption         =   "current resource file"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdButton cmdAddResource 
+   Begin PhotoPaint.pdButton cmdAddResource 
       Height          =   615
       Left            =   240
       TabIndex        =   2
@@ -187,7 +187,7 @@ Begin VB.Form FormThemeEditor
       _ExtentY        =   1085
       Caption         =   "add a new resource"
    End
-   Begin PhotoDemon.pdListBox lstResources 
+   Begin PhotoPaint.pdListBox lstResources 
       Height          =   5775
       Left            =   120
       TabIndex        =   1
@@ -197,7 +197,7 @@ Begin VB.Form FormThemeEditor
       _ExtentY        =   10186
       Caption         =   "current resources"
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBar 
+   Begin PhotoPaint.pdCommandBarMini cmdBar 
       Align           =   2  'Align Bottom
       Height          =   795
       Left            =   0
@@ -207,7 +207,7 @@ Begin VB.Form FormThemeEditor
       _ExtentX        =   23389
       _ExtentY        =   1402
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   1
       Left            =   3960
@@ -218,7 +218,7 @@ Begin VB.Form FormThemeEditor
       Caption         =   "edit current resource"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   2
       Left            =   4200
@@ -229,7 +229,7 @@ Begin VB.Form FormThemeEditor
       Caption         =   "resource name"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdTextBox txtResourceLocation 
+   Begin PhotoPaint.pdTextBox txtResourceLocation 
       Height          =   375
       Left            =   4200
       TabIndex        =   7
@@ -238,7 +238,7 @@ Begin VB.Form FormThemeEditor
       _ExtentX        =   15690
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   3
       Left            =   4200
@@ -249,7 +249,7 @@ Begin VB.Form FormThemeEditor
       Caption         =   "resource location"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   4
       Left            =   4200
@@ -260,7 +260,7 @@ Begin VB.Form FormThemeEditor
       Caption         =   "image resource properties:"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdColorSelector csDark 
+   Begin PhotoPaint.pdColorSelector csDark 
       Height          =   855
       Left            =   6960
       TabIndex        =   12
@@ -271,7 +271,7 @@ Begin VB.Form FormThemeEditor
       Caption         =   "dark theme color"
       FontSize        =   10
    End
-   Begin PhotoDemon.pdButton cmdResItemPath 
+   Begin PhotoPaint.pdButton cmdResItemPath 
       Height          =   375
       Left            =   12600
       TabIndex        =   16
@@ -281,7 +281,7 @@ Begin VB.Form FormThemeEditor
       _ExtentY        =   661
       Caption         =   "..."
    End
-   Begin PhotoDemon.pdColorSelector csMenu 
+   Begin PhotoPaint.pdColorSelector csMenu 
       Height          =   735
       Left            =   4200
       TabIndex        =   18
@@ -317,7 +317,7 @@ Attribute VB_Exposed = False
 'Also, please note that this dialog is absolutely *not* meant for external use.  It is for PD developers, only.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

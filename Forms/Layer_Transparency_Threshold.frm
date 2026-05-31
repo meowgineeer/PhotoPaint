@@ -24,7 +24,7 @@ Begin VB.Form FormThresholdAlpha
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   786
-   Begin PhotoDemon.pdColorSelector csMatte 
+   Begin PhotoPaint.pdColorSelector csMatte 
       Height          =   975
       Left            =   6000
       TabIndex        =   5
@@ -34,7 +34,7 @@ Begin VB.Form FormThresholdAlpha
       _ExtentY        =   1720
       Caption         =   "matte"
    End
-   Begin PhotoDemon.pdSlider sldDitheringAmount 
+   Begin PhotoPaint.pdSlider sldDitheringAmount 
       Height          =   855
       Left            =   6000
       TabIndex        =   4
@@ -48,7 +48,7 @@ Begin VB.Form FormThresholdAlpha
       NotchPosition   =   2
       NotchValueCustom=   50
    End
-   Begin PhotoDemon.pdDropDown cboDither 
+   Begin PhotoPaint.pdDropDown cboDither 
       Height          =   855
       Left            =   6000
       TabIndex        =   3
@@ -58,7 +58,7 @@ Begin VB.Form FormThresholdAlpha
       _ExtentY        =   1508
       Caption         =   "dithering"
    End
-   Begin PhotoDemon.pdSlider sldThreshold 
+   Begin PhotoPaint.pdSlider sldThreshold 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -73,7 +73,7 @@ Begin VB.Form FormThresholdAlpha
       NotchPosition   =   2
       NotchValueCustom=   127
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -82,7 +82,7 @@ Begin VB.Form FormThresholdAlpha
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -112,7 +112,7 @@ Attribute VB_Exposed = False
 ' GIF or ICO.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

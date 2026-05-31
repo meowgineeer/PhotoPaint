@@ -24,7 +24,7 @@ Begin VB.Form FormEqualize
    ScaleHeight     =   437
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   779
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Left            =   5880
       TabIndex        =   4
@@ -39,7 +39,7 @@ Begin VB.Form FormEqualize
       GradientColorRight=   1703935
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdButtonStrip btsTarget 
+   Begin PhotoPaint.pdButtonStrip btsTarget 
       Height          =   1095
       Left            =   5880
       TabIndex        =   2
@@ -49,7 +49,7 @@ Begin VB.Form FormEqualize
       _ExtentY        =   1931
       Caption         =   "target histogram"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -59,7 +59,7 @@ Begin VB.Form FormEqualize
       _ExtentX        =   20611
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -68,7 +68,7 @@ Begin VB.Form FormEqualize
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdButtonStrip btsMode 
+   Begin PhotoPaint.pdButtonStrip btsMode 
       Height          =   1095
       Left            =   5880
       TabIndex        =   3
@@ -78,7 +78,7 @@ Begin VB.Form FormEqualize
       _ExtentY        =   1931
       Caption         =   "mode"
    End
-   Begin PhotoDemon.pdButtonStrip btsKernelShape 
+   Begin PhotoPaint.pdButtonStrip btsKernelShape 
       Height          =   1095
       Left            =   5880
       TabIndex        =   5
@@ -106,7 +106,7 @@ Attribute VB_Exposed = False
 ' of histograms can be generated and analyzed.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

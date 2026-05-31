@@ -24,7 +24,7 @@ Begin VB.Form FormDiffuse
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   786
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormDiffuse
       _ExtentX        =   20796
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltX 
+   Begin PhotoPaint.pdSlider sltX 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -47,7 +47,7 @@ Begin VB.Form FormDiffuse
       Value           =   1
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdCheckBox chkWrap 
+   Begin PhotoPaint.pdCheckBox chkWrap 
       Height          =   330
       Left            =   6120
       TabIndex        =   2
@@ -57,7 +57,7 @@ Begin VB.Form FormDiffuse
       _ExtentY        =   582
       Caption         =   "wrap edge values"
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -66,7 +66,7 @@ Begin VB.Form FormDiffuse
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltY 
+   Begin PhotoPaint.pdSlider sltY 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -96,7 +96,7 @@ Attribute VB_Exposed = False
 'Module for handling "diffuse"-style filters (also called "displace", e.g. in GIMP).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

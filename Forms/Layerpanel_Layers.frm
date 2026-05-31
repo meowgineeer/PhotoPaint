@@ -29,7 +29,7 @@ Begin VB.Form layerpanel_Layers
    ScaleWidth      =   259
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdLayerList lstLayers 
+   Begin PhotoPaint.pdLayerList lstLayers 
       Height          =   2295
       Left            =   0
       TabIndex        =   4
@@ -38,14 +38,14 @@ Begin VB.Form layerpanel_Layers
       _ExtentX        =   5741
       _ExtentY        =   4048
    End
-   Begin PhotoDemon.pdContainer ctlGroupLayerButtons 
+   Begin PhotoPaint.pdContainer ctlGroupLayerButtons 
       Height          =   525
       Left            =   0
       Top             =   6720
       Width           =   3735
       _ExtentX        =   6588
       _ExtentY        =   926
-      Begin PhotoDemon.pdButtonToolbox cmdLayerAction 
+      Begin PhotoPaint.pdButtonToolbox cmdLayerAction 
          Height          =   510
          Index           =   0
          Left            =   0
@@ -56,7 +56,7 @@ Begin VB.Form layerpanel_Layers
          _ExtentY        =   900
          AutoToggle      =   -1  'True
       End
-      Begin PhotoDemon.pdButtonToolbox cmdLayerAction 
+      Begin PhotoPaint.pdButtonToolbox cmdLayerAction 
          Height          =   510
          Index           =   1
          Left            =   600
@@ -67,7 +67,7 @@ Begin VB.Form layerpanel_Layers
          _ExtentY        =   900
          AutoToggle      =   -1  'True
       End
-      Begin PhotoDemon.pdButtonToolbox cmdLayerAction 
+      Begin PhotoPaint.pdButtonToolbox cmdLayerAction 
          Height          =   510
          Index           =   2
          Left            =   1200
@@ -78,7 +78,7 @@ Begin VB.Form layerpanel_Layers
          _ExtentY        =   900
          AutoToggle      =   -1  'True
       End
-      Begin PhotoDemon.pdButtonToolbox cmdLayerAction 
+      Begin PhotoPaint.pdButtonToolbox cmdLayerAction 
          Height          =   510
          Index           =   3
          Left            =   1800
@@ -89,7 +89,7 @@ Begin VB.Form layerpanel_Layers
          _ExtentY        =   900
          AutoToggle      =   -1  'True
       End
-      Begin PhotoDemon.pdButtonToolbox cmdLayerAction 
+      Begin PhotoPaint.pdButtonToolbox cmdLayerAction 
          Height          =   510
          Index           =   4
          Left            =   2400
@@ -101,7 +101,7 @@ Begin VB.Form layerpanel_Layers
          AutoToggle      =   -1  'True
       End
    End
-   Begin PhotoDemon.pdDropDown cboBlendMode 
+   Begin PhotoPaint.pdDropDown cboBlendMode 
       Height          =   360
       Left            =   945
       TabIndex        =   0
@@ -110,7 +110,7 @@ Begin VB.Form layerpanel_Layers
       _ExtentX        =   4895
       _ExtentY        =   635
    End
-   Begin PhotoDemon.pdTextBox txtLayerName 
+   Begin PhotoPaint.pdTextBox txtLayerName 
       Height          =   315
       Left            =   105
       TabIndex        =   1
@@ -120,7 +120,7 @@ Begin VB.Form layerpanel_Layers
       _ExtentX        =   5741
       _ExtentY        =   556
    End
-   Begin PhotoDemon.pdLabel lblLayerSettings 
+   Begin PhotoPaint.pdLabel lblLayerSettings 
       Height          =   240
       Index           =   0
       Left            =   0
@@ -131,7 +131,7 @@ Begin VB.Form layerpanel_Layers
       Caption         =   "opacity:"
       Layout          =   2
    End
-   Begin PhotoDemon.pdSlider sltLayerOpacity 
+   Begin PhotoPaint.pdSlider sltLayerOpacity 
       CausesValidation=   0   'False
       Height          =   405
       Left            =   960
@@ -145,7 +145,7 @@ Begin VB.Form layerpanel_Layers
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdLabel lblLayerSettings 
+   Begin PhotoPaint.pdLabel lblLayerSettings 
       Height          =   240
       Index           =   1
       Left            =   0
@@ -156,7 +156,7 @@ Begin VB.Form layerpanel_Layers
       Caption         =   "blend:"
       Layout          =   2
    End
-   Begin PhotoDemon.pdLabel lblLayerSettings 
+   Begin PhotoPaint.pdLabel lblLayerSettings 
       Height          =   240
       Index           =   2
       Left            =   0
@@ -167,7 +167,7 @@ Begin VB.Form layerpanel_Layers
       Caption         =   "alpha:"
       Layout          =   2
    End
-   Begin PhotoDemon.pdDropDown cboAlphaMode 
+   Begin PhotoPaint.pdDropDown cboAlphaMode 
       Height          =   360
       Left            =   960
       TabIndex        =   3
@@ -195,7 +195,7 @@ Attribute VB_Exposed = False
 'This form is the subpanel for layer settings.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

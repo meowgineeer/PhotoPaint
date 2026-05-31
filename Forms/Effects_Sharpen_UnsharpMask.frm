@@ -24,7 +24,7 @@ Begin VB.Form FormUnsharpMask
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   777
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormUnsharpMask
       _ExtentX        =   20558
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -42,7 +42,7 @@ Begin VB.Form FormUnsharpMask
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltThreshold 
+   Begin PhotoPaint.pdSlider sltThreshold 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -53,7 +53,7 @@ Begin VB.Form FormUnsharpMask
       Caption         =   "threshold"
       Max             =   255
    End
-   Begin PhotoDemon.pdSlider sltAmount 
+   Begin PhotoPaint.pdSlider sltAmount 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -68,7 +68,7 @@ Begin VB.Form FormUnsharpMask
       NotchPosition   =   2
       NotchValueCustom=   1
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -83,7 +83,7 @@ Begin VB.Form FormUnsharpMask
       Value           =   1
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdButtonStrip btsQuality 
+   Begin PhotoPaint.pdButtonStrip btsQuality 
       Height          =   1080
       Left            =   6000
       TabIndex        =   5
@@ -119,7 +119,7 @@ Attribute VB_Exposed = False
 ' applying any action at a large radius.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

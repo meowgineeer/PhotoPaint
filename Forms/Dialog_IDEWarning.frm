@@ -25,7 +25,7 @@ Begin VB.Form dialog_IDEWarning
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   603
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdPictureBox picWarning 
+   Begin PhotoPaint.pdPictureBox picWarning 
       Height          =   615
       Left            =   330
       Top             =   240
@@ -33,7 +33,7 @@ Begin VB.Form dialog_IDEWarning
       _ExtentX        =   873
       _ExtentY        =   1085
    End
-   Begin PhotoDemon.pdButton cmdOK 
+   Begin PhotoPaint.pdButton cmdOK 
       Height          =   750
       Left            =   1125
       TabIndex        =   0
@@ -43,7 +43,7 @@ Begin VB.Form dialog_IDEWarning
       _ExtentY        =   1323
       Caption         =   "I understand the risks of running PhotoDemon in the IDE"
    End
-   Begin PhotoDemon.pdCheckBox chkRepeat 
+   Begin PhotoPaint.pdCheckBox chkRepeat 
       Height          =   300
       Left            =   1140
       TabIndex        =   1
@@ -53,7 +53,7 @@ Begin VB.Form dialog_IDEWarning
       _ExtentY        =   582
       Caption         =   "Do not display this warning again"
    End
-   Begin PhotoDemon.pdLabel lblWarning 
+   Begin PhotoPaint.pdLabel lblWarning 
       Height          =   885
       Index           =   3
       Left            =   360
@@ -65,7 +65,7 @@ Begin VB.Form dialog_IDEWarning
       ForeColor       =   4210752
       Layout          =   1
    End
-   Begin PhotoDemon.pdLabel lblWarning 
+   Begin PhotoPaint.pdLabel lblWarning 
       Height          =   765
       Index           =   2
       Left            =   360
@@ -77,7 +77,7 @@ Begin VB.Form dialog_IDEWarning
       ForeColor       =   4210752
       Layout          =   1
    End
-   Begin PhotoDemon.pdLabel lblWarning 
+   Begin PhotoPaint.pdLabel lblWarning 
       Height          =   1245
       Index           =   1
       Left            =   360
@@ -89,7 +89,7 @@ Begin VB.Form dialog_IDEWarning
       ForeColor       =   4210752
       Layout          =   1
    End
-   Begin PhotoDemon.pdLabel lblWarning 
+   Begin PhotoPaint.pdLabel lblWarning 
       Height          =   525
       Index           =   0
       Left            =   1005
@@ -120,7 +120,7 @@ Attribute VB_Exposed = False
 ' is used to warn the user of the associated risks with doing so.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

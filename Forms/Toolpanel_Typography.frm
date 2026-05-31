@@ -30,7 +30,7 @@ Begin VB.Form toolpanel_TextAdvanced
    ScaleWidth      =   1229
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   2310
       Index           =   0
       Left            =   0
@@ -39,7 +39,7 @@ Begin VB.Form toolpanel_TextAdvanced
       Width           =   7800
       _ExtentX        =   13758
       _ExtentY        =   4075
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   0
          Left            =   7350
@@ -50,7 +50,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdTextBox txtTextTool 
+      Begin PhotoPaint.pdTextBox txtTextTool 
          Height          =   1815
          Left            =   120
          TabIndex        =   3
@@ -61,7 +61,7 @@ Begin VB.Form toolpanel_TextAdvanced
          FontSize        =   9
          Multiline       =   -1  'True
       End
-      Begin PhotoDemon.pdCheckBox chkAutoOpenText 
+      Begin PhotoPaint.pdCheckBox chkAutoOpenText 
          Height          =   360
          Left            =   90
          TabIndex        =   43
@@ -72,7 +72,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Caption         =   "always open this panel for new text layers"
       End
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   3540
       Index           =   1
       Left            =   120
@@ -81,7 +81,7 @@ Begin VB.Form toolpanel_TextAdvanced
       Width           =   8415
       _ExtentX        =   11033
       _ExtentY        =   7726
-      Begin PhotoDemon.pdButtonStrip btsHinting 
+      Begin PhotoPaint.pdButtonStrip btsHinting 
          Height          =   855
          Left            =   3330
          TabIndex        =   20
@@ -92,7 +92,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Caption         =   "hinting"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   1
          Left            =   7920
@@ -103,7 +103,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSlider sldTextFontSize 
+      Begin PhotoPaint.pdSlider sldTextFontSize 
          Height          =   735
          Left            =   120
          TabIndex        =   5
@@ -120,7 +120,7 @@ Begin VB.Form toolpanel_TextAdvanced
          NotchPosition   =   2
          NotchValueCustom=   16
       End
-      Begin PhotoDemon.pdButtonToolbox btnFontStyles 
+      Begin PhotoPaint.pdButtonToolbox btnFontStyles 
          Height          =   435
          Index           =   0
          Left            =   240
@@ -131,7 +131,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentY        =   767
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdLabel lblText 
+      Begin PhotoPaint.pdLabel lblText 
          Height          =   300
          Index           =   0
          Left            =   120
@@ -142,7 +142,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Caption         =   "style"
          ForeColor       =   0
       End
-      Begin PhotoDemon.pdButtonToolbox btnFontStyles 
+      Begin PhotoPaint.pdButtonToolbox btnFontStyles 
          Height          =   435
          Index           =   1
          Left            =   720
@@ -153,7 +153,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentY        =   767
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdButtonToolbox btnFontStyles 
+      Begin PhotoPaint.pdButtonToolbox btnFontStyles 
          Height          =   435
          Index           =   2
          Left            =   1200
@@ -164,7 +164,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentY        =   767
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdButtonToolbox btnFontStyles 
+      Begin PhotoPaint.pdButtonToolbox btnFontStyles 
          Height          =   435
          Index           =   3
          Left            =   1680
@@ -175,7 +175,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentY        =   767
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdDropDown cboTextRenderingHint 
+      Begin PhotoPaint.pdDropDown cboTextRenderingHint 
          Height          =   735
          Left            =   3330
          TabIndex        =   10
@@ -186,7 +186,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Caption         =   "antialiasing"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdSlider sltCharSpacing 
+      Begin PhotoPaint.pdSlider sltCharSpacing 
          CausesValidation=   0   'False
          Height          =   735
          Left            =   120
@@ -201,7 +201,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Max             =   1
          SigDigits       =   3
       End
-      Begin PhotoDemon.pdSlider sltCharOrientation 
+      Begin PhotoPaint.pdSlider sltCharOrientation 
          CausesValidation=   0   'False
          Height          =   735
          Left            =   3330
@@ -216,7 +216,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Max             =   360
          SigDigits       =   1
       End
-      Begin PhotoDemon.pdDropDown cboCharCase 
+      Begin PhotoPaint.pdDropDown cboCharCase 
          Height          =   735
          Left            =   3330
          TabIndex        =   15
@@ -227,7 +227,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Caption         =   "remap"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdDropDown cboCharMirror 
+      Begin PhotoPaint.pdDropDown cboCharMirror 
          Height          =   735
          Left            =   5880
          TabIndex        =   16
@@ -238,7 +238,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Caption         =   "mirror"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdLabel lblText 
+      Begin PhotoPaint.pdLabel lblText 
          Height          =   270
          Index           =   3
          Left            =   5880
@@ -249,7 +249,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Caption         =   "jitter (x, y)"
          ForeColor       =   0
       End
-      Begin PhotoDemon.pdSpinner tudJitter 
+      Begin PhotoPaint.pdSpinner tudJitter 
          Height          =   345
          Index           =   1
          Left            =   7160
@@ -261,7 +261,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Max             =   100
          SigDigits       =   1
       End
-      Begin PhotoDemon.pdSpinner tudJitter 
+      Begin PhotoPaint.pdSpinner tudJitter 
          Height          =   345
          Index           =   0
          Left            =   5940
@@ -273,7 +273,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Max             =   100
          SigDigits       =   1
       End
-      Begin PhotoDemon.pdSlider sltCharInflation 
+      Begin PhotoPaint.pdSlider sltCharInflation 
          CausesValidation=   0   'False
          Height          =   855
          Left            =   5880
@@ -288,7 +288,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Max             =   20
          SigDigits       =   1
       End
-      Begin PhotoDemon.pdButtonStrip btsStretch 
+      Begin PhotoPaint.pdButtonStrip btsStretch 
          Height          =   855
          Left            =   120
          TabIndex        =   44
@@ -300,7 +300,7 @@ Begin VB.Form toolpanel_TextAdvanced
          FontSizeCaption =   10
       End
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   2625
       Index           =   3
       Left            =   8640
@@ -309,7 +309,7 @@ Begin VB.Form toolpanel_TextAdvanced
       Width           =   6255
       _ExtentX        =   11033
       _ExtentY        =   4630
-      Begin PhotoDemon.pdSlider sldLineSpacing 
+      Begin PhotoPaint.pdSlider sldLineSpacing 
          Height          =   735
          Left            =   120
          TabIndex        =   35
@@ -322,7 +322,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Min             =   -100
          Max             =   1000
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   3
          Left            =   5820
@@ -333,7 +333,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdDropDown cboWordWrap 
+      Begin PhotoPaint.pdDropDown cboWordWrap 
          Height          =   735
          Left            =   120
          TabIndex        =   36
@@ -344,7 +344,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Caption         =   "line wrap"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdLabel lblText 
+      Begin PhotoPaint.pdLabel lblText 
          Height          =   240
          Index           =   1
          Left            =   3240
@@ -355,7 +355,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Caption         =   "horizontal padding"
          ForeColor       =   0
       End
-      Begin PhotoDemon.pdLabel lblText 
+      Begin PhotoPaint.pdLabel lblText 
          Height          =   240
          Index           =   2
          Left            =   3240
@@ -366,7 +366,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Caption         =   "vertical padding"
          ForeColor       =   0
       End
-      Begin PhotoDemon.pdSpinner tudMargin 
+      Begin PhotoPaint.pdSpinner tudMargin 
          Height          =   345
          Index           =   0
          Left            =   3360
@@ -378,7 +378,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Min             =   -1000
          Max             =   1000
       End
-      Begin PhotoDemon.pdSpinner tudMargin 
+      Begin PhotoPaint.pdSpinner tudMargin 
          Height          =   345
          Index           =   1
          Left            =   4800
@@ -390,7 +390,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Min             =   -1000
          Max             =   1000
       End
-      Begin PhotoDemon.pdSpinner tudMargin 
+      Begin PhotoPaint.pdSpinner tudMargin 
          Height          =   345
          Index           =   2
          Left            =   3360
@@ -402,7 +402,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Min             =   -1000
          Max             =   1000
       End
-      Begin PhotoDemon.pdSpinner tudMargin 
+      Begin PhotoPaint.pdSpinner tudMargin 
          Height          =   345
          Index           =   3
          Left            =   4800
@@ -414,7 +414,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Min             =   -1000
          Max             =   1000
       End
-      Begin PhotoDemon.pdButtonStrip btsHAlignJustify 
+      Begin PhotoPaint.pdButtonStrip btsHAlignJustify 
          Height          =   435
          Left            =   150
          TabIndex        =   45
@@ -424,7 +424,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentY        =   767
          ColorScheme     =   1
       End
-      Begin PhotoDemon.pdLabel lblText 
+      Begin PhotoPaint.pdLabel lblText 
          Height          =   240
          Index           =   4
          Left            =   150
@@ -436,7 +436,7 @@ Begin VB.Form toolpanel_TextAdvanced
          ForeColor       =   0
       End
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   3090
       Index           =   2
       Left            =   8400
@@ -445,7 +445,7 @@ Begin VB.Form toolpanel_TextAdvanced
       Width           =   6375
       _ExtentX        =   11245
       _ExtentY        =   5450
-      Begin PhotoDemon.pdCheckBox chkFillFirst 
+      Begin PhotoPaint.pdCheckBox chkFillFirst 
          Height          =   375
          Left            =   120
          TabIndex        =   46
@@ -455,7 +455,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentY        =   661
          Caption         =   "outline on top"
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   2
          Left            =   5880
@@ -466,7 +466,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdBrushSelector bsText 
+      Begin PhotoPaint.pdBrushSelector bsText 
          Height          =   855
          Left            =   360
          TabIndex        =   23
@@ -475,7 +475,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentX        =   3625
          _ExtentY        =   1508
       End
-      Begin PhotoDemon.pdCheckBox chkOutlineText 
+      Begin PhotoPaint.pdCheckBox chkOutlineText 
          Height          =   330
          Left            =   120
          TabIndex        =   24
@@ -486,7 +486,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Caption         =   "outline text"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdPenSelector psText 
+      Begin PhotoPaint.pdPenSelector psText 
          Height          =   855
          Left            =   360
          TabIndex        =   25
@@ -495,7 +495,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentX        =   4260
          _ExtentY        =   1508
       End
-      Begin PhotoDemon.pdCheckBox chkBackground 
+      Begin PhotoPaint.pdCheckBox chkBackground 
          Height          =   330
          Left            =   3240
          TabIndex        =   26
@@ -506,7 +506,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Caption         =   "fill background"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdBrushSelector bsTextBackground 
+      Begin PhotoPaint.pdBrushSelector bsTextBackground 
          Height          =   855
          Left            =   3480
          TabIndex        =   27
@@ -515,7 +515,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentX        =   3625
          _ExtentY        =   1508
       End
-      Begin PhotoDemon.pdPenSelector psTextBackground 
+      Begin PhotoPaint.pdPenSelector psTextBackground 
          Height          =   855
          Left            =   3480
          TabIndex        =   28
@@ -524,7 +524,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentX        =   3625
          _ExtentY        =   1508
       End
-      Begin PhotoDemon.pdCheckBox chkBackgroundBorder 
+      Begin PhotoPaint.pdCheckBox chkBackgroundBorder 
          Height          =   330
          Left            =   3240
          TabIndex        =   29
@@ -535,7 +535,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Caption         =   "outline background"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chkFillText 
+      Begin PhotoPaint.pdCheckBox chkFillText 
          Height          =   330
          Left            =   120
          TabIndex        =   30
@@ -546,7 +546,7 @@ Begin VB.Form toolpanel_TextAdvanced
          Caption         =   "fill text"
       End
    End
-   Begin PhotoDemon.pdHyperlink hypEditText 
+   Begin PhotoPaint.pdHyperlink hypEditText 
       Height          =   375
       Left            =   0
       TabIndex        =   31
@@ -558,7 +558,7 @@ Begin VB.Form toolpanel_TextAdvanced
       Caption         =   "click to edit text"
       RaiseClickEvent =   -1  'True
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   0
       Left            =   0
@@ -570,7 +570,7 @@ Begin VB.Form toolpanel_TextAdvanced
       Caption         =   "edit text"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   1
       Left            =   2400
@@ -582,7 +582,7 @@ Begin VB.Form toolpanel_TextAdvanced
       Caption         =   "font"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdDropDownFont cboTextFontFace 
+   Begin PhotoPaint.pdDropDownFont cboTextFontFace 
       Height          =   375
       Left            =   2520
       TabIndex        =   12
@@ -591,7 +591,7 @@ Begin VB.Form toolpanel_TextAdvanced
       _ExtentX        =   5106
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   2
       Left            =   5640
@@ -603,7 +603,7 @@ Begin VB.Form toolpanel_TextAdvanced
       Caption         =   "fill and outline"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdHyperlink hypEditStyles 
+   Begin PhotoPaint.pdHyperlink hypEditStyles 
       Height          =   375
       Left            =   5640
       TabIndex        =   41
@@ -615,7 +615,7 @@ Begin VB.Form toolpanel_TextAdvanced
       Caption         =   "click to edit"
       RaiseClickEvent =   -1  'True
    End
-   Begin PhotoDemon.pdButtonStrip btsHAlignment 
+   Begin PhotoPaint.pdButtonStrip btsHAlignment 
       Height          =   435
       Left            =   7950
       TabIndex        =   42
@@ -625,7 +625,7 @@ Begin VB.Form toolpanel_TextAdvanced
       _ExtentY        =   767
       ColorScheme     =   1
    End
-   Begin PhotoDemon.pdButtonStrip btsVAlignment 
+   Begin PhotoPaint.pdButtonStrip btsVAlignment 
       Height          =   435
       Left            =   9990
       TabIndex        =   32
@@ -635,7 +635,7 @@ Begin VB.Form toolpanel_TextAdvanced
       _ExtentY        =   767
       ColorScheme     =   1
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   3
       Left            =   7920
@@ -647,7 +647,7 @@ Begin VB.Form toolpanel_TextAdvanced
       Caption         =   "alignment"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer picConvertLayer 
+   Begin PhotoPaint.pdContainer picConvertLayer 
       Height          =   1695
       Left            =   0
       Top             =   5040
@@ -655,7 +655,7 @@ Begin VB.Form toolpanel_TextAdvanced
       Width           =   11055
       _ExtentX        =   23945
       _ExtentY        =   2990
-      Begin PhotoDemon.pdButton cmdConvertLayer 
+      Begin PhotoPaint.pdButton cmdConvertLayer 
          Height          =   615
          Left            =   120
          TabIndex        =   0
@@ -665,7 +665,7 @@ Begin VB.Form toolpanel_TextAdvanced
          _ExtentY        =   1085
          Caption         =   "yes"
       End
-      Begin PhotoDemon.pdLabel lblConvertLayer 
+      Begin PhotoPaint.pdLabel lblConvertLayer 
          Height          =   735
          Left            =   5280
          Top             =   120
@@ -693,7 +693,7 @@ Attribute VB_Exposed = False
 'This form includes all user-editable settings for PD's Advanced Typography text tool.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -24,7 +24,7 @@ Begin VB.Form FormShear
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   783
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormShear
       _ExtentX        =   20717
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -43,7 +43,7 @@ Begin VB.Form FormShear
       _ExtentY        =   9922
       DisableZoomPan  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sltAngleX 
+   Begin PhotoPaint.pdSlider sltAngleX 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -56,7 +56,7 @@ Begin VB.Form FormShear
       Max             =   85
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSlider sltAngleY 
+   Begin PhotoPaint.pdSlider sltAngleY 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -69,7 +69,7 @@ Begin VB.Form FormShear
       Max             =   85
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSlider sltQuality 
+   Begin PhotoPaint.pdSlider sltQuality 
       Height          =   705
       Left            =   6000
       TabIndex        =   5
@@ -84,7 +84,7 @@ Begin VB.Form FormShear
       NotchPosition   =   2
       NotchValueCustom=   2
    End
-   Begin PhotoDemon.pdDropDown cboEdges 
+   Begin PhotoPaint.pdDropDown cboEdges 
       Height          =   735
       Left            =   6000
       TabIndex        =   2
@@ -114,7 +114,7 @@ Attribute VB_Exposed = False
 ' at an Image level, and it will provide the ability to resize the output to contain the entire sheared image.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -24,7 +24,7 @@ Begin VB.Form FormColorTemp
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   822
-   Begin PhotoDemon.pdButtonStrip btsMethod 
+   Begin PhotoPaint.pdButtonStrip btsMethod 
       Height          =   975
       Left            =   5880
       TabIndex        =   2
@@ -34,7 +34,7 @@ Begin VB.Form FormColorTemp
       _ExtentY        =   1720
       Caption         =   "method"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -43,7 +43,7 @@ Begin VB.Form FormColorTemp
       _ExtentX        =   21749
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -52,7 +52,7 @@ Begin VB.Form FormColorTemp
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4455
       Index           =   0
       Left            =   5880
@@ -60,7 +60,7 @@ Begin VB.Form FormColorTemp
       Width           =   6255
       _ExtentX        =   11033
       _ExtentY        =   7858
-      Begin PhotoDemon.pdSlider sldTempBasic 
+      Begin PhotoPaint.pdSlider sldTempBasic 
          Height          =   705
          Left            =   120
          TabIndex        =   3
@@ -73,7 +73,7 @@ Begin VB.Form FormColorTemp
          Max             =   100
          SliderTrackStyle=   3
       End
-      Begin PhotoDemon.pdLabel lblCool 
+      Begin PhotoPaint.pdLabel lblCool 
          Height          =   435
          Index           =   1
          Left            =   2760
@@ -88,7 +88,7 @@ Begin VB.Form FormColorTemp
          ForeColor       =   4210752
          Layout          =   1
       End
-      Begin PhotoDemon.pdLabel lblWarm 
+      Begin PhotoPaint.pdLabel lblWarm 
          Height          =   435
          Index           =   1
          Left            =   240
@@ -103,7 +103,7 @@ Begin VB.Form FormColorTemp
          Layout          =   1
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4455
       Index           =   1
       Left            =   5880
@@ -111,7 +111,7 @@ Begin VB.Form FormColorTemp
       Width           =   6255
       _ExtentX        =   11033
       _ExtentY        =   7858
-      Begin PhotoDemon.pdSlider sltStrength 
+      Begin PhotoPaint.pdSlider sltStrength 
          Height          =   705
          Left            =   120
          TabIndex        =   5
@@ -126,7 +126,7 @@ Begin VB.Form FormColorTemp
          NotchPosition   =   2
          NotchValueCustom=   50
       End
-      Begin PhotoDemon.pdSlider sltTemperature 
+      Begin PhotoPaint.pdSlider sltTemperature 
          Height          =   705
          Left            =   120
          TabIndex        =   4
@@ -141,7 +141,7 @@ Begin VB.Form FormColorTemp
          Value           =   5500
          DefaultValue    =   5500
       End
-      Begin PhotoDemon.pdLabel lblCool 
+      Begin PhotoPaint.pdLabel lblCool 
          Height          =   435
          Index           =   0
          Left            =   2760
@@ -156,7 +156,7 @@ Begin VB.Form FormColorTemp
          ForeColor       =   4210752
          Layout          =   1
       End
-      Begin PhotoDemon.pdLabel lblWarm 
+      Begin PhotoPaint.pdLabel lblWarm 
          Height          =   435
          Index           =   0
          Left            =   360
@@ -205,7 +205,7 @@ Attribute VB_Exposed = False
 ' https://tannerhelland.com/2012/09/18/convert-temperature-rgb-algorithm-code.html
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

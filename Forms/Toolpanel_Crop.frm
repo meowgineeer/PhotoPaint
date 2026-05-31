@@ -30,7 +30,7 @@ Begin VB.Form toolpanel_Crop
    ScaleWidth      =   812
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdButtonToolbox cmdAspectSwap 
+   Begin PhotoPaint.pdButtonToolbox cmdAspectSwap 
       Height          =   345
       Left            =   7320
       TabIndex        =   16
@@ -40,7 +40,7 @@ Begin VB.Form toolpanel_Crop
       _ExtentY        =   609
       AutoToggle      =   -1  'True
    End
-   Begin PhotoDemon.pdButton cmdCommit 
+   Begin PhotoPaint.pdButton cmdCommit 
       Height          =   375
       Index           =   0
       Left            =   9600
@@ -50,7 +50,7 @@ Begin VB.Form toolpanel_Crop
       _ExtentX        =   1058
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   1455
       Index           =   1
       Left            =   4200
@@ -59,7 +59,7 @@ Begin VB.Form toolpanel_Crop
       Width           =   3975
       _ExtentX        =   7011
       _ExtentY        =   2566
-      Begin PhotoDemon.pdDropDown ddPreset 
+      Begin PhotoPaint.pdDropDown ddPreset 
          Height          =   645
          Index           =   1
          Left            =   120
@@ -71,7 +71,7 @@ Begin VB.Form toolpanel_Crop
          Caption         =   "presets"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdButtonStrip btsOrientation 
+      Begin PhotoPaint.pdButtonStrip btsOrientation 
          Height          =   495
          Index           =   1
          Left            =   2760
@@ -81,7 +81,7 @@ Begin VB.Form toolpanel_Crop
          _ExtentX        =   1931
          _ExtentY        =   873
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   1
          Left            =   3480
@@ -93,7 +93,7 @@ Begin VB.Form toolpanel_Crop
          StickyToggle    =   -1  'True
       End
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   3975
       Index           =   2
       Left            =   8400
@@ -101,7 +101,7 @@ Begin VB.Form toolpanel_Crop
       Width           =   3705
       _ExtentX        =   6535
       _ExtentY        =   5741
-      Begin PhotoDemon.pdDropDown ddGuides 
+      Begin PhotoPaint.pdDropDown ddGuides 
          Height          =   735
          Left            =   120
          TabIndex        =   29
@@ -112,7 +112,7 @@ Begin VB.Form toolpanel_Crop
          Caption         =   "guides"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdButtonStrip btsTarget 
+      Begin PhotoPaint.pdButtonStrip btsTarget 
          Height          =   855
          Left            =   120
          TabIndex        =   21
@@ -123,7 +123,7 @@ Begin VB.Form toolpanel_Crop
          Caption         =   "target"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdSlider sldHighlight 
+      Begin PhotoPaint.pdSlider sldHighlight 
          Height          =   375
          Left            =   1140
          TabIndex        =   19
@@ -136,7 +136,7 @@ Begin VB.Form toolpanel_Crop
          Value           =   50
          DefaultValue    =   50
       End
-      Begin PhotoDemon.pdColorSelector clrHighlight 
+      Begin PhotoPaint.pdColorSelector clrHighlight 
          Height          =   375
          Left            =   480
          TabIndex        =   18
@@ -147,7 +147,7 @@ Begin VB.Form toolpanel_Crop
          curColor        =   0
          ShowMainWindowColor=   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chkHighlight 
+      Begin PhotoPaint.pdCheckBox chkHighlight 
          Height          =   375
          Left            =   120
          TabIndex        =   17
@@ -157,7 +157,7 @@ Begin VB.Form toolpanel_Crop
          _ExtentY        =   661
          Caption         =   "highlight crop area"
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   2
          Left            =   3240
@@ -168,7 +168,7 @@ Begin VB.Form toolpanel_Crop
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdCheckBox chkDelete 
+      Begin PhotoPaint.pdCheckBox chkDelete 
          Height          =   375
          Left            =   120
          TabIndex        =   20
@@ -178,7 +178,7 @@ Begin VB.Form toolpanel_Crop
          _ExtentY        =   661
          Caption         =   "delete cropped pixels"
       End
-      Begin PhotoDemon.pdCheckBox chkAllowGrowing 
+      Begin PhotoPaint.pdCheckBox chkAllowGrowing 
          Height          =   375
          Left            =   120
          TabIndex        =   22
@@ -189,7 +189,7 @@ Begin VB.Form toolpanel_Crop
          Caption         =   "allow enlarging"
       End
    End
-   Begin PhotoDemon.pdSpinner tudCrop 
+   Begin PhotoPaint.pdSpinner tudCrop 
       Height          =   345
       Index           =   0
       Left            =   120
@@ -202,7 +202,7 @@ Begin VB.Form toolpanel_Crop
       Max             =   32000
       ShowResetButton =   0   'False
    End
-   Begin PhotoDemon.pdSpinner tudCrop 
+   Begin PhotoPaint.pdSpinner tudCrop 
       Height          =   345
       Index           =   1
       Left            =   1320
@@ -215,7 +215,7 @@ Begin VB.Form toolpanel_Crop
       Max             =   32000
       ShowResetButton =   0   'False
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   375
       Index           =   1
       Left            =   6120
@@ -227,7 +227,7 @@ Begin VB.Form toolpanel_Crop
       Caption         =   "aspect ratio"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdSpinner tudCrop 
+   Begin PhotoPaint.pdSpinner tudCrop 
       Height          =   345
       Index           =   2
       Left            =   2820
@@ -242,7 +242,7 @@ Begin VB.Form toolpanel_Crop
       Value           =   1
       ShowResetButton =   0   'False
    End
-   Begin PhotoDemon.pdSpinner tudCrop 
+   Begin PhotoPaint.pdSpinner tudCrop 
       Height          =   345
       Index           =   3
       Left            =   4380
@@ -257,7 +257,7 @@ Begin VB.Form toolpanel_Crop
       Value           =   1
       ShowResetButton =   0   'False
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   375
       Index           =   2
       Left            =   9480
@@ -269,7 +269,7 @@ Begin VB.Form toolpanel_Crop
       Caption         =   "apply"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdLabel lblOptions 
+   Begin PhotoPaint.pdLabel lblOptions 
       Height          =   240
       Index           =   2
       Left            =   30
@@ -279,7 +279,7 @@ Begin VB.Form toolpanel_Crop
       _ExtentY        =   423
       Caption         =   "position (x, y)"
    End
-   Begin PhotoDemon.pdButtonToolbox cmdLock 
+   Begin PhotoPaint.pdButtonToolbox cmdLock 
       Height          =   360
       Index           =   2
       Left            =   8760
@@ -290,7 +290,7 @@ Begin VB.Form toolpanel_Crop
       _ExtentY        =   635
       StickyToggle    =   -1  'True
    End
-   Begin PhotoDemon.pdSpinner tudCrop 
+   Begin PhotoPaint.pdSpinner tudCrop 
       Height          =   345
       Index           =   4
       Left            =   6240
@@ -305,7 +305,7 @@ Begin VB.Form toolpanel_Crop
       Value           =   1
       ShowResetButton =   0   'False
    End
-   Begin PhotoDemon.pdSpinner tudCrop 
+   Begin PhotoPaint.pdSpinner tudCrop 
       Height          =   345
       Index           =   5
       Left            =   7680
@@ -320,7 +320,7 @@ Begin VB.Form toolpanel_Crop
       Value           =   1
       ShowResetButton =   0   'False
    End
-   Begin PhotoDemon.pdButtonToolbox cmdLock 
+   Begin PhotoPaint.pdButtonToolbox cmdLock 
       Height          =   360
       Index           =   1
       Left            =   5460
@@ -331,7 +331,7 @@ Begin VB.Form toolpanel_Crop
       _ExtentY        =   635
       StickyToggle    =   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdLock 
+   Begin PhotoPaint.pdButtonToolbox cmdLock 
       Height          =   360
       Index           =   0
       Left            =   3900
@@ -342,7 +342,7 @@ Begin VB.Form toolpanel_Crop
       _ExtentY        =   635
       StickyToggle    =   -1  'True
    End
-   Begin PhotoDemon.pdButton cmdCommit 
+   Begin PhotoPaint.pdButton cmdCommit 
       Height          =   375
       Index           =   1
       Left            =   10320
@@ -352,7 +352,7 @@ Begin VB.Form toolpanel_Crop
       _ExtentX        =   1058
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   375
       Index           =   0
       Left            =   2760
@@ -364,7 +364,7 @@ Begin VB.Form toolpanel_Crop
       Caption         =   "size (w, h)"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   1695
       Index           =   0
       Left            =   0
@@ -373,7 +373,7 @@ Begin VB.Form toolpanel_Crop
       Width           =   3975
       _ExtentX        =   7011
       _ExtentY        =   2990
-      Begin PhotoDemon.pdSlider sldDPI 
+      Begin PhotoPaint.pdSlider sldDPI 
          Height          =   615
          Left            =   120
          TabIndex        =   28
@@ -391,7 +391,7 @@ Begin VB.Form toolpanel_Crop
          NotchPosition   =   2
          NotchValueCustom=   300
       End
-      Begin PhotoDemon.pdDropDown ddPreset 
+      Begin PhotoPaint.pdDropDown ddPreset 
          Height          =   645
          Index           =   0
          Left            =   120
@@ -403,7 +403,7 @@ Begin VB.Form toolpanel_Crop
          Caption         =   "presets"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdButtonStrip btsOrientation 
+      Begin PhotoPaint.pdButtonStrip btsOrientation 
          Height          =   495
          Index           =   0
          Left            =   2760
@@ -413,7 +413,7 @@ Begin VB.Form toolpanel_Crop
          _ExtentX        =   1931
          _ExtentY        =   873
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   0
          Left            =   3480
@@ -441,7 +441,7 @@ Attribute VB_Exposed = False
 'This form includes all user-editable settings for the on-canvas Crop tool.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

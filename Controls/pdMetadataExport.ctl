@@ -21,7 +21,7 @@ Begin VB.UserControl pdMetadataExport
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   350
    ToolboxBitmap   =   "pdMetadataExport.ctx":0000
-   Begin PhotoDemon.pdLabel lblInfo 
+   Begin PhotoPaint.pdLabel lblInfo 
       Height          =   375
       Index           =   0
       Left            =   0
@@ -32,7 +32,7 @@ Begin VB.UserControl pdMetadataExport
       Caption         =   "general metadata settings"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   450
       Left            =   0
       Top             =   90
@@ -43,7 +43,7 @@ Begin VB.UserControl pdMetadataExport
       FontBold        =   -1  'True
       FontSize        =   12
    End
-   Begin PhotoDemon.pdHyperlink hplReviewMetadata 
+   Begin PhotoPaint.pdHyperlink hplReviewMetadata 
       Height          =   375
       Left            =   120
       TabIndex        =   3
@@ -54,7 +54,7 @@ Begin VB.UserControl pdMetadataExport
       Caption         =   "review metadata before saving..."
       RaiseClickEvent =   -1  'True
    End
-   Begin PhotoDemon.pdCheckBox chkMetadata 
+   Begin PhotoPaint.pdCheckBox chkMetadata 
       Height          =   375
       Left            =   120
       TabIndex        =   0
@@ -64,7 +64,7 @@ Begin VB.UserControl pdMetadataExport
       _ExtentY        =   661
       Caption         =   "copy all relevant metadata to the new file"
    End
-   Begin PhotoDemon.pdCheckBox chkAnonymize 
+   Begin PhotoPaint.pdCheckBox chkAnonymize 
       Height          =   375
       Left            =   120
       TabIndex        =   1
@@ -74,7 +74,7 @@ Begin VB.UserControl pdMetadataExport
       _ExtentY        =   661
       Caption         =   "erase tags that might be personal (including GPS and location)"
    End
-   Begin PhotoDemon.pdLabel lblInfo 
+   Begin PhotoPaint.pdLabel lblInfo 
       Height          =   375
       Index           =   1
       Left            =   0
@@ -86,7 +86,7 @@ Begin VB.UserControl pdMetadataExport
       Caption         =   ""
       FontSize        =   12
    End
-   Begin PhotoDemon.pdCheckBox chkThumbnail 
+   Begin PhotoPaint.pdCheckBox chkThumbnail 
       Height          =   375
       Left            =   120
       TabIndex        =   2
@@ -114,7 +114,7 @@ Attribute VB_Exposed = False
 'This simple "control" is used by various export dialog to expose settings related to metadata handling.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

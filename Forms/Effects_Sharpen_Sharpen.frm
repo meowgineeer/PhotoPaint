@@ -24,7 +24,7 @@ Begin VB.Form FormSharpen
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   772
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormSharpen
       _ExtentX        =   20426
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltStrength 
+   Begin PhotoPaint.pdSlider sltStrength 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -47,7 +47,7 @@ Begin VB.Form FormSharpen
       Value           =   0.01
       DefaultValue    =   0.01
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -77,7 +77,7 @@ Attribute VB_Exposed = False
 ' generic convolution tasks.  All this dialog does is set up the kernel, then pass it to that function.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -24,7 +24,7 @@ Begin VB.Form FormCustomFilter
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   849
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormCustomFilter
       _ExtentX        =   22463
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   0
       Left            =   6000
@@ -46,7 +46,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdCheckBox chkNormalize 
+   Begin PhotoPaint.pdCheckBox chkNormalize 
       Height          =   330
       Left            =   6000
       TabIndex        =   26
@@ -56,7 +56,7 @@ Begin VB.Form FormCustomFilter
       _ExtentY        =   582
       Caption         =   "automatically normalize divisor and offset"
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   29
@@ -65,7 +65,7 @@ Begin VB.Form FormCustomFilter
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   1
       Left            =   7320
@@ -78,7 +78,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   2
       Left            =   8640
@@ -91,7 +91,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   3
       Left            =   9960
@@ -104,7 +104,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   4
       Left            =   11280
@@ -117,7 +117,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   5
       Left            =   6000
@@ -130,7 +130,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   6
       Left            =   7320
@@ -143,7 +143,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   7
       Left            =   8640
@@ -156,7 +156,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   8
       Left            =   9960
@@ -169,7 +169,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   9
       Left            =   11280
@@ -182,7 +182,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   10
       Left            =   6000
@@ -195,7 +195,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   11
       Left            =   7320
@@ -208,7 +208,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   12
       Left            =   8640
@@ -223,7 +223,7 @@ Begin VB.Form FormCustomFilter
       SigDigits       =   1
       Value           =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   13
       Left            =   9960
@@ -236,7 +236,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   14
       Left            =   11280
@@ -249,7 +249,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   15
       Left            =   6000
@@ -262,7 +262,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   16
       Left            =   7320
@@ -275,7 +275,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   17
       Left            =   8640
@@ -288,7 +288,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   18
       Left            =   9960
@@ -301,7 +301,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   19
       Left            =   11280
@@ -314,7 +314,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   20
       Left            =   6000
@@ -327,7 +327,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   21
       Left            =   7320
@@ -340,7 +340,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   22
       Left            =   8640
@@ -353,7 +353,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   23
       Left            =   9960
@@ -366,7 +366,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudF 
+   Begin PhotoPaint.pdSpinner tudF 
       Height          =   345
       Index           =   24
       Left            =   11280
@@ -379,7 +379,7 @@ Begin VB.Form FormCustomFilter
       Max             =   1000
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSpinner tudDivisor 
+   Begin PhotoPaint.pdSpinner tudDivisor 
       Height          =   345
       Left            =   7560
       TabIndex        =   27
@@ -393,7 +393,7 @@ Begin VB.Form FormCustomFilter
       SigDigits       =   1
       Value           =   1
    End
-   Begin PhotoDemon.pdSpinner tudOffset 
+   Begin PhotoPaint.pdSpinner tudOffset 
       Height          =   345
       Left            =   9600
       TabIndex        =   28
@@ -404,7 +404,7 @@ Begin VB.Form FormCustomFilter
       Min             =   -255
       Max             =   255
    End
-   Begin PhotoDemon.pdLabel lblOffset 
+   Begin PhotoPaint.pdLabel lblOffset 
       Height          =   285
       Left            =   9480
       Top             =   4080
@@ -415,7 +415,7 @@ Begin VB.Form FormCustomFilter
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblDivisor 
+   Begin PhotoPaint.pdLabel lblDivisor 
       Height          =   285
       Left            =   7320
       Top             =   4095
@@ -426,7 +426,7 @@ Begin VB.Form FormCustomFilter
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblConvolution 
+   Begin PhotoPaint.pdLabel lblConvolution 
       Height          =   285
       Left            =   6000
       Top             =   600
@@ -454,7 +454,7 @@ Attribute VB_Exposed = False
 ' a separate "ApplyConvolutionFilter" function; this dialog simply serves as a user-facing interface to that.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

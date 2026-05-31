@@ -26,7 +26,7 @@ Begin VB.Form FormBatchWizard
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   880
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdButton cmdPrevious 
+   Begin PhotoPaint.pdButton cmdPrevious 
       Height          =   615
       Left            =   6060
       TabIndex        =   0
@@ -37,7 +37,7 @@ Begin VB.Form FormBatchWizard
       Caption         =   "Previous"
       Enabled         =   0   'False
    End
-   Begin PhotoDemon.pdButton cmdNext 
+   Begin PhotoPaint.pdButton cmdNext 
       Height          =   615
       Left            =   8820
       TabIndex        =   1
@@ -47,7 +47,7 @@ Begin VB.Form FormBatchWizard
       _ExtentY        =   1085
       Caption         =   "Next"
    End
-   Begin PhotoDemon.pdButton cmdCancel 
+   Begin PhotoPaint.pdButton cmdCancel 
       Height          =   615
       Left            =   11760
       TabIndex        =   2
@@ -57,7 +57,7 @@ Begin VB.Form FormBatchWizard
       _ExtentY        =   1085
       Caption         =   "Cancel"
    End
-   Begin PhotoDemon.pdLabel lblExplanation 
+   Begin PhotoPaint.pdLabel lblExplanation 
       Height          =   6705
       Index           =   0
       Left            =   120
@@ -69,7 +69,7 @@ Begin VB.Form FormBatchWizard
       ForeColor       =   4210752
       Layout          =   1
    End
-   Begin PhotoDemon.pdLabel lblWizardTitle 
+   Begin PhotoPaint.pdLabel lblWizardTitle 
       Height          =   405
       Left            =   120
       Top             =   120
@@ -81,7 +81,7 @@ Begin VB.Form FormBatchWizard
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   6780
       Index           =   2
       Left            =   3300
@@ -89,7 +89,7 @@ Begin VB.Form FormBatchWizard
       Width           =   9855
       _ExtentX        =   17383
       _ExtentY        =   11959
-      Begin PhotoDemon.pdSpinner spnVectorImport 
+      Begin PhotoPaint.pdSpinner spnVectorImport 
          Height          =   375
          Index           =   0
          Left            =   960
@@ -103,7 +103,7 @@ Begin VB.Form FormBatchWizard
          Max             =   32000
          Value           =   1920
       End
-      Begin PhotoDemon.pdButtonStrip btsVectorImport 
+      Begin PhotoPaint.pdButtonStrip btsVectorImport 
          Height          =   975
          Left            =   720
          TabIndex        =   44
@@ -114,7 +114,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "when importing vector images"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   375
          Index           =   0
          Left            =   120
@@ -125,7 +125,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "(optional) advanced import settings"
          FontSize        =   12
       End
-      Begin PhotoDemon.pdCheckBox chkExportAnimation 
+      Begin PhotoPaint.pdCheckBox chkExportAnimation 
          Height          =   375
          Left            =   720
          TabIndex        =   42
@@ -135,7 +135,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   661
          Caption         =   "auto-detect animated images"
       End
-      Begin PhotoDemon.pdButton cmdExportSettings 
+      Begin PhotoPaint.pdButton cmdExportSettings 
          Height          =   735
          Left            =   720
          TabIndex        =   24
@@ -145,7 +145,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   1296
          Caption         =   "set export settings for this format..."
       End
-      Begin PhotoDemon.pdDropDown cmbOutputFormat 
+      Begin PhotoPaint.pdDropDown cmbOutputFormat 
          Height          =   375
          Left            =   720
          TabIndex        =   32
@@ -154,7 +154,7 @@ Begin VB.Form FormBatchWizard
          _ExtentX        =   15690
          _ExtentY        =   661
       End
-      Begin PhotoDemon.pdRadioButton optFormat 
+      Begin PhotoPaint.pdRadioButton optFormat 
          Height          =   375
          Index           =   0
          Left            =   120
@@ -166,7 +166,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "keep images in their original format"
          Value           =   -1  'True
       End
-      Begin PhotoDemon.pdRadioButton optFormat 
+      Begin PhotoPaint.pdRadioButton optFormat 
          Height          =   375
          Index           =   1
          Left            =   120
@@ -177,7 +177,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   661
          Caption         =   "convert all images to a new format"
       End
-      Begin PhotoDemon.pdLabel lblExplanationFormat 
+      Begin PhotoPaint.pdLabel lblExplanationFormat 
          Height          =   600
          Left            =   720
          Top             =   420
@@ -188,7 +188,7 @@ Begin VB.Form FormBatchWizard
          ForeColor       =   4210752
          Layout          =   1
       End
-      Begin PhotoDemon.pdButton cmdExportSettingsAnimated 
+      Begin PhotoPaint.pdButton cmdExportSettingsAnimated 
          Height          =   735
          Left            =   720
          TabIndex        =   41
@@ -198,7 +198,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   1296
          Caption         =   "set export settings for animated images..."
       End
-      Begin PhotoDemon.pdLabel lblVectorImport 
+      Begin PhotoPaint.pdLabel lblVectorImport 
          Height          =   300
          Index           =   0
          Left            =   840
@@ -210,7 +210,7 @@ Begin VB.Form FormBatchWizard
          FontSize        =   11
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdSpinner spnVectorImport 
+      Begin PhotoPaint.pdSpinner spnVectorImport 
          Height          =   375
          Index           =   1
          Left            =   3360
@@ -224,7 +224,7 @@ Begin VB.Form FormBatchWizard
          Max             =   32000
          Value           =   1080
       End
-      Begin PhotoDemon.pdLabel lblVectorImport 
+      Begin PhotoPaint.pdLabel lblVectorImport 
          Height          =   300
          Index           =   1
          Left            =   3240
@@ -237,7 +237,7 @@ Begin VB.Form FormBatchWizard
          ForeColor       =   4210752
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   6780
       Index           =   0
       Left            =   3300
@@ -245,7 +245,7 @@ Begin VB.Form FormBatchWizard
       Width           =   9855
       _ExtentX        =   17383
       _ExtentY        =   11959
-      Begin PhotoDemon.pdButtonStrip btsPhotoOps 
+      Begin PhotoPaint.pdButtonStrip btsPhotoOps 
          Height          =   975
          Left            =   120
          TabIndex        =   31
@@ -255,7 +255,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   1720
          Caption         =   "apply photo editing actions"
       End
-      Begin PhotoDemon.pdLabel lblExplanation 
+      Begin PhotoPaint.pdLabel lblExplanation 
          Height          =   720
          Index           =   1
          Left            =   240
@@ -267,14 +267,14 @@ Begin VB.Form FormBatchWizard
          ForeColor       =   4210752
          Layout          =   1
       End
-      Begin PhotoDemon.pdContainer picPhotoEdits 
+      Begin PhotoPaint.pdContainer picPhotoEdits 
          Height          =   5400
          Left            =   120
          Top             =   1200
          Width           =   9735
          _ExtentX        =   17171
          _ExtentY        =   9525
-         Begin PhotoDemon.pdPictureBox picResizeDemo 
+         Begin PhotoPaint.pdPictureBox picResizeDemo 
             Height          =   750
             Left            =   6720
             Top             =   2880
@@ -282,7 +282,7 @@ Begin VB.Form FormBatchWizard
             _ExtentX        =   0
             _ExtentY        =   0
          End
-         Begin PhotoDemon.pdDropDown cmbResizeFit 
+         Begin PhotoPaint.pdDropDown cmbResizeFit 
             Height          =   615
             Left            =   720
             TabIndex        =   33
@@ -293,7 +293,7 @@ Begin VB.Form FormBatchWizard
             Caption         =   "resize image by"
             FontSizeCaption =   10
          End
-         Begin PhotoDemon.pdButton cmdSelectMacro 
+         Begin PhotoPaint.pdButton cmdSelectMacro 
             Height          =   615
             Left            =   6960
             TabIndex        =   34
@@ -304,7 +304,7 @@ Begin VB.Form FormBatchWizard
             Caption         =   "Select macro..."
             FontSize        =   9
          End
-         Begin PhotoDemon.pdTextBox txtMacro 
+         Begin PhotoPaint.pdTextBox txtMacro 
             Height          =   315
             Left            =   600
             TabIndex        =   35
@@ -314,7 +314,7 @@ Begin VB.Form FormBatchWizard
             _ExtentY        =   556
             Text            =   "no macro selected"
          End
-         Begin PhotoDemon.pdCheckBox chkActions 
+         Begin PhotoPaint.pdCheckBox chkActions 
             Height          =   300
             Index           =   2
             Left            =   120
@@ -326,7 +326,7 @@ Begin VB.Form FormBatchWizard
             Caption         =   "apply other actions from a saved macro file"
             Value           =   0   'False
          End
-         Begin PhotoDemon.pdCheckBox chkActions 
+         Begin PhotoPaint.pdCheckBox chkActions 
             Height          =   300
             Index           =   1
             Left            =   120
@@ -338,7 +338,7 @@ Begin VB.Form FormBatchWizard
             Caption         =   "resize images"
             Value           =   0   'False
          End
-         Begin PhotoDemon.pdCheckBox chkActions 
+         Begin PhotoPaint.pdCheckBox chkActions 
             Height          =   300
             Index           =   0
             Left            =   120
@@ -350,7 +350,7 @@ Begin VB.Form FormBatchWizard
             Caption         =   "fix exposure and lighting problems"
             Value           =   0   'False
          End
-         Begin PhotoDemon.pdResize ucResize 
+         Begin PhotoPaint.pdResize ucResize 
             Height          =   1650
             Left            =   360
             TabIndex        =   40
@@ -362,7 +362,7 @@ Begin VB.Form FormBatchWizard
          End
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   6780
       Index           =   1
       Left            =   3300
@@ -370,7 +370,7 @@ Begin VB.Form FormBatchWizard
       Width           =   9855
       _ExtentX        =   17383
       _ExtentY        =   11959
-      Begin PhotoDemon.pdPictureBox picPreview 
+      Begin PhotoPaint.pdPictureBox picPreview 
          Height          =   2925
          Left            =   6600
          Top             =   465
@@ -378,7 +378,7 @@ Begin VB.Form FormBatchWizard
          _ExtentX        =   0
          _ExtentY        =   0
       End
-      Begin PhotoDemon.pdLabel lblCurrentFile 
+      Begin PhotoPaint.pdLabel lblCurrentFile 
          Height          =   285
          Left            =   330
          Top             =   3570
@@ -388,7 +388,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   ""
          FontSize        =   9
       End
-      Begin PhotoDemon.pdCheckBox chkAddSubfoldersToo 
+      Begin PhotoPaint.pdCheckBox chkAddSubfoldersToo 
          Height          =   375
          Left            =   225
          TabIndex        =   3
@@ -399,7 +399,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "include subfolders"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdListBox lstFiles 
+      Begin PhotoPaint.pdListBox lstFiles 
          Height          =   3405
          Left            =   120
          TabIndex        =   6
@@ -410,7 +410,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "current batch list"
          FontSize        =   9
       End
-      Begin PhotoDemon.pdButton cmdSaveList 
+      Begin PhotoPaint.pdButton cmdSaveList 
          Height          =   615
          Left            =   6960
          TabIndex        =   19
@@ -420,7 +420,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   1085
          Caption         =   "save list..."
       End
-      Begin PhotoDemon.pdButton cmdLoadList 
+      Begin PhotoPaint.pdButton cmdLoadList 
          Height          =   615
          Left            =   6960
          TabIndex        =   20
@@ -430,7 +430,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   1085
          Caption         =   "load list..."
       End
-      Begin PhotoDemon.pdButton cmdRemoveAll 
+      Begin PhotoPaint.pdButton cmdRemoveAll 
          Height          =   615
          Left            =   3600
          TabIndex        =   21
@@ -440,7 +440,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   1085
          Caption         =   "erase entire list"
       End
-      Begin PhotoDemon.pdButton cmdRemove 
+      Begin PhotoPaint.pdButton cmdRemove 
          Height          =   615
          Left            =   3600
          TabIndex        =   22
@@ -450,7 +450,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   1085
          Caption         =   "remove selected image"
       End
-      Begin PhotoDemon.pdButton cmdAddFiles 
+      Begin PhotoPaint.pdButton cmdAddFiles 
          Height          =   615
          Left            =   240
          TabIndex        =   23
@@ -460,7 +460,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   1085
          Caption         =   "add individual images..."
       End
-      Begin PhotoDemon.pdCheckBox chkEnablePreview 
+      Begin PhotoPaint.pdCheckBox chkEnablePreview 
          Height          =   330
          Left            =   6600
          TabIndex        =   7
@@ -470,7 +470,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   582
          Caption         =   "show image previews"
       End
-      Begin PhotoDemon.pdLabel lblFiles 
+      Begin PhotoPaint.pdLabel lblFiles 
          Height          =   285
          Left            =   120
          Top             =   3930
@@ -481,7 +481,7 @@ Begin VB.Form FormBatchWizard
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblModify 
+      Begin PhotoPaint.pdLabel lblModify 
          Height          =   285
          Left            =   3480
          Top             =   3930
@@ -492,7 +492,7 @@ Begin VB.Form FormBatchWizard
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblLoadSaveList 
+      Begin PhotoPaint.pdLabel lblLoadSaveList 
          Height          =   285
          Left            =   6840
          Top             =   3930
@@ -503,7 +503,7 @@ Begin VB.Form FormBatchWizard
          FontSize        =   12
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdButton cmdAddFolders 
+      Begin PhotoPaint.pdButton cmdAddFolders 
          Height          =   615
          Left            =   240
          TabIndex        =   36
@@ -513,7 +513,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   1085
          Caption         =   "add entire folder(s)..."
       End
-      Begin PhotoDemon.pdButton cmdRemoveFolder 
+      Begin PhotoPaint.pdButton cmdRemoveFolder 
          Height          =   615
          Left            =   3600
          TabIndex        =   4
@@ -523,7 +523,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   1085
          Caption         =   "remove all images in this folder"
       End
-      Begin PhotoDemon.pdCheckBox chkRemoveSubfolders 
+      Begin PhotoPaint.pdCheckBox chkRemoveSubfolders 
          Height          =   375
          Left            =   3585
          TabIndex        =   5
@@ -535,7 +535,7 @@ Begin VB.Form FormBatchWizard
          Value           =   0   'False
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   6780
       Index           =   4
       Left            =   3300
@@ -543,7 +543,7 @@ Begin VB.Form FormBatchWizard
       Width           =   9855
       _ExtentX        =   17383
       _ExtentY        =   11959
-      Begin PhotoDemon.pdProgressBar pbBatch 
+      Begin PhotoPaint.pdProgressBar pbBatch 
          Height          =   495
          Left            =   240
          TabIndex        =   25
@@ -552,7 +552,7 @@ Begin VB.Form FormBatchWizard
          _ExtentX        =   16642
          _ExtentY        =   873
       End
-      Begin PhotoDemon.pdLabel lblBatchProgress 
+      Begin PhotoPaint.pdLabel lblBatchProgress 
          Height          =   645
          Left            =   240
          Top             =   2400
@@ -564,7 +564,7 @@ Begin VB.Form FormBatchWizard
          ForeColor       =   -2147483640
          Layout          =   1
       End
-      Begin PhotoDemon.pdLabel lblTimeRemaining 
+      Begin PhotoPaint.pdLabel lblTimeRemaining 
          Height          =   645
          Left            =   240
          Top             =   3840
@@ -577,7 +577,7 @@ Begin VB.Form FormBatchWizard
          Layout          =   1
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   6780
       Index           =   3
       Left            =   3300
@@ -585,7 +585,7 @@ Begin VB.Form FormBatchWizard
       Width           =   9855
       _ExtentX        =   17383
       _ExtentY        =   11959
-      Begin PhotoDemon.pdCheckBox chkOutputPreserveFolders 
+      Begin PhotoPaint.pdCheckBox chkOutputPreserveFolders 
          Height          =   345
          Left            =   480
          TabIndex        =   43
@@ -596,7 +596,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "preserve input folder structure"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdDropDown cmbOutputOptions 
+      Begin PhotoPaint.pdDropDown cmbOutputOptions 
          Height          =   375
          Left            =   480
          TabIndex        =   8
@@ -605,7 +605,7 @@ Begin VB.Form FormBatchWizard
          _ExtentX        =   16325
          _ExtentY        =   661
       End
-      Begin PhotoDemon.pdButton cmdSelectOutputPath 
+      Begin PhotoPaint.pdButton cmdSelectOutputPath 
          Height          =   735
          Left            =   6600
          TabIndex        =   26
@@ -616,7 +616,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "Select destination folder..."
          FontSize        =   9
       End
-      Begin PhotoDemon.pdTextBox txtRenameRemove 
+      Begin PhotoPaint.pdTextBox txtRenameRemove 
          Height          =   315
          Left            =   840
          TabIndex        =   27
@@ -625,7 +625,7 @@ Begin VB.Form FormBatchWizard
          _ExtentX        =   7223
          _ExtentY        =   556
       End
-      Begin PhotoDemon.pdTextBox txtAppendBack 
+      Begin PhotoPaint.pdTextBox txtAppendBack 
          Height          =   315
          Left            =   5640
          TabIndex        =   28
@@ -634,7 +634,7 @@ Begin VB.Form FormBatchWizard
          _ExtentX        =   7223
          _ExtentY        =   556
       End
-      Begin PhotoDemon.pdTextBox txtAppendFront 
+      Begin PhotoPaint.pdTextBox txtAppendFront 
          Height          =   315
          Left            =   840
          TabIndex        =   29
@@ -644,7 +644,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   556
          Text            =   "NEW_"
       End
-      Begin PhotoDemon.pdTextBox txtOutputPath 
+      Begin PhotoPaint.pdTextBox txtOutputPath 
          Height          =   315
          Left            =   480
          TabIndex        =   30
@@ -654,7 +654,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   556
          Text            =   "C:\"
       End
-      Begin PhotoDemon.pdRadioButton optCase 
+      Begin PhotoPaint.pdRadioButton optCase 
          Height          =   330
          Index           =   0
          Left            =   840
@@ -666,7 +666,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "lowercase"
          Value           =   -1  'True
       End
-      Begin PhotoDemon.pdCheckBox chkRenamePrefix 
+      Begin PhotoPaint.pdCheckBox chkRenamePrefix 
          Height          =   330
          Left            =   480
          TabIndex        =   11
@@ -677,7 +677,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "add a prefix to each filename:"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chkRenameSuffix 
+      Begin PhotoPaint.pdCheckBox chkRenameSuffix 
          Height          =   330
          Left            =   5280
          TabIndex        =   12
@@ -688,7 +688,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "add a suffix to each filename:"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chkRenameRemove 
+      Begin PhotoPaint.pdCheckBox chkRenameRemove 
          Height          =   330
          Left            =   480
          TabIndex        =   13
@@ -699,7 +699,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "remove the following text (if found) from each filename:"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chkRenameCase 
+      Begin PhotoPaint.pdCheckBox chkRenameCase 
          Height          =   330
          Left            =   480
          TabIndex        =   14
@@ -710,7 +710,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "force each filename, including extension, to the following case:"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdRadioButton optCase 
+      Begin PhotoPaint.pdRadioButton optCase 
          Height          =   330
          Index           =   1
          Left            =   3240
@@ -721,7 +721,7 @@ Begin VB.Form FormBatchWizard
          _ExtentY        =   582
          Caption         =   "UPPERCASE"
       End
-      Begin PhotoDemon.pdCheckBox chkRenameSpaces 
+      Begin PhotoPaint.pdCheckBox chkRenameSpaces 
          Height          =   330
          Left            =   480
          TabIndex        =   17
@@ -732,7 +732,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "replace spaces in filenames with underscores"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdCheckBox chkRenameCaseSensitive 
+      Begin PhotoPaint.pdCheckBox chkRenameCaseSensitive 
          Height          =   330
          Left            =   5280
          TabIndex        =   18
@@ -743,7 +743,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "use case-sensitive matching"
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdLabel lblDstFilename 
+      Begin PhotoPaint.pdLabel lblDstFilename 
          Height          =   285
          Left            =   120
          Top             =   1320
@@ -753,7 +753,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "after images are processed, save them with the following name:"
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblOptionalText 
+      Begin PhotoPaint.pdLabel lblOptionalText 
          Height          =   285
          Left            =   120
          Top             =   2280
@@ -763,7 +763,7 @@ Begin VB.Form FormBatchWizard
          Caption         =   "additional rename options"
          ForeColor       =   4210752
       End
-      Begin PhotoDemon.pdLabel lblDstFolder 
+      Begin PhotoPaint.pdLabel lblDstFolder 
          Height          =   285
          Left            =   120
          Top             =   0
@@ -808,7 +808,7 @@ Attribute VB_Exposed = False
 '    of basic renaming options.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

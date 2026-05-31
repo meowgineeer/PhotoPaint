@@ -22,7 +22,7 @@ Begin VB.Form dialog_ExportPSP
    ScaleHeight     =   439
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   842
-   Begin PhotoDemon.pdSlider sldCompression 
+   Begin PhotoPaint.pdSlider sldCompression 
       Height          =   855
       Left            =   5880
       TabIndex        =   3
@@ -36,7 +36,7 @@ Begin VB.Form dialog_ExportPSP
       NotchPosition   =   2
       NotchValueCustom=   9
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -47,7 +47,7 @@ Begin VB.Form dialog_ExportPSP
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -56,7 +56,7 @@ Begin VB.Form dialog_ExportPSP
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdButtonStrip btsCompatibility 
+   Begin PhotoPaint.pdButtonStrip btsCompatibility 
       Height          =   1095
       Left            =   5880
       TabIndex        =   2
@@ -89,7 +89,7 @@ Attribute VB_Exposed = False
 ' some features that PD does).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

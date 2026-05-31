@@ -24,7 +24,7 @@ Begin VB.Form FormLevels
    ScaleHeight     =   503
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   858
-   Begin PhotoDemon.pdButton cmdAutoLevels 
+   Begin PhotoPaint.pdButton cmdAutoLevels 
       Height          =   600
       Left            =   120
       TabIndex        =   1
@@ -34,7 +34,7 @@ Begin VB.Form FormLevels
       _ExtentY        =   873
       Caption         =   "set levels automatically"
    End
-   Begin PhotoDemon.pdButtonToolbox cmdColorSelect 
+   Begin PhotoPaint.pdButtonToolbox cmdColorSelect 
       Height          =   375
       Index           =   0
       Left            =   7740
@@ -45,7 +45,7 @@ Begin VB.Form FormLevels
       _ExtentY        =   661
       StickyToggle    =   -1  'True
    End
-   Begin PhotoDemon.pdColorSelector csShadow 
+   Begin PhotoPaint.pdColorSelector csShadow 
       Height          =   375
       Left            =   7230
       TabIndex        =   11
@@ -56,7 +56,7 @@ Begin VB.Form FormLevels
       curColor        =   0
       ShowMainWindowColor=   0   'False
    End
-   Begin PhotoDemon.pdPictureBoxInteractive picOutputArrows 
+   Begin PhotoPaint.pdPictureBoxInteractive picOutputArrows 
       Height          =   360
       Left            =   5760
       Top             =   4590
@@ -64,7 +64,7 @@ Begin VB.Form FormLevels
       _ExtentX        =   0
       _ExtentY        =   0
    End
-   Begin PhotoDemon.pdPictureBoxInteractive picInputArrows 
+   Begin PhotoPaint.pdPictureBoxInteractive picInputArrows 
       Height          =   360
       Left            =   5760
       Top             =   2790
@@ -72,7 +72,7 @@ Begin VB.Form FormLevels
       _ExtentX        =   0
       _ExtentY        =   0
    End
-   Begin PhotoDemon.pdPictureBox picHistogram 
+   Begin PhotoPaint.pdPictureBox picHistogram 
       Height          =   2295
       Left            =   6000
       Top             =   480
@@ -80,7 +80,7 @@ Begin VB.Form FormLevels
       _ExtentX        =   0
       _ExtentY        =   0
    End
-   Begin PhotoDemon.pdPictureBox picOutputGradient 
+   Begin PhotoPaint.pdPictureBox picOutputGradient 
       Height          =   375
       Left            =   6000
       Top             =   4200
@@ -88,7 +88,7 @@ Begin VB.Form FormLevels
       _ExtentX        =   0
       _ExtentY        =   0
    End
-   Begin PhotoDemon.pdSpinner tudLevels 
+   Begin PhotoPaint.pdSpinner tudLevels 
       Height          =   345
       Index           =   0
       Left            =   6000
@@ -99,7 +99,7 @@ Begin VB.Form FormLevels
       _ExtentY        =   714
       Max             =   253
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -108,7 +108,7 @@ Begin VB.Form FormLevels
       _ExtentX        =   22701
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   3
@@ -117,7 +117,7 @@ Begin VB.Form FormLevels
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSpinner tudLevels 
+   Begin PhotoPaint.pdSpinner tudLevels 
       Height          =   345
       Index           =   1
       Left            =   8760
@@ -132,7 +132,7 @@ Begin VB.Form FormLevels
       SigDigits       =   2
       Value           =   0.5
    End
-   Begin PhotoDemon.pdSpinner tudLevels 
+   Begin PhotoPaint.pdSpinner tudLevels 
       Height          =   345
       Index           =   2
       Left            =   11490
@@ -146,7 +146,7 @@ Begin VB.Form FormLevels
       Max             =   255
       Value           =   255
    End
-   Begin PhotoDemon.pdSpinner tudLevels 
+   Begin PhotoPaint.pdSpinner tudLevels 
       Height          =   345
       Index           =   3
       Left            =   6000
@@ -157,7 +157,7 @@ Begin VB.Form FormLevels
       _ExtentY        =   714
       Max             =   255
    End
-   Begin PhotoDemon.pdSpinner tudLevels 
+   Begin PhotoPaint.pdSpinner tudLevels 
       Height          =   345
       Index           =   4
       Left            =   11355
@@ -170,7 +170,7 @@ Begin VB.Form FormLevels
       Max             =   255
       Value           =   255
    End
-   Begin PhotoDemon.pdColorSelector csHighlight 
+   Begin PhotoPaint.pdColorSelector csHighlight 
       Height          =   375
       Left            =   10920
       TabIndex        =   12
@@ -180,7 +180,7 @@ Begin VB.Form FormLevels
       _ExtentY        =   661
       ShowMainWindowColor=   0   'False
    End
-   Begin PhotoDemon.pdButtonStrip btsChannel 
+   Begin PhotoPaint.pdButtonStrip btsChannel 
       Height          =   1080
       Left            =   6000
       TabIndex        =   9
@@ -190,7 +190,7 @@ Begin VB.Form FormLevels
       _ExtentY        =   1905
       Caption         =   "channel"
    End
-   Begin PhotoDemon.pdButtonToolbox cmdColorSelect 
+   Begin PhotoPaint.pdButtonToolbox cmdColorSelect 
       Height          =   375
       Index           =   1
       Left            =   10530
@@ -201,7 +201,7 @@ Begin VB.Form FormLevels
       _ExtentY        =   661
       StickyToggle    =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   1
       Left            =   6000
@@ -213,7 +213,7 @@ Begin VB.Form FormLevels
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   0
       Left            =   6000
@@ -249,7 +249,7 @@ Attribute VB_Exposed = False
 'As of June '14, per-channel levels, set-by-color options, and "Auto Levels" are now supported.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

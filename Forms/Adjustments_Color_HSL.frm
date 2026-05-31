@@ -24,7 +24,7 @@ Begin VB.Form FormHSL
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   769
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormHSL
       _ExtentX        =   20346
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltHue 
+   Begin PhotoPaint.pdSlider sltHue 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -46,7 +46,7 @@ Begin VB.Form FormHSL
       Max             =   180
       SliderTrackStyle=   4
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -55,7 +55,7 @@ Begin VB.Form FormHSL
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sltSaturation 
+   Begin PhotoPaint.pdSlider sltSaturation 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -68,7 +68,7 @@ Begin VB.Form FormHSL
       Max             =   100
       SliderTrackStyle=   2
    End
-   Begin PhotoDemon.pdSlider sltLuminance 
+   Begin PhotoPaint.pdSlider sltLuminance 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -98,7 +98,7 @@ Attribute VB_Exposed = False
 ' in GIMP and Paint.NET.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

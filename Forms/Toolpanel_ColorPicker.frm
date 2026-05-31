@@ -30,7 +30,7 @@ Begin VB.Form toolpanel_ColorPicker
    ScaleWidth      =   951
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   1935
       Index           =   0
       Left            =   1440
@@ -39,7 +39,7 @@ Begin VB.Form toolpanel_ColorPicker
       Width           =   3600
       _ExtentX        =   6350
       _ExtentY        =   3413
-      Begin PhotoDemon.pdLabel lblTitle 
+      Begin PhotoPaint.pdLabel lblTitle 
          Height          =   255
          Index           =   0
          Left            =   120
@@ -49,7 +49,7 @@ Begin VB.Form toolpanel_ColorPicker
          _ExtentY        =   450
          Caption         =   "after clicking"
       End
-      Begin PhotoDemon.pdButtonStrip btsSampleMerged 
+      Begin PhotoPaint.pdButtonStrip btsSampleMerged 
          Height          =   945
          Left            =   120
          TabIndex        =   3
@@ -60,7 +60,7 @@ Begin VB.Form toolpanel_ColorPicker
          Caption         =   "sample from"
          FontSizeCaption =   10
       End
-      Begin PhotoDemon.pdCheckBox chkAfter 
+      Begin PhotoPaint.pdCheckBox chkAfter 
          Height          =   345
          Left            =   210
          TabIndex        =   4
@@ -70,7 +70,7 @@ Begin VB.Form toolpanel_ColorPicker
          _ExtentY        =   609
          Caption         =   "return to previous tool"
       End
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   0
          Left            =   3120
@@ -82,7 +82,7 @@ Begin VB.Form toolpanel_ColorPicker
          StickyToggle    =   -1  'True
       End
    End
-   Begin PhotoDemon.pdPictureBox picSample 
+   Begin PhotoPaint.pdPictureBox picSample 
       Height          =   810
       Left            =   15
       Top             =   15
@@ -90,7 +90,7 @@ Begin VB.Form toolpanel_ColorPicker
       _ExtentX        =   2117
       _ExtentY        =   1429
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   255
       Index           =   0
       Left            =   6120
@@ -100,7 +100,7 @@ Begin VB.Form toolpanel_ColorPicker
       _ExtentY        =   450
       Caption         =   "red"
    End
-   Begin PhotoDemon.pdDropDown cboColorSpace 
+   Begin PhotoPaint.pdDropDown cboColorSpace 
       Height          =   375
       Index           =   0
       Left            =   4680
@@ -110,7 +110,7 @@ Begin VB.Form toolpanel_ColorPicker
       _ExtentX        =   2143
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdSlider sldRadius 
+   Begin PhotoPaint.pdSlider sldRadius 
       Height          =   375
       Left            =   1500
       TabIndex        =   0
@@ -123,7 +123,7 @@ Begin VB.Form toolpanel_ColorPicker
       ScaleStyle      =   1
       NotchPosition   =   2
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   255
       Index           =   1
       Left            =   8040
@@ -133,7 +133,7 @@ Begin VB.Form toolpanel_ColorPicker
       _ExtentY        =   450
       Caption         =   "green"
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   255
       Index           =   2
       Left            =   9960
@@ -143,7 +143,7 @@ Begin VB.Form toolpanel_ColorPicker
       _ExtentY        =   450
       Caption         =   "blue"
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   255
       Index           =   3
       Left            =   11880
@@ -153,7 +153,7 @@ Begin VB.Form toolpanel_ColorPicker
       _ExtentY        =   450
       Caption         =   "alpha"
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   0
       Left            =   7200
@@ -165,7 +165,7 @@ Begin VB.Form toolpanel_ColorPicker
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   1
       Left            =   9120
@@ -177,7 +177,7 @@ Begin VB.Form toolpanel_ColorPicker
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   2
       Left            =   11040
@@ -189,7 +189,7 @@ Begin VB.Form toolpanel_ColorPicker
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   3
       Left            =   12960
@@ -201,7 +201,7 @@ Begin VB.Form toolpanel_ColorPicker
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   255
       Index           =   4
       Left            =   6120
@@ -211,7 +211,7 @@ Begin VB.Form toolpanel_ColorPicker
       _ExtentY        =   450
       Caption         =   "red"
    End
-   Begin PhotoDemon.pdDropDown cboColorSpace 
+   Begin PhotoPaint.pdDropDown cboColorSpace 
       Height          =   375
       Index           =   1
       Left            =   4680
@@ -221,7 +221,7 @@ Begin VB.Form toolpanel_ColorPicker
       _ExtentX        =   2143
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   255
       Index           =   5
       Left            =   8040
@@ -231,7 +231,7 @@ Begin VB.Form toolpanel_ColorPicker
       _ExtentY        =   450
       Caption         =   "green"
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   255
       Index           =   6
       Left            =   9960
@@ -241,7 +241,7 @@ Begin VB.Form toolpanel_ColorPicker
       _ExtentY        =   450
       Caption         =   "blue"
    End
-   Begin PhotoDemon.pdLabel lblColor 
+   Begin PhotoPaint.pdLabel lblColor 
       Height          =   255
       Index           =   7
       Left            =   11880
@@ -251,7 +251,7 @@ Begin VB.Form toolpanel_ColorPicker
       _ExtentY        =   450
       Caption         =   "alpha"
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   4
       Left            =   7200
@@ -263,7 +263,7 @@ Begin VB.Form toolpanel_ColorPicker
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   5
       Left            =   9120
@@ -275,7 +275,7 @@ Begin VB.Form toolpanel_ColorPicker
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   6
       Left            =   11040
@@ -287,7 +287,7 @@ Begin VB.Form toolpanel_ColorPicker
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdLabel lblValue 
+   Begin PhotoPaint.pdLabel lblValue 
       Height          =   255
       Index           =   7
       Left            =   12960
@@ -299,7 +299,7 @@ Begin VB.Form toolpanel_ColorPicker
       Caption         =   "0"
       FontBold        =   -1  'True
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   375
       Index           =   0
       Left            =   1440
@@ -331,7 +331,7 @@ Attribute VB_Exposed = False
 ' values simultaneously).  I may add a third view in the future, as there's plenty of free space on modern displays.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

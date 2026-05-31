@@ -24,7 +24,7 @@ Begin VB.Form FormGaussianBlur
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   802
-   Begin PhotoDemon.pdSlider sldIterations 
+   Begin PhotoPaint.pdSlider sldIterations 
       Height          =   855
       Left            =   6000
       TabIndex        =   5
@@ -40,7 +40,7 @@ Begin VB.Form FormGaussianBlur
       NotchPosition   =   2
       NotchValueCustom=   3
    End
-   Begin PhotoDemon.pdDropDown ddCustom 
+   Begin PhotoPaint.pdDropDown ddCustom 
       Height          =   975
       Left            =   6000
       TabIndex        =   4
@@ -50,7 +50,7 @@ Begin VB.Form FormGaussianBlur
       _ExtentY        =   1720
       Caption         =   "algorithms"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -59,7 +59,7 @@ Begin VB.Form FormGaussianBlur
       _ExtentX        =   21220
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   465
       Left            =   6000
       TabIndex        =   2
@@ -74,7 +74,7 @@ Begin VB.Form FormGaussianBlur
       Value           =   1
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -83,7 +83,7 @@ Begin VB.Form FormGaussianBlur
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdButtonStrip btsQuality 
+   Begin PhotoPaint.pdButtonStrip btsQuality 
       Height          =   1080
       Left            =   6000
       TabIndex        =   3
@@ -93,7 +93,7 @@ Begin VB.Form FormGaussianBlur
       _ExtentY        =   1905
       Caption         =   "mode"
    End
-   Begin PhotoDemon.pdDropDown ddRadius 
+   Begin PhotoPaint.pdDropDown ddRadius 
       Height          =   420
       Left            =   6000
       TabIndex        =   6
@@ -130,7 +130,7 @@ Attribute VB_Exposed = False
 ' gaussian functions for details.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

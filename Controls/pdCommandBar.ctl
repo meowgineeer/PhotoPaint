@@ -21,7 +21,7 @@ Begin VB.UserControl pdCommandBar
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   637
    ToolboxBitmap   =   "pdCommandBar.ctx":0000
-   Begin PhotoDemon.pdButtonToolbox cmdAction 
+   Begin PhotoPaint.pdButtonToolbox cmdAction 
       Height          =   285
       Index           =   3
       Left            =   1365
@@ -33,7 +33,7 @@ Begin VB.UserControl pdCommandBar
       AutoToggle      =   -1  'True
       UseCustomBackColor=   -1  'True
    End
-   Begin PhotoDemon.pdButton cmdOK 
+   Begin PhotoPaint.pdButton cmdOK 
       Height          =   510
       Left            =   6600
       TabIndex        =   0
@@ -44,7 +44,7 @@ Begin VB.UserControl pdCommandBar
       Caption         =   "OK"
       UseCustomBackgroundColor=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdAction 
+   Begin PhotoPaint.pdButtonToolbox cmdAction 
       Height          =   570
       Index           =   0
       Left            =   60
@@ -56,7 +56,7 @@ Begin VB.UserControl pdCommandBar
       AutoToggle      =   -1  'True
       UseCustomBackColor=   -1  'True
    End
-   Begin PhotoDemon.pdDropDown cboPreset 
+   Begin PhotoPaint.pdDropDown cboPreset 
       Height          =   345
       Left            =   1845
       TabIndex        =   4
@@ -66,7 +66,7 @@ Begin VB.UserControl pdCommandBar
       _ExtentY        =   609
       UseCustomBackgroundColor=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdAction 
+   Begin PhotoPaint.pdButtonToolbox cmdAction 
       Height          =   570
       Index           =   1
       Left            =   690
@@ -78,7 +78,7 @@ Begin VB.UserControl pdCommandBar
       AutoToggle      =   -1  'True
       UseCustomBackColor=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdAction 
+   Begin PhotoPaint.pdButtonToolbox cmdAction 
       Height          =   570
       Index           =   2
       Left            =   5040
@@ -90,7 +90,7 @@ Begin VB.UserControl pdCommandBar
       AutoToggle      =   -1  'True
       UseCustomBackColor=   -1  'True
    End
-   Begin PhotoDemon.pdButton cmdCancel 
+   Begin PhotoPaint.pdButton cmdCancel 
       Height          =   510
       Left            =   8160
       TabIndex        =   1
@@ -101,7 +101,7 @@ Begin VB.UserControl pdCommandBar
       Caption         =   "Cancel"
       UseCustomBackgroundColor=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdAction 
+   Begin PhotoPaint.pdButtonToolbox cmdAction 
       Height          =   285
       Index           =   4
       Left            =   1365
@@ -113,7 +113,7 @@ Begin VB.UserControl pdCommandBar
       AutoToggle      =   -1  'True
       UseCustomBackColor=   -1  'True
    End
-   Begin PhotoDemon.pdButtonToolbox cmdAction 
+   Begin PhotoPaint.pdButtonToolbox cmdAction 
       Height          =   570
       Index           =   5
       Left            =   5670
@@ -167,7 +167,7 @@ Attribute VB_Exposed = False
 ' Look there for details on how preset files are managed.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

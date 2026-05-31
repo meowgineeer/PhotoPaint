@@ -26,7 +26,7 @@ Begin VB.Form FormAnimSpeed
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   804
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdSlider sldSpeed 
+   Begin PhotoPaint.pdSlider sldSpeed 
       Height          =   855
       Left            =   6240
       TabIndex        =   6
@@ -40,7 +40,7 @@ Begin VB.Form FormAnimSpeed
       SigDigits       =   1
       GradientColorRight=   1703935
    End
-   Begin PhotoDemon.pdButtonToolbox btnPlay 
+   Begin PhotoPaint.pdButtonToolbox btnPlay 
       Height          =   375
       Index           =   0
       Left            =   120
@@ -52,7 +52,7 @@ Begin VB.Form FormAnimSpeed
       DontHighlightDownState=   -1  'True
       StickyToggle    =   -1  'True
    End
-   Begin PhotoDemon.pdSliderStandalone sldFrame 
+   Begin PhotoPaint.pdSliderStandalone sldFrame 
       Height          =   375
       Left            =   600
       TabIndex        =   1
@@ -61,7 +61,7 @@ Begin VB.Form FormAnimSpeed
       _ExtentX        =   8705
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdPictureBox picPreview 
+   Begin PhotoPaint.pdPictureBox picPreview 
       Height          =   5295
       Left            =   120
       Top             =   120
@@ -69,7 +69,7 @@ Begin VB.Form FormAnimSpeed
       _ExtentX        =   10398
       _ExtentY        =   9340
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -79,7 +79,7 @@ Begin VB.Form FormAnimSpeed
       _ExtentX        =   21273
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdButtonToolbox btnPlay 
+   Begin PhotoPaint.pdButtonToolbox btnPlay 
       Height          =   375
       Index           =   1
       Left            =   5640
@@ -90,7 +90,7 @@ Begin VB.Form FormAnimSpeed
       _ExtentY        =   661
       StickyToggle    =   -1  'True
    End
-   Begin PhotoDemon.pdDropDown ddWhichFrame 
+   Begin PhotoPaint.pdDropDown ddWhichFrame 
       Height          =   855
       Index           =   0
       Left            =   6240
@@ -101,7 +101,7 @@ Begin VB.Form FormAnimSpeed
       _ExtentY        =   1508
       Caption         =   "first frame for effect"
    End
-   Begin PhotoDemon.pdDropDown ddWhichFrame 
+   Begin PhotoPaint.pdDropDown ddWhichFrame 
       Height          =   855
       Index           =   1
       Left            =   6240
@@ -125,7 +125,7 @@ Attribute VB_Exposed = False
 'Last updated: 20/April/22
 'Last update: split off from main Image > Animation dialog as a dedicated "effect"
 '
-'In v9.0, I added much better coverage of animated image formats to PhotoDemon.  This includes
+'In v9.0, I added much better coverage of animated image formats to PhotoPaint.  This includes
 ' a few basic "effects" to permanently modify things like playback speed.
 '
 'Note that unlike static effects, animated effects use very different code for preview vs final
@@ -135,7 +135,7 @@ Attribute VB_Exposed = False
 ' preview-able in real-time on 20-year-old XP PCs.  It's a challenge.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

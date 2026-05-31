@@ -26,7 +26,7 @@ Begin VB.Form dialog_UITheme
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   603
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdLabel lblExplanation 
+   Begin PhotoPaint.pdLabel lblExplanation 
       Height          =   975
       Index           =   0
       Left            =   240
@@ -38,7 +38,7 @@ Begin VB.Form dialog_UITheme
       Caption         =   ""
       Layout          =   1
    End
-   Begin PhotoDemon.pdButtonStrip btsIcons 
+   Begin PhotoPaint.pdButtonStrip btsIcons 
       Height          =   1335
       Left            =   120
       TabIndex        =   4
@@ -49,7 +49,7 @@ Begin VB.Form dialog_UITheme
       Caption         =   "icons"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdStrip strAccents 
+   Begin PhotoPaint.pdStrip strAccents 
       Height          =   1095
       Left            =   120
       TabIndex        =   3
@@ -59,7 +59,7 @@ Begin VB.Form dialog_UITheme
       _ExtentY        =   1931
       Caption         =   "interface accent color"
    End
-   Begin PhotoDemon.pdButtonStrip btsInterface 
+   Begin PhotoPaint.pdButtonStrip btsInterface 
       Height          =   1215
       Left            =   120
       TabIndex        =   2
@@ -70,7 +70,7 @@ Begin VB.Form dialog_UITheme
       Caption         =   "interface theme"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdLabel lblLangAuthor 
+   Begin PhotoPaint.pdLabel lblLangAuthor 
       Height          =   375
       Left            =   240
       Top             =   1200
@@ -78,7 +78,7 @@ Begin VB.Form dialog_UITheme
       _ExtentX        =   15266
       _ExtentY        =   661
    End
-   Begin PhotoDemon.pdDropDown cboLanguage 
+   Begin PhotoPaint.pdDropDown cboLanguage 
       Height          =   855
       Left            =   120
       TabIndex        =   1
@@ -89,7 +89,7 @@ Begin VB.Form dialog_UITheme
       Caption         =   "language"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBar 
+   Begin PhotoPaint.pdCommandBarMini cmdBar 
       Align           =   2  'Align Bottom
       Height          =   735
       Left            =   0
@@ -118,7 +118,7 @@ Attribute VB_Exposed = False
 ' menu system right off the bat.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

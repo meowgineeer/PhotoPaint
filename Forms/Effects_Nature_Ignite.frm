@@ -24,7 +24,7 @@ Begin VB.Form FormIgnite
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   784
-   Begin PhotoDemon.pdSlider sltIntensity 
+   Begin PhotoPaint.pdSlider sltIntensity 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -39,7 +39,7 @@ Begin VB.Form FormIgnite
       NotchPosition   =   2
       NotchValueCustom=   5
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -48,7 +48,7 @@ Begin VB.Form FormIgnite
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -57,7 +57,7 @@ Begin VB.Form FormIgnite
       _ExtentX        =   20743
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -72,7 +72,7 @@ Begin VB.Form FormIgnite
       Value           =   10
       DefaultValue    =   10
    End
-   Begin PhotoDemon.pdSlider sltOpacity 
+   Begin PhotoPaint.pdSlider sltOpacity 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -111,7 +111,7 @@ Attribute VB_Exposed = False
 'While a "fire" effect has existed in PD for many years, it didn't receive its own dialog until July '14.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

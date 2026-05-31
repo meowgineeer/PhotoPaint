@@ -26,7 +26,7 @@ Begin VB.Form FormInternetImport
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   670
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdCommandBarMini cmdBarMini 
+   Begin PhotoPaint.pdCommandBarMini cmdBarMini 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -36,7 +36,7 @@ Begin VB.Form FormInternetImport
       _ExtentX        =   17727
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdTextBox txtURL 
+   Begin PhotoPaint.pdTextBox txtURL 
       Height          =   315
       Left            =   240
       TabIndex        =   1
@@ -46,7 +46,7 @@ Begin VB.Form FormInternetImport
       _ExtentY        =   556
       Text            =   "http://"
    End
-   Begin PhotoDemon.pdLabel lblCopyrightWarning 
+   Begin PhotoPaint.pdLabel lblCopyrightWarning 
       Height          =   615
       Left            =   240
       Top             =   1320
@@ -58,7 +58,7 @@ Begin VB.Form FormInternetImport
       ForeColor       =   8421504
       Layout          =   1
    End
-   Begin PhotoDemon.pdLabel lblDownloadPath 
+   Begin PhotoPaint.pdLabel lblDownloadPath 
       Height          =   285
       Left            =   120
       Top             =   360
@@ -89,7 +89,7 @@ Attribute VB_Exposed = False
 'The actual download code doesn't exist here.  Check the Web module for details.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -30,7 +30,7 @@ Begin VB.Form toolpanel_Pencil
    ScaleWidth      =   663
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdCheckBox chkAntialiasing 
+   Begin PhotoPaint.pdCheckBox chkAntialiasing 
       Height          =   375
       Left            =   5640
       TabIndex        =   2
@@ -40,7 +40,7 @@ Begin VB.Form toolpanel_Pencil
       _ExtentY        =   661
       Caption         =   "antialiased"
    End
-   Begin PhotoDemon.pdDropDown cboBrushSetting 
+   Begin PhotoPaint.pdDropDown cboBrushSetting 
       Height          =   375
       Index           =   0
       Left            =   3000
@@ -51,7 +51,7 @@ Begin VB.Form toolpanel_Pencil
       _ExtentY        =   1296
       FontSizeCaption =   10
    End
-   Begin PhotoDemon.pdSlider sltBrushSetting 
+   Begin PhotoPaint.pdSlider sltBrushSetting 
       CausesValidation=   0   'False
       Height          =   330
       Index           =   0
@@ -71,7 +71,7 @@ Begin VB.Form toolpanel_Pencil
       NotchPosition   =   1
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   0
       Left            =   0
@@ -83,7 +83,7 @@ Begin VB.Form toolpanel_Pencil
       Caption         =   "size"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   855
       Index           =   0
       Left            =   0
@@ -92,7 +92,7 @@ Begin VB.Form toolpanel_Pencil
       Width           =   3255
       _ExtentX        =   5741
       _ExtentY        =   1508
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   0
          Left            =   2760
@@ -103,7 +103,7 @@ Begin VB.Form toolpanel_Pencil
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdSlider sltBrushSetting 
+      Begin PhotoPaint.pdSlider sltBrushSetting 
          CausesValidation=   0   'False
          Height          =   690
          Index           =   1
@@ -121,7 +121,7 @@ Begin VB.Form toolpanel_Pencil
          DefaultValue    =   100
       End
    End
-   Begin PhotoDemon.pdTitle ttlPanel 
+   Begin PhotoPaint.pdTitle ttlPanel 
       Height          =   360
       Index           =   1
       Left            =   2880
@@ -133,7 +133,7 @@ Begin VB.Form toolpanel_Pencil
       Caption         =   "blend mode"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer cntrPopOut 
+   Begin PhotoPaint.pdContainer cntrPopOut 
       Height          =   855
       Index           =   1
       Left            =   3840
@@ -142,7 +142,7 @@ Begin VB.Form toolpanel_Pencil
       Width           =   3135
       _ExtentX        =   5530
       _ExtentY        =   1508
-      Begin PhotoDemon.pdButtonToolbox cmdFlyoutLock 
+      Begin PhotoPaint.pdButtonToolbox cmdFlyoutLock 
          Height          =   390
          Index           =   1
          Left            =   2640
@@ -153,7 +153,7 @@ Begin VB.Form toolpanel_Pencil
          _ExtentY        =   1111
          StickyToggle    =   -1  'True
       End
-      Begin PhotoDemon.pdDropDown cboBrushSetting 
+      Begin PhotoPaint.pdDropDown cboBrushSetting 
          Height          =   735
          Index           =   1
          Left            =   120
@@ -166,7 +166,7 @@ Begin VB.Form toolpanel_Pencil
          FontSizeCaption =   10
       End
    End
-   Begin PhotoDemon.pdCheckBox chkAlignPixelGrid 
+   Begin PhotoPaint.pdCheckBox chkAlignPixelGrid 
       Height          =   375
       Left            =   5640
       TabIndex        =   9
@@ -196,7 +196,7 @@ Attribute VB_Exposed = False
 'Extremely large radii are suppored, as are all blend modes (including "erase").
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -26,7 +26,7 @@ Begin VB.Form FormLayerSplit
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   834
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdButtonStripVertical btsImages 
+   Begin PhotoPaint.pdButtonStripVertical btsImages 
       Height          =   3495
       Left            =   6480
       TabIndex        =   12
@@ -36,7 +36,7 @@ Begin VB.Form FormLayerSplit
       _ExtentY        =   6165
       Caption         =   "after importing source images"
    End
-   Begin PhotoDemon.pdButtonStripVertical btsCanvas 
+   Begin PhotoPaint.pdButtonStripVertical btsCanvas 
       Height          =   1695
       Left            =   240
       TabIndex        =   10
@@ -46,7 +46,7 @@ Begin VB.Form FormLayerSplit
       _ExtentY        =   2990
       Caption         =   "canvas size"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   735
       Left            =   0
@@ -56,7 +56,7 @@ Begin VB.Form FormLayerSplit
       _ExtentX        =   22066
       _ExtentY        =   1296
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   0
       Left            =   480
@@ -66,7 +66,7 @@ Begin VB.Form FormLayerSplit
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   1
       Left            =   1320
@@ -76,7 +76,7 @@ Begin VB.Form FormLayerSplit
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   2
       Left            =   2160
@@ -86,7 +86,7 @@ Begin VB.Form FormLayerSplit
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   3
       Left            =   480
@@ -96,7 +96,7 @@ Begin VB.Form FormLayerSplit
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   4
       Left            =   1320
@@ -106,7 +106,7 @@ Begin VB.Form FormLayerSplit
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   5
       Left            =   2160
@@ -116,7 +116,7 @@ Begin VB.Form FormLayerSplit
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   6
       Left            =   480
@@ -126,7 +126,7 @@ Begin VB.Form FormLayerSplit
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   7
       Left            =   1320
@@ -136,7 +136,7 @@ Begin VB.Form FormLayerSplit
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdButton cmdAnchor 
+   Begin PhotoPaint.pdButton cmdAnchor 
       Height          =   570
       Index           =   8
       Left            =   2160
@@ -146,7 +146,7 @@ Begin VB.Form FormLayerSplit
       _ExtentX        =   1323
       _ExtentY        =   1005
    End
-   Begin PhotoDemon.pdLabel lblAnchor 
+   Begin PhotoPaint.pdLabel lblAnchor 
       Height          =   285
       Index           =   0
       Left            =   240
@@ -158,7 +158,7 @@ Begin VB.Form FormLayerSplit
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdButtonStripVertical btsLayerNames 
+   Begin PhotoPaint.pdButtonStripVertical btsLayerNames 
       Height          =   1695
       Left            =   240
       TabIndex        =   11
@@ -168,7 +168,7 @@ Begin VB.Form FormLayerSplit
       _ExtentY        =   2990
       Caption         =   "if imported layer names match existing layer names"
    End
-   Begin PhotoDemon.pdLabel lblAnchor 
+   Begin PhotoPaint.pdLabel lblAnchor 
       Height          =   285
       Index           =   1
       Left            =   120
@@ -181,7 +181,7 @@ Begin VB.Form FormLayerSplit
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdLabel lblAnchor 
+   Begin PhotoPaint.pdLabel lblAnchor 
       Height          =   285
       Index           =   2
       Left            =   6360
@@ -214,7 +214,7 @@ Attribute VB_Exposed = False
 ' context), and this dialog gives the user some control over the process.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -22,7 +22,7 @@ Begin VB.Form dialog_ExportJP2
    ScaleHeight     =   439
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   842
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -33,7 +33,7 @@ Begin VB.Form dialog_ExportJP2
       _ExtentY        =   1323
       DontAutoUnloadParent=   -1  'True
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -42,7 +42,7 @@ Begin VB.Form dialog_ExportJP2
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdButtonStrip btsCategory 
+   Begin PhotoPaint.pdButtonStrip btsCategory 
       Height          =   615
       Left            =   5880
       TabIndex        =   2
@@ -52,7 +52,7 @@ Begin VB.Form dialog_ExportJP2
       _ExtentY        =   1085
       FontSize        =   11
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4815
       Index           =   0
       Left            =   5880
@@ -60,7 +60,7 @@ Begin VB.Form dialog_ExportJP2
       Width           =   6615
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdDropDown cboSaveQuality 
+      Begin PhotoPaint.pdDropDown cboSaveQuality 
          Height          =   735
          Left            =   120
          TabIndex        =   3
@@ -70,7 +70,7 @@ Begin VB.Form dialog_ExportJP2
          _ExtentY        =   1296
          Caption         =   "image compression ratio"
       End
-      Begin PhotoDemon.pdSlider sltQuality 
+      Begin PhotoPaint.pdSlider sltQuality 
          Height          =   405
          Left            =   120
          TabIndex        =   5
@@ -84,7 +84,7 @@ Begin VB.Form dialog_ExportJP2
          NotchPosition   =   1
          DefaultValue    =   16
       End
-      Begin PhotoDemon.pdLabel lblBefore 
+      Begin PhotoPaint.pdLabel lblBefore 
          Height          =   435
          Left            =   240
          Top             =   2760
@@ -97,7 +97,7 @@ Begin VB.Form dialog_ExportJP2
          ForeColor       =   4210752
          Layout          =   1
       End
-      Begin PhotoDemon.pdLabel lblAfter 
+      Begin PhotoPaint.pdLabel lblAfter 
          Height          =   435
          Left            =   3240
          Top             =   2760
@@ -112,7 +112,7 @@ Begin VB.Form dialog_ExportJP2
          Layout          =   1
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   4815
       Index           =   1
       Left            =   5880
@@ -120,7 +120,7 @@ Begin VB.Form dialog_ExportJP2
       Width           =   6615
       _ExtentX        =   0
       _ExtentY        =   0
-      Begin PhotoDemon.pdMetadataExport mtdManager 
+      Begin PhotoPaint.pdMetadataExport mtdManager 
          Height          =   4215
          Left            =   120
          TabIndex        =   4
@@ -147,7 +147,7 @@ Attribute VB_Exposed = False
 ' previewing JP2 export settings, and handling the ultimate export to file.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

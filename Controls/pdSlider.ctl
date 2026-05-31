@@ -21,7 +21,7 @@ Begin VB.UserControl pdSlider
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   400
    ToolboxBitmap   =   "pdSlider.ctx":0000
-   Begin PhotoDemon.pdSliderStandalone pdssPrimary 
+   Begin PhotoPaint.pdSliderStandalone pdssPrimary 
       Height          =   360
       Left            =   0
       TabIndex        =   0
@@ -30,7 +30,7 @@ Begin VB.UserControl pdSlider
       _ExtentX        =   8281
       _ExtentY        =   635
    End
-   Begin PhotoDemon.pdSpinner tudPrimary 
+   Begin PhotoPaint.pdSpinner tudPrimary 
       Height          =   345
       Left            =   4440
       TabIndex        =   1
@@ -67,7 +67,7 @@ Attribute VB_Exposed = False
 ' 7) Self-captioning, to remove the need for a redundant label control next to this one
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

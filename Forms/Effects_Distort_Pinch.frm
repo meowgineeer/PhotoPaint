@@ -24,7 +24,7 @@ Begin VB.Form FormPinch
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   806
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormPinch
       _ExtentX        =   21325
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -44,7 +44,7 @@ Begin VB.Form FormPinch
       DisableZoomPan  =   -1  'True
       PointSelection  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sltAngle 
+   Begin PhotoPaint.pdSlider sltAngle 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -57,7 +57,7 @@ Begin VB.Form FormPinch
       Max             =   360
       SigDigits       =   1
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -72,7 +72,7 @@ Begin VB.Form FormPinch
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdSlider sltAmount 
+   Begin PhotoPaint.pdSlider sltAmount 
       Height          =   705
       Left            =   6000
       TabIndex        =   5
@@ -85,7 +85,7 @@ Begin VB.Form FormPinch
       Max             =   1
       SigDigits       =   2
    End
-   Begin PhotoDemon.pdSlider sltXCenter 
+   Begin PhotoPaint.pdSlider sltXCenter 
       Height          =   405
       Left            =   6000
       TabIndex        =   6
@@ -99,7 +99,7 @@ Begin VB.Form FormPinch
       NotchPosition   =   2
       NotchValueCustom=   0.5
    End
-   Begin PhotoDemon.pdSlider sltYCenter 
+   Begin PhotoPaint.pdSlider sltYCenter 
       Height          =   405
       Left            =   9000
       TabIndex        =   7
@@ -113,7 +113,7 @@ Begin VB.Form FormPinch
       NotchPosition   =   2
       NotchValueCustom=   0.5
    End
-   Begin PhotoDemon.pdSlider sltQuality 
+   Begin PhotoPaint.pdSlider sltQuality 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -128,7 +128,7 @@ Begin VB.Form FormPinch
       NotchPosition   =   2
       NotchValueCustom=   2
    End
-   Begin PhotoDemon.pdDropDown cboEdges 
+   Begin PhotoPaint.pdDropDown cboEdges 
       Height          =   735
       Left            =   6000
       TabIndex        =   8
@@ -138,7 +138,7 @@ Begin VB.Form FormPinch
       _ExtentY        =   1296
       Caption         =   "if pixels lie outside the image..."
    End
-   Begin PhotoDemon.pdLabel lblExplanation 
+   Begin PhotoPaint.pdLabel lblExplanation 
       Height          =   435
       Index           =   0
       Left            =   6120
@@ -152,7 +152,7 @@ Begin VB.Form FormPinch
       ForeColor       =   4210752
       Layout          =   1
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   330
       Index           =   0
       Left            =   6000
@@ -186,7 +186,7 @@ Attribute VB_Exposed = False
 ' original version at the following link (good as of 07 January '13): http://www.jhlabs.com/ip/filters/index.html
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

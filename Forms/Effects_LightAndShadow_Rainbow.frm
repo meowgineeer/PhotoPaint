@@ -24,7 +24,7 @@ Begin VB.Form FormRainbow
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   785
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -33,7 +33,7 @@ Begin VB.Form FormRainbow
       _ExtentX        =   20770
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltOffset 
+   Begin PhotoPaint.pdSlider sltOffset 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -45,7 +45,7 @@ Begin VB.Form FormRainbow
       Max             =   359
       SliderTrackStyle=   4
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -55,7 +55,7 @@ Begin VB.Form FormRainbow
       _ExtentY        =   9922
       DisableZoomPan  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sltAngle 
+   Begin PhotoPaint.pdSlider sltAngle 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -66,7 +66,7 @@ Begin VB.Form FormRainbow
       Caption         =   "angle"
       Max             =   360
    End
-   Begin PhotoDemon.pdSlider sltStrength 
+   Begin PhotoPaint.pdSlider sltStrength 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -79,7 +79,7 @@ Begin VB.Form FormRainbow
       Value           =   100
       DefaultValue    =   100
    End
-   Begin PhotoDemon.pdSlider sltSaturation 
+   Begin PhotoPaint.pdSlider sltSaturation 
       Height          =   705
       Left            =   6000
       TabIndex        =   5
@@ -106,7 +106,7 @@ Attribute VB_Exposed = False
 'Fun Rainbow effect for an image.  Options should be self-explanatory.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

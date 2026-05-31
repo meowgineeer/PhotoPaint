@@ -24,7 +24,7 @@ Begin VB.Form FormGradientFlow
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   802
-   Begin PhotoDemon.pdSlider sldOpacityBack 
+   Begin PhotoPaint.pdSlider sldOpacityBack 
       Height          =   450
       Left            =   9240
       TabIndex        =   7
@@ -37,7 +37,7 @@ Begin VB.Form FormGradientFlow
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdColorSelector csBackground 
+   Begin PhotoPaint.pdColorSelector csBackground 
       Height          =   450
       Left            =   6360
       TabIndex        =   6
@@ -46,7 +46,7 @@ Begin VB.Form FormGradientFlow
       _ExtentX        =   4895
       _ExtentY        =   794
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   300
       Index           =   0
       Left            =   6240
@@ -57,7 +57,7 @@ Begin VB.Form FormGradientFlow
       Caption         =   "background color and opacity"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdButtonStrip btsTarget 
+   Begin PhotoPaint.pdButtonStrip btsTarget 
       Height          =   975
       Left            =   6000
       TabIndex        =   4
@@ -67,7 +67,7 @@ Begin VB.Form FormGradientFlow
       _ExtentY        =   1931
       Caption         =   "render"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -76,7 +76,7 @@ Begin VB.Form FormGradientFlow
       _ExtentX        =   21220
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -85,7 +85,7 @@ Begin VB.Form FormGradientFlow
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sldSmoothing 
+   Begin PhotoPaint.pdSlider sldSmoothing 
       Height          =   705
       Left            =   6000
       TabIndex        =   2
@@ -97,7 +97,7 @@ Begin VB.Form FormGradientFlow
       Max             =   100
       ScaleStyle      =   1
    End
-   Begin PhotoDemon.pdSlider sldBoost 
+   Begin PhotoPaint.pdSlider sldBoost 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -109,7 +109,7 @@ Begin VB.Form FormGradientFlow
       Max             =   100
       ScaleStyle      =   1
    End
-   Begin PhotoDemon.pdSlider sldSampleSize 
+   Begin PhotoPaint.pdSlider sldSampleSize 
       Height          =   705
       Left            =   6240
       TabIndex        =   5
@@ -124,7 +124,7 @@ Begin VB.Form FormGradientFlow
       Value           =   5
       DefaultValue    =   5
    End
-   Begin PhotoDemon.pdButtonStrip btsForeground 
+   Begin PhotoPaint.pdButtonStrip btsForeground 
       Height          =   975
       Left            =   6240
       TabIndex        =   8
@@ -148,7 +148,7 @@ Attribute VB_Exposed = False
 'Last update: wrap up initial build
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

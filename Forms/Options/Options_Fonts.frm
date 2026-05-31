@@ -29,7 +29,7 @@ Begin VB.Form options_Fonts
    ScaleWidth      =   553
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdButton cmdUserFonts 
+   Begin PhotoPaint.pdButton cmdUserFonts 
       Height          =   495
       Index           =   0
       Left            =   120
@@ -40,7 +40,7 @@ Begin VB.Form options_Fonts
       _ExtentY        =   873
       Caption         =   "add another folder"
    End
-   Begin PhotoDemon.pdListBox lstFonts 
+   Begin PhotoPaint.pdListBox lstFonts 
       Height          =   1695
       Left            =   0
       TabIndex        =   1
@@ -50,7 +50,7 @@ Begin VB.Form options_Fonts
       _ExtentY        =   2990
       Caption         =   "font folders:"
    End
-   Begin PhotoDemon.pdLabel lblInfo 
+   Begin PhotoPaint.pdLabel lblInfo 
       Height          =   615
       Index           =   0
       Left            =   120
@@ -62,7 +62,7 @@ Begin VB.Form options_Fonts
       Caption         =   ""
       Layout          =   1
    End
-   Begin PhotoDemon.pdDropDownFont ddFont 
+   Begin PhotoPaint.pdDropDownFont ddFont 
       Height          =   855
       Left            =   0
       TabIndex        =   0
@@ -72,7 +72,7 @@ Begin VB.Form options_Fonts
       _ExtentY        =   1508
       Caption         =   "interface font"
    End
-   Begin PhotoDemon.pdButton cmdUserFonts 
+   Begin PhotoPaint.pdButton cmdUserFonts 
       Height          =   495
       Index           =   1
       Left            =   4200
@@ -108,7 +108,7 @@ Attribute VB_Exposed = False
 ' (That module is responsible for all low-level preference reading/writing.)
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
@@ -289,7 +289,7 @@ End Function
 ' but it can be called again if the active language or theme changes.
 Public Sub UpdateAgainstCurrentTheme()
     
-    lblInfo(0).Caption = g_Language.TranslateMessage("Changes will take effect the next time you start PhotoDemon.")
+    lblInfo(0).Caption = g_Language.TranslateMessage("Changes will take effect the next time you start PhotoPaint.")
     Interface.ApplyThemeAndTranslations Me
     
     UpdateFontButtons

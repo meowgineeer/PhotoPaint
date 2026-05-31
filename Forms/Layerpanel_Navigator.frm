@@ -30,7 +30,7 @@ Begin VB.Form layerpanel_Navigator
    ScaleWidth      =   304
    ShowInTaskbar   =   0   'False
    Visible         =   0   'False
-   Begin PhotoDemon.pdNavigator nvgMain 
+   Begin PhotoPaint.pdNavigator nvgMain 
       Height          =   735
       Left            =   120
       TabIndex        =   0
@@ -61,7 +61,7 @@ Attribute VB_Exposed = False
 ' allow the user to quickly move around the image regardless of zoom.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

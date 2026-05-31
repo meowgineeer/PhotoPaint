@@ -24,7 +24,7 @@ Begin VB.Form FormColorize
    ScaleHeight     =   438
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   777
-   Begin PhotoDemon.pdSlider sldOpacity 
+   Begin PhotoPaint.pdSlider sldOpacity 
       Height          =   735
       Left            =   8760
       TabIndex        =   7
@@ -38,7 +38,7 @@ Begin VB.Form FormColorize
       NotchPosition   =   2
       NotchValueCustom=   100
    End
-   Begin PhotoDemon.pdDropDown ddBlendMode 
+   Begin PhotoPaint.pdDropDown ddBlendMode 
       Height          =   735
       Left            =   6000
       TabIndex        =   6
@@ -48,7 +48,7 @@ Begin VB.Form FormColorize
       _ExtentY        =   1296
       Caption         =   "blend mode"
    End
-   Begin PhotoDemon.pdButtonStrip btsSaturation 
+   Begin PhotoPaint.pdButtonStrip btsSaturation 
       Height          =   1095
       Left            =   6000
       TabIndex        =   4
@@ -58,7 +58,7 @@ Begin VB.Form FormColorize
       _ExtentY        =   1931
       Caption         =   "saturation"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -67,7 +67,7 @@ Begin VB.Form FormColorize
       _ExtentX        =   20558
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -76,7 +76,7 @@ Begin VB.Form FormColorize
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdSlider sldHSL 
+   Begin PhotoPaint.pdSlider sldHSL 
       Height          =   705
       Index           =   0
       Left            =   6000
@@ -92,7 +92,7 @@ Begin VB.Form FormColorize
       NotchPosition   =   1
       DefaultValue    =   180
    End
-   Begin PhotoDemon.pdSlider sldHSL 
+   Begin PhotoPaint.pdSlider sldHSL 
       Height          =   705
       Index           =   1
       Left            =   6000
@@ -107,7 +107,7 @@ Begin VB.Form FormColorize
       NotchPosition   =   2
       NotchValueCustom=   50
    End
-   Begin PhotoDemon.pdSlider sldHSL 
+   Begin PhotoPaint.pdSlider sldHSL 
       Height          =   705
       Index           =   2
       Left            =   6000
@@ -138,7 +138,7 @@ Attribute VB_Exposed = False
 ' constant value, instead of merely scaling them proportionally.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

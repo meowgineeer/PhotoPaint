@@ -22,7 +22,7 @@ Begin VB.Form dialog_ExportPNG
    ScaleHeight     =   500
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   874
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -32,7 +32,7 @@ Begin VB.Form dialog_ExportPNG
       _ExtentX        =   23125
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   6495
       Left            =   120
       TabIndex        =   1
@@ -41,7 +41,7 @@ Begin VB.Form dialog_ExportPNG
       _ExtentX        =   9922
       _ExtentY        =   11456
    End
-   Begin PhotoDemon.pdContainer picCategory 
+   Begin PhotoPaint.pdContainer picCategory 
       Height          =   6495
       Index           =   0
       Left            =   5880
@@ -49,7 +49,7 @@ Begin VB.Form dialog_ExportPNG
       Width           =   7095
       _ExtentX        =   12515
       _ExtentY        =   11245
-      Begin PhotoDemon.pdTitle ttlStandard 
+      Begin PhotoPaint.pdTitle ttlStandard 
          Height          =   375
          Index           =   0
          Left            =   120
@@ -62,7 +62,7 @@ Begin VB.Form dialog_ExportPNG
          FontBold        =   -1  'True
          FontSize        =   12
       End
-      Begin PhotoDemon.pdTitle ttlStandard 
+      Begin PhotoPaint.pdTitle ttlStandard 
          Height          =   375
          Index           =   1
          Left            =   120
@@ -76,7 +76,7 @@ Begin VB.Form dialog_ExportPNG
          FontSize        =   12
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdTitle ttlStandard 
+      Begin PhotoPaint.pdTitle ttlStandard 
          Height          =   375
          Index           =   2
          Left            =   120
@@ -90,7 +90,7 @@ Begin VB.Form dialog_ExportPNG
          FontSize        =   12
          Value           =   0   'False
       End
-      Begin PhotoDemon.pdContainer picContainer 
+      Begin PhotoPaint.pdContainer picContainer 
          Height          =   2535
          Index           =   0
          Left            =   120
@@ -99,7 +99,7 @@ Begin VB.Form dialog_ExportPNG
          Width           =   7095
          _ExtentX        =   12515
          _ExtentY        =   4471
-         Begin PhotoDemon.pdDropDown cboOptimize 
+         Begin PhotoPaint.pdDropDown cboOptimize 
             Height          =   855
             Left            =   360
             TabIndex        =   6
@@ -109,7 +109,7 @@ Begin VB.Form dialog_ExportPNG
             _ExtentY        =   1508
             Caption         =   "compression optimization"
          End
-         Begin PhotoDemon.pdLabel lblHint 
+         Begin PhotoPaint.pdLabel lblHint 
             Height          =   255
             Index           =   0
             Left            =   480
@@ -121,7 +121,7 @@ Begin VB.Form dialog_ExportPNG
             FontItalic      =   -1  'True
             FontSize        =   9
          End
-         Begin PhotoDemon.pdSlider sldCompression 
+         Begin PhotoPaint.pdSlider sldCompression 
             Height          =   735
             Left            =   360
             TabIndex        =   7
@@ -136,7 +136,7 @@ Begin VB.Form dialog_ExportPNG
             NotchPosition   =   2
             NotchValueCustom=   9
          End
-         Begin PhotoDemon.pdColorSelector clsBackground 
+         Begin PhotoPaint.pdColorSelector clsBackground 
             Height          =   375
             Left            =   5400
             TabIndex        =   8
@@ -147,7 +147,7 @@ Begin VB.Form dialog_ExportPNG
             FontSize        =   10
             ShowMainWindowColor=   0   'False
          End
-         Begin PhotoDemon.pdCheckBox chkEmbedBackground 
+         Begin PhotoPaint.pdCheckBox chkEmbedBackground 
             Height          =   375
             Left            =   360
             TabIndex        =   9
@@ -158,7 +158,7 @@ Begin VB.Form dialog_ExportPNG
             Caption         =   "embed background color (bKGD chunk)"
             Value           =   0   'False
          End
-         Begin PhotoDemon.pdLabel lblHint 
+         Begin PhotoPaint.pdLabel lblHint 
             Height          =   255
             Index           =   1
             Left            =   2880
@@ -172,7 +172,7 @@ Begin VB.Form dialog_ExportPNG
             FontSize        =   9
          End
       End
-      Begin PhotoDemon.pdContainer picContainer 
+      Begin PhotoPaint.pdContainer picContainer 
          Height          =   5175
          Index           =   1
          Left            =   120
@@ -181,7 +181,7 @@ Begin VB.Form dialog_ExportPNG
          Width           =   7095
          _ExtentX        =   12515
          _ExtentY        =   9128
-         Begin PhotoDemon.pdColorDepth clrDepth 
+         Begin PhotoPaint.pdColorDepth clrDepth 
             Height          =   5055
             Left            =   360
             TabIndex        =   10
@@ -191,7 +191,7 @@ Begin VB.Form dialog_ExportPNG
             _ExtentY        =   8916
          End
       End
-      Begin PhotoDemon.pdContainer picContainer 
+      Begin PhotoPaint.pdContainer picContainer 
          Height          =   3255
          Index           =   2
          Left            =   120
@@ -200,7 +200,7 @@ Begin VB.Form dialog_ExportPNG
          Width           =   7095
          _ExtentX        =   12515
          _ExtentY        =   5741
-         Begin PhotoDemon.pdMetadataExport mtdManager 
+         Begin PhotoPaint.pdMetadataExport mtdManager 
             Height          =   3255
             Left            =   360
             TabIndex        =   5
@@ -232,7 +232,7 @@ Attribute VB_Exposed = False
 ' This has since been retired in favor of a full Save for Web tool.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -26,7 +26,7 @@ Begin VB.Form FormResizeContentAware
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   647
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -37,7 +37,7 @@ Begin VB.Form FormResizeContentAware
       _ExtentY        =   1323
       AutoloadLastPreset=   -1  'True
    End
-   Begin PhotoDemon.pdResize ucResize 
+   Begin PhotoPaint.pdResize ucResize 
       Height          =   2850
       Left            =   480
       TabIndex        =   1
@@ -46,7 +46,7 @@ Begin VB.Form FormResizeContentAware
       _ExtentX        =   15478
       _ExtentY        =   5027
    End
-   Begin PhotoDemon.pdLabel lblFlatten 
+   Begin PhotoPaint.pdLabel lblFlatten 
       Height          =   645
       Left            =   240
       Top             =   3480
@@ -93,7 +93,7 @@ Attribute VB_Exposed = False
 ' but I remain worried that this task may prove a bit much for VB6.  We'll see.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

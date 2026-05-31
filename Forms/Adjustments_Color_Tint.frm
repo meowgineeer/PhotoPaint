@@ -24,7 +24,7 @@ Begin VB.Form FormTint
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   752
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -33,7 +33,7 @@ Begin VB.Form FormTint
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -42,7 +42,7 @@ Begin VB.Form FormTint
       _ExtentX        =   19897
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdSlider sltTint 
+   Begin PhotoPaint.pdSlider sltTint 
       CausesValidation=   0   'False
       Height          =   705
       Left            =   6000
@@ -82,7 +82,7 @@ Attribute VB_Exposed = False
 ' tint quick-fix slider.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

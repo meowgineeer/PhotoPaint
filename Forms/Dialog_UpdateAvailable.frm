@@ -26,7 +26,7 @@ Begin VB.Form FormUpdateNotify
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   613
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdButton cmdUpdate 
+   Begin PhotoPaint.pdButton cmdUpdate 
       Height          =   750
       Index           =   0
       Left            =   120
@@ -37,7 +37,7 @@ Begin VB.Form FormUpdateNotify
       _ExtentY        =   1323
       Caption         =   "Restart PhotoDemon"
    End
-   Begin PhotoDemon.pdCheckBox chkNotify 
+   Begin PhotoPaint.pdCheckBox chkNotify 
       Height          =   330
       Left            =   120
       TabIndex        =   0
@@ -48,7 +48,7 @@ Begin VB.Form FormUpdateNotify
       Caption         =   "in the future, do not notify me of updates"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdHyperlink lblReleaseAnnouncement 
+   Begin PhotoPaint.pdHyperlink lblReleaseAnnouncement 
       Height          =   270
       Left            =   840
       TabIndex        =   3
@@ -60,7 +60,7 @@ Begin VB.Form FormUpdateNotify
       Caption         =   ""
       FontSize        =   11
    End
-   Begin PhotoDemon.pdLabel lblUpdate 
+   Begin PhotoPaint.pdLabel lblUpdate 
       Height          =   735
       Left            =   960
       Top             =   120
@@ -71,7 +71,7 @@ Begin VB.Form FormUpdateNotify
       FontSize        =   11
       Layout          =   1
    End
-   Begin PhotoDemon.pdButton cmdUpdate 
+   Begin PhotoPaint.pdButton cmdUpdate 
       Height          =   750
       Index           =   1
       Left            =   4680
@@ -82,7 +82,7 @@ Begin VB.Form FormUpdateNotify
       _ExtentY        =   1323
       Caption         =   "Keep working"
    End
-   Begin PhotoDemon.pdPictureBox picWarning 
+   Begin PhotoPaint.pdPictureBox picWarning 
       Height          =   615
       Left            =   60
       Top             =   120
@@ -107,7 +107,7 @@ Attribute VB_Exposed = False
 ' immediately restart+apply, or continue working.  Not much to it!
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

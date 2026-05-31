@@ -22,7 +22,7 @@ Begin VB.Form dialog_ExportBMP
    ScaleHeight     =   436
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   873
-   Begin PhotoDemon.pdCheckBox chkColorCount 
+   Begin PhotoPaint.pdCheckBox chkColorCount 
       Height          =   375
       Left            =   6000
       TabIndex        =   6
@@ -33,7 +33,7 @@ Begin VB.Form dialog_ExportBMP
       Caption         =   "restrict palette size"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdColorSelector clsBackground 
+   Begin PhotoPaint.pdColorSelector clsBackground 
       Height          =   975
       Left            =   5880
       TabIndex        =   9
@@ -43,7 +43,7 @@ Begin VB.Form dialog_ExportBMP
       _ExtentY        =   1720
       Caption         =   "background color"
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   375
       Index           =   0
       Left            =   9360
@@ -53,7 +53,7 @@ Begin VB.Form dialog_ExportBMP
       _ExtentY        =   661
       Caption         =   "unique colors"
    End
-   Begin PhotoDemon.pdSlider sldColorCount 
+   Begin PhotoPaint.pdSlider sldColorCount 
       Height          =   375
       Left            =   6240
       TabIndex        =   7
@@ -67,7 +67,7 @@ Begin VB.Form dialog_ExportBMP
       NotchPosition   =   2
       NotchValueCustom=   256
    End
-   Begin PhotoDemon.pdButtonStrip btsDepthRGB 
+   Begin PhotoPaint.pdButtonStrip btsDepthRGB 
       Height          =   1095
       Left            =   5880
       TabIndex        =   4
@@ -77,7 +77,7 @@ Begin VB.Form dialog_ExportBMP
       _ExtentY        =   1931
       Caption         =   "depth"
    End
-   Begin PhotoDemon.pdButtonStrip btsColorModel 
+   Begin PhotoPaint.pdButtonStrip btsColorModel 
       Height          =   1095
       Left            =   5880
       TabIndex        =   3
@@ -87,7 +87,7 @@ Begin VB.Form dialog_ExportBMP
       _ExtentY        =   1931
       Caption         =   "color model"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -97,7 +97,7 @@ Begin VB.Form dialog_ExportBMP
       _ExtentX        =   23098
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdCheckBox chkRLE 
+   Begin PhotoPaint.pdCheckBox chkRLE 
       Height          =   375
       Left            =   6000
       TabIndex        =   0
@@ -108,7 +108,7 @@ Begin VB.Form dialog_ExportBMP
       Caption         =   "use RLE compression"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdButtonStrip btsDepthGrayscale 
+   Begin PhotoPaint.pdButtonStrip btsDepthGrayscale 
       Height          =   1095
       Left            =   5880
       TabIndex        =   5
@@ -118,7 +118,7 @@ Begin VB.Form dialog_ExportBMP
       _ExtentY        =   1931
       Caption         =   "depth"
    End
-   Begin PhotoDemon.pdCheckBox chkPremultiplyAlpha 
+   Begin PhotoPaint.pdCheckBox chkPremultiplyAlpha 
       Height          =   375
       Left            =   6000
       TabIndex        =   8
@@ -129,7 +129,7 @@ Begin VB.Form dialog_ExportBMP
       Caption         =   "premultiply alpha"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdCheckBox chkFlipRows 
+   Begin PhotoPaint.pdCheckBox chkFlipRows 
       Height          =   375
       Left            =   6000
       TabIndex        =   10
@@ -140,7 +140,7 @@ Begin VB.Form dialog_ExportBMP
       Caption         =   "flip row order (top-down)"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   11
@@ -149,7 +149,7 @@ Begin VB.Form dialog_ExportBMP
       _ExtentX        =   9922
       _ExtentY        =   9922
    End
-   Begin PhotoDemon.pdCheckBox chk16555 
+   Begin PhotoPaint.pdCheckBox chk16555 
       Height          =   375
       Left            =   6000
       TabIndex        =   1
@@ -175,7 +175,7 @@ Attribute VB_Exposed = False
 '             transparent images (e.g. background color) if the current image is fully opaque.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

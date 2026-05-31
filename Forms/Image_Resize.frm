@@ -22,7 +22,7 @@ Begin VB.Form FormResize
    ScaleHeight     =   432
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   962
-   Begin PhotoDemon.pdCheckBox chkPreview 
+   Begin PhotoPaint.pdCheckBox chkPreview 
       Height          =   375
       Left            =   120
       TabIndex        =   6
@@ -32,7 +32,7 @@ Begin VB.Form FormResize
       _ExtentY        =   661
       Caption         =   "preview changes"
    End
-   Begin PhotoDemon.pdPictureBoxInteractive picPreview 
+   Begin PhotoPaint.pdPictureBoxInteractive picPreview 
       Height          =   4920
       Left            =   120
       Top             =   240
@@ -40,7 +40,7 @@ Begin VB.Form FormResize
       _ExtentX        =   9525
       _ExtentY        =   8678
    End
-   Begin PhotoDemon.pdLabel lblLanczos 
+   Begin PhotoPaint.pdLabel lblLanczos 
       Height          =   375
       Left            =   10200
       Top             =   4185
@@ -51,7 +51,7 @@ Begin VB.Form FormResize
       Alignment       =   1
       Caption         =   "radius:"
    End
-   Begin PhotoDemon.pdSlider sldLanczos 
+   Begin PhotoPaint.pdSlider sldLanczos 
       Height          =   375
       Left            =   11400
       TabIndex        =   5
@@ -65,7 +65,7 @@ Begin VB.Form FormResize
       NotchPosition   =   2
       NotchValueCustom=   3
    End
-   Begin PhotoDemon.pdCheckBox chkEstimate 
+   Begin PhotoPaint.pdCheckBox chkEstimate 
       Height          =   375
       Left            =   6495
       TabIndex        =   4
@@ -75,7 +75,7 @@ Begin VB.Form FormResize
       _ExtentY        =   661
       Caption         =   "optimize for speed"
    End
-   Begin PhotoDemon.pdDropDown cmbFit 
+   Begin PhotoPaint.pdDropDown cmbFit 
       Height          =   855
       Left            =   6360
       TabIndex        =   2
@@ -85,7 +85,7 @@ Begin VB.Form FormResize
       _ExtentY        =   1508
       Caption         =   "when changing aspect ratio, fit image to new size by"
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -95,7 +95,7 @@ Begin VB.Form FormResize
       _ExtentX        =   25453
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdResize ucResize 
+   Begin PhotoPaint.pdResize ucResize 
       Height          =   2850
       Left            =   5760
       TabIndex        =   1
@@ -104,7 +104,7 @@ Begin VB.Form FormResize
       _ExtentX        =   14843
       _ExtentY        =   5027
    End
-   Begin PhotoDemon.pdDropDown cboResample 
+   Begin PhotoPaint.pdDropDown cboResample 
       Height          =   735
       Left            =   6360
       TabIndex        =   3
@@ -136,7 +136,7 @@ Attribute VB_Exposed = False
 ' completely within the new boundaries, cropping the other image dimension as necessary).
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

@@ -26,7 +26,7 @@ Begin VB.Form FormImageCompare
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   434
    ShowInTaskbar   =   0   'False
-   Begin PhotoDemon.pdCheckBox chkSettings 
+   Begin PhotoPaint.pdCheckBox chkSettings 
       Height          =   375
       Index           =   0
       Left            =   480
@@ -37,7 +37,7 @@ Begin VB.Form FormImageCompare
       _ExtentY        =   661
       Caption         =   "resize images as necessary"
    End
-   Begin PhotoDemon.pdLabel lblSettings 
+   Begin PhotoPaint.pdLabel lblSettings 
       Height          =   375
       Left            =   120
       Top             =   3240
@@ -47,7 +47,7 @@ Begin VB.Form FormImageCompare
       Caption         =   "options"
       FontSize        =   12
    End
-   Begin PhotoDemon.pdCommandBarMini cmdBar 
+   Begin PhotoPaint.pdCommandBarMini cmdBar 
       Align           =   2  'Align Bottom
       Height          =   855
       Left            =   0
@@ -57,7 +57,7 @@ Begin VB.Form FormImageCompare
       _ExtentX        =   11483
       _ExtentY        =   1508
    End
-   Begin PhotoDemon.pdDropDown ddSource 
+   Begin PhotoPaint.pdDropDown ddSource 
       Height          =   735
       Index           =   0
       Left            =   120
@@ -68,7 +68,7 @@ Begin VB.Form FormImageCompare
       _ExtentY        =   1296
       Caption         =   "base image and layer"
    End
-   Begin PhotoDemon.pdDropDown ddSource 
+   Begin PhotoPaint.pdDropDown ddSource 
       Height          =   375
       Index           =   1
       Left            =   480
@@ -79,7 +79,7 @@ Begin VB.Form FormImageCompare
       _ExtentY        =   661
       FontSizeCaption =   11
    End
-   Begin PhotoDemon.pdDropDown ddSource 
+   Begin PhotoPaint.pdDropDown ddSource 
       Height          =   735
       Index           =   2
       Left            =   120
@@ -90,7 +90,7 @@ Begin VB.Form FormImageCompare
       _ExtentY        =   1296
       Caption         =   "comparison image and layer"
    End
-   Begin PhotoDemon.pdDropDown ddSource 
+   Begin PhotoPaint.pdDropDown ddSource 
       Height          =   375
       Index           =   3
       Left            =   480
@@ -101,7 +101,7 @@ Begin VB.Form FormImageCompare
       _ExtentY        =   661
       FontSizeCaption =   11
    End
-   Begin PhotoDemon.pdCheckBox chkSettings 
+   Begin PhotoPaint.pdCheckBox chkSettings 
       Height          =   375
       Index           =   1
       Left            =   480
@@ -113,7 +113,7 @@ Begin VB.Form FormImageCompare
       Caption         =   "compare using Lab color space"
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdCheckBox chkSettings 
+   Begin PhotoPaint.pdCheckBox chkSettings 
       Height          =   375
       Index           =   2
       Left            =   480
@@ -149,7 +149,7 @@ Attribute VB_Exposed = False
 '... but there's no planned completion date for this at present.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

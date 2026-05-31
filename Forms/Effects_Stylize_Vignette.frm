@@ -24,7 +24,7 @@ Begin VB.Form FormVignette
    ScaleHeight     =   443
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   806
-   Begin PhotoDemon.pdButtonStrip btsShape 
+   Begin PhotoPaint.pdButtonStrip btsShape 
       Height          =   975
       Left            =   6000
       TabIndex        =   8
@@ -34,7 +34,7 @@ Begin VB.Form FormVignette
       _ExtentY        =   1720
       Caption         =   "shape"
    End
-   Begin PhotoDemon.pdSlider sltXCenter 
+   Begin PhotoPaint.pdSlider sltXCenter 
       Height          =   405
       Left            =   6000
       TabIndex        =   2
@@ -48,7 +48,7 @@ Begin VB.Form FormVignette
       NotchPosition   =   2
       NotchValueCustom=   0.5
    End
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Height          =   750
       Left            =   0
       TabIndex        =   0
@@ -57,7 +57,7 @@ Begin VB.Form FormVignette
       _ExtentX        =   21325
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5625
       Left            =   120
       TabIndex        =   1
@@ -68,7 +68,7 @@ Begin VB.Form FormVignette
       DisableZoomPan  =   -1  'True
       PointSelection  =   -1  'True
    End
-   Begin PhotoDemon.pdSlider sltRadius 
+   Begin PhotoPaint.pdSlider sltRadius 
       Height          =   705
       Left            =   6000
       TabIndex        =   3
@@ -83,7 +83,7 @@ Begin VB.Form FormVignette
       NotchPosition   =   2
       NotchValueCustom=   50
    End
-   Begin PhotoDemon.pdSlider sltFeathering 
+   Begin PhotoPaint.pdSlider sltFeathering 
       Height          =   705
       Left            =   6000
       TabIndex        =   4
@@ -97,7 +97,7 @@ Begin VB.Form FormVignette
       Value           =   1
       DefaultValue    =   1
    End
-   Begin PhotoDemon.pdSlider sltTransparency 
+   Begin PhotoPaint.pdSlider sltTransparency 
       Height          =   705
       Left            =   9000
       TabIndex        =   5
@@ -111,7 +111,7 @@ Begin VB.Form FormVignette
       Value           =   100
       DefaultValue    =   100
    End
-   Begin PhotoDemon.pdColorSelector csVignette 
+   Begin PhotoPaint.pdColorSelector csVignette 
       Height          =   810
       Left            =   6000
       TabIndex        =   6
@@ -122,7 +122,7 @@ Begin VB.Form FormVignette
       Caption         =   "color"
       curColor        =   0
    End
-   Begin PhotoDemon.pdSlider sltYCenter 
+   Begin PhotoPaint.pdSlider sltYCenter 
       Height          =   405
       Left            =   9000
       TabIndex        =   7
@@ -136,7 +136,7 @@ Begin VB.Form FormVignette
       NotchPosition   =   2
       NotchValueCustom=   0.5
    End
-   Begin PhotoDemon.pdLabel lblExplanation 
+   Begin PhotoPaint.pdLabel lblExplanation 
       Height          =   435
       Index           =   0
       Left            =   6120
@@ -150,7 +150,7 @@ Begin VB.Form FormVignette
       ForeColor       =   4210752
       Layout          =   1
    End
-   Begin PhotoDemon.pdLabel lblTitle 
+   Begin PhotoPaint.pdLabel lblTitle 
       Height          =   285
       Index           =   0
       Left            =   6000
@@ -162,7 +162,7 @@ Begin VB.Form FormVignette
       FontSize        =   12
       ForeColor       =   4210752
    End
-   Begin PhotoDemon.pdSlider sltAspectRatio 
+   Begin PhotoPaint.pdSlider sltAspectRatio 
       Height          =   705
       Left            =   6000
       TabIndex        =   9
@@ -180,7 +180,7 @@ Begin VB.Form FormVignette
       NotchPosition   =   2
       NotchValueCustom=   1
    End
-   Begin PhotoDemon.pdSlider sltAngle 
+   Begin PhotoPaint.pdSlider sltAngle 
       Height          =   705
       Left            =   9000
       TabIndex        =   10
@@ -209,7 +209,7 @@ Attribute VB_Exposed = False
 ' self-explanatory.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

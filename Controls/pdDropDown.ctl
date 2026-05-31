@@ -22,7 +22,7 @@ Begin VB.UserControl pdDropDown
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   374
    ToolboxBitmap   =   "pdDropDown.ctx":0000
-   Begin PhotoDemon.pdListBox lbPrimary 
+   Begin PhotoPaint.pdListBox lbPrimary 
       Height          =   375
       Left            =   0
       TabIndex        =   0
@@ -49,7 +49,7 @@ Attribute VB_Exposed = False
 ' the pdListBox object, including its reliance on a separate pdListSupport class for managing its data.
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 

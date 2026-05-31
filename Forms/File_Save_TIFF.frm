@@ -22,7 +22,7 @@ Begin VB.Form dialog_ExportTIFF
    ScaleHeight     =   460
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   873
-   Begin PhotoDemon.pdCommandBar cmdBar 
+   Begin PhotoPaint.pdCommandBar cmdBar 
       Align           =   2  'Align Bottom
       Height          =   750
       Left            =   0
@@ -32,7 +32,7 @@ Begin VB.Form dialog_ExportTIFF
       _ExtentX        =   23098
       _ExtentY        =   1323
    End
-   Begin PhotoDemon.pdFxPreviewCtl pdFxPreview 
+   Begin PhotoPaint.pdFxPreviewCtl pdFxPreview 
       Height          =   5895
       Left            =   120
       TabIndex        =   1
@@ -41,7 +41,7 @@ Begin VB.Form dialog_ExportTIFF
       _ExtentX        =   9922
       _ExtentY        =   10398
    End
-   Begin PhotoDemon.pdTitle ttlStandard 
+   Begin PhotoPaint.pdTitle ttlStandard 
       Height          =   375
       Index           =   0
       Left            =   5880
@@ -54,7 +54,7 @@ Begin VB.Form dialog_ExportTIFF
       FontBold        =   -1  'True
       FontSize        =   12
    End
-   Begin PhotoDemon.pdTitle ttlStandard 
+   Begin PhotoPaint.pdTitle ttlStandard 
       Height          =   375
       Index           =   1
       Left            =   5880
@@ -68,7 +68,7 @@ Begin VB.Form dialog_ExportTIFF
       FontSize        =   12
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdTitle ttlStandard 
+   Begin PhotoPaint.pdTitle ttlStandard 
       Height          =   375
       Index           =   2
       Left            =   5880
@@ -82,7 +82,7 @@ Begin VB.Form dialog_ExportTIFF
       FontSize        =   12
       Value           =   0   'False
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   3855
       Index           =   0
       Left            =   5880
@@ -90,7 +90,7 @@ Begin VB.Form dialog_ExportTIFF
       Width           =   7095
       _ExtentX        =   12515
       _ExtentY        =   6800
-      Begin PhotoDemon.pdButtonStrip btsCompressionColor 
+      Begin PhotoPaint.pdButtonStrip btsCompressionColor 
          Height          =   1095
          Left            =   0
          TabIndex        =   6
@@ -100,7 +100,7 @@ Begin VB.Form dialog_ExportTIFF
          _ExtentY        =   1931
          Caption         =   "color compression"
       End
-      Begin PhotoDemon.pdButtonStrip btsCompressionMono 
+      Begin PhotoPaint.pdButtonStrip btsCompressionMono 
          Height          =   1095
          Left            =   0
          TabIndex        =   7
@@ -110,7 +110,7 @@ Begin VB.Form dialog_ExportTIFF
          _ExtentY        =   1931
          Caption         =   "monochrome compression"
       End
-      Begin PhotoDemon.pdButtonStrip btsMultipage 
+      Begin PhotoPaint.pdButtonStrip btsMultipage 
          Height          =   1095
          Left            =   0
          TabIndex        =   8
@@ -121,7 +121,7 @@ Begin VB.Form dialog_ExportTIFF
          Caption         =   "page format"
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   3975
       Index           =   1
       Left            =   5880
@@ -129,7 +129,7 @@ Begin VB.Form dialog_ExportTIFF
       Width           =   7095
       _ExtentX        =   12515
       _ExtentY        =   7011
-      Begin PhotoDemon.pdColorDepth clrDepth 
+      Begin PhotoPaint.pdColorDepth clrDepth 
          Height          =   2055
          Left            =   0
          TabIndex        =   9
@@ -139,7 +139,7 @@ Begin VB.Form dialog_ExportTIFF
          _ExtentY        =   3625
       End
    End
-   Begin PhotoDemon.pdContainer picContainer 
+   Begin PhotoPaint.pdContainer picContainer 
       Height          =   3975
       Index           =   2
       Left            =   5880
@@ -147,7 +147,7 @@ Begin VB.Form dialog_ExportTIFF
       Width           =   7095
       _ExtentX        =   12515
       _ExtentY        =   7011
-      Begin PhotoDemon.pdMetadataExport mtdManager 
+      Begin PhotoPaint.pdMetadataExport mtdManager 
          Height          =   3255
          Left            =   120
          TabIndex        =   3
@@ -171,7 +171,7 @@ Attribute VB_Exposed = False
 'Last update: repurpose old color-depth dialog into a TIFF-specific one
 '
 'Unless otherwise noted, all source code in this file is shared under a simplified BSD license.
-' Full license details are available in the LICENSE.md file, or at https://photodemon.org/license/
+' Full license details are available in the LICENSE.md file, or at https://photopaint.org/license/
 '
 '***************************************************************************
 
