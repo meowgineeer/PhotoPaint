@@ -4,7 +4,7 @@
 
 ### Patrons
 
-Ongoing development is supported by PhotoDemon's [Patreon members](https://www.patreon.com/photodemon/overview).  Thank you to everyone who supports PhotoDemon's ongoing development!
+Ongoing development is supported by PhotoPaint's [Patreon members](https://www.patreon.com/PhotoPaint/overview).  Thank you to everyone who supports PhotoPaint's ongoing development!
 
 Super Patrons:
 
@@ -19,7 +19,7 @@ Patrons:
 
 ### 3rd-party libraries
 
-The current PhotoDemon build uses these 3rd-party libraries.  Thank you to these developers for freely sharing their work.  
+The current PhotoPaint build uses these 3rd-party libraries.  Thank you to these developers for freely sharing their work.  
 
 * [CharLS](https://github.com/team-charls/charls)
 * [ExifTool](https://exiftool.org/)
@@ -41,7 +41,7 @@ The current PhotoDemon build uses these 3rd-party libraries.  Thank you to these
 
 ### Direct contributors
 
-The current PhotoDemon release includes source code, translations, artwork, or other contributions from these individuals.  Thank you!
+The current PhotoPaint release includes source code, translations, artwork, or other contributions from these individuals.  Thank you!
 
 * Abhijit Mhapsekar
 * AG Violette

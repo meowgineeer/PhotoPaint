@@ -1,4 +1,4 @@
-PhotoDemon is Copyright (c) 2025 by Tanner Helland and Contributors.
+PhotoPaint is Copyright (c) 2025 by Tanner Helland and Contributors.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -10,9 +10,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” 
 
 ------------------------------------------------------------------------
 
-Portions of PhotoDemon were contributed by outside parties.  **Copyright and license information inside a file supercedes the BSD license governing PhotoDemon as a whole.**
+Portions of PhotoPaint were contributed by outside parties.  **Copyright and license information inside a file supercedes the BSD license governing PhotoPaint as a whole.**
 
-For questions regarding licensing, please [file an issue on GitHub](https://github.com/tannerhelland/PhotoDemon/issues).
+For questions regarding licensing, please [file an issue on GitHub](https://github.com/tannerhelland/PhotoPaint/issues).
 
 The full text of licenses for bundled third-party libraries follows.
 

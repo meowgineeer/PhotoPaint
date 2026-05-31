@@ -8,21 +8,21 @@ pool: Default
 
 steps:
   - script: 'call "$(Build.SourcesDirectory)\Support\CI\build.bat" "$(Build.SourcesDirectory)"'
-    displayName: 'Build PhotoDemon.vbp'
+    displayName: 'Build PhotoPaint.vbp'
     workingDirectory:  '$(Build.SourcesDirectory)\Support\CI'
     failOnStderr: true
   
   - task: CopyFiles@2
-    displayName: 'Copy PhotoDemon.exe to $(Build.BinariesDirectory)'
+    displayName: 'Copy PhotoPaint.exe to $(Build.BinariesDirectory)'
     inputs:
       sourceFolder: '$(Build.SourcesDirectory)'
       contents: |
-        Donate to PhotoDemon.url
+        Donate to PhotoPaint.url
         AUTHORS.md
         INSTALL.md
         LICENSE.md
         README.md
-        PhotoDemon.exe
+        PhotoPaint.exe
       targetFolder: '$(Build.BinariesDirectory)'
       cleanTargetFolder: true
       
@@ -37,42 +37,42 @@ steps:
     displayName: 'Archive $(Build.BinariesDirectory)'
     inputs:
       rootFolderOrFile: '$(Build.BinariesDirectory)'
-      archiveFile: '$(Build.ArtifactStagingDirectory)/PhotoDemon-nightly.zip' 
+      archiveFile: '$(Build.ArtifactStagingDirectory)/PhotoPaint-nightly.zip' 
       includeRootFolder: false
       replaceExistingArchive: true
   
   - task: PublishBuildArtifacts@1
-    displayName: 'Publish artifact PhotoDemon'
+    displayName: 'Publish artifact PhotoPaint'
     inputs:
       pathToPublish: '$(Build.BinariesDirectory)'
-      artifactName: 'PhotoDemon'
+      artifactName: 'PhotoPaint'
       parallel: true
 
   - task: GithubRelease@1
-    displayName: 'Remove release `PhotoDemon-nightly` on github.com'
+    displayName: 'Remove release `PhotoPaint-nightly` on github.com'
     condition: and(succeeded(), not(startsWith(variables['Build.SourceBranch'], 'refs/pull')))
     continueOnError: true
     inputs:
       githubConnection: 'GitHub'
-      repositoryName: 'tannerhelland/PhotoDemon'
+      repositoryName: 'tannerhelland/PhotoPaint'
       action: 'delete'
-      tag: 'PhotoDemon-nightly'
+      tag: 'PhotoPaint-nightly'
   
   - task: GithubRelease@1
-    displayName: 'Create release `PhotoDemon-nightly` on github.com'
+    displayName: 'Create release `PhotoPaint-nightly` on github.com'
     condition: and(succeeded(), not(startsWith(variables['Build.SourceBranch'], 'refs/pull')))
     inputs:
       gitHubConnection: 'GitHub'
-      repositoryName: 'tannerhelland/PhotoDemon'
+      repositoryName: 'tannerhelland/PhotoPaint'
       action: 'create'
       tagSource: 'userSpecifiedTag'
-      tag: 'PhotoDemon-nightly'
-      title: 'PhotoDemon nightly build'
+      tag: 'PhotoPaint-nightly'
+      title: 'PhotoPaint nightly build'
       assets: $(Build.ArtifactStagingDirectory)/*
       assetUploadMode: 'delete'
       isPreRelease: true
       releaseNotesSource: 'inline'
-      releaseNotesInline: 'This release was automatically built from PhotoDemon''s current source code.  It may contain serious bugs.  Use at your own risk.'
+      releaseNotesInline: 'This release was automatically built from PhotoPaint''s current source code.  It may contain serious bugs.  Use at your own risk.'
       addChangeLog: true
       changeLogType: 'commitBased'
       changeLogCompareToRelease: 'lastFullRelease'
