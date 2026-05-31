@@ -108,7 +108,7 @@ Public Sub PrepareRestOfSplash()
         m_splashDIB.CreateBlank formWidth, formHeight, 32, RGB(32, 32, 32), 255
         m_splashDIB.SetInitialAlphaPremultiplicationState True
         
-        ' Draw the title "PHOTOPAIN" dynamically using a premium large bold font
+        ' Draw the title "PHOTOPAINT" dynamically using a premium large bold font
         Dim titleFont As pdFont
         Set titleFont = New pdFont
         titleFont.SetFontFace IIf(OS.IsVistaOrLater, "Segoe UI", "Tahoma")
@@ -117,7 +117,7 @@ Public Sub PrepareRestOfSplash()
         titleFont.CreateFontObject
         
         Dim titleStr As String
-        titleStr = "PHOTOPAIN"
+        titleStr = "PHOTOPAINT"
         
         Dim titleW As Long, titleH As Long
         titleW = titleFont.GetWidthOfString(titleStr)
@@ -138,7 +138,7 @@ Public Sub PrepareRestOfSplash()
         ReDim titleAlpha(0 To titleW - 1, 0 To titleH - 1) As Byte
         DIBs.GetDIBGrayscaleMap titleDIB, titleAlpha, False
         
-        ' A beautiful modern blue for PHOTOPAIN: RGB(50, 127, 255)
+        ' A beautiful modern blue for PHOTOPAINT: RGB(50, 127, 255)
         titleDIB.CreateBlank titleW, titleH, 32, RGB(50, 127, 255), 255
         DIBs.ApplyTransparencyTable titleDIB, titleAlpha
         titleDIB.SetAlphaPremultiplication True

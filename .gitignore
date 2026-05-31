@@ -68,9 +68,9 @@ Desktop.ini
 *.zip
 /no_sync
 PhotoDemon.exe
-PhotoPain.exe
+PhotoPaint.exe
 PhotoDemon.twinproj
-PhotoPain.twinproj
+PhotoPaint.twinproj
 *.7z
 /App/PhotoDemon/Themes/Core_Icons.pdrc
 /App/PhotoDemon/Plugins/Experimental

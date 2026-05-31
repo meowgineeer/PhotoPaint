@@ -23,7 +23,7 @@ echo Cleanup %temp_dir%...
 rd /s /q "%temp_dir%" 2>&1
 
 echo Copy sources from %src_dir%...
-xcopy /q /y "%src_dir%\PhotoPain.vbp" "%temp_dir%\" 2>&1 > nul
+xcopy /q /y "%src_dir%\PhotoPaint.vbp" "%temp_dir%\" 2>&1 > nul
 xcopy /q /y /s "%src_dir%\Classes" "%temp_dir%\Classes\" 2>&1 > nul
 xcopy /q /y /s "%src_dir%\Controls" "%temp_dir%\Controls\" 2>&1 > nul
 xcopy /q /y /s "%src_dir%\Forms" "%temp_dir%\Forms\" 2>&1 > nul
